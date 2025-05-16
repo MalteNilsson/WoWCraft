@@ -1,0 +1,2961 @@
+[
+  {
+    "id": 7418,
+    "name": "Enchant Bracer - Minor Health",
+    "minSkill": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "10940": 1
+    }
+  },
+  {
+    "id": 7420,
+    "name": "Enchant Chest - Minor Health",
+    "minSkill": 15,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "10940": 1
+    }
+  },
+  {
+    "id": 7421,
+    "name": "Runed Copper Rod",
+    "minSkill": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 5,
+      "green": 7,
+      "gray": 10
+    },
+    "materials": {
+      "6217": 1,
+      "10938": 1,
+      "10940": 1
+    }
+  },
+  {
+    "id": 7426,
+    "name": "Enchant Chest - Minor Absorption",
+    "minSkill": 40,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 2
+    }
+  },
+  {
+    "id": 7428,
+    "name": "Enchant Bracer - Minor Deflect",
+    "minSkill": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 1
+    }
+  },
+  {
+    "id": 7443,
+    "name": "Enchant Chest - Minor Mana",
+    "minSkill": 20,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1
+    }
+  },
+  {
+    "id": 7454,
+    "name": "Enchant Cloak - Minor Resistance",
+    "minSkill": 45,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 95,
+      "green": 115,
+      "gray": 135
+    },
+    "materials": {
+      "10938": 2,
+      "10940": 1
+    }
+  },
+  {
+    "id": 7457,
+    "name": "Enchant Bracer - Minor Stamina",
+    "minSkill": 50,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "10940": 3
+    }
+  },
+  {
+    "id": 7748,
+    "name": "Enchant Chest - Lesser Health",
+    "minSkill": 60,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 2,
+      "10940": 2
+    }
+  },
+  {
+    "id": 7766,
+    "name": "Enchant Bracer - Minor Spirit",
+    "minSkill": 60,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 2
+    }
+  },
+  {
+    "id": 7771,
+    "name": "Enchant Cloak - Minor Protection",
+    "minSkill": 70,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 3
+    }
+  },
+  {
+    "id": 7776,
+    "name": "Enchant Chest - Lesser Mana",
+    "minSkill": 80,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10938": 1,
+      "10939": 1
+    }
+  },
+  {
+    "id": 7779,
+    "name": "Enchant Bracer - Minor Agility",
+    "minSkill": 80,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 2
+    }
+  },
+  {
+    "id": 7782,
+    "name": "Enchant Bracer - Minor Strength",
+    "minSkill": 80,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10940": 5
+    }
+  },
+  {
+    "id": 7786,
+    "name": "Enchant Weapon - Minor Beastslayer",
+    "minSkill": 90,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10939": 2,
+      "10940": 4
+    }
+  },
+  {
+    "id": 7788,
+    "name": "Enchant Weapon - Minor Striking",
+    "minSkill": 90,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 2,
+      "10978": 1
+    }
+  },
+  {
+    "id": 7745,
+    "name": "Enchant 2H Weapon - Minor Impact",
+    "minSkill": 100,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 4,
+      "10978": 1
+    }
+  },
+  {
+    "id": 7793,
+    "name": "Enchant 2H Weapon - Lesser Intellect",
+    "minSkill": 100,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10939": 3
+    }
+  },
+  {
+    "id": 7795,
+    "name": "Runed Silver Rod",
+    "minSkill": 100,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "1210": 1,
+      "6338": 1,
+      "10939": 3,
+      "10940": 6
+    }
+  },
+  {
+    "id": 7857,
+    "name": "Enchant Chest - Health",
+    "minSkill": 120,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10940": 4,
+      "10998": 1
+    }
+  },
+  {
+    "id": 7859,
+    "name": "Enchant Bracer - Lesser Spirit",
+    "minSkill": 120,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10998": 2
+    }
+  },
+  {
+    "id": 7861,
+    "name": "Enchant Cloak - Lesser Fire Resistance",
+    "minSkill": 125,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "6371": 1,
+      "10998": 1
+    }
+  },
+  {
+    "id": 7863,
+    "name": "Enchant Boots - Minor Stamina",
+    "minSkill": 125,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 8
+    }
+  },
+  {
+    "id": 7867,
+    "name": "Enchant Boots - Minor Agility",
+    "minSkill": 125,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 6,
+      "10998": 2
+    }
+  },
+  {
+    "id": 13378,
+    "name": "Enchant Shield - Minor Stamina",
+    "minSkill": 105,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 2,
+      "10998": 1
+    }
+  },
+  {
+    "id": 13380,
+    "name": "Enchant 2H Weapon - Lesser Spirit",
+    "minSkill": 110,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10940": 6,
+      "10998": 1
+    }
+  },
+  {
+    "id": 13419,
+    "name": "Enchant Cloak - Minor Agility",
+    "minSkill": 110,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10998": 1
+    }
+  },
+  {
+    "id": 13421,
+    "name": "Enchant Cloak - Lesser Protection",
+    "minSkill": 115,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 6,
+      "10978": 1
+    }
+  },
+  {
+    "id": 13464,
+    "name": "Enchant Shield - Lesser Protection",
+    "minSkill": 115,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 1,
+      "10978": 1,
+      "10998": 1
+    }
+  },
+  {
+    "id": 13485,
+    "name": "Enchant Shield - Lesser Spirit",
+    "minSkill": 130,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "10940": 4,
+      "10998": 2
+    }
+  },
+  {
+    "id": 13501,
+    "name": "Enchant Bracer - Lesser Stamina",
+    "minSkill": 130,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "11083": 2
+    }
+  },
+  {
+    "id": 13503,
+    "name": "Enchant Weapon - Lesser Striking",
+    "minSkill": 140,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 2,
+      "11084": 1
+    }
+  },
+  {
+    "id": 13522,
+    "name": "Enchant Cloak - Lesser Shadow Resistance",
+    "minSkill": 135,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "6048": 1,
+      "11082": 1
+    }
+  },
+  {
+    "id": 13529,
+    "name": "Enchant 2H Weapon - Lesser Impact",
+    "minSkill": 145,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "11083": 3,
+      "11084": 1
+    }
+  },
+  {
+    "id": 13536,
+    "name": "Enchant Bracer - Lesser Strength",
+    "minSkill": 140,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 2
+    }
+  },
+  {
+    "id": 13538,
+    "name": "Enchant Chest - Lesser Absorption",
+    "minSkill": 140,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "10940": 2,
+      "11082": 1,
+      "11084": 1
+    }
+  },
+  {
+    "id": 13607,
+    "name": "Enchant Chest - Mana",
+    "minSkill": 145,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "10998": 2,
+      "11082": 1
+    }
+  },
+  {
+    "id": 13612,
+    "name": "Enchant Gloves - Mining",
+    "minSkill": 145,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "2772": 3,
+      "11083": 1
+    }
+  },
+  {
+    "id": 13617,
+    "name": "Enchant Gloves - Herbalism",
+    "minSkill": 145,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "3356": 3,
+      "11083": 1
+    }
+  },
+  {
+    "id": 13620,
+    "name": "Enchant Gloves - Fishing",
+    "minSkill": 145,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "6370": 3,
+      "11083": 1
+    }
+  },
+  {
+    "id": 13622,
+    "name": "Enchant Bracer - Lesser Intellect",
+    "minSkill": 150,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11082": 2
+    }
+  },
+  {
+    "id": 13626,
+    "name": "Enchant Chest - Minor Stats",
+    "minSkill": 150,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11082": 1,
+      "11083": 1,
+      "11084": 1
+    }
+  },
+  {
+    "id": 13628,
+    "name": "Runed Golden Rod",
+    "minSkill": 150,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "5500": 1,
+      "11082": 2,
+      "11083": 2,
+      "11128": 1
+    }
+  },
+  {
+    "id": 13631,
+    "name": "Enchant Shield - Lesser Stamina",
+    "minSkill": 155,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1
+    }
+  },
+  {
+    "id": 13635,
+    "name": "Enchant Cloak - Defense",
+    "minSkill": 155,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 3,
+      "11138": 1
+    }
+  },
+  {
+    "id": 13637,
+    "name": "Enchant Boots - Lesser Agility",
+    "minSkill": 160,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1
+    }
+  },
+  {
+    "id": 13640,
+    "name": "Enchant Chest - Greater Health",
+    "minSkill": 160,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 3
+    }
+  },
+  {
+    "id": 13642,
+    "name": "Enchant Bracer - Spirit",
+    "minSkill": 165,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "11134": 1
+    }
+  },
+  {
+    "id": 13644,
+    "name": "Enchant Boots - Lesser Stamina",
+    "minSkill": 170,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 4
+    }
+  },
+  {
+    "id": 13646,
+    "name": "Enchant Bracer - Lesser Deflection",
+    "minSkill": 170,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 2,
+      "11134": 1
+    }
+  },
+  {
+    "id": 13648,
+    "name": "Enchant Bracer - Stamina",
+    "minSkill": 170,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 6
+    }
+  },
+  {
+    "id": 13653,
+    "name": "Enchant Weapon - Lesser Beastslayer",
+    "minSkill": 175,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "5637": 2,
+      "11134": 1,
+      "11138": 1
+    }
+  },
+  {
+    "id": 13655,
+    "name": "Enchant Weapon - Lesser Elemental Slayer",
+    "minSkill": 175,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7067": 1,
+      "11134": 1,
+      "11138": 1
+    }
+  },
+  {
+    "id": 13657,
+    "name": "Enchant Cloak - Fire Resistance",
+    "minSkill": 175,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7068": 1,
+      "11134": 1
+    }
+  },
+  {
+    "id": 13659,
+    "name": "Enchant Shield - Spirit",
+    "minSkill": 180,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1
+    }
+  },
+  {
+    "id": 13661,
+    "name": "Enchant Bracer - Strength",
+    "minSkill": 180,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11137": 1
+    }
+  },
+  {
+    "id": 13663,
+    "name": "Enchant Chest - Greater Mana",
+    "minSkill": 185,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "11135": 1
+    }
+  },
+  {
+    "id": 13687,
+    "name": "Enchant Boots - Lesser Spirit",
+    "minSkill": 190,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "11134": 2,
+      "11135": 1
+    }
+  },
+  {
+    "id": 13689,
+    "name": "Enchant Shield - Lesser Block",
+    "minSkill": 195,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 2,
+      "11137": 2,
+      "11139": 1
+    }
+  },
+  {
+    "id": 13693,
+    "name": "Enchant Weapon - Striking",
+    "minSkill": 195,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 2,
+      "11139": 1
+    }
+  },
+  {
+    "id": 13695,
+    "name": "Enchant 2H Weapon - Impact",
+    "minSkill": 200,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11137": 4,
+      "11139": 1
+    }
+  },
+  {
+    "id": 13698,
+    "name": "Enchant Gloves - Skinning",
+    "minSkill": 200,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7392": 3,
+      "11137": 1
+    }
+  },
+  {
+    "id": 13700,
+    "name": "Enchant Chest - Lesser Stats",
+    "minSkill": 200,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11135": 2,
+      "11137": 2,
+      "11139": 1
+    }
+  },
+  {
+    "id": 13702,
+    "name": "Runed Truesilver Rod",
+    "minSkill": 200,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7971": 1,
+      "11135": 2,
+      "11137": 2,
+      "11144": 1
+    }
+  },
+  {
+    "id": 13746,
+    "name": "Enchant Cloak - Greater Defense",
+    "minSkill": 205,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11137": 3
+    }
+  },
+  {
+    "id": 13794,
+    "name": "Enchant Cloak - Resistance",
+    "minSkill": 205,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11174": 1
+    }
+  },
+  {
+    "id": 13815,
+    "name": "Enchant Gloves - Agility",
+    "minSkill": 210,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 1
+    }
+  },
+  {
+    "id": 13817,
+    "name": "Enchant Shield - Stamina",
+    "minSkill": 210,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 5
+    }
+  },
+  {
+    "id": 13822,
+    "name": "Enchant Bracer - Intellect",
+    "minSkill": 210,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11174": 2
+    }
+  },
+  {
+    "id": 13836,
+    "name": "Enchant Boots - Stamina",
+    "minSkill": 215,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "11137": 5
+    }
+  },
+  {
+    "id": 13841,
+    "name": "Enchant Gloves - Advanced Mining",
+    "minSkill": 215,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "6037": 3,
+      "11137": 3
+    }
+  },
+  {
+    "id": 13846,
+    "name": "Enchant Bracer - Greater Spirit",
+    "minSkill": 220,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 3
+    }
+  },
+  {
+    "id": 13858,
+    "name": "Enchant Chest - Superior Health",
+    "minSkill": 220,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 6
+    }
+  },
+  {
+    "id": 13868,
+    "name": "Enchant Gloves - Advanced Herbalism",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "8838": 3,
+      "11137": 3
+    }
+  },
+  {
+    "id": 13882,
+    "name": "Enchant Cloak - Lesser Agility",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11174": 2
+    }
+  },
+  {
+    "id": 13887,
+    "name": "Enchant Gloves - Strength",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11137": 3,
+      "11174": 2
+    }
+  },
+  {
+    "id": 13890,
+    "name": "Enchant Boots - Minor Speed",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "7909": 1,
+      "11174": 1,
+      "11177": 1
+    }
+  },
+  {
+    "id": 13898,
+    "name": "Enchant Weapon - Fiery Weapon",
+    "minSkill": 265,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11177": 4
+    }
+  },
+  {
+    "id": 13905,
+    "name": "Enchant Shield - Greater Spirit",
+    "minSkill": 230,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    }
+  },
+  {
+    "id": 13915,
+    "name": "Enchant Weapon - Demonslaying",
+    "minSkill": 230,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "9224": 1,
+      "11176": 2,
+      "11177": 1
+    }
+  },
+  {
+    "id": 13917,
+    "name": "Enchant Chest - Superior Mana",
+    "minSkill": 230,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11174": 2,
+      "11175": 1
+    }
+  },
+  {
+    "id": 13931,
+    "name": "Enchant Bracer - Deflection",
+    "minSkill": 235,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    }
+  },
+  {
+    "id": 13933,
+    "name": "Enchant Shield - Frost Resistance",
+    "minSkill": 235,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "3829": 1,
+      "11178": 1
+    }
+  },
+  {
+    "id": 13935,
+    "name": "Enchant Boots - Agility",
+    "minSkill": 235,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11175": 2
+    }
+  },
+  {
+    "id": 13937,
+    "name": "Enchant 2H Weapon - Greater Impact",
+    "minSkill": 240,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11176": 2,
+      "11178": 2
+    }
+  },
+  {
+    "id": 13939,
+    "name": "Enchant Bracer - Greater Strength",
+    "minSkill": 240,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    }
+  },
+  {
+    "id": 13941,
+    "name": "Enchant Chest - Stats",
+    "minSkill": 245,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 3,
+      "11178": 1
+    }
+  },
+  {
+    "id": 13943,
+    "name": "Enchant Weapon - Greater Striking",
+    "minSkill": 245,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 2,
+      "11178": 2
+    }
+  },
+  {
+    "id": 13945,
+    "name": "Enchant Bracer - Greater Stamina",
+    "minSkill": 245,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11176": 5
+    }
+  },
+  {
+    "id": 13947,
+    "name": "Enchant Gloves - Riding Skill",
+    "minSkill": 250,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "11176": 3,
+      "11178": 2
+    }
+  },
+  {
+    "id": 13948,
+    "name": "Enchant Gloves - Minor Haste",
+    "minSkill": 250,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "8153": 2,
+      "11178": 2
+    }
+  },
+  {
+    "id": 14293,
+    "name": "Lesser Magic Wand",
+    "minSkill": 10,
+    "difficulty": {
+      "orange": 10,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "4470": 1,
+      "10938": 1
+    }
+  },
+  {
+    "id": 14807,
+    "name": "Greater Magic Wand",
+    "minSkill": 70,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "4470": 1,
+      "10939": 1
+    }
+  },
+  {
+    "id": 14809,
+    "name": "Lesser Mystic Wand",
+    "minSkill": 155,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1,
+      "11291": 1
+    }
+  },
+  {
+    "id": 14810,
+    "name": "Greater Mystic Wand",
+    "minSkill": 175,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11291": 1
+    }
+  },
+  {
+    "id": 15596,
+    "name": "Smoking Heart of the Mountain",
+    "minSkill": 265,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11382": 1,
+      "14343": 3
+    }
+  },
+  {
+    "id": 17181,
+    "name": "Enchanted Leather",
+    "minSkill": 250,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8170": 1,
+      "16202": 1
+    }
+  },
+  {
+    "id": 17180,
+    "name": "Enchanted Thorium",
+    "minSkill": 250,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "11176": 3,
+      "12359": 1
+    }
+  },
+  {
+    "id": 20008,
+    "name": "Enchant Bracer - Greater Intellect",
+    "minSkill": 255,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 295,
+      "gray": 315
+    },
+    "materials": {
+      "16202": 3
+    }
+  },
+  {
+    "id": 20020,
+    "name": "Enchant Boots - Greater Stamina",
+    "minSkill": 260,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "11176": 10
+    }
+  },
+  {
+    "id": 20014,
+    "name": "Enchant Cloak - Greater Resistance",
+    "minSkill": 265,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7075": 1,
+      "7077": 1,
+      "7079": 1,
+      "7081": 1,
+      "7972": 1,
+      "16202": 2
+    }
+  },
+  {
+    "id": 20017,
+    "name": "Enchant Shield - Greater Stamina",
+    "minSkill": 265,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "11176": 10
+    }
+  },
+  {
+    "id": 20009,
+    "name": "Enchant Bracer - Superior Spirit",
+    "minSkill": 270,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "11176": 10,
+      "16202": 3
+    }
+  },
+  {
+    "id": 20012,
+    "name": "Enchant Gloves - Greater Agility",
+    "minSkill": 270,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "16202": 3,
+      "16204": 3
+    }
+  },
+  {
+    "id": 20024,
+    "name": "Enchant Boots - Spirit",
+    "minSkill": 275,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "16202": 1,
+      "16203": 2
+    }
+  },
+  {
+    "id": 20026,
+    "name": "Enchant Chest - Major Health",
+    "minSkill": 275,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "14343": 1,
+      "16204": 6
+    }
+  },
+  {
+    "id": 20016,
+    "name": "Enchant Shield - Superior Spirit",
+    "minSkill": 280,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 4
+    }
+  },
+  {
+    "id": 20029,
+    "name": "Enchant Weapon - Icy Chill",
+    "minSkill": 285,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7080": 1,
+      "7082": 1,
+      "13467": 1,
+      "14343": 4
+    }
+  },
+  {
+    "id": 20015,
+    "name": "Enchant Cloak - Superior Defense",
+    "minSkill": 285,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "16204": 8
+    }
+  },
+  {
+    "id": 20028,
+    "name": "Enchant Chest - Major Mana",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "14343": 1,
+      "16203": 3
+    }
+  },
+  {
+    "id": 20051,
+    "name": "Runed Arcanite Rod",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "13926": 1,
+      "14343": 4,
+      "14344": 2,
+      "16203": 4,
+      "16204": 10,
+      "16206": 1
+    }
+  },
+  {
+    "id": 20013,
+    "name": "Enchant Gloves - Greater Strength",
+    "minSkill": 295,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 4,
+      "16204": 4
+    }
+  },
+  {
+    "id": 20023,
+    "name": "Enchant Boots - Greater Agility",
+    "minSkill": 295,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 8
+    }
+  },
+  {
+    "id": 20010,
+    "name": "Enchant Bracer - Superior Strength",
+    "minSkill": 295,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 6,
+      "16204": 6
+    }
+  },
+  {
+    "id": 20030,
+    "name": "Enchant 2H Weapon - Superior Impact",
+    "minSkill": 295,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "14344": 4,
+      "16204": 10
+    }
+  },
+  {
+    "id": 20033,
+    "name": "Enchant Weapon - Unholy Weapon",
+    "minSkill": 295,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "12808": 4,
+      "14344": 4
+    }
+  },
+  {
+    "id": 20036,
+    "name": "Enchant 2H Weapon - Major Intellect",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    }
+  },
+  {
+    "id": 20031,
+    "name": "Enchant Weapon - Superior Striking",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 10
+    }
+  },
+  {
+    "id": 20011,
+    "name": "Enchant Bracer - Superior Stamina",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16204": 15
+    }
+  },
+  {
+    "id": 20034,
+    "name": "Enchant Weapon - Crusader",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 2,
+      "14344": 4
+    }
+  },
+  {
+    "id": 20025,
+    "name": "Enchant Chest - Greater Stats",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 4,
+      "16203": 10,
+      "16204": 15
+    }
+  },
+  {
+    "id": 20032,
+    "name": "Enchant Weapon - Lifestealing",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "12808": 6,
+      "14344": 6
+    }
+  },
+  {
+    "id": 20035,
+    "name": "Enchant 2H Weapon - Major Spirit",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    }
+  },
+  {
+    "id": 21931,
+    "name": "Enchant Weapon - Winter's Might",
+    "minSkill": 190,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3819": 2,
+      "11135": 3,
+      "11137": 3,
+      "11139": 1
+    }
+  },
+  {
+    "id": 22749,
+    "name": "Enchant Weapon - Spell Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "7080": 4,
+      "7082": 4,
+      "13926": 2,
+      "14344": 4,
+      "16203": 12
+    }
+  },
+  {
+    "id": 22750,
+    "name": "Enchant Weapon - Healing Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 6,
+      "12803": 6,
+      "12811": 1,
+      "14344": 4,
+      "16203": 8
+    }
+  },
+  {
+    "id": 23799,
+    "name": "Enchant Weapon - Strength",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7076": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    }
+  },
+  {
+    "id": 23800,
+    "name": "Enchant Weapon - Agility",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    }
+  },
+  {
+    "id": 23801,
+    "name": "Enchant Bracer - Mana Regeneration",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7080": 2,
+      "16203": 4,
+      "16204": 16
+    }
+  },
+  {
+    "id": 23802,
+    "name": "Enchant Bracer - Healing Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "14344": 2,
+      "16203": 4,
+      "16204": 20
+    }
+  },
+  {
+    "id": 23803,
+    "name": "Enchant Weapon - Mighty Spirit",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 10,
+      "16203": 8,
+      "16204": 15
+    }
+  },
+  {
+    "id": 23804,
+    "name": "Enchant Weapon - Mighty Intellect",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 15,
+      "16203": 12,
+      "16204": 20
+    }
+  },
+  {
+    "id": 25072,
+    "name": "Enchant Gloves - Threat",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 6,
+      "18512": 8,
+      "20725": 4
+    }
+  },
+  {
+    "id": 25073,
+    "name": "Enchant Gloves - Shadow Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12808": 6,
+      "14344": 10,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25074,
+    "name": "Enchant Gloves - Frost Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 4,
+      "14344": 10,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25078,
+    "name": "Enchant Gloves - Fire Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 10,
+      "20725": 2
+    }
+  },
+  {
+    "id": 25079,
+    "name": "Enchant Gloves - Healing Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 1,
+      "14344": 8,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25080,
+    "name": "Enchant Gloves - Superior Agility",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 8,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25081,
+    "name": "Enchant Cloak - Greater Fire Resistance",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 8,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25082,
+    "name": "Enchant Cloak - Greater Nature Resistance",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 4,
+      "14344": 8,
+      "20725": 2
+    }
+  },
+  {
+    "id": 25083,
+    "name": "Enchant Cloak - Stealth",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "13468": 2,
+      "14344": 8,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25084,
+    "name": "Enchant Cloak - Subtlety",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11754": 2,
+      "14344": 6,
+      "20725": 4
+    }
+  },
+  {
+    "id": 25086,
+    "name": "Enchant Cloak - Dodge",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12809": 8,
+      "14344": 8,
+      "20725": 3
+    }
+  },
+  {
+    "id": 25124,
+    "name": "Minor Wizard Oil",
+    "minSkill": 45,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 55,
+      "green": 65,
+      "gray": 75
+    },
+    "materials": {
+      "3371": 1,
+      "10940": 2,
+      "17034": 1
+    }
+  },
+  {
+    "id": 25125,
+    "name": "Minor Mana Oil",
+    "minSkill": 150,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 160,
+      "green": 170,
+      "gray": 180
+    },
+    "materials": {
+      "3372": 1,
+      "11083": 3,
+      "17034": 2
+    }
+  },
+  {
+    "id": 25126,
+    "name": "Lesser Wizard Oil",
+    "minSkill": 200,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "3372": 1,
+      "11137": 3,
+      "17035": 2
+    }
+  },
+  {
+    "id": 25127,
+    "name": "Lesser Mana Oil",
+    "minSkill": 250,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "8831": 2,
+      "8925": 1,
+      "11176": 3
+    }
+  },
+  {
+    "id": 25128,
+    "name": "Wizard Oil",
+    "minSkill": 275,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 2,
+      "8925": 1,
+      "16204": 3
+    }
+  },
+  {
+    "id": 25129,
+    "name": "Brilliant Wizard Oil",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "4625": 3,
+      "14344": 2,
+      "18256": 1
+    }
+  },
+  {
+    "id": 25130,
+    "name": "Brilliant Mana Oil",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8831": 3,
+      "14344": 2,
+      "18256": 1
+    }
+  },
+  {
+    "id": 27837,
+    "name": "Enchant 2H Weapon - Agility",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 10,
+      "16203": 6,
+      "16204": 14
+    }
+  },
+  {
+    "id": 430409,
+    "name": "Blackfathom Mana Oil",
+    "minSkill": 100,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 100,
+      "green": 110,
+      "gray": 120
+    },
+    "materials": {
+      "3372": 1,
+      "10939": 1,
+      "10940": 5
+    }
+  },
+  {
+    "id": 435481,
+    "name": "Enchant Weapon - Dismantle",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 200,
+      "green": 217,
+      "gray": 235
+    },
+    "materials": {
+      "5637": 2,
+      "11174": 4,
+      "11177": 2
+    }
+  },
+  {
+    "id": 435903,
+    "name": "Enchant Chest - Retricutioner",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11176": 2,
+      "11177": 1
+    }
+  },
+  {
+    "id": 439134,
+    "name": "Greater Mystic Wand",
+    "minSkill": 175,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11291": 1
+    }
+  },
+  {
+    "id": 439156,
+    "name": "Sigil of Innovation",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 227,
+      "gray": 230
+    },
+    "materials": {
+      "11137": 5
+    }
+  },
+  {
+    "id": 446243,
+    "name": "Sigil of Living Dreams",
+    "minSkill": 225,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "11176": 5
+    }
+  },
+  {
+    "id": 448624,
+    "name": "Scroll of Spatial Mending",
+    "minSkill": 120,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 120,
+      "green": 125,
+      "gray": 130
+    },
+    "materials": {
+      "4470": 1,
+      "10940": 4
+    }
+  },
+  {
+    "id": 463871,
+    "name": "Enchant Shield - Law of Nature",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7076": 1,
+      "7078": 4,
+      "7080": 4,
+      "12811": 1,
+      "14344": 4,
+      "16203": 12
+    }
+  },
+  {
+    "id": 463869,
+    "name": "Conductive Shield Coating",
+    "minSkill": 275,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 1,
+      "8925": 1,
+      "16204": 2
+    }
+  },
+  {
+    "id": 463866,
+    "name": "Sigil of Flowing Waters",
+    "minSkill": 290,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 312,
+      "gray": 320
+    },
+    "materials": {
+      "16204": 1
+    }
+  },
+  {
+    "id": 471400,
+    "name": "Magnificent Trollshine",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8151": 3,
+      "8152": 3,
+      "14344": 2,
+      "18256": 1
+    }
+  },
+  {
+    "id": 1213593,
+    "name": "Speedstone",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "2452": 20,
+      "20725": 6,
+      "234004": 6,
+      "234006": 10,
+      "234010": 10
+    }
+  },
+  {
+    "id": 1213595,
+    "name": "Tear of the Dreamer",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 4,
+      "234003": 10,
+      "234006": 10,
+      "234010": 10,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1213598,
+    "name": "Lodestone of Retaliation",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 4,
+      "234003": 10,
+      "234007": 10,
+      "234010": 5,
+      "234011": 10
+    }
+  },
+  {
+    "id": 1213600,
+    "name": "Enchanted Stopwatch",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "2459": 3,
+      "14344": 4,
+      "234003": 3,
+      "234005": 6
+    }
+  },
+  {
+    "id": 1213603,
+    "name": "Ruby-Encrusted Broach",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 6,
+      "234003": 10,
+      "234007": 10,
+      "234010": 5,
+      "234011": 10,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1213607,
+    "name": "Scroll: Wrath of the Swarm",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14047": 1,
+      "16203": 1
+    }
+  },
+  {
+    "id": 1213610,
+    "name": "Enchanted Repellent",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16204": 2,
+      "234011": 3,
+      "234012": 3
+    }
+  },
+  {
+    "id": 1213616,
+    "name": "Enchant Chest - Living Stats",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "13458": 10,
+      "16203": 5,
+      "16204": 8,
+      "20725": 2,
+      "234010": 2,
+      "234011": 2
+    }
+  },
+  {
+    "id": 1213622,
+    "name": "Enchant Gloves - Holy Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12735": 2,
+      "13180": 5,
+      "14344": 5,
+      "20725": 2
+    }
+  },
+  {
+    "id": 1213626,
+    "name": "Enchant Gloves - Arcane Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12753": 2,
+      "14344": 5,
+      "20725": 2
+    }
+  },
+  {
+    "id": 1213628,
+    "name": "Enchanted Prayer Tome",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    }
+  },
+  {
+    "id": 1213633,
+    "name": "Enchanted Totem",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1213635,
+    "name": "Enchanted Mushroom",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    }
+  },
+  {
+    "id": 1216005,
+    "name": "Libram of Righteousness",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    }
+  },
+  {
+    "id": 1216007,
+    "name": "Libram of the Exorcist",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    }
+  },
+  {
+    "id": 1216010,
+    "name": "Libram of Sanctity",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    }
+  },
+  {
+    "id": 1216014,
+    "name": "Totem of Pyroclastic Thunder",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1216016,
+    "name": "Totem of Thunderous Strikes",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1216018,
+    "name": "Totem of Flowing Magma",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    }
+  },
+  {
+    "id": 1216020,
+    "name": "Idol of Sidereal Wrath",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    }
+  },
+  {
+    "id": 1216022,
+    "name": "Idol of Feline Ferocity",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    }
+  },
+  {
+    "id": 1216024,
+    "name": "Idol of Ursin Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    }
+  },
+  {
+    "id": 1217189,
+    "name": "Enchant Bracer - Spell Power",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 2,
+      "7080": 2,
+      "7082": 2,
+      "14344": 2,
+      "16203": 4,
+      "16204": 20
+    }
+  },
+  {
+    "id": 1217203,
+    "name": "Enchant Bracer - Agility",
+    "minSkill": 300,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 2,
+      "16203": 2,
+      "16204": 10,
+      "20725": 2
+    }
+  },
+  {
+    "id": 1231128,
+    "name": "Enchant Weapon - Grand Crusader",
+    "minSkill": 280,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 2,
+      "12938": 1,
+      "14344": 5,
+      "20725": 2
+    }
+  },
+  {
+    "id": 1231139,
+    "name": "Enchant 2H Weapon - Grand Arcanist",
+    "minSkill": 280,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 4,
+      "12938": 1,
+      "14344": 10,
+      "20725": 4
+    }
+  },
+  {
+    "id": 1231164,
+    "name": "Enchant Weapon - Grand Sorceror",
+    "minSkill": 280,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 3,
+      "12938": 1,
+      "14344": 6,
+      "20725": 2
+    }
+  },
+  {
+    "id": 1232172,
+    "name": "Enchant 2H Weapon - Grand Inquisitor",
+    "minSkill": 280,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 6,
+      "12938": 1,
+      "14344": 10,
+      "20725": 4
+    }
+  }
+]
