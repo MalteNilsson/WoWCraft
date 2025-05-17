@@ -65,7 +65,8 @@ function calcCraftCost(rec: Recipe): number {
 export default function EnchantingPlanner() {
   const [skill, setSkill]           = useState(1);
   const [view,  setView]            = useState<'route'|'all'>('route');
-  const [selectedId, setSelectedId] = useState<number|null>(null);
+  const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
+  const [selectedCardKey, setSelectedCardKey]     = useState<string|null>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const fuse = useMemo(
@@ -80,7 +81,7 @@ export default function EnchantingPlanner() {
   );
   useEffect(() => {
     if (view === 'route' && steps.length > 0) {
-      setSelectedId(steps[0].recipe.id);
+      setSelectedRecipeId(steps[0].recipe.id);
     }
   }, [view, steps]);
 
@@ -96,8 +97,8 @@ export default function EnchantingPlanner() {
   );
 
   const selected = useMemo<Recipe|null>(
-    () => recipes.find(r => r.id === selectedId) ?? null,
-    [selectedId]
+    () => recipes.find(r => r.id === selectedRecipeId) ?? null,
+    [selectedRecipeId]
   );
 
   const [rngLow, setRngLow]   = useState(1);
@@ -107,25 +108,25 @@ export default function EnchantingPlanner() {
       setRngLow(selected.minSkill);
       setRngHigh(selected.difficulty.gray!);
     }
-  }, [selectedId]);
+  }, [selectedRecipeId]);
 
   useEffect(() => {
-    if (view === 'route' && selectedId !== null) {
-      const idx = steps.findIndex(s => s.recipe.id === selectedId);
+    if (view === 'route' && selectedRecipeId !== null) {
+      const idx = steps.findIndex(s => s.recipe.id === selectedRecipeId);
       if (idx >= 0) {
         const start = idx === 0 ? skill : steps[idx - 1].endSkill;
         setRngLow(start);
         setRngHigh(steps[idx].endSkill);
       }
     }
-  }, [selectedId, view]);
+  }, [selectedRecipeId, view]);
 
   useEffect(() => {
-    if (selectedId !== null) {
-      const el = document.getElementById(`recipe-${selectedId}`)
+    if (selectedRecipeId !== null) {
+      const el = document.getElementById(`recipe-${selectedRecipeId}`)
       el?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
-  }, [selectedId])
+  }, [selectedRecipeId])
 
   const expCrafts = useMemo(() => {
     if (!selected) return 0;
@@ -155,7 +156,7 @@ export default function EnchantingPlanner() {
           onChange={(id: number) => {
             // switch to All Recipes and select
             setView('all');
-            setSelectedId(id);
+            setSelectedRecipeId(id);
             // prefill slider for that recipe
             const r = recipes.find(r => r.id === id)!;
             setRngLow(r.minSkill);
@@ -234,6 +235,7 @@ export default function EnchantingPlanner() {
                 const start = i === 0 ? skill : steps[i - 1].endSkill;
                 const end   = s.endSkill;
                 const best  = s.recipe;
+                const primaryKey = `primary-${i}-${best.id}`;
               
                 // calculate best CPU
                 const pBest    = expectedSkillUps(best, start);
@@ -242,34 +244,39 @@ export default function EnchantingPlanner() {
               
                 // find up to two alternatives within 20%
                 const candidates = recipes
-                  .filter(r => r.minSkill <= start)
-                  .map(r => {
-                    const p      = expectedSkillUps(r, start);
-                    const crafts = Math.ceil(1 / p);
-                    return {
-                      recipe: r,
-                      crafts,
-                      cost: crafts * calcCraftCost(r),
-                      cpu: calcCraftCost(r) / p,
-                    };
-                  })
-                  .filter(a => a.recipe.id !== best.id && a.cpu <= cpuBest * 1.2)
-                  .sort((a, b) => a.cpu - b.cpu)
-                  .slice(0, 2);
+                // must be unlocked at 'start' and remain usable through 'end'
+                .filter(r =>
+                  r.minSkill <= start &&
+                  (r.difficulty.gray ?? Infinity) >= end &&
+                  r.id !== best.id
+                )
+                .map(r => {
+                  const crafts = expectedCraftsBetween(start, end, r.difficulty);
+                  const cost   = crafts * calcCraftCost(r);
+                  return {
+                    recipe: r,
+                    crafts,
+                    cost,
+                    cpu: cost / (end - start),
+                  };
+                })
+                .sort((a, b) => a.cpu - b.cpu)
+                .slice(0, 2);
               
                 return (
                   <div key={best.id} className="flex flex-col w-full space-y-px">
               
                     {/* Primary card */}
                     <div
-                      id={`recipe-${best.id}`}
+                      id={primaryKey}
                       onClick={() => {
-                        setSelectedId(best.id);
+                        setSelectedRecipeId(best.id);
+                        setSelectedCardKey(primaryKey);
                         setRngLow(start);
                         setRngHigh(end);
                       }}
                       className={`relative flex items-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full
-                        ${selectedId === best.id ? 'ring-2 ring-green-400' : ''}`}
+                        ${selectedCardKey === primaryKey ? 'ring-2 ring-green-400' : ''}`}
                     >
                       <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                         diffColor(skill, best.difficulty)
@@ -279,26 +286,30 @@ export default function EnchantingPlanner() {
                       </span>
                       <img src={iconSrc(best.id)} alt="" className="w-3 h-3 rounded object-cover" />
                       <span className="truncate whitespace-nowrap flex-1 text-[9px]">
-                        {best.name.length <= 27 ? best.name : `${best.name.slice(0, 24)}…`}
+                        {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                       </span>
-                      <span className="text-[11px]">
+                      <span className="text-[9px]">
                         {(s.crafts * calcCraftCost(best) / 10000).toFixed(2)} g
                       </span>
-                      <span className="ml-auto bg-neutral-700 text-[9px] px-2 py-0 rounded-full">
+                      <span className="flex-shrink-0 w-16 text-center bg-neutral-700 text-[9px] px-0 py-0 rounded-full">
                         {start} → {end}
                       </span>
                     </div>
               
                     {/* Alternative cards (up to 2) */}
-                    {selectedId === best.id && candidates.map(alt => (
+                    {(selectedCardKey === primaryKey || selectedCardKey?.startsWith(`alt-${i}-`)) && candidates.map((alt, ai) => {
+                      const altKey = `alt-${i}-${ai}-${alt.recipe.id}`;
+                      return (
                       <div
-                        key={alt.recipe.id}
+                        key={altKey}
+                        id={altKey}
                         onClick={() => {
-                          setSelectedId(alt.recipe.id);
-                          setRngLow(start);
-                          setRngHigh(end);
+                          setSelectedRecipeId(alt.recipe.id); 
+                          setSelectedCardKey(altKey);
+                          setRngLow(alt.recipe.minSkill);
+                          setRngHigh(alt.recipe.difficulty.gray!);
                         }}
-                        className="relative flex items-center gap-1 bg-neutral-800 rounded-none px-2 py-1 w-full ml-4"
+                        className="relative flex items-center gap-1 bg-neutral-900 rounded-none pl-3 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer"
                       >
                         <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                           diffColor(skill, alt.recipe.difficulty)
@@ -311,16 +322,17 @@ export default function EnchantingPlanner() {
                           alt=""
                           className="w-3 h-3 rounded object-cover"
                         />
-                        <span className="truncate whitespace-nowrap flex-1 text-[11px]">
-                          {alt.recipe.name.length <= 27
+                        <span className="truncate whitespace-nowrap flex-1 text-[9px]">
+                          {alt.recipe.name.length <= 35
                             ? alt.recipe.name
-                            : `${alt.recipe.name.slice(0, 24)}…`}
+                            : `${alt.recipe.name.slice(0, 33)}…`}
                         </span>
-                        <span className="text-[11px]">
+                        <span className="text-[9px]">
                           {(alt.cost / 10000).toFixed(2)} g
                         </span>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 );
               })
@@ -328,13 +340,13 @@ export default function EnchantingPlanner() {
                 <div
                   key={r.id}
                   onClick={() => {
-                    setSelectedId(r.id);
+                    setSelectedRecipeId(r.id);
                     setRngLow(r.minSkill);
                     setRngHigh(r.difficulty.gray!);
                   }}
                   id={`recipe-${r.id}`}    // now correctly uses r.id
                   className={`relative flex items-center gap-1 bg-neutral-900 rounded-none px-2 py-1 ${
-                    selectedId === r.id ? 'ring-2 ring-green-400' : ''
+                    selectedRecipeId === r.id ? 'ring-2 ring-green-400' : ''
                   }`}
                 >
                   <span
@@ -359,9 +371,11 @@ export default function EnchantingPlanner() {
           </section>
 
           {/* Footer */}
-          <footer className="sticky bottom-0 z-30 bg-neutral-800 px-3 py-2 border-t border-neutral-700 text-center text-xs font-semibold">
-            Total {(totalCost/10000).toFixed(2)} g | Ends {finalSkill}
-          </footer>
+          {view === 'route' && (
+            <footer className="sticky bottom-0 z-30 bg-neutral-800 px-3 py-2 border-t border-neutral-700 text-center text-xs font-semibold">
+              Total {(totalCost/10000).toFixed(2)} g | Ends {finalSkill}
+            </footer>
+          )}
         </aside>
 
         {/* Main panel */}
