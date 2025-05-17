@@ -10,6 +10,7 @@ import { toPriceMap }      from '@/lib/pricing';
 import * as Slider         from '@radix-ui/react-slider';
 import Fuse from 'fuse.js';
 import { Combobox } from '@headlessui/react';
+import tradeMaterials from '@/data/materials/tradeMaterials.json';
 
 // ── normalize once ──
 const recipes: Recipe[] = (rawRecipes as RawRecipe[]).map(r => {
@@ -104,13 +105,13 @@ export default function EnchantingPlanner() {
   const [rngLow, setRngLow]   = useState(1);
   const [rngHigh, setRngHigh] = useState(300);
   useEffect(() => {
-    if (selected) {
+    if (selected && view === 'all') {
       setRngLow(selected.minSkill);
       setRngHigh(selected.difficulty.gray!);
     }
-  }, [selectedRecipeId]);
+  }, [selected, view]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (view === 'route' && selectedRecipeId !== null) {
       const idx = steps.findIndex(s => s.recipe.id === selectedRecipeId);
       if (idx >= 0) {
@@ -119,7 +120,7 @@ export default function EnchantingPlanner() {
         setRngHigh(steps[idx].endSkill);
       }
     }
-  }, [selectedRecipeId, view]);
+  }, [selectedRecipeId, view]);*/
 
   useEffect(() => {
     if (selectedRecipeId !== null) {
@@ -146,6 +147,11 @@ export default function EnchantingPlanner() {
     }
     return out;
   }, [selected, expCrafts]);
+
+  const [matInfo, setMatInfo] = useState<Record<string,{name:string;icon:string|null}>>({});
+
+  // Use pre-scraped material names and icons from JSON + /public/icons/materials
+  const materialMap: Record<string,string> = tradeMaterials;
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100">
@@ -306,8 +312,8 @@ export default function EnchantingPlanner() {
                         onClick={() => {
                           setSelectedRecipeId(alt.recipe.id); 
                           setSelectedCardKey(altKey);
-                          setRngLow(alt.recipe.minSkill);
-                          setRngHigh(alt.recipe.difficulty.gray!);
+                          setRngLow(start);
+                          setRngHigh(end);
                         }}
                         className="relative flex items-center gap-1 bg-neutral-900 rounded-none pl-3 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer"
                       >
@@ -458,21 +464,24 @@ export default function EnchantingPlanner() {
 
               {/* Materials summary */}
               <table className="w-full text-sm border-collapse">
-                <thead>
-                  <tr className="border-b border-neutral-700">
-                    <th className="text-left pb-1">Item ID</th>
-                    <th className="text-right pb-1">Qty</th>
-                    <th className="text-right pb-1">Cost (g)</th>
-                  </tr>
-                </thead>
                 <tbody>
-                  {Object.entries(materialTotals).map(([id,{qty,cost}])=>(
-                    <tr key={id} className="border-b border-neutral-800">
-                      <td className="py-1">{id}</td>
-                      <td className="py-1 text-right">{qty.toFixed(1)}</td>
-                      <td className="py-1 text-right">{(cost/10000).toFixed(2)}</td>
-                    </tr>
-                  ))}
+                {Object.entries(materialTotals).map(([id, {qty, cost}]) => {
+                    // use our local cache for the name, fallback to "Item 1234"
+                    const name = materialMap[id] ?? `Item ${id}`;
+                    // icons downloaded to public/icons/materials/<id>.jpg
+                    const iconUrl = `/icons/materials/${id}.jpg`;
+
+                    return (
+                      <tr key={id}>
+                        <td className="py-1 flex items-center gap-1">
+                          <img src={iconUrl} alt={name} className="w-4 h-4" />
+                          <span>{name}</span>
+                        </td>
+                        <td className="py-1 text-right">{qty.toFixed(1)}</td>
+                        <td className="py-1 text-right">{(cost/10000).toFixed(2)}</td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
 
