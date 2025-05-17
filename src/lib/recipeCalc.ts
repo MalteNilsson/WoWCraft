@@ -28,19 +28,19 @@ export function craftCost(r: Recipe, prices: PriceMap): number {
  */
 
 export function expectedSkillUps(r: Recipe, skill: number): number {
-  const { yellow: Y, gray: G } = r.difficulty;
-
-  // If thresholds are missing or malformed, fall back
-  if (!Y || !G || G <= Y) {
-    return skill < (Y ?? 0) ? 1 : 0;
+    // Use yellow threshold; default to 0 if missing
+    const Y = r.difficulty.yellow ?? 0;
+    // Use gray threshold; default to Infinity if missing
+    const G = r.difficulty.gray   ?? Infinity;
+  
+    // Full 100% chance up through yellow
+    if (skill <= Y) return 1;
+    // No chance at or past gray
+    if (skill >= G) return 0;
+  
+    // Pure linear dropoff between yellow and gray
+    return (G - skill) / (G - Y);
   }
-
-  if (skill <= Y) return 1;       // Full chance up to yellow
-  if (skill >= G) return 0;       // No chance once gray
-
-  // Linear interpolation between Y and G
-  return (G - skill) / (G - Y);
-}
 
 /** Average copper per skill-up at the current skill */
 export function costPerSkillUp(
