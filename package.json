@@ -10,6 +10,7 @@
     "scrape:enchanting": "node src/scripts/scrape_enchanting_wowhead.js"
   },
   "dependencies": {
+    "@radix-ui/react-slider": "^1.3.4",
     "cheerio": "^1.0.0",
     "next": "15.3.2",
     "node-fetch": "^2.7.0",
