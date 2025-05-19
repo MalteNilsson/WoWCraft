@@ -30,6 +30,7 @@
   {
     "id": 7421,
     "name": "Runed Copper Rod",
+    "quality": 1,
     "minSkill": 1,
     "difficulty": {
       "orange": 1,
@@ -267,6 +268,7 @@
   {
     "id": 7795,
     "name": "Runed Silver Rod",
+    "quality": 1,
     "minSkill": 100,
     "difficulty": {
       "orange": 100,
@@ -626,6 +628,7 @@
   {
     "id": 13628,
     "name": "Runed Golden Rod",
+    "quality": 1,
     "minSkill": 150,
     "difficulty": {
       "orange": 150,
@@ -941,6 +944,7 @@
   {
     "id": 13702,
     "name": "Runed Truesilver Rod",
+    "quality": 1,
     "minSkill": 200,
     "difficulty": {
       "orange": 200,
@@ -1357,6 +1361,7 @@
   {
     "id": 14293,
     "name": "Lesser Magic Wand",
+    "quality": 2,
     "minSkill": 10,
     "difficulty": {
       "orange": 10,
@@ -1372,6 +1377,7 @@
   {
     "id": 14807,
     "name": "Greater Magic Wand",
+    "quality": 2,
     "minSkill": 70,
     "difficulty": {
       "orange": 70,
@@ -1387,6 +1393,7 @@
   {
     "id": 14809,
     "name": "Lesser Mystic Wand",
+    "quality": 2,
     "minSkill": 155,
     "difficulty": {
       "orange": 155,
@@ -1403,6 +1410,7 @@
   {
     "id": 14810,
     "name": "Greater Mystic Wand",
+    "quality": 2,
     "minSkill": 175,
     "difficulty": {
       "orange": 175,
@@ -1419,6 +1427,7 @@
   {
     "id": 15596,
     "name": "Smoking Heart of the Mountain",
+    "quality": 3,
     "minSkill": 265,
     "difficulty": {
       "orange": 265,
@@ -1435,6 +1444,7 @@
   {
     "id": 17181,
     "name": "Enchanted Leather",
+    "quality": 1,
     "minSkill": 250,
     "difficulty": {
       "orange": 250,
@@ -1450,6 +1460,7 @@
   {
     "id": 17180,
     "name": "Enchanted Thorium",
+    "quality": 1,
     "minSkill": 250,
     "difficulty": {
       "orange": 250,
@@ -1647,6 +1658,7 @@
   {
     "id": 20051,
     "name": "Runed Arcanite Rod",
+    "quality": 1,
     "minSkill": 290,
     "difficulty": {
       "orange": 290,
@@ -2175,6 +2187,7 @@
   {
     "id": 25124,
     "name": "Minor Wizard Oil",
+    "quality": 1,
     "minSkill": 45,
     "difficulty": {
       "orange": 45,
@@ -2191,6 +2204,7 @@
   {
     "id": 25125,
     "name": "Minor Mana Oil",
+    "quality": 1,
     "minSkill": 150,
     "difficulty": {
       "orange": 150,
@@ -2207,6 +2221,7 @@
   {
     "id": 25126,
     "name": "Lesser Wizard Oil",
+    "quality": 1,
     "minSkill": 200,
     "difficulty": {
       "orange": 200,
@@ -2223,6 +2238,7 @@
   {
     "id": 25127,
     "name": "Lesser Mana Oil",
+    "quality": 1,
     "minSkill": 250,
     "difficulty": {
       "orange": 250,
@@ -2239,6 +2255,7 @@
   {
     "id": 25128,
     "name": "Wizard Oil",
+    "quality": 1,
     "minSkill": 275,
     "difficulty": {
       "orange": 275,
@@ -2255,6 +2272,7 @@
   {
     "id": 25129,
     "name": "Brilliant Wizard Oil",
+    "quality": 1,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2271,6 +2289,7 @@
   {
     "id": 25130,
     "name": "Brilliant Mana Oil",
+    "quality": 1,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2304,6 +2323,7 @@
   {
     "id": 430409,
     "name": "Blackfathom Mana Oil",
+    "quality": 2,
     "minSkill": 100,
     "difficulty": {
       "orange": 100,
@@ -2351,6 +2371,7 @@
   {
     "id": 439134,
     "name": "Greater Mystic Wand",
+    "quality": 2,
     "minSkill": 175,
     "difficulty": {
       "orange": 175,
@@ -2367,6 +2388,7 @@
   {
     "id": 439156,
     "name": "Sigil of Innovation",
+    "quality": 2,
     "minSkill": 225,
     "difficulty": {
       "orange": 225,
@@ -2381,6 +2403,7 @@
   {
     "id": 446243,
     "name": "Sigil of Living Dreams",
+    "quality": 2,
     "minSkill": 225,
     "difficulty": {
       "orange": 225,
@@ -2395,6 +2418,7 @@
   {
     "id": 448624,
     "name": "Scroll of Spatial Mending",
+    "quality": 2,
     "minSkill": 120,
     "difficulty": {
       "orange": 120,
@@ -2429,6 +2453,7 @@
   {
     "id": 463869,
     "name": "Conductive Shield Coating",
+    "quality": 1,
     "minSkill": 275,
     "difficulty": {
       "orange": 275,
@@ -2445,6 +2470,7 @@
   {
     "id": 463866,
     "name": "Sigil of Flowing Waters",
+    "quality": 3,
     "minSkill": 290,
     "difficulty": {
       "orange": 290,
@@ -2459,6 +2485,7 @@
   {
     "id": 471400,
     "name": "Magnificent Trollshine",
+    "quality": 1,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2476,6 +2503,7 @@
   {
     "id": 1213593,
     "name": "Speedstone",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2494,6 +2522,7 @@
   {
     "id": 1213595,
     "name": "Tear of the Dreamer",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2512,6 +2541,7 @@
   {
     "id": 1213598,
     "name": "Lodestone of Retaliation",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2530,6 +2560,7 @@
   {
     "id": 1213600,
     "name": "Enchanted Stopwatch",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2547,6 +2578,7 @@
   {
     "id": 1213603,
     "name": "Ruby-Encrusted Broach",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2566,6 +2598,7 @@
   {
     "id": 1213607,
     "name": "Scroll: Wrath of the Swarm",
+    "quality": 3,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2581,6 +2614,7 @@
   {
     "id": 1213610,
     "name": "Enchanted Repellent",
+    "quality": 1,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2649,6 +2683,7 @@
   {
     "id": 1213628,
     "name": "Enchanted Prayer Tome",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2666,6 +2701,7 @@
   {
     "id": 1213633,
     "name": "Enchanted Totem",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2683,6 +2719,7 @@
   {
     "id": 1213635,
     "name": "Enchanted Mushroom",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2701,6 +2738,7 @@
   {
     "id": 1216005,
     "name": "Libram of Righteousness",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2718,6 +2756,7 @@
   {
     "id": 1216007,
     "name": "Libram of the Exorcist",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2735,6 +2774,7 @@
   {
     "id": 1216010,
     "name": "Libram of Sanctity",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2752,6 +2792,7 @@
   {
     "id": 1216014,
     "name": "Totem of Pyroclastic Thunder",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2769,6 +2810,7 @@
   {
     "id": 1216016,
     "name": "Totem of Thunderous Strikes",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2786,6 +2828,7 @@
   {
     "id": 1216018,
     "name": "Totem of Flowing Magma",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2803,6 +2846,7 @@
   {
     "id": 1216020,
     "name": "Idol of Sidereal Wrath",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2821,6 +2865,7 @@
   {
     "id": 1216022,
     "name": "Idol of Feline Ferocity",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,
@@ -2839,6 +2884,7 @@
   {
     "id": 1216024,
     "name": "Idol of Ursin Power",
+    "quality": 4,
     "minSkill": 300,
     "difficulty": {
       "orange": 300,

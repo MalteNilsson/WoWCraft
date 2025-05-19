@@ -1,10 +1,16 @@
 /* eslint-disable no-console */
 // To run under ESM, ensure your package.json has `"type": "module"`
 
-import fetch from "node-fetch";
 import fs from "fs/promises";
 import path from "path";
 import vm from "vm";
+import { fetch } from "undici";             // undici is faster & has keep-alive by default
+import pLimit from "p-limit";
+
+const CONCURRENCY = 10;                       // play nice with Wowhead
+const limit       = pLimit(CONCURRENCY);
+
+
 
 /*──────── URLs ────────*/
 const PROF_URL  = "https://www.wowhead.com/classic/skill=333/enchanting";
@@ -233,6 +239,7 @@ async function downloadMaterialIcon(itemId, iconName) {
     out.push({
       id:         sp.id,
       name:       sp.name,
+      quality:    sp.quality,    // ← record the recipe’s quality
       minSkill:   min,
       difficulty: { orange, yellow, green, gray },
       materials:  reagentsMap(sp.reagents ?? sp.reagent ?? {}),
@@ -243,31 +250,68 @@ async function downloadMaterialIcon(itemId, iconName) {
   // Save recipes
   console.log("📦 Writing enchanting.json…");
   await fs.mkdir(path.dirname(recipeFile), { recursive: true });
-  await fs.writeFile(recipeFile, JSON.stringify(out, null, 2), "utf8");
-  console.log(`✅  Saved ${out.length} new recipes → ${recipeFile}`);
+  if (out.length === 0) {
+    console.log("⚠️  No new recipes found—skipping write to enchanting.json");
+  } else {
+    await fs.writeFile(recipeFile, JSON.stringify(out, null, 2), "utf8");
+    console.log(`✅  Saved ${out.length} new recipes → ${recipeFile}`);
+  }
 
   // Combine all recipes for materials
   const allRecipes = existingRecipes.concat(out);
   console.log(`🔎  Preparing materials from ${allRecipes.length} total recipes`);
 
-  // Scrape materials
+  // ─── MATERIAL SCRAPE (parallel) ─────────────────────────────
   console.log("⏳  [3/3] Resolving material names & icons…");
   const matSet = new Set();
   allRecipes.forEach(r => Object.keys(r.materials).forEach(id => matSet.add(id)));
-  const matIds = Array.from(matSet);
+  const matIds = [...matSet];
   console.log(`   Found ${matIds.length} unique materials`);
 
-  const matMap = {};
-  for (const [i, id] of matIds.entries()) {
-    console.log(`    🔍 [${i+1}/${matIds.length}] Material ${id}`);
+  const tradeMatFile = path.resolve("src/data/materials/tradeMaterials.json");
+  let existingMatMap = {};
+  let matMap = {};
+
+  try {
+    existingMatMap = JSON.parse(await fs.readFile(tradeMatFile, "utf8"));
+    console.log(`🔄  loaded ${Object.keys(existingMatMap).length} existing materials`);
+    matMap = { ...existingMatMap };
+  } catch {
+    console.log("🔄  no existing tradeMaterials.json, will build fresh");
+    matMap = {};
+  }
+
+  
+
+  const tasks = matIds.map((id, idx) => limit(async () => {
+
+    if (matMap[id]) {
+        console.log(`↪  skipping material ${id}, already have info`);
+        return;
+    }
+
+    console.log(`    🔍 [${idx+1}/${matIds.length}] Material ${id}`);
+    let xml;
     try {
-      console.debug(`[MATERIAL] fetching ITEM_XML(${id})`);
-      const xml = await dl(ITEM_XML(id));
-      console.debug(`[MATERIAL] XML length=${xml.length}`);
+        xml = await dl(ITEM_XML(id));
+    } catch (e) {
+        console.warn(`     ✖  failed XML for ${id}`, e);
+        matMap[id] = { name: `Item ${id}`, quality: null };
+        return;
+    }
 
       const m = xml.match(/<name><!\[CDATA\[(.*?)\]\]><\/name>/i);
       const name = m?.[1] ?? `Item ${id}`;
-      matMap[id] = name;
+
+      // quality from XML: <quality id="2">Uncommon</quality>
+      const mQual = xml.match(/<quality\s+id="(\d+)"/i);
+      const quality = mQual ? Number(mQual[1]) : null;
+
+      matMap[id] = {
+        name,
+        quality
+      };
+
       console.log(`     ✔  name → "${name}"`);
 
       // extract icon name
@@ -298,16 +342,14 @@ async function downloadMaterialIcon(itemId, iconName) {
             }
         }
 
-      if (iconName) {
+    if (iconName) {
         await downloadMaterialIcon(id, iconName);
-      } else {
-        console.warn(`     ⚠️  no icon found for ${id}`);
-      }
-    } catch (e) {
-      console.warn(`     ✖  failed material ${id}:`, e);
-      matMap[id] = `Item ${id}`;
     }
-  }
+    }));
+
+    console.log("   ⏳  running all material tasks…");
+    await Promise.all(tasks);
+    console.log(`   ✅ material tasks complete; matMap now has ${Object.keys(matMap).length} entries`);
 
   // Save materials
   const matFile = path.resolve("src/data/materials/tradeMaterials.json");

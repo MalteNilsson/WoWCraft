@@ -8,22 +8,30 @@ export type Difficulty = {
   
   /*  NEW – describes the JSON before cleanup.
       Some quantities may be undefined. */
-  export type RawRecipe = {
+export type RawRecipe = {
     id:         number;
     name:       string;
     minSkill:   number;
     difficulty: Difficulty;
     /** qty may be number | undefined in the raw file */
     materials:  Record<string, number | undefined>;
+};
+  
+/*  Your existing clean shape – AFTER you drop undefineds. */
+export type Recipe = {
+    id:         number;
+    name:       string;
+    quality:    number;                // ← new
+    minSkill:   number;
+    difficulty: Difficulty;
+    materials:  Record<string, number>;
   };
   
-  /*  Your existing clean shape – AFTER you drop undefineds. */
-  export type Recipe = Omit<RawRecipe, "materials"> & {
-    materials: Record<string, number>;   // numbers only
-  };
-  
-  /*  unchanged */
-  export type PriceMap = Record<
+/*  unchanged */
+export type PriceMap = Record<
     string,
     { minBuyout?: number; marketValue?: number }
-  >;
+>;
+
+export type MaterialInfo = { name: string; quality: number | null };
+  
