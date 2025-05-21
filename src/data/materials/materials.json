@@ -1,0 +1,713 @@
+{
+  "1210": {
+    "name": "Shadowgem",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_amethyst_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=1210/shadowgem"
+  },
+  "2772": {
+    "name": "Iron Ore",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ore_iron_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2772/iron-ore"
+  },
+  "3356": {
+    "name": "Kingsblood",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3356/kingsblood"
+  },
+  "3371": {
+    "name": "Empty Vial",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3371/empty-vial"
+  },
+  "3372": {
+    "name": "Leaded Vial",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3372/leaded-vial"
+  },
+  "3819": {
+    "name": "Wintersbite",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_flower_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3819/wintersbite"
+  },
+  "3829": {
+    "name": "Frost Oil",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Item Enhancements (Temporary)",
+    "icon": "inv_potion_20",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3829/frost-oil"
+  },
+  "4470": {
+    "name": "Simple Wood",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_tradeskillitem_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4470/simple-wood"
+  },
+  "4625": {
+    "name": "Firebloom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_19",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4625/firebloom"
+  },
+  "5500": {
+    "name": "Iridescent Pearl",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_pearl_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5500/iridescent-pearl"
+  },
+  "5637": {
+    "name": "Large Fang",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_bone_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5637/large-fang"
+  },
+  "6037": {
+    "name": "Truesilver Bar",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6037/truesilver-bar"
+  },
+  "6048": {
+    "name": "Shadow Protection Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_44",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6048/shadow-protection-potion"
+  },
+  "6217": {
+    "name": "Copper Rod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_misc_flute_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6217/copper-rod"
+  },
+  "6338": {
+    "name": "Silver Rod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_staff_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6338/silver-rod"
+  },
+  "6370": {
+    "name": "Blackmouth Oil",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_drink_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6370/blackmouth-oil"
+  },
+  "6371": {
+    "name": "Fire Oil",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_potion_38",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6371/fire-oil"
+  },
+  "7067": {
+    "name": "Elemental Earth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_ore_iron_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7067/elemental-earth"
+  },
+  "7068": {
+    "name": "Elemental Fire",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_fire_fire",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7068/elemental-fire"
+  },
+  "7075": {
+    "name": "Core of Earth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_stone_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7075/core-of-earth"
+  },
+  "7076": {
+    "name": "Essence of Earth",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_strengthofearthtotem02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7076/essence-of-earth"
+  },
+  "7077": {
+    "name": "Heart of Fire",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_fire_lavaspawn",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7077/heart-of-fire"
+  },
+  "7078": {
+    "name": "Essence of Fire",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_fire_volcano",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7078/essence-of-fire"
+  },
+  "7079": {
+    "name": "Globe of Water",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_misc_orb_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7079/globe-of-water"
+  },
+  "7080": {
+    "name": "Essence of Water",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_acid_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7080/essence-of-water"
+  },
+  "7081": {
+    "name": "Breath of Wind",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_cyclone",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7081/breath-of-wind"
+  },
+  "7082": {
+    "name": "Essence of Air",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_earthbind",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7082/essence-of-air"
+  },
+  "7392": {
+    "name": "Green Whelp Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7392/green-whelp-scale"
+  },
+  "7909": {
+    "name": "Aquamarine",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_crystal_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7909/aquamarine"
+  },
+  "7971": {
+    "name": "Black Pearl",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_pearl_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7971/black-pearl"
+  },
+  "7972": {
+    "name": "Ichor of Undeath",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_misc_slime_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7972/ichor-of-undeath"
+  },
+  "8153": {
+    "name": "Wildvine",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8153/wildvine"
+  },
+  "8170": {
+    "name": "Rugged Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8170/rugged-leather"
+  },
+  "8831": {
+    "name": "Purple Lotus",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_17",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8831/purple-lotus"
+  },
+  "8838": {
+    "name": "Sungrass",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_18",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8838/sungrass"
+  },
+  "8925": {
+    "name": "Crystal Vial",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8925/crystal-vial"
+  },
+  "9224": {
+    "name": "Elixir of Demonslaying",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_27",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9224/elixir-of-demonslaying"
+  },
+  "10938": {
+    "name": "Lesser Magic Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_essencemagicsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10938/lesser-magic-essence"
+  },
+  "10939": {
+    "name": "Greater Magic Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_essencemagiclarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10939/greater-magic-essence"
+  },
+  "10940": {
+    "name": "Strange Dust",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_duststrange",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10940/strange-dust"
+  },
+  "10978": {
+    "name": "Small Glimmering Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardglimmeringsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10978/small-glimmering-shard"
+  },
+  "10998": {
+    "name": "Lesser Astral Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essenceastralsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10998/lesser-astral-essence"
+  },
+  "11082": {
+    "name": "Greater Astral Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essenceastrallarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11082/greater-astral-essence"
+  },
+  "11083": {
+    "name": "Soul Dust",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_dustsoul",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11083/soul-dust"
+  },
+  "11084": {
+    "name": "Large Glimmering Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardglimmeringlarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11084/large-glimmering-shard"
+  },
+  "11128": {
+    "name": "Golden Rod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_staff_10",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11128/golden-rod"
+  },
+  "11134": {
+    "name": "Lesser Mystic Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essencemysticalsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11134/lesser-mystic-essence"
+  },
+  "11135": {
+    "name": "Greater Mystic Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essencemysticallarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11135/greater-mystic-essence"
+  },
+  "11137": {
+    "name": "Vision Dust",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_dustvision",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11137/vision-dust"
+  },
+  "11138": {
+    "name": "Small Glowing Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardglowingsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11138/small-glowing-shard"
+  },
+  "11139": {
+    "name": "Large Glowing Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardglowinglarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11139/large-glowing-shard"
+  },
+  "11144": {
+    "name": "Truesilver Rod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_staff_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11144/truesilver-rod"
+  },
+  "11174": {
+    "name": "Lesser Nether Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essencenethersmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11174/lesser-nether-essence"
+  },
+  "11175": {
+    "name": "Greater Nether Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_essencenetherlarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11175/greater-nether-essence"
+  },
+  "11176": {
+    "name": "Dream Dust",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_dustdream",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11176/dream-dust"
+  },
+  "11177": {
+    "name": "Small Radiant Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardradientsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11177/small-radiant-shard"
+  },
+  "11178": {
+    "name": "Large Radiant Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardradientlarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11178/large-radiant-shard"
+  },
+  "11291": {
+    "name": "Star Wood",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_tradeskillitem_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11291/star-wood"
+  },
+  "11382": {
+    "name": "Blood of the Mountain",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_bloodstone_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11382/blood-of-the-mountain"
+  },
+  "11754": {
+    "name": "Black Diamond",
+    "quality": 2,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_gem_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11754/black-diamond"
+  },
+  "12359": {
+    "name": "Thorium Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12359/thorium-bar"
+  },
+  "12803": {
+    "name": "Living Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_abolishmagic",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12803/living-essence"
+  },
+  "12808": {
+    "name": "Essence of Undeath",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_shadow_shadetruesight",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12808/essence-of-undeath"
+  },
+  "12809": {
+    "name": "Guardian Stone",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12809/guardian-stone"
+  },
+  "12811": {
+    "name": "Righteous Orb",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_gem_pearl_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12811/righteous-orb"
+  },
+  "13467": {
+    "name": "Icecap",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_icecap",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13467/icecap"
+  },
+  "13468": {
+    "name": "Black Lotus",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_blacklotus",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13468/black-lotus"
+  },
+  "13926": {
+    "name": "Golden Pearl",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_pearl_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13926/golden-pearl"
+  },
+  "14343": {
+    "name": "Small Brilliant Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_shardbrilliantsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14343/small-brilliant-shard"
+  },
+  "14344": {
+    "name": "Large Brilliant Shard",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_shardbrilliantlarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14344/large-brilliant-shard"
+  },
+  "16202": {
+    "name": "Lesser Eternal Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_essenceeternalsmall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16202/lesser-eternal-essence"
+  },
+  "16203": {
+    "name": "Greater Eternal Essence",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_essenceeternallarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16203/greater-eternal-essence"
+  },
+  "16204": {
+    "name": "Illusion Dust",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_enchant_dustillusion",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16204/illusion-dust"
+  },
+  "16206": {
+    "name": "Arcanite Rod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Enchanting",
+    "icon": "inv_staff_19",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16206/arcanite-rod"
+  },
+  "17034": {
+    "name": "Maple Seed",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_food_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17034/maple-seed"
+  },
+  "17035": {
+    "name": "Stranglethorn Seed",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_food_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17035/stranglethorn-seed"
+  },
+  "18256": {
+    "name": "Imbued Vial",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=18256/imbued-vial"
+  },
+  "18512": {
+    "name": "Larval Acid",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_potion_22",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=18512/larval-acid"
+  },
+  "20725": {
+    "name": "Nexus Crystal",
+    "quality": 4,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_enchant_shardnexuslarge",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20725/nexus-crystal"
+  }
+}

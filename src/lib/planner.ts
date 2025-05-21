@@ -21,17 +21,17 @@ export type PlanStep =
         note?:      string;
     };
   
-    export function makeDynamicPlan(
-        skill: number,
-        target: number,
-        recipes: Recipe[],
-        prices: PriceMap
-      ) {
+export function makeDynamicPlan(
+    skill: number,
+    target: number,
+    recipes: Recipe[],
+    prices: PriceMap
+    ) {
         // list all three thresholds...
         const allUpgrades = [
-          { level: 50,  name: "Journeyman" },
-          { level: 125, name: "Expert"     },
-          { level: 200, name: "Artisan"    },
+          //{ level: 50,  name: "Journeyman" },
+          //{ level: 125, name: "Expert"     },
+          { level: 350, name: "Artisan"    },
         ];
       
         // drop any we’ve already passed (e.g. when slider starts >50)
@@ -90,21 +90,21 @@ export type PlanStep =
         ) {
         last.crafts!   += crafts;
         last.cost!     += cost;
-        last.endSkill  += crafts;   // advance by # of skill-ups
+        last.endSkill  += 1;   // advance by # of skill-ups
         } else {
         steps.push({
             recipe:    best,
             crafts,
             cost,
-            endSkill:  skill + crafts,
+            endSkill:  skill + 1,
         });
         }
     
         // ⑤ Advance state and clear the upgrade guard
         total += cost;
-        skill += crafts;
+        skill += 1;
         justUpgraded = false;
     }
     
     return { steps, totalCost: total, finalSkill: skill };
-    }
+}   

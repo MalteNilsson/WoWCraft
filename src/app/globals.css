@@ -1,15 +1,43 @@
 @import "tailwindcss";
 
+@layer base {
+  html, body {
+    font-family: 'Inter', system-ui, sans-serif !important;
+  }
+  
+  /* Define font-weight utility classes */
+  .font-thin {
+    font-weight: 100;
+  }
+  .font-extralight {
+    font-weight: 200;
+  }
+  .font-light {
+    font-weight: 300;
+  }
+  .font-normal {
+    font-weight: 400;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-extrabold {
+    font-weight: 800;
+  }
+  .font-black {
+    font-weight: 900;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +51,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: #1a1a1a; /* dark track */
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* neutral-600 */
+  border-radius: 4px;
+  border: 2px solid #1a1a1a; /* padding around thumb */
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280; /* neutral-500 */
+}
+
+/* Firefox */
+aside {
+  scrollbar-color: #585858 #1a1a1a;
+  scrollbar-width: thin;
 }
