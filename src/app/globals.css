@@ -1,10 +1,11 @@
 @import "tailwindcss";
+@layer theme, base, components, utilities;
 
 @layer base {
   html, body {
     font-family: 'Inter', system-ui, sans-serif !important;
   }
-  
+
   /* Define font-weight utility classes */
   .font-thin {
     font-weight: 100;
@@ -35,9 +36,14 @@
   }
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-neutral-625: #525252;
+  --color-neutral-675: #464646;
+  --color-neutral-725: #3a3a3a;
+  --color-neutral-775: #2e2e2e;
+  --color-neutral-825: #252525;
+  --color-neutral-875: #1d1d1d;
+  --color-neutral-925: #161616;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +51,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+@layer theme {
+
 }
 
 body {
@@ -62,17 +72,17 @@ aside::-webkit-scrollbar-track {
 }
 
 aside::-webkit-scrollbar-thumb {
-  background-color: #4b5563; /* neutral-600 */
+  background-color: #111111; /* neutral-600 */
   border-radius: 4px;
   border: 2px solid #1a1a1a; /* padding around thumb */
 }
 
 aside::-webkit-scrollbar-thumb:hover {
-  background-color: #6b7280; /* neutral-500 */
+  background-color: #525252; /* neutral-500 */
 }
 
 /* Firefox */
 aside {
-  scrollbar-color: #585858 #1a1a1a;
+  scrollbar-color: #2b2b2b #1a1a1a;
   scrollbar-width: thin;
 }

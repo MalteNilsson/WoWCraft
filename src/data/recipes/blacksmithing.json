@@ -1,0 +1,5784 @@
+[
+  {
+    "id": 16729,
+    "name": "Lionheart Helm",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8146": 40,
+      "12359": 80,
+      "12360": 12,
+      "12361": 10,
+      "12800": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_36",
+    "url": "https://www.wowhead.com/classic/spell=16729/lionheart-helm",
+    "produces": {
+      "id": 12640,
+      "name": "Lionheart Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20201,
+    "name": "Arcanite Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "12360": 3,
+      "12644": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_staff_19",
+    "url": "https://www.wowhead.com/classic/spell=20201/arcanite-rod",
+    "produces": {
+      "id": 16206,
+      "name": "Arcanite Rod",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22757,
+    "name": "Elemental Sharpening Stone",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "7067": 2,
+      "12365": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_stone_02",
+    "url": "https://www.wowhead.com/classic/spell=22757/elemental-sharpening-stone",
+    "produces": {
+      "id": 18262,
+      "name": "Elemental Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16643,
+    "name": "Thorium Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "11186": 4,
+      "12359": 12
+    },
+    "minSkill": 250,
+    "icon": "inv_belt_30",
+    "url": "https://www.wowhead.com/classic/spell=16643/thorium-belt",
+    "produces": {
+      "id": 12406,
+      "name": "Thorium Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9980,
+    "name": "Ornate Mithril Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 16,
+      "6037": 2,
+      "7966": 1,
+      "7971": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_helmet_10",
+    "url": "https://www.wowhead.com/classic/spell=9980/ornate-mithril-helm",
+    "produces": {
+      "id": 7937,
+      "name": "Ornate Mithril Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9961,
+    "name": "Mithril Coif",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "3860": 10,
+      "4338": 6
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_35",
+    "url": "https://www.wowhead.com/classic/spell=9961/mithril-coif",
+    "produces": {
+      "id": 7931,
+      "name": "Mithril Coif",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27829,
+    "name": "Titanic Leggings",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 10,
+      "12360": 12,
+      "12655": 20,
+      "13510": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=27829/titanic-leggings",
+    "produces": {
+      "id": 22385,
+      "name": "Titanic Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 21161,
+    "name": "Sulfuron Hammer",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 325,
+      "green": 337,
+      "gray": 350
+    },
+    "materials": {
+      "7078": 25,
+      "11371": 20,
+      "11382": 10,
+      "12360": 50,
+      "17010": 10,
+      "17011": 10,
+      "17203": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_hammer_unique_sulfuras",
+    "url": "https://www.wowhead.com/classic/spell=21161/sulfuron-hammer",
+    "produces": {
+      "id": 17193,
+      "name": "Sulfuron Hammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3496,
+    "name": "Moonsteel Broadsword",
+    "quality": 2,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 205,
+      "green": 217,
+      "gray": 230
+    },
+    "materials": {
+      "1705": 3,
+      "3466": 2,
+      "3486": 2,
+      "3859": 8,
+      "4234": 3
+    },
+    "minSkill": 180,
+    "icon": "inv_sword_25",
+    "url": "https://www.wowhead.com/classic/spell=3496/moonsteel-broadsword",
+    "produces": {
+      "id": 3853,
+      "name": "Moonsteel Broadsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16994,
+    "name": "Arcanite Reaper",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 20,
+      "12644": 2,
+      "12810": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_axe_09",
+    "url": "https://www.wowhead.com/classic/spell=16994/arcanite-reaper",
+    "produces": {
+      "id": 12784,
+      "name": "Arcanite Reaper",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16644,
+    "name": "Thorium Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "11184": 4,
+      "12359": 12
+    },
+    "minSkill": 255,
+    "icon": "inv_bracer_13",
+    "url": "https://www.wowhead.com/classic/spell=16644/thorium-bracers",
+    "produces": {
+      "id": 12408,
+      "name": "Thorium Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23653,
+    "name": "Nightfall",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 12,
+      "12360": 10,
+      "12364": 4,
+      "17010": 5,
+      "17011": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_axe_12",
+    "url": "https://www.wowhead.com/classic/spell=23653/nightfall",
+    "produces": {
+      "id": 19169,
+      "name": "Nightfall",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7818,
+    "name": "Silver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 105,
+      "green": 107,
+      "gray": 110
+    },
+    "materials": {
+      "2842": 1,
+      "3470": 2
+    },
+    "minSkill": 100,
+    "icon": "inv_staff_01",
+    "url": "https://www.wowhead.com/classic/spell=7818/silver-rod",
+    "produces": {
+      "id": 6338,
+      "name": "Silver Rod",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16652,
+    "name": "Thorium Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "8170": 8,
+      "11185": 4,
+      "12359": 20
+    },
+    "minSkill": 280,
+    "icon": "inv_boots_plate_08",
+    "url": "https://www.wowhead.com/classic/spell=16652/thorium-boots",
+    "produces": {
+      "id": 12409,
+      "name": "Thorium Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3498,
+    "name": "Massive Iron Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 210,
+      "green": 222,
+      "gray": 235
+    },
+    "materials": {
+      "3466": 2,
+      "3486": 2,
+      "3575": 14,
+      "3577": 4,
+      "4234": 2
+    },
+    "minSkill": 185,
+    "icon": "inv_throwingaxe_05",
+    "url": "https://www.wowhead.com/classic/spell=3498/massive-iron-axe",
+    "produces": {
+      "id": 3855,
+      "name": "Massive Iron Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2672,
+    "name": "Patterned Bronze Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 150,
+      "green": 165,
+      "gray": 180
+    },
+    "materials": {
+      "2841": 5,
+      "3478": 2
+    },
+    "minSkill": 120,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=2672/patterned-bronze-bracers",
+    "produces": {
+      "id": 2868,
+      "name": "Patterned Bronze Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10001,
+    "name": "Big Black Mace",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 255,
+      "green": 267,
+      "gray": 280
+    },
+    "materials": {
+      "1210": 4,
+      "3860": 16,
+      "4304": 2,
+      "7966": 1,
+      "7971": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_mace_15",
+    "url": "https://www.wowhead.com/classic/spell=10001/big-black-mace",
+    "produces": {
+      "id": 7945,
+      "name": "Big Black Mace",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16641,
+    "name": "Dense Sharpening Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 257,
+      "gray": 260
+    },
+    "materials": {
+      "12365": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_stone_sharpeningstone_05",
+    "url": "https://www.wowhead.com/classic/spell=16641/dense-sharpening-stone",
+    "produces": {
+      "id": 12404,
+      "name": "Dense Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9928,
+    "name": "Heavy Mithril Gauntlet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 6,
+      "4338": 4
+    },
+    "minSkill": 205,
+    "icon": "inv_gauntlets_27",
+    "url": "https://www.wowhead.com/classic/spell=9928/heavy-mithril-gauntlet",
+    "produces": {
+      "id": 7919,
+      "name": "Heavy Mithril Gauntlet",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9979,
+    "name": "Ornate Mithril Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 14,
+      "4304": 4,
+      "6037": 2,
+      "7909": 1,
+      "7966": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=9979/ornate-mithril-boots",
+    "produces": {
+      "id": 7936,
+      "name": "Ornate Mithril Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2675,
+    "name": "Shining Silver Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 175,
+      "green": 190,
+      "gray": 205
+    },
+    "materials": {
+      "1206": 2,
+      "1705": 2,
+      "2841": 20,
+      "2842": 4,
+      "5500": 2
+    },
+    "minSkill": 145,
+    "icon": "inv_chest_plate15",
+    "url": "https://www.wowhead.com/classic/spell=2675/shining-silver-breastplate",
+    "produces": {
+      "id": 2870,
+      "name": "Shining Silver Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7223,
+    "name": "Golden Scale Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 210,
+      "green": 222,
+      "gray": 235
+    },
+    "materials": {
+      "3486": 2,
+      "3859": 5
+    },
+    "minSkill": 185,
+    "icon": "inv_bracer_10",
+    "url": "https://www.wowhead.com/classic/spell=7223/golden-scale-bracers",
+    "produces": {
+      "id": 6040,
+      "name": "Golden Scale Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23652,
+    "name": "Blackguard",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 6,
+      "12360": 10,
+      "12809": 12,
+      "17010": 6,
+      "17011": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_39",
+    "url": "https://www.wowhead.com/classic/spell=23652/blackguard",
+    "produces": {
+      "id": 19168,
+      "name": "Blackguard",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16649,
+    "name": "Imperial Plate Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7910": 1,
+      "12359": 20
+    },
+    "minSkill": 270,
+    "icon": "inv_bracer_19",
+    "url": "https://www.wowhead.com/classic/spell=16649/imperial-plate-bracers",
+    "produces": {
+      "id": 12425,
+      "name": "Imperial Plate Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16667,
+    "name": "Demon Forged Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "7910": 4,
+      "12359": 40,
+      "12361": 4,
+      "12662": 10
+    },
+    "minSkill": 285,
+    "icon": "inv_chest_plate06",
+    "url": "https://www.wowhead.com/classic/spell=16667/demon-forged-breastplate",
+    "produces": {
+      "id": 12628,
+      "name": "Demon Forged Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3506,
+    "name": "Green Iron Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 180,
+      "green": 192,
+      "gray": 205
+    },
+    "materials": {
+      "2605": 1,
+      "3486": 1,
+      "3575": 8
+    },
+    "minSkill": 155,
+    "icon": "inv_pants_05",
+    "url": "https://www.wowhead.com/classic/spell=3506/green-iron-leggings",
+    "produces": {
+      "id": 3842,
+      "name": "Green Iron Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3337,
+    "name": "Heavy Grinding Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2838": 3
+    },
+    "minSkill": 125,
+    "icon": "inv_stone_grindingstone_03",
+    "url": "https://www.wowhead.com/classic/spell=3337/heavy-grinding-stone",
+    "produces": {
+      "id": 3486,
+      "name": "Heavy Grinding Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7224,
+    "name": "Steel Weapon Chain",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 215,
+      "green": 227,
+      "gray": 240
+    },
+    "materials": {
+      "3486": 2,
+      "3859": 8,
+      "4234": 4
+    },
+    "minSkill": 190,
+    "icon": "spell_frost_chainsofice",
+    "url": "https://www.wowhead.com/classic/spell=7224/steel-weapon-chain",
+    "produces": {
+      "id": 6041,
+      "name": "Steel Weapon Chain",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9993,
+    "name": "Heavy Mithril Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 235,
+      "green": 247,
+      "gray": 260
+    },
+    "materials": {
+      "3860": 12,
+      "3864": 2,
+      "4234": 4,
+      "7966": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_axe_14",
+    "url": "https://www.wowhead.com/classic/spell=9993/heavy-mithril-axe",
+    "produces": {
+      "id": 7941,
+      "name": "Heavy Mithril Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7222,
+    "name": "Iron Counterweight",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 190,
+      "green": 202,
+      "gray": 215
+    },
+    "materials": {
+      "1705": 1,
+      "3478": 2,
+      "3575": 4
+    },
+    "minSkill": 165,
+    "icon": "inv_misc_orb_01",
+    "url": "https://www.wowhead.com/classic/spell=7222/iron-counterweight",
+    "produces": {
+      "id": 6043,
+      "name": "Iron Counterweight",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9968,
+    "name": "Heavy Mithril Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 14,
+      "4304": 4
+    },
+    "minSkill": 235,
+    "icon": "inv_boots_plate_01",
+    "url": "https://www.wowhead.com/classic/spell=9968/heavy-mithril-boots",
+    "produces": {
+      "id": 7933,
+      "name": "Heavy Mithril Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9920,
+    "name": "Solid Grinding Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 205,
+      "gray": 210
+    },
+    "materials": {
+      "7912": 4
+    },
+    "minSkill": 200,
+    "icon": "inv_stone_grindingstone_04",
+    "url": "https://www.wowhead.com/classic/spell=9920/solid-grinding-stone",
+    "produces": {
+      "id": 7966,
+      "name": "Solid Grinding Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23639,
+    "name": "Blackfury",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 6,
+      "12360": 16,
+      "17010": 2,
+      "17011": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_spear_08",
+    "url": "https://www.wowhead.com/classic/spell=23639/blackfury",
+    "produces": {
+      "id": 19167,
+      "name": "Blackfury",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9935,
+    "name": "Steel Plate Helm",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 245,
+      "gray": 255
+    },
+    "materials": {
+      "3859": 14,
+      "7966": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_helmet_03",
+    "url": "https://www.wowhead.com/classic/spell=9935/steel-plate-helm",
+    "produces": {
+      "id": 7922,
+      "name": "Steel Plate Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9954,
+    "name": "Truesilver Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "3860": 10,
+      "3864": 3,
+      "5966": 1,
+      "6037": 8,
+      "7909": 3,
+      "7966": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_gauntlets_29",
+    "url": "https://www.wowhead.com/classic/spell=9954/truesilver-gauntlets",
+    "produces": {
+      "id": 7938,
+      "name": "Truesilver Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 8768,
+    "name": "Iron Buckle",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 152,
+      "gray": 155
+    },
+    "materials": {
+      "3575": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_armorkit_12",
+    "url": "https://www.wowhead.com/classic/spell=8768/iron-buckle",
+    "produces": {
+      "id": 7071,
+      "name": "Iron Buckle",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20897,
+    "name": "Dark Iron Destroyer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 18,
+      "11382": 2,
+      "12810": 2,
+      "17011": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_axe_12",
+    "url": "https://www.wowhead.com/classic/spell=20897/dark-iron-destroyer",
+    "produces": {
+      "id": 17016,
+      "name": "Dark Iron Destroyer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3320,
+    "name": "Rough Grinding Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "2835": 2
+    },
+    "minSkill": 25,
+    "icon": "inv_stone_grindingstone_01",
+    "url": "https://www.wowhead.com/classic/spell=3320/rough-grinding-stone",
+    "produces": {
+      "id": 3470,
+      "name": "Rough Grinding Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16995,
+    "name": "Heartseeker",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 6,
+      "12360": 10,
+      "12644": 4,
+      "12655": 10,
+      "12799": 6,
+      "12800": 6,
+      "12810": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_17",
+    "url": "https://www.wowhead.com/classic/spell=16995/heartseeker",
+    "produces": {
+      "id": 12783,
+      "name": "Heartseeker",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28461,
+    "name": "Ironvine Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 2,
+      "12655": 12,
+      "12803": 2,
+      "19726": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate07",
+    "url": "https://www.wowhead.com/classic/spell=28461/ironvine-breastplate",
+    "produces": {
+      "id": 22762,
+      "name": "Ironvine Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10007,
+    "name": "Phantom Blade",
+    "quality": 3,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 270,
+      "green": 282,
+      "gray": 295
+    },
+    "materials": {
+      "3823": 2,
+      "3860": 28,
+      "4304": 2,
+      "6037": 8,
+      "7081": 6,
+      "7909": 6,
+      "7966": 4
+    },
+    "minSkill": 245,
+    "icon": "inv_sword_40",
+    "url": "https://www.wowhead.com/classic/spell=10007/phantom-blade",
+    "produces": {
+      "id": 7961,
+      "name": "Phantom Blade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16741,
+    "name": "Stronghold Gauntlets",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 10,
+      "12360": 15,
+      "12361": 4,
+      "12655": 20,
+      "12799": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_30",
+    "url": "https://www.wowhead.com/classic/spell=16741/stronghold-gauntlets",
+    "produces": {
+      "id": 12639,
+      "name": "Stronghold Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3501,
+    "name": "Green Iron Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 190,
+      "green": 202,
+      "gray": 215
+    },
+    "materials": {
+      "2605": 1,
+      "3575": 6
+    },
+    "minSkill": 165,
+    "icon": "inv_bracer_06",
+    "url": "https://www.wowhead.com/classic/spell=3501/green-iron-bracers",
+    "produces": {
+      "id": 3835,
+      "name": "Green Iron Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16744,
+    "name": "Enchanted Thorium Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 6,
+      "12360": 10,
+      "12361": 2,
+      "12364": 1,
+      "12655": 20
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=16744/enchanted-thorium-leggings",
+    "produces": {
+      "id": 12619,
+      "name": "Enchanted Thorium Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24399,
+    "name": "Dark Iron Boots",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 6,
+      "17010": 3,
+      "17011": 3,
+      "17012": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_chain_08",
+    "url": "https://www.wowhead.com/classic/spell=24399/dark-iron-boots",
+    "produces": {
+      "id": 20039,
+      "name": "Dark Iron Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9959,
+    "name": "Heavy Mithril Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "3860": 16
+    },
+    "minSkill": 230,
+    "icon": "inv_chest_plate10",
+    "url": "https://www.wowhead.com/classic/spell=9959/heavy-mithril-breastplate",
+    "produces": {
+      "id": 7930,
+      "name": "Heavy Mithril Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9974,
+    "name": "Truesilver Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 12,
+      "6037": 24,
+      "7910": 4,
+      "7966": 2,
+      "7971": 4
+    },
+    "minSkill": 245,
+    "icon": "inv_chest_plate04",
+    "url": "https://www.wowhead.com/classic/spell=9974/truesilver-breastplate",
+    "produces": {
+      "id": 7939,
+      "name": "Truesilver Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15292,
+    "name": "Dark Iron Pulverizer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "7077": 4,
+      "11371": 18
+    },
+    "minSkill": 265,
+    "icon": "inv_hammer_09",
+    "url": "https://www.wowhead.com/classic/spell=15292/dark-iron-pulverizer",
+    "produces": {
+      "id": 11608,
+      "name": "Dark Iron Pulverizer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27830,
+    "name": "Persuader",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 10,
+      "12360": 15,
+      "12753": 2,
+      "12808": 20,
+      "15417": 10,
+      "20520": 20
+    },
+    "minSkill": 300,
+    "icon": "inv_hammer_08",
+    "url": "https://www.wowhead.com/classic/spell=27830/persuader",
+    "produces": {
+      "id": 22384,
+      "name": "Persuader",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9918,
+    "name": "Solid Sharpening Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 205,
+      "gray": 210
+    },
+    "materials": {
+      "7912": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_stone_sharpeningstone_04",
+    "url": "https://www.wowhead.com/classic/spell=9918/solid-sharpening-stone",
+    "produces": {
+      "id": 7964,
+      "name": "Solid Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 11454,
+    "name": "Inlaid Mithril Cylinder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "3577": 1,
+      "3860": 5,
+      "6037": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/classic/spell=11454/inlaid-mithril-cylinder",
+    "produces": {
+      "id": 9060,
+      "name": "Inlaid Mithril Cylinder",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16990,
+    "name": "Arcanite Champion",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 15,
+      "12644": 2,
+      "12799": 4,
+      "12800": 8,
+      "12810": 8,
+      "12811": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_39",
+    "url": "https://www.wowhead.com/classic/spell=16990/arcanite-champion",
+    "produces": {
+      "id": 12790,
+      "name": "Arcanite Champion",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16992,
+    "name": "Frostguard",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 4,
+      "12360": 18,
+      "12361": 8,
+      "12644": 2,
+      "12800": 8,
+      "12810": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_11",
+    "url": "https://www.wowhead.com/classic/spell=16992/frostguard",
+    "produces": {
+      "id": 12797,
+      "name": "Frostguard",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16639,
+    "name": "Dense Grinding Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 257,
+      "gray": 260
+    },
+    "materials": {
+      "12365": 4
+    },
+    "minSkill": 250,
+    "icon": "inv_stone_grindingstone_05",
+    "url": "https://www.wowhead.com/classic/spell=16639/dense-grinding-stone",
+    "produces": {
+      "id": 12644,
+      "name": "Dense Grinding Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23636,
+    "name": "Dark Iron Helm",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 4,
+      "17010": 2,
+      "17011": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_22",
+    "url": "https://www.wowhead.com/classic/spell=23636/dark-iron-helm",
+    "produces": {
+      "id": 19148,
+      "name": "Dark Iron Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16660,
+    "name": "Dawnbringer Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7080": 2,
+      "12359": 20,
+      "12360": 4,
+      "12364": 2
+    },
+    "minSkill": 290,
+    "icon": "inv_shoulder_20",
+    "url": "https://www.wowhead.com/classic/spell=16660/dawnbringer-shoulders",
+    "produces": {
+      "id": 12625,
+      "name": "Dawnbringer Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28242,
+    "name": "Icebane Breastplate",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 4,
+      "12359": 16,
+      "12360": 2,
+      "22682": 7
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_11",
+    "url": "https://www.wowhead.com/classic/spell=28242/icebane-breastplate",
+    "produces": {
+      "id": 22669,
+      "name": "Icebane Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16971,
+    "name": "Huge Thorium Battleaxe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 317,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 6,
+      "12359": 40,
+      "12644": 6
+    },
+    "minSkill": 280,
+    "icon": "inv_weapon_halberd_11",
+    "url": "https://www.wowhead.com/classic/spell=16971/huge-thorium-battleaxe",
+    "produces": {
+      "id": 12775,
+      "name": "Huge Thorium Battleaxe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27832,
+    "name": "Sageblade",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 12,
+      "12810": 4,
+      "13512": 2,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_51",
+    "url": "https://www.wowhead.com/classic/spell=27832/sageblade",
+    "produces": {
+      "id": 22383,
+      "name": "Sageblade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2668,
+    "name": "Rough Bronze Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 145,
+      "green": 160,
+      "gray": 175
+    },
+    "materials": {
+      "2841": 6
+    },
+    "minSkill": 105,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=2668/rough-bronze-leggings",
+    "produces": {
+      "id": 2865,
+      "name": "Rough Bronze Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9814,
+    "name": "Barbaric Iron Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 200,
+      "green": 212,
+      "gray": 225
+    },
+    "materials": {
+      "3575": 10,
+      "5635": 2,
+      "5637": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_helmet_25",
+    "url": "https://www.wowhead.com/classic/spell=9814/barbaric-iron-helm",
+    "produces": {
+      "id": 7915,
+      "name": "Barbaric Iron Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16647,
+    "name": "Imperial Plate Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "7909": 1,
+      "8170": 6,
+      "12359": 22
+    },
+    "minSkill": 265,
+    "icon": "inv_belt_01",
+    "url": "https://www.wowhead.com/classic/spell=16647/imperial-plate-belt",
+    "produces": {
+      "id": 12424,
+      "name": "Imperial Plate Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16988,
+    "name": "Hammer of the Titans",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 10,
+      "12359": 50,
+      "12360": 15,
+      "12809": 4,
+      "12810": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_hammer_09",
+    "url": "https://www.wowhead.com/classic/spell=16988/hammer-of-the-titans",
+    "produces": {
+      "id": 12796,
+      "name": "Hammer of the Titans",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9972,
+    "name": "Ornate Mithril Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "3860": 16,
+      "6037": 6,
+      "7077": 1,
+      "7966": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_chest_plate10",
+    "url": "https://www.wowhead.com/classic/spell=9972/ornate-mithril-breastplate",
+    "produces": {
+      "id": 7935,
+      "name": "Ornate Mithril Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23638,
+    "name": "Black Amnesty",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 4,
+      "11382": 1,
+      "12360": 12,
+      "17010": 6,
+      "17011": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_shortblade_12",
+    "url": "https://www.wowhead.com/classic/spell=23638/black-amnesty",
+    "produces": {
+      "id": 19166,
+      "name": "Black Amnesty",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27590,
+    "name": "Obsidian Mail Tunic",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12800": 4,
+      "12809": 10,
+      "12810": 12,
+      "22202": 36,
+      "22203": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_17",
+    "url": "https://www.wowhead.com/classic/spell=27590/obsidian-mail-tunic",
+    "produces": {
+      "id": 22191,
+      "name": "Obsidian Mail Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9952,
+    "name": "Ornate Mithril Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "3860": 12,
+      "4304": 6,
+      "6037": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_shoulder_09",
+    "url": "https://www.wowhead.com/classic/spell=9952/ornate-mithril-shoulders",
+    "produces": {
+      "id": 7928,
+      "name": "Ornate Mithril Shoulder",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3494,
+    "name": "Solid Iron Maul",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 180,
+      "green": 192,
+      "gray": 205
+    },
+    "materials": {
+      "2842": 4,
+      "3466": 2,
+      "3486": 1,
+      "3575": 8,
+      "4234": 2
+    },
+    "minSkill": 155,
+    "icon": "inv_hammer_07",
+    "url": "https://www.wowhead.com/classic/spell=3494/solid-iron-maul",
+    "produces": {
+      "id": 3851,
+      "name": "Solid Iron Maul",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19667,
+    "name": "Golden Skeleton Key",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 160,
+      "gray": 170
+    },
+    "materials": {
+      "3486": 1,
+      "3577": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_key_13",
+    "url": "https://www.wowhead.com/classic/spell=19667/golden-skeleton-key",
+    "produces": {
+      "id": 15870,
+      "name": "Golden Skeleton Key",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9811,
+    "name": "Barbaric Iron Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 185,
+      "green": 197,
+      "gray": 210
+    },
+    "materials": {
+      "1210": 2,
+      "3486": 2,
+      "3575": 8,
+      "5635": 4
+    },
+    "minSkill": 160,
+    "icon": "inv_shoulder_23",
+    "url": "https://www.wowhead.com/classic/spell=9811/barbaric-iron-shoulders",
+    "produces": {
+      "id": 7913,
+      "name": "Barbaric Iron Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16985,
+    "name": "Corruption",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 315,
+      "green": 327,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 4,
+      "12359": 40,
+      "12360": 2,
+      "12361": 2,
+      "12644": 2,
+      "12662": 16,
+      "12808": 8
+    },
+    "minSkill": 290,
+    "icon": "inv_sword_07",
+    "url": "https://www.wowhead.com/classic/spell=16985/corruption",
+    "produces": {
+      "id": 12782,
+      "name": "Corruption",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27586,
+    "name": "Jagged Obsidian Shield",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 4,
+      "12655": 8,
+      "22202": 24,
+      "22203": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_shield_22",
+    "url": "https://www.wowhead.com/classic/spell=27586/jagged-obsidian-shield",
+    "produces": {
+      "id": 22198,
+      "name": "Jagged Obsidian Shield",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9813,
+    "name": "Barbaric Iron Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 185,
+      "green": 197,
+      "gray": 210
+    },
+    "materials": {
+      "3486": 4,
+      "3575": 20
+    },
+    "minSkill": 160,
+    "icon": "inv_chest_chain_14",
+    "url": "https://www.wowhead.com/classic/spell=9813/barbaric-iron-breastplate",
+    "produces": {
+      "id": 7914,
+      "name": "Barbaric Iron Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16993,
+    "name": "Masterwork Stormhammer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 6,
+      "12364": 8,
+      "12655": 20,
+      "12799": 8,
+      "12810": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_hammer_04",
+    "url": "https://www.wowhead.com/classic/spell=16993/masterwork-stormhammer",
+    "produces": {
+      "id": 12794,
+      "name": "Masterwork Stormhammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10015,
+    "name": "Truesilver Champion",
+    "quality": 3,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 285,
+      "green": 297,
+      "gray": 310
+    },
+    "materials": {
+      "3860": 30,
+      "4304": 6,
+      "6037": 16,
+      "7081": 4,
+      "7910": 6,
+      "7966": 8
+    },
+    "minSkill": 260,
+    "icon": "inv_sword_19",
+    "url": "https://www.wowhead.com/classic/spell=10015/truesilver-champion",
+    "produces": {
+      "id": 7960,
+      "name": "Truesilver Champion",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15295,
+    "name": "Dark Iron Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "7077": 1,
+      "11371": 6
+    },
+    "minSkill": 280,
+    "icon": "inv_shoulder_09",
+    "url": "https://www.wowhead.com/classic/spell=15295/dark-iron-shoulders",
+    "produces": {
+      "id": 11605,
+      "name": "Dark Iron Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16653,
+    "name": "Thorium Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "7910": 1,
+      "11188": 4,
+      "12359": 24
+    },
+    "minSkill": 280,
+    "icon": "inv_helmet_23",
+    "url": "https://www.wowhead.com/classic/spell=16653/thorium-helm",
+    "produces": {
+      "id": 12410,
+      "name": "Thorium Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16973,
+    "name": "Enchanted Battlehammer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 317,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 4,
+      "12359": 20,
+      "12364": 2,
+      "12655": 6,
+      "12804": 4
+    },
+    "minSkill": 280,
+    "icon": "inv_hammer_05",
+    "url": "https://www.wowhead.com/classic/spell=16973/enchanted-battlehammer",
+    "produces": {
+      "id": 12776,
+      "name": "Enchanted Battlehammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24136,
+    "name": "Bloodsoul Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 2,
+      "12359": 20,
+      "19726": 2,
+      "19774": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_14",
+    "url": "https://www.wowhead.com/classic/spell=24136/bloodsoul-breastplate",
+    "produces": {
+      "id": 19690,
+      "name": "Bloodsoul Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16724,
+    "name": "Whitesoul Helm",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "3577": 6,
+      "6037": 6,
+      "12359": 20,
+      "12655": 4,
+      "12800": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_13",
+    "url": "https://www.wowhead.com/classic/spell=16724/whitesoul-helm",
+    "produces": {
+      "id": 12633,
+      "name": "Whitesoul Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23650,
+    "name": "Ebon Hand",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 8,
+      "12360": 12,
+      "12800": 4,
+      "17010": 7,
+      "17011": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_hammer_19",
+    "url": "https://www.wowhead.com/classic/spell=23650/ebon-hand",
+    "produces": {
+      "id": 19170,
+      "name": "Ebon Hand",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24141,
+    "name": "Darksoul Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 16,
+      "12799": 1,
+      "19774": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_01",
+    "url": "https://www.wowhead.com/classic/spell=24141/darksoul-shoulders",
+    "produces": {
+      "id": 19695,
+      "name": "Darksoul Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2667,
+    "name": "Runed Copper Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "1210": 1,
+      "2840": 12,
+      "3470": 2
+    },
+    "minSkill": 80,
+    "icon": "inv_chest_plate03",
+    "url": "https://www.wowhead.com/classic/spell=2667/runed-copper-breastplate",
+    "produces": {
+      "id": 2864,
+      "name": "Runed Copper Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9945,
+    "name": "Ornate Mithril Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "3860": 12,
+      "6037": 1,
+      "7909": 1,
+      "7966": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=9945/ornate-mithril-pants",
+    "produces": {
+      "id": 7926,
+      "name": "Ornate Mithril Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 14379,
+    "name": "Golden Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 155,
+      "green": 157,
+      "gray": 160
+    },
+    "materials": {
+      "3478": 2,
+      "3577": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_staff_10",
+    "url": "https://www.wowhead.com/classic/spell=14379/golden-rod",
+    "produces": {
+      "id": 11128,
+      "name": "Golden Rod",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 14380,
+    "name": "Truesilver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "3486": 1,
+      "6037": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_staff_11",
+    "url": "https://www.wowhead.com/classic/spell=14380/truesilver-rod",
+    "produces": {
+      "id": 11144,
+      "name": "Truesilver Rod",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16970,
+    "name": "Dawn's Edge",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 300,
+      "green": 312,
+      "gray": 325
+    },
+    "materials": {
+      "7910": 4,
+      "8170": 4,
+      "12359": 30,
+      "12361": 4,
+      "12644": 2,
+      "12655": 4
+    },
+    "minSkill": 275,
+    "icon": "inv_axe_05",
+    "url": "https://www.wowhead.com/classic/spell=16970/dawns-edge",
+    "produces": {
+      "id": 12774,
+      "name": "Dawn's Edge",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19666,
+    "name": "Silver Skeleton Key",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 100,
+      "green": 110,
+      "gray": 120
+    },
+    "materials": {
+      "2842": 1,
+      "3470": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_key_03",
+    "url": "https://www.wowhead.com/classic/spell=19666/silver-skeleton-key",
+    "produces": {
+      "id": 15869,
+      "name": "Silver Skeleton Key",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16657,
+    "name": "Imperial Plate Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "7909": 1,
+      "7910": 1,
+      "12359": 34
+    },
+    "minSkill": 295,
+    "icon": "inv_boots_plate_01",
+    "url": "https://www.wowhead.com/classic/spell=16657/imperial-plate-boots",
+    "produces": {
+      "id": 12426,
+      "name": "Imperial Plate Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3326,
+    "name": "Coarse Grinding Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 75,
+      "green": 87,
+      "gray": 100
+    },
+    "materials": {
+      "2836": 2
+    },
+    "minSkill": 75,
+    "icon": "inv_stone_grindingstone_02",
+    "url": "https://www.wowhead.com/classic/spell=3326/coarse-grinding-stone",
+    "produces": {
+      "id": 3478,
+      "name": "Coarse Grinding Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3330,
+    "name": "Silvered Bronze Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 155,
+      "green": 170,
+      "gray": 185
+    },
+    "materials": {
+      "2841": 8,
+      "2842": 2,
+      "3478": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_shoulder_09",
+    "url": "https://www.wowhead.com/classic/spell=3330/silvered-bronze-shoulders",
+    "produces": {
+      "id": 3481,
+      "name": "Silvered Bronze Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9933,
+    "name": "Heavy Mithril Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "1705": 2,
+      "3860": 10
+    },
+    "minSkill": 210,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=9933/heavy-mithril-pants",
+    "produces": {
+      "id": 7921,
+      "name": "Heavy Mithril Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16742,
+    "name": "Enchanted Thorium Helm",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 6,
+      "12360": 6,
+      "12655": 16,
+      "12799": 2,
+      "12800": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_02",
+    "url": "https://www.wowhead.com/classic/spell=16742/enchanted-thorium-helm",
+    "produces": {
+      "id": 12620,
+      "name": "Enchanted Thorium Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16745,
+    "name": "Enchanted Thorium Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 4,
+      "7080": 4,
+      "12360": 8,
+      "12364": 2,
+      "12655": 24,
+      "12800": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate10",
+    "url": "https://www.wowhead.com/classic/spell=16745/enchanted-thorium-breastplate",
+    "produces": {
+      "id": 12618,
+      "name": "Enchanted Thorium Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20876,
+    "name": "Dark Iron Leggings",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 16,
+      "17010": 4,
+      "17011": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=20876/dark-iron-leggings",
+    "produces": {
+      "id": 17013,
+      "name": "Dark Iron Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24140,
+    "name": "Darksoul Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 18,
+      "12799": 2,
+      "19774": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_plate_21",
+    "url": "https://www.wowhead.com/classic/spell=24140/darksoul-leggings",
+    "produces": {
+      "id": 19694,
+      "name": "Darksoul Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3336,
+    "name": "Green Iron Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 180,
+      "green": 195,
+      "gray": 210
+    },
+    "materials": {
+      "2605": 1,
+      "3478": 2,
+      "3575": 4,
+      "5498": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3336/green-iron-gauntlets",
+    "produces": {
+      "id": 3485,
+      "name": "Green Iron Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16645,
+    "name": "Radiant Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "7077": 2,
+      "12359": 10
+    },
+    "minSkill": 260,
+    "icon": "inv_belt_11",
+    "url": "https://www.wowhead.com/classic/spell=16645/radiant-belt",
+    "produces": {
+      "id": 12416,
+      "name": "Radiant Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16746,
+    "name": "Invulnerable Mail",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 30,
+      "12364": 6,
+      "12655": 30,
+      "12800": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_07",
+    "url": "https://www.wowhead.com/classic/spell=16746/invulnerable-mail",
+    "produces": {
+      "id": 12641,
+      "name": "Invulnerable Mail",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16991,
+    "name": "Annihilator",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 40,
+      "12360": 12,
+      "12364": 8,
+      "12644": 2,
+      "12808": 10,
+      "12810": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_axe_12",
+    "url": "https://www.wowhead.com/classic/spell=16991/annihilator",
+    "produces": {
+      "id": 12798,
+      "name": "Annihilator",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23628,
+    "name": "Heavy Timbermaw Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7076": 3,
+      "12359": 12,
+      "12803": 3
+    },
+    "minSkill": 290,
+    "icon": "inv_belt_16",
+    "url": "https://www.wowhead.com/classic/spell=23628/heavy-timbermaw-belt",
+    "produces": {
+      "id": 19043,
+      "name": "Heavy Timbermaw Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7817,
+    "name": "Rough Bronze Boots",
+    "quality": 1,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 125,
+      "green": 140,
+      "gray": 155
+    },
+    "materials": {
+      "2841": 6,
+      "3470": 6
+    },
+    "minSkill": 95,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=7817/rough-bronze-boots",
+    "produces": {
+      "id": 6350,
+      "name": "Rough Bronze Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9950,
+    "name": "Ornate Mithril Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "3860": 10,
+      "4338": 6,
+      "6037": 1,
+      "7966": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=9950/ornate-mithril-gloves",
+    "produces": {
+      "id": 7927,
+      "name": "Ornate Mithril Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24139,
+    "name": "Darksoul Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 20,
+      "12799": 2,
+      "19774": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate08",
+    "url": "https://www.wowhead.com/classic/spell=24139/darksoul-breastplate",
+    "produces": {
+      "id": 19693,
+      "name": "Darksoul Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3324,
+    "name": "Runed Copper Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 85,
+      "green": 105,
+      "gray": 125
+    },
+    "materials": {
+      "2321": 2,
+      "2840": 8,
+      "3470": 3
+    },
+    "minSkill": 45,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=3324/runed-copper-pants",
+    "produces": {
+      "id": 3473,
+      "name": "Runed Copper Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3325,
+    "name": "Gemmed Copper Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "774": 1,
+      "818": 1,
+      "2840": 8
+    },
+    "minSkill": 60,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3325/gemmed-copper-gauntlets",
+    "produces": {
+      "id": 3474,
+      "name": "Gemmed Copper Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3502,
+    "name": "Green Iron Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 195,
+      "green": 207,
+      "gray": 220
+    },
+    "materials": {
+      "2605": 1,
+      "3575": 12,
+      "3864": 1
+    },
+    "minSkill": 170,
+    "icon": "inv_helmet_03",
+    "url": "https://www.wowhead.com/classic/spell=3502/green-iron-helm",
+    "produces": {
+      "id": 3836,
+      "name": "Green Iron Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10009,
+    "name": "Runed Mithril Hammer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 270,
+      "green": 282,
+      "gray": 295
+    },
+    "materials": {
+      "3860": 18,
+      "4304": 4,
+      "7075": 2,
+      "7966": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_hammer_17",
+    "url": "https://www.wowhead.com/classic/spell=10009/runed-mithril-hammer",
+    "produces": {
+      "id": 7946,
+      "name": "Runed Mithril Hammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19669,
+    "name": "Arcanite Skeleton Key",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "12360": 1,
+      "12644": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_key_08",
+    "url": "https://www.wowhead.com/classic/spell=19669/arcanite-skeleton-key",
+    "produces": {
+      "id": 15872,
+      "name": "Arcanite Skeleton Key",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2665,
+    "name": "Coarse Sharpening Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 65,
+      "green": 72,
+      "gray": 80
+    },
+    "materials": {
+      "2836": 1
+    },
+    "minSkill": 65,
+    "icon": "inv_stone_sharpeningstone_02",
+    "url": "https://www.wowhead.com/classic/spell=2665/coarse-sharpening-stone",
+    "produces": {
+      "id": 2863,
+      "name": "Coarse Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7221,
+    "name": "Iron Shield Spike",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 180,
+      "green": 195,
+      "gray": 210
+    },
+    "materials": {
+      "3478": 4,
+      "3575": 6
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_armorkit_01",
+    "url": "https://www.wowhead.com/classic/spell=7221/iron-shield-spike",
+    "produces": {
+      "id": 6042,
+      "name": "Iron Shield Spike",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9985,
+    "name": "Bronze Warhammer",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 155,
+      "green": 170,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 1,
+      "2841": 8,
+      "3466": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_hammer_18",
+    "url": "https://www.wowhead.com/classic/spell=9985/bronze-warhammer",
+    "produces": {
+      "id": 7956,
+      "name": "Bronze Warhammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3117,
+    "name": "Heavy Weightstone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 132,
+      "gray": 140
+    },
+    "materials": {
+      "2592": 1,
+      "2838": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_stone_weightstone_03",
+    "url": "https://www.wowhead.com/classic/spell=3117/heavy-weightstone",
+    "produces": {
+      "id": 3241,
+      "name": "Heavy Weightstone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3508,
+    "name": "Green Iron Hauberk",
+    "quality": 3,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 205,
+      "green": 217,
+      "gray": 230
+    },
+    "materials": {
+      "1206": 2,
+      "1529": 2,
+      "3486": 4,
+      "3575": 20,
+      "4255": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_chest_chain",
+    "url": "https://www.wowhead.com/classic/spell=3508/green-iron-hauberk",
+    "produces": {
+      "id": 3844,
+      "name": "Green Iron Hauberk",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3511,
+    "name": "Golden Scale Cuirass",
+    "quality": 2,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 220,
+      "green": 232,
+      "gray": 245
+    },
+    "materials": {
+      "1529": 2,
+      "3486": 4,
+      "3577": 2,
+      "3859": 12
+    },
+    "minSkill": 195,
+    "icon": "inv_chest_chain_06",
+    "url": "https://www.wowhead.com/classic/spell=3511/golden-scale-cuirass",
+    "produces": {
+      "id": 3845,
+      "name": "Golden Scale Cuirass",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16728,
+    "name": "Helm of the Great Chief",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8168": 60,
+      "12359": 40,
+      "12364": 2,
+      "12655": 4,
+      "12799": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_24",
+    "url": "https://www.wowhead.com/classic/spell=16728/helm-of-the-great-chief",
+    "produces": {
+      "id": 12636,
+      "name": "Helm of the Great Chief",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16978,
+    "name": "Blazing Rapier",
+    "quality": 3,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 317,
+      "gray": 330
+    },
+    "materials": {
+      "7077": 4,
+      "7078": 4,
+      "12644": 2,
+      "12655": 10,
+      "12800": 2
+    },
+    "minSkill": 280,
+    "icon": "inv_sword_30",
+    "url": "https://www.wowhead.com/classic/spell=16978/blazing-rapier",
+    "produces": {
+      "id": 12777,
+      "name": "Blazing Rapier",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20874,
+    "name": "Dark Iron Bracers",
+    "quality": 4,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "11371": 4,
+      "17010": 2,
+      "17011": 2
+    },
+    "minSkill": 295,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=20874/dark-iron-bracers",
+    "produces": {
+      "id": 17014,
+      "name": "Dark Iron Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27587,
+    "name": "Thick Obsidian Breastplate",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 10,
+      "12364": 4,
+      "12655": 12,
+      "22202": 40,
+      "22203": 18
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_17",
+    "url": "https://www.wowhead.com/classic/spell=27587/thick-obsidian-breastplate",
+    "produces": {
+      "id": 22196,
+      "name": "Thick Obsidian Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2674,
+    "name": "Heavy Sharpening Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 132,
+      "gray": 140
+    },
+    "materials": {
+      "2838": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_stone_sharpeningstone_03",
+    "url": "https://www.wowhead.com/classic/spell=2674/heavy-sharpening-stone",
+    "produces": {
+      "id": 2871,
+      "name": "Heavy Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3293,
+    "name": "Copper Battle Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "774": 2,
+      "2318": 2,
+      "2840": 12,
+      "2880": 2,
+      "3470": 2
+    },
+    "minSkill": 35,
+    "icon": "inv_throwingaxe_02",
+    "url": "https://www.wowhead.com/classic/spell=3293/copper-battle-axe",
+    "produces": {
+      "id": 3488,
+      "name": "Copper Battle Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3295,
+    "name": "Deadly Bronze Poniard",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 155,
+      "green": 170,
+      "gray": 185
+    },
+    "materials": {
+      "1210": 2,
+      "2319": 2,
+      "2459": 1,
+      "2841": 4,
+      "3466": 1,
+      "3478": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_weapon_shortblade_05",
+    "url": "https://www.wowhead.com/classic/spell=3295/deadly-bronze-poniard",
+    "produces": {
+      "id": 3490,
+      "name": "Deadly Bronze Poniard",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9820,
+    "name": "Barbaric Iron Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 210,
+      "green": 222,
+      "gray": 235
+    },
+    "materials": {
+      "3486": 3,
+      "3575": 14,
+      "5637": 2
+    },
+    "minSkill": 185,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=9820/barbaric-iron-gloves",
+    "produces": {
+      "id": 7917,
+      "name": "Barbaric Iron Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9937,
+    "name": "Mithril Scale Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 245,
+      "gray": 255
+    },
+    "materials": {
+      "3860": 8,
+      "3864": 2
+    },
+    "minSkill": 215,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=9937/mithril-scale-bracers",
+    "produces": {
+      "id": 7924,
+      "name": "Mithril Scale Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 21913,
+    "name": "Edge of Winter",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 215,
+      "green": 227,
+      "gray": 240
+    },
+    "materials": {
+      "3829": 1,
+      "3859": 10,
+      "4234": 2,
+      "7069": 2,
+      "7070": 2
+    },
+    "minSkill": 190,
+    "icon": "inv_axe_06",
+    "url": "https://www.wowhead.com/classic/spell=21913/edge-of-winter",
+    "produces": {
+      "id": 17704,
+      "name": "Edge of Winter",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27589,
+    "name": "Black Grasp of the Destroyer",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12810": 8,
+      "13512": 1,
+      "22202": 24,
+      "22203": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=27589/black-grasp-of-the-destroyer",
+    "produces": {
+      "id": 22194,
+      "name": "Black Grasp of the Destroyer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2660,
+    "name": "Rough Sharpening Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 15,
+      "green": 35,
+      "gray": 55
+    },
+    "materials": {
+      "2835": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_stone_sharpeningstone_01",
+    "url": "https://www.wowhead.com/classic/spell=2660/rough-sharpening-stone",
+    "produces": {
+      "id": 2862,
+      "name": "Rough Sharpening Stone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2673,
+    "name": "Silvered Bronze Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 160,
+      "green": 175,
+      "gray": 190
+    },
+    "materials": {
+      "1705": 1,
+      "2841": 10,
+      "2842": 2,
+      "3478": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_chest_chain_09",
+    "url": "https://www.wowhead.com/classic/spell=2673/silvered-bronze-breastplate",
+    "produces": {
+      "id": 2869,
+      "name": "Silvered Bronze Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3503,
+    "name": "Golden Scale Coif",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 215,
+      "green": 227,
+      "gray": 240
+    },
+    "materials": {
+      "3486": 2,
+      "3577": 2,
+      "3859": 8
+    },
+    "minSkill": 190,
+    "icon": "inv_helmet_36",
+    "url": "https://www.wowhead.com/classic/spell=3503/golden-scale-coif",
+    "produces": {
+      "id": 3837,
+      "name": "Golden Scale Coif",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3493,
+    "name": "Jade Serpentblade",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 200,
+      "green": 212,
+      "gray": 225
+    },
+    "materials": {
+      "1529": 2,
+      "3466": 2,
+      "3486": 2,
+      "3575": 8,
+      "4234": 3
+    },
+    "minSkill": 175,
+    "icon": "inv_sword_36",
+    "url": "https://www.wowhead.com/classic/spell=3493/jade-serpentblade",
+    "produces": {
+      "id": 3850,
+      "name": "Jade Serpentblade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3504,
+    "name": "Green Iron Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 185,
+      "green": 197,
+      "gray": 210
+    },
+    "materials": {
+      "2605": 1,
+      "3486": 1,
+      "3575": 7
+    },
+    "minSkill": 160,
+    "icon": "inv_shoulder_09",
+    "url": "https://www.wowhead.com/classic/spell=3504/green-iron-shoulders",
+    "produces": {
+      "id": 3840,
+      "name": "Green Iron Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 8367,
+    "name": "Ironforge Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "818": 2,
+      "2840": 16,
+      "3470": 3
+    },
+    "minSkill": 100,
+    "icon": "inv_chest_plate05",
+    "url": "https://www.wowhead.com/classic/spell=8367/ironforge-breastplate",
+    "produces": {
+      "id": 6731,
+      "name": "Ironforge Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9997,
+    "name": "Wicked Mithril Blade",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 250,
+      "green": 262,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 14,
+      "4304": 2,
+      "6037": 4,
+      "7966": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_sword_10",
+    "url": "https://www.wowhead.com/classic/spell=9997/wicked-mithril-blade",
+    "produces": {
+      "id": 7943,
+      "name": "Wicked Mithril Blade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16661,
+    "name": "Storm Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "7080": 4,
+      "12359": 20,
+      "12361": 4,
+      "12655": 4
+    },
+    "minSkill": 295,
+    "icon": "inv_gauntlets_30",
+    "url": "https://www.wowhead.com/classic/spell=16661/storm-gauntlets",
+    "produces": {
+      "id": 12632,
+      "name": "Storm Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23632,
+    "name": "Girdle of the Dawn",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "6037": 6,
+      "12359": 8,
+      "12811": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_belt_11",
+    "url": "https://www.wowhead.com/classic/spell=23632/girdle-of-the-dawn",
+    "produces": {
+      "id": 19051,
+      "name": "Girdle of the Dawn",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24912,
+    "name": "Darkrune Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "6037": 6,
+      "12359": 12,
+      "12810": 2,
+      "20520": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_27",
+    "url": "https://www.wowhead.com/classic/spell=24912/darkrune-gauntlets",
+    "produces": {
+      "id": 20549,
+      "name": "Darkrune Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27588,
+    "name": "Light Obsidian Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12810": 4,
+      "22202": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_16",
+    "url": "https://www.wowhead.com/classic/spell=27588/light-obsidian-belt",
+    "produces": {
+      "id": 22195,
+      "name": "Light Obsidian Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28463,
+    "name": "Ironvine Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12655": 6,
+      "12803": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_21",
+    "url": "https://www.wowhead.com/classic/spell=28463/ironvine-belt",
+    "produces": {
+      "id": 22764,
+      "name": "Ironvine Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3115,
+    "name": "Rough Weightstone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 15,
+      "green": 35,
+      "gray": 55
+    },
+    "materials": {
+      "2589": 1,
+      "2835": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_stone_weightstone_01",
+    "url": "https://www.wowhead.com/classic/spell=3115/rough-weightstone",
+    "produces": {
+      "id": 3239,
+      "name": "Rough Weightstone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3495,
+    "name": "Golden Iron Destroyer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 195,
+      "green": 207,
+      "gray": 220
+    },
+    "materials": {
+      "1705": 2,
+      "3466": 2,
+      "3486": 2,
+      "3575": 10,
+      "3577": 4,
+      "4234": 2
+    },
+    "minSkill": 170,
+    "icon": "inv_hammer_04",
+    "url": "https://www.wowhead.com/classic/spell=3495/golden-iron-destroyer",
+    "produces": {
+      "id": 3852,
+      "name": "Golden Iron Destroyer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19668,
+    "name": "Truesilver Skeleton Key",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "6037": 1,
+      "7966": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_key_11",
+    "url": "https://www.wowhead.com/classic/spell=19668/truesilver-skeleton-key",
+    "produces": {
+      "id": 15871,
+      "name": "Truesilver Skeleton Key",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23637,
+    "name": "Dark Iron Gauntlets",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 4,
+      "11382": 2,
+      "17010": 5,
+      "17011": 3,
+      "17012": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_22",
+    "url": "https://www.wowhead.com/classic/spell=23637/dark-iron-gauntlets",
+    "produces": {
+      "id": 19164,
+      "name": "Dark Iron Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2666,
+    "name": "Runed Copper Belt",
+    "quality": 1,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "2840": 10
+    },
+    "minSkill": 70,
+    "icon": "inv_belt_03",
+    "url": "https://www.wowhead.com/classic/spell=2666/runed-copper-belt",
+    "produces": {
+      "id": 2857,
+      "name": "Runed Copper Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2737,
+    "name": "Copper Mace",
+    "quality": 1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 55,
+      "green": 75,
+      "gray": 95
+    },
+    "materials": {
+      "2589": 2,
+      "2840": 6,
+      "2880": 1
+    },
+    "minSkill": 15,
+    "icon": "inv_mace_01",
+    "url": "https://www.wowhead.com/classic/spell=2737/copper-mace",
+    "produces": {
+      "id": 2844,
+      "name": "Copper Mace",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10013,
+    "name": "Ebon Shiv",
+    "quality": 2,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 280,
+      "green": 292,
+      "gray": 305
+    },
+    "materials": {
+      "3860": 12,
+      "4304": 2,
+      "6037": 6,
+      "7910": 2,
+      "7966": 1
+    },
+    "minSkill": 255,
+    "icon": "inv_weapon_shortblade_14",
+    "url": "https://www.wowhead.com/classic/spell=10013/ebon-shiv",
+    "produces": {
+      "id": 7947,
+      "name": "Ebon Shiv",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24914,
+    "name": "Darkrune Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "6037": 10,
+      "12359": 20,
+      "20520": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate06",
+    "url": "https://www.wowhead.com/classic/spell=24914/darkrune-breastplate",
+    "produces": {
+      "id": 20550,
+      "name": "Darkrune Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2741,
+    "name": "Bronze Axe",
+    "quality": 1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 145,
+      "green": 160,
+      "gray": 175
+    },
+    "materials": {
+      "2319": 1,
+      "2841": 7,
+      "2880": 4
+    },
+    "minSkill": 115,
+    "icon": "inv_axe_17",
+    "url": "https://www.wowhead.com/classic/spell=2741/bronze-axe",
+    "produces": {
+      "id": 2849,
+      "name": "Bronze Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3492,
+    "name": "Hardened Iron Shortsword",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 185,
+      "green": 197,
+      "gray": 210
+    },
+    "materials": {
+      "1705": 2,
+      "3466": 2,
+      "3486": 1,
+      "3575": 6,
+      "4234": 3
+    },
+    "minSkill": 160,
+    "icon": "inv_sword_20",
+    "url": "https://www.wowhead.com/classic/spell=3492/hardened-iron-shortsword",
+    "produces": {
+      "id": 3849,
+      "name": "Hardened Iron Shortsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28462,
+    "name": "Ironvine Gloves",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12655": 8,
+      "12803": 2,
+      "19726": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_29",
+    "url": "https://www.wowhead.com/classic/spell=28462/ironvine-gloves",
+    "produces": {
+      "id": 22763,
+      "name": "Ironvine Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2661,
+    "name": "Copper Chain Belt",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "2840": 6
+    },
+    "minSkill": 35,
+    "icon": "inv_belt_02",
+    "url": "https://www.wowhead.com/classic/spell=2661/copper-chain-belt",
+    "produces": {
+      "id": 2851,
+      "name": "Copper Chain Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2663,
+    "name": "Copper Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 20,
+      "green": 40,
+      "gray": 60
+    },
+    "materials": {
+      "2840": 2
+    },
+    "minSkill": 1,
+    "icon": "inv_bracer_03",
+    "url": "https://www.wowhead.com/classic/spell=2663/copper-bracers",
+    "produces": {
+      "id": 2853,
+      "name": "Copper Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3116,
+    "name": "Coarse Weightstone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 65,
+      "green": 72,
+      "gray": 80
+    },
+    "materials": {
+      "2592": 1,
+      "2836": 1
+    },
+    "minSkill": 65,
+    "icon": "inv_stone_weightstone_02",
+    "url": "https://www.wowhead.com/classic/spell=3116/coarse-weightstone",
+    "produces": {
+      "id": 3240,
+      "name": "Coarse Weightstone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3292,
+    "name": "Heavy Copper Broadsword",
+    "quality": 2,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "818": 2,
+      "2319": 2,
+      "2840": 14,
+      "2880": 2
+    },
+    "minSkill": 95,
+    "icon": "inv_sword_14",
+    "url": "https://www.wowhead.com/classic/spell=3292/heavy-copper-broadsword",
+    "produces": {
+      "id": 3487,
+      "name": "Heavy Copper Broadsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7408,
+    "name": "Heavy Copper Maul",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "2318": 2,
+      "2840": 12,
+      "2880": 2
+    },
+    "minSkill": 65,
+    "icon": "inv_hammer_18",
+    "url": "https://www.wowhead.com/classic/spell=7408/heavy-copper-maul",
+    "produces": {
+      "id": 6214,
+      "name": "Heavy Copper Maul",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9957,
+    "name": "Orcish War Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "3860": 12,
+      "7067": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=9957/orcish-war-leggings",
+    "produces": {
+      "id": 7929,
+      "name": "Orcish War Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15293,
+    "name": "Dark Iron Mail",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7077": 2,
+      "11371": 10
+    },
+    "minSkill": 270,
+    "icon": "inv_chest_chain_16",
+    "url": "https://www.wowhead.com/classic/spell=15293/dark-iron-mail",
+    "produces": {
+      "id": 11606,
+      "name": "Dark Iron Mail",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16640,
+    "name": "Dense Weightstone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 257,
+      "gray": 260
+    },
+    "materials": {
+      "12365": 1,
+      "14047": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_stone_weightstone_05",
+    "url": "https://www.wowhead.com/classic/spell=16640/dense-weightstone",
+    "produces": {
+      "id": 12643,
+      "name": "Dense Weightstone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20890,
+    "name": "Dark Iron Reaver",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 16,
+      "11382": 2,
+      "12810": 2,
+      "17010": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_sword_48",
+    "url": "https://www.wowhead.com/classic/spell=20890/dark-iron-reaver",
+    "produces": {
+      "id": 17015,
+      "name": "Dark Iron Reaver",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28243,
+    "name": "Icebane Gauntlets",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "12359": 12,
+      "12360": 2,
+      "22682": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_28",
+    "url": "https://www.wowhead.com/classic/spell=28243/icebane-gauntlets",
+    "produces": {
+      "id": 22670,
+      "name": "Icebane Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2740,
+    "name": "Bronze Mace",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 140,
+      "green": 155,
+      "gray": 170
+    },
+    "materials": {
+      "2319": 1,
+      "2841": 6,
+      "2880": 4
+    },
+    "minSkill": 110,
+    "icon": "inv_mace_08",
+    "url": "https://www.wowhead.com/classic/spell=2740/bronze-mace",
+    "produces": {
+      "id": 2848,
+      "name": "Bronze Mace",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3497,
+    "name": "Frost Tiger Blade",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "1529": 2,
+      "3466": 2,
+      "3486": 2,
+      "3829": 1,
+      "3859": 8,
+      "4234": 4
+    },
+    "minSkill": 200,
+    "icon": "inv_sword_05",
+    "url": "https://www.wowhead.com/classic/spell=3497/frost-tiger-blade",
+    "produces": {
+      "id": 3854,
+      "name": "Frost Tiger Blade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3505,
+    "name": "Golden Scale Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 200,
+      "green": 212,
+      "gray": 225
+    },
+    "materials": {
+      "3486": 1,
+      "3577": 2,
+      "3859": 6
+    },
+    "minSkill": 175,
+    "icon": "inv_shoulder_09",
+    "url": "https://www.wowhead.com/classic/spell=3505/golden-scale-shoulders",
+    "produces": {
+      "id": 3841,
+      "name": "Golden Scale Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3513,
+    "name": "Polished Steel Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 210,
+      "green": 222,
+      "gray": 235
+    },
+    "materials": {
+      "1705": 1,
+      "3486": 2,
+      "3859": 8,
+      "3864": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=3513/polished-steel-boots",
+    "produces": {
+      "id": 3846,
+      "name": "Polished Steel Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15296,
+    "name": "Dark Iron Plate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "7077": 8,
+      "11371": 20
+    },
+    "minSkill": 285,
+    "icon": "inv_chest_plate08",
+    "url": "https://www.wowhead.com/classic/spell=15296/dark-iron-plate",
+    "produces": {
+      "id": 11604,
+      "name": "Dark Iron Plate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15973,
+    "name": "Searing Golden Blade",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 215,
+      "green": 227,
+      "gray": 240
+    },
+    "materials": {
+      "3577": 4,
+      "3859": 10,
+      "4234": 2,
+      "7068": 2
+    },
+    "minSkill": 190,
+    "icon": "inv_weapon_shortblade_05",
+    "url": "https://www.wowhead.com/classic/spell=15973/searing-golden-blade",
+    "produces": {
+      "id": 12260,
+      "name": "Searing Golden Blade",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16646,
+    "name": "Imperial Plate Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "3864": 2,
+      "8170": 6,
+      "12359": 24
+    },
+    "minSkill": 265,
+    "icon": "inv_shoulder_02",
+    "url": "https://www.wowhead.com/classic/spell=16646/imperial-plate-shoulders",
+    "produces": {
+      "id": 12428,
+      "name": "Imperial Plate Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3321,
+    "name": "Copper Chain Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "774": 1,
+      "2840": 8,
+      "3470": 2
+    },
+    "minSkill": 35,
+    "icon": "inv_chest_chain",
+    "url": "https://www.wowhead.com/classic/spell=3321/copper-chain-vest",
+    "produces": {
+      "id": 3471,
+      "name": "Copper Chain Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6518,
+    "name": "Iridescent Hammer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 170,
+      "green": 185,
+      "gray": 200
+    },
+    "materials": {
+      "2319": 2,
+      "2841": 10,
+      "3466": 1,
+      "3478": 2,
+      "5500": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_hammer_05",
+    "url": "https://www.wowhead.com/classic/spell=6518/iridescent-hammer",
+    "produces": {
+      "id": 5541,
+      "name": "Iridescent Hammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9818,
+    "name": "Barbaric Iron Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 205,
+      "green": 217,
+      "gray": 230
+    },
+    "materials": {
+      "818": 4,
+      "3486": 2,
+      "3575": 12,
+      "5637": 4
+    },
+    "minSkill": 180,
+    "icon": "inv_boots_plate_01",
+    "url": "https://www.wowhead.com/classic/spell=9818/barbaric-iron-boots",
+    "produces": {
+      "id": 7916,
+      "name": "Barbaric Iron Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9983,
+    "name": "Copper Claymore",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "2318": 1,
+      "2840": 10,
+      "2880": 2,
+      "3470": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_sword_21",
+    "url": "https://www.wowhead.com/classic/spell=9983/copper-claymore",
+    "produces": {
+      "id": 7955,
+      "name": "Copper Claymore",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10003,
+    "name": "The Shatterer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 260,
+      "green": 272,
+      "gray": 285
+    },
+    "materials": {
+      "1529": 5,
+      "3860": 24,
+      "3864": 5,
+      "4304": 4,
+      "6037": 6,
+      "7075": 4,
+      "7966": 4
+    },
+    "minSkill": 235,
+    "icon": "inv_hammer_18",
+    "url": "https://www.wowhead.com/classic/spell=10003/the-shatterer",
+    "produces": {
+      "id": 7954,
+      "name": "The Shatterer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16650,
+    "name": "Wildthorn Mail",
+    "quality": 3,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "8153": 4,
+      "12359": 40,
+      "12364": 1,
+      "12655": 2,
+      "12803": 4
+    },
+    "minSkill": 270,
+    "icon": "inv_chest_chain_12",
+    "url": "https://www.wowhead.com/classic/spell=16650/wildthorn-mail",
+    "produces": {
+      "id": 12624,
+      "name": "Wildthorn Mail",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24137,
+    "name": "Bloodsoul Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 1,
+      "12359": 16,
+      "19726": 2,
+      "19774": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_15",
+    "url": "https://www.wowhead.com/classic/spell=24137/bloodsoul-shoulders",
+    "produces": {
+      "id": 19691,
+      "name": "Bloodsoul Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2664,
+    "name": "Runed Copper Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 115,
+      "green": 127,
+      "gray": 140
+    },
+    "materials": {
+      "2840": 10,
+      "3470": 3
+    },
+    "minSkill": 90,
+    "icon": "inv_bracer_03",
+    "url": "https://www.wowhead.com/classic/spell=2664/runed-copper-bracers",
+    "produces": {
+      "id": 2854,
+      "name": "Runed Copper Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3297,
+    "name": "Mighty Iron Hammer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 175,
+      "green": 190,
+      "gray": 205
+    },
+    "materials": {
+      "1705": 2,
+      "2319": 2,
+      "3391": 1,
+      "3466": 2,
+      "3478": 2,
+      "3575": 6
+    },
+    "minSkill": 145,
+    "icon": "inv_hammer_04",
+    "url": "https://www.wowhead.com/classic/spell=3297/mighty-iron-hammer",
+    "produces": {
+      "id": 3492,
+      "name": "Mighty Iron Hammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3491,
+    "name": "Big Bronze Knife",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 135,
+      "green": 150,
+      "gray": 165
+    },
+    "materials": {
+      "818": 1,
+      "2319": 1,
+      "2841": 6,
+      "2880": 4,
+      "3470": 2
+    },
+    "minSkill": 105,
+    "icon": "inv_weapon_shortblade_04",
+    "url": "https://www.wowhead.com/classic/spell=3491/big-bronze-knife",
+    "produces": {
+      "id": 3848,
+      "name": "Big Bronze Knife",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 8880,
+    "name": "Copper Dagger",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "2318": 1,
+      "2840": 6,
+      "2880": 1,
+      "3470": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_weapon_shortblade_14",
+    "url": "https://www.wowhead.com/classic/spell=8880/copper-dagger",
+    "produces": {
+      "id": 7166,
+      "name": "Copper Dagger",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15972,
+    "name": "Glinting Steel Dagger",
+    "quality": 2,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 205,
+      "green": 217,
+      "gray": 230
+    },
+    "materials": {
+      "1206": 1,
+      "3466": 2,
+      "3859": 10,
+      "4234": 1,
+      "7067": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_weapon_shortblade_05",
+    "url": "https://www.wowhead.com/classic/spell=15972/glinting-steel-dagger",
+    "produces": {
+      "id": 12259,
+      "name": "Glinting Steel Dagger",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16658,
+    "name": "Imperial Plate Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "7910": 2,
+      "12359": 34
+    },
+    "minSkill": 295,
+    "icon": "inv_helmet_22",
+    "url": "https://www.wowhead.com/classic/spell=16658/imperial-plate-helm",
+    "produces": {
+      "id": 12427,
+      "name": "Imperial Plate Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16663,
+    "name": "Imperial Plate Chest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 2,
+      "12359": 40
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate10",
+    "url": "https://www.wowhead.com/classic/spell=16663/imperial-plate-chest",
+    "produces": {
+      "id": 12422,
+      "name": "Imperial Plate Chest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23633,
+    "name": "Gloves of the Dawn",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "6037": 10,
+      "12360": 2,
+      "12811": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_29",
+    "url": "https://www.wowhead.com/classic/spell=23633/gloves-of-the-dawn",
+    "produces": {
+      "id": 19057,
+      "name": "Gloves of the Dawn",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3515,
+    "name": "Golden Scale Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "3486": 4,
+      "3577": 4,
+      "3859": 10,
+      "3864": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=3515/golden-scale-boots",
+    "produces": {
+      "id": 3847,
+      "name": "Golden Scale Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6517,
+    "name": "Pearl-handled Dagger",
+    "quality": 2,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 140,
+      "green": 155,
+      "gray": 170
+    },
+    "materials": {
+      "2841": 6,
+      "3466": 1,
+      "3478": 2,
+      "5498": 2
+    },
+    "minSkill": 110,
+    "icon": "inv_weapon_shortblade_05",
+    "url": "https://www.wowhead.com/classic/spell=6517/pearl-handled-dagger",
+    "produces": {
+      "id": 5540,
+      "name": "Pearl-handled Dagger",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9916,
+    "name": "Steel Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "3486": 3,
+      "3859": 16
+    },
+    "minSkill": 200,
+    "icon": "inv_chest_plate05",
+    "url": "https://www.wowhead.com/classic/spell=9916/steel-breastplate",
+    "produces": {
+      "id": 7963,
+      "name": "Steel Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9966,
+    "name": "Mithril Scale Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 14,
+      "3864": 4,
+      "4304": 4
+    },
+    "minSkill": 235,
+    "icon": "inv_shoulder_12",
+    "url": "https://www.wowhead.com/classic/spell=9966/mithril-scale-shoulders",
+    "produces": {
+      "id": 7932,
+      "name": "Mithril Scale Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10005,
+    "name": "Dazzling Mithril Rapier",
+    "quality": 2,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 265,
+      "green": 277,
+      "gray": 290
+    },
+    "materials": {
+      "1206": 2,
+      "1705": 2,
+      "3860": 14,
+      "4338": 2,
+      "7909": 1,
+      "7966": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_sword_30",
+    "url": "https://www.wowhead.com/classic/spell=10005/dazzling-mithril-rapier",
+    "produces": {
+      "id": 7944,
+      "name": "Dazzling Mithril Rapier",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10011,
+    "name": "Blight",
+    "quality": 3,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 275,
+      "green": 287,
+      "gray": 300
+    },
+    "materials": {
+      "3860": 28,
+      "4304": 6,
+      "6037": 10,
+      "7966": 6,
+      "7972": 10
+    },
+    "minSkill": 250,
+    "icon": "inv_spear_07",
+    "url": "https://www.wowhead.com/classic/spell=10011/blight",
+    "produces": {
+      "id": 7959,
+      "name": "Blight",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 11643,
+    "name": "Golden Scale Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3486": 4,
+      "3577": 4,
+      "3859": 10,
+      "3864": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_gauntlets_29",
+    "url": "https://www.wowhead.com/classic/spell=11643/golden-scale-gauntlets",
+    "produces": {
+      "id": 9366,
+      "name": "Golden Scale Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 15294,
+    "name": "Dark Iron Sunderer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "7077": 4,
+      "11371": 26
+    },
+    "minSkill": 275,
+    "icon": "inv_weapon_halberd_02",
+    "url": "https://www.wowhead.com/classic/spell=15294/dark-iron-sunderer",
+    "produces": {
+      "id": 11607,
+      "name": "Dark Iron Sunderer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16732,
+    "name": "Runic Plate Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 1,
+      "12359": 40,
+      "12360": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=16732/runic-plate-leggings",
+    "produces": {
+      "id": 12614,
+      "name": "Runic Plate Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16984,
+    "name": "Volcanic Hammer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 315,
+      "green": 327,
+      "gray": 340
+    },
+    "materials": {
+      "7077": 4,
+      "7910": 4,
+      "8170": 4,
+      "12359": 30
+    },
+    "minSkill": 290,
+    "icon": "inv_hammer_06",
+    "url": "https://www.wowhead.com/classic/spell=16984/volcanic-hammer",
+    "produces": {
+      "id": 12792,
+      "name": "Volcanic Hammer",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3334,
+    "name": "Green Iron Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 175,
+      "green": 190,
+      "gray": 205
+    },
+    "materials": {
+      "1705": 2,
+      "2605": 1,
+      "3478": 2,
+      "3575": 4
+    },
+    "minSkill": 145,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=3334/green-iron-boots",
+    "produces": {
+      "id": 3484,
+      "name": "Green Iron Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9986,
+    "name": "Bronze Greatsword",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 160,
+      "green": 175,
+      "gray": 190
+    },
+    "materials": {
+      "2319": 2,
+      "2841": 12,
+      "3466": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_sword_20",
+    "url": "https://www.wowhead.com/classic/spell=9986/bronze-greatsword",
+    "produces": {
+      "id": 7957,
+      "name": "Bronze Greatsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16664,
+    "name": "Runic Plate Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "3577": 6,
+      "12359": 20,
+      "12360": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_23",
+    "url": "https://www.wowhead.com/classic/spell=16664/runic-plate-shoulders",
+    "produces": {
+      "id": 12610,
+      "name": "Runic Plate Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16969,
+    "name": "Ornate Thorium Handaxe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 300,
+      "green": 312,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 4,
+      "12359": 20,
+      "12644": 2,
+      "12799": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_axe_12",
+    "url": "https://www.wowhead.com/classic/spell=16969/ornate-thorium-handaxe",
+    "produces": {
+      "id": 12773,
+      "name": "Ornate Thorium Handaxe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20873,
+    "name": "Fiery Chain Shoulders",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 16,
+      "17010": 4,
+      "17011": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_23",
+    "url": "https://www.wowhead.com/classic/spell=20873/fiery-chain-shoulders",
+    "produces": {
+      "id": 16988,
+      "name": "Fiery Chain Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24138,
+    "name": "Bloodsoul Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 12,
+      "12810": 4,
+      "19726": 2,
+      "19774": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=24138/bloodsoul-gauntlets",
+    "produces": {
+      "id": 19692,
+      "name": "Bloodsoul Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28244,
+    "name": "Icebane Bracers",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "12359": 12,
+      "12360": 2,
+      "22682": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=28244/icebane-bracers",
+    "produces": {
+      "id": 22671,
+      "name": "Icebane Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3500,
+    "name": "Shadow Crescent Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "3466": 2,
+      "3486": 3,
+      "3824": 1,
+      "3859": 10,
+      "3864": 2,
+      "4234": 3
+    },
+    "minSkill": 200,
+    "icon": "inv_axe_17",
+    "url": "https://www.wowhead.com/classic/spell=3500/shadow-crescent-axe",
+    "produces": {
+      "id": 3856,
+      "name": "Shadow Crescent Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9926,
+    "name": "Heavy Mithril Shoulder",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 8,
+      "4234": 6
+    },
+    "minSkill": 205,
+    "icon": "inv_shoulder_22",
+    "url": "https://www.wowhead.com/classic/spell=9926/heavy-mithril-shoulder",
+    "produces": {
+      "id": 7918,
+      "name": "Heavy Mithril Shoulder",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9995,
+    "name": "Blue Glittering Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 245,
+      "green": 257,
+      "gray": 270
+    },
+    "materials": {
+      "3860": 16,
+      "4304": 4,
+      "7909": 2,
+      "7966": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_axe_03",
+    "url": "https://www.wowhead.com/classic/spell=9995/blue-glittering-axe",
+    "produces": {
+      "id": 7942,
+      "name": "Blue Glittering Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16642,
+    "name": "Thorium Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "11188": 4,
+      "12359": 16,
+      "12361": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_chest_plate08",
+    "url": "https://www.wowhead.com/classic/spell=16642/thorium-armor",
+    "produces": {
+      "id": 12405,
+      "name": "Thorium Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16726,
+    "name": "Runic Plate Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "6037": 2,
+      "12359": 30,
+      "12360": 2,
+      "12364": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_03",
+    "url": "https://www.wowhead.com/classic/spell=16726/runic-plate-helm",
+    "produces": {
+      "id": 12612,
+      "name": "Runic Plate Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16731,
+    "name": "Runic Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 1,
+      "12359": 40,
+      "12360": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate11",
+    "url": "https://www.wowhead.com/classic/spell=16731/runic-breastplate",
+    "produces": {
+      "id": 12613,
+      "name": "Runic Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20872,
+    "name": "Fiery Chain Girdle",
+    "quality": 4,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "11371": 6,
+      "17010": 3,
+      "17011": 3
+    },
+    "minSkill": 295,
+    "icon": "inv_belt_13",
+    "url": "https://www.wowhead.com/classic/spell=20872/fiery-chain-girdle",
+    "produces": {
+      "id": 16989,
+      "name": "Fiery Chain Girdle",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23629,
+    "name": "Heavy Timbermaw Boots",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 6,
+      "12360": 4,
+      "12803": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_chain_10",
+    "url": "https://www.wowhead.com/classic/spell=23629/heavy-timbermaw-boots",
+    "produces": {
+      "id": 19048,
+      "name": "Heavy Timbermaw Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2739,
+    "name": "Copper Shortsword",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 65,
+      "green": 85,
+      "gray": 105
+    },
+    "materials": {
+      "2589": 2,
+      "2840": 6,
+      "2880": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_sword_26",
+    "url": "https://www.wowhead.com/classic/spell=2739/copper-shortsword",
+    "produces": {
+      "id": 2847,
+      "name": "Copper Shortsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3294,
+    "name": "Thick War Axe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "2318": 2,
+      "2840": 10,
+      "2842": 2,
+      "2880": 2,
+      "3470": 2
+    },
+    "minSkill": 70,
+    "icon": "inv_throwingaxe_01",
+    "url": "https://www.wowhead.com/classic/spell=3294/thick-war-axe",
+    "produces": {
+      "id": 3489,
+      "name": "Thick War Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3328,
+    "name": "Rough Bronze Shoulders",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 140,
+      "green": 155,
+      "gray": 170
+    },
+    "materials": {
+      "1210": 1,
+      "2841": 5,
+      "3478": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_shoulder_05",
+    "url": "https://www.wowhead.com/classic/spell=3328/rough-bronze-shoulders",
+    "produces": {
+      "id": 3480,
+      "name": "Rough Bronze Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3507,
+    "name": "Golden Scale Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 195,
+      "green": 207,
+      "gray": 220
+    },
+    "materials": {
+      "3486": 1,
+      "3575": 10,
+      "3577": 2
+    },
+    "minSkill": 170,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=3507/golden-scale-leggings",
+    "produces": {
+      "id": 3843,
+      "name": "Golden Scale Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9921,
+    "name": "Solid Weightstone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 205,
+      "gray": 210
+    },
+    "materials": {
+      "4306": 1,
+      "7912": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_stone_weightstone_04",
+    "url": "https://www.wowhead.com/classic/spell=9921/solid-weightstone",
+    "produces": {
+      "id": 7965,
+      "name": "Solid Weightstone",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 12259,
+    "name": "Silvered Bronze Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 180,
+      "green": 192,
+      "gray": 205
+    },
+    "materials": {
+      "2841": 12,
+      "2842": 4,
+      "3478": 2
+    },
+    "minSkill": 155,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=12259/silvered-bronze-leggings",
+    "produces": {
+      "id": 10423,
+      "name": "Silvered Bronze Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16654,
+    "name": "Radiant Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "7077": 4,
+      "12359": 18
+    },
+    "minSkill": 285,
+    "icon": "inv_gauntlets_26",
+    "url": "https://www.wowhead.com/classic/spell=16654/radiant-gloves",
+    "produces": {
+      "id": 12418,
+      "name": "Radiant Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16655,
+    "name": "Fiery Plate Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7078": 2,
+      "7910": 4,
+      "12359": 20,
+      "12655": 6
+    },
+    "minSkill": 290,
+    "icon": "inv_gauntlets_03",
+    "url": "https://www.wowhead.com/classic/spell=16655/fiery-plate-gauntlets",
+    "produces": {
+      "id": 12631,
+      "name": "Fiery Plate Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16730,
+    "name": "Imperial Plate Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7910": 2,
+      "12359": 44
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=16730/imperial-plate-leggings",
+    "produces": {
+      "id": 12429,
+      "name": "Imperial Plate Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3296,
+    "name": "Heavy Bronze Mace",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 160,
+      "green": 175,
+      "gray": 190
+    },
+    "materials": {
+      "1206": 1,
+      "1210": 1,
+      "2319": 2,
+      "2841": 8,
+      "3466": 1,
+      "3478": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_mace_08",
+    "url": "https://www.wowhead.com/classic/spell=3296/heavy-bronze-mace",
+    "produces": {
+      "id": 3491,
+      "name": "Heavy Bronze Mace",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9987,
+    "name": "Bronze Battle Axe",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 165,
+      "green": 180,
+      "gray": 195
+    },
+    "materials": {
+      "2319": 2,
+      "2841": 14,
+      "3466": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_axe_21",
+    "url": "https://www.wowhead.com/classic/spell=9987/bronze-battle-axe",
+    "produces": {
+      "id": 7958,
+      "name": "Bronze Battle Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16656,
+    "name": "Radiant Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7077": 4,
+      "12359": 14
+    },
+    "minSkill": 290,
+    "icon": "inv_boots_plate_03",
+    "url": "https://www.wowhead.com/classic/spell=16656/radiant-boots",
+    "produces": {
+      "id": 12419,
+      "name": "Radiant Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16665,
+    "name": "Runic Plate Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "2842": 10,
+      "12359": 20,
+      "12360": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_plate_01",
+    "url": "https://www.wowhead.com/classic/spell=16665/runic-plate-boots",
+    "produces": {
+      "id": 12611,
+      "name": "Runic Plate Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24913,
+    "name": "Darkrune Helm",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "6037": 8,
+      "11754": 1,
+      "12359": 16,
+      "20520": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_10",
+    "url": "https://www.wowhead.com/classic/spell=24913/darkrune-helm",
+    "produces": {
+      "id": 20551,
+      "name": "Darkrune Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3323,
+    "name": "Runed Copper Gauntlets",
+    "quality": 1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "2840": 8,
+      "3470": 2
+    },
+    "minSkill": 40,
+    "icon": "inv_gauntlets_04",
+    "url": "https://www.wowhead.com/classic/spell=3323/runed-copper-gauntlets",
+    "produces": {
+      "id": 3472,
+      "name": "Runed Copper Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3331,
+    "name": "Silvered Bronze Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 160,
+      "green": 175,
+      "gray": 190
+    },
+    "materials": {
+      "2841": 6,
+      "2842": 1,
+      "3478": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=3331/silvered-bronze-boots",
+    "produces": {
+      "id": 3482,
+      "name": "Silvered Bronze Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9931,
+    "name": "Mithril Scale Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "3860": 12
+    },
+    "minSkill": 210,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=9931/mithril-scale-pants",
+    "produces": {
+      "id": 7920,
+      "name": "Mithril Scale Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9970,
+    "name": "Heavy Mithril Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 14,
+      "7909": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_helmet_10",
+    "url": "https://www.wowhead.com/classic/spell=9970/heavy-mithril-helm",
+    "produces": {
+      "id": 7934,
+      "name": "Heavy Mithril Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 12260,
+    "name": "Rough Copper Vest",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 15,
+      "green": 35,
+      "gray": 55
+    },
+    "materials": {
+      "2840": 4
+    },
+    "minSkill": 1,
+    "icon": "inv_chest_chain",
+    "url": "https://www.wowhead.com/classic/spell=12260/rough-copper-vest",
+    "produces": {
+      "id": 10421,
+      "name": "Rough Copper Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16648,
+    "name": "Radiant Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7077": 2,
+      "7910": 1,
+      "12359": 18
+    },
+    "minSkill": 270,
+    "icon": "inv_chest_plate16",
+    "url": "https://www.wowhead.com/classic/spell=16648/radiant-breastplate",
+    "produces": {
+      "id": 12415,
+      "name": "Radiant Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16659,
+    "name": "Radiant Circlet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "7077": 4,
+      "12359": 18
+    },
+    "minSkill": 295,
+    "icon": "inv_crown_01",
+    "url": "https://www.wowhead.com/classic/spell=16659/radiant-circlet",
+    "produces": {
+      "id": 12417,
+      "name": "Radiant Circlet",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16662,
+    "name": "Thorium Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11186": 4,
+      "12359": 26
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_04",
+    "url": "https://www.wowhead.com/classic/spell=16662/thorium-leggings",
+    "produces": {
+      "id": 12414,
+      "name": "Thorium Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 27585,
+    "name": "Heavy Obsidian Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 2,
+      "12655": 4,
+      "22202": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_16",
+    "url": "https://www.wowhead.com/classic/spell=27585/heavy-obsidian-belt",
+    "produces": {
+      "id": 22197,
+      "name": "Heavy Obsidian Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2662,
+    "name": "Copper Chain Pants",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 50,
+      "green": 70,
+      "gray": 90
+    },
+    "materials": {
+      "2840": 4
+    },
+    "minSkill": 1,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=2662/copper-chain-pants",
+    "produces": {
+      "id": 2852,
+      "name": "Copper Chain Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2670,
+    "name": "Rough Bronze Cuirass",
+    "quality": 1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 145,
+      "green": 160,
+      "gray": 175
+    },
+    "materials": {
+      "2841": 7
+    },
+    "minSkill": 105,
+    "icon": "inv_chest_chain_08",
+    "url": "https://www.wowhead.com/classic/spell=2670/rough-bronze-cuirass",
+    "produces": {
+      "id": 2866,
+      "name": "Rough Bronze Cuirass",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2738,
+    "name": "Copper Axe",
+    "quality": 1,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 60,
+      "green": 80,
+      "gray": 100
+    },
+    "materials": {
+      "2589": 2,
+      "2840": 6,
+      "2880": 1
+    },
+    "minSkill": 20,
+    "icon": "inv_axe_23",
+    "url": "https://www.wowhead.com/classic/spell=2738/copper-axe",
+    "produces": {
+      "id": 2845,
+      "name": "Copper Axe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2742,
+    "name": "Bronze Shortsword",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 150,
+      "green": 165,
+      "gray": 180
+    },
+    "materials": {
+      "2319": 2,
+      "2841": 5,
+      "2880": 4
+    },
+    "minSkill": 120,
+    "icon": "inv_sword_04",
+    "url": "https://www.wowhead.com/classic/spell=2742/bronze-shortsword",
+    "produces": {
+      "id": 2850,
+      "name": "Bronze Shortsword",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3319,
+    "name": "Copper Chain Boots",
+    "quality": 1,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 60,
+      "green": 80,
+      "gray": 100
+    },
+    "materials": {
+      "2840": 8
+    },
+    "minSkill": 20,
+    "icon": "inv_boots_01",
+    "url": "https://www.wowhead.com/classic/spell=3319/copper-chain-boots",
+    "produces": {
+      "id": 3469,
+      "name": "Copper Chain Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3333,
+    "name": "Silvered Bronze Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 165,
+      "green": 180,
+      "gray": 195
+    },
+    "materials": {
+      "2841": 8,
+      "2842": 1,
+      "3478": 2
+    },
+    "minSkill": 135,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3333/silvered-bronze-gauntlets",
+    "produces": {
+      "id": 3483,
+      "name": "Silvered Bronze Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16725,
+    "name": "Radiant Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7077": 4,
+      "12359": 20
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=16725/radiant-leggings",
+    "produces": {
+      "id": 12420,
+      "name": "Radiant Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 16983,
+    "name": "Serenity",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 310,
+      "green": 322,
+      "gray": 335
+    },
+    "materials": {
+      "12360": 2,
+      "12361": 2,
+      "12364": 1,
+      "12655": 6,
+      "12799": 2,
+      "12804": 4
+    },
+    "minSkill": 285,
+    "icon": "inv_mace_02",
+    "url": "https://www.wowhead.com/classic/spell=16983/serenity",
+    "produces": {
+      "id": 12781,
+      "name": "Serenity",
+      "quantity": 1
+    }
+  }
+]

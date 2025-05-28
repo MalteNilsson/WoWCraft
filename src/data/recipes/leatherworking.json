@@ -1,0 +1,5660 @@
+[
+  {
+    "id": 19052,
+    "name": "Wicked Leather Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "2325": 1,
+      "8170": 8,
+      "14341": 1
+    },
+    "minSkill": 265,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=19052/wicked-leather-bracers",
+    "produces": {
+      "id": 15084,
+      "name": "Wicked Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19047,
+    "name": "Cured Rugged Hide",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8171": 1,
+      "15409": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_pelt_bear_03",
+    "url": "https://www.wowhead.com/classic/spell=19047/cured-rugged-hide",
+    "produces": {
+      "id": 15407,
+      "name": "Cured Rugged Hide",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19049,
+    "name": "Wicked Leather Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "2325": 1,
+      "8170": 8,
+      "14341": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=19049/wicked-leather-gauntlets",
+    "produces": {
+      "id": 15083,
+      "name": "Wicked Leather Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22927,
+    "name": "Hide of the Wild",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 10,
+      "8170": 30,
+      "12803": 12,
+      "14341": 8,
+      "15407": 3,
+      "18512": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_cape_01",
+    "url": "https://www.wowhead.com/classic/spell=22927/hide-of-the-wild",
+    "produces": {
+      "id": 18510,
+      "name": "Hide of the Wild",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19093,
+    "name": "Onyxia Scale Cloak",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14044": 1,
+      "14341": 1,
+      "15410": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_cape_05",
+    "url": "https://www.wowhead.com/classic/spell=19093/onyxia-scale-cloak",
+    "produces": {
+      "id": 15138,
+      "name": "Onyxia Scale Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10621,
+    "name": "Wolfshead Helm",
+    "quality": 3,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 18,
+      "8146": 8,
+      "8172": 2,
+      "8343": 4,
+      "8368": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_helmet_04",
+    "url": "https://www.wowhead.com/classic/spell=10621/wolfshead-helm",
+    "produces": {
+      "id": 8345,
+      "name": "Wolfshead Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7151,
+    "name": "Barbaric Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 8,
+      "4236": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_shoulder_08",
+    "url": "https://www.wowhead.com/classic/spell=7151/barbaric-shoulders",
+    "produces": {
+      "id": 5964,
+      "name": "Barbaric Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19097,
+    "name": "Devilsaur Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 30,
+      "14341": 1,
+      "15407": 1,
+      "15417": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_wolf",
+    "url": "https://www.wowhead.com/classic/spell=19097/devilsaur-leggings",
+    "produces": {
+      "id": 15062,
+      "name": "Devilsaur Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19084,
+    "name": "Devilsaur Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 30,
+      "14341": 1,
+      "15417": 8
+    },
+    "minSkill": 290,
+    "icon": "inv_gauntlets_26",
+    "url": "https://www.wowhead.com/classic/spell=19084/devilsaur-gauntlets",
+    "produces": {
+      "id": 15063,
+      "name": "Devilsaur Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10548,
+    "name": "Nightscape Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "4291": 4,
+      "4304": 14
+    },
+    "minSkill": 230,
+    "icon": "inv_pants_11",
+    "url": "https://www.wowhead.com/classic/spell=10548/nightscape-pants",
+    "produces": {
+      "id": 8193,
+      "name": "Nightscape Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23709,
+    "name": "Corehound Belt",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12810": 10,
+      "14227": 4,
+      "15407": 4,
+      "17010": 8,
+      "17012": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_24",
+    "url": "https://www.wowhead.com/classic/spell=23709/corehound-belt",
+    "produces": {
+      "id": 19162,
+      "name": "Corehound Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3760,
+    "name": "Hillman's Cloak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
+      "gray": 190
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 5
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_cape_07",
+    "url": "https://www.wowhead.com/classic/spell=3760/hillmans-cloak",
+    "produces": {
+      "id": 3719,
+      "name": "Hillman's Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23399,
+    "name": "Barbaric Bracers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "4234": 8,
+      "4236": 2,
+      "4461": 1,
+      "5498": 4,
+      "5637": 4
+    },
+    "minSkill": 155,
+    "icon": "inv_bracer_15",
+    "url": "https://www.wowhead.com/classic/spell=23399/barbaric-bracers",
+    "produces": {
+      "id": 18948,
+      "name": "Barbaric Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19061,
+    "name": "Living Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "8170": 12,
+      "12803": 4,
+      "14341": 1
+    },
+    "minSkill": 270,
+    "icon": "inv_shoulder_18",
+    "url": "https://www.wowhead.com/classic/spell=19061/living-shoulders",
+    "produces": {
+      "id": 15061,
+      "name": "Living Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7156,
+    "name": "Guardian Gloves",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "4234": 4,
+      "4236": 1,
+      "4291": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=7156/guardian-gloves",
+    "produces": {
+      "id": 5966,
+      "name": "Guardian Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19071,
+    "name": "Wicked Leather Headband",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "2325": 1,
+      "8170": 12,
+      "14341": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_misc_bandage_13",
+    "url": "https://www.wowhead.com/classic/spell=19071/wicked-leather-headband",
+    "produces": {
+      "id": 15086,
+      "name": "Wicked Leather Headband",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3817,
+    "name": "Cured Medium Hide",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
+    },
+    "materials": {
+      "4232": 1,
+      "4289": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_pelt_bear_02",
+    "url": "https://www.wowhead.com/classic/spell=3817/cured-medium-hide",
+    "produces": {
+      "id": 4233,
+      "name": "Cured Medium Hide",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22727,
+    "name": "Core Armor Kit",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14341": 2,
+      "17012": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_armorkit_05",
+    "url": "https://www.wowhead.com/classic/spell=22727/core-armor-kit",
+    "produces": {
+      "id": 18251,
+      "name": "Core Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22928,
+    "name": "Shifting Cloak",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7082": 12,
+      "8170": 30,
+      "12753": 4,
+      "12809": 8,
+      "14341": 8,
+      "15407": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_cape_20",
+    "url": "https://www.wowhead.com/classic/spell=22928/shifting-cloak",
+    "produces": {
+      "id": 18511,
+      "name": "Shifting Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20855,
+    "name": "Black Dragonscale Boots",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12810": 6,
+      "14341": 2,
+      "15416": 30,
+      "17010": 4,
+      "17011": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_plate_09",
+    "url": "https://www.wowhead.com/classic/spell=20855/black-dragonscale-boots",
+    "produces": {
+      "id": 16984,
+      "name": "Black Dragonscale Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10507,
+    "name": "Nightscape Headband",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "4291": 2,
+      "4304": 5
+    },
+    "minSkill": 205,
+    "icon": "inv_belt_24",
+    "url": "https://www.wowhead.com/classic/spell=10507/nightscape-headband",
+    "produces": {
+      "id": 8176,
+      "name": "Nightscape Headband",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10509,
+    "name": "Turtle Scale Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "4304": 6,
+      "8167": 8,
+      "8343": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=10509/turtle-scale-gloves",
+    "produces": {
+      "id": 8187,
+      "name": "Turtle Scale Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19058,
+    "name": "Rugged Armor Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "8170": 5
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_armorkit_09",
+    "url": "https://www.wowhead.com/classic/spell=19058/rugged-armor-kit",
+    "produces": {
+      "id": 15564,
+      "name": "Rugged Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3766,
+    "name": "Dark Leather Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "2321": 2,
+      "4233": 1,
+      "4246": 1,
+      "4340": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_belt_03",
+    "url": "https://www.wowhead.com/classic/spell=3766/dark-leather-belt",
+    "produces": {
+      "id": 4249,
+      "name": "Dark Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3816,
+    "name": "Cured Light Hide",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 55,
+      "green": 65,
+      "gray": 75
+    },
+    "materials": {
+      "783": 1,
+      "4289": 1
+    },
+    "minSkill": 35,
+    "icon": "inv_misc_pelt_wolf_01",
+    "url": "https://www.wowhead.com/classic/spell=3816/cured-light-hide",
+    "produces": {
+      "id": 4231,
+      "name": "Cured Light Hide",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23708,
+    "name": "Chromatic Gauntlets",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12607": 4,
+      "14227": 4,
+      "15407": 4,
+      "17010": 5,
+      "17011": 2,
+      "17012": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_22",
+    "url": "https://www.wowhead.com/classic/spell=23708/chromatic-gauntlets",
+    "produces": {
+      "id": 19157,
+      "name": "Chromatic Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3779,
+    "name": "Barbaric Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "4096": 2,
+      "4234": 6,
+      "4236": 2,
+      "4291": 1,
+      "5633": 1,
+      "7071": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_belt_09",
+    "url": "https://www.wowhead.com/classic/spell=3779/barbaric-belt",
+    "produces": {
+      "id": 4264,
+      "name": "Barbaric Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19054,
+    "name": "Red Dragonscale Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 40,
+      "14341": 1,
+      "15414": 30
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_06",
+    "url": "https://www.wowhead.com/classic/spell=19054/red-dragonscale-breastplate",
+    "produces": {
+      "id": 15047,
+      "name": "Red Dragonscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22711,
+    "name": "Shadowskin Gloves",
+    "quality": 3,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "1210": 4,
+      "4236": 2,
+      "4304": 6,
+      "7428": 8,
+      "7971": 2,
+      "8343": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_gauntlets_32",
+    "url": "https://www.wowhead.com/classic/spell=22711/shadowskin-gloves",
+    "produces": {
+      "id": 18238,
+      "name": "Shadowskin Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10647,
+    "name": "Feathered Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4304": 40,
+      "7971": 2,
+      "8168": 40,
+      "8172": 4,
+      "8343": 4
+    },
+    "minSkill": 250,
+    "icon": "inv_chest_leather_06",
+    "url": "https://www.wowhead.com/classic/spell=10647/feathered-breastplate",
+    "produces": {
+      "id": 8349,
+      "name": "Feathered Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10558,
+    "name": "Nightscape Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "4304": 16,
+      "8343": 2
+    },
+    "minSkill": 235,
+    "icon": "inv_boots_05",
+    "url": "https://www.wowhead.com/classic/spell=10558/nightscape-boots",
+    "produces": {
+      "id": 8197,
+      "name": "Nightscape Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19085,
+    "name": "Black Dragonscale Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 40,
+      "14341": 2,
+      "15407": 1,
+      "15416": 60
+    },
+    "minSkill": 290,
+    "icon": "inv_chest_plate06",
+    "url": "https://www.wowhead.com/classic/spell=19085/black-dragonscale-breastplate",
+    "produces": {
+      "id": 15050,
+      "name": "Black Dragonscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20649,
+    "name": "Heavy Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
+    },
+    "materials": {
+      "2319": 5
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_leatherscrap_07",
+    "url": "https://www.wowhead.com/classic/spell=20649/heavy-leather",
+    "produces": {
+      "id": 4234,
+      "name": "Heavy Leather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10552,
+    "name": "Turtle Scale Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "4304": 14,
+      "8167": 24,
+      "8343": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_40",
+    "url": "https://www.wowhead.com/classic/spell=10552/turtle-scale-helm",
+    "produces": {
+      "id": 8191,
+      "name": "Turtle Scale Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 4097,
+    "name": "Raptor Hide Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 195,
+      "gray": 205
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 4,
+      "4461": 4
+    },
+    "minSkill": 165,
+    "icon": "inv_belt_02",
+    "url": "https://www.wowhead.com/classic/spell=4097/raptor-hide-belt",
+    "produces": {
+      "id": 4456,
+      "name": "Raptor Hide Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19090,
+    "name": "Stormshroud Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "7080": 3,
+      "7082": 3,
+      "8170": 12,
+      "12810": 2,
+      "14341": 1
+    },
+    "minSkill": 295,
+    "icon": "inv_shoulder_05",
+    "url": "https://www.wowhead.com/classic/spell=19090/stormshroud-shoulders",
+    "produces": {
+      "id": 15058,
+      "name": "Stormshroud Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23710,
+    "name": "Molten Belt",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 6,
+      "14227": 4,
+      "15407": 4,
+      "17010": 2,
+      "17011": 7
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_13",
+    "url": "https://www.wowhead.com/classic/spell=23710/molten-belt",
+    "produces": {
+      "id": 19163,
+      "name": "Molten Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9207,
+    "name": "Dusky Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "3824": 1,
+      "4234": 8,
+      "4291": 2,
+      "7428": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_boots_07",
+    "url": "https://www.wowhead.com/classic/spell=9207/dusky-boots",
+    "produces": {
+      "id": 7390,
+      "name": "Dusky Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19068,
+    "name": "Warbear Harness",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "8170": 28,
+      "14341": 1,
+      "15419": 12
+    },
+    "minSkill": 275,
+    "icon": "inv_chest_leather_04",
+    "url": "https://www.wowhead.com/classic/spell=19068/warbear-harness",
+    "produces": {
+      "id": 15064,
+      "name": "Warbear Harness",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22922,
+    "name": "Mongoose Boots",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7082": 6,
+      "8170": 12,
+      "11754": 4,
+      "14341": 4,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_08",
+    "url": "https://www.wowhead.com/classic/spell=22922/mongoose-boots",
+    "produces": {
+      "id": 18506,
+      "name": "Mongoose Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24940,
+    "name": "Black Whelp Tunic",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 2,
+      "4231": 1,
+      "7286": 8
+    },
+    "minSkill": 100,
+    "icon": "inv_chest_cloth_45",
+    "url": "https://www.wowhead.com/classic/spell=24940/black-whelp-tunic",
+    "produces": {
+      "id": 20575,
+      "name": "Black Whelp Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10544,
+    "name": "Wild Leather Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 12,
+      "8153": 2,
+      "8172": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_chest_cloth_06",
+    "url": "https://www.wowhead.com/classic/spell=10544/wild-leather-vest",
+    "produces": {
+      "id": 8211,
+      "name": "Wild Leather Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24121,
+    "name": "Primal Batskin Jerkin",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 4,
+      "14341": 4,
+      "15407": 5,
+      "19767": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_leather_03",
+    "url": "https://www.wowhead.com/classic/spell=24121/primal-batskin-jerkin",
+    "produces": {
+      "id": 19685,
+      "name": "Primal Batskin Jerkin",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24123,
+    "name": "Primal Batskin Bracers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 4,
+      "14341": 3,
+      "15407": 3,
+      "19767": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=24123/primal-batskin-bracers",
+    "produces": {
+      "id": 19687,
+      "name": "Primal Batskin Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2881,
+    "name": "Light Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 20,
+      "green": 30,
+      "gray": 40
+    },
+    "materials": {
+      "2934": 3
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_leatherscrap_03",
+    "url": "https://www.wowhead.com/classic/spell=2881/light-leather",
+    "produces": {
+      "id": 2318,
+      "name": "Light Leather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3770,
+    "name": "Toughened Leather Gloves",
+    "quality": 3,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 172,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 4,
+      "2321": 2,
+      "3182": 2,
+      "3389": 2,
+      "4233": 2
+    },
+    "minSkill": 135,
+    "icon": "inv_gauntlets_24",
+    "url": "https://www.wowhead.com/classic/spell=3770/toughened-leather-gloves",
+    "produces": {
+      "id": 4253,
+      "name": "Toughened Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7955,
+    "name": "Deviate Scale Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 152,
+      "gray": 165
+    },
+    "materials": {
+      "2321": 2,
+      "6470": 10,
+      "6471": 10
+    },
+    "minSkill": 115,
+    "icon": "inv_belt_09",
+    "url": "https://www.wowhead.com/classic/spell=7955/deviate-scale-belt",
+    "produces": {
+      "id": 6468,
+      "name": "Deviate Scale Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10632,
+    "name": "Helm of Fire",
+    "quality": 3,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4304": 40,
+      "7075": 4,
+      "7077": 8,
+      "8172": 2,
+      "8343": 4
+    },
+    "minSkill": 250,
+    "icon": "inv_helmet_08",
+    "url": "https://www.wowhead.com/classic/spell=10632/helm-of-fire",
+    "produces": {
+      "id": 8348,
+      "name": "Helm of Fire",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19094,
+    "name": "Black Dragonscale Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 44,
+      "12810": 2,
+      "14341": 1,
+      "15407": 1,
+      "15416": 45
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_01",
+    "url": "https://www.wowhead.com/classic/spell=19094/black-dragonscale-shoulders",
+    "produces": {
+      "id": 15051,
+      "name": "Black Dragonscale Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22926,
+    "name": "Chromatic Cloak",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 30,
+      "12607": 12,
+      "14341": 8,
+      "15407": 5,
+      "15414": 30,
+      "15416": 30
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_cape_02",
+    "url": "https://www.wowhead.com/classic/spell=22926/chromatic-cloak",
+    "produces": {
+      "id": 18509,
+      "name": "Chromatic Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24851,
+    "name": "Sandstalker Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "15407": 2,
+      "18512": 2,
+      "20498": 40,
+      "20501": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate07",
+    "url": "https://www.wowhead.com/classic/spell=24851/sandstalker-breastplate",
+    "produces": {
+      "id": 20478,
+      "name": "Sandstalker Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9070,
+    "name": "Black Whelp Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 4,
+      "2321": 1,
+      "7286": 12
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_monsterscales_03",
+    "url": "https://www.wowhead.com/classic/spell=9070/black-whelp-cloak",
+    "produces": {
+      "id": 7283,
+      "name": "Black Whelp Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10511,
+    "name": "Turtle Scale Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 6,
+      "8167": 12,
+      "8343": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_chest_chain_12",
+    "url": "https://www.wowhead.com/classic/spell=10511/turtle-scale-breastplate",
+    "produces": {
+      "id": 8189,
+      "name": "Turtle Scale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28473,
+    "name": "Bramblewood Boots",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 2,
+      "12810": 6,
+      "15407": 2,
+      "18512": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_boots_cloth_04",
+    "url": "https://www.wowhead.com/classic/spell=28473/bramblewood-boots",
+    "produces": {
+      "id": 22760,
+      "name": "Bramblewood Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3772,
+    "name": "Green Leather Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "2321": 4,
+      "2605": 2,
+      "4234": 9
+    },
+    "minSkill": 155,
+    "icon": "inv_chest_leather_08",
+    "url": "https://www.wowhead.com/classic/spell=3772/green-leather-armor",
+    "produces": {
+      "id": 4255,
+      "name": "Green Leather Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10487,
+    "name": "Thick Armor Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "4291": 1,
+      "4304": 5
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_armorkit_07",
+    "url": "https://www.wowhead.com/classic/spell=10487/thick-armor-kit",
+    "produces": {
+      "id": 8173,
+      "name": "Thick Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22331,
+    "name": "Rugged Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 250,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 6
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_leatherscrap_02",
+    "url": "https://www.wowhead.com/classic/spell=22331/rugged-leather",
+    "produces": {
+      "id": 8170,
+      "name": "Rugged Leather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24703,
+    "name": "Dreamscale Breastplate",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 4,
+      "12810": 12,
+      "14227": 6,
+      "15407": 4,
+      "20381": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate08",
+    "url": "https://www.wowhead.com/classic/spell=24703/dreamscale-breastplate",
+    "produces": {
+      "id": 20380,
+      "name": "Dreamscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19053,
+    "name": "Chimeric Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15423": 6
+    },
+    "minSkill": 265,
+    "icon": "inv_gauntlets_23",
+    "url": "https://www.wowhead.com/classic/spell=19053/chimeric-gloves",
+    "produces": {
+      "id": 15074,
+      "name": "Chimeric Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3769,
+    "name": "Dark Leather Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 177,
+      "gray": 190
+    },
+    "materials": {
+      "2319": 12,
+      "2321": 2,
+      "3390": 1,
+      "4340": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_shoulder_12",
+    "url": "https://www.wowhead.com/classic/spell=3769/dark-leather-shoulders",
+    "produces": {
+      "id": 4252,
+      "name": "Dark Leather Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 4096,
+    "name": "Raptor Hide Harness",
+    "quality": 2,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 195,
+      "gray": 205
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 4,
+      "4461": 6
+    },
+    "minSkill": 165,
+    "icon": "inv_chest_leather_04",
+    "url": "https://www.wowhead.com/classic/spell=4096/raptor-hide-harness",
+    "produces": {
+      "id": 4455,
+      "name": "Raptor Hide Harness",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3818,
+    "name": "Cured Heavy Hide",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 160,
+      "green": 165,
+      "gray": 170
+    },
+    "materials": {
+      "4235": 1,
+      "4289": 3
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_pelt_wolf_02",
+    "url": "https://www.wowhead.com/classic/spell=3818/cured-heavy-hide",
+    "produces": {
+      "id": 4236,
+      "name": "Cured Heavy Hide",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10619,
+    "name": "Dragonscale Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 24,
+      "8165": 12,
+      "8172": 2,
+      "8343": 4
+    },
+    "minSkill": 225,
+    "icon": "inv_gauntlets_10",
+    "url": "https://www.wowhead.com/classic/spell=10619/dragonscale-gauntlets",
+    "produces": {
+      "id": 8347,
+      "name": "Dragonscale Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24122,
+    "name": "Primal Batskin Gloves",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 4,
+      "14341": 3,
+      "15407": 4,
+      "19767": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=24122/primal-batskin-gloves",
+    "produces": {
+      "id": 19686,
+      "name": "Primal Batskin Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28472,
+    "name": "Bramblewood Helm",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 2,
+      "12810": 12,
+      "15407": 2,
+      "19726": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_58",
+    "url": "https://www.wowhead.com/classic/spell=28472/bramblewood-helm",
+    "produces": {
+      "id": 22759,
+      "name": "Bramblewood Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3763,
+    "name": "Fine Leather Belt",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 110,
+      "green": 125,
+      "gray": 140
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 2
+    },
+    "minSkill": 80,
+    "icon": "inv_belt_04",
+    "url": "https://www.wowhead.com/classic/spell=3763/fine-leather-belt",
+    "produces": {
+      "id": 4246,
+      "name": "Fine Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10630,
+    "name": "Gauntlets of the Sea",
+    "quality": 3,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "4304": 20,
+      "7075": 2,
+      "7079": 8,
+      "8172": 1,
+      "8343": 4
+    },
+    "minSkill": 230,
+    "icon": "inv_gauntlets_30",
+    "url": "https://www.wowhead.com/classic/spell=10630/gauntlets-of-the-sea",
+    "produces": {
+      "id": 8346,
+      "name": "Gauntlets of the Sea",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19107,
+    "name": "Black Dragonscale Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 40,
+      "12810": 4,
+      "14341": 2,
+      "15407": 1,
+      "15416": 60
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_03",
+    "url": "https://www.wowhead.com/classic/spell=19107/black-dragonscale-leggings",
+    "produces": {
+      "id": 15052,
+      "name": "Black Dragonscale Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28219,
+    "name": "Polar Tunic",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "12810": 16,
+      "14227": 4,
+      "15407": 4,
+      "22682": 7
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_cloth_08",
+    "url": "https://www.wowhead.com/classic/spell=28219/polar-tunic",
+    "produces": {
+      "id": 22661,
+      "name": "Polar Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10490,
+    "name": "Comfortable Leather Hat",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "4234": 12,
+      "4236": 2,
+      "4291": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_helmet_15",
+    "url": "https://www.wowhead.com/classic/spell=10490/comfortable-leather-hat",
+    "produces": {
+      "id": 8174,
+      "name": "Comfortable Leather Hat",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19077,
+    "name": "Blue Dragonscale Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 28,
+      "14341": 1,
+      "15407": 1,
+      "15415": 30
+    },
+    "minSkill": 285,
+    "icon": "inv_chest_chain_04",
+    "url": "https://www.wowhead.com/classic/spell=19077/blue-dragonscale-breastplate",
+    "produces": {
+      "id": 15048,
+      "name": "Blue Dragonscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3780,
+    "name": "Heavy Armor Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
+      "gray": 190
+    },
+    "materials": {
+      "2321": 1,
+      "4234": 5
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_armorkit_16",
+    "url": "https://www.wowhead.com/classic/spell=3780/heavy-armor-kit",
+    "produces": {
+      "id": 4265,
+      "name": "Heavy Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20854,
+    "name": "Molten Helm",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14341": 2,
+      "17010": 3,
+      "17011": 6,
+      "17012": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_08",
+    "url": "https://www.wowhead.com/classic/spell=20854/molten-helm",
+    "produces": {
+      "id": 16983,
+      "name": "Molten Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3764,
+    "name": "Hillman's Leather Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 182,
+      "gray": 195
+    },
+    "materials": {
+      "2319": 14,
+      "2321": 4
+    },
+    "minSkill": 145,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3764/hillmans-leather-gloves",
+    "produces": {
+      "id": 4247,
+      "name": "Hillman's Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7135,
+    "name": "Dark Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 152,
+      "gray": 165
+    },
+    "materials": {
+      "2319": 12,
+      "2321": 1,
+      "4340": 1
+    },
+    "minSkill": 115,
+    "icon": "inv_pants_09",
+    "url": "https://www.wowhead.com/classic/spell=7135/dark-leather-pants",
+    "produces": {
+      "id": 5961,
+      "name": "Dark Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19082,
+    "name": "Runic Leather Headband",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 14,
+      "14047": 10,
+      "14341": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_bandage_11",
+    "url": "https://www.wowhead.com/classic/spell=19082/runic-leather-headband",
+    "produces": {
+      "id": 15094,
+      "name": "Runic Leather Headband",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24849,
+    "name": "Sandstalker Bracers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "18512": 2,
+      "20498": 20,
+      "20501": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_12",
+    "url": "https://www.wowhead.com/classic/spell=24849/sandstalker-bracers",
+    "produces": {
+      "id": 20476,
+      "name": "Sandstalker Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24125,
+    "name": "Blood Tiger Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14341": 3,
+      "15407": 3,
+      "19726": 2,
+      "19768": 25
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_23",
+    "url": "https://www.wowhead.com/classic/spell=24125/blood-tiger-shoulders",
+    "produces": {
+      "id": 19689,
+      "name": "Blood Tiger Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24655,
+    "name": "Green Dragonscale Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "8170": 20,
+      "14341": 2,
+      "15407": 1,
+      "15412": 30
+    },
+    "minSkill": 280,
+    "icon": "inv_gauntlets_12",
+    "url": "https://www.wowhead.com/classic/spell=24655/green-dragonscale-gauntlets",
+    "produces": {
+      "id": 20296,
+      "name": "Green Dragonscale Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3761,
+    "name": "Fine Leather Tunic",
+    "quality": 2,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 115,
+      "green": 130,
+      "gray": 145
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 4,
+      "4231": 3
+    },
+    "minSkill": 85,
+    "icon": "inv_chest_leather_09",
+    "url": "https://www.wowhead.com/classic/spell=3761/fine-leather-tunic",
+    "produces": {
+      "id": 4243,
+      "name": "Fine Leather Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9059,
+    "name": "Handstitched Leather Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 40,
+      "green": 55,
+      "gray": 70
+    },
+    "materials": {
+      "2318": 2,
+      "2320": 3
+    },
+    "minSkill": 1,
+    "icon": "inv_bracer_08",
+    "url": "https://www.wowhead.com/classic/spell=9059/handstitched-leather-bracers",
+    "produces": {
+      "id": 7277,
+      "name": "Handstitched Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10482,
+    "name": "Cured Thick Hide",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 200,
+      "gray": 200
+    },
+    "materials": {
+      "8150": 1,
+      "8169": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_pelt_bear_01",
+    "url": "https://www.wowhead.com/classic/spell=10482/cured-thick-hide",
+    "produces": {
+      "id": 8172,
+      "name": "Cured Thick Hide",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20650,
+    "name": "Thick Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 202,
+      "gray": 205
+    },
+    "materials": {
+      "4234": 6
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_leatherscrap_08",
+    "url": "https://www.wowhead.com/classic/spell=20650/thick-leather",
+    "produces": {
+      "id": 4304,
+      "name": "Thick Leather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2167,
+    "name": "Dark Leather Boots",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 4,
+      "2321": 2,
+      "4340": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_boots_05",
+    "url": "https://www.wowhead.com/classic/spell=2167/dark-leather-boots",
+    "produces": {
+      "id": 2315,
+      "name": "Dark Leather Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7126,
+    "name": "Handstitched Leather Vest",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 40,
+      "green": 55,
+      "gray": 70
+    },
+    "materials": {
+      "2318": 3,
+      "2320": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_chest_wolf",
+    "url": "https://www.wowhead.com/classic/spell=7126/handstitched-leather-vest",
+    "produces": {
+      "id": 5957,
+      "name": "Handstitched Leather Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7953,
+    "name": "Deviate Scale Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 135,
+      "gray": 150
+    },
+    "materials": {
+      "2321": 1,
+      "4231": 1,
+      "6470": 8
+    },
+    "minSkill": 90,
+    "icon": "inv_misc_monsterscales_03",
+    "url": "https://www.wowhead.com/classic/spell=7953/deviate-scale-cloak",
+    "produces": {
+      "id": 6466,
+      "name": "Deviate Scale Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9206,
+    "name": "Dusky Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 225,
+      "gray": 235
+    },
+    "materials": {
+      "2325": 2,
+      "4234": 10,
+      "4305": 2,
+      "7071": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/classic/spell=9206/dusky-belt",
+    "produces": {
+      "id": 7387,
+      "name": "Dusky Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3765,
+    "name": "Dark Leather Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 155,
+      "green": 167,
+      "gray": 180
+    },
+    "materials": {
+      "2312": 1,
+      "2321": 1,
+      "4233": 1,
+      "4340": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3765/dark-leather-gloves",
+    "produces": {
+      "id": 4248,
+      "name": "Dark Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9062,
+    "name": "Small Leather Ammo Pouch",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 60,
+      "green": 75,
+      "gray": 90
+    },
+    "materials": {
+      "2318": 3,
+      "2320": 4
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_ammo_bullet_01",
+    "url": "https://www.wowhead.com/classic/spell=9062/small-leather-ammo-pouch",
+    "produces": {
+      "id": 7279,
+      "name": "Small Leather Ammo Pouch",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9145,
+    "name": "Fletcher's Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 2,
+      "5116": 4
+    },
+    "minSkill": 125,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=9145/fletchers-gloves",
+    "produces": {
+      "id": 7348,
+      "name": "Fletcher's Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9194,
+    "name": "Heavy Leather Ammo Pouch",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
+      "gray": 190
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 8
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_bag_09",
+    "url": "https://www.wowhead.com/classic/spell=9194/heavy-leather-ammo-pouch",
+    "produces": {
+      "id": 7372,
+      "name": "Heavy Leather Ammo Pouch",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9195,
+    "name": "Dusky Leather Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 195,
+      "gray": 205
+    },
+    "materials": {
+      "2321": 2,
+      "2325": 1,
+      "4234": 10
+    },
+    "minSkill": 165,
+    "icon": "inv_pants_07",
+    "url": "https://www.wowhead.com/classic/spell=9195/dusky-leather-leggings",
+    "produces": {
+      "id": 7373,
+      "name": "Dusky Leather Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10570,
+    "name": "Tough Scorpid Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4304": 10,
+      "8154": 20,
+      "8343": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_helmet_20",
+    "url": "https://www.wowhead.com/classic/spell=10570/tough-scorpid-helm",
+    "produces": {
+      "id": 8208,
+      "name": "Tough Scorpid Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19050,
+    "name": "Green Dragonscale Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "8170": 20,
+      "14341": 2,
+      "15412": 25
+    },
+    "minSkill": 260,
+    "icon": "inv_chest_chain_06",
+    "url": "https://www.wowhead.com/classic/spell=19050/green-dragonscale-breastplate",
+    "produces": {
+      "id": 15045,
+      "name": "Green Dragonscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3768,
+    "name": "Hillman's Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 167,
+      "gray": 180
+    },
+    "materials": {
+      "2319": 4,
+      "2321": 1,
+      "4233": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_shoulder_08",
+    "url": "https://www.wowhead.com/classic/spell=3768/hillmans-shoulders",
+    "produces": {
+      "id": 4251,
+      "name": "Hillman's Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9146,
+    "name": "Herbalist's Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 172,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 2,
+      "3356": 4
+    },
+    "minSkill": 135,
+    "icon": "inv_gauntlets_18",
+    "url": "https://www.wowhead.com/classic/spell=9146/herbalists-gloves",
+    "produces": {
+      "id": 7349,
+      "name": "Herbalist's Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24124,
+    "name": "Blood Tiger Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14341": 3,
+      "15407": 3,
+      "19726": 2,
+      "19768": 35
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_leather_07",
+    "url": "https://www.wowhead.com/classic/spell=24124/blood-tiger-breastplate",
+    "produces": {
+      "id": 19688,
+      "name": "Blood Tiger Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3756,
+    "name": "Embossed Leather Gloves",
+    "quality": 1,
+    "difficulty": {
+      "orange": 55,
+      "yellow": 85,
+      "green": 100,
+      "gray": 115
+    },
+    "materials": {
+      "2318": 3,
+      "2320": 2
+    },
+    "minSkill": 55,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3756/embossed-leather-gloves",
+    "produces": {
+      "id": 4239,
+      "name": "Embossed Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19062,
+    "name": "Ironfeather Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "1529": 2,
+      "8170": 24,
+      "14341": 1,
+      "15420": 80
+    },
+    "minSkill": 270,
+    "icon": "inv_shoulder_06",
+    "url": "https://www.wowhead.com/classic/spell=19062/ironfeather-shoulders",
+    "produces": {
+      "id": 15067,
+      "name": "Ironfeather Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22923,
+    "name": "Swift Flight Bracers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 12,
+      "14341": 4,
+      "15407": 4,
+      "15420": 60,
+      "18512": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_05",
+    "url": "https://www.wowhead.com/classic/spell=22923/swift-flight-bracers",
+    "produces": {
+      "id": 18508,
+      "name": "Swift Flight Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10525,
+    "name": "Tough Scorpid Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4291": 4,
+      "4304": 12,
+      "8154": 12
+    },
+    "minSkill": 220,
+    "icon": "inv_chest_leather_02",
+    "url": "https://www.wowhead.com/classic/spell=10525/tough-scorpid-breastplate",
+    "produces": {
+      "id": 8203,
+      "name": "Tough Scorpid Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19067,
+    "name": "Stormshroud Pants",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "7080": 2,
+      "7082": 2,
+      "8170": 16,
+      "14341": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_pants_09",
+    "url": "https://www.wowhead.com/classic/spell=19067/stormshroud-pants",
+    "produces": {
+      "id": 15057,
+      "name": "Stormshroud Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19080,
+    "name": "Warbear Woolies",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 24,
+      "14341": 1,
+      "15419": 14
+    },
+    "minSkill": 285,
+    "icon": "inv_pants_wolf",
+    "url": "https://www.wowhead.com/classic/spell=19080/warbear-woolies",
+    "produces": {
+      "id": 15065,
+      "name": "Warbear Woolies",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19086,
+    "name": "Ironfeather Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "1529": 1,
+      "8170": 40,
+      "14341": 1,
+      "15407": 1,
+      "15420": 120
+    },
+    "minSkill": 290,
+    "icon": "inv_chest_leather_06",
+    "url": "https://www.wowhead.com/classic/spell=19086/ironfeather-breastplate",
+    "produces": {
+      "id": 15066,
+      "name": "Ironfeather Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24850,
+    "name": "Sandstalker Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "15407": 1,
+      "18512": 2,
+      "20498": 30,
+      "20501": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_11",
+    "url": "https://www.wowhead.com/classic/spell=24850/sandstalker-gauntlets",
+    "produces": {
+      "id": 20477,
+      "name": "Sandstalker Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2168,
+    "name": "Dark Leather Cloak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 147,
+      "gray": 160
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 1,
+      "4340": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_cape_10",
+    "url": "https://www.wowhead.com/classic/spell=2168/dark-leather-cloak",
+    "produces": {
+      "id": 2316,
+      "name": "Dark Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19079,
+    "name": "Stormshroud Armor",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "7080": 3,
+      "7082": 3,
+      "8170": 16,
+      "14341": 1,
+      "15407": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_chest_leather_08",
+    "url": "https://www.wowhead.com/classic/spell=19079/stormshroud-armor",
+    "produces": {
+      "id": 15056,
+      "name": "Stormshroud Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19081,
+    "name": "Chimeric Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 10,
+      "14341": 1,
+      "15423": 10
+    },
+    "minSkill": 290,
+    "icon": "inv_chest_leather_07",
+    "url": "https://www.wowhead.com/classic/spell=19081/chimeric-vest",
+    "produces": {
+      "id": 15075,
+      "name": "Chimeric Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24654,
+    "name": "Blue Dragonscale Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 28,
+      "14341": 2,
+      "15407": 2,
+      "15415": 36
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_mail_15",
+    "url": "https://www.wowhead.com/classic/spell=24654/blue-dragonscale-leggings",
+    "produces": {
+      "id": 20295,
+      "name": "Blue Dragonscale Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9072,
+    "name": "Red Whelp Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "2319": 4,
+      "2321": 1,
+      "7287": 6
+    },
+    "minSkill": 120,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=9072/red-whelp-gloves",
+    "produces": {
+      "id": 7284,
+      "name": "Red Whelp Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10499,
+    "name": "Nightscape Tunic",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "4291": 2,
+      "4304": 7
+    },
+    "minSkill": 205,
+    "icon": "inv_chest_leather_03",
+    "url": "https://www.wowhead.com/classic/spell=10499/nightscape-tunic",
+    "produces": {
+      "id": 8175,
+      "name": "Nightscape Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20853,
+    "name": "Corehound Boots",
+    "quality": 4,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "14341": 2,
+      "17010": 6,
+      "17011": 2,
+      "17012": 20
+    },
+    "minSkill": 295,
+    "icon": "inv_boots_07",
+    "url": "https://www.wowhead.com/classic/spell=20853/corehound-boots",
+    "produces": {
+      "id": 16982,
+      "name": "Corehound Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24847,
+    "name": "Spitfire Gauntlets",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7078": 2,
+      "15407": 1,
+      "20498": 30,
+      "20500": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_11",
+    "url": "https://www.wowhead.com/classic/spell=24847/spitfire-gauntlets",
+    "produces": {
+      "id": 20480,
+      "name": "Spitfire Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6703,
+    "name": "Murloc Scale Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 125,
+      "green": 140,
+      "gray": 155
+    },
+    "materials": {
+      "2318": 8,
+      "2321": 1,
+      "4231": 1,
+      "5784": 12
+    },
+    "minSkill": 95,
+    "icon": "inv_chest_chain_12",
+    "url": "https://www.wowhead.com/classic/spell=6703/murloc-scale-breastplate",
+    "produces": {
+      "id": 5781,
+      "name": "Murloc Scale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9193,
+    "name": "Heavy Quiver",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
+      "gray": 190
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 8
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_quiver_02",
+    "url": "https://www.wowhead.com/classic/spell=9193/heavy-quiver",
+    "produces": {
+      "id": 7371,
+      "name": "Heavy Quiver",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23707,
+    "name": "Lava Belt",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14227": 4,
+      "15407": 4,
+      "17011": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_32",
+    "url": "https://www.wowhead.com/classic/spell=23707/lava-belt",
+    "produces": {
+      "id": 19149,
+      "name": "Lava Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2160,
+    "name": "Embossed Leather Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 70,
+      "green": 85,
+      "gray": 100
+    },
+    "materials": {
+      "2318": 8,
+      "2320": 4
+    },
+    "minSkill": 40,
+    "icon": "inv_chest_leather_09",
+    "url": "https://www.wowhead.com/classic/spell=2160/embossed-leather-vest",
+    "produces": {
+      "id": 2300,
+      "name": "Embossed Leather Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9208,
+    "name": "Swift Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "2459": 2,
+      "4234": 10,
+      "4291": 1,
+      "4337": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_boots_08",
+    "url": "https://www.wowhead.com/classic/spell=9208/swift-boots",
+    "produces": {
+      "id": 7391,
+      "name": "Swift Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10516,
+    "name": "Nightscape Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "4291": 3,
+      "4304": 8,
+      "4338": 6
+    },
+    "minSkill": 210,
+    "icon": "inv_shoulder_07",
+    "url": "https://www.wowhead.com/classic/spell=10516/nightscape-shoulders",
+    "produces": {
+      "id": 8192,
+      "name": "Nightscape Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10564,
+    "name": "Tough Scorpid Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "4304": 12,
+      "8154": 16,
+      "8343": 2
+    },
+    "minSkill": 240,
+    "icon": "inv_shoulder_04",
+    "url": "https://www.wowhead.com/classic/spell=10564/tough-scorpid-shoulders",
+    "produces": {
+      "id": 8207,
+      "name": "Tough Scorpid Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19055,
+    "name": "Runic Leather Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "8170": 10,
+      "14047": 6,
+      "14341": 1
+    },
+    "minSkill": 270,
+    "icon": "inv_gauntlets_31",
+    "url": "https://www.wowhead.com/classic/spell=19055/runic-leather-gauntlets",
+    "produces": {
+      "id": 15091,
+      "name": "Runic Leather Gauntlets",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2152,
+    "name": "Light Armor Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 30,
+      "green": 45,
+      "gray": 60
+    },
+    "materials": {
+      "2318": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_armorkit_17",
+    "url": "https://www.wowhead.com/classic/spell=2152/light-armor-kit",
+    "produces": {
+      "id": 2304,
+      "name": "Light Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2165,
+    "name": "Medium Armor Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
+    },
+    "materials": {
+      "2319": 4,
+      "2320": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_armorkit_15",
+    "url": "https://www.wowhead.com/classic/spell=2165/medium-armor-kit",
+    "produces": {
+      "id": 2313,
+      "name": "Medium Armor Kit",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2169,
+    "name": "Dark Leather Tunic",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 6,
+      "2321": 1,
+      "4340": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_chest_leather_03",
+    "url": "https://www.wowhead.com/classic/spell=2169/dark-leather-tunic",
+    "produces": {
+      "id": 2317,
+      "name": "Dark Leather Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10546,
+    "name": "Wild Leather Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 10,
+      "8153": 2,
+      "8172": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_helmet_10",
+    "url": "https://www.wowhead.com/classic/spell=10546/wild-leather-helmet",
+    "produces": {
+      "id": 8214,
+      "name": "Wild Leather Helmet",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10650,
+    "name": "Dragonscale Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "4304": 40,
+      "8165": 30,
+      "8172": 4,
+      "8343": 4
+    },
+    "minSkill": 255,
+    "icon": "inv_chest_chain_07",
+    "url": "https://www.wowhead.com/classic/spell=10650/dragonscale-breastplate",
+    "produces": {
+      "id": 8367,
+      "name": "Dragonscale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19060,
+    "name": "Green Dragonscale Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "8170": 20,
+      "14341": 1,
+      "15412": 25
+    },
+    "minSkill": 270,
+    "icon": "inv_pants_05",
+    "url": "https://www.wowhead.com/classic/spell=19060/green-dragonscale-leggings",
+    "produces": {
+      "id": 15046,
+      "name": "Green Dragonscale Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9148,
+    "name": "Pilferer's Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 177,
+      "gray": 190
+    },
+    "materials": {
+      "2319": 10,
+      "2321": 2,
+      "5373": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=9148/pilferers-gloves",
+    "produces": {
+      "id": 7358,
+      "name": "Pilferer's Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10533,
+    "name": "Tough Scorpid Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4291": 2,
+      "4304": 10,
+      "8154": 4
+    },
+    "minSkill": 220,
+    "icon": "inv_bracer_09",
+    "url": "https://www.wowhead.com/classic/spell=10533/tough-scorpid-bracers",
+    "produces": {
+      "id": 8205,
+      "name": "Tough Scorpid Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19059,
+    "name": "Volcanic Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7075": 1,
+      "7078": 1,
+      "8170": 6,
+      "14341": 1
+    },
+    "minSkill": 270,
+    "icon": "inv_pants_06",
+    "url": "https://www.wowhead.com/classic/spell=19059/volcanic-leggings",
+    "produces": {
+      "id": 15054,
+      "name": "Volcanic Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 20648,
+    "name": "Medium Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 100,
+      "green": 105,
+      "gray": 110
+    },
+    "materials": {
+      "2318": 4
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_leatherscrap_05",
+    "url": "https://www.wowhead.com/classic/spell=20648/medium-leather",
+    "produces": {
+      "id": 2319,
+      "name": "Medium Leather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9064,
+    "name": "Rugged Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 65,
+      "green": 80,
+      "gray": 95
+    },
+    "materials": {
+      "2318": 5,
+      "2320": 5
+    },
+    "minSkill": 35,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=9064/rugged-leather-pants",
+    "produces": {
+      "id": 7280,
+      "name": "Rugged Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19065,
+    "name": "Runic Leather Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "7971": 1,
+      "8170": 6,
+      "14047": 6,
+      "14341": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_bracer_11",
+    "url": "https://www.wowhead.com/classic/spell=19065/runic-leather-bracers",
+    "produces": {
+      "id": 15092,
+      "name": "Runic Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19066,
+    "name": "Frostsaber Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "8170": 4,
+      "14341": 1,
+      "15422": 6
+    },
+    "minSkill": 275,
+    "icon": "inv_boots_05",
+    "url": "https://www.wowhead.com/classic/spell=19066/frostsaber-boots",
+    "produces": {
+      "id": 15071,
+      "name": "Frostsaber Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2164,
+    "name": "Fine Leather Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
+    },
+    "materials": {
+      "2318": 4,
+      "2320": 2,
+      "4231": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=2164/fine-leather-gloves",
+    "produces": {
+      "id": 2312,
+      "name": "Fine Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6702,
+    "name": "Murloc Scale Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 135,
+      "gray": 150
+    },
+    "materials": {
+      "2318": 6,
+      "2321": 1,
+      "5784": 8
+    },
+    "minSkill": 90,
+    "icon": "inv_belt_02",
+    "url": "https://www.wowhead.com/classic/spell=6702/murloc-scale-belt",
+    "produces": {
+      "id": 5780,
+      "name": "Murloc Scale Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9202,
+    "name": "Green Whelp Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "4234": 8,
+      "4291": 2,
+      "7392": 6
+    },
+    "minSkill": 190,
+    "icon": "inv_bracer_06",
+    "url": "https://www.wowhead.com/classic/spell=9202/green-whelp-bracers",
+    "produces": {
+      "id": 7386,
+      "name": "Green Whelp Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10518,
+    "name": "Turtle Scale Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 8,
+      "8167": 12,
+      "8343": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_bracer_06",
+    "url": "https://www.wowhead.com/classic/spell=10518/turtle-scale-bracers",
+    "produces": {
+      "id": 8198,
+      "name": "Turtle Scale Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10542,
+    "name": "Tough Scorpid Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4291": 2,
+      "4304": 6,
+      "8154": 8
+    },
+    "minSkill": 225,
+    "icon": "inv_gauntlets_24",
+    "url": "https://www.wowhead.com/classic/spell=10542/tough-scorpid-gloves",
+    "produces": {
+      "id": 8204,
+      "name": "Tough Scorpid Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19063,
+    "name": "Chimeric Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "8170": 4,
+      "14341": 1,
+      "15423": 8
+    },
+    "minSkill": 275,
+    "icon": "inv_boots_07",
+    "url": "https://www.wowhead.com/classic/spell=19063/chimeric-boots",
+    "produces": {
+      "id": 15073,
+      "name": "Chimeric Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2166,
+    "name": "Toughened Leather Armor",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "2319": 10,
+      "2321": 2,
+      "4231": 2
+    },
+    "minSkill": 120,
+    "icon": "inv_chest_leather_10",
+    "url": "https://www.wowhead.com/classic/spell=2166/toughened-leather-armor",
+    "produces": {
+      "id": 2314,
+      "name": "Toughened Leather Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9065,
+    "name": "Light Leather Bracers",
+    "quality": 1,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 100,
+      "green": 115,
+      "gray": 130
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 4
+    },
+    "minSkill": 70,
+    "icon": "inv_bracer_04",
+    "url": "https://www.wowhead.com/classic/spell=9065/light-leather-bracers",
+    "produces": {
+      "id": 7281,
+      "name": "Light Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9068,
+    "name": "Light Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 125,
+      "green": 140,
+      "gray": 155
+    },
+    "materials": {
+      "2318": 10,
+      "2321": 1,
+      "4231": 1
+    },
+    "minSkill": 95,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=9068/light-leather-pants",
+    "produces": {
+      "id": 7282,
+      "name": "Light Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 21943,
+    "name": "Gloves of the Greatfather",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "4234": 8,
+      "4291": 1,
+      "7067": 4
+    },
+    "minSkill": 190,
+    "icon": "inv_gauntlets_21",
+    "url": "https://www.wowhead.com/classic/spell=21943/gloves-of-the-greatfather",
+    "produces": {
+      "id": 17721,
+      "name": "Gloves of the Greatfather",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6704,
+    "name": "Thick Murloc Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 200,
+      "gray": 210
+    },
+    "materials": {
+      "2321": 3,
+      "4234": 10,
+      "4236": 1,
+      "5785": 12
+    },
+    "minSkill": 170,
+    "icon": "inv_chest_chain_12",
+    "url": "https://www.wowhead.com/classic/spell=6704/thick-murloc-armor",
+    "produces": {
+      "id": 5782,
+      "name": "Thick Murloc Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10520,
+    "name": "Big Voodoo Robe",
+    "quality": 2,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 245,
+      "gray": 255
+    },
+    "materials": {
+      "4304": 10,
+      "8151": 4,
+      "8343": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_chest_cloth_25",
+    "url": "https://www.wowhead.com/classic/spell=10520/big-voodoo-robe",
+    "produces": {
+      "id": 8200,
+      "name": "Big Voodoo Robe",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10554,
+    "name": "Tough Scorpid Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "4291": 6,
+      "4304": 12,
+      "8154": 12
+    },
+    "minSkill": 235,
+    "icon": "inv_boots_05",
+    "url": "https://www.wowhead.com/classic/spell=10554/tough-scorpid-boots",
+    "produces": {
+      "id": 8209,
+      "name": "Tough Scorpid Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19072,
+    "name": "Runic Leather Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "8170": 12,
+      "14047": 10,
+      "14341": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_belt_23",
+    "url": "https://www.wowhead.com/classic/spell=19072/runic-leather-belt",
+    "produces": {
+      "id": 15093,
+      "name": "Runic Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19101,
+    "name": "Volcanic Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 1,
+      "7078": 1,
+      "8170": 10,
+      "14341": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_13",
+    "url": "https://www.wowhead.com/classic/spell=19101/volcanic-shoulders",
+    "produces": {
+      "id": 15055,
+      "name": "Volcanic Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3771,
+    "name": "Barbaric Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
+      "gray": 190
+    },
+    "materials": {
+      "2321": 1,
+      "4234": 6,
+      "5637": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=3771/barbaric-gloves",
+    "produces": {
+      "id": 4254,
+      "name": "Barbaric Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7153,
+    "name": "Guardian Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 215,
+      "gray": 225
+    },
+    "materials": {
+      "4234": 14,
+      "4291": 2,
+      "4305": 2
+    },
+    "minSkill": 185,
+    "icon": "inv_misc_cape_03",
+    "url": "https://www.wowhead.com/classic/spell=7153/guardian-cloak",
+    "produces": {
+      "id": 5965,
+      "name": "Guardian Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7954,
+    "name": "Deviate Scale Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "2321": 2,
+      "6470": 6,
+      "6471": 2
+    },
+    "minSkill": 105,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=7954/deviate-scale-gloves",
+    "produces": {
+      "id": 6467,
+      "name": "Deviate Scale Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9201,
+    "name": "Dusky Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 215,
+      "gray": 225
+    },
+    "materials": {
+      "2325": 1,
+      "4234": 16,
+      "4291": 2
+    },
+    "minSkill": 185,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=9201/dusky-bracers",
+    "produces": {
+      "id": 7378,
+      "name": "Dusky Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19073,
+    "name": "Chimeric Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "8170": 8,
+      "14341": 1,
+      "15423": 8
+    },
+    "minSkill": 280,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=19073/chimeric-leggings",
+    "produces": {
+      "id": 15072,
+      "name": "Chimeric Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23705,
+    "name": "Dawn Treaders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7080": 4,
+      "8170": 30,
+      "12809": 2,
+      "14341": 2,
+      "15407": 2
+    },
+    "minSkill": 290,
+    "icon": "inv_boots_cloth_08",
+    "url": "https://www.wowhead.com/classic/spell=23705/dawn-treaders",
+    "produces": {
+      "id": 19052,
+      "name": "Dawn Treaders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 26279,
+    "name": "Stormshroud Gloves",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 4,
+      "7082": 4,
+      "12810": 6,
+      "14227": 2,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=26279/stormshroud-gloves",
+    "produces": {
+      "id": 21278,
+      "name": "Stormshroud Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3767,
+    "name": "Hillman's Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 2,
+      "3383": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/classic/spell=3767/hillmans-belt",
+    "produces": {
+      "id": 4250,
+      "name": "Hillman's Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 8322,
+    "name": "Moonglow Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 115,
+      "green": 130,
+      "gray": 145
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 4,
+      "4231": 1,
+      "5498": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_chest_leather_09",
+    "url": "https://www.wowhead.com/classic/spell=8322/moonglow-vest",
+    "produces": {
+      "id": 6709,
+      "name": "Moonglow Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9198,
+    "name": "Frost Leather Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 6,
+      "7067": 2,
+      "7070": 2
+    },
+    "minSkill": 180,
+    "icon": "inv_misc_cape_04",
+    "url": "https://www.wowhead.com/classic/spell=9198/frost-leather-cloak",
+    "produces": {
+      "id": 7377,
+      "name": "Frost Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10529,
+    "name": "Wild Leather Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4304": 10,
+      "8153": 1,
+      "8172": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_shoulder_18",
+    "url": "https://www.wowhead.com/classic/spell=10529/wild-leather-shoulders",
+    "produces": {
+      "id": 8210,
+      "name": "Wild Leather Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10556,
+    "name": "Turtle Scale Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "4304": 14,
+      "8167": 28,
+      "8343": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=10556/turtle-scale-leggings",
+    "produces": {
+      "id": 8185,
+      "name": "Turtle Scale Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10568,
+    "name": "Tough Scorpid Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "4304": 14,
+      "8154": 8,
+      "8343": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_pants_12",
+    "url": "https://www.wowhead.com/classic/spell=10568/tough-scorpid-leggings",
+    "produces": {
+      "id": 8206,
+      "name": "Tough Scorpid Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19092,
+    "name": "Wicked Leather Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "2325": 2,
+      "8170": 14,
+      "14341": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_03",
+    "url": "https://www.wowhead.com/classic/spell=19092/wicked-leather-belt",
+    "produces": {
+      "id": 15088,
+      "name": "Wicked Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28221,
+    "name": "Polar Bracers",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "12810": 12,
+      "14227": 4,
+      "15407": 2,
+      "22682": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=28221/polar-bracers",
+    "produces": {
+      "id": 22663,
+      "name": "Polar Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28474,
+    "name": "Bramblewood Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 2,
+      "12810": 4,
+      "15407": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_17",
+    "url": "https://www.wowhead.com/classic/spell=28474/bramblewood-belt",
+    "produces": {
+      "id": 22761,
+      "name": "Bramblewood Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2163,
+    "name": "White Leather Jerkin",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 90,
+      "green": 105,
+      "gray": 120
+    },
+    "materials": {
+      "2318": 8,
+      "2320": 2,
+      "2324": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_chest_wolf",
+    "url": "https://www.wowhead.com/classic/spell=2163/white-leather-jerkin",
+    "produces": {
+      "id": 2311,
+      "name": "White Leather Jerkin",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6661,
+    "name": "Barbaric Harness",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 14,
+      "7071": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_chest_leather_04",
+    "url": "https://www.wowhead.com/classic/spell=6661/barbaric-harness",
+    "produces": {
+      "id": 5739,
+      "name": "Barbaric Harness",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9060,
+    "name": "Light Leather Quiver",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 60,
+      "green": 75,
+      "gray": 90
+    },
+    "materials": {
+      "2318": 4,
+      "2320": 2
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_quiver_01",
+    "url": "https://www.wowhead.com/classic/spell=9060/light-leather-quiver",
+    "produces": {
+      "id": 7278,
+      "name": "Light Leather Quiver",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10531,
+    "name": "Big Voodoo Mask",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4304": 8,
+      "8151": 6,
+      "8343": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_banner_01",
+    "url": "https://www.wowhead.com/classic/spell=10531/big-voodoo-mask",
+    "produces": {
+      "id": 8201,
+      "name": "Big Voodoo Mask",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 14930,
+    "name": "Quickdraw Quiver",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4291": 4,
+      "4304": 12,
+      "8172": 1,
+      "8949": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_quiver_07",
+    "url": "https://www.wowhead.com/classic/spell=14930/quickdraw-quiver",
+    "produces": {
+      "id": 8217,
+      "name": "Quickdraw Quiver",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19083,
+    "name": "Wicked Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "2325": 3,
+      "8170": 16,
+      "14341": 1,
+      "15407": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_pants_12",
+    "url": "https://www.wowhead.com/classic/spell=19083/wicked-leather-pants",
+    "produces": {
+      "id": 15087,
+      "name": "Wicked Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19098,
+    "name": "Wicked Leather Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "2325": 4,
+      "8170": 20,
+      "14256": 6,
+      "14341": 2,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate06",
+    "url": "https://www.wowhead.com/classic/spell=19098/wicked-leather-armor",
+    "produces": {
+      "id": 15085,
+      "name": "Wicked Leather Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3753,
+    "name": "Handstitched Leather Belt",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 55,
+      "green": 70,
+      "gray": 85
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_belt_04",
+    "url": "https://www.wowhead.com/classic/spell=3753/handstitched-leather-belt",
+    "produces": {
+      "id": 4237,
+      "name": "Handstitched Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 5244,
+    "name": "Kodo Hide Bag",
+    "quality": 1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 70,
+      "green": 85,
+      "gray": 100
+    },
+    "materials": {
+      "2318": 4,
+      "2320": 1,
+      "5082": 3
+    },
+    "minSkill": 40,
+    "icon": "inv_misc_bag_10",
+    "url": "https://www.wowhead.com/classic/spell=5244/kodo-hide-bag",
+    "produces": {
+      "id": 5081,
+      "name": "Kodo Hide Bag",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 6705,
+    "name": "Murloc Scale Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "4234": 14,
+      "4236": 1,
+      "4291": 1,
+      "5785": 16
+    },
+    "minSkill": 190,
+    "icon": "inv_bracer_05",
+    "url": "https://www.wowhead.com/classic/spell=6705/murloc-scale-bracers",
+    "produces": {
+      "id": 5783,
+      "name": "Murloc Scale Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7149,
+    "name": "Barbaric Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 200,
+      "gray": 210
+    },
+    "materials": {
+      "1206": 1,
+      "2321": 2,
+      "4234": 10
+    },
+    "minSkill": 170,
+    "icon": "inv_pants_12",
+    "url": "https://www.wowhead.com/classic/spell=7149/barbaric-leggings",
+    "produces": {
+      "id": 5963,
+      "name": "Barbaric Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9197,
+    "name": "Green Whelp Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 10,
+      "7392": 4
+    },
+    "minSkill": 175,
+    "icon": "inv_chest_chain_09",
+    "url": "https://www.wowhead.com/classic/spell=9197/green-whelp-armor",
+    "produces": {
+      "id": 7375,
+      "name": "Green Whelp Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10560,
+    "name": "Big Voodoo Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "4304": 10,
+      "8152": 6,
+      "8343": 2
+    },
+    "minSkill": 240,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=10560/big-voodoo-pants",
+    "produces": {
+      "id": 8202,
+      "name": "Big Voodoo Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 14932,
+    "name": "Thick Leather Ammo Pouch",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4291": 6,
+      "4304": 10,
+      "8172": 1,
+      "8951": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_bag_09_black",
+    "url": "https://www.wowhead.com/classic/spell=14932/thick-leather-ammo-pouch",
+    "produces": {
+      "id": 8218,
+      "name": "Thick Leather Ammo Pouch",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23190,
+    "name": "Heavy Leather Ball",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
+    },
+    "materials": {
+      "2321": 1,
+      "4234": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_throwingball_01",
+    "url": "https://www.wowhead.com/classic/spell=23190/heavy-leather-ball",
+    "produces": {
+      "id": 18662,
+      "name": "Heavy Leather Ball",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24848,
+    "name": "Spitfire Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7078": 2,
+      "15407": 2,
+      "20498": 40,
+      "20500": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_leather_02",
+    "url": "https://www.wowhead.com/classic/spell=24848/spitfire-breastplate",
+    "produces": {
+      "id": 20479,
+      "name": "Spitfire Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2161,
+    "name": "Embossed Leather Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 55,
+      "yellow": 85,
+      "green": 100,
+      "gray": 115
+    },
+    "materials": {
+      "2318": 8,
+      "2320": 5
+    },
+    "minSkill": 55,
+    "icon": "inv_boots_05",
+    "url": "https://www.wowhead.com/classic/spell=2161/embossed-leather-boots",
+    "produces": {
+      "id": 2309,
+      "name": "Embossed Leather Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3775,
+    "name": "Guardian Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 200,
+      "gray": 210
+    },
+    "materials": {
+      "2321": 1,
+      "4234": 4,
+      "4236": 2,
+      "7071": 1
+    },
+    "minSkill": 170,
+    "icon": "inv_belt_03",
+    "url": "https://www.wowhead.com/classic/spell=3775/guardian-belt",
+    "produces": {
+      "id": 4258,
+      "name": "Guardian Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19051,
+    "name": "Heavy Scorpid Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15408": 6
+    },
+    "minSkill": 265,
+    "icon": "inv_chest_chain_15",
+    "url": "https://www.wowhead.com/classic/spell=19051/heavy-scorpid-vest",
+    "produces": {
+      "id": 15076,
+      "name": "Heavy Scorpid Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19074,
+    "name": "Frostsaber Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15422": 8
+    },
+    "minSkill": 285,
+    "icon": "inv_pants_01",
+    "url": "https://www.wowhead.com/classic/spell=19074/frostsaber-leggings",
+    "produces": {
+      "id": 15069,
+      "name": "Frostsaber Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28220,
+    "name": "Polar Gloves",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "12810": 12,
+      "14227": 4,
+      "15407": 3,
+      "22682": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_06",
+    "url": "https://www.wowhead.com/classic/spell=28220/polar-gloves",
+    "produces": {
+      "id": 22662,
+      "name": "Polar Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28224,
+    "name": "Icy Scale Bracers",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "14227": 4,
+      "15407": 2,
+      "15408": 16,
+      "22682": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_07",
+    "url": "https://www.wowhead.com/classic/spell=28224/icy-scale-bracers",
+    "produces": {
+      "id": 22665,
+      "name": "Icy Scale Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2159,
+    "name": "Fine Leather Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
+    },
+    "materials": {
+      "2318": 10,
+      "2321": 2
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_cape_10",
+    "url": "https://www.wowhead.com/classic/spell=2159/fine-leather-cloak",
+    "produces": {
+      "id": 2308,
+      "name": "Fine Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3777,
+    "name": "Guardian Leather Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 225,
+      "gray": 235
+    },
+    "materials": {
+      "4234": 6,
+      "4236": 2,
+      "4291": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_bracer_10",
+    "url": "https://www.wowhead.com/classic/spell=3777/guardian-leather-bracers",
+    "produces": {
+      "id": 4260,
+      "name": "Guardian Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9058,
+    "name": "Handstitched Leather Cloak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 40,
+      "green": 55,
+      "gray": 70
+    },
+    "materials": {
+      "2318": 2,
+      "2320": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_helmet_48",
+    "url": "https://www.wowhead.com/classic/spell=9058/handstitched-leather-cloak",
+    "produces": {
+      "id": 7276,
+      "name": "Handstitched Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19100,
+    "name": "Heavy Scorpid Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 14,
+      "14341": 2,
+      "15407": 1,
+      "15408": 14
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_07",
+    "url": "https://www.wowhead.com/classic/spell=19100/heavy-scorpid-shoulders",
+    "produces": {
+      "id": 15081,
+      "name": "Heavy Scorpid Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19103,
+    "name": "Runic Leather Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 16,
+      "12810": 4,
+      "14047": 18,
+      "14341": 2,
+      "15407": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_15",
+    "url": "https://www.wowhead.com/classic/spell=19103/runic-leather-shoulders",
+    "produces": {
+      "id": 15096,
+      "name": "Runic Leather Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23706,
+    "name": "Golden Mantle of the Dawn",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 4,
+      "12809": 4,
+      "12810": 8,
+      "14341": 2,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_shoulder_26",
+    "url": "https://www.wowhead.com/classic/spell=23706/golden-mantle-of-the-dawn",
+    "produces": {
+      "id": 19058,
+      "name": "Golden Mantle of the Dawn",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9147,
+    "name": "Earthen Leather Shoulders",
+    "quality": 2,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 172,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 6,
+      "2321": 2,
+      "7067": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_shoulder_06",
+    "url": "https://www.wowhead.com/classic/spell=9147/earthen-leather-shoulders",
+    "produces": {
+      "id": 7352,
+      "name": "Earthen Leather Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9149,
+    "name": "Heavy Earthen Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 182,
+      "gray": 195
+    },
+    "materials": {
+      "2319": 12,
+      "2321": 2,
+      "2997": 2,
+      "7067": 2
+    },
+    "minSkill": 145,
+    "icon": "inv_gauntlets_23",
+    "url": "https://www.wowhead.com/classic/spell=9149/heavy-earthen-gloves",
+    "produces": {
+      "id": 7359,
+      "name": "Heavy Earthen Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9196,
+    "name": "Dusky Leather Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "2321": 2,
+      "3824": 1,
+      "4234": 10
+    },
+    "minSkill": 175,
+    "icon": "inv_chest_leather_03",
+    "url": "https://www.wowhead.com/classic/spell=9196/dusky-leather-armor",
+    "produces": {
+      "id": 7374,
+      "name": "Dusky Leather Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10574,
+    "name": "Wild Leather Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4304": 16,
+      "8153": 6,
+      "8172": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_cape_03",
+    "url": "https://www.wowhead.com/classic/spell=10574/wild-leather-cloak",
+    "produces": {
+      "id": 8215,
+      "name": "Wild Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19048,
+    "name": "Heavy Scorpid Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "8170": 4,
+      "14341": 1,
+      "15408": 4
+    },
+    "minSkill": 255,
+    "icon": "inv_bracer_09",
+    "url": "https://www.wowhead.com/classic/spell=19048/heavy-scorpid-bracers",
+    "produces": {
+      "id": 15077,
+      "name": "Heavy Scorpid Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19076,
+    "name": "Volcanic Breastplate",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "7076": 1,
+      "7078": 1,
+      "8170": 8,
+      "14341": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_chest_leather_07",
+    "url": "https://www.wowhead.com/classic/spell=19076/volcanic-breastplate",
+    "produces": {
+      "id": 15053,
+      "name": "Volcanic Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19088,
+    "name": "Heavy Scorpid Helm",
+    "quality": 2,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "8170": 8,
+      "14341": 1,
+      "15407": 1,
+      "15408": 12
+    },
+    "minSkill": 295,
+    "icon": "inv_helmet_20",
+    "url": "https://www.wowhead.com/classic/spell=19088/heavy-scorpid-helm",
+    "produces": {
+      "id": 15080,
+      "name": "Heavy Scorpid Helm",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19089,
+    "name": "Blue Dragonscale Shoulders",
+    "quality": 3,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "8170": 28,
+      "12810": 2,
+      "14341": 1,
+      "15407": 1,
+      "15415": 30
+    },
+    "minSkill": 295,
+    "icon": "inv_shoulder_18",
+    "url": "https://www.wowhead.com/classic/spell=19089/blue-dragonscale-shoulders",
+    "produces": {
+      "id": 15049,
+      "name": "Blue Dragonscale Shoulders",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19095,
+    "name": "Living Breastplate",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 16,
+      "12803": 8,
+      "14341": 2,
+      "14342": 2,
+      "15407": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate07",
+    "url": "https://www.wowhead.com/classic/spell=19095/living-breastplate",
+    "produces": {
+      "id": 15059,
+      "name": "Living Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28222,
+    "name": "Icy Scale Breastplate",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "14227": 4,
+      "15407": 4,
+      "15408": 24,
+      "22682": 7
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_plate09",
+    "url": "https://www.wowhead.com/classic/spell=28222/icy-scale-breastplate",
+    "produces": {
+      "id": 22664,
+      "name": "Icy Scale Breastplate",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3774,
+    "name": "Green Leather Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 190,
+      "gray": 200
+    },
+    "materials": {
+      "2321": 1,
+      "2605": 1,
+      "4234": 5,
+      "4236": 1,
+      "7071": 1
+    },
+    "minSkill": 160,
+    "icon": "inv_belt_17",
+    "url": "https://www.wowhead.com/classic/spell=3774/green-leather-belt",
+    "produces": {
+      "id": 4257,
+      "name": "Green Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 9074,
+    "name": "Nimble Leather Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "2319": 6,
+      "2321": 1,
+      "2457": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_gauntlets_05",
+    "url": "https://www.wowhead.com/classic/spell=9074/nimble-leather-gloves",
+    "produces": {
+      "id": 7285,
+      "name": "Nimble Leather Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19064,
+    "name": "Heavy Scorpid Gauntlets",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15408": 8
+    },
+    "minSkill": 275,
+    "icon": "inv_gauntlets_24",
+    "url": "https://www.wowhead.com/classic/spell=19064/heavy-scorpid-gauntlets",
+    "produces": {
+      "id": 15078,
+      "name": "Heavy Scorpid Gauntlet",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19078,
+    "name": "Living Leggings",
+    "quality": 3,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 16,
+      "12803": 6,
+      "14341": 1,
+      "15407": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_pants_05",
+    "url": "https://www.wowhead.com/classic/spell=19078/living-leggings",
+    "produces": {
+      "id": 15060,
+      "name": "Living Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2149,
+    "name": "Handstitched Leather Boots",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 40,
+      "green": 55,
+      "gray": 70
+    },
+    "materials": {
+      "2318": 2,
+      "2320": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_boots_04",
+    "url": "https://www.wowhead.com/classic/spell=2149/handstitched-leather-boots",
+    "produces": {
+      "id": 2302,
+      "name": "Handstitched Leather Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3759,
+    "name": "Embossed Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
+    },
+    "materials": {
+      "2318": 6,
+      "2320": 2,
+      "4231": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=3759/embossed-leather-pants",
+    "produces": {
+      "id": 4242,
+      "name": "Embossed Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10572,
+    "name": "Wild Leather Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4304": 16,
+      "8153": 6,
+      "8172": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_pants_14",
+    "url": "https://www.wowhead.com/classic/spell=10572/wild-leather-leggings",
+    "produces": {
+      "id": 8212,
+      "name": "Wild Leather Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19070,
+    "name": "Heavy Scorpid Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 310,
+      "gray": 320
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15408": 8
+    },
+    "minSkill": 280,
+    "icon": "inv_belt_03",
+    "url": "https://www.wowhead.com/classic/spell=19070/heavy-scorpid-belt",
+    "produces": {
+      "id": 15082,
+      "name": "Heavy Scorpid Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19087,
+    "name": "Frostsaber Gloves",
+    "quality": 2,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 325,
+      "gray": 335
+    },
+    "materials": {
+      "8170": 6,
+      "14341": 1,
+      "15422": 10
+    },
+    "minSkill": 295,
+    "icon": "inv_gauntlets_16",
+    "url": "https://www.wowhead.com/classic/spell=19087/frostsaber-gloves",
+    "produces": {
+      "id": 15070,
+      "name": "Frostsaber Gloves",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19091,
+    "name": "Runic Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 18,
+      "12810": 2,
+      "14047": 12,
+      "14341": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=19091/runic-leather-pants",
+    "produces": {
+      "id": 15095,
+      "name": "Runic Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23703,
+    "name": "Might of the Timbermaw",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8170": 30,
+      "12803": 4,
+      "12804": 2,
+      "14341": 2,
+      "15407": 2
+    },
+    "minSkill": 290,
+    "icon": "inv_belt_09",
+    "url": "https://www.wowhead.com/classic/spell=23703/might-of-the-timbermaw",
+    "produces": {
+      "id": 19044,
+      "name": "Might of the Timbermaw",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3776,
+    "name": "Green Leather Bracers",
+    "quality": 2,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "2321": 1,
+      "2605": 1,
+      "4234": 6,
+      "4236": 2
+    },
+    "minSkill": 180,
+    "icon": "inv_bracer_12",
+    "url": "https://www.wowhead.com/classic/spell=3776/green-leather-bracers",
+    "produces": {
+      "id": 4259,
+      "name": "Green Leather Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10562,
+    "name": "Big Voodoo Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "4304": 14,
+      "8152": 4,
+      "8343": 2
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_cape_02",
+    "url": "https://www.wowhead.com/classic/spell=10562/big-voodoo-cloak",
+    "produces": {
+      "id": 8216,
+      "name": "Big Voodoo Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 10566,
+    "name": "Wild Leather Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "4304": 14,
+      "8153": 4,
+      "8172": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_boots_07",
+    "url": "https://www.wowhead.com/classic/spell=10566/wild-leather-boots",
+    "produces": {
+      "id": 8213,
+      "name": "Wild Leather Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19102,
+    "name": "Runic Leather Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 22,
+      "12810": 4,
+      "14047": 16,
+      "14341": 2,
+      "15407": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_leather_07",
+    "url": "https://www.wowhead.com/classic/spell=19102/runic-leather-armor",
+    "produces": {
+      "id": 15090,
+      "name": "Runic Leather Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 24846,
+    "name": "Spitfire Bracers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7078": 2,
+      "20498": 20,
+      "20500": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_bracer_05",
+    "url": "https://www.wowhead.com/classic/spell=24846/spitfire-bracers",
+    "produces": {
+      "id": 20481,
+      "name": "Spitfire Bracers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2153,
+    "name": "Handstitched Leather Pants",
+    "quality": 1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 45,
+      "green": 60,
+      "gray": 75
+    },
+    "materials": {
+      "2318": 4,
+      "2320": 1
+    },
+    "minSkill": 15,
+    "icon": "inv_pants_wolf",
+    "url": "https://www.wowhead.com/classic/spell=2153/handstitched-leather-pants",
+    "produces": {
+      "id": 2303,
+      "name": "Handstitched Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2158,
+    "name": "Fine Leather Boots",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 135,
+      "gray": 150
+    },
+    "materials": {
+      "2318": 7,
+      "2320": 2
+    },
+    "minSkill": 90,
+    "icon": "inv_boots_06",
+    "url": "https://www.wowhead.com/classic/spell=2158/fine-leather-boots",
+    "produces": {
+      "id": 2307,
+      "name": "Fine Leather Boots",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 2162,
+    "name": "Embossed Leather Cloak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 90,
+      "green": 105,
+      "gray": 120
+    },
+    "materials": {
+      "2318": 5,
+      "2320": 2
+    },
+    "minSkill": 60,
+    "icon": "inv_helmet_48",
+    "url": "https://www.wowhead.com/classic/spell=2162/embossed-leather-cloak",
+    "produces": {
+      "id": 2310,
+      "name": "Embossed Leather Cloak",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3762,
+    "name": "Hillman's Leather Vest",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2320": 2,
+      "4231": 2,
+      "4243": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_chest_leather_10",
+    "url": "https://www.wowhead.com/classic/spell=3762/hillmans-leather-vest",
+    "produces": {
+      "id": 4244,
+      "name": "Hillman's Leather Vest",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3773,
+    "name": "Guardian Armor",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "2321": 2,
+      "3824": 1,
+      "4234": 12,
+      "4236": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_chest_leather_08",
+    "url": "https://www.wowhead.com/classic/spell=3773/guardian-armor",
+    "produces": {
+      "id": 4256,
+      "name": "Guardian Armor",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7133,
+    "name": "Fine Leather Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "2319": 8,
+      "2321": 1,
+      "2997": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=7133/fine-leather-pants",
+    "produces": {
+      "id": 5958,
+      "name": "Fine Leather Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 7147,
+    "name": "Guardian Pants",
+    "quality": 2,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 190,
+      "gray": 200
+    },
+    "materials": {
+      "2321": 2,
+      "4234": 12,
+      "4305": 2
+    },
+    "minSkill": 160,
+    "icon": "inv_pants_02",
+    "url": "https://www.wowhead.com/classic/spell=7147/guardian-pants",
+    "produces": {
+      "id": 5962,
+      "name": "Guardian Pants",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19104,
+    "name": "Frostsaber Tunic",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 12,
+      "14341": 2,
+      "15407": 1,
+      "15422": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_chest_chain_10",
+    "url": "https://www.wowhead.com/classic/spell=19104/frostsaber-tunic",
+    "produces": {
+      "id": 15068,
+      "name": "Frostsaber Tunic",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 22921,
+    "name": "Girdle of Insight",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "8170": 12,
+      "12804": 12,
+      "14341": 4,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_belt_26",
+    "url": "https://www.wowhead.com/classic/spell=22921/girdle-of-insight",
+    "produces": {
+      "id": 18504,
+      "name": "Girdle of Insight",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 23704,
+    "name": "Timbermaw Brawlers",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12803": 6,
+      "12804": 6,
+      "12810": 8,
+      "14227": 2,
+      "15407": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_26",
+    "url": "https://www.wowhead.com/classic/spell=23704/timbermaw-brawlers",
+    "produces": {
+      "id": 19049,
+      "name": "Timbermaw Brawlers",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 3778,
+    "name": "Gem-studded Leather Belt",
+    "quality": 3,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 215,
+      "gray": 225
+    },
+    "materials": {
+      "1529": 2,
+      "2321": 1,
+      "3864": 1,
+      "4236": 4,
+      "5500": 2
+    },
+    "minSkill": 185,
+    "icon": "inv_belt_01",
+    "url": "https://www.wowhead.com/classic/spell=3778/gem-studded-leather-belt",
+    "produces": {
+      "id": 4262,
+      "name": "Gem-studded Leather Belt",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 19075,
+    "name": "Heavy Scorpid Leggings",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "8170": 8,
+      "14341": 1,
+      "15408": 12
+    },
+    "minSkill": 285,
+    "icon": "inv_pants_12",
+    "url": "https://www.wowhead.com/classic/spell=19075/heavy-scorpid-leggings",
+    "produces": {
+      "id": 15079,
+      "name": "Heavy Scorpid Leggings",
+      "quantity": 1
+    }
+  },
+  {
+    "id": 28223,
+    "name": "Icy Scale Gauntlets",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7080": 2,
+      "14227": 4,
+      "15407": 3,
+      "15408": 16,
+      "22682": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_gauntlets_28",
+    "url": "https://www.wowhead.com/classic/spell=28223/icy-scale-gauntlets",
+    "produces": {
+      "id": 22666,
+      "name": "Icy Scale Gauntlets",
+      "quantity": 1
+    }
+  }
+]

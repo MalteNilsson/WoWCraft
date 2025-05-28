@@ -1,4 +1,126 @@
 {
+  "118": {
+    "name": "Minor Healing Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_49",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=118/minor-healing-potion",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2330,
+      "spellName": "Minor Healing Potion",
+      "reagents": {
+        "765": 1,
+        "2447": 1,
+        "3371": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "159": {
+    "name": "Refreshing Spring Water",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=159/refreshing-spring-water",
+    "vendorPrice": 25
+  },
+  "765": {
+    "name": "Silverleaf",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_10",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=765/silverleaf",
+    "vendorPrice": 40
+  },
+  "774": {
+    "name": "Malachite",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_emerald_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=774/malachite",
+    "vendorPrice": null
+  },
+  "783": {
+    "name": "Light Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_wolf_ruin_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=783/light-hide",
+    "vendorPrice": null
+  },
+  "785": {
+    "name": "Mageroyal",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_jewelry_talisman_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=785/mageroyal",
+    "vendorPrice": 80
+  },
+  "814": {
+    "name": "Flask of Oil",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_drink_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=814/flask-of-oil",
+    "vendorPrice": null
+  },
+  "818": {
+    "name": "Tigerseye",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_opal_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=818/tigerseye",
+    "vendorPrice": null
+  },
+  "929": {
+    "name": "Healing Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=929/healing-potion",
+    "vendorPrice": 300,
+    "createdBy": {
+      "spellId": 3447,
+      "spellName": "Healing Potion",
+      "reagents": {
+        "2450": 1,
+        "2453": 1,
+        "3372": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "1206": {
+    "name": "Moss Agate",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_emerald_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=1206/moss-agate",
+    "vendorPrice": null
+  },
   "1210": {
     "name": "Shadowgem",
     "quality": 2,
@@ -6,7 +128,269 @@
     "subclass": "",
     "icon": "inv_misc_gem_amethyst_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=1210/shadowgem"
+    "link": "https://www.wowhead.com/classic/item=1210/shadowgem",
+    "vendorPrice": null
+  },
+  "1288": {
+    "name": "Large Venom Sac",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_organ_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=1288/large-venom-sac",
+    "vendorPrice": null
+  },
+  "1529": {
+    "name": "Jade",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_stone_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=1529/jade",
+    "vendorPrice": null
+  },
+  "1705": {
+    "name": "Lesser Moonstone",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_crystal_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=1705/lesser-moonstone",
+    "vendorPrice": null
+  },
+  "2312": {
+    "name": "Fine Leather Gloves",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_gauntlets_05",
+    "slot": "Hands",
+    "link": "https://www.wowhead.com/classic/item=2312/fine-leather-gloves",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2164,
+      "spellName": "Fine Leather Gloves",
+      "reagents": {
+        "2318": 4,
+        "2320": 2,
+        "4231": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2318": {
+    "name": "Light Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2318/light-leather",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2881,
+      "spellName": "Light Leather",
+      "reagents": {
+        "2934": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2319": {
+    "name": "Medium Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2319/medium-leather",
+    "vendorPrice": 200,
+    "createdBy": {
+      "spellId": 20648,
+      "spellName": "Medium Leather",
+      "reagents": {
+        "2318": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2320": {
+    "name": "Coarse Thread",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_linen_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2320/coarse-thread",
+    "vendorPrice": 10
+  },
+  "2321": {
+    "name": "Fine Thread",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_wool_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2321/fine-thread",
+    "vendorPrice": 100
+  },
+  "2324": {
+    "name": "Bleach",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2324/bleach",
+    "vendorPrice": 25
+  },
+  "2325": {
+    "name": "Black Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_63",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2325/black-dye",
+    "vendorPrice": 1000
+  },
+  "2447": {
+    "name": "Peacebloom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_flower_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2447/peacebloom",
+    "vendorPrice": 40
+  },
+  "2449": {
+    "name": "Earthroot",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2449/earthroot",
+    "vendorPrice": 80
+  },
+  "2450": {
+    "name": "Briarthorn",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_root_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2450/briarthorn",
+    "vendorPrice": null
+  },
+  "2452": {
+    "name": "Swiftthistle",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2452/swiftthistle",
+    "vendorPrice": null
+  },
+  "2453": {
+    "name": "Bruiseweed",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2453/bruiseweed",
+    "vendorPrice": 100
+  },
+  "2457": {
+    "name": "Elixir of Minor Agility",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_91",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2457/elixir-of-minor-agility",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3230,
+      "spellName": "Elixir of Minor Agility",
+      "reagents": {
+        "765": 1,
+        "2452": 1,
+        "3371": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2459": {
+    "name": "Swiftness Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_95",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2459/swiftness-potion",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2335,
+      "spellName": "Swiftness Potion",
+      "reagents": {
+        "2450": 1,
+        "2452": 1,
+        "3371": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2589": {
+    "name": "Linen Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_linen_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2589/linen-cloth",
+    "vendorPrice": null
+  },
+  "2592": {
+    "name": "Wool Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_wool_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2592/wool-cloth",
+    "vendorPrice": null
+  },
+  "2604": {
+    "name": "Red Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2604/red-dye",
+    "vendorPrice": 50
+  },
+  "2605": {
+    "name": "Green Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2605/green-dye",
+    "vendorPrice": 100
   },
   "2772": {
     "name": "Iron Ore",
@@ -15,7 +399,184 @@
     "subclass": "Metal & Stone",
     "icon": "inv_ore_iron_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=2772/iron-ore"
+    "link": "https://www.wowhead.com/classic/item=2772/iron-ore",
+    "vendorPrice": null
+  },
+  "2835": {
+    "name": "Rough Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2835/rough-stone",
+    "vendorPrice": null
+  },
+  "2836": {
+    "name": "Coarse Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_09",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2836/coarse-stone",
+    "vendorPrice": null
+  },
+  "2838": {
+    "name": "Heavy Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2838/heavy-stone",
+    "vendorPrice": null
+  },
+  "2840": {
+    "name": "Copper Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2840/copper-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2657,
+      "spellName": "Smelt Copper",
+      "reagents": {
+        "2770": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2841": {
+    "name": "Bronze Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_bronze",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2841/bronze-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2659,
+      "spellName": "Smelt Bronze",
+      "reagents": {
+        "2840": 1,
+        "3576": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "2842": {
+    "name": "Silver Bar",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2842/silver-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2658,
+      "spellName": "Smelt Silver",
+      "reagents": {
+        "2775": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2880": {
+    "name": "Weak Flux",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_ammo_gunpowder_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2880/weak-flux",
+    "vendorPrice": 100
+  },
+  "2934": {
+    "name": "Ruined Leather Scraps",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_ruin_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2934/ruined-leather-scraps",
+    "vendorPrice": null
+  },
+  "2996": {
+    "name": "Bolt of Linen Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_linen_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2996/bolt-of-linen-cloth",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2963,
+      "spellName": "Bolt of Linen Cloth",
+      "reagents": {
+        "2589": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "2997": {
+    "name": "Bolt of Woolen Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_wool_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=2997/bolt-of-woolen-cloth",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2964,
+      "spellName": "Bolt of Woolen Cloth",
+      "reagents": {
+        "2592": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3164": {
+    "name": "Discolored Worg Heart",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_organ_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3164/discolored-worg-heart",
+    "vendorPrice": null
+  },
+  "3182": {
+    "name": "Spider's Silk",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "spell_nature_web",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3182/spiders-silk",
+    "vendorPrice": null
+  },
+  "3355": {
+    "name": "Wild Steelbloom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_flower_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3355/wild-steelbloom",
+    "vendorPrice": 200
   },
   "3356": {
     "name": "Kingsblood",
@@ -24,7 +585,38 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3356/kingsblood"
+    "link": "https://www.wowhead.com/classic/item=3356/kingsblood",
+    "vendorPrice": 120
+  },
+  "3357": {
+    "name": "Liferoot",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_root_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3357/liferoot",
+    "vendorPrice": 300
+  },
+  "3358": {
+    "name": "Khadgar's Whisker",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3358/khadgars-whisker",
+    "vendorPrice": 700
+  },
+  "3369": {
+    "name": "Grave Moss",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_dust_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3369/grave-moss",
+    "vendorPrice": null
   },
   "3371": {
     "name": "Empty Vial",
@@ -33,7 +625,8 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_drink_06",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3371/empty-vial"
+    "link": "https://www.wowhead.com/classic/item=3371/empty-vial",
+    "vendorPrice": 20
   },
   "3372": {
     "name": "Leaded Vial",
@@ -42,7 +635,207 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_drink_06",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3372/leaded-vial"
+    "link": "https://www.wowhead.com/classic/item=3372/leaded-vial",
+    "vendorPrice": 200
+  },
+  "3383": {
+    "name": "Elixir of Wisdom",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3383/elixir-of-wisdom",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3171,
+      "spellName": "Elixir of Wisdom",
+      "reagents": {
+        "785": 1,
+        "2450": 2,
+        "3371": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3389": {
+    "name": "Elixir of Defense",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_64",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3389/elixir-of-defense",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3177,
+      "spellName": "Elixir of Defense",
+      "reagents": {
+        "3355": 1,
+        "3372": 1,
+        "3820": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3390": {
+    "name": "Elixir of Lesser Agility",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_92",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3390/elixir-of-lesser-agility",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 2333,
+      "spellName": "Elixir of Lesser Agility",
+      "reagents": {
+        "2452": 1,
+        "3355": 1,
+        "3372": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3391": {
+    "name": "Elixir of Ogre's Strength",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_57",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3391/elixir-of-ogres-strength",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3188,
+      "spellName": "Elixir of Ogre's Strength",
+      "reagents": {
+        "2449": 1,
+        "3356": 1,
+        "3372": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3466": {
+    "name": "Strong Flux",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_ammo_gunpowder_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3466/strong-flux",
+    "vendorPrice": 2000
+  },
+  "3470": {
+    "name": "Rough Grinding Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_grindingstone_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3470/rough-grinding-stone",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3320,
+      "spellName": "Rough Grinding Stone",
+      "reagents": {
+        "2835": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3478": {
+    "name": "Coarse Grinding Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_grindingstone_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3478/coarse-grinding-stone",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3326,
+      "spellName": "Coarse Grinding Stone",
+      "reagents": {
+        "2836": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3486": {
+    "name": "Heavy Grinding Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_grindingstone_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3486/heavy-grinding-stone",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3337,
+      "spellName": "Heavy Grinding Stone",
+      "reagents": {
+        "2838": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3575": {
+    "name": "Iron Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_iron",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3575/iron-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3307,
+      "spellName": "Smelt Iron",
+      "reagents": {
+        "2772": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3577": {
+    "name": "Gold Bar",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3577/gold-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3308,
+      "spellName": "Smelt Gold",
+      "reagents": {
+        "2776": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3818": {
+    "name": "Fadeleaf",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3818/fadeleaf",
+    "vendorPrice": null
   },
   "3819": {
     "name": "Wintersbite",
@@ -51,7 +844,91 @@
     "subclass": "Herbs",
     "icon": "inv_misc_flower_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3819/wintersbite"
+    "link": "https://www.wowhead.com/classic/item=3819/wintersbite",
+    "vendorPrice": null
+  },
+  "3820": {
+    "name": "Stranglekelp",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3820/stranglekelp",
+    "vendorPrice": null
+  },
+  "3821": {
+    "name": "Goldthorn",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_15",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3821/goldthorn",
+    "vendorPrice": null
+  },
+  "3823": {
+    "name": "Lesser Invisibility Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_18",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3823/lesser-invisibility-potion",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3448,
+      "spellName": "Lesser Invisibility Potion",
+      "reagents": {
+        "3355": 1,
+        "3372": 1,
+        "3818": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3824": {
+    "name": "Shadow Oil",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Item Enhancements (Temporary)",
+    "icon": "inv_potion_23",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3824/shadow-oil",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3449,
+      "spellName": "Shadow Oil",
+      "reagents": {
+        "3369": 4,
+        "3372": 1,
+        "3818": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3827": {
+    "name": "Mana Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_72",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3827/mana-potion",
+    "vendorPrice": 480,
+    "createdBy": {
+      "spellId": 3452,
+      "spellName": "Mana Potion",
+      "reagents": {
+        "3356": 1,
+        "3372": 1,
+        "3820": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "3829": {
     "name": "Frost Oil",
@@ -60,7 +937,745 @@
     "subclass": "Item Enhancements (Temporary)",
     "icon": "inv_potion_20",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3829/frost-oil"
+    "link": "https://www.wowhead.com/classic/item=3829/frost-oil",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3454,
+      "spellName": "Frost Oil",
+      "reagents": {
+        "3358": 4,
+        "3372": 1,
+        "3819": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3858": {
+    "name": "Mithril Ore",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ore_mithril_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3858/mithril-ore",
+    "vendorPrice": null
+  },
+  "3859": {
+    "name": "Steel Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_steel",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3859/steel-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3569,
+      "spellName": "Smelt Steel",
+      "reagents": {
+        "3575": 1,
+        "3857": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3860": {
+    "name": "Mithril Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3860/mithril-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 10097,
+      "spellName": "Smelt Mithril",
+      "reagents": {
+        "3858": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "3864": {
+    "name": "Citrine",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_opal_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=3864/citrine",
+    "vendorPrice": null
+  },
+  "4096": {
+    "name": "Coarse Gorilla Hair",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Junk",
+    "icon": "inv_misc_monstertail_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4096/coarse-gorilla-hair",
+    "vendorPrice": null
+  },
+  "4231": {
+    "name": "Cured Light Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_wolf_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4231/cured-light-hide",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3816,
+      "spellName": "Cured Light Hide",
+      "reagents": {
+        "783": 1,
+        "4289": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4232": {
+    "name": "Medium Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_boar_ruin_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4232/medium-hide",
+    "vendorPrice": null
+  },
+  "4233": {
+    "name": "Cured Medium Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4233/cured-medium-hide",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3817,
+      "spellName": "Cured Medium Hide",
+      "reagents": {
+        "4232": 1,
+        "4289": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4234": {
+    "name": "Heavy Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4234/heavy-leather",
+    "vendorPrice": 600,
+    "createdBy": {
+      "spellId": 20649,
+      "spellName": "Heavy Leather",
+      "reagents": {
+        "2319": 5
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4235": {
+    "name": "Heavy Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_wolf_ruin_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4235/heavy-hide",
+    "vendorPrice": null
+  },
+  "4236": {
+    "name": "Cured Heavy Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_wolf_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4236/cured-heavy-hide",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3818,
+      "spellName": "Cured Heavy Hide",
+      "reagents": {
+        "4235": 1,
+        "4289": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4243": {
+    "name": "Fine Leather Tunic",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_chest_leather_09",
+    "slot": "Chest",
+    "link": "https://www.wowhead.com/classic/item=4243/fine-leather-tunic",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3761,
+      "spellName": "Fine Leather Tunic",
+      "reagents": {
+        "2318": 6,
+        "2320": 4,
+        "4231": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4246": {
+    "name": "Fine Leather Belt",
+    "quality": 1,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_belt_04",
+    "slot": "Waist",
+    "link": "https://www.wowhead.com/classic/item=4246/fine-leather-belt",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3763,
+      "spellName": "Fine Leather Belt",
+      "reagents": {
+        "2318": 6,
+        "2320": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4255": {
+    "name": "Green Leather Armor",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_chest_leather_08",
+    "slot": "Chest",
+    "link": "https://www.wowhead.com/classic/item=4255/green-leather-armor",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3772,
+      "spellName": "Green Leather Armor",
+      "reagents": {
+        "2321": 4,
+        "2605": 2,
+        "4234": 9
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4289": {
+    "name": "Salt",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_dust_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4289/salt",
+    "vendorPrice": 50
+  },
+  "4291": {
+    "name": "Silken Thread",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_silk_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4291/silken-thread",
+    "vendorPrice": 500
+  },
+  "4304": {
+    "name": "Thick Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4304/thick-leather",
+    "vendorPrice": 1200,
+    "createdBy": {
+      "spellId": 20650,
+      "spellName": "Thick Leather",
+      "reagents": {
+        "4234": 6
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4305": {
+    "name": "Bolt of Silk Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_silk_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4305/bolt-of-silk-cloth",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3839,
+      "spellName": "Bolt of Silk Cloth",
+      "reagents": {
+        "4306": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4306": {
+    "name": "Silk Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_silk_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4306/silk-cloth",
+    "vendorPrice": null
+  },
+  "4337": {
+    "name": "Thick Spider's Silk",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "spell_nature_web",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4337/thick-spiders-silk",
+    "vendorPrice": null
+  },
+  "4338": {
+    "name": "Mageweave Cloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_mageweave_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4338/mageweave-cloth",
+    "vendorPrice": null
+  },
+  "4339": {
+    "name": "Bolt of Mageweave",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_mageweave_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4339/bolt-of-mageweave",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3865,
+      "spellName": "Bolt of Mageweave",
+      "reagents": {
+        "4338": 5
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4340": {
+    "name": "Gray Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_drink_10",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4340/gray-dye",
+    "vendorPrice": 350
+  },
+  "4341": {
+    "name": "Yellow Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4341/yellow-dye",
+    "vendorPrice": 500
+  },
+  "4342": {
+    "name": "Purple Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4342/purple-dye",
+    "vendorPrice": 2500
+  },
+  "4357": {
+    "name": "Rough Blasting Powder",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_dust_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4357/rough-blasting-powder",
+    "vendorPrice": 16,
+    "createdBy": {
+      "spellId": 3918,
+      "spellName": "Rough Blasting Powder",
+      "reagents": {
+        "2835": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4359": {
+    "name": "Handful of Copper Bolts",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_gear_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4359/handful-of-copper-bolts",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3922,
+      "spellName": "Handful of Copper Bolts",
+      "reagents": {
+        "2840": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4361": {
+    "name": "Copper Tube",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_pipe_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4361/copper-tube",
+    "vendorPrice": 480,
+    "createdBy": {
+      "spellId": 3924,
+      "spellName": "Copper Tube",
+      "reagents": {
+        "2840": 2,
+        "2880": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4363": {
+    "name": "Copper Modulator",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4363/copper-modulator",
+    "vendorPrice": 200,
+    "createdBy": {
+      "spellId": 3926,
+      "spellName": "Copper Modulator",
+      "reagents": {
+        "2589": 2,
+        "2840": 1,
+        "4359": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4364": {
+    "name": "Coarse Blasting Powder",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_dust_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4364/coarse-blasting-powder",
+    "vendorPrice": 48,
+    "createdBy": {
+      "spellId": 3929,
+      "spellName": "Coarse Blasting Powder",
+      "reagents": {
+        "2836": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4368": {
+    "name": "Flying Tiger Goggles",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_helmet_47",
+    "slot": "Head",
+    "link": "https://www.wowhead.com/classic/item=4368/flying-tiger-goggles",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3934,
+      "spellName": "Flying Tiger Goggles",
+      "reagents": {
+        "818": 2,
+        "2318": 6
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4371": {
+    "name": "Bronze Tube",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_pipe_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4371/bronze-tube",
+    "vendorPrice": 800,
+    "createdBy": {
+      "spellId": 3938,
+      "spellName": "Bronze Tube",
+      "reagents": {
+        "2841": 2,
+        "2880": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4375": {
+    "name": "Whirring Bronze Gizmo",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4375/whirring-bronze-gizmo",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3942,
+      "spellName": "Whirring Bronze Gizmo",
+      "reagents": {
+        "2592": 1,
+        "2841": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4377": {
+    "name": "Heavy Blasting Powder",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "classic_inv_misc_dust_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4377/heavy-blasting-powder",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3945,
+      "spellName": "Heavy Blasting Powder",
+      "reagents": {
+        "2838": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4382": {
+    "name": "Bronze Framework",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_bronzeframework_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4382/bronze-framework",
+    "vendorPrice": 2400,
+    "createdBy": {
+      "spellId": 3953,
+      "spellName": "Bronze Framework",
+      "reagents": {
+        "2319": 1,
+        "2592": 1,
+        "2841": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4385": {
+    "name": "Green Tinted Goggles",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_helmet_47",
+    "slot": "Head",
+    "link": "https://www.wowhead.com/classic/item=4385/green-tinted-goggles",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3956,
+      "spellName": "Green Tinted Goggles",
+      "reagents": {
+        "1206": 2,
+        "2319": 4,
+        "4368": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4387": {
+    "name": "Iron Strut",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_spear_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4387/iron-strut",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3958,
+      "spellName": "Iron Strut",
+      "reagents": {
+        "3575": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4389": {
+    "name": "Gyrochronatom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_pocketwatch_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4389/gyrochronatom",
+    "vendorPrice": 3000,
+    "createdBy": {
+      "spellId": 3961,
+      "spellName": "Gyrochronatom",
+      "reagents": {
+        "3575": 1,
+        "10558": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4394": {
+    "name": "Big Iron Bomb",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Explosives",
+    "icon": "inv_misc_bomb_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4394/big-iron-bomb",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3967,
+      "spellName": "Big Iron Bomb",
+      "reagents": {
+        "3575": 3,
+        "4377": 3,
+        "4404": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "4399": {
+    "name": "Wooden Stock",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_mace_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4399/wooden-stock",
+    "vendorPrice": 200
+  },
+  "4400": {
+    "name": "Heavy Stock",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_mace_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4400/heavy-stock",
+    "vendorPrice": 2000
+  },
+  "4402": {
+    "name": "Small Flame Sac",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_organ_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4402/small-flame-sac",
+    "vendorPrice": null
+  },
+  "4404": {
+    "name": "Silver Contact",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_ingot_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4404/silver-contact",
+    "vendorPrice": 100,
+    "createdBy": {
+      "spellId": 3973,
+      "spellName": "Silver Contact",
+      "reagents": {
+        "2842": 1
+      },
+      "minCount": 4,
+      "maxCount": 4
+    }
+  },
+  "4407": {
+    "name": "Accurate Scope",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Item Enhancements (Permanent)",
+    "icon": "inv_misc_spyglass_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4407/accurate-scope",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 3979,
+      "spellName": "Accurate Scope",
+      "reagents": {
+        "1529": 1,
+        "3864": 1,
+        "4371": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "4461": {
+    "name": "Raptor Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4461/raptor-hide",
+    "vendorPrice": null
   },
   "4470": {
     "name": "Simple Wood",
@@ -69,7 +1684,28 @@
     "subclass": "Reagents",
     "icon": "inv_tradeskillitem_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=4470/simple-wood"
+    "link": "https://www.wowhead.com/classic/item=4470/simple-wood",
+    "vendorPrice": 38
+  },
+  "4589": {
+    "name": "Long Elegant Feather",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "spell_magic_featherfall",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4589/long-elegant-feather",
+    "vendorPrice": null
+  },
+  "4611": {
+    "name": "Blue Pearl",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_ore_arcanite_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=4611/blue-pearl",
+    "vendorPrice": null
   },
   "4625": {
     "name": "Firebloom",
@@ -78,7 +1714,48 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_19",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=4625/firebloom"
+    "link": "https://www.wowhead.com/classic/item=4625/firebloom",
+    "vendorPrice": null
+  },
+  "5082": {
+    "name": "Thin Kodo Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_leatherscrap_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5082/thin-kodo-leather",
+    "vendorPrice": null
+  },
+  "5116": {
+    "name": "Long Tail Feather",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_feather_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5116/long-tail-feather",
+    "vendorPrice": null
+  },
+  "5373": {
+    "name": "Lucky Charm",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Other (Miscellaneous)",
+    "icon": "inv_misc_armorkit_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5373/lucky-charm",
+    "vendorPrice": null
+  },
+  "5498": {
+    "name": "Small Lustrous Pearl",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_pearl_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5498/small-lustrous-pearl",
+    "vendorPrice": null
   },
   "5500": {
     "name": "Iridescent Pearl",
@@ -87,7 +1764,39 @@
     "subclass": "",
     "icon": "inv_misc_gem_pearl_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5500/iridescent-pearl"
+    "link": "https://www.wowhead.com/classic/item=5500/iridescent-pearl",
+    "vendorPrice": null
+  },
+  "5633": {
+    "name": "Great Rage Potion",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Potions",
+    "icon": "inv_potion_21",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5633/great-rage-potion",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 6618,
+      "spellName": "Great Rage Potion",
+      "reagents": {
+        "3356": 1,
+        "3372": 1,
+        "5637": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "5635": {
+    "name": "Sharp Claw",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_monsterclaw_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5635/sharp-claw",
+    "vendorPrice": null
   },
   "5637": {
     "name": "Large Fang",
@@ -96,7 +1805,49 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_misc_bone_08",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5637/large-fang"
+    "link": "https://www.wowhead.com/classic/item=5637/large-fang",
+    "vendorPrice": null
+  },
+  "5784": {
+    "name": "Slimy Murloc Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5784/slimy-murloc-scale",
+    "vendorPrice": null
+  },
+  "5785": {
+    "name": "Thick Murloc Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=5785/thick-murloc-scale",
+    "vendorPrice": null
+  },
+  "5966": {
+    "name": "Guardian Gloves",
+    "quality": 1,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_gauntlets_05",
+    "slot": "Hands",
+    "link": "https://www.wowhead.com/classic/item=5966/guardian-gloves",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 7156,
+      "spellName": "Guardian Gloves",
+      "reagents": {
+        "4234": 4,
+        "4236": 1,
+        "4291": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "6037": {
     "name": "Truesilver Bar",
@@ -105,7 +1856,17 @@
     "subclass": "Metal & Stone",
     "icon": "inv_ingot_08",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6037/truesilver-bar"
+    "link": "https://www.wowhead.com/classic/item=6037/truesilver-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 10098,
+      "spellName": "Smelt Truesilver",
+      "reagents": {
+        "7911": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "6048": {
     "name": "Shadow Protection Potion",
@@ -114,7 +1875,19 @@
     "subclass": "Potions",
     "icon": "inv_potion_44",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6048/shadow-protection-potion"
+    "link": "https://www.wowhead.com/classic/item=6048/shadow-protection-potion",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 7256,
+      "spellName": "Shadow Protection Potion",
+      "reagents": {
+        "3356": 1,
+        "3369": 1,
+        "3372": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "6217": {
     "name": "Copper Rod",
@@ -123,7 +1896,28 @@
     "subclass": "Enchanting",
     "icon": "inv_misc_flute_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6217/copper-rod"
+    "link": "https://www.wowhead.com/classic/item=6217/copper-rod",
+    "vendorPrice": 124
+  },
+  "6260": {
+    "name": "Blue Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_15",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6260/blue-dye",
+    "vendorPrice": 50
+  },
+  "6261": {
+    "name": "Orange Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_35",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6261/orange-dye",
+    "vendorPrice": 1000
   },
   "6338": {
     "name": "Silver Rod",
@@ -132,7 +1926,38 @@
     "subclass": "Enchanting",
     "icon": "inv_staff_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6338/silver-rod"
+    "link": "https://www.wowhead.com/classic/item=6338/silver-rod",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 7818,
+      "spellName": "Silver Rod",
+      "reagents": {
+        "2842": 1,
+        "3470": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "6358": {
+    "name": "Oily Blackmouth",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_monsterhead_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6358/oily-blackmouth",
+    "vendorPrice": null
+  },
+  "6359": {
+    "name": "Firefin Snapper",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_monsterhead_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6359/firefin-snapper",
+    "vendorPrice": null
   },
   "6370": {
     "name": "Blackmouth Oil",
@@ -141,7 +1966,18 @@
     "subclass": "Reagents",
     "icon": "inv_drink_12",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6370/blackmouth-oil"
+    "link": "https://www.wowhead.com/classic/item=6370/blackmouth-oil",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 7836,
+      "spellName": "Blackmouth Oil",
+      "reagents": {
+        "3371": 1,
+        "6358": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "6371": {
     "name": "Fire Oil",
@@ -150,7 +1986,58 @@
     "subclass": "Reagents",
     "icon": "inv_potion_38",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=6371/fire-oil"
+    "link": "https://www.wowhead.com/classic/item=6371/fire-oil",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 7837,
+      "spellName": "Fire Oil",
+      "reagents": {
+        "3371": 1,
+        "6359": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "6470": {
+    "name": "Deviate Scale",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6470/deviate-scale",
+    "vendorPrice": null
+  },
+  "6471": {
+    "name": "Perfect Deviate Scale",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_monsterscales_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6471/perfect-deviate-scale",
+    "vendorPrice": null
+  },
+  "6522": {
+    "name": "Deviate Fish",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_monsterhead_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6522/deviate-fish",
+    "vendorPrice": null
+  },
+  "6530": {
+    "name": "Nightcrawlers",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Item Enhancements (Temporary)",
+    "icon": "inv_misc_monstertail_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=6530/nightcrawlers",
+    "vendorPrice": 100
   },
   "7067": {
     "name": "Elemental Earth",
@@ -159,7 +2046,8 @@
     "subclass": "Elemental",
     "icon": "inv_ore_iron_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7067/elemental-earth"
+    "link": "https://www.wowhead.com/classic/item=7067/elemental-earth",
+    "vendorPrice": null
   },
   "7068": {
     "name": "Elemental Fire",
@@ -168,7 +2056,66 @@
     "subclass": "Elemental",
     "icon": "spell_fire_fire",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7068/elemental-fire"
+    "link": "https://www.wowhead.com/classic/item=7068/elemental-fire",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 25146,
+      "spellName": "Transmute: Elemental Fire",
+      "reagents": {
+        "7077": 1
+      },
+      "minCount": 2,
+      "maxCount": 2
+    }
+  },
+  "7069": {
+    "name": "Elemental Air",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "spell_nature_tranquility",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7069/elemental-air",
+    "vendorPrice": null
+  },
+  "7070": {
+    "name": "Elemental Water",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_potion_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7070/elemental-water",
+    "vendorPrice": null
+  },
+  "7071": {
+    "name": "Iron Buckle",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_armorkit_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7071/iron-buckle",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 8768,
+      "spellName": "Iron Buckle",
+      "reagents": {
+        "3575": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "7072": {
+    "name": "Naga Scale",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_monsterscales_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7072/naga-scale",
+    "vendorPrice": null
   },
   "7075": {
     "name": "Core of Earth",
@@ -177,7 +2124,8 @@
     "subclass": "Elemental",
     "icon": "inv_stone_05",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7075/core-of-earth"
+    "link": "https://www.wowhead.com/classic/item=7075/core-of-earth",
+    "vendorPrice": null
   },
   "7076": {
     "name": "Essence of Earth",
@@ -186,7 +2134,17 @@
     "subclass": "Elemental",
     "icon": "spell_nature_strengthofearthtotem02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7076/essence-of-earth"
+    "link": "https://www.wowhead.com/classic/item=7076/essence-of-earth",
+    "vendorPrice": 1600,
+    "createdBy": {
+      "spellId": 17560,
+      "spellName": "Transmute: Fire to Earth",
+      "reagents": {
+        "7078": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "7077": {
     "name": "Heart of Fire",
@@ -195,7 +2153,8 @@
     "subclass": "Elemental",
     "icon": "spell_fire_lavaspawn",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7077/heart-of-fire"
+    "link": "https://www.wowhead.com/classic/item=7077/heart-of-fire",
+    "vendorPrice": null
   },
   "7078": {
     "name": "Essence of Fire",
@@ -204,7 +2163,17 @@
     "subclass": "Elemental",
     "icon": "spell_fire_volcano",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7078/essence-of-fire"
+    "link": "https://www.wowhead.com/classic/item=7078/essence-of-fire",
+    "vendorPrice": 1600,
+    "createdBy": {
+      "spellId": 17559,
+      "spellName": "Transmute: Air to Fire",
+      "reagents": {
+        "7082": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "7079": {
     "name": "Globe of Water",
@@ -213,7 +2182,8 @@
     "subclass": "Elemental",
     "icon": "inv_misc_orb_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7079/globe-of-water"
+    "link": "https://www.wowhead.com/classic/item=7079/globe-of-water",
+    "vendorPrice": null
   },
   "7080": {
     "name": "Essence of Water",
@@ -222,7 +2192,17 @@
     "subclass": "Elemental",
     "icon": "spell_nature_acid_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7080/essence-of-water"
+    "link": "https://www.wowhead.com/classic/item=7080/essence-of-water",
+    "vendorPrice": 1600,
+    "createdBy": {
+      "spellId": 17561,
+      "spellName": "Transmute: Earth to Water",
+      "reagents": {
+        "7076": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "7081": {
     "name": "Breath of Wind",
@@ -231,7 +2211,8 @@
     "subclass": "Elemental",
     "icon": "spell_nature_cyclone",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7081/breath-of-wind"
+    "link": "https://www.wowhead.com/classic/item=7081/breath-of-wind",
+    "vendorPrice": null
   },
   "7082": {
     "name": "Essence of Air",
@@ -240,7 +2221,69 @@
     "subclass": "Elemental",
     "icon": "spell_nature_earthbind",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7082/essence-of-air"
+    "link": "https://www.wowhead.com/classic/item=7082/essence-of-air",
+    "vendorPrice": 1600,
+    "createdBy": {
+      "spellId": 17562,
+      "spellName": "Transmute: Water to Air",
+      "reagents": {
+        "7080": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "7191": {
+    "name": "Fused Wiring",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_gear_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7191/fused-wiring",
+    "vendorPrice": null
+  },
+  "7286": {
+    "name": "Black Whelp Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7286/black-whelp-scale",
+    "vendorPrice": null
+  },
+  "7287": {
+    "name": "Red Whelp Scale",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Junk",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7287/red-whelp-scale",
+    "vendorPrice": null
+  },
+  "7387": {
+    "name": "Dusky Belt",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Leather Armor",
+    "icon": "inv_belt_06",
+    "slot": "Waist",
+    "link": "https://www.wowhead.com/classic/item=7387/dusky-belt",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 9206,
+      "spellName": "Dusky Belt",
+      "reagents": {
+        "2325": 2,
+        "4234": 10,
+        "4305": 2,
+        "7071": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "7392": {
     "name": "Green Whelp Scale",
@@ -249,7 +2292,18 @@
     "subclass": "Leather",
     "icon": "inv_misc_monsterscales_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7392/green-whelp-scale"
+    "link": "https://www.wowhead.com/classic/item=7392/green-whelp-scale",
+    "vendorPrice": null
+  },
+  "7428": {
+    "name": "Shadowcat Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_pelt_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7428/shadowcat-hide",
+    "vendorPrice": null
   },
   "7909": {
     "name": "Aquamarine",
@@ -258,7 +2312,47 @@
     "subclass": "",
     "icon": "inv_misc_gem_crystal_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7909/aquamarine"
+    "link": "https://www.wowhead.com/classic/item=7909/aquamarine",
+    "vendorPrice": null
+  },
+  "7910": {
+    "name": "Star Ruby",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_ruby_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7910/star-ruby",
+    "vendorPrice": null
+  },
+  "7912": {
+    "name": "Solid Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_10",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7912/solid-stone",
+    "vendorPrice": null
+  },
+  "7966": {
+    "name": "Solid Grinding Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_grindingstone_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=7966/solid-grinding-stone",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 9920,
+      "spellName": "Solid Grinding Stone",
+      "reagents": {
+        "7912": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "7971": {
     "name": "Black Pearl",
@@ -267,7 +2361,8 @@
     "subclass": "",
     "icon": "inv_misc_gem_pearl_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7971/black-pearl"
+    "link": "https://www.wowhead.com/classic/item=7971/black-pearl",
+    "vendorPrice": null
   },
   "7972": {
     "name": "Ichor of Undeath",
@@ -276,7 +2371,48 @@
     "subclass": "Elemental",
     "icon": "inv_misc_slime_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=7972/ichor-of-undeath"
+    "link": "https://www.wowhead.com/classic/item=7972/ichor-of-undeath",
+    "vendorPrice": null
+  },
+  "8146": {
+    "name": "Wicked Claw",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_monsterclaw_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8146/wicked-claw",
+    "vendorPrice": null
+  },
+  "8150": {
+    "name": "Deeprock Salt",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_dust_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8150/deeprock-salt",
+    "vendorPrice": null
+  },
+  "8151": {
+    "name": "Flask of Mojo",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_potion_15",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8151/flask-of-mojo",
+    "vendorPrice": null
+  },
+  "8152": {
+    "name": "Flask of Big Mojo",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_potion_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8152/flask-of-big-mojo",
+    "vendorPrice": null
   },
   "8153": {
     "name": "Wildvine",
@@ -285,7 +2421,58 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8153/wildvine"
+    "link": "https://www.wowhead.com/classic/item=8153/wildvine",
+    "vendorPrice": null
+  },
+  "8154": {
+    "name": "Scorpid Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8154/scorpid-scale",
+    "vendorPrice": null
+  },
+  "8165": {
+    "name": "Worn Dragonscale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_17",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8165/worn-dragonscale",
+    "vendorPrice": null
+  },
+  "8167": {
+    "name": "Turtle Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8167/turtle-scale",
+    "vendorPrice": null
+  },
+  "8168": {
+    "name": "Jet Black Feather",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_feather_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8168/jet-black-feather",
+    "vendorPrice": null
+  },
+  "8169": {
+    "name": "Thick Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_ruin_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8169/thick-hide",
+    "vendorPrice": null
   },
   "8170": {
     "name": "Rugged Leather",
@@ -294,7 +2481,67 @@
     "subclass": "Leather",
     "icon": "inv_misc_leatherscrap_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8170/rugged-leather"
+    "link": "https://www.wowhead.com/classic/item=8170/rugged-leather",
+    "vendorPrice": 2000,
+    "createdBy": {
+      "spellId": 22331,
+      "spellName": "Rugged Leather",
+      "reagents": {
+        "4304": 6
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "8171": {
+    "name": "Rugged Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_ruin_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8171/rugged-hide",
+    "vendorPrice": null
+  },
+  "8172": {
+    "name": "Cured Thick Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8172/cured-thick-hide",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 10482,
+      "spellName": "Cured Thick Hide",
+      "reagents": {
+        "8150": 1,
+        "8169": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "8343": {
+    "name": "Heavy Silken Thread",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_silk_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8343/heavy-silken-thread",
+    "vendorPrice": 2000
+  },
+  "8368": {
+    "name": "Thick Wolfhide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_pelt_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8368/thick-wolfhide",
+    "vendorPrice": null
   },
   "8831": {
     "name": "Purple Lotus",
@@ -303,7 +2550,18 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_17",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8831/purple-lotus"
+    "link": "https://www.wowhead.com/classic/item=8831/purple-lotus",
+    "vendorPrice": null
+  },
+  "8836": {
+    "name": "Arthas' Tears",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_13",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8836/arthas-tears",
+    "vendorPrice": null
   },
   "8838": {
     "name": "Sungrass",
@@ -312,7 +2570,38 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_18",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8838/sungrass"
+    "link": "https://www.wowhead.com/classic/item=8838/sungrass",
+    "vendorPrice": null
+  },
+  "8839": {
+    "name": "Blindweed",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8839/blindweed",
+    "vendorPrice": null
+  },
+  "8845": {
+    "name": "Ghost Mushroom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_mushroom_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8845/ghost-mushroom",
+    "vendorPrice": 1500
+  },
+  "8846": {
+    "name": "Gromsblood",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8846/gromsblood",
+    "vendorPrice": 1000
   },
   "8925": {
     "name": "Crystal Vial",
@@ -321,7 +2610,113 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_drink_06",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8925/crystal-vial"
+    "link": "https://www.wowhead.com/classic/item=8925/crystal-vial",
+    "vendorPrice": 2500
+  },
+  "8949": {
+    "name": "Elixir of Agility",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_93",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8949/elixir-of-agility",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11449,
+      "spellName": "Elixir of Agility",
+      "reagents": {
+        "3372": 1,
+        "3820": 1,
+        "3821": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "8951": {
+    "name": "Elixir of Greater Defense",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_65",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=8951/elixir-of-greater-defense",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11450,
+      "spellName": "Elixir of Greater Defense",
+      "reagents": {
+        "3355": 1,
+        "3372": 1,
+        "3821": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "9060": {
+    "name": "Inlaid Mithril Cylinder",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_musket_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9060/inlaid-mithril-cylinder",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11454,
+      "spellName": "Inlaid Mithril Cylinder",
+      "reagents": {
+        "3577": 1,
+        "3860": 5,
+        "6037": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "9061": {
+    "name": "Goblin Rocket Fuel",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_cask_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9061/goblin-rocket-fuel",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11456,
+      "spellName": "Goblin Rocket Fuel",
+      "reagents": {
+        "3372": 1,
+        "4625": 1,
+        "9260": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "9210": {
+    "name": "Ghost Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_poison_mindnumbing",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9210/ghost-dye",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11473,
+      "spellName": "Ghost Dye",
+      "reagents": {
+        "4342": 1,
+        "8845": 2,
+        "8925": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "9224": {
     "name": "Elixir of Demonslaying",
@@ -330,7 +2725,388 @@
     "subclass": "Elixirs",
     "icon": "inv_potion_27",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=9224/elixir-of-demonslaying"
+    "link": "https://www.wowhead.com/classic/item=9224/elixir-of-demonslaying",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 11477,
+      "spellName": "Elixir of Demonslaying",
+      "reagents": {
+        "8845": 1,
+        "8846": 1,
+        "8925": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "9260": {
+    "name": "Volatile Rum",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9260/volatile-rum",
+    "vendorPrice": 1600
+  },
+  "9262": {
+    "name": "Black Vitriol",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_gem_sapphire_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=9262/black-vitriol",
+    "vendorPrice": null
+  },
+  "10026": {
+    "name": "Black Mageweave Boots",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_boots_05",
+    "slot": "Feet",
+    "link": "https://www.wowhead.com/classic/item=10026/black-mageweave-boots",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12073,
+      "spellName": "Black Mageweave Boots",
+      "reagents": {
+        "4304": 2,
+        "4339": 3,
+        "8343": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10285": {
+    "name": "Shadow Silk",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "spell_nature_web",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10285/shadow-silk",
+    "vendorPrice": null
+  },
+  "10286": {
+    "name": "Heart of the Wild",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Elemental",
+    "icon": "inv_misc_herb_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10286/heart-of-the-wild",
+    "vendorPrice": null
+  },
+  "10290": {
+    "name": "Pink Dye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_potion_09",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10290/pink-dye",
+    "vendorPrice": 2500
+  },
+  "10500": {
+    "name": "Fire Goggles",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_helmet_47",
+    "slot": "Head",
+    "link": "https://www.wowhead.com/classic/item=10500/fire-goggles",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12594,
+      "spellName": "Fire Goggles",
+      "reagents": {
+        "3864": 2,
+        "4234": 4,
+        "4385": 1,
+        "7068": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10502": {
+    "name": "Spellpower Goggles Xtreme",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_helmet_47",
+    "slot": "Head",
+    "link": "https://www.wowhead.com/classic/item=10502/spellpower-goggles-xtreme",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12615,
+      "spellName": "Spellpower Goggles Xtreme",
+      "reagents": {
+        "4304": 4,
+        "7910": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10505": {
+    "name": "Solid Blasting Powder",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_powder_black",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10505/solid-blasting-powder",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12585,
+      "spellName": "Solid Blasting Powder",
+      "reagents": {
+        "7912": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10507": {
+    "name": "Solid Dynamite",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Explosives",
+    "icon": "inv_misc_bomb_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10507/solid-dynamite",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12586,
+      "spellName": "Solid Dynamite",
+      "reagents": {
+        "4306": 1,
+        "10505": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "10543": {
+    "name": "Goblin Construction Helmet",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloth Armor",
+    "icon": "inv_helmet_60",
+    "slot": "Head",
+    "link": "https://www.wowhead.com/classic/item=10543/goblin-construction-helmet",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12718,
+      "spellName": "Goblin Construction Helmet",
+      "reagents": {
+        "3860": 8,
+        "3864": 1,
+        "7068": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10546": {
+    "name": "Deadly Scope",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Item Enhancements (Permanent)",
+    "icon": "inv_misc_spyglass_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10546/deadly-scope",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12597,
+      "spellName": "Deadly Scope",
+      "reagents": {
+        "4304": 2,
+        "7909": 2,
+        "10559": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10558": {
+    "name": "Gold Power Core",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_battery_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10558/gold-power-core",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12584,
+      "spellName": "Gold Power Core",
+      "reagents": {
+        "3577": 1
+      },
+      "minCount": 2,
+      "maxCount": 2
+    }
+  },
+  "10559": {
+    "name": "Mithril Tube",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_musket_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10559/mithril-tube",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12589,
+      "spellName": "Mithril Tube",
+      "reagents": {
+        "3860": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10560": {
+    "name": "Unstable Trigger",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_battery_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10560/unstable-trigger",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12591,
+      "spellName": "Unstable Trigger",
+      "reagents": {
+        "3860": 1,
+        "4338": 1,
+        "10505": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10561": {
+    "name": "Mithril Casing",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_mithrilcasing_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10561/mithril-casing",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12599,
+      "spellName": "Mithril Casing",
+      "reagents": {
+        "3860": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10576": {
+    "name": "Mithril Mechanical Dragonling",
+    "quality": 1,
+    "class": "Armor",
+    "subclass": "Trinkets",
+    "icon": "inv_misc_head_dragon_01",
+    "slot": "Trinket",
+    "link": "https://www.wowhead.com/classic/item=10576/mithril-mechanical-dragonling",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12624,
+      "spellName": "Mithril Mechanical Dragonling",
+      "reagents": {
+        "3860": 14,
+        "6037": 4,
+        "7077": 4,
+        "7910": 2,
+        "9060": 2,
+        "9061": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10586": {
+    "name": "The Big One",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Explosives",
+    "icon": "inv_misc_bomb_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10586/the-big-one",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12754,
+      "spellName": "The Big One",
+      "reagents": {
+        "9061": 1,
+        "10507": 6,
+        "10560": 1,
+        "10561": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "10592": {
+    "name": "Catseye Elixir",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Elixirs",
+    "icon": "inv_potion_36",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10592/catseye-elixir",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 12609,
+      "spellName": "Catseye Elixir",
+      "reagents": {
+        "3372": 1,
+        "3818": 1,
+        "3821": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "10620": {
+    "name": "Thorium Ore",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ore_thorium_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10620/thorium-ore",
+    "vendorPrice": null
+  },
+  "10647": {
+    "name": "Engineer's Ink",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_potion_65",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10647/engineers-ink",
+    "vendorPrice": 2000
+  },
+  "10648": {
+    "name": "Blank Parchment",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_note_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=10648/blank-parchment",
+    "vendorPrice": 500
   },
   "10938": {
     "name": "Lesser Magic Essence",
@@ -339,7 +3115,8 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_essencemagicsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10938/lesser-magic-essence"
+    "link": "https://www.wowhead.com/classic/item=10938/lesser-magic-essence",
+    "vendorPrice": 800
   },
   "10939": {
     "name": "Greater Magic Essence",
@@ -348,7 +3125,17 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_essencemagiclarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10939/greater-magic-essence"
+    "link": "https://www.wowhead.com/classic/item=10939/greater-magic-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 13361,
+      "spellName": "Greater Magic Essence",
+      "reagents": {
+        "10938": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "10940": {
     "name": "Strange Dust",
@@ -357,7 +3144,8 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_duststrange",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10940/strange-dust"
+    "link": "https://www.wowhead.com/classic/item=10940/strange-dust",
+    "vendorPrice": 800
   },
   "10978": {
     "name": "Small Glimmering Shard",
@@ -366,7 +3154,8 @@
     "subclass": "",
     "icon": "inv_enchant_shardglimmeringsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10978/small-glimmering-shard"
+    "link": "https://www.wowhead.com/classic/item=10978/small-glimmering-shard",
+    "vendorPrice": null
   },
   "10998": {
     "name": "Lesser Astral Essence",
@@ -375,7 +3164,18 @@
     "subclass": "",
     "icon": "inv_enchant_essenceastralsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10998/lesser-astral-essence"
+    "link": "https://www.wowhead.com/classic/item=10998/lesser-astral-essence",
+    "vendorPrice": null
+  },
+  "11040": {
+    "name": "Morrowgrain",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_herb_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11040/morrowgrain",
+    "vendorPrice": null
   },
   "11082": {
     "name": "Greater Astral Essence",
@@ -384,7 +3184,17 @@
     "subclass": "",
     "icon": "inv_enchant_essenceastrallarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11082/greater-astral-essence"
+    "link": "https://www.wowhead.com/classic/item=11082/greater-astral-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 13497,
+      "spellName": "Greater Astral Essence",
+      "reagents": {
+        "10998": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11083": {
     "name": "Soul Dust",
@@ -393,7 +3203,8 @@
     "subclass": "",
     "icon": "inv_enchant_dustsoul",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11083/soul-dust"
+    "link": "https://www.wowhead.com/classic/item=11083/soul-dust",
+    "vendorPrice": null
   },
   "11084": {
     "name": "Large Glimmering Shard",
@@ -402,7 +3213,8 @@
     "subclass": "",
     "icon": "inv_enchant_shardglimmeringlarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11084/large-glimmering-shard"
+    "link": "https://www.wowhead.com/classic/item=11084/large-glimmering-shard",
+    "vendorPrice": null
   },
   "11128": {
     "name": "Golden Rod",
@@ -411,7 +3223,18 @@
     "subclass": "Enchanting",
     "icon": "inv_staff_10",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11128/golden-rod"
+    "link": "https://www.wowhead.com/classic/item=11128/golden-rod",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 14379,
+      "spellName": "Golden Rod",
+      "reagents": {
+        "3478": 2,
+        "3577": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11134": {
     "name": "Lesser Mystic Essence",
@@ -420,7 +3243,8 @@
     "subclass": "",
     "icon": "inv_enchant_essencemysticalsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11134/lesser-mystic-essence"
+    "link": "https://www.wowhead.com/classic/item=11134/lesser-mystic-essence",
+    "vendorPrice": null
   },
   "11135": {
     "name": "Greater Mystic Essence",
@@ -429,7 +3253,17 @@
     "subclass": "",
     "icon": "inv_enchant_essencemysticallarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11135/greater-mystic-essence"
+    "link": "https://www.wowhead.com/classic/item=11135/greater-mystic-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 13632,
+      "spellName": "Greater Mystic Essence",
+      "reagents": {
+        "11134": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11137": {
     "name": "Vision Dust",
@@ -438,7 +3272,8 @@
     "subclass": "",
     "icon": "inv_enchant_dustvision",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11137/vision-dust"
+    "link": "https://www.wowhead.com/classic/item=11137/vision-dust",
+    "vendorPrice": null
   },
   "11138": {
     "name": "Small Glowing Shard",
@@ -447,7 +3282,8 @@
     "subclass": "",
     "icon": "inv_enchant_shardglowingsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11138/small-glowing-shard"
+    "link": "https://www.wowhead.com/classic/item=11138/small-glowing-shard",
+    "vendorPrice": null
   },
   "11139": {
     "name": "Large Glowing Shard",
@@ -456,7 +3292,8 @@
     "subclass": "",
     "icon": "inv_enchant_shardglowinglarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11139/large-glowing-shard"
+    "link": "https://www.wowhead.com/classic/item=11139/large-glowing-shard",
+    "vendorPrice": null
   },
   "11144": {
     "name": "Truesilver Rod",
@@ -465,7 +3302,18 @@
     "subclass": "Enchanting",
     "icon": "inv_staff_11",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11144/truesilver-rod"
+    "link": "https://www.wowhead.com/classic/item=11144/truesilver-rod",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 14380,
+      "spellName": "Truesilver Rod",
+      "reagents": {
+        "3486": 1,
+        "6037": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11174": {
     "name": "Lesser Nether Essence",
@@ -474,7 +3322,8 @@
     "subclass": "",
     "icon": "inv_enchant_essencenethersmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11174/lesser-nether-essence"
+    "link": "https://www.wowhead.com/classic/item=11174/lesser-nether-essence",
+    "vendorPrice": null
   },
   "11175": {
     "name": "Greater Nether Essence",
@@ -483,7 +3332,17 @@
     "subclass": "",
     "icon": "inv_enchant_essencenetherlarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11175/greater-nether-essence"
+    "link": "https://www.wowhead.com/classic/item=11175/greater-nether-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 13739,
+      "spellName": "Greater Nether Essence",
+      "reagents": {
+        "11174": 3
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11176": {
     "name": "Dream Dust",
@@ -492,7 +3351,8 @@
     "subclass": "",
     "icon": "inv_enchant_dustdream",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11176/dream-dust"
+    "link": "https://www.wowhead.com/classic/item=11176/dream-dust",
+    "vendorPrice": null
   },
   "11177": {
     "name": "Small Radiant Shard",
@@ -501,7 +3361,8 @@
     "subclass": "",
     "icon": "inv_enchant_shardradientsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11177/small-radiant-shard"
+    "link": "https://www.wowhead.com/classic/item=11177/small-radiant-shard",
+    "vendorPrice": null
   },
   "11178": {
     "name": "Large Radiant Shard",
@@ -510,7 +3371,48 @@
     "subclass": "",
     "icon": "inv_enchant_shardradientlarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11178/large-radiant-shard"
+    "link": "https://www.wowhead.com/classic/item=11178/large-radiant-shard",
+    "vendorPrice": null
+  },
+  "11184": {
+    "name": "Blue Power Crystal",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_gem_sapphire_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11184/blue-power-crystal",
+    "vendorPrice": null
+  },
+  "11185": {
+    "name": "Green Power Crystal",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_gem_emerald_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11185/green-power-crystal",
+    "vendorPrice": null
+  },
+  "11186": {
+    "name": "Red Power Crystal",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_gem_ruby_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11186/red-power-crystal",
+    "vendorPrice": null
+  },
+  "11188": {
+    "name": "Yellow Power Crystal",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_gem_topaz_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11188/yellow-power-crystal",
+    "vendorPrice": null
   },
   "11291": {
     "name": "Star Wood",
@@ -519,7 +3421,27 @@
     "subclass": "Reagents",
     "icon": "inv_tradeskillitem_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11291/star-wood"
+    "link": "https://www.wowhead.com/classic/item=11291/star-wood",
+    "vendorPrice": 4500
+  },
+  "11371": {
+    "name": "Dark Iron Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_mithril",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=11371/dark-iron-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 14891,
+      "spellName": "Smelt Dark Iron",
+      "reagents": {
+        "11370": 8
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "11382": {
     "name": "Blood of the Mountain",
@@ -528,7 +3450,8 @@
     "subclass": "",
     "icon": "inv_misc_gem_bloodstone_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11382/blood-of-the-mountain"
+    "link": "https://www.wowhead.com/classic/item=11382/blood-of-the-mountain",
+    "vendorPrice": 3000
   },
   "11754": {
     "name": "Black Diamond",
@@ -537,7 +3460,8 @@
     "subclass": "",
     "icon": "inv_misc_gem_01",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11754/black-diamond"
+    "link": "https://www.wowhead.com/classic/item=11754/black-diamond",
+    "vendorPrice": null
   },
   "12359": {
     "name": "Thorium Bar",
@@ -546,7 +3470,166 @@
     "subclass": "Metal & Stone",
     "icon": "inv_ingot_07",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=12359/thorium-bar"
+    "link": "https://www.wowhead.com/classic/item=12359/thorium-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 16153,
+      "spellName": "Smelt Thorium",
+      "reagents": {
+        "10620": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "12360": {
+    "name": "Arcanite Bar",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_misc_stonetablet_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12360/arcanite-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17187,
+      "spellName": "Transmute: Arcanite",
+      "reagents": {
+        "12359": 1,
+        "12363": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "12361": {
+    "name": "Blue Sapphire",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_sapphire_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12361/blue-sapphire",
+    "vendorPrice": null
+  },
+  "12363": {
+    "name": "Arcane Crystal",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_topaz_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12363/arcane-crystal",
+    "vendorPrice": null
+  },
+  "12364": {
+    "name": "Huge Emerald",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_emerald_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12364/huge-emerald",
+    "vendorPrice": null
+  },
+  "12365": {
+    "name": "Dense Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_misc_stonetablet_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12365/dense-stone",
+    "vendorPrice": null
+  },
+  "12607": {
+    "name": "Brilliant Chromatic Scale",
+    "quality": 3,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_monsterscales_17",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12607/brilliant-chromatic-scale",
+    "vendorPrice": null
+  },
+  "12644": {
+    "name": "Dense Grinding Stone",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_grindingstone_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12644/dense-grinding-stone",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 16639,
+      "spellName": "Dense Grinding Stone",
+      "reagents": {
+        "12365": 4
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "12655": {
+    "name": "Enchanted Thorium Bar",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_ingot_eternium",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12655/enchanted-thorium-bar",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17180,
+      "spellName": "Enchanted Thorium",
+      "reagents": {
+        "11176": 3,
+        "12359": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "12662": {
+    "name": "Demonic Rune",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_rune_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12662/demonic-rune",
+    "vendorPrice": null
+  },
+  "12753": {
+    "name": "Skin of Shadow",
+    "quality": 2,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_shadowegg",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12753/skin-of-shadow",
+    "vendorPrice": null
+  },
+  "12799": {
+    "name": "Large Opal",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_opal_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12799/large-opal",
+    "vendorPrice": null
+  },
+  "12800": {
+    "name": "Azerothian Diamond",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_diamond_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12800/azerothian-diamond",
+    "vendorPrice": null
   },
   "12803": {
     "name": "Living Essence",
@@ -555,7 +3638,27 @@
     "subclass": "Elemental",
     "icon": "spell_nature_abolishmagic",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=12803/living-essence"
+    "link": "https://www.wowhead.com/classic/item=12803/living-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17566,
+      "spellName": "Transmute: Earth to Life",
+      "reagents": {
+        "7076": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "12804": {
+    "name": "Powerful Mojo",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "spell_nature_astralrecalgroup",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12804/powerful-mojo",
+    "vendorPrice": null
   },
   "12808": {
     "name": "Essence of Undeath",
@@ -564,7 +3667,17 @@
     "subclass": "Elemental",
     "icon": "spell_shadow_shadetruesight",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=12808/essence-of-undeath"
+    "link": "https://www.wowhead.com/classic/item=12808/essence-of-undeath",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17564,
+      "spellName": "Transmute: Water to Undeath",
+      "reagents": {
+        "7080": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "12809": {
     "name": "Guardian Stone",
@@ -573,7 +3686,28 @@
     "subclass": "Metal & Stone",
     "icon": "inv_stone_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=12809/guardian-stone"
+    "link": "https://www.wowhead.com/classic/item=12809/guardian-stone",
+    "vendorPrice": null
+  },
+  "12810": {
+    "name": "Enchanted Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_rune_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12810/enchanted-leather",
+    "vendorPrice": 2000,
+    "createdBy": {
+      "spellId": 17181,
+      "spellName": "Enchanted Leather",
+      "reagents": {
+        "8170": 1,
+        "16202": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "12811": {
     "name": "Righteous Orb",
@@ -582,7 +3716,88 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_misc_gem_pearl_03",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=12811/righteous-orb"
+    "link": "https://www.wowhead.com/classic/item=12811/righteous-orb",
+    "vendorPrice": null
+  },
+  "12938": {
+    "name": "Blood of Heroes",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_potion_33",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=12938/blood-of-heroes",
+    "vendorPrice": null
+  },
+  "13422": {
+    "name": "Stonescale Eel",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_misc_fish_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13422/stonescale-eel",
+    "vendorPrice": null
+  },
+  "13423": {
+    "name": "Stonescale Oil",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_potion_68",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13423/stonescale-oil",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17551,
+      "spellName": "Stonescale Oil",
+      "reagents": {
+        "3372": 1,
+        "13422": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "13463": {
+    "name": "Dreamfoil",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_dreamfoil",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13463/dreamfoil",
+    "vendorPrice": 400
+  },
+  "13464": {
+    "name": "Golden Sansam",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_sansamroot",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13464/golden-sansam",
+    "vendorPrice": 400
+  },
+  "13465": {
+    "name": "Mountain Silversage",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_mountainsilversage",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13465/mountain-silversage",
+    "vendorPrice": null
+  },
+  "13466": {
+    "name": "Plaguebloom",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_plaguebloom",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13466/plaguebloom",
+    "vendorPrice": null
   },
   "13467": {
     "name": "Icecap",
@@ -591,7 +3806,8 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_icecap",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=13467/icecap"
+    "link": "https://www.wowhead.com/classic/item=13467/icecap",
+    "vendorPrice": null
   },
   "13468": {
     "name": "Black Lotus",
@@ -600,7 +3816,52 @@
     "subclass": "Herbs",
     "icon": "inv_misc_herb_blacklotus",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=13468/black-lotus"
+    "link": "https://www.wowhead.com/classic/item=13468/black-lotus",
+    "vendorPrice": null
+  },
+  "13510": {
+    "name": "Flask of the Titans",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Flasks",
+    "icon": "inv_potion_62",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13510/flask-of-the-titans",
+    "vendorPrice": 20000,
+    "createdBy": {
+      "spellId": 17635,
+      "spellName": "Flask of the Titans",
+      "reagents": {
+        "8846": 30,
+        "8925": 1,
+        "13423": 10,
+        "13468": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "13512": {
+    "name": "Flask of Supreme Power",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Flasks",
+    "icon": "inv_potion_41",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=13512/flask-of-supreme-power",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 17637,
+      "spellName": "Flask of Supreme Power",
+      "reagents": {
+        "8925": 1,
+        "13463": 30,
+        "13465": 10,
+        "13468": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "13926": {
     "name": "Golden Pearl",
@@ -609,7 +3870,107 @@
     "subclass": "",
     "icon": "inv_misc_gem_pearl_04",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=13926/golden-pearl"
+    "link": "https://www.wowhead.com/classic/item=13926/golden-pearl",
+    "vendorPrice": null
+  },
+  "14044": {
+    "name": "Cindercloth Cloak",
+    "quality": 2,
+    "class": "Armor",
+    "subclass": "Cloaks",
+    "icon": "inv_misc_cape_18",
+    "slot": "Back",
+    "link": "https://www.wowhead.com/classic/item=14044/cindercloth-cloak",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 18418,
+      "spellName": "Cindercloth Cloak",
+      "reagents": {
+        "7078": 1,
+        "14048": 5,
+        "14341": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "14047": {
+    "name": "Runecloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_purplefire_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14047/runecloth",
+    "vendorPrice": null
+  },
+  "14048": {
+    "name": "Bolt of Runecloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_purplefire_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14048/bolt-of-runecloth",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 18401,
+      "spellName": "Bolt of Runecloth",
+      "reagents": {
+        "14047": 5
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "14227": {
+    "name": "Ironweb Spider Silk",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "spell_nature_web",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14227/ironweb-spider-silk",
+    "vendorPrice": null
+  },
+  "14256": {
+    "name": "Felcloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_felrag",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14256/felcloth",
+    "vendorPrice": 8000
+  },
+  "14341": {
+    "name": "Rune Thread",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "spell_shadow_antimagicshell",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14341/rune-thread",
+    "vendorPrice": 5000
+  },
+  "14342": {
+    "name": "Mooncloth",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Cloth",
+    "icon": "inv_fabric_moonrag_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=14342/mooncloth",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 18560,
+      "spellName": "Mooncloth",
+      "reagents": {
+        "14256": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "14343": {
     "name": "Small Brilliant Shard",
@@ -618,7 +3979,8 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_shardbrilliantsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=14343/small-brilliant-shard"
+    "link": "https://www.wowhead.com/classic/item=14343/small-brilliant-shard",
+    "vendorPrice": null
   },
   "14344": {
     "name": "Large Brilliant Shard",
@@ -627,7 +3989,235 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_shardbrilliantlarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=14344/large-brilliant-shard"
+    "link": "https://www.wowhead.com/classic/item=14344/large-brilliant-shard",
+    "vendorPrice": null
+  },
+  "15407": {
+    "name": "Cured Rugged Hide",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15407/cured-rugged-hide",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19047,
+      "spellName": "Cured Rugged Hide",
+      "reagents": {
+        "8171": 1,
+        "15409": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "15408": {
+    "name": "Heavy Scorpid Scale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15408/heavy-scorpid-scale",
+    "vendorPrice": null
+  },
+  "15409": {
+    "name": "Refined Deeprock Salt",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_dust_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15409/refined-deeprock-salt",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19566,
+      "spellName": "Salt Shaker",
+      "reagents": {
+        "8150": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "15410": {
+    "name": "Scale of Onyxia",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15410/scale-of-onyxia",
+    "vendorPrice": null
+  },
+  "15412": {
+    "name": "Green Dragonscale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15412/green-dragonscale",
+    "vendorPrice": null
+  },
+  "15414": {
+    "name": "Red Dragonscale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_15",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15414/red-dragonscale",
+    "vendorPrice": null
+  },
+  "15415": {
+    "name": "Blue Dragonscale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_09",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15415/blue-dragonscale",
+    "vendorPrice": null
+  },
+  "15416": {
+    "name": "Black Dragonscale",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15416/black-dragonscale",
+    "vendorPrice": null
+  },
+  "15417": {
+    "name": "Devilsaur Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15417/devilsaur-leather",
+    "vendorPrice": null
+  },
+  "15419": {
+    "name": "Warbear Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_bear_ruin_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15419/warbear-leather",
+    "vendorPrice": null
+  },
+  "15420": {
+    "name": "Ironfeather",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "inv_feather_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15420/ironfeather",
+    "vendorPrice": null
+  },
+  "15422": {
+    "name": "Frostsaber Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_pelt_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15422/frostsaber-leather",
+    "vendorPrice": null
+  },
+  "15423": {
+    "name": "Chimera Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_leatherscrap_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15423/chimera-leather",
+    "vendorPrice": null
+  },
+  "15992": {
+    "name": "Dense Blasting Powder",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_misc_ammo_gunpowder_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15992/dense-blasting-powder",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19788,
+      "spellName": "Dense Blasting Powder",
+      "reagents": {
+        "12365": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "15994": {
+    "name": "Thorium Widget",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=15994/thorium-widget",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19791,
+      "spellName": "Thorium Widget",
+      "reagents": {
+        "12359": 3,
+        "14047": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "16000": {
+    "name": "Thorium Tube",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_pipe_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16000/thorium-tube",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19795,
+      "spellName": "Thorium Tube",
+      "reagents": {
+        "12359": 6
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "16006": {
+    "name": "Delicate Arcanite Converter",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_gizmo_07",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=16006/delicate-arcanite-converter",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 19815,
+      "spellName": "Delicate Arcanite Converter",
+      "reagents": {
+        "12360": 1,
+        "14227": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "16202": {
     "name": "Lesser Eternal Essence",
@@ -636,7 +4226,8 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_essenceeternalsmall",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=16202/lesser-eternal-essence"
+    "link": "https://www.wowhead.com/classic/item=16202/lesser-eternal-essence",
+    "vendorPrice": null
   },
   "16203": {
     "name": "Greater Eternal Essence",
@@ -645,7 +4236,17 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_essenceeternallarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=16203/greater-eternal-essence"
+    "link": "https://www.wowhead.com/classic/item=16203/greater-eternal-essence",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 20039,
+      "spellName": "Greater Eternal Essence",
+      "reagents": {
+        "16202": 2
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
   },
   "16204": {
     "name": "Illusion Dust",
@@ -654,7 +4255,8 @@
     "subclass": "Enchanting",
     "icon": "inv_enchant_dustillusion",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=16204/illusion-dust"
+    "link": "https://www.wowhead.com/classic/item=16204/illusion-dust",
+    "vendorPrice": null
   },
   "16206": {
     "name": "Arcanite Rod",
@@ -663,7 +4265,48 @@
     "subclass": "Enchanting",
     "icon": "inv_staff_19",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=16206/arcanite-rod"
+    "link": "https://www.wowhead.com/classic/item=16206/arcanite-rod",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 20201,
+      "spellName": "Arcanite Rod",
+      "reagents": {
+        "12360": 3,
+        "12644": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "17010": {
+    "name": "Fiery Core",
+    "quality": 3,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "spell_fire_flamebolt",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17010/fiery-core",
+    "vendorPrice": 8000
+  },
+  "17011": {
+    "name": "Lava Core",
+    "quality": 3,
+    "class": "Miscellaneous",
+    "subclass": "Reagents",
+    "icon": "spell_nature_earthquake",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17011/lava-core",
+    "vendorPrice": 8000
+  },
+  "17012": {
+    "name": "Core Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_ammo_firetar",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17012/core-leather",
+    "vendorPrice": 4000
   },
   "17034": {
     "name": "Maple Seed",
@@ -672,7 +4315,8 @@
     "subclass": "Reagents",
     "icon": "inv_misc_food_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=17034/maple-seed"
+    "link": "https://www.wowhead.com/classic/item=17034/maple-seed",
+    "vendorPrice": 200
   },
   "17035": {
     "name": "Stranglethorn Seed",
@@ -681,7 +4325,37 @@
     "subclass": "Reagents",
     "icon": "inv_misc_food_02",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=17035/stranglethorn-seed"
+    "link": "https://www.wowhead.com/classic/item=17035/stranglethorn-seed",
+    "vendorPrice": 400
+  },
+  "17202": {
+    "name": "Snowball",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Consumables",
+    "icon": "inv_ammo_snowball",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17202/snowball",
+    "vendorPrice": 10,
+    "createdBy": {
+      "spellId": 21935,
+      "spellName": "SnowMaster 9000",
+      "reagents": {
+        "159": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "17203": {
+    "name": "Sulfuron Ingot",
+    "quality": 4,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "spell_fire_sealoffire",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=17203/sulfuron-ingot",
+    "vendorPrice": null
   },
   "18256": {
     "name": "Imbued Vial",
@@ -690,7 +4364,8 @@
     "subclass": "Other (Trade Goods)",
     "icon": "inv_drink_06",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=18256/imbued-vial"
+    "link": "https://www.wowhead.com/classic/item=18256/imbued-vial",
+    "vendorPrice": 30000
   },
   "18512": {
     "name": "Larval Acid",
@@ -699,7 +4374,129 @@
     "subclass": "Reagents",
     "icon": "inv_potion_22",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=18512/larval-acid"
+    "link": "https://www.wowhead.com/classic/item=18512/larval-acid",
+    "vendorPrice": null
+  },
+  "18631": {
+    "name": "Truesilver Transformer",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Parts",
+    "icon": "inv_staff_18",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=18631/truesilver-transformer",
+    "vendorPrice": null,
+    "createdBy": {
+      "spellId": 23071,
+      "spellName": "Truesilver Transformer",
+      "reagents": {
+        "6037": 2,
+        "7067": 2,
+        "7069": 1
+      },
+      "minCount": 0,
+      "maxCount": 0
+    }
+  },
+  "19726": {
+    "name": "Bloodvine",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Herbs",
+    "icon": "inv_misc_herb_09",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=19726/bloodvine",
+    "vendorPrice": null
+  },
+  "19767": {
+    "name": "Primal Bat Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=19767/primal-bat-leather",
+    "vendorPrice": null
+  },
+  "19768": {
+    "name": "Primal Tiger Leather",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_pelt_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=19768/primal-tiger-leather",
+    "vendorPrice": null
+  },
+  "19774": {
+    "name": "Souldarite",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "",
+    "icon": "inv_misc_gem_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=19774/souldarite",
+    "vendorPrice": null
+  },
+  "19943": {
+    "name": "Massive Mojo",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "spell_nature_strength",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=19943/massive-mojo",
+    "vendorPrice": null
+  },
+  "20381": {
+    "name": "Dreamscale",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Leather",
+    "icon": "inv_misc_monsterscales_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20381/dreamscale",
+    "vendorPrice": null
+  },
+  "20498": {
+    "name": "Silithid Chitin",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Junk",
+    "icon": "inv_misc_monsterscales_13",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20498/silithid-chitin",
+    "vendorPrice": null
+  },
+  "20500": {
+    "name": "Light Silithid Carapace",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Junk",
+    "icon": "inv_misc_monsterscales_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20500/light-silithid-carapace",
+    "vendorPrice": null
+  },
+  "20501": {
+    "name": "Heavy Silithid Carapace",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Junk",
+    "icon": "inv_misc_monsterscales_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20501/heavy-silithid-carapace",
+    "vendorPrice": null
+  },
+  "20520": {
+    "name": "Dark Rune",
+    "quality": 2,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "spell_shadow_sealofkings",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=20520/dark-rune",
+    "vendorPrice": null
   },
   "20725": {
     "name": "Nexus Crystal",
@@ -708,6 +4505,37 @@
     "subclass": "",
     "icon": "inv_enchant_shardnexuslarge",
     "slot": "",
-    "link": "https://www.wowhead.com/classic/item=20725/nexus-crystal"
+    "link": "https://www.wowhead.com/classic/item=20725/nexus-crystal",
+    "vendorPrice": null
+  },
+  "22202": {
+    "name": "Small Obsidian Shard",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_misc_stonetablet_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=22202/small-obsidian-shard",
+    "vendorPrice": null
+  },
+  "22203": {
+    "name": "Large Obsidian Shard",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Metal & Stone",
+    "icon": "inv_stone_15",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=22203/large-obsidian-shard",
+    "vendorPrice": null
+  },
+  "22682": {
+    "name": "Frozen Rune",
+    "quality": 3,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_rune_09",
+    "slot": "",
+    "link": "https://www.wowhead.com/classic/item=22682/frozen-rune",
+    "vendorPrice": null
   }
 }

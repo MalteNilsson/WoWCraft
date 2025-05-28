@@ -7,10 +7,13 @@ type MoneyProps = {
 };
 
 export function FormatMoney({ copper }: { copper: number }) {
+
+  const rounded = Math.round(copper);
+
   // break down into g/s/c
-  const g = Math.floor(copper / 10000);
-  const s = Math.floor((copper % 10000) / 100);
-  const c = copper % 100;
+  const g = Math.floor(rounded / 10000);
+  const s = Math.floor((rounded % 10000) / 100);
+  const c = rounded % 100;
 
   // render strings, padding silver & copper to two digits
   const goldStr   = `${g}g`;
@@ -22,7 +25,7 @@ export function FormatMoney({ copper }: { copper: number }) {
       {/* Reserve 4ch for gold (e.g. up to "9999g") */}
       <span
         className="text-yellow-400 text-right"
-        style={{ minWidth: "4ch" }}
+        //style={{ minWidth: "4ch" }}
       >
         {goldStr}
       </span>
