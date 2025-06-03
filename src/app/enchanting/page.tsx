@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import rawAlchemy  from '@/data/recipes/alchemy.json';
 import rawBlacksmithing  from '@/data/recipes/blacksmithing.json';
 import rawEnchanting  from '@/data/recipes/enchanting.json';
@@ -261,18 +261,82 @@ function MaterialTreeFlat({
 
 // ── component ──
 export default function EnchantingPlanner() {
-  const [skill, setSkill]           = useState(1);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [skill, setSkill] = useState(1);
   const [debouncedSkill] = useDebounce(skill, 200);
-  const [target, setTarget]   = useState(300);
-  const [view,  setView]            = useState<'route'|'all'>('route');
+  const [committedSkill, setCommittedSkill] = useState(1);
+  const [target, setTarget] = useState(300);
+  const [view, setView] = useState<'route'|'all'>('route');
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
-  const [selectedCardKey, setSelectedCardKey]     = useState<string|null>(null);
+  const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
   const [visibleCardKey, setVisibleCardKey] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProfession, setSelectedProfession] = useState('Enchanting');
 
-  const tabs = ['route', 'all'] as const;
+  // Add isSliding state to track active slider interaction
+  const [isSliding, setIsSliding] = useState(false);
+  const [isReleased, setIsReleased] = useState(false);
+  const [isDirectChange, setIsDirectChange] = useState(false);
+  const lastSkillChange = useRef<number>(Date.now());
+  const lastSkillValue = useRef<number>(skill);
 
+  // Track the last non-debounced skill value
+  useEffect(() => {
+    lastSkillValue.current = skill;
+  }, [skill]);
+
+  // Coordinate sliding state with debounced value
+  useEffect(() => {
+    if (isReleased && debouncedSkill === lastSkillValue.current) {
+      setIsSliding(false);
+      setIsReleased(false);
+      setCommittedSkill(skill);
+    }
+  }, [debouncedSkill, isReleased, skill]);
+
+  const handleSliderStart = () => {
+    setIsDirectChange(false);
+    setIsSliding(true);
+    setIsReleased(false);
+  };
+
+  const handleSliderEnd = () => {
+    const timeSinceLastChange = Date.now() - lastSkillChange.current;
+    if (timeSinceLastChange >= 200 && skill === debouncedSkill) {
+      setIsSliding(false);
+      setIsReleased(false);
+      setCommittedSkill(skill);
+    } else {
+      setIsReleased(true);
+    }
+  };
+
+  const handleSliderChange = (value: number) => {
+    setSkill(value);
+    lastSkillChange.current = Date.now();
+  };
+
+  const handleDirectSkillChange = (newValue: number) => {
+    const boundedValue = Math.min(300, Math.max(1, newValue));
+    setIsDirectChange(true);
+    setIsSliding(false);
+    setIsReleased(false);
+    setSkill(boundedValue);
+    setCommittedSkill(boundedValue);
+    lastSkillValue.current = boundedValue;
+  };
+
+  // Reset direct change flag after a delay
+  useEffect(() => {
+    if (isDirectChange) {
+      const timer = setTimeout(() => {
+        setIsDirectChange(false);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isDirectChange]);
+
+  const tabs = ['route', 'all'] as const;
 
   const recipes: Recipe[] = useMemo(() => {
     const raw = rawDataMap[selectedProfession] || [];
@@ -297,12 +361,11 @@ export default function EnchantingPlanner() {
     });
   }, [selectedProfession]);
 
-
-  useEffect(() => {
-    if (recipes.length > 0 && prices && selectedProfession) {
-      makeDynamicPlan(skill, 300, recipes, prices, materialInfo, selectedProfession  );
-    }
-  }, [recipes, prices, skill, selectedProfession, materialInfo ]);
+  // Use committedSkill for the plan calculation
+  const { steps, totalCost, finalSkill } = useMemo(
+    () => makeDynamicPlan(committedSkill, 300, recipes, prices, materialInfo, selectedProfession),
+    [committedSkill, recipes, prices, materialInfo, selectedProfession]
+  );
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -310,36 +373,39 @@ export default function EnchantingPlanner() {
   );
 
   useEffect(() => {
-    setRngLow(skill);
+    setRngLow(committedSkill);
     setRngHigh(target);
-  }, [skill, target]);
+  }, [committedSkill, target]);
 
-
-  const { steps, totalCost, finalSkill } = useMemo(
-    () => makeDynamicPlan(debouncedSkill, 300, recipes, prices, materialInfo, selectedProfession ),
-    [debouncedSkill, recipes, prices, materialInfo]
-  );
-
+  // Use committedSkill for effects that trigger recipe selection
   useEffect(() => {
-    const first = steps.find((s): s is Extract<PlanStep, { recipe: Recipe }> => 'recipe' in s);
-    if (first) {
-      setSelectedRecipeId(first.recipe.id);
-      setSelectedCardKey(`primary-0-${first.recipe.id}`);
-      setRngLow(skill);
-      setRngHigh(first.endSkill);
+    // Reset states when view changes
+    setSelectedCardKey(null);
+    setVisibleCardKey(null);
+    
+    if (view === 'route') {
+      // When switching to route view, select the first recipe from steps
+      const first = steps.find((s): s is Extract<PlanStep, { recipe: Recipe }> => 'recipe' in s);
+      if (first) {
+        setSelectedRecipeId(first.recipe.id);
+        setRngLow(committedSkill);
+        setRngHigh(first.endSkill);
+      }
     }
-  }, [view, steps, skill]);
+  }, [view]);
 
-  const startOf = (i: number) => (i === 0 ? skill : steps[i - 1].endSkill);
+  // Use faster debounced value for visual updates like difficulty colors
+  const startOf = (i: number) => (i === 0 ? committedSkill : steps[i - 1].endSkill);
   const sortedAll = useMemo(() => [...recipes].sort((a, b) => a.minSkill - b.minSkill), [recipes]);
 
-  const filteredRecipes = useMemo(
-    () =>
-      searchTerm
+  const filteredRecipes = useMemo(() => {
+    if (view === 'all') {
+      return searchTerm
         ? fuse.search(searchTerm).map(result => result.item)
-        : sortedAll,
-    [searchTerm, fuse, sortedAll]
-  );
+        : sortedAll;
+    }
+    return [];
+  }, [searchTerm, fuse, sortedAll, view]);
 
   const selected = useMemo<Recipe|null>(
     () => recipes.find(r => r.id === selectedRecipeId) ?? null,
@@ -400,17 +466,72 @@ export default function EnchantingPlanner() {
     }
   }, [selectedRecipeId])
 
-  const handleCardClick = (groupKey: string, cardKey: string, recipeId: number, start: number, end: number) => {
-    setSelectedRecipeId(recipeId);       // for loading chart, etc.
-    setSelectedCardKey(cardKey);         // to track the actual card
+  const [isBlurComplete, setIsBlurComplete] = useState(true);
+
+  // Store both expanded and selected card info
+  const [expandedCard, setExpandedCard] = useState<{
+    recipeName: string;
+    endSkill: number;
+    isFromClick: boolean;
+  } | null>(null);
+
+  const [selectedCard, setSelectedCard] = useState<{
+    recipeName: string;
+    endSkill: number;
+  } | null>(null);
+
+  const handleCardClick = (recipeName: string, endSkill: number, start: number, end: number, isAlternative: boolean = false, recipeId: number) => {
+    // If clicking a main card, toggle expansion and set selection
+    if (!isAlternative) {
+      if (expandedCard?.recipeName === recipeName && expandedCard?.endSkill === endSkill) {
+        setExpandedCard(null);
+      } else {
+        setExpandedCard({ recipeName, endSkill, isFromClick: true });
+      }
+      setSelectedCard({ recipeName, endSkill });
+    } else {
+      // If clicking an alternative, just update selection
+      setSelectedCard({ recipeName, endSkill });
+    }
+    
+    // Update the selected recipe in the main window
+    setSelectedRecipeId(recipeId);
+    
+    // Update skill range
     setRngLow(start);
     setRngHigh(end);
-  
-    if (groupKey !== visibleCardKey) {
-      setTimeout(() => {
-        setVisibleCardKey(groupKey);
-      }, 100);
+  };
+
+  // Update wasVisible to consider both previous visibility and click state
+  const shouldAnimate = (recipeName: string, endSkill: number) => {
+    const wasVisible = previouslyVisible.has(`${recipeName}-${endSkill}`);
+    const isClickExpansion = expandedCard?.isFromClick && 
+                            expandedCard.recipeName === recipeName && 
+                            expandedCard.endSkill === endSkill;
+    return !wasVisible || isClickExpansion;
+  };
+
+  // Effect to reset isFromClick after animation
+  useEffect(() => {
+    if (expandedCard?.isFromClick) {
+      const timer = setTimeout(() => {
+        if (expandedCard) {
+          setExpandedCard({ ...expandedCard, isFromClick: false });
+        }
+      }, 300); // Slightly longer than animation duration
+      return () => clearTimeout(timer);
     }
+  }, [expandedCard]);
+
+  // In the card rendering, check against selectedInfo
+  const isSelected = (recipeName: string, endSkill: number) => {
+    return selectedCard?.recipeName === recipeName && 
+           selectedCard?.endSkill === endSkill;
+  };
+
+  const isExpanded = (recipeName: string, endSkill: number) => {
+    return expandedCard?.recipeName === recipeName && 
+           expandedCard?.endSkill === endSkill;
   };
 
   const expCrafts = useMemo(() => {
@@ -419,7 +540,7 @@ export default function EnchantingPlanner() {
     return Math.ceil(
       expectedCraftsBetween(rngLow, rngHigh, selected.difficulty)
     );
-  }, [debouncedLow, debouncedHigh, selected]);
+  }, [rngLow, rngHigh, selected]);
 
   useEffect(() => {
     if (!selected) return;
@@ -519,8 +640,19 @@ const renderXTick = selected
     }
   : undefined;
 
+  // Add state to track previously visible recipes
+  const [previouslyVisible, setPreviouslyVisible] = useState<Set<string>>(new Set());
 
-    
+  // Update the visible recipes when committed skill changes
+  useEffect(() => {
+    const currentlyVisible = new Set(
+      steps
+        .filter((s): s is Extract<typeof s, { recipe: Recipe }> => 'recipe' in s)
+        .map(s => `${s.recipe.name}-${s.endSkill}`)
+    );
+    setPreviouslyVisible(currentlyVisible);
+  }, [committedSkill]);
+
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100">
       {/* Top bar */}
@@ -589,21 +721,21 @@ const renderXTick = selected
       {/* Panels */}
       <div className="flex flex-1 min-h-0">
         {/* Aside */}
-        <aside className="w-150 lg:w-150 flex flex-col overflow-y-auto bg-neutral-950 text-[16px]">
+        <aside className="w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px]">
           {/* Slider + Tabs */}
-          <div className="sticky top-0 z-30 bg-neutral-900 px-3 pt-6 pb-2">
-          <select
-            className="w-full bg-neutral-700 text-white text-sm rounded px-2 py-1 focus:outline-none mb-5"
-            onChange={(e) => setSelectedProfession(e.target.value)}
-          >
-            <option value="">Select Profession</option>
-            {professions.map((prof) => (
-              <option key={prof} value={prof}>{prof}</option>
-            ))}
-          </select>
+          <div className="flex-none bg-neutral-900 px-3 pt-6 pb-2">
+            <select
+              className="w-full bg-neutral-700 text-white text-sm rounded px-2 py-1 focus:outline-none mb-5"
+              onChange={(e) => setSelectedProfession(e.target.value)}
+            >
+              <option value="">Select Profession</option>
+              {professions.map((prof) => (
+                <option key={prof} value={prof}>{prof}</option>
+              ))}
+            </select>
             <div className="mb-4">
               <label className="block text-xs mb-1">
-                SKILL <span className="font-semibold">{skill}</span>
+                SKILL <span className="font-semibold text-yellow-300">{skill}</span>
               </label>
               <div className="flex items-center space-x-2">
                 {/* Skill slider */}
@@ -612,7 +744,11 @@ const renderXTick = selected
                   min={1}
                   max={300}
                   value={skill}
-                  onChange={(e) => setSkill(+e.target.value)}
+                  onChange={(e) => handleSliderChange(+e.target.value)}
+                  onMouseDown={handleSliderStart}
+                  onTouchStart={handleSliderStart}
+                  onMouseUp={handleSliderEnd}
+                  onTouchEnd={handleSliderEnd}
                   className="flex-1 accent-yellow-300"
                 />
 
@@ -621,7 +757,7 @@ const renderXTick = selected
                   <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                     <button
                       className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
-                      onClick={() => setSkill((prev) => Math.max(1, prev - 1))}
+                      onClick={() => handleDirectSkillChange(skill - 1)}
                     >−</button>
                     
                     <input
@@ -632,17 +768,17 @@ const renderXTick = selected
                       onChange={(e) => {
                         const val = parseInt(e.target.value);
                         if (!isNaN(val)) {
-                          setSkill(Math.min(300, Math.max(1, val)));
+                          handleDirectSkillChange(val);
                         }
                       }}
-                      className="text-lg text-center w-12 bg-transparent outline-none appearance-none
+                      className="text-lg text-center w-12 bg-transparent outline-none appearance-none text-yellow-300
                                 [&::-webkit-inner-spin-button]:appearance-none 
                                 [&::-webkit-outer-spin-button]:appearance-none"
                     />
                     
                     <button
                       className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
-                      onClick={() => setSkill((prev) => Math.min(300, prev + 1))}
+                      onClick={() => handleDirectSkillChange(skill + 1)}
                     >+</button>
                   </div>
                 </div>
@@ -675,190 +811,279 @@ const renderXTick = selected
               <span className="w-24 text-center">Skill</span>
             </div>
           </div>
-          {/* List */}
-          <section className="flex-1 overflow-y-auto px-0 space-y-px pt-0 pb-0">
-            <AnimatePresence mode="popLayout">
-            
-            {view==='route'
-              ? steps.map((s, i) => {
 
-                if ('upgradeName' in s) {
-                  return (
-                      <div key={`upgrade-${s.upgradeName}-${s.endSkill}`} className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-15 font-bold text-yellow-400">
-                      ⚙️ {s.note ?? `Upgrade to ${s.upgradeName}`}
-                      </div>
-                    );
-                  }
+          {/* Scrollable content area */}
+          <div className="flex-1 flex flex-col min-h-0">
+            <section 
+              ref={scrollRef}
+              className="flex-1 overflow-y-auto
+                [&::-webkit-scrollbar]:w-2
+                [&::-webkit-scrollbar-track]:bg-transparent
+                [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
+                [&::-webkit-scrollbar-thumb]:rounded-full
+                [&::-webkit-scrollbar-thumb]:transition-colors
+                [&::-webkit-scrollbar-thumb]:duration-300
+                hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60
+                motion-safe:transition-[scrollbar-color]
+                motion-safe:duration-300
+                scrollbar-thin
+                scrollbar-thumb-neutral-600/40
+                hover:scrollbar-thumb-neutral-600/60"
+            >
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  key={`${view}-${committedSkill}`}
+                  initial={isDirectChange ? { opacity: 1, filter: 'blur(0px)' } : {
+                    opacity: 0.85,
+                    filter: 'blur(3px)'
+                  }}
+                  animate={isDirectChange ? { opacity: 1, filter: 'blur(0px)' } : {
+                    opacity: isSliding ? 0.85 : 1,
+                    filter: isSliding ? 'blur(3px)' : 'blur(0px)'
+                  }}
+                  transition={{ 
+                    duration: 0.5,
+                    ease: [0.4, 0.0, 0.2, 1]
+                  }}
+                  onAnimationComplete={() => {
+                    if (!isSliding) {
+                      setIsBlurComplete(true);
+                    }
+                  }}
+                >
+                  {view === 'route' ? (
+                    <div className="flex flex-col">
+                      {steps.map((s, i) => {
+                        if ('upgradeName' in s) {
+                          return (
+                            <motion.div
+                              key={`upgrade-${s.upgradeName}-${s.endSkill}-${committedSkill}`}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: 10 }}
+                              transition={{ 
+                                duration: 0.2,
+                                ease: "easeInOut"
+                              }}
+                              className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[60px] font-bold text-yellow-400"
+                            >
+                              ⚔️ {s.note ?? `Upgrade to ${s.upgradeName}`}
+                            </motion.div>
+                          );
+                        }
 
-                const start = i === 0 ? skill : steps[i - 1].endSkill;
-                const end = s.endSkill;
-                const best = s.recipe;
-                const groupKey = `group-${i}`;
-                const primaryKey = `primary-${i}-${best.id}`;
-              
-                // calculate best CPU
-                const pBest    = expectedSkillUps(best, start);
-                const costBest = calcCraftCost(best);
-                const cpuBest  = costBest / pBest;
-              
-                // find up to two alternatives within 20%
-                const candidates = recipes
-                // must be unlocked at 'start' and remain usable through 'end'
-                .filter(r =>
-                  r.minSkill <= start &&
-                  (r.difficulty.gray ?? Infinity) >= end &&
-                  r.id !== best.id
-                )
-                .map(r => {
-                  const crafts = expectedCraftsBetween(start, end, r.difficulty);
-                  const cost   = crafts * calcCraftCost(r);
-                  return {
-                    recipe: r,
-                    crafts,
-                    cost,
-                    cpu: cost / (end - start),
-                  };
-                })
-                .sort((a, b) => a.cpu - b.cpu)
-                .slice(0, 2);
-              
-                return (
-                  
-                  <motion.div
-                    key={primaryKey}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                    className="flex flex-col w-full space-y-px"
-                  >
-              
-                    {/* Primary card */}
-                    <div
-                      id={`craft-${s.recipe.id}-${s.endSkill}`}
-                      onClick={() => handleCardClick(groupKey, primaryKey, best.id, start, end)}
-                      className={`relative flex items-center gap-1 px-2 py-1 w-full h-15 cursor-pointer
-                        transition-all duration-150 ease-out
-                        hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
-                        ${selectedCardKey === primaryKey ? 'bg-neutral-600' : 'bg-neutral-900'}`}
-                    >
-                      <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
-                        diffColor(skill, best.difficulty)
-                      }`} />
-                      <span className="bg-neutral-800 rounded-full px-1 py-0.5 text-[16px] flex items-center justify-center w-8">
-                        {s.crafts}×
-                      </span>
-                      <img src={iconSrc(best.id, selectedProfession)} alt="" className="w-7 h-7 rounded object-cover" />
-                      <span 
-                        className="truncate whitespace-nowrap flex-1 text-[16px]"
-                        style={{ color: qualityColors[s.recipe.quality] }}>
-                        {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
-                      </span>
-                      <span className="text-[16px]">
-                        <FormatMoney copper={s.crafts * calcCraftCost(best)} />
-                      </span>
-                      <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
-                        {start} → {end}
-                      </span>
-                    </div>
-              
-                    {/* Alternative cards (up to 2) */}
-                    <AnimatePresence mode="sync">
-                    {visibleCardKey === groupKey && candidates.map((alt, ai) => {
-                      
-                      const altKey = `alt-${i}-${ai}-${alt.recipe.id}`;
-                      return (
-                        <motion.div
-                          key={altKey}
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0.5, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <div
-                            key={altKey}
-                            id={altKey}
-                            onClick={() => handleCardClick(groupKey, altKey, alt.recipe.id, start, end)}
-                            className={`relative flex items-center gap-1 rounded-none pl-3 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-15 
-                              transition-all duration-150 ease-out 
-                              hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
-                              ${selectedCardKey === altKey ? 'bg-neutral-600' : 'bg-neutral-900'}`}
+                        const start = i === 0 ? committedSkill : steps[i - 1].endSkill;
+                        const end = s.endSkill;
+                        const best = s.recipe;
+                        
+                        const candidates = recipes
+                          .filter(r =>
+                            r.minSkill <= start &&
+                            (r.difficulty.gray ?? Infinity) >= end &&
+                            r.id !== best.id
+                          )
+                          .map(r => {
+                            const crafts = expectedCraftsBetween(start, end, r.difficulty);
+                            const cost   = crafts * calcCraftCost(r);
+                            return {
+                              recipe: r,
+                              crafts,
+                              cost,
+                              cpu: cost / (end - start),
+                            };
+                          })
+                          .sort((a, b) => a.cpu - b.cpu)
+                          .slice(0, 2);
+                        
+                        return (
+                          <motion.div
+                            key={`card-${best.name}-${end}-${committedSkill}`}
+                            initial={shouldAnimate(best.name, end) ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 10 }}
+                            transition={{ 
+                              duration: 0.5,
+                              ease: "easeOut"
+                            }}
+                            className="relative"
                           >
-                            <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
-                              diffColor(skill, alt.recipe.difficulty)
-                            }`} />
-                            <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[16px]">
-                              or {alt.crafts}×
-                            </span>
+                            <div className="flex flex-col w-full backdrop-blur-sm">
+                              {/* Primary card content */}
+                              <div
+                                id={`craft-${best.id}-${end}`}
+                                onClick={() => handleCardClick(best.name, end, start, end, false, best.id)}
+                                className={`relative flex items-center gap-1 px-2 py-1 w-full h-[60px] cursor-pointer
+                                  transition-all duration-150 ease-out will-change-transform
+                                  hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
+                                  ${isSelected(best.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
+                              >
+                                <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
+                                  diffColor(committedSkill, best.difficulty)
+                                }`} />
+                                <span className="bg-neutral-800 rounded-full px-1 py-0.5 text-[16px] flex items-center justify-center w-8">
+                                  {s.crafts}×
+                                </span>
+                                <img src={iconSrc(best.id, selectedProfession)} alt="" className="w-7 h-7 rounded object-cover" />
+                                <span 
+                                  className="truncate whitespace-nowrap flex-1 text-[16px]"
+                                  style={{ color: qualityColors[s.recipe.quality] }}>
+                                  {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
+                                </span>
+                                <span className="text-[16px]">
+                                  <FormatMoney copper={s.crafts * calcCraftCost(best)} />
+                                </span>
+                                <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
+                                  {start} → {end}
+                                </span>
+                              </div>
+
+                              {/* Alternative cards */}
+                              <AnimatePresence mode="sync">
+                              {isExpanded(best.name, end) && isBlurComplete && (
+                                <motion.div
+                                  initial={shouldAnimate(best.name, end) ? { height: 0, opacity: 0 } : { height: 'auto', opacity: 1 }}
+                                  animate={{ height: 'auto', opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{
+                                    height: {
+                                      type: "tween",
+                                      duration: 0.3,
+                                      ease: "easeInOut"
+                                    },
+                                    opacity: {
+                                      duration: 0.3
+                                    }
+                                  }}
+                                >
+                                  <motion.div
+                                    initial={shouldAnimate(best.name, end) ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{
+                                      duration: 0.4,
+                                      ease: "easeOut"
+                                    }}
+                                  >
+                                  {candidates.map((alt: { recipe: Recipe; crafts: number; cost: number }, index) => (
+                                    <motion.div
+                                      key={`alt-${alt.recipe.name}-${end}-${committedSkill}`}
+                                      initial={shouldAnimate(best.name, end) ? { opacity: 0, x: -20 } : { opacity: 1, x: 0 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      exit={{ opacity: 0, x: -20 }}
+                                      transition={{ 
+                                        duration: 0.3,
+                                        ease: "easeOut"
+                                      }}
+                                      onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
+                                      className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[60px] 
+                                        transition-all duration-150 ease-out will-change-transform
+                                        hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
+                                        ${isSelected(alt.recipe.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
+                                    >
+                                      <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
+                                        diffColor(committedSkill, alt.recipe.difficulty)
+                                      }`} />
+                                      <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[16px]">
+                                        or {alt.crafts}×
+                                      </span>
+                                      <img
+                                        src={iconSrc(alt.recipe.id, selectedProfession)}
+                                        alt=""
+                                        className="w-7 h-7 rounded object-cover"
+                                      />
+                                      <span 
+                                        className="truncate whitespace-nowrap flex-1 text-[16px] pl-1"
+                                        style={{ color: qualityColors[alt.recipe.quality] }}>
+                                        {alt.recipe.name.length <= 35
+                                          ? alt.recipe.name
+                                          : `${alt.recipe.name.slice(0, 33)}…`}
+                                      </span>
+                                      <span className="text-[16px]">
+                                        <FormatMoney copper={alt.cost} />
+                                      </span>
+                                    </motion.div>
+                                  ))}
+                                  </motion.div>
+                                </motion.div>
+                              )}
+                              </AnimatePresence>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col">
+                      {filteredRecipes.map((r) => (
+                        <div
+                          key={r.id}
+                          onClick={() => {
+                            setSelectedRecipeId(r.id);
+                            setRngLow(r.minSkill);
+                            setRngHigh(r.difficulty.gray!);
+                          }}
+                          id={`recipe-${r.id}`}
+                          className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[60px]
+                            ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
+                        >
+                          <span
+                            className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
+                              diffColor(committedSkill, r.difficulty)
+                            }`}
+                          />
+                          <div className="pl-3">
                             <img
-                              src={iconSrc(alt.recipe.id, selectedProfession)}
+                              src={iconSrc(r.id, selectedProfession)}
                               alt=""
                               className="w-7 h-7 rounded object-cover"
                             />
-                            <span 
-                              className="truncate whitespace-nowrap flex-1 text-[16px]"
-                              style={{ color: qualityColors[alt.recipe.quality] }}>
-                              {alt.recipe.name.length <= 35
-                                ? alt.recipe.name
-                                : `${alt.recipe.name.slice(0, 33)}…`}
-                            </span>
-                            <span className="text-[16px]">
-                              <FormatMoney copper={alt.cost} />
-                            </span>
                           </div>
-                        </motion.div>
-                      );
-                    })}
-                    </AnimatePresence>
-                  </motion.div>
-                );
-              })
-              : sortedAll.map((r) => (
-                <div
-                  key={r.id}
-                  onClick={() => {
-                    setSelectedRecipeId(r.id);
-                    setRngLow(r.minSkill);
-                    setRngHigh(r.difficulty.gray!);
-                  }}
-                  id={`recipe-${r.id}`}    // now correctly uses r.id
-                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-15 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 
-                    ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
-                >
-                  <span
-                    className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
-                      diffColor(skill, r.difficulty)
-                    }`}
-                  />
-                  <span className="bg-neutral-800 rounded-full px-1 py-0.5 text-[16px] flex items-center justify-center w-8">
-                    {r.minSkill}
-                  </span>
-                  <img
-                    src={iconSrc(r.id, selectedProfession)}
-                    alt=""
-                    className="w-7 h-7 rounded object-cover"
-                  />
-                  <span 
-                    className="truncate whitespace-nowrap flex-1 text-[16px]"
-                    style={{ color: qualityColors[r.quality ?? 1] }}>
-                    {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
-                  </span>
-                </div>
-              ))
-            }
-            </AnimatePresence>
-          </section>
+                          <span 
+                            className="truncate whitespace-nowrap flex-1 text-[16px]"
+                            style={{ color: qualityColors[r.quality ?? 1] }}>
+                            {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
+                          </span>
+                          <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
+                            {r.minSkill}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </section>
 
-          {/* Footer */}
-          {view === 'route' && (
-            <footer className="sticky bottom-0 z-30 bg-neutral-875 px-3 py-2 border-t border-neutral-600 text-center text-[24px] font-semibold ">
-              Estimated Total Cost <FormatMoney copper={totalCost} /> g
-            </footer>
-          )}
+            {/* Footer */}
+            <div className="relative">
+              <AnimatePresence mode="wait">
+                {view === 'route' && (
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 20, opacity: 0 }}
+                    transition={{ 
+                      y: { duration: 0.2 },
+                      opacity: { duration: 0.2 },
+                      ease: "easeOut"
+                    }}
+                    className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
+                              border-t border-neutral-700 py-3 px-4 text-center"
+                  >
+                    <div className="text-2xl font-semibold">
+                      <span className="text-neutral-400">Total Cost: </span>
+                      <span className="text-yellow-300">
+                        <FormatMoney copper={totalCost} />
+                      </span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
         </aside>
         {/* Main panel */}
-        <main className="frelative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last">
+        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950">
         {!selected ? (
           <p className="text-neutral-400">Click a recipe to view details.</p>
         ) : (
@@ -887,292 +1112,297 @@ const renderXTick = selected
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Level-up Calculator</h3>
               </div>
-                <div className="flex w-full h-full">
-                  <div className="w-3/5 relative p-8" style={{ height: 350 }}>
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
-                        <CartesianGrid
-                          vertical={false}
-                          horizontal={false}
-                        />
-                        <ReferenceLine
-                          y={0.25}
-                          stroke="#ccc"
-                          strokeDasharray="3 3"
-                        />
-                        <ReferenceLine
-                          y={0.50}
-                          stroke="#ccc"
-                          strokeDasharray="3 3"
-                        />
-                        <ReferenceLine
-                          y={0.75}
-                          stroke="#ccc"
-                          strokeDasharray="3 3"
-                        />
-                        <XAxis
-                          dataKey="skill"
-                          domain={[ 'dataMin', 'dataMax' ]}
-                          type="number"
-                          axisLine={false}
-                          tickLine={false}
-                          ticks={xTicks}
-                          tick={renderXTick}
-                          //allowDataOverflow={false}
-                          //label={{ value: "Skill Level", position: "insideBottomRight", offset: -10 }}
-                        />
-                        <YAxis
-                          domain={[0, 1]}
-                          ticks={[0, 0.25, 0.5, 0.75, 1]}
-                          tickFormatter={(v) => `${v * 100}%`}
-                          tick={{ fill: '#ccc', fontSize: 12 }}
-                          tickLine={false}
-                          axisLine={false}
-                        />
-                        <Customized
-                          component={({ xAxisMap, yAxisMap }: any) => {
-                            if (!selected || !probData.length) return null;
+              <div className="flex w-full h-full">
+                <div className="w-3/5 relative p-8" style={{ height: 350 }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
+                      <CartesianGrid
+                        vertical={false}
+                        horizontal={false}
+                      />
+                      <ReferenceLine
+                        y={0.25}
+                        stroke="#ccc"
+                        strokeDasharray="3 3"
+                      />
+                      <ReferenceLine
+                        y={0.50}
+                        stroke="#ccc"
+                        strokeDasharray="3 3"
+                      />
+                      <ReferenceLine
+                        y={0.75}
+                        stroke="#ccc"
+                        strokeDasharray="3 3"
+                      />
+                      <XAxis
+                        dataKey="skill"
+                        domain={[ 'dataMin', 'dataMax' ]}
+                        type="number"
+                        axisLine={false}
+                        tickLine={false}
+                        ticks={xTicks}
+                        tick={renderXTick}
+                        //allowDataOverflow={false}
+                        //label={{ value: "Skill Level", position: "insideBottomRight", offset: -10 }}
+                      />
+                      <YAxis
+                        domain={[0, 1]}
+                        ticks={[0, 0.25, 0.5, 0.75, 1]}
+                        tickFormatter={(v) => `${v * 100}%`}
+                        tick={{ fill: '#ccc', fontSize: 12 }}
+                        tickLine={false}
+                        axisLine={false}
+                      />
+                      <Customized
+                        component={({ xAxisMap, yAxisMap }: any) => {
+                          if (!selected || !probData.length) return null;
 
-                            // grab the primary linear scales
-                            const xScale = xAxisMap[0].scale;
-                            const yScale = yAxisMap[0].scale;
+                          // grab the primary linear scales
+                          const xScale = xAxisMap[0].scale;
+                          const yScale = yAxisMap[0].scale;
 
-                            // compute the screen coords
-                            const lowX  = xScale(clampedLow);
-                            const highX = xScale(clampedHigh);
-                            const lowY  = yScale(expectedSkillUps(selected, clampedLow));
-                            const highY = yScale(expectedSkillUps(selected, clampedHigh));
-                            const y0    = yScale(0);
+                          // compute the screen coords
+                          const lowX  = xScale(clampedLow);
+                          const highX = xScale(clampedHigh);
+                          const lowY  = yScale(expectedSkillUps(selected, clampedLow));
+                          const highY = yScale(expectedSkillUps(selected, clampedHigh));
+                          const y0    = yScale(0);
 
-                            return (
-                              <g>
-                                {/* lower slider guide */}
-                                <line
-                                  x1={lowX}  y1={lowY}
-                                  x2={lowX}  y2={y0}
-                                  stroke="#888"
-                                  //strokeDasharray="4 4"
-                                  strokeWidth={1}
-                                />
-                                {/* upper slider guide */}
-                                <line
-                                  x1={highX} y1={highY}
-                                  x2={highX} y2={y0}
-                                  stroke="#888"
-                                  //strokeDasharray="4 4"
-                                  strokeWidth={1}
-                                />
-                              </g>
-                            );
-                          }}
-                        />
-                        <ReferenceArea
-                          x1={clampedLow}
-                          x2={clampedHigh}
-                          fill="rgba(209, 213, 219, 0.2)"
-                        />
-                        <Line
-                          type="monotone"
-                          dataKey="chance"
-                          stroke="none"
-                          strokeWidth={2}
-                          dot={false}
-                        />
-                        <Customized
-                          component={({
-                            // these props give you access to the internal scales
-                            xAxisMap, yAxisMap,
-                          }: any) => {
-                            if (!selected || !probData.length) return null;
-
-                            // grab the two axes (use your actual axis ID if you set one)
-                            const xScale = xAxisMap[0].scale;
-                            const yScale = yAxisMap[0].scale;
-
-                            // build a single path: for each point we move to (M) and draw a circle via two arcs
-                            const r = 2;  // half the previous 4px
-                            const { orange, yellow, green, gray } = selected.difficulty;
-
-                            const buildPath = (points: typeof probData) => points.map(({ skill, chance }) => {
-                              const x = xScale(skill);
-                              const y = yScale(chance);
-                              return `M${x},${y} m-${r},0 a${r},${r} 0 1,0 ${2*r},0 a${r},${r} 0 1,0 -${2*r},0`;
-                            }).join(' ');
-
-                            const orangePts = probData.filter(d => d.skill < yellow!);
-                            const yellowPts = probData.filter(d => d.skill >= yellow! && d.skill < green!);
-                            const greenPts  = probData.filter(d => d.skill >= green!  && d.skill < gray!);
-                            const grayPts   = probData.filter(d => d.skill >= gray!);
-
-                            return (
-                              <g>
-                                <path d={buildPath(orangePts)} stroke="none" fill="#ff8000" />
-                                <path d={buildPath(yellowPts)} stroke="none" fill="#ffff00" />
-                                <path d={buildPath(greenPts)}  stroke="none" fill="#1eff00" />
-                                <path d={buildPath(grayPts)}   stroke="none" fill="#9d9d9d" />
-                              </g>
-                            );
-                          }}
-                        />
-                      </LineChart>
-                    </ResponsiveContainer>
-                    <div className="relative bottom-7 ml-9.5">
-                      <Range
-                        values={[clampedLow, clampedHigh]}
-                        step={1}
-                        min={sliderMin}
-                        max={sliderMax}
-                        onChange={([low, high]) => {
-                          setRngLow(low);
-                          setRngHigh(high);
-                        }}
-                        renderTrack={({ props, children }) => {
-                          // extract key so we don’t spread it
-                          const { key, style, ...rest } = props as any;
                           return (
-                            <div
-                              key={key}
-                              {...rest}
-                              style={{
-                                ...style,
-                                height: '2px',
-                                borderRadius: '2px',
-                                background: getTrackBackground({
-                                  values: [rngLow, rngHigh],
-                                  colors: ['#4b5563', '#d1d5db', '#4b5563'],
-                                  min: selected.minSkill,
-                                  max: selected.difficulty.gray!
-                                }),
-                                pointerEvents: 'auto'
-                              }}
-                            >
-                              {children}
-                            </div>
-                          );
-                        }}
-                        renderThumb={({ props, index }) => {
-                          const { key, style, ...rest } = props;
-                          return (
-                            <div
-                              key={key}
-                              {...rest}
-                              style={{
-                                ...style,
-                                height: '12px',
-                                width: '12px',
-                                borderRadius: '6px',
-                                backgroundColor: '#9ca3af',
-                                boxShadow: '0 0 2px rgba(0,0,0,0.5)',
-                                pointerEvents: 'auto'
-                              }}
-                            >
-                            </div>
+                            <g>
+                              {/* lower slider guide */}
+                              <line
+                                x1={lowX}  y1={lowY}
+                                x2={lowX}  y2={y0}
+                                stroke="#888"
+                                //strokeDasharray="4 4"
+                                strokeWidth={1}
+                              />
+                              {/* upper slider guide */}
+                              <line
+                                x1={highX} y1={highY}
+                                x2={highX} y2={y0}
+                                stroke="#888"
+                                //strokeDasharray="4 4"
+                                strokeWidth={1}
+                              />
+                            </g>
                           );
                         }}
                       />
-                    </div>
-                  </div> {/* end chart container */} 
+                      <ReferenceArea
+                        x1={clampedLow}
+                        x2={clampedHigh}
+                        fill="rgba(209, 213, 219, 0.2)"
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="chance"
+                        stroke="none"
+                        strokeWidth={2}
+                        dot={false}
+                      />
+                      <Customized
+                        component={({
+                          // these props give you access to the internal scales
+                          xAxisMap, yAxisMap,
+                        }: any) => {
+                          if (!selected || !probData.length) return null;
 
-                  <aside className="flex-none w-2/5 bg-neutral-800 rounded-lg relative h-full" style={{ height: 350 }}>
-                    <div className="flex justify-center items-center">
-                    <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-r-0">
-                      <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
-                      <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
-                        <button
-                          className="text-lg text-white px-2 py-1 bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                          onClick={() => setRngLow(Math.max(1, rngLow - 1))}
-                        >−</button>
-                        <input
-                          type="number"
-                          value={rngLow}
-                          onChange={(e) => {
-                            const val = parseInt(e.target.value);
-                            if (!isNaN(val)) setRngLow(Math.max(1, Math.min(val, rngHigh - 1)));
-                          }}
-                          className="text-lg text-center w-12 bg-transparent outline-none appearance-none
-                                    [&::-webkit-inner-spin-button]:appearance-none 
-                                    [&::-webkit-outer-spin-button]:appearance-none"
-                        />
-                        <button
-                          className="text-lg text-white px-2 py-1 bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                          onClick={() => setRngLow(rngLow + 1)}
-                        >+</button>
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-l-0 border-r-0 -mr-1">
-                      <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">TO</span>
-                      <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
-                        <button
-                          className="text-lg text-white px-2 py-1 bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                          onClick={() => setRngHigh(Math.max(rngLow + 1, rngHigh - 1))}
-                        >−</button>
-                        <input
-                          type="number"
-                          value={rngHigh}
-                          onChange={(e) => {
-                            const val = parseInt(e.target.value);
-                            if (!isNaN(val)) setRngHigh(Math.max(1, Math.min(val, rngHigh - 1)));
-                          }}
-                          className="text-lg text-center w-12 bg-transparent outline-none appearance-none
-                                    [&::-webkit-inner-spin-button]:appearance-none 
-                                    [&::-webkit-outer-spin-button]:appearance-none"
-                        />
-                        <button
-                          className="text-lg text-white px-2 py-1 bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                          onClick={() => setRngHigh(rngHigh + 1)}
-                        >+</button>
-                      </div>
+                          // grab the two axes (use your actual axis ID if you set one)
+                          const xScale = xAxisMap[0].scale;
+                          const yScale = yAxisMap[0].scale;
+
+                          // build a single path: for each point we move to (M) and draw a circle via two arcs
+                          const r = 2;  // half the previous 4px
+                          const { orange, yellow, green, gray } = selected.difficulty;
+
+                          const buildPath = (points: typeof probData) => points.map(({ skill, chance }) => {
+                            const x = xScale(skill);
+                            const y = yScale(chance);
+                            return `M${x},${y} m-${r},0 a${r},${r} 0 1,0 ${2*r},0 a${r},${r} 0 1,0 -${2*r},0`;
+                          }).join(' ');
+
+                          const orangePts = probData.filter(d => d.skill < yellow!);
+                          const yellowPts = probData.filter(d => d.skill >= yellow! && d.skill < green!);
+                          const greenPts  = probData.filter(d => d.skill >= green!  && d.skill < gray!);
+                          const grayPts   = probData.filter(d => d.skill >= gray!);
+
+                          return (
+                            <g>
+                              <path d={buildPath(orangePts)} stroke="none" fill="#ff8000" />
+                              <path d={buildPath(yellowPts)} stroke="none" fill="#ffff00" />
+                              <path d={buildPath(greenPts)}  stroke="none" fill="#1eff00" />
+                              <path d={buildPath(grayPts)}   stroke="none" fill="#9d9d9d" />
+                            </g>
+                          );
+                        }}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                  <div className="relative bottom-7 ml-9.5">
+                    <Range
+                      values={[clampedLow, clampedHigh]}
+                      step={1}
+                      min={sliderMin}
+                      max={sliderMax}
+                      onChange={([low, high]) => {
+                        setRngLow(low);
+                        setRngHigh(high);
+                      }}
+                      renderTrack={({ props, children }) => {
+                        // extract key so we don't spread it
+                        const { key, style, ...rest } = props as any;
+                        return (
+                          <div
+                            key={key}
+                            {...rest}
+                            style={{
+                              ...style,
+                              height: '2px',
+                              borderRadius: '2px',
+                              background: getTrackBackground({
+                                values: [rngLow, rngHigh],
+                                colors: ['#4b5563', '#d1d5db', '#4b5563'],
+                                min: selected.minSkill,
+                                max: selected.difficulty.gray!
+                              }),
+                              pointerEvents: 'auto'
+                            }}
+                          >
+                            {children}
+                          </div>
+                        );
+                      }}
+                      renderThumb={({ props, index }) => {
+                        const { key, style, ...rest } = props;
+                        return (
+                          <div
+                            key={key}
+                            {...rest}
+                            style={{
+                              ...style,
+                              height: '12px',
+                              width: '12px',
+                              borderRadius: '6px',
+                              backgroundColor: '#9ca3af',
+                              boxShadow: '0 0 2px rgba(0,0,0,0.5)',
+                              pointerEvents: 'auto'
+                            }}
+                          >
+                          </div>
+                        );
+                      }}
+                    />
+                  </div>
+                </div> {/* end chart container */} 
+
+                <aside className="flex-none w-2/5 bg-neutral-800 rounded-lg relative h-full" style={{ height: 350 }}>
+                  <div className="flex justify-center items-center">
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-r-0">
+                    <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
+                    <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
+                      <button
+                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        onClick={() => setRngLow(Math.max(1, rngLow - 1))}
+                      >−</button>
+                      <input
+                        type="number"
+                        value={rngLow}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value);
+                          if (!isNaN(val)) setRngLow(Math.max(1, Math.min(val, rngHigh - 1)));
+                        }}
+                        className="text-lg text-center w-12 bg-transparent outline-none appearance-none
+                                  [&::-webkit-inner-spin-button]:appearance-none 
+                                  [&::-webkit-outer-spin-button]:appearance-none"
+                      />
+                      <button
+                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        onClick={() => setRngLow(rngLow + 1)}
+                      >+</button>
                     </div>
                   </div>
-                    <div className="space-y-6 text-[16px] text-neutral-200 p-3 bg-neutral-800 -mb-0.5">
-                      <div className="flex justify-between items-center">
-                        <span>Total Level-ups</span>
-                        <span className="font-semibold">{totalLevelUps}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span>Avg Success Rate</span>
-                        <span className="font-semibold">{(avgSuccessRate * 100).toFixed(2)}%</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span>Avg Attempts Required</span>
-                        <span className="text-white rounded px-2 font-semibold">{expCrafts}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span>Total materials cost:</span>
-                        <span className="text-white rounded px-2 font-semibold"> <FormatMoney copper={(Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0))} /></span>
-                      </div>
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-l-0 border-r-0 -mr-1">
+                    <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">TO</span>
+                    <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
+                      <button
+                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        onClick={() => setRngHigh(Math.max(rngLow + 1, rngHigh - 1))}
+                      >−</button>
+                      <input
+                        type="number"
+                        value={rngHigh}
+                        onChange={(e) => {
+                          const val = parseInt(e.target.value);
+                          if (!isNaN(val)) setRngHigh(Math.max(1, Math.min(val, rngHigh - 1)));
+                        }}
+                        className="text-lg text-center w-12 bg-transparent outline-none appearance-none
+                                  [&::-webkit-inner-spin-button]:appearance-none 
+                                  [&::-webkit-outer-spin-button]:appearance-none"
+                      />
+                      <button
+                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        onClick={() => setRngHigh(rngHigh + 1)}
+                      >+</button>
                     </div>
-                  </aside>
+                  </div>
                 </div>
+                  <div className="space-y-6 text-[16px] text-neutral-200 p-3 bg-neutral-800 -mb-0.5">
+                    <div className="flex justify-between items-center">
+                      <span>Total Level-ups</span>
+                      <span className="font-semibold">{totalLevelUps}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span>Avg Success Rate</span>
+                      <span className="font-semibold">{(avgSuccessRate * 100).toFixed(2)}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span>Avg Attempts Required</span>
+                      <span className="text-white rounded px-2 font-semibold">{expCrafts}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span>Total materials cost:</span>
+                      <span className="text-white rounded px-2 font-semibold"> <FormatMoney copper={(Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0))} /></span>
+                    </div>
+                  </div>
+                </aside>
+              </div>
 
-                <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                  <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Material Calculations</h3>
+              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
+                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Cost Calculations</h3>
+              </div>
+              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
+                <div className="flex-1 flex flex-col items-center justify-center p-4">
+                  <span className="text-neutral-400 mb-2">Cost Per Attempt</span>
+                  <span className="text-xl font-semibold">
+                    <FormatMoney copper={selected ? calcCraftCost(selected) : 0} />
+                  </span>
                 </div>
-
-                {/* Expected crafts */}
-                <div className="px-6 py-6">
-                  <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} />
+                <div className="flex-1 flex flex-col items-center justify-center p-4">
+                  <span className="text-neutral-400 mb-2">Average Cost Per Level</span>
+                  <span className="text-xl font-semibold">
+                    <FormatMoney copper={selected ? (Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0) / totalLevelUps) : 0} />
+                  </span>
                 </div>
+              </div>
 
+              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
+                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Material Calculations</h3>
+              </div>
+              <div className="px-6 py-6">
+                <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} />
+              </div>
 
-                <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                  <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Cost Calculations</h3>
-                </div>
-                <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
-
-
-                </div>
-
-                <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                  <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Auction House Profit Calculation</h3>
-                </div>
-                <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
-
-
-                </div>
+              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
+                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Auction House Profit Calculation</h3>
+              </div>
+              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
+              </div>
             </div>
           </div>
-          )}
+        )}
         </main>
       </div>
     </div>
