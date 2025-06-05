@@ -310,27 +310,6 @@
     "link": "https://www.wowhead.com/classic/item=2453/bruiseweed",
     "vendorPrice": 100
   },
-  "2457": {
-    "name": "Elixir of Minor Agility",
-    "quality": 1,
-    "class": "Consumables",
-    "subclass": "Elixirs",
-    "icon": "inv_potion_91",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=2457/elixir-of-minor-agility",
-    "vendorPrice": null,
-    "createdBy": {
-      "spellId": 3230,
-      "spellName": "Elixir of Minor Agility",
-      "reagents": {
-        "765": 1,
-        "2452": 1,
-        "3371": 1
-      },
-      "minCount": 0,
-      "maxCount": 0
-    }
-  },
   "2459": {
     "name": "Swiftness Potion",
     "quality": 1,
@@ -909,27 +888,6 @@
       "maxCount": 0
     }
   },
-  "3827": {
-    "name": "Mana Potion",
-    "quality": 1,
-    "class": "Consumables",
-    "subclass": "Potions",
-    "icon": "inv_potion_72",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=3827/mana-potion",
-    "vendorPrice": 480,
-    "createdBy": {
-      "spellId": 3452,
-      "spellName": "Mana Potion",
-      "reagents": {
-        "3356": 1,
-        "3372": 1,
-        "3820": 1
-      },
-      "minCount": 0,
-      "maxCount": 0
-    }
-  },
   "3829": {
     "name": "Frost Oil",
     "quality": 1,
@@ -1119,27 +1077,6 @@
       "maxCount": 0
     }
   },
-  "4243": {
-    "name": "Fine Leather Tunic",
-    "quality": 2,
-    "class": "Armor",
-    "subclass": "Leather Armor",
-    "icon": "inv_chest_leather_09",
-    "slot": "Chest",
-    "link": "https://www.wowhead.com/classic/item=4243/fine-leather-tunic",
-    "vendorPrice": null,
-    "createdBy": {
-      "spellId": 3761,
-      "spellName": "Fine Leather Tunic",
-      "reagents": {
-        "2318": 6,
-        "2320": 4,
-        "4231": 3
-      },
-      "minCount": 0,
-      "maxCount": 0
-    }
-  },
   "4246": {
     "name": "Fine Leather Belt",
     "quality": 1,
@@ -1297,16 +1234,6 @@
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=4340/gray-dye",
     "vendorPrice": 350
-  },
-  "4341": {
-    "name": "Yellow Dye",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Other (Trade Goods)",
-    "icon": "inv_potion_12",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=4341/yellow-dye",
-    "vendorPrice": 500
   },
   "4342": {
     "name": "Purple Dye",
@@ -1717,36 +1644,6 @@
     "link": "https://www.wowhead.com/classic/item=4625/firebloom",
     "vendorPrice": null
   },
-  "5082": {
-    "name": "Thin Kodo Leather",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Leather",
-    "icon": "inv_misc_leatherscrap_06",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5082/thin-kodo-leather",
-    "vendorPrice": null
-  },
-  "5116": {
-    "name": "Long Tail Feather",
-    "quality": 1,
-    "class": "Miscellaneous",
-    "subclass": "Reagents",
-    "icon": "inv_feather_03",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5116/long-tail-feather",
-    "vendorPrice": null
-  },
-  "5373": {
-    "name": "Lucky Charm",
-    "quality": 1,
-    "class": "Miscellaneous",
-    "subclass": "Other (Miscellaneous)",
-    "icon": "inv_misc_armorkit_06",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5373/lucky-charm",
-    "vendorPrice": null
-  },
   "5498": {
     "name": "Small Lustrous Pearl",
     "quality": 2,
@@ -1816,16 +1713,6 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=5784/slimy-murloc-scale",
-    "vendorPrice": null
-  },
-  "5785": {
-    "name": "Thick Murloc Scale",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Leather",
-    "icon": "inv_misc_monsterscales_03",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=5785/thick-murloc-scale",
     "vendorPrice": null
   },
   "5966": {
@@ -2404,16 +2291,6 @@
     "link": "https://www.wowhead.com/classic/item=8151/flask-of-mojo",
     "vendorPrice": null
   },
-  "8152": {
-    "name": "Flask of Big Mojo",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "",
-    "icon": "inv_potion_12",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8152/flask-of-big-mojo",
-    "vendorPrice": null
-  },
   "8153": {
     "name": "Wildvine",
     "quality": 1,
@@ -2462,16 +2339,6 @@
     "icon": "inv_feather_02",
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=8168/jet-black-feather",
-    "vendorPrice": null
-  },
-  "8169": {
-    "name": "Thick Hide",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Leather",
-    "icon": "inv_misc_pelt_bear_ruin_01",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8169/thick-hide",
     "vendorPrice": null
   },
   "8170": {
@@ -2612,27 +2479,6 @@
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=8925/crystal-vial",
     "vendorPrice": 2500
-  },
-  "8949": {
-    "name": "Elixir of Agility",
-    "quality": 1,
-    "class": "Consumables",
-    "subclass": "Elixirs",
-    "icon": "inv_potion_93",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=8949/elixir-of-agility",
-    "vendorPrice": null,
-    "createdBy": {
-      "spellId": 11449,
-      "spellName": "Elixir of Agility",
-      "reagents": {
-        "3372": 1,
-        "3820": 1,
-        "3821": 1
-      },
-      "minCount": 0,
-      "maxCount": 0
-    }
   },
   "8951": {
     "name": "Elixir of Greater Defense",
@@ -2799,16 +2645,6 @@
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=10286/heart-of-the-wild",
     "vendorPrice": null
-  },
-  "10290": {
-    "name": "Pink Dye",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Other (Trade Goods)",
-    "icon": "inv_potion_09",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=10290/pink-dye",
-    "vendorPrice": 2500
   },
   "10500": {
     "name": "Fire Goggles",
@@ -4121,26 +3957,6 @@
     "link": "https://www.wowhead.com/classic/item=15420/ironfeather",
     "vendorPrice": null
   },
-  "15422": {
-    "name": "Frostsaber Leather",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "",
-    "icon": "inv_misc_pelt_06",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=15422/frostsaber-leather",
-    "vendorPrice": null
-  },
-  "15423": {
-    "name": "Chimera Leather",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "",
-    "icon": "inv_misc_leatherscrap_01",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=15423/chimera-leather",
-    "vendorPrice": null
-  },
   "15992": {
     "name": "Dense Blasting Powder",
     "quality": 1,
@@ -4418,16 +4234,6 @@
     "link": "https://www.wowhead.com/classic/item=19767/primal-bat-leather",
     "vendorPrice": null
   },
-  "19768": {
-    "name": "Primal Tiger Leather",
-    "quality": 1,
-    "class": "Trade Goods",
-    "subclass": "Leather",
-    "icon": "inv_misc_pelt_04",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=19768/primal-tiger-leather",
-    "vendorPrice": null
-  },
   "19774": {
     "name": "Souldarite",
     "quality": 2,
@@ -4466,16 +4272,6 @@
     "icon": "inv_misc_monsterscales_13",
     "slot": "",
     "link": "https://www.wowhead.com/classic/item=20498/silithid-chitin",
-    "vendorPrice": null
-  },
-  "20500": {
-    "name": "Light Silithid Carapace",
-    "quality": 1,
-    "class": "Miscellaneous",
-    "subclass": "Junk",
-    "icon": "inv_misc_monsterscales_14",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=20500/light-silithid-carapace",
     "vendorPrice": null
   },
   "20501": {

@@ -1,5 +1,5 @@
 import { PriceMap } from "./types";
-import type  materialInfo  from '@/lib/materialsLoader';
+import type materialInfo from '@/lib/materialsLoader';
 
 type TsmAuction = {
   itemId: number;
@@ -25,12 +25,11 @@ export function toPriceMap(
       ? undefined
       : materials[idStr]?.vendorPrice;
 
-    const minBuyout = vendor != null ? Math.min(row.minBuyout, vendor) : row.minBuyout;
-    const marketValue = vendor != null ? Math.min(row.marketValue, vendor) : row.marketValue;
-
+    // Don't modify AH prices based on vendor price anymore
     map[id] = {
-      minBuyout,
-      marketValue
+      minBuyout: row.minBuyout,
+      marketValue: row.marketValue,
+      vendorPrice: vendor
     };
 
     return map;

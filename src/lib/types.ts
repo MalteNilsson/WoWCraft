@@ -30,13 +30,36 @@ export type Recipe = {
     name:       string;
     quality:    number;                // ← new
     minSkill:   number;
-    difficulty: Difficulty;
+    difficulty: {
+        orange?: number;
+        yellow?: number;
+        green?: number;
+        gray?: number;
+    };
     materials:  Record<string, number>;
-  };
+    icon:       string;
+    produces?: {
+        id: number;
+        name: string;
+        quantity: number;
+    };
+    source?: {
+        type: 'trainer' | 'item' | 'free';
+        // For trainer recipes
+        cost?: number;
+        trainers?: Array<{
+            id: number;
+            name: string;
+        }>;
+        // For item recipes
+        recipeItemId?: number;
+        recipeItemName?: string;
+    };
+};
   
 /*  unchanged */
 export type PriceMap = Record<
-  string, // ← instead of number
+  number,
   {
     minBuyout?: number;
     marketValue?: number;
@@ -46,18 +69,22 @@ export type PriceMap = Record<
 
 
 export type MaterialInfo = {
-  name: string;
-  quality: number | null;
+  name?: string;
+  icon?: string;
+  quality?: number;
   class?: string;
   subclass?: string;
-  icon?: string;
   slot?: string;
   link?: string;
-  vendorPrice?: number; // ✅ Add this line
+  vendorPrice?: number;
+  buyPrice?: number;
+  auctionhouse?: boolean;
+  bop?: boolean;
+  limitedStock?: boolean;
   createdBy?: {
-    spellId: number;
-    spellName: string;
-    reagents: Record<number, number>;
+    spellId?: number;
+    spellName?: string;
+    reagents: Record<string, number>;
     minCount?: number;
     maxCount?: number;
   };

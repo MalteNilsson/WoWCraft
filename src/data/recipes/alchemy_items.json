@@ -1,0 +1,428 @@
+{
+  "2553": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "2555": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3393": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3394": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3395": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3396": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3831": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "3832": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "4597": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "4624": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "5640": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 100,
+    "auctionhouse": false
+  },
+  "5642": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false
+  },
+  "5643": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false
+  },
+  "6053": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 800,
+    "auctionhouse": false
+  },
+  "6054": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 900,
+    "auctionhouse": false
+  },
+  "6055": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false
+  },
+  "6056": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false
+  },
+  "6057": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false
+  },
+  "6068": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false
+  },
+  "6211": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "6663": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9293": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9294": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9295": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9296": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9297": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9298": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "9300": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 10000,
+    "auctionhouse": false
+  },
+  "9301": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 10000,
+    "auctionhouse": false
+  },
+  "9302": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 9000,
+    "auctionhouse": false
+  },
+  "9303": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 8000,
+    "auctionhouse": false
+  },
+  "10644": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "12958": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 50000,
+    "auctionhouse": false
+  },
+  "13477": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false
+  },
+  "13478": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 13000,
+    "auctionhouse": false
+  },
+  "13479": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13480": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 15000,
+    "auctionhouse": false
+  },
+  "13481": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13482": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 15000,
+    "auctionhouse": false
+  },
+  "13483": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 15000,
+    "auctionhouse": false
+  },
+  "13484": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 15000,
+    "auctionhouse": false
+  },
+  "13485": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 15000,
+    "auctionhouse": false
+  },
+  "13486": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13487": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13488": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13489": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13490": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13491": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13492": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13493": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13494": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13495": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13496": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13497": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13499": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "13501": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 30000,
+    "auctionhouse": false
+  },
+  "13517": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false
+  },
+  "13518": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false
+  },
+  "13519": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false
+  },
+  "13520": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false
+  },
+  "13521": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false
+  },
+  "13522": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false
+  },
+  "14634": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2500,
+    "auctionhouse": false
+  },
+  "17709": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "18257": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  },
+  "20011": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 50000,
+    "auctionhouse": false
+  },
+  "20012": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 50000,
+    "auctionhouse": false
+  },
+  "20013": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 50000,
+    "auctionhouse": false
+  },
+  "20014": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 50000,
+    "auctionhouse": false
+  },
+  "20761": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 120000,
+    "auctionhouse": false
+  },
+  "21547": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true
+  }
+}

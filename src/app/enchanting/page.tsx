@@ -10,8 +10,8 @@ import rawTailoring  from '@/data/recipes/tailoring.json';
 import priceRows   from '@/data/prices/realm-559.json';
 import type { RawRecipe, Recipe, PriceMap, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, PlanStep } from '@/lib/planner';
-import { expectedSkillUps, craftCost, getItemCost, buildMaterialTree, skipCraftingUnlessTopLevel  } from '@/lib/recipeCalc';
+import { makeDynamicPlan, PlanStep, blacklistedSpellIds } from '@/lib/planner';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, skipCraftingUnlessTopLevel  } from '@/lib/recipeCalc';
 import { toPriceMap, ignoreVendorPriceIds  }      from '@/lib/pricing';
 import * as Slider         from '@radix-ui/react-slider';
 import { Range, getTrackBackground } from 'react-range';
@@ -66,9 +66,10 @@ const prices = toPriceMap(
 
 // ── helpers ──
 const diffColor = (skill: number, d: Recipe['difficulty']) => {
-  if (skill < d.orange!) return 'bg-orange-500';
-  if (skill < d.yellow!) return 'bg-yellow-500';
-  if (skill < d.green!)  return 'bg-green-500';
+  //if (skill < d.orange!) return 'bg-red-700';
+  if (skill < d.yellow!) return 'bg-orange-500';
+  if (skill < d.green!)  return 'bg-yellow-500';
+  if (skill < d.gray!)   return 'bg-green-500';
   return 'bg-neutral-500';
 };
 const iconSrc = (id: number, professionId: string) => `/icons/${professionId.toLowerCase()}/${id}.jpg`;
@@ -114,10 +115,6 @@ function CollapsibleSection({
       {children}
     </div>
   );
-}
-
-function calcCraftCost(recipe: Recipe): number {
-  return craftCost(recipe, prices, materialInfo ); // or rename to materialInfo
 }
 
 function SafeMoney({
@@ -277,6 +274,8 @@ export default function EnchantingPlanner() {
   const [isSliding, setIsSliding] = useState(false);
   const [isReleased, setIsReleased] = useState(false);
   const [isDirectChange, setIsDirectChange] = useState(false);
+  const [includeRecipeCost, setIncludeRecipeCost] = useState(false);
+  const [skipLimitedStock, setSkipLimitedStock] = useState(true);
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
 
@@ -362,9 +361,19 @@ export default function EnchantingPlanner() {
   }, [selectedProfession]);
 
   // Use committedSkill for the plan calculation
-  const { steps, totalCost, finalSkill } = useMemo(
-    () => makeDynamicPlan(committedSkill, 300, recipes, prices, materialInfo, selectedProfession),
-    [committedSkill, recipes, prices, materialInfo, selectedProfession]
+  const plan = useMemo(
+    () =>
+      makeDynamicPlan(
+        skill,
+        target,
+        recipes,
+        prices,
+        materialInfo,
+        "Enchanting",
+        includeRecipeCost,
+        skipLimitedStock
+      ),
+    [skill, target, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock]
   );
 
   const fuse = useMemo(
@@ -385,7 +394,7 @@ export default function EnchantingPlanner() {
     
     if (view === 'route') {
       // When switching to route view, select the first recipe from steps
-      const first = steps.find((s): s is Extract<PlanStep, { recipe: Recipe }> => 'recipe' in s);
+      const first = plan.steps.find((s): s is Extract<PlanStep, { recipe: Recipe }> => 'recipe' in s);
       if (first) {
         setSelectedRecipeId(first.recipe.id);
         setRngLow(committedSkill);
@@ -395,7 +404,7 @@ export default function EnchantingPlanner() {
   }, [view]);
 
   // Use faster debounced value for visual updates like difficulty colors
-  const startOf = (i: number) => (i === 0 ? committedSkill : steps[i - 1].endSkill);
+  const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
   const sortedAll = useMemo(() => [...recipes].sort((a, b) => a.minSkill - b.minSkill), [recipes]);
 
   const filteredRecipes = useMemo(() => {
@@ -646,7 +655,7 @@ const renderXTick = selected
   // Update the visible recipes when committed skill changes
   useEffect(() => {
     const currentlyVisible = new Set(
-      steps
+      plan.steps
         .filter((s): s is Extract<typeof s, { recipe: Recipe }> => 'recipe' in s)
         .map(s => `${s.recipe.name}-${s.endSkill}`)
     );
@@ -657,7 +666,7 @@ const renderXTick = selected
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100">
       {/* Top bar */}
       <header className="h-24 flex items-center gap-4 bg-neutral-800 border-b border-neutral-700 px-8 lg:px-32">
-        <span className="text-lg font-bold tracking-wide">WoWCraft</span>
+        <span className="text-lg font-bold tracking-wide"></span>
         <Combobox
           onChange={(id: number) => {
             // switch to All Recipes and select
@@ -734,9 +743,43 @@ const renderXTick = selected
               ))}
             </select>
             <div className="mb-4">
-              <label className="block text-xs mb-1">
-                SKILL <span className="font-semibold text-yellow-300">{skill}</span>
-              </label>
+              <div className="flex justify-between items-center mb-1">
+                <label className="text-xs">
+                  SKILL <span className="font-semibold text-yellow-300">{skill}</span>
+                </label>
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <label className="text-xs text-neutral-400">Include Recipe Cost</label>
+                    <button 
+                      onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                        includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                          includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <label className="text-xs text-neutral-400">Skip Limited Stock</label>
+                    <button 
+                      onClick={() => setSkipLimitedStock(!skipLimitedStock)}
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                        skipLimitedStock ? 'bg-yellow-400' : 'bg-neutral-700'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                          skipLimitedStock ? 'translate-x-5' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div className="flex items-center space-x-2">
                 {/* Skill slider */}
                 <input
@@ -816,7 +859,7 @@ const renderXTick = selected
           <div className="flex-1 flex flex-col min-h-0">
             <section 
               ref={scrollRef}
-              className="flex-1 overflow-y-auto
+              className="flex-1 overflow-y-auto pb-15
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
                 [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
@@ -853,7 +896,7 @@ const renderXTick = selected
                 >
                   {view === 'route' ? (
                     <div className="flex flex-col">
-                      {steps.map((s, i) => {
+                      {plan.steps.map((s, i) => {
                         if ('upgradeName' in s) {
                           return (
                             <motion.div
@@ -872,7 +915,7 @@ const renderXTick = selected
                           );
                         }
 
-                        const start = i === 0 ? committedSkill : steps[i - 1].endSkill;
+                        const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
                         const end = s.endSkill;
                         const best = s.recipe;
                         
@@ -880,11 +923,19 @@ const renderXTick = selected
                           .filter(r =>
                             r.minSkill <= start &&
                             (r.difficulty.gray ?? Infinity) >= end &&
-                            r.id !== best.id
+                            r.id !== best.id &&
+                            !blacklistedSpellIds.has(r.id) &&
+                            (!skipLimitedStock || !(
+                              r.source?.type === 'item' &&
+                              r.source.recipeItemId &&
+                              (materialInfo[r.source.recipeItemId]?.bop || materialInfo[r.source.recipeItemId]?.limitedStock)
+                            ))
                           )
                           .map(r => {
                             const crafts = expectedCraftsBetween(start, end, r.difficulty);
-                            const cost   = crafts * calcCraftCost(r);
+                            const baseCost = calculateCraftCost(r, prices, materialInfo);
+                            const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true) - baseCost : 0;
+                            const cost = baseCost * crafts + (includeRecipeCost ? recipeCost : 0);
                             return {
                               recipe: r,
                               crafts,
@@ -930,7 +981,7 @@ const renderXTick = selected
                                   {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                 </span>
                                 <span className="text-[16px]">
-                                  <FormatMoney copper={s.crafts * calcCraftCost(best)} />
+                                  <FormatMoney copper={s.cost} />
                                 </span>
                                 <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
                                   {start} → {end}
@@ -1073,7 +1124,7 @@ const renderXTick = selected
                     <div className="text-2xl font-semibold">
                       <span className="text-neutral-400">Total Cost: </span>
                       <span className="text-yellow-300">
-                        <FormatMoney copper={totalCost} />
+                        <FormatMoney copper={plan.totalCost} />
                       </span>
                     </div>
                   </motion.div>
@@ -1375,11 +1426,82 @@ const renderXTick = selected
               </div>
               <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
-                  <span className="text-neutral-400 mb-2">Cost Per Attempt</span>
+                  <span className="text-neutral-400 mb-2">Base Cost Per Attempt</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={selected ? calcCraftCost(selected) : 0} />
+                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo)} />
                   </span>
                 </div>
+                {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
+                  (() => {
+                    const recipeInfo = materialInfo[selected.source.recipeItemId];
+                    const recipeId = selected.source.recipeItemId;
+                    const priceData = prices[recipeId];
+                    console.log('Recipe Info:', {
+                      recipeId,
+                      recipeInfo,
+                      priceData,
+                      rawPrices: prices[recipeId],
+                      minBuyout: priceData?.minBuyout,
+                      marketValue: priceData?.marketValue,
+                      vendorPrice: recipeInfo?.buyPrice,
+                      limitedStock: recipeInfo?.limitedStock,
+                      auctionhouse: recipeInfo?.auctionhouse
+                    });
+                    // Get AH price directly from price data
+                    const ahPrice = priceData?.minBuyout ?? priceData?.marketValue;
+                    
+                    if (recipeInfo?.bop) {
+                      return (
+                        <div className="flex-1 flex flex-col items-center justify-center p-4">
+                          <span className="text-neutral-400 mb-2">Recipe Cost</span>
+                          <span className="text-red-400 text-base">Not Available (BoP)</span>
+                        </div>
+                      );
+                    }
+
+                    // For all non-BoP recipes, show both vendor and AH prices if they exist
+                    return (
+                      <>
+                        {recipeInfo?.buyPrice && (
+                          <div className="flex-1 flex flex-col items-center justify-center p-4">
+                            <span className="text-neutral-400 mb-2">Vendor Recipe Cost</span>
+                            <div className="flex flex-col items-center gap-1">
+                              {recipeInfo.limitedStock && (
+                                <div className="text-base text-yellow-400 flex items-center gap-1">
+                                  <span>⚠️ Limited Stock</span>
+                                </div>
+                              )}
+                              <span className="text-xl font-semibold">
+                                <FormatMoney copper={recipeInfo.buyPrice} />
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        {ahPrice && ahPrice > 0 && (
+                          <div className="flex-1 flex flex-col items-center justify-center p-4">
+                            <span className="text-neutral-400 mb-2">AH Recipe Cost</span>
+                            <span className="text-xl font-semibold">
+                              <FormatMoney copper={ahPrice} />
+                            </span>
+                          </div>
+                        )}
+                        {!recipeInfo?.buyPrice && (!ahPrice || ahPrice <= 0) && (
+                          <div className="flex-1 flex flex-col items-center justify-center p-4">
+                            <span className="text-neutral-400 mb-2">Recipe Cost</span>
+                            <span className="text-red-400 text-base">No price available</span>
+                          </div>
+                        )}
+                      </>
+                    );
+                  })()
+                ) : (
+                  <div className="flex-1 flex flex-col items-center justify-center p-4">
+                    <span className="text-neutral-400 mb-2">Recipe Cost</span>
+                    <span className="text-xl font-semibold">
+                      <FormatMoney copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} />
+                    </span>
+                  </div>
+                )}
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Average Cost Per Level</span>
                   <span className="text-xl font-semibold">
