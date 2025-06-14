@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const fetch = require("node-fetch");               // npm i node-fetch@2
+import fetch from "node-fetch";               // npm i node-fetch@2
 
 const SPELL_XML = id => `https://www.wowhead.com/classic/spell=${id}&xml`;
 const ITEM_XML  = id => `https://www.wowhead.com/classic/item=${id}&xml`;
