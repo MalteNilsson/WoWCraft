@@ -12,22 +12,25 @@ function getAverageOutput(minCount?: number, maxCount?: number): number {
 export function getRecipeCost(
   recipe: Recipe,
   prices: PriceMap,
-  materialInfo: Record<number, MaterialInfo>
+  materialInfo: Record<number, MaterialInfo>,
+  useMarketValue: boolean = false
 ): {
   vendorPrice: number | null;
   ahPrice: number | null;
   isLimitedStock: boolean;
   type: 'free' | 'trainer' | 'item';
 } {
+  // Handle free recipes (including those with no source)
   if (!recipe.source || recipe.source.type === 'free') {
     return {
-      vendorPrice: null,
+      vendorPrice: 0,  // Free recipes should cost 0, not null
       ahPrice: null,
       isLimitedStock: false,
       type: 'free'
     };
   }
   
+  // Handle trainer recipes
   if (recipe.source.type === 'trainer') {
     return {
       vendorPrice: Math.max(0, recipe.source.cost ?? 0),
@@ -37,12 +40,17 @@ export function getRecipeCost(
     };
   } 
   
+  // Handle item-based recipes
   if (recipe.source.type === 'item' && recipe.source.recipeItemId) {
     const recipeInfo = materialInfo[recipe.source.recipeItemId];
     const priceData = prices[recipe.source.recipeItemId];
     
-    // Get AH price from either minBuyout or marketValue
-    const ahPrice = priceData?.minBuyout ?? priceData?.marketValue ?? null;
+    // Get AH price from either minBuyout or marketValue based on toggle
+    const minBuyout = priceData?.minBuyout ?? 0;
+    const marketValue = priceData?.marketValue ?? 0;
+    const ahPrice = useMarketValue ? 
+      (marketValue > 0 ? marketValue : (minBuyout > 0 ? minBuyout : null)) :
+      (minBuyout > 0 ? minBuyout : (marketValue > 0 ? marketValue : null));
     
     return {
       vendorPrice: recipeInfo?.buyPrice ?? null,
@@ -52,6 +60,7 @@ export function getRecipeCost(
     };
   }
 
+  // Fallback case (should never happen with valid data)
   return {
     vendorPrice: null,
     ahPrice: null,
@@ -66,16 +75,21 @@ export function craftCost(
   prices: PriceMap,
   materialInfo: Record<number, MaterialInfo>,
   includeRecipeCost: boolean = false,
-  recipeOnly: boolean = false
+  recipeOnly: boolean = false,
+  useMarketValue: boolean = false
 ): number {
   // If we only want the recipe cost
   if (recipeOnly) {
-    const recipeCost = getRecipeCost(recipe, prices, materialInfo);
+    const recipeCost = getRecipeCost(recipe, prices, materialInfo, useMarketValue);
     // For recipe-only cost, prefer AH price for limited stock items
     if (recipeCost.isLimitedStock && recipeCost.ahPrice !== null) {
       return recipeCost.ahPrice;
     }
-    return recipeCost.vendorPrice ?? recipeCost.ahPrice ?? 0;
+    // If neither vendor nor AH price exists, the recipe is unavailable
+    if (recipeCost.vendorPrice === null && recipeCost.ahPrice === null) {
+      return Infinity;
+    }
+    return recipeCost.vendorPrice ?? recipeCost.ahPrice ?? Infinity;
   }
 
   // Calculate base material costs
@@ -85,7 +99,9 @@ export function craftCost(
     
     // First check AH price
     const priceData = prices[itemId];
-    const ahPrice = (priceData?.minBuyout || priceData?.marketValue) ?? Infinity;
+    const ahPrice = useMarketValue ?
+      (priceData?.marketValue ?? priceData?.minBuyout ?? Infinity) :
+      (priceData?.minBuyout ?? priceData?.marketValue ?? Infinity);
     
     // Then check vendor price
     const vendorPrice = matInfo?.buyPrice ?? Infinity;
@@ -105,7 +121,7 @@ export function craftCost(
         difficulty: { orange: 0, yellow: 0, green: 0, gray: 0 },
         icon: matInfo.icon || ''
       };
-      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true);
+      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true, false, useMarketValue);
       return sum + (Math.min(itemPrice, rodCraftCost) * qty);
     }
 
@@ -114,11 +130,17 @@ export function craftCost(
 
   // Add recipe cost if requested
   if (includeRecipeCost) {
-    const recipeCost = getRecipeCost(recipe, prices, materialInfo);
+    const recipeCost = getRecipeCost(recipe, prices, materialInfo, useMarketValue);
     // For recipe cost, prefer AH price for limited stock items
-    const recipePrice = recipeCost.isLimitedStock && recipeCost.ahPrice !== null
-      ? recipeCost.ahPrice
-      : (recipeCost.vendorPrice ?? recipeCost.ahPrice ?? 0);
+    let recipePrice;
+    if (recipeCost.isLimitedStock && recipeCost.ahPrice !== null) {
+      recipePrice = recipeCost.ahPrice;
+    } else if (recipeCost.vendorPrice === null && recipeCost.ahPrice === null) {
+      // If recipe is completely unavailable, the craft is impossible
+      return Infinity;
+    } else {
+      recipePrice = recipeCost.vendorPrice ?? recipeCost.ahPrice ?? Infinity;
+    }
     return baseCost + recipePrice;
   }
 
@@ -130,7 +152,8 @@ export function costPerSkillUp(
   currentSkill: number,
   prices: PriceMap,
   materialInfo: Record<number, MaterialInfo>,
-  includeRecipeCost: boolean = false
+  includeRecipeCost: boolean = false,
+  useMarketValue: boolean = false
 ): {
   cost: number;
   isLimitedStock?: boolean;
@@ -142,8 +165,8 @@ export function costPerSkillUp(
     return { cost: Infinity };
   }
 
-  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost);
-  const recipeCost = getRecipeCost(r, prices, materialInfo);
+  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost, false, useMarketValue);
+  const recipeCost = getRecipeCost(r, prices, materialInfo, useMarketValue);
 
   return {
     cost: baseCost / chance,
@@ -194,7 +217,8 @@ export function getItemCost(
   prices: PriceMap,
   materialInfo: Record<number, MaterialInfo>,
   memo = new Map<number, number>(),
-  isTopLevel: boolean = false
+  isTopLevel: boolean = false,
+  useMarketValue: boolean = false
 ): number {
   // Use cached result if already computed
   if (memo.has(itemId)) return memo.get(itemId)!;
@@ -202,7 +226,9 @@ export function getItemCost(
   const itemData = materialInfo[itemId];
   
   // First check AH price
-  const ahPriceRaw = prices[itemId]?.minBuyout ?? prices[itemId]?.marketValue;
+  const ahPriceRaw = useMarketValue ?
+    (prices[itemId]?.marketValue ?? prices[itemId]?.minBuyout) :
+    (prices[itemId]?.minBuyout ?? prices[itemId]?.marketValue);
   const ahPrice = ahPriceRaw && ahPriceRaw > 0 ? ahPriceRaw : Infinity;
   
   // Then check vendor price
@@ -237,7 +263,7 @@ export function getItemCost(
 
     const totalReagentCost = Object.entries(reagents).reduce((sum, [idStr, qty]) => {
       const id = parseInt(idStr);
-      const cost = getItemCost(id, prices, materialInfo, memo, false);
+      const cost = getItemCost(id, prices, materialInfo, memo, false, useMarketValue);
       return sum + cost * qty;
     }, 0);
 
@@ -272,15 +298,16 @@ export function buildMaterialTree(
   prices: PriceMap,
   materialInfo: Record<number, MaterialInfo>,
   isTopLevel: boolean = true,
-  visited: Set<number> = new Set()
+  visited: Set<number> = new Set(),
+  useMarketValue: boolean = false
 ): MaterialTreeNode {
   const info = materialInfo[itemId];
   const vendorPrice = info?.buyPrice;
   const ahEntry = prices[itemId];
-  const isListed = !!(ahEntry && ahEntry.minBuyout && ahEntry.minBuyout > 0);
+  const isListed = !!(ahEntry && (useMarketValue ? ahEntry.marketValue : ahEntry.minBuyout) && (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) > 0);
   const isVendorItem = info?.buyPrice && !info?.auctionhouse;
 
-  const ahPrice = isListed ? ahEntry.minBuyout! : Infinity;
+  const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
   const usedCrafting = !isListed && !isVendorItem;
 
   const buyCost = isVendorItem ? vendorPrice! : 
@@ -334,7 +361,8 @@ export function buildMaterialTree(
         prices,
         materialInfo,
         false,
-        new Set(visited) // Pass a copy to avoid corrupting sibling paths
+        new Set(visited), // Pass a copy to avoid corrupting sibling paths
+        useMarketValue
       );
     });
 

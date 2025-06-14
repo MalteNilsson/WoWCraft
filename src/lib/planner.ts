@@ -25,6 +25,7 @@ export const blacklistedSpellIds = new Set<number>([
     17560,
     25146,
     18560, // Mooncloth
+    24266, // Gurubashi Mojo Madness - Requires Blood of Heroes
 ]);
 
 /**
@@ -58,7 +59,8 @@ export function makeDynamicPlan(
     materialInfo: Record<number, MaterialInfo>,
     profession: string,
     includeRecipeCost: boolean = false,
-    skipLimitedStock: boolean = true
+    skipLimitedStock: boolean = true,
+    useMarketValue: boolean = false
 ) {
     const allUpgrades = [
         { level: 350, name: "Artisan" },
@@ -133,6 +135,25 @@ export function makeDynamicPlan(
                         return false;
                     }
                 }
+
+                // Skip recipes that are unobtainable (no recipe cost available)
+                if (r.source?.type === 'item' && r.source.recipeItemId) {
+                    const recipeInfo = materialInfo[r.source.recipeItemId];
+                    const priceData = prices[r.source.recipeItemId];
+                    
+                    // For vendor items, any non-null price is valid
+                    const hasVendorPrice = recipeInfo?.buyPrice !== undefined && recipeInfo.buyPrice !== null;
+                    
+                    // For AH items, use minBuyout if available, otherwise try marketValue
+                    const minBuyout = priceData?.minBuyout ?? 0;
+                    const marketValue = priceData?.marketValue ?? 0;
+                    const effectiveAhPrice = minBuyout > 0 ? minBuyout : marketValue;
+                    const hasValidAhPrice = effectiveAhPrice > 0;
+                    
+                    if (!hasVendorPrice && !hasValidAhPrice) {
+                        return false;
+                    }
+                }
                 
                 return true;
             }
@@ -142,32 +163,43 @@ export function makeDynamicPlan(
         
         // ③ Pick cheapest cost-per-skill-up, considering recipe cost based on toggle
         usable.sort((a, b) => {
+            // Calculate skill-up chances and required crafts for each recipe
             const chanceA = expectedSkillUps(a, skill);
             const chanceB = expectedSkillUps(b, skill);
             const craftsA = Math.ceil(1 / chanceA);
             const craftsB = Math.ceil(1 / chanceB);
             
-            // Calculate base material costs
-            const baseCostA = craftCost(a, prices, materialInfo) * craftsA;
-            const baseCostB = craftCost(b, prices, materialInfo) * craftsB;
+            // Calculate base material costs for the number of crafts needed
+            const baseCostA = craftCost(a, prices, materialInfo, false, false, useMarketValue) * craftsA;
+            const baseCostB = craftCost(b, prices, materialInfo, false, false, useMarketValue) * craftsB;
             
             // Add recipe costs only when switching recipes and if enabled
-            const recipeCostA = includeRecipeCost && a !== currentRecipe ? craftCost(a, prices, materialInfo, true, true) : 0;
-            const recipeCostB = includeRecipeCost && b !== currentRecipe ? craftCost(b, prices, materialInfo, true, true) : 0;
+            const recipeCostA = includeRecipeCost && a !== currentRecipe ? craftCost(a, prices, materialInfo, true, true, useMarketValue) : 0;
+            const recipeCostB = includeRecipeCost && b !== currentRecipe ? craftCost(b, prices, materialInfo, true, true, useMarketValue) : 0;
             
             const totalCostA = baseCostA + recipeCostA;
             const totalCostB = baseCostB + recipeCostB;
 
-            // Add a "tedium factor" that penalizes recipes requiring many crafts
-            // Only apply tedium when not in orange range (not 100% chance)
-            const isOrangeA = skill < a.difficulty.yellow!;
-            const isOrangeB = skill < b.difficulty.yellow!;
-            
-            // The penalty increases quadratically with the number of crafts
-            const tediumFactorA = isOrangeA ? 0 : craftsA * craftsA * 100; // 100 copper per craft squared
-            const tediumFactorB = isOrangeB ? 0 : craftsB * craftsB * 100;
-            
-            return (totalCostA + tediumFactorA) - (totalCostB + tediumFactorB);
+            // Calculate virtual cost penalties for low skill-up chances
+            // For chances below 50%, increase the effective cost
+            // At 10% chance: 100% cost increase
+            // At 50% chance: 0% cost increase
+            // Linear scale in between
+            const getVirtualCost = (cost: number, chance: number) => {
+                if (chance >= 0.5) return cost;
+                // Linear formula: y = mx + b
+                // At x=0.1 (10% chance), y=1 (100% increase)
+                // At x=0.5 (50% chance), y=0 (0% increase)
+                // m = (y2-y1)/(x2-x1) = (0-1)/(0.5-0.1) = -2.5
+                // b = y1 - mx1 = 1 - (-2.5 * 0.1) = 1.25
+                const penalty = -2.5 * chance + 1.25;
+                return cost * (1 + Math.max(0, penalty));
+            };
+
+            const virtualCostA = getVirtualCost(totalCostA, chanceA);
+            const virtualCostB = getVirtualCost(totalCostB, chanceB);
+
+            return virtualCostA - virtualCostB;
         });
         
         const best = usable[0];
@@ -175,8 +207,8 @@ export function makeDynamicPlan(
         const crafts = Math.ceil(1 / chance);
         
         // Calculate costs
-        const baseCost = craftCost(best, prices, materialInfo) * crafts;
-        const recipeCost = includeRecipeCost && best !== currentRecipe ? craftCost(best, prices, materialInfo, true, true) : 0;
+        const baseCost = craftCost(best, prices, materialInfo, false, false, useMarketValue) * crafts;
+        const recipeCost = includeRecipeCost && best !== currentRecipe ? craftCost(best, prices, materialInfo, true, true, useMarketValue) : 0;
         const totalCost = baseCost + recipeCost;
         
         // ④ Merge or push

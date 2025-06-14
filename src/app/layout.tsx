@@ -45,8 +45,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.className} overflow-hidden`}>
+      <body className="overflow-hidden">{children}</body>
     </html>
   )
 }
