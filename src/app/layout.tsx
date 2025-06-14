@@ -5,6 +5,7 @@ import { Manrope } from 'next/font/google';
 import { Inter } from 'next/font/google'
 import { Pacifico } from 'next/font/google'
 import { ReactNode } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 
@@ -46,7 +47,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${inter.className} overflow-hidden`}>
-      <body className="overflow-hidden">{children}</body>
+      <body className="overflow-hidden">
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }

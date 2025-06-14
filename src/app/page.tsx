@@ -20,6 +20,7 @@ import materialInfo from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
+import { Analytics } from "@vercel/analytics/next"
 
 // map WoW quality IDs to standard hex colors
 const qualityColors: Record<number,string> = {
