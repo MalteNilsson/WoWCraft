@@ -1,0 +1,51 @@
+{
+  "realmList": "anniversary",
+  "timestamp": "2025-06-16T23:44:47.477Z",
+  "totalRequests": 6,
+  "successful": 6,
+  "failed": 0,
+  "results": [
+    {
+      "realm": "Thunderstrike",
+      "faction": "Horde",
+      "auctionHouseId": 560,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:37.796Z"
+    },
+    {
+      "realm": "Thunderstrike",
+      "faction": "Alliance",
+      "auctionHouseId": 559,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:39.369Z"
+    },
+    {
+      "realm": "Spineshatter",
+      "faction": "Horde",
+      "auctionHouseId": 562,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:41.409Z"
+    },
+    {
+      "realm": "Spineshatter",
+      "faction": "Alliance",
+      "auctionHouseId": 561,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:42.960Z"
+    },
+    {
+      "realm": "Soulseeker",
+      "faction": "Horde",
+      "auctionHouseId": 564,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:44.973Z"
+    },
+    {
+      "realm": "Soulseeker",
+      "faction": "Alliance",
+      "auctionHouseId": 563,
+      "success": true,
+      "timestamp": "2025-06-16T23:44:46.470Z"
+    }
+  ]
+}

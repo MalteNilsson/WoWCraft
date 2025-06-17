@@ -7,10 +7,9 @@ import rawEnchanting  from '@/data/recipes/enchanting.json';
 import rawEngineering  from '@/data/recipes/engineering.json';
 import rawLeatherworking  from '@/data/recipes/leatherworking.json';
 import rawTailoring  from '@/data/recipes/tailoring.json';
-import priceRows   from '@/data/prices/realm-559.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, PlanStep, blacklistedSpellIds } from '@/lib/planner';
+import { makeDynamicPlan, PlanStep, blacklistedSpellIds, calculateTotalMaterials } from '@/lib/planner';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
@@ -50,18 +49,24 @@ const rawDataMap: Record<string, any[]> = {
   Tailoring: rawTailoring,
 };
 
-
-
-
-const prices = toPriceMap(
-  priceRows as any[],
-  Object.entries(materialInfo).reduce<Record<string, { vendorPrice?: number }>>((acc, [id, val]) => {
-    if (val.vendorPrice != null) {
-      acc[String(id)] = { vendorPrice: val.vendorPrice };
+// Function to dynamically load price data
+async function loadPriceData(realm: string, faction: string): Promise<any[]> {
+  try {
+    const filename = `${realm}_${faction.toLowerCase()}.json`;
+    
+    // Import the price data directly from the src directory
+    const data = await import(`@/data/prices/${filename}`);
+    return data.default || data;
+  } catch (error) {
+    console.error(`Error loading price data for ${realm} ${faction}:`, error);
+    // Fallback to Thunderstrike Alliance if the requested file doesn't exist
+    if (realm !== 'Thunderstrike' || faction !== 'Alliance') {
+      console.log('Falling back to Thunderstrike Alliance price data');
+      return loadPriceData('Thunderstrike', 'Alliance');
     }
-    return acc;
-  }, {})
-);
+    throw error;
+  }
+}
 
 // ── helpers ──
 const diffColor = (skill: number, d: Recipe['difficulty']) => {
@@ -140,11 +145,13 @@ function MaterialCard({
   depth = 0,
   materialInfo,
   position = 'only',
+  expCrafts,
 }: {
   node: MaterialTreeNode;
   depth?: number;
   materialInfo: Record<number, MaterialInfo>;
   position?: 'top' | 'middle' | 'bottom' | 'only';
+  expCrafts: number;
 }) {
   const roundedClass = {
     only: 'rounded-xl',
@@ -161,6 +168,9 @@ function MaterialCard({
   const canCraftCheaper = node.craftCost < node.buyCost;
 
   const displayChildren = canCraftCheaper && isParent;
+
+  // Calculate per-craft quantity by dividing total quantity by number of crafts
+  const perCraftQuantity = node.quantity / expCrafts;
 
   return (
     <div style={{ marginLeft: `${indent}px` }}>
@@ -179,9 +189,14 @@ function MaterialCard({
               className="w-8 h-8 rounded object-cover border border-neutral-700"
             />
           )}
+          <div className="flex flex-col">
           <span className="text-base font-medium" style={{ color: qualityColors[info?.quality ?? 1] }}>
             {node.name}
           </span>
+            <span className="text-sm text-neutral-400">
+              Per Craft: {perCraftQuantity}
+          </span>
+          </div>
         </div>
         <div className="flex flex-col items-end text-right">
           {node.noAhPrice ? (
@@ -225,6 +240,7 @@ function MaterialCard({
                   ? 'bottom'
                   : 'middle'
               }
+              expCrafts={expCrafts}
             />
           ))}
         </CollapsibleSection>
@@ -236,9 +252,11 @@ function MaterialCard({
 function MaterialTreeFlat({
   rootNodes,
   materialInfo,
+  expCrafts,
 }: {
   rootNodes: MaterialTreeNode[];
   materialInfo: Record<number, MaterialInfo>;
+  expCrafts: number;
 }) {
   return (
     <div>
@@ -248,6 +266,7 @@ function MaterialTreeFlat({
           node={node}
           materialInfo={materialInfo}
           position={node.children?.length ? 'top' : 'only'}
+          expCrafts={expCrafts}
         />
       ))}
     </div>
@@ -277,6 +296,11 @@ export default function EnchantingPlanner() {
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
   const [skipLimitedStock, setSkipLimitedStock] = useState(true);
+  
+  // Add state for prices
+  const [prices, setPrices] = useState<any>({});
+  const [isLoadingPrices, setIsLoadingPrices] = useState(true);
+  
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
 
@@ -302,7 +326,7 @@ export default function EnchantingPlanner() {
   };
 
   const handleSliderEnd = () => {
-    setIsReleased(true);
+      setIsReleased(true);
     setIsSliding(false);
   };
 
@@ -368,15 +392,15 @@ export default function EnchantingPlanner() {
     }
     return makeDynamicPlan(
       committedSkill,
-      target,
-      recipes,
-      prices,
-      materialInfo,
+        target,
+        recipes,
+        prices,
+        materialInfo,
       selectedProfession,
-      includeRecipeCost,
+        includeRecipeCost,
       skipLimitedStock,
       useMarketValue
-    );
+  );
   }, [committedSkill, target, recipes, prices, materialInfo, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue]);
 
   const fuse = useMemo(
@@ -404,7 +428,7 @@ export default function EnchantingPlanner() {
         setRngHigh(first.endSkill);
       }
     }
-  }, [view]);
+  }, [view, plan, committedSkill]);
 
   // Use faster debounced value for visual updates like difficulty colors
   const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
@@ -592,8 +616,6 @@ export default function EnchantingPlanner() {
   });
   
 
-  //const [matInfo, setMatInfo] = useState<Record<string,{name:string;icon:string|null}>>({});
-
   // Use pre-scraped material names and icons from JSON + /public/icons/materials
   const materialMap = materialInfo;
 
@@ -694,7 +716,7 @@ const renderXTick = selected
   const [selectedVersion, setSelectedVersion] = useState("Vanilla");
 
   // Only Thunderstrike for Vanilla for now
-  const vanillaRealms = ["Thunderstrike"];
+  const vanillaRealms = ["Thunderstrike", "Spineshatter", "Soulseeker"];
   const tbcRealms: string[] = [];
   const realms = selectedVersion === "Vanilla" ? vanillaRealms : tbcRealms;
   const [selectedRealm, setSelectedRealm] = useState(vanillaRealms[0]);
@@ -702,31 +724,50 @@ const renderXTick = selected
   const factions = ["Alliance", "Horde"];
   const [selectedFaction, setSelectedFaction] = useState("Alliance");
 
+  // Load prices when realm or faction changes
+  useEffect(() => {
+    async function loadPrices() {
+      setIsLoadingPrices(true);
+      console.log(`Loading prices for ${selectedRealm} ${selectedFaction}...`);
+      try {
+        const priceRows = await loadPriceData(selectedRealm, selectedFaction);
+        console.log(`Loaded ${priceRows.length} price rows for ${selectedRealm} ${selectedFaction}`);
+        const priceMap = toPriceMap(
+          priceRows,
+          Object.entries(materialInfo).reduce<Record<string, { vendorPrice?: number }>>((acc, [id, val]) => {
+            if (val.vendorPrice != null) {
+              acc[String(id)] = { vendorPrice: val.vendorPrice };
+            }
+            return acc;
+          }, {})
+        );
+        setPrices(priceMap);
+      } catch (error) {
+        console.error('Failed to load prices:', error);
+        // Set empty prices as fallback
+        setPrices({});
+      } finally {
+        setIsLoadingPrices(false);
+      }
+    }
+
+    loadPrices();
+  }, [selectedRealm, selectedFaction]);
+
   // Add effect to reset realm if version changes and current realm is not available
   useEffect(() => {
     if (!realms.includes(selectedRealm)) {
       setSelectedRealm(realms[0] || "");
     }
-  }, [selectedVersion]);
+  }, [selectedVersion, realms, selectedRealm]);
 
-  useEffect(() => {
-    if (view === 'route' && plan && plan.steps.length > 0) {
-      const firstStep = plan.steps[0];
-      if ('recipe' in firstStep) {
-        const recipeStep = firstStep as Extract<PlanStep, { recipe: Recipe }>;
-        const cardKey = `${recipeStep.recipe.name}-${recipeStep.endSkill}`;
-        setSelectedCardKey(cardKey);
-        setSelectedRecipeId(recipeStep.recipe.id);
-      }
-    }
-    // Removed the else block that sets selectedCardKey and selectedRecipeId for 'all' view
-  }, [view, plan]);
+  const [showMaterials, setShowMaterials] = useState(false);
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">
 
       {/* Panels */}
-      <div className="flex flex-1 min-h-0">
+      <div className="flex flex-1 min-h-0 relative">
         {/* Aside */}
         <aside className="w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px]">
           {/* Slider + Tabs */}
@@ -803,9 +844,9 @@ const renderXTick = selected
               <Listbox value={selectedProfession} onChange={setSelectedProfession}>
                 {({ open }) => (
                   <div className="relative w-full">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-sm flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
                       <div className="flex items-center gap-2">
-                        <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-4 h-4" />
+                        <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-10 h-10" />
                         <span className="font-semibold">{selectedProfession}</span>
                       </div>
                       <svg
@@ -822,8 +863,8 @@ const renderXTick = selected
                         />
                       </svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {professions.map((prof) => (
+                    <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
+              {professions.map((prof) => (
                         <Listbox.Option
                           key={prof}
                           value={prof}
@@ -835,14 +876,14 @@ const renderXTick = selected
                         >
                           {({ selected }) => (
                             <div className="flex items-center gap-2">
-                              <img src={`/icons/${prof.toLowerCase()}.webp`} alt="" className="w-4 h-4" />
+                              <img src={`/icons/${prof.toLowerCase()}.webp`} alt="" className="w-10 h-10" />
                               <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>
                                 {prof}
                               </span>
                             </div>
                           )}
                         </Listbox.Option>
-                      ))}
+              ))}
                     </Listbox.Options>
                   </div>
                 )}
@@ -880,35 +921,35 @@ const renderXTick = selected
                       >
                         <div className="p-3 space-y-3">
                           <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Include Recipe Cost</label>
-                            <button 
-                              onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
+                    <label className="text-xs text-neutral-400">Include Recipe Cost</label>
+                    <button 
+                      onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                        includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                          includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
                           <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Skip Limited Stock</label>
-                            <button 
-                              onClick={() => setSkipLimitedStock(!skipLimitedStock)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                skipLimitedStock ? 'bg-yellow-400' : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  skipLimitedStock ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
+                    <label className="text-xs text-neutral-400">Skip Limited Stock</label>
+                    <button 
+                      onClick={() => setSkipLimitedStock(!skipLimitedStock)}
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                        skipLimitedStock ? 'bg-yellow-400' : 'bg-neutral-700'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                          skipLimitedStock ? 'translate-x-5' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
                           <div className="flex items-center justify-between">
                             <label className="text-xs text-neutral-400">Use Market Value</label>
                             <button 
@@ -1276,11 +1317,29 @@ const renderXTick = selected
                     className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
                               border-t border-neutral-700 py-3 px-4 text-center"
                   >
-                    <div className="text-2xl font-semibold">
-                      <span className="text-neutral-400">Total Cost: </span>
-                      <span className="text-yellow-300">
-                        <FormatMoney copper={plan.totalCost} />
-                      </span>
+                    <div className="text-2xl font-semibold flex items-center justify-center relative">
+                      <div>
+                        <span className="text-neutral-400">Total Cost: </span>
+                        <span className="text-yellow-300">
+                          <FormatMoney copper={plan.totalCost} />
+                        </span>
+                      </div>
+                      <div className="absolute right-0">
+                        <button
+                          onClick={() => setShowMaterials(!showMaterials)}
+                          className="flex items-center gap-2 px-3 py-1.5 text-[15px] text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-extrabold transition-colors border border-neutral-600"
+                        >
+                          <span>Materials</span>
+                          <svg
+                            className={`w-4 h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -1288,6 +1347,45 @@ const renderXTick = selected
             </div>
           </div>
         </aside>
+
+        {/* Materials Panel (now sibling to aside, not inside it) */}
+        <AnimatePresence>
+          {showMaterials && view === 'route' && (
+            <motion.div
+              initial={{ opacity: 0, x: -20, scaleX: 0.95 }}
+              animate={{ opacity: 1, x: 0, scaleX: 1 }}
+              exit={{ opacity: 0, x: -20, scaleX: 0.95 }}
+              transition={{ 
+                duration: 0.2,
+                ease: "easeOut"
+              }}
+              className="absolute left-[37.5rem] top-0 w-64 h-full bg-neutral-900/95 backdrop-blur-sm rounded shadow-lg border border-neutral-800 z-50 origin-left"
+            >
+              <div className="p-3 h-full flex flex-col">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold text-neutral-200">Required Materials</h3>
+                  <button
+                    onClick={() => setShowMaterials(false)}
+                    className="text-neutral-400 hover:text-neutral-200 transition-colors duration-200"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="space-y-2 overflow-y-auto flex-1">
+                  {calculateTotalMaterials(plan.steps, materialInfo).map(material => (
+                    <div key={material.itemId} className="flex justify-between items-center text-neutral-200">
+                      <span className="flex-1">{material.name || `Item ${material.itemId}`}</span>
+                      <span className="text-yellow-300 font-medium">
+                        {material.quantity.toLocaleString()}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Main panel */}
         <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950
           [&::-webkit-scrollbar]:w-2
@@ -1683,7 +1781,7 @@ const renderXTick = selected
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Material Calculations</h3>
               </div>
               <div className="px-6 py-6">
-                <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} />
+                <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} />
               </div>
 
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
