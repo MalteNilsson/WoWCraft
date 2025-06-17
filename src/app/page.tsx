@@ -716,7 +716,7 @@ const renderXTick = selected
   const [selectedVersion, setSelectedVersion] = useState("Vanilla");
 
   // Only Thunderstrike for Vanilla for now
-  const vanillaRealms = ["Thunderstrike", "Spineshatter", "Soulseeker"];
+  const vanillaRealms = ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"];
   const tbcRealms: string[] = [];
   const realms = selectedVersion === "Vanilla" ? vanillaRealms : tbcRealms;
   const [selectedRealm, setSelectedRealm] = useState(vanillaRealms[0]);

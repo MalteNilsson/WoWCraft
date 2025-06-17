@@ -18,7 +18,10 @@ const REALM_LISTS = {
     'anniversary': [
         'Thunderstrike',
         'Spineshatter', 
-        'Soulseeker'
+        'Soulseeker',
+        'Dreamscythe',
+        'Nightslayer',
+        'Doomhowl'
     ]
 };
 
