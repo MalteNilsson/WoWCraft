@@ -1,11 +1,12 @@
 import { redirect } from 'next/navigation';
 
-export default function HomePage({
+export default async function HomePage({
   searchParams,
 }: {
-  searchParams: { skill?: string };
+  searchParams: Promise<{ skill?: string }>;
 }) {
-  const skillParam = searchParams.skill;
+  const params = await searchParams;
+  const skillParam = params.skill;
   const redirectUrl = skillParam ? `/enchanting?skill=${skillParam}` : '/enchanting';
   redirect(redirectUrl);
 }
