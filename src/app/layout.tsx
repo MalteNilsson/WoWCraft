@@ -26,11 +26,8 @@ export const metadata: Metadata = {
   title: "WoWCraft",
   description: "World of Warcraft profession planning and optimization tool",
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/icons/WoWCraft.png', sizes: 'any', type: 'image/png' },
-    ],
-    shortcut: '/favicon.ico',
+    icon: '/icons/WoWCraft.png',
+    shortcut: '/icons/WoWCraft.png',
     apple: '/icons/WoWCraft.png',
   },
 };
@@ -55,12 +52,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${inter.className} overflow-hidden`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/icons/WoWCraft.png" type="image/png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/icons/WoWCraft.png" />
-      </head>
       <body className="overflow-hidden">
         {children}
         <Analytics />
