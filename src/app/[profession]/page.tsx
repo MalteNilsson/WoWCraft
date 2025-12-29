@@ -40,7 +40,6 @@ const professions = [
   'Tailoring',
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const rawDataMap: Record<string, any[]> = {
   Alchemy: rawAlchemy,
   Blacksmithing: rawBlacksmithing,
@@ -51,7 +50,6 @@ const rawDataMap: Record<string, any[]> = {
 };
 
 // Function to dynamically load price data
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function loadPriceData(realm: string, faction: string): Promise<any[]> {
   try {
     const filename = `${realm}_${faction.toLowerCase()}.json`;
@@ -166,7 +164,6 @@ function MaterialCard({
         <div className="flex items-center gap-3">
           <span className="text-base">{node.quantity}</span>
           {iconUrl && (
-            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={iconUrl}
               alt={info?.name ?? 'Item'}
