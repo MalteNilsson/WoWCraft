@@ -442,7 +442,7 @@ export function makeDynamicPlan(
         const processedSkills = new Set<number>();
         
         // Keep processing until we've covered all skill levels
-        let maxIterations = 1000; // Safety limit
+        const maxIterations = 1000; // Safety limit
         let iteration = 0;
         
         while (iteration < maxIterations) {

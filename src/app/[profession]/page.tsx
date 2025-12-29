@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import rawAlchemy  from '@/data/recipes/alchemy.json';
 import rawBlacksmithing  from '@/data/recipes/blacksmithing.json';
 import rawEnchanting  from '@/data/recipes/enchanting.json';
@@ -298,8 +298,8 @@ export default function EnchantingPlanner() {
     return 'Enchanting';
   });
   // Define realms and factions early for use in initial state
-  const realms = ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"];
-  const factions = ["Alliance", "Horde"];
+  const realms = useMemo(() => ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"], []);
+  const factions = useMemo(() => ["Alliance", "Horde"], []);
   
   // Initialize from URL params if available
   const [selectedVersion, setSelectedVersion] = useState(() => {
@@ -409,8 +409,9 @@ export default function EnchantingPlanner() {
   useEffect(() => {
     if (urlVersion) {
       const normalizedVersion = urlVersion.charAt(0).toUpperCase() + urlVersion.slice(1).toLowerCase();
-      if (versions.includes(normalizedVersion)) {
-        setSelectedVersion(normalizedVersion);
+      const versions = ["Vanilla", "The Burning Crusade"];
+      if (versions.includes(normalizedVersion) || normalizedVersion === 'Tbc') {
+        setSelectedVersion(normalizedVersion === 'Tbc' ? 'The Burning Crusade' : normalizedVersion);
       } else {
         // Invalid version in URL, redirect to default
         router.push('/enchanting');
@@ -444,13 +445,13 @@ export default function EnchantingPlanner() {
   };
 
   // Update URL when any selector changes
-  const updateUrl = (overrides?: { realm?: string; faction?: string; version?: string }) => {
+  const updateUrl = useCallback((overrides?: { realm?: string; faction?: string; version?: string }) => {
     const realm = overrides?.realm ?? selectedRealm;
     const faction = overrides?.faction ?? selectedFaction;
     const version = overrides?.version ?? selectedVersion;
     const newUrl = buildUrlWithParams(selectedProfession, committedSkill, committedTarget, version, realm, faction);
     router.push(newUrl, { scroll: false });
-  };
+  }, [selectedProfession, committedSkill, committedTarget, selectedRealm, selectedFaction, selectedVersion, router]);
   
   // Track recent user-initiated changes to prevent URL effects from overwriting them
   // We track the timestamp of any recent change, not the specific value
@@ -524,7 +525,7 @@ export default function EnchantingPlanner() {
       // Update URL when skill is committed
       updateUrl();
     }
-  }, [debouncedSkill, isReleased, isSliding, skill]);
+  }, [debouncedSkill, isReleased, isSliding, skill, updateUrl]);
 
   const handleSliderStart = () => {
     setIsDirectChange(false);
@@ -647,7 +648,7 @@ export default function EnchantingPlanner() {
     });
     
     return newRecipes;
-  }, [selectedProfession, pendingProfessionCounter]);
+  }, [selectedProfession]);
 
   // Create a Set of recipe IDs for the current profession (for sub-crafting optimization)
   const currentProfessionRecipeIds = useMemo(() => {
@@ -729,7 +730,7 @@ export default function EnchantingPlanner() {
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, materialInfo, selectedProfession, pendingProfessionCounter, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -921,7 +922,7 @@ export default function EnchantingPlanner() {
     if (!selected || totalLevelUps <= 0) return 0;
     // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
     return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty);
-  }, [selected, clampedLow, clampedHigh]);
+  }, [selected, clampedLow, clampedHigh, totalLevelUps]);
 
   useEffect(() => {
     if (!selected) return;
@@ -956,7 +957,7 @@ export default function EnchantingPlanner() {
       out[id] = { qty, buyCost, craftCost, saved };
     }
     return out;
-  }, [selected, expCrafts, prices, materialInfo, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds]);
+  }, [selected, expCrafts, prices, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds]);
 
   const materialTrees = Object.entries(materialTotals).map(([id, { qty }]) => {
     return buildMaterialTree(parseInt(id), qty, prices, materialInfo, true, new Set(), useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
@@ -1033,7 +1034,7 @@ const renderXTick = selected
         .map(s => `${s.recipe.name}-${s.endSkill}`)
     );
     setPreviouslyVisible(currentlyVisible);
-  }, [committedSkill]);
+  }, [committedSkill, plan.steps]);
 
   const lastViewChange = useRef(view);
 
@@ -1174,7 +1175,7 @@ const renderXTick = selected
         }
       }
     }
-  }, [urlRealm, selectedRealm]);
+  }, [urlRealm, selectedRealm, realms]);
 
   // Handle URL faction parameter
   useEffect(() => {
@@ -1190,7 +1191,7 @@ const renderXTick = selected
         }
       }
     }
-  }, [urlFaction, selectedFaction]);
+  }, [urlFaction, selectedFaction, factions]);
 
   // Load prices when realm or faction changes
   useEffect(() => {
@@ -1284,7 +1285,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -1322,7 +1323,7 @@ const renderXTick = selected
       })).sort((a, b) => a.itemId - b.itemId),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting]);
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
