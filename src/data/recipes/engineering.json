@@ -1,5 +1,84 @@
 [
   {
+    "id": 19800,
+    "name": "Thorium Shells",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "12359": 2,
+      "15992": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_ammo_bullet_03",
+    "url": "https://www.wowhead.com/classic/spell=19800/thorium-shells",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16051,
+      "recipeItemName": "Schematic: Thorium Shells"
+    }
+  },
+  {
+    "id": 3934,
+    "name": "Flying Tiger Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 145,
+      "gray": 160
+    },
+    "materials": {
+      "818": 2,
+      "2318": 6
+    },
+    "minSkill": 100,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=3934/flying-tiger-goggles",
+    "source": {
+      "type": "trainer",
+      "cost": 400,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
     "id": 23489,
     "name": "Ultrasafe Transporter - Gadgetzan",
     "quality": 2,
@@ -20,6 +99,127 @@
     "minSkill": null,
     "icon": "inv_misc_enggizmos_12",
     "url": "https://www.wowhead.com/classic/spell=23489/ultrasafe-transporter-gadgetzan",
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 19795,
+    "name": "Thorium Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "12359": 6
+    },
+    "minSkill": 275,
+    "icon": "inv_gizmo_pipe_04",
+    "url": "https://www.wowhead.com/classic/spell=19795/thorium-tube",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16047,
+      "recipeItemName": "Schematic: Thorium Tube"
+    }
+  },
+  {
+    "id": 19815,
+    "name": "Delicate Arcanite Converter",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "12360": 1,
+      "14227": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_gizmo_07",
+    "url": "https://www.wowhead.com/classic/spell=19815/delicate-arcanite-converter",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16050,
+      "recipeItemName": "Schematic: Delicate Arcanite Converter"
+    }
+  },
+  {
+    "id": 12619,
+    "name": "Hi-Explosive Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "10505": 2,
+      "10560": 1,
+      "10561": 2
+    },
+    "minSkill": 235,
+    "icon": "inv_misc_bomb_07",
+    "url": "https://www.wowhead.com/classic/spell=12619/hi-explosive-bomb",
+    "source": {
+      "type": "trainer",
+      "cost": 2400,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        }
+      ]
+    }
+  },
+  {
+    "id": 19791,
+    "name": "Thorium Widget",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_gizmo_04",
+    "url": "https://www.wowhead.com/classic/spell=19791/thorium-widget",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16042,
+      "recipeItemName": "Schematic: Thorium Widget"
+    }
+  },
+  {
+    "id": 23486,
+    "name": "Dimensional Ripper - Everlook",
+    "quality": 2,
+    "difficulty": {
+      "orange": null,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "3860": 10,
+      "7077": 4,
+      "7910": 2,
+      "10586": 1,
+      "18631": 1
+    },
+    "minSkill": null,
+    "icon": "inv_misc_enggizmos_07",
+    "url": "https://www.wowhead.com/classic/spell=23486/dimensional-ripper-everlook",
     "source": {
       "type": "free"
     }
@@ -58,123 +258,36 @@
     }
   },
   {
-    "id": 19800,
-    "name": "Thorium Shells",
-    "quality": 2,
-    "difficulty": {
-      "orange": 285,
-      "yellow": 305,
-      "green": 315,
-      "gray": 325
-    },
-    "materials": {
-      "12359": 2,
-      "15992": 1
-    },
-    "minSkill": 285,
-    "icon": "inv_ammo_bullet_03",
-    "url": "https://www.wowhead.com/classic/spell=19800/thorium-shells",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16051,
-      "recipeItemName": "Schematic: Thorium Shells"
-    }
-  },
-  {
-    "id": 19791,
-    "name": "Thorium Widget",
+    "id": 12599,
+    "name": "Mithril Casing",
     "quality": 1,
     "difficulty": {
-      "orange": 260,
-      "yellow": 280,
-      "green": 290,
-      "gray": 300
+      "orange": 215,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
     },
     "materials": {
-      "12359": 3,
-      "14047": 1
+      "3860": 3
     },
-    "minSkill": 260,
-    "icon": "inv_gizmo_04",
-    "url": "https://www.wowhead.com/classic/spell=19791/thorium-widget",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16042,
-      "recipeItemName": "Schematic: Thorium Widget"
-    }
-  },
-  {
-    "id": 19815,
-    "name": "Delicate Arcanite Converter",
-    "quality": 1,
-    "difficulty": {
-      "orange": 285,
-      "yellow": 305,
-      "green": 315,
-      "gray": 325
-    },
-    "materials": {
-      "12360": 1,
-      "14227": 1
-    },
-    "minSkill": 285,
-    "icon": "inv_gizmo_07",
-    "url": "https://www.wowhead.com/classic/spell=19815/delicate-arcanite-converter",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16050,
-      "recipeItemName": "Schematic: Delicate Arcanite Converter"
-    }
-  },
-  {
-    "id": 23486,
-    "name": "Dimensional Ripper - Everlook",
-    "quality": 2,
-    "difficulty": {
-      "orange": null,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "3860": 10,
-      "7077": 4,
-      "7910": 2,
-      "10586": 1,
-      "18631": 1
-    },
-    "minSkill": null,
-    "icon": "inv_misc_enggizmos_07",
-    "url": "https://www.wowhead.com/classic/spell=23486/dimensional-ripper-everlook",
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 12619,
-    "name": "Hi-Explosive Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 235,
-      "yellow": 235,
-      "green": 255,
-      "gray": 275
-    },
-    "materials": {
-      "10505": 2,
-      "10560": 1,
-      "10561": 2
-    },
-    "minSkill": 235,
-    "icon": "inv_misc_bomb_07",
-    "url": "https://www.wowhead.com/classic/spell=12619/hi-explosive-bomb",
+    "minSkill": 215,
+    "icon": "inv_gizmo_mithrilcasing_01",
+    "url": "https://www.wowhead.com/classic/spell=12599/mithril-casing",
     "source": {
       "type": "trainer",
-      "cost": 2400,
+      "cost": 1800,
       "trainers": [
         {
           "id": 8736,
           "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
         }
       ]
     }
@@ -216,6 +329,32 @@
     }
   },
   {
+    "id": 22704,
+    "name": "Field Repair Bot 74A",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7067": 2,
+      "7068": 1,
+      "7191": 1,
+      "8170": 4,
+      "12359": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_egg_05",
+    "url": "https://www.wowhead.com/classic/spell=22704/field-repair-bot-74a",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18235,
+      "recipeItemName": "Schematic: Field Repair Bot 74A"
+    }
+  },
+  {
     "id": 12759,
     "name": "Gnomish Death Ray",
     "quality": 1,
@@ -251,74 +390,70 @@
     }
   },
   {
-    "id": 19795,
-    "name": "Thorium Tube",
+    "id": 3979,
+    "name": "Accurate Scope",
     "quality": 1,
     "difficulty": {
-      "orange": 275,
-      "yellow": 295,
-      "green": 305,
-      "gray": 315
+      "orange": 180,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
     },
     "materials": {
-      "12359": 6
+      "1529": 1,
+      "3864": 1,
+      "4371": 1
     },
-    "minSkill": 275,
-    "icon": "inv_gizmo_pipe_04",
-    "url": "https://www.wowhead.com/classic/spell=19795/thorium-tube",
+    "minSkill": 180,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/classic/spell=3979/accurate-scope",
     "source": {
       "type": "item",
-      "recipeItemId": 16047,
-      "recipeItemName": "Schematic: Thorium Tube"
+      "recipeItemId": 13310,
+      "recipeItemName": "Schematic: Accurate Scope"
     }
   },
   {
-    "id": 23071,
-    "name": "Truesilver Transformer",
-    "quality": 1,
+    "id": 3956,
+    "name": "Green Tinted Goggles",
+    "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 270,
-      "green": 275,
-      "gray": 280
+      "orange": 150,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
     },
     "materials": {
-      "6037": 2,
-      "7067": 2,
-      "7069": 1
+      "1206": 2,
+      "2319": 4,
+      "4368": 1
     },
-    "minSkill": 260,
-    "icon": "inv_staff_18",
-    "url": "https://www.wowhead.com/classic/spell=23071/truesilver-transformer",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18651,
-      "recipeItemName": "Schematic: Truesilver Transformer"
-    }
-  },
-  {
-    "id": 12599,
-    "name": "Mithril Casing",
-    "quality": 1,
-    "difficulty": {
-      "orange": 215,
-      "yellow": 215,
-      "green": 235,
-      "gray": 255
-    },
-    "materials": {
-      "3860": 3
-    },
-    "minSkill": 215,
-    "icon": "inv_gizmo_mithrilcasing_01",
-    "url": "https://www.wowhead.com/classic/spell=12599/mithril-casing",
+    "minSkill": 150,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=3956/green-tinted-goggles",
     "source": {
       "type": "trainer",
-      "cost": 1800,
+      "cost": 750,
       "trainers": [
         {
           "id": 8736,
           "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
         },
         {
           "id": 11017,
@@ -327,8 +462,38 @@
         {
           "id": 5174,
           "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
         }
       ]
+    }
+  },
+  {
+    "id": 23078,
+    "name": "Goblin Jumper Cables XL",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "7191": 2,
+      "7910": 2,
+      "14227": 2,
+      "15994": 2,
+      "18631": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_enggizmos_11",
+    "url": "https://www.wowhead.com/classic/spell=23078/goblin-jumper-cables-xl",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18653,
+      "recipeItemName": "Schematic: Goblin Jumper Cables XL"
     }
   },
   {
@@ -359,86 +524,214 @@
     }
   },
   {
-    "id": 12907,
-    "name": "Gnomish Mind Control Cap",
+    "id": 8895,
+    "name": "Goblin Rocket Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 235,
-      "yellow": 255,
-      "green": 265,
-      "gray": 275
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
     },
     "materials": {
-      "3860": 10,
-      "4338": 4,
-      "6037": 4,
-      "7910": 2,
-      "10558": 1
+      "4234": 4,
+      "9061": 2,
+      "10026": 1,
+      "10559": 2,
+      "10560": 1
     },
-    "minSkill": 235,
-    "icon": "inv_helmet_49",
-    "url": "https://www.wowhead.com/classic/spell=12907/gnomish-mind-control-cap",
+    "minSkill": 225,
+    "icon": "inv_gizmo_rocketboot_01",
+    "url": "https://www.wowhead.com/classic/spell=8895/goblin-rocket-boots",
     "source": {
       "type": "trainer",
-      "cost": 2600,
+      "cost": 2200,
       "trainers": [
         {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
+          "id": 8126,
+          "name": "Nixx Sprocketspring"
         },
         {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
+          "id": 8738,
+          "name": "Vazario Linkgrease"
         }
       ]
     }
   },
   {
-    "id": 22704,
-    "name": "Field Repair Bot 74A",
+    "id": 12590,
+    "name": "Gyromatic Micro-Adjustor",
     "quality": 1,
     "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
     },
     "materials": {
-      "7067": 2,
-      "7068": 1,
-      "7191": 1,
-      "8170": 4,
-      "12359": 12
+      "3859": 4
     },
-    "minSkill": 300,
-    "icon": "inv_egg_05",
-    "url": "https://www.wowhead.com/classic/spell=22704/field-repair-bot-74a",
+    "minSkill": 175,
+    "icon": "inv_misc_screwdriver_02",
+    "url": "https://www.wowhead.com/classic/spell=12590/gyromatic-micro-adjustor",
     "source": {
-      "type": "item",
-      "recipeItemId": 18235,
-      "recipeItemName": "Schematic: Field Repair Bot 74A"
+      "type": "trainer",
+      "cost": 1000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
     }
   },
   {
-    "id": 3934,
-    "name": "Flying Tiger Goggles",
-    "quality": 2,
+    "id": 23071,
+    "name": "Truesilver Transformer",
+    "quality": 1,
     "difficulty": {
-      "orange": 100,
-      "yellow": 130,
-      "green": 145,
-      "gray": 160
+      "orange": 260,
+      "yellow": 270,
+      "green": 275,
+      "gray": 280
     },
     "materials": {
-      "818": 2,
-      "2318": 6
+      "6037": 2,
+      "7067": 2,
+      "7069": 1
     },
-    "minSkill": 100,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=3934/flying-tiger-goggles",
+    "minSkill": 260,
+    "icon": "inv_staff_18",
+    "url": "https://www.wowhead.com/classic/spell=23071/truesilver-transformer",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18651,
+      "recipeItemName": "Schematic: Truesilver Transformer"
+    }
+  },
+  {
+    "id": 3936,
+    "name": "Deadly Blunderbuss",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "2319": 2,
+      "4359": 4,
+      "4361": 2,
+      "4399": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=3936/deadly-blunderbuss",
     "source": {
       "type": "trainer",
-      "cost": 400,
+      "cost": 420,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12585,
+    "name": "Solid Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "7912": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_powder_black",
+    "url": "https://www.wowhead.com/classic/spell=12585/solid-blasting-powder",
+    "source": {
+      "type": "trainer",
+      "cost": 1000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3932,
+    "name": "Target Dummy",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 115,
+      "green": 130,
+      "gray": 145
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 1,
+      "4359": 2,
+      "4363": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_crate_06",
+    "url": "https://www.wowhead.com/classic/spell=3932/target-dummy",
+    "source": {
+      "type": "trainer",
+      "cost": 300,
       "trainers": [
         {
           "id": 8736,
@@ -508,79 +801,183 @@
     }
   },
   {
-    "id": 22793,
-    "name": "Biznicks 247x128 Accurascope",
-    "quality": 3,
+    "id": 19567,
+    "name": "Salt Shaker",
+    "quality": 1,
     "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
     },
     "materials": {
-      "7076": 2,
-      "11371": 6,
-      "16000": 1,
-      "16006": 4,
-      "17011": 2
+      "10558": 1,
+      "10560": 4,
+      "10561": 1,
+      "12359": 6
     },
-    "minSkill": 300,
-    "icon": "inv_misc_spyglass_02",
-    "url": "https://www.wowhead.com/classic/spell=22793/biznicks-247x128-accurascope",
+    "minSkill": 250,
+    "icon": "inv_egg_05",
+    "url": "https://www.wowhead.com/classic/spell=19567/salt-shaker",
     "source": {
-      "type": "item",
-      "recipeItemId": 18290,
-      "recipeItemName": "Schematic: Biznicks 247x128 Accurascope"
+      "type": "trainer",
+      "cost": 4000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        }
+      ]
     }
   },
   {
-    "id": 3979,
-    "name": "Accurate Scope",
-    "quality": 1,
+    "id": 12897,
+    "name": "Gnomish Goggles",
+    "quality": 2,
     "difficulty": {
-      "orange": 180,
-      "yellow": 200,
-      "green": 210,
-      "gray": 220
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
     },
     "materials": {
-      "1529": 1,
-      "3864": 1,
-      "4371": 1
+      "4234": 2,
+      "8151": 2,
+      "10500": 1,
+      "10558": 2,
+      "10559": 1
     },
-    "minSkill": 180,
-    "icon": "inv_misc_spyglass_02",
-    "url": "https://www.wowhead.com/classic/spell=3979/accurate-scope",
+    "minSkill": 210,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=12897/gnomish-goggles",
     "source": {
-      "type": "item",
-      "recipeItemId": 13310,
-      "recipeItemName": "Schematic: Accurate Scope"
+      "type": "trainer",
+      "cost": 1500,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
     }
   },
   {
-    "id": 23078,
-    "name": "Goblin Jumper Cables XL",
-    "quality": 1,
+    "id": 3940,
+    "name": "Shadow Goggles",
+    "quality": 2,
     "difficulty": {
-      "orange": 265,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
     },
     "materials": {
-      "7191": 2,
-      "7910": 2,
-      "14227": 2,
-      "15994": 2,
-      "18631": 2
+      "1210": 2,
+      "2319": 4
     },
-    "minSkill": 265,
-    "icon": "inv_misc_enggizmos_11",
-    "url": "https://www.wowhead.com/classic/spell=23078/goblin-jumper-cables-xl",
+    "minSkill": 120,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=3940/shadow-goggles",
     "source": {
       "type": "item",
-      "recipeItemId": 18653,
-      "recipeItemName": "Schematic: Goblin Jumper Cables XL"
+      "recipeItemId": 4410,
+      "recipeItemName": "Schematic: Shadow Goggles"
+    }
+  },
+  {
+    "id": 3961,
+    "name": "Gyrochronatom",
+    "quality": 1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "3575": 1,
+      "10558": 1
+    },
+    "minSkill": 170,
+    "icon": "inv_misc_pocketwatch_02",
+    "url": "https://www.wowhead.com/classic/spell=3961/gyrochronatom",
+    "source": {
+      "type": "trainer",
+      "cost": 900,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3938,
+    "name": "Bronze Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 105,
+      "green": 130,
+      "gray": 155
+    },
+    "materials": {
+      "2841": 2,
+      "2880": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_gizmo_pipe_01",
+    "url": "https://www.wowhead.com/classic/spell=3938/bronze-tube",
+    "source": {
+      "type": "trainer",
+      "cost": 450,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
     }
   },
   {
@@ -622,183 +1019,53 @@
     }
   },
   {
-    "id": 12758,
-    "name": "Goblin Rocket Helmet",
-    "quality": 2,
-    "difficulty": {
-      "orange": 245,
-      "yellow": 265,
-      "green": 275,
-      "gray": 285
-    },
-    "materials": {
-      "3860": 4,
-      "9061": 4,
-      "10543": 1,
-      "10560": 1
-    },
-    "minSkill": 245,
-    "icon": "inv_helmet_49",
-    "url": "https://www.wowhead.com/classic/spell=12758/goblin-rocket-helmet",
-    "source": {
-      "type": "trainer",
-      "cost": 3000,
-      "trainers": [
-        {
-          "id": 8126,
-          "name": "Nixx Sprocketspring"
-        },
-        {
-          "id": 8738,
-          "name": "Vazario Linkgrease"
-        }
-      ]
-    }
-  },
-  {
-    "id": 19830,
-    "name": "Arcanite Dragonling",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "10558": 4,
-      "10576": 1,
-      "12655": 10,
-      "12810": 6,
-      "15994": 6,
-      "16006": 8
-    },
-    "minSkill": 300,
-    "icon": "inv_misc_head_dragon_01",
-    "url": "https://www.wowhead.com/classic/spell=19830/arcanite-dragonling",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16054,
-      "recipeItemName": "Schematic: Arcanite Dragonling"
-    }
-  },
-  {
-    "id": 23082,
-    "name": "Ultra-Flash Shadow Reflector",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "11371": 8,
-      "12799": 2,
-      "12800": 2,
-      "12803": 6,
-      "12808": 4,
-      "18631": 4
-    },
-    "minSkill": 300,
-    "icon": "inv_misc_enggizmos_16",
-    "url": "https://www.wowhead.com/classic/spell=23082/ultra-flash-shadow-reflector",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18658,
-      "recipeItemName": "Schematic: Ultra-Flash Shadow Reflector"
-    }
-  },
-  {
-    "id": 12585,
-    "name": "Solid Blasting Powder",
+    "id": 8243,
+    "name": "Flash Bomb",
     "quality": 1,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 185,
-      "gray": 195
+      "orange": 185,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
     },
     "materials": {
-      "7912": 2
+      "4306": 1,
+      "4377": 1,
+      "4611": 1
     },
-    "minSkill": 175,
-    "icon": "inv_misc_powder_black",
-    "url": "https://www.wowhead.com/classic/spell=12585/solid-blasting-powder",
+    "minSkill": 185,
+    "icon": "inv_misc_ammo_bullet_01",
+    "url": "https://www.wowhead.com/classic/spell=8243/flash-bomb",
     "source": {
-      "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
+      "type": "item",
+      "recipeItemId": 6672,
+      "recipeItemName": "Schematic: Flash Bomb"
     }
   },
   {
-    "id": 3956,
-    "name": "Green Tinted Goggles",
+    "id": 12614,
+    "name": "Mithril Heavy-bore Rifle",
     "quality": 2,
     "difficulty": {
-      "orange": 150,
-      "yellow": 175,
-      "green": 187,
-      "gray": 200
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
     },
     "materials": {
-      "1206": 2,
-      "2319": 4,
-      "4368": 1
+      "3860": 6,
+      "3864": 2,
+      "4400": 1,
+      "10559": 2,
+      "10560": 1
     },
-    "minSkill": 150,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=3956/green-tinted-goggles",
+    "minSkill": 220,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=12614/mithril-heavy-bore-rifle",
     "source": {
-      "type": "trainer",
-      "cost": 700,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
+      "type": "item",
+      "recipeItemId": 10604,
+      "recipeItemName": "Schematic: Mithril Heavy-bore Rifle"
     }
   },
   {
@@ -829,645 +1096,23 @@
     }
   },
   {
-    "id": 3971,
-    "name": "Gnomish Cloaking Device",
+    "id": 9271,
+    "name": "Aquadynamic Fish Attractor",
     "quality": 1,
     "difficulty": {
-      "orange": 200,
-      "yellow": 220,
-      "green": 230,
-      "gray": 240
+      "orange": 150,
+      "yellow": 150,
+      "green": 160,
+      "gray": 170
     },
     "materials": {
-      "1529": 2,
-      "1705": 2,
-      "3864": 2,
-      "4389": 4,
-      "7191": 1
+      "2841": 2,
+      "4364": 1,
+      "6530": 1
     },
-    "minSkill": 200,
-    "icon": "inv_gizmo_01",
-    "url": "https://www.wowhead.com/classic/spell=3971/gnomish-cloaking-device",
-    "source": {
-      "type": "item",
-      "recipeItemId": 7742,
-      "recipeItemName": "Schematic: Gnomish Cloaking Device"
-    }
-  },
-  {
-    "id": 3932,
-    "name": "Target Dummy",
-    "quality": 1,
-    "difficulty": {
-      "orange": 85,
-      "yellow": 115,
-      "green": 130,
-      "gray": 145
-    },
-    "materials": {
-      "2592": 1,
-      "2841": 1,
-      "4359": 2,
-      "4363": 1
-    },
-    "minSkill": 85,
-    "icon": "inv_crate_06",
-    "url": "https://www.wowhead.com/classic/spell=3932/target-dummy",
-    "source": {
-      "type": "trainer",
-      "cost": 300,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 8895,
-    "name": "Goblin Rocket Boots",
-    "quality": 2,
-    "difficulty": {
-      "orange": 225,
-      "yellow": 245,
-      "green": 255,
-      "gray": 265
-    },
-    "materials": {
-      "4234": 4,
-      "9061": 2,
-      "10026": 1,
-      "10559": 2,
-      "10560": 1
-    },
-    "minSkill": 225,
-    "icon": "inv_gizmo_rocketboot_01",
-    "url": "https://www.wowhead.com/classic/spell=8895/goblin-rocket-boots",
-    "source": {
-      "type": "trainer",
-      "cost": 2200,
-      "trainers": [
-        {
-          "id": 8126,
-          "name": "Nixx Sprocketspring"
-        },
-        {
-          "id": 8738,
-          "name": "Vazario Linkgrease"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12622,
-    "name": "Green Lens",
-    "quality": 3,
-    "difficulty": {
-      "orange": 245,
-      "yellow": 265,
-      "green": 275,
-      "gray": 285
-    },
-    "materials": {
-      "1529": 3,
-      "4304": 8,
-      "7909": 3,
-      "8153": 2,
-      "10286": 2
-    },
-    "minSkill": 245,
-    "icon": "inv_helmet_44",
-    "url": "https://www.wowhead.com/classic/spell=12622/green-lens",
-    "source": {
-      "type": "trainer",
-      "cost": 2800,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12591,
-    "name": "Unstable Trigger",
-    "quality": 1,
-    "difficulty": {
-      "orange": 200,
-      "yellow": 200,
-      "green": 220,
-      "gray": 240
-    },
-    "materials": {
-      "3860": 1,
-      "4338": 1,
-      "10505": 1
-    },
-    "minSkill": 200,
-    "icon": "inv_battery_01",
-    "url": "https://www.wowhead.com/classic/spell=12591/unstable-trigger",
-    "source": {
-      "type": "trainer",
-      "cost": 1500,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3961,
-    "name": "Gyrochronatom",
-    "quality": 1,
-    "difficulty": {
-      "orange": 170,
-      "yellow": 170,
-      "green": 190,
-      "gray": 210
-    },
-    "materials": {
-      "3575": 1,
-      "10558": 1
-    },
-    "minSkill": 170,
-    "icon": "inv_misc_pocketwatch_02",
-    "url": "https://www.wowhead.com/classic/spell=3961/gyrochronatom",
-    "source": {
-      "type": "trainer",
-      "cost": 900,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3962,
-    "name": "Iron Grenade",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 195,
-      "gray": 215
-    },
-    "materials": {
-      "3575": 1,
-      "4306": 1,
-      "4377": 1
-    },
-    "minSkill": 175,
-    "icon": "inv_misc_bomb_08",
-    "url": "https://www.wowhead.com/classic/spell=3962/iron-grenade",
-    "source": {
-      "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12590,
-    "name": "Gyromatic Micro-Adjustor",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 195,
-      "gray": 215
-    },
-    "materials": {
-      "3859": 4
-    },
-    "minSkill": 175,
-    "icon": "inv_misc_screwdriver_02",
-    "url": "https://www.wowhead.com/classic/spell=12590/gyromatic-micro-adjustor",
-    "source": {
-      "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12902,
-    "name": "Gnomish Net-o-Matic Projector",
-    "quality": 1,
-    "difficulty": {
-      "orange": 210,
-      "yellow": 230,
-      "green": 240,
-      "gray": 250
-    },
-    "materials": {
-      "3860": 4,
-      "4337": 4,
-      "10285": 2,
-      "10505": 2,
-      "10559": 1
-    },
-    "minSkill": 210,
-    "icon": "inv_misc_net_01",
-    "url": "https://www.wowhead.com/classic/spell=12902/gnomish-net-o-matic-projector",
-    "source": {
-      "type": "trainer",
-      "cost": 1800,
-      "trainers": [
-        {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
-        },
-        {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12899,
-    "name": "Gnomish Shrink Ray",
-    "quality": 1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 225,
-      "green": 235,
-      "gray": 245
-    },
-    "materials": {
-      "1529": 2,
-      "3860": 4,
-      "8151": 4,
-      "10559": 1,
-      "10560": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_gizmo_09",
-    "url": "https://www.wowhead.com/classic/spell=12899/gnomish-shrink-ray",
-    "source": {
-      "type": "trainer",
-      "cost": 1500,
-      "trainers": [
-        {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
-        },
-        {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3922,
-    "name": "Handful of Copper Bolts",
-    "quality": 1,
-    "difficulty": {
-      "orange": 30,
-      "yellow": 45,
-      "green": 52,
-      "gray": 60
-    },
-    "materials": {
-      "2840": 1
-    },
-    "minSkill": 30,
-    "icon": "inv_misc_gear_06",
-    "url": "https://www.wowhead.com/classic/spell=3922/handful-of-copper-bolts",
-    "source": {
-      "type": "trainer",
-      "cost": 100,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12616,
-    "name": "Parachute Cloak",
-    "quality": 2,
-    "difficulty": {
-      "orange": 225,
-      "yellow": 245,
-      "green": 255,
-      "gray": 265
-    },
-    "materials": {
-      "4339": 4,
-      "10285": 2,
-      "10505": 4,
-      "10560": 1
-    },
-    "minSkill": 225,
-    "icon": "inv_misc_cape_11",
-    "url": "https://www.wowhead.com/classic/spell=12616/parachute-cloak",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10606,
-      "recipeItemName": "Schematic: Parachute Cloak"
-    }
-  },
-  {
-    "id": 12620,
-    "name": "Sniper Scope",
-    "quality": 1,
-    "difficulty": {
-      "orange": 240,
-      "yellow": 260,
-      "green": 270,
-      "gray": 280
-    },
-    "materials": {
-      "6037": 2,
-      "7910": 1,
-      "10559": 1
-    },
-    "minSkill": 240,
-    "icon": "inv_misc_spyglass_02",
-    "url": "https://www.wowhead.com/classic/spell=12620/sniper-scope",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10608,
-      "recipeItemName": "Schematic: Sniper Scope"
-    }
-  },
-  {
-    "id": 15633,
-    "name": "Lil' Smoky",
-    "quality": 1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 205,
-      "green": 205,
-      "gray": 205
-    },
-    "materials": {
-      "3860": 2,
-      "4389": 2,
-      "6037": 1,
-      "7075": 1,
-      "7191": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_misc_idol_02",
-    "url": "https://www.wowhead.com/classic/spell=15633/lil-smoky",
-    "source": {
-      "type": "item",
-      "recipeItemId": 11827,
-      "recipeItemName": "Schematic: Lil' Smoky"
-    }
-  },
-  {
-    "id": 12589,
-    "name": "Mithril Tube",
-    "quality": 1,
-    "difficulty": {
-      "orange": 195,
-      "yellow": 195,
-      "green": 215,
-      "gray": 235
-    },
-    "materials": {
-      "3860": 3
-    },
-    "minSkill": 195,
-    "icon": "inv_musket_01",
-    "url": "https://www.wowhead.com/classic/spell=12589/mithril-tube",
-    "source": {
-      "type": "trainer",
-      "cost": 1300,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 23070,
-    "name": "Dense Dynamite",
-    "quality": 1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 250,
-      "green": 260,
-      "gray": 270
-    },
-    "materials": {
-      "14047": 3,
-      "15992": 2
-    },
-    "minSkill": 250,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=23070/dense-dynamite",
-    "source": {
-      "type": "trainer",
-      "cost": 5000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        }
-      ]
-    }
-  },
-  {
-    "id": 22795,
-    "name": "Core Marksman Rifle",
-    "quality": 4,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 6,
-      "16000": 2,
-      "16006": 2,
-      "17010": 4,
-      "17011": 2
-    },
-    "minSkill": 300,
-    "icon": "inv_weapon_rifle_05",
-    "url": "https://www.wowhead.com/classic/spell=22795/core-marksman-rifle",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18292,
-      "recipeItemName": "Schematic: Core Marksman Rifle"
-    }
-  },
-  {
-    "id": 3945,
-    "name": "Heavy Blasting Powder",
-    "quality": 1,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 135,
-      "gray": 145
-    },
-    "materials": {
-      "2838": 1
-    },
-    "minSkill": 125,
-    "icon": "classic_inv_misc_dust_06",
-    "url": "https://www.wowhead.com/classic/spell=3945/heavy-blasting-powder",
+    "minSkill": 150,
+    "icon": "inv_misc_food_26",
+    "url": "https://www.wowhead.com/classic/spell=9271/aquadynamic-fish-attractor",
     "source": {
       "type": "trainer",
       "cost": 500,
@@ -1508,28 +1153,206 @@
     }
   },
   {
-    "id": 12905,
-    "name": "Gnomish Rocket Boots",
+    "id": 12758,
+    "name": "Goblin Rocket Helmet",
     "quality": 2,
     "difficulty": {
-      "orange": 225,
-      "yellow": 245,
-      "green": 255,
-      "gray": 265
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
     },
     "materials": {
-      "4234": 4,
-      "4389": 4,
-      "10026": 1,
-      "10505": 8,
-      "10559": 2
+      "3860": 4,
+      "9061": 4,
+      "10543": 1,
+      "10560": 1
     },
-    "minSkill": 225,
-    "icon": "inv_boots_02",
-    "url": "https://www.wowhead.com/classic/spell=12905/gnomish-rocket-boots",
+    "minSkill": 245,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/classic/spell=12758/goblin-rocket-helmet",
     "source": {
       "type": "trainer",
-      "cost": 2200,
+      "cost": 3000,
+      "trainers": [
+        {
+          "id": 8126,
+          "name": "Nixx Sprocketspring"
+        },
+        {
+          "id": 8738,
+          "name": "Vazario Linkgrease"
+        }
+      ]
+    }
+  },
+  {
+    "id": 9273,
+    "name": "Goblin Jumper Cables",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 165,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "814": 2,
+      "1210": 2,
+      "3575": 6,
+      "4306": 2,
+      "4375": 2,
+      "7191": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_misc_enggizmos_10",
+    "url": "https://www.wowhead.com/classic/spell=9273/goblin-jumper-cables",
+    "source": {
+      "type": "item",
+      "recipeItemId": 7561,
+      "recipeItemName": "Schematic: Goblin Jumper Cables"
+    }
+  },
+  {
+    "id": 22793,
+    "name": "Biznicks 247x128 Accurascope",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 2,
+      "11371": 6,
+      "16000": 1,
+      "16006": 4,
+      "17011": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/classic/spell=22793/biznicks-247x128-accurascope",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18290,
+      "recipeItemName": "Schematic: Biznicks 247x128 Accurascope"
+    }
+  },
+  {
+    "id": 12903,
+    "name": "Gnomish Harm Prevention Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 245,
+      "gray": 255
+    },
+    "materials": {
+      "3860": 4,
+      "6037": 2,
+      "7387": 1,
+      "7909": 2,
+      "10560": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/classic/spell=12903/gnomish-harm-prevention-belt",
+    "source": {
+      "type": "trainer",
+      "cost": 2000,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
+    }
+  },
+  {
+    "id": 21940,
+    "name": "SnowMaster 9000",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3829": 1,
+      "3860": 8,
+      "4389": 4,
+      "17202": 4
+    },
+    "minSkill": 190,
+    "icon": "spell_frost_windwalkon",
+    "url": "https://www.wowhead.com/classic/spell=21940/snowmaster-9000",
+    "source": {
+      "type": "item",
+      "recipeItemId": 17720,
+      "recipeItemName": "Schematic: Snowmaster 9000"
+    }
+  },
+  {
+    "id": 12622,
+    "name": "Green Lens",
+    "quality": 3,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "1529": 3,
+      "4304": 8,
+      "7909": 3,
+      "8153": 2,
+      "10286": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/classic/spell=12622/green-lens",
+    "source": {
+      "type": "trainer",
+      "cost": 2800,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12907,
+    "name": "Gnomish Mind Control Cap",
+    "quality": 2,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 10,
+      "4338": 4,
+      "6037": 4,
+      "7910": 2,
+      "10558": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/classic/spell=12907/gnomish-mind-control-cap",
+    "source": {
+      "type": "trainer",
+      "cost": 2600,
       "trainers": [
         {
           "id": 7406,
@@ -1598,51 +1421,91 @@
     }
   },
   {
-    "id": 8243,
-    "name": "Flash Bomb",
+    "id": 12899,
+    "name": "Gnomish Shrink Ray",
     "quality": 1,
     "difficulty": {
-      "orange": 185,
-      "yellow": 185,
-      "green": 205,
-      "gray": 225
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
     },
     "materials": {
-      "4306": 1,
-      "4377": 1,
-      "4611": 1
+      "1529": 2,
+      "3860": 4,
+      "8151": 4,
+      "10559": 1,
+      "10560": 1
     },
-    "minSkill": 185,
-    "icon": "inv_misc_ammo_bullet_01",
-    "url": "https://www.wowhead.com/classic/spell=8243/flash-bomb",
+    "minSkill": 205,
+    "icon": "inv_gizmo_09",
+    "url": "https://www.wowhead.com/classic/spell=12899/gnomish-shrink-ray",
     "source": {
-      "type": "item",
-      "recipeItemId": 6672,
-      "recipeItemName": "Schematic: Flash Bomb"
+      "type": "trainer",
+      "cost": 1500,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
     }
   },
   {
-    "id": 26011,
-    "name": "Tranquil Mechanical Yeti",
-    "quality": 1,
+    "id": 19830,
+    "name": "Arcanite Dragonling",
+    "quality": 3,
     "difficulty": {
-      "orange": 250,
+      "orange": 300,
       "yellow": 320,
       "green": 330,
       "gray": 340
     },
     "materials": {
-      "7079": 2,
-      "10558": 1,
-      "15407": 1,
-      "15994": 4,
-      "18631": 2
+      "10558": 4,
+      "10576": 1,
+      "12655": 10,
+      "12810": 6,
+      "15994": 6,
+      "16006": 8
     },
-    "minSkill": 250,
-    "icon": "ability_hunter_pet_gorilla",
-    "url": "https://www.wowhead.com/classic/spell=26011/tranquil-mechanical-yeti",
+    "minSkill": 300,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/classic/spell=19830/arcanite-dragonling",
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16054,
+      "recipeItemName": "Schematic: Arcanite Dragonling"
+    }
+  },
+  {
+    "id": 3971,
+    "name": "Gnomish Cloaking Device",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "1529": 2,
+      "1705": 2,
+      "3864": 2,
+      "4389": 4,
+      "7191": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/classic/spell=3971/gnomish-cloaking-device",
+    "source": {
+      "type": "item",
+      "recipeItemId": 7742,
+      "recipeItemName": "Schematic: Gnomish Cloaking Device"
     }
   },
   {
@@ -1679,157 +1542,30 @@
     }
   },
   {
-    "id": 12624,
-    "name": "Mithril Mechanical Dragonling",
+    "id": 3962,
+    "name": "Iron Grenade",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
-      "yellow": 270,
-      "green": 280,
-      "gray": 290
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
     },
     "materials": {
-      "3860": 14,
-      "6037": 4,
-      "7077": 4,
-      "7910": 2,
-      "9060": 2,
-      "9061": 2
+      "3575": 1,
+      "4306": 1,
+      "4377": 1
     },
-    "minSkill": 250,
-    "icon": "inv_misc_head_dragon_01",
-    "url": "https://www.wowhead.com/classic/spell=12624/mithril-mechanical-dragonling",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10609,
-      "recipeItemName": "Schematic: Mithril Mechanical Dragonling"
-    }
-  },
-  {
-    "id": 19567,
-    "name": "Salt Shaker",
-    "quality": 1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 270,
-      "green": 280,
-      "gray": 290
-    },
-    "materials": {
-      "10558": 1,
-      "10560": 4,
-      "10561": 1,
-      "12359": 6
-    },
-    "minSkill": 250,
-    "icon": "inv_egg_05",
-    "url": "https://www.wowhead.com/classic/spell=19567/salt-shaker",
+    "minSkill": 175,
+    "icon": "inv_misc_bomb_08",
+    "url": "https://www.wowhead.com/classic/spell=3962/iron-grenade",
     "source": {
       "type": "trainer",
-      "cost": 4000,
+      "cost": 1000,
       "trainers": [
         {
           "id": 8736,
           "name": "Buzzek Bracketswing"
-        }
-      ]
-    }
-  },
-  {
-    "id": 9273,
-    "name": "Goblin Jumper Cables",
-    "quality": 1,
-    "difficulty": {
-      "orange": 165,
-      "yellow": 165,
-      "green": 180,
-      "gray": 200
-    },
-    "materials": {
-      "814": 2,
-      "1210": 2,
-      "3575": 6,
-      "4306": 2,
-      "4375": 2,
-      "7191": 1
-    },
-    "minSkill": 165,
-    "icon": "inv_misc_enggizmos_10",
-    "url": "https://www.wowhead.com/classic/spell=9273/goblin-jumper-cables",
-    "source": {
-      "type": "item",
-      "recipeItemId": 7561,
-      "recipeItemName": "Schematic: Goblin Jumper Cables"
-    }
-  },
-  {
-    "id": 12716,
-    "name": "Goblin Mortar",
-    "quality": 1,
-    "difficulty": {
-      "orange": null,
-      "yellow": 225,
-      "green": 235,
-      "gray": 245
-    },
-    "materials": {
-      "3860": 4,
-      "7068": 1,
-      "10505": 5,
-      "10558": 1,
-      "10559": 2
-    },
-    "minSkill": null,
-    "icon": "inv_musket_01",
-    "url": "https://www.wowhead.com/classic/spell=12716/goblin-mortar",
-    "source": {
-      "type": "item",
-      "recipeItemId": 221337,
-      "recipeItemName": "Schematic: Goblin Mortar"
-    }
-  },
-  {
-    "id": 3936,
-    "name": "Deadly Blunderbuss",
-    "quality": 2,
-    "difficulty": {
-      "orange": 105,
-      "yellow": 130,
-      "green": 142,
-      "gray": 155
-    },
-    "materials": {
-      "2319": 2,
-      "4359": 4,
-      "4361": 2,
-      "4399": 1
-    },
-    "minSkill": 105,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=3936/deadly-blunderbuss",
-    "source": {
-      "type": "trainer",
-      "cost": 400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
         },
         {
           "id": 11017,
@@ -1838,68 +1574,6 @@
         {
           "id": 5174,
           "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 24356,
-    "name": "Bloodvine Goggles",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12804": 8,
-      "12810": 4,
-      "16006": 2,
-      "19726": 4,
-      "19774": 5
-    },
-    "minSkill": 300,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=24356/bloodvine-goggles",
-    "source": {
-      "type": "item",
-      "recipeItemId": 20000,
-      "recipeItemName": "Schematic: Bloodvine Goggles"
-    }
-  },
-  {
-    "id": 12895,
-    "name": "Inlaid Mithril Cylinder Plans",
-    "quality": 1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 205,
-      "green": 205,
-      "gray": 205
-    },
-    "materials": {
-      "10647": 1,
-      "10648": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_scroll_05",
-    "url": "https://www.wowhead.com/classic/spell=12895/inlaid-mithril-cylinder-plans",
-    "source": {
-      "type": "trainer",
-      "cost": 1500,
-      "trainers": [
-        {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
-        },
-        {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
         }
       ]
     }
@@ -1931,2193 +1605,34 @@
     }
   },
   {
-    "id": 19790,
-    "name": "Thorium Grenade",
+    "id": 12716,
+    "name": "Goblin Mortar",
     "quality": 1,
     "difficulty": {
-      "orange": 260,
-      "yellow": 280,
-      "green": 290,
-      "gray": 300
-    },
-    "materials": {
-      "12359": 3,
-      "14047": 3,
-      "15992": 3,
-      "15994": 1
-    },
-    "minSkill": 260,
-    "icon": "inv_misc_bomb_08",
-    "url": "https://www.wowhead.com/classic/spell=19790/thorium-grenade",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16041,
-      "recipeItemName": "Schematic: Thorium Grenade"
-    }
-  },
-  {
-    "id": 3969,
-    "name": "Mechanical Dragonling",
-    "quality": 1,
-    "difficulty": {
-      "orange": 200,
-      "yellow": 220,
-      "green": 230,
-      "gray": 240
-    },
-    "materials": {
-      "3864": 2,
-      "4382": 1,
-      "4387": 4,
-      "4389": 4,
-      "7191": 1
-    },
-    "minSkill": 200,
-    "icon": "inv_misc_head_dragon_01",
-    "url": "https://www.wowhead.com/classic/spell=3969/mechanical-dragonling",
-    "source": {
-      "type": "item",
-      "recipeItemId": 13311,
-      "recipeItemName": "Schematic: Mechanical Dragonling"
-    }
-  },
-  {
-    "id": 9271,
-    "name": "Aquadynamic Fish Attractor",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 150,
-      "green": 160,
-      "gray": 170
-    },
-    "materials": {
-      "2841": 2,
-      "4364": 1,
-      "6530": 1
-    },
-    "minSkill": 150,
-    "icon": "inv_misc_food_26",
-    "url": "https://www.wowhead.com/classic/spell=9271/aquadynamic-fish-attractor",
-    "source": {
-      "type": "trainer",
-      "cost": 500,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12897,
-    "name": "Gnomish Goggles",
-    "quality": 2,
-    "difficulty": {
-      "orange": 210,
-      "yellow": 230,
-      "green": 240,
-      "gray": 250
-    },
-    "materials": {
-      "4234": 2,
-      "8151": 2,
-      "10500": 1,
-      "10558": 2,
-      "10559": 1
-    },
-    "minSkill": 210,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=12897/gnomish-goggles",
-    "source": {
-      "type": "trainer",
-      "cost": 1500,
-      "trainers": [
-        {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
-        },
-        {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3942,
-    "name": "Whirring Bronze Gizmo",
-    "quality": 1,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 150,
-      "gray": 175
-    },
-    "materials": {
-      "2592": 1,
-      "2841": 2
-    },
-    "minSkill": 125,
-    "icon": "inv_gizmo_02",
-    "url": "https://www.wowhead.com/classic/spell=3942/whirring-bronze-gizmo",
-    "source": {
-      "type": "trainer",
-      "cost": 500,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3972,
-    "name": "Large Seaforium Charge",
-    "quality": 1,
-    "difficulty": {
-      "orange": 200,
-      "yellow": 200,
-      "green": 220,
-      "gray": 240
-    },
-    "materials": {
-      "159": 1,
-      "4234": 2,
-      "10505": 2
-    },
-    "minSkill": 200,
-    "icon": "inv_misc_urn_01",
-    "url": "https://www.wowhead.com/classic/spell=3972/large-seaforium-charge",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4417,
-      "recipeItemName": "Schematic: Large Seaforium Charge"
-    }
-  },
-  {
-    "id": 23077,
-    "name": "Gyrofreeze Ice Reflector",
-    "quality": 3,
-    "difficulty": {
-      "orange": 260,
-      "yellow": 280,
-      "green": 290,
-      "gray": 300
-    },
-    "materials": {
-      "3829": 2,
-      "7078": 4,
-      "12361": 2,
-      "13467": 4,
-      "15994": 6,
-      "18631": 2
-    },
-    "minSkill": 260,
-    "icon": "inv_misc_enggizmos_02",
-    "url": "https://www.wowhead.com/classic/spell=23077/gyrofreeze-ice-reflector",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18652,
-      "recipeItemName": "Schematic: Gyrofreeze Ice Reflector"
-    }
-  },
-  {
-    "id": 23081,
-    "name": "Hyper-Radiant Flame Reflector",
-    "quality": 3,
-    "difficulty": {
-      "orange": 290,
-      "yellow": 310,
-      "green": 320,
-      "gray": 330
-    },
-    "materials": {
-      "7080": 6,
-      "7910": 4,
-      "11371": 4,
-      "12800": 2,
-      "18631": 3
-    },
-    "minSkill": 290,
-    "icon": "inv_misc_enggizmos_04",
-    "url": "https://www.wowhead.com/classic/spell=23081/hyper-radiant-flame-reflector",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18657,
-      "recipeItemName": "Schematic: Hyper-Radiant Flame Reflector"
-    }
-  },
-  {
-    "id": 3924,
-    "name": "Copper Tube",
-    "quality": 1,
-    "difficulty": {
-      "orange": 50,
-      "yellow": 80,
-      "green": 95,
-      "gray": 110
-    },
-    "materials": {
-      "2840": 2,
-      "2880": 1
-    },
-    "minSkill": 50,
-    "icon": "inv_gizmo_pipe_02",
-    "url": "https://www.wowhead.com/classic/spell=3924/copper-tube",
-    "source": {
-      "type": "trainer",
-      "cost": 100,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3940,
-    "name": "Shadow Goggles",
-    "quality": 2,
-    "difficulty": {
-      "orange": 120,
-      "yellow": 145,
-      "green": 157,
-      "gray": 170
-    },
-    "materials": {
-      "1210": 2,
-      "2319": 4
-    },
-    "minSkill": 120,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=3940/shadow-goggles",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4410,
-      "recipeItemName": "Schematic: Shadow Goggles"
-    }
-  },
-  {
-    "id": 3953,
-    "name": "Bronze Framework",
-    "quality": 1,
-    "difficulty": {
-      "orange": 145,
-      "yellow": 145,
-      "green": 170,
-      "gray": 195
-    },
-    "materials": {
-      "2319": 1,
-      "2592": 1,
-      "2841": 2
-    },
-    "minSkill": 145,
-    "icon": "inv_gizmo_bronzeframework_01",
-    "url": "https://www.wowhead.com/classic/spell=3953/bronze-framework",
-    "source": {
-      "type": "trainer",
-      "cost": 600,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 23079,
-    "name": "Major Recombobulator",
-    "quality": 2,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 285,
-      "green": 290,
-      "gray": 295
-    },
-    "materials": {
-      "14047": 2,
-      "16000": 2,
-      "18631": 1
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_enggizmos_09",
-    "url": "https://www.wowhead.com/classic/spell=23079/major-recombobulator",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18655,
-      "recipeItemName": "Schematic: Major Recombobulator"
-    }
-  },
-  {
-    "id": 3929,
-    "name": "Coarse Blasting Powder",
-    "quality": 1,
-    "difficulty": {
-      "orange": 75,
-      "yellow": 85,
-      "green": 90,
-      "gray": 95
-    },
-    "materials": {
-      "2836": 1
-    },
-    "minSkill": 75,
-    "icon": "inv_misc_dust_02",
-    "url": "https://www.wowhead.com/classic/spell=3929/coarse-blasting-powder",
-    "source": {
-      "type": "trainer",
-      "cost": 200,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 7430,
-    "name": "Arclight Spanner",
-    "quality": 1,
-    "difficulty": {
-      "orange": 50,
-      "yellow": 70,
-      "green": 80,
-      "gray": 90
-    },
-    "materials": {
-      "2840": 6
-    },
-    "minSkill": 50,
-    "icon": "inv_misc_wrench_01",
-    "url": "https://www.wowhead.com/classic/spell=7430/arclight-spanner",
-    "source": {
-      "type": "trainer",
-      "cost": 100,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12903,
-    "name": "Gnomish Harm Prevention Belt",
-    "quality": 2,
-    "difficulty": {
-      "orange": 215,
-      "yellow": 235,
-      "green": 245,
-      "gray": 255
-    },
-    "materials": {
-      "3860": 4,
-      "6037": 2,
-      "7387": 1,
-      "7909": 2,
-      "10560": 1
-    },
-    "minSkill": 215,
-    "icon": "inv_belt_06",
-    "url": "https://www.wowhead.com/classic/spell=12903/gnomish-harm-prevention-belt",
-    "source": {
-      "type": "trainer",
-      "cost": 2000,
-      "trainers": [
-        {
-          "id": 7406,
-          "name": "Oglethorpe Obnoticus"
-        },
-        {
-          "id": 7944,
-          "name": "Tinkmaster Overspark"
-        }
-      ]
-    }
-  },
-  {
-    "id": 15628,
-    "name": "Pet Bombling",
-    "quality": 1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 205,
-      "green": 205,
-      "gray": 205
-    },
-    "materials": {
-      "3860": 6,
-      "4394": 1,
-      "7077": 1,
-      "7191": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_misc_bomb_04",
-    "url": "https://www.wowhead.com/classic/spell=15628/pet-bombling",
-    "source": {
-      "type": "item",
-      "recipeItemId": 11828,
-      "recipeItemName": "Schematic: Pet Bombling"
-    }
-  },
-  {
-    "id": 3928,
-    "name": "Mechanical Squirrel",
-    "quality": 1,
-    "difficulty": {
-      "orange": 75,
-      "yellow": 105,
-      "green": 120,
-      "gray": 135
-    },
-    "materials": {
-      "774": 2,
-      "2840": 1,
-      "4359": 1,
-      "4363": 1
-    },
-    "minSkill": 75,
-    "icon": "inv_crate_01",
-    "url": "https://www.wowhead.com/classic/spell=3928/mechanical-squirrel",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4408,
-      "recipeItemName": "Schematic: Mechanical Squirrel"
-    }
-  },
-  {
-    "id": 3968,
-    "name": "Goblin Land Mine",
-    "quality": 1,
-    "difficulty": {
-      "orange": 195,
-      "yellow": 215,
-      "green": 225,
-      "gray": 235
-    },
-    "materials": {
-      "3575": 2,
-      "4377": 3,
-      "4389": 1
-    },
-    "minSkill": 195,
-    "icon": "inv_shield_08",
-    "url": "https://www.wowhead.com/classic/spell=3968/goblin-land-mine",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4416,
-      "recipeItemName": "Schematic: Goblin Land Mine"
-    }
-  },
-  {
-    "id": 6458,
-    "name": "Ornate Spyglass",
-    "quality": 1,
-    "difficulty": {
-      "orange": 135,
-      "yellow": 160,
-      "green": 172,
-      "gray": 185
-    },
-    "materials": {
-      "1206": 1,
-      "4363": 1,
-      "4371": 2,
-      "4375": 2
-    },
-    "minSkill": 135,
-    "icon": "inv_misc_spyglass_01",
-    "url": "https://www.wowhead.com/classic/spell=6458/ornate-spyglass",
-    "source": {
-      "type": "trainer",
-      "cost": 400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3918,
-    "name": "Rough Blasting Powder",
-    "quality": 1,
-    "difficulty": {
-      "orange": 1,
-      "yellow": 20,
-      "green": 30,
-      "gray": 40
-    },
-    "materials": {
-      "2835": 1
-    },
-    "minSkill": 1,
-    "icon": "inv_misc_dust_01",
-    "url": "https://www.wowhead.com/classic/spell=3918/rough-blasting-powder",
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 3938,
-    "name": "Bronze Tube",
-    "quality": 1,
-    "difficulty": {
-      "orange": 105,
-      "yellow": 105,
-      "green": 130,
-      "gray": 155
-    },
-    "materials": {
-      "2841": 2,
-      "2880": 1
-    },
-    "minSkill": 105,
-    "icon": "inv_gizmo_pipe_01",
-    "url": "https://www.wowhead.com/classic/spell=3938/bronze-tube",
-    "source": {
-      "type": "trainer",
-      "cost": 400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3954,
-    "name": "Moonsight Rifle",
-    "quality": 2,
-    "difficulty": {
-      "orange": 145,
-      "yellow": 170,
-      "green": 182,
-      "gray": 195
-    },
-    "materials": {
-      "1705": 2,
-      "4371": 3,
-      "4375": 3,
-      "4400": 1
-    },
-    "minSkill": 145,
-    "icon": "inv_weapon_rifle_06",
-    "url": "https://www.wowhead.com/classic/spell=3954/moonsight-rifle",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4412,
-      "recipeItemName": "Schematic: Moonsight Rifle"
-    }
-  },
-  {
-    "id": 3944,
-    "name": "Flame Deflector",
-    "quality": 1,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 150,
-      "gray": 175
-    },
-    "materials": {
-      "4375": 1,
-      "4402": 1
-    },
-    "minSkill": 125,
-    "icon": "inv_gizmo_01",
-    "url": "https://www.wowhead.com/classic/spell=3944/flame-deflector",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4411,
-      "recipeItemName": "Schematic: Flame Deflector"
-    }
-  },
-  {
-    "id": 3955,
-    "name": "Explosive Sheep",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 175,
-      "green": 187,
-      "gray": 200
-    },
-    "materials": {
-      "2592": 2,
-      "4375": 1,
-      "4377": 2,
-      "4382": 1
-    },
-    "minSkill": 150,
-    "icon": "spell_nature_polymorph",
-    "url": "https://www.wowhead.com/classic/spell=3955/explosive-sheep",
-    "source": {
-      "type": "trainer",
-      "cost": 700,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3967,
-    "name": "Big Iron Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 190,
-      "yellow": 190,
-      "green": 210,
-      "gray": 230
-    },
-    "materials": {
-      "3575": 3,
-      "4377": 3,
-      "4404": 1
-    },
-    "minSkill": 190,
-    "icon": "inv_misc_bomb_01",
-    "url": "https://www.wowhead.com/classic/spell=3967/big-iron-bomb",
-    "source": {
-      "type": "trainer",
-      "cost": 1400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12617,
-    "name": "Deepdive Helmet",
-    "quality": 2,
-    "difficulty": {
-      "orange": 230,
-      "yellow": 250,
-      "green": 260,
-      "gray": 270
-    },
-    "materials": {
-      "774": 4,
-      "818": 4,
-      "3860": 8,
-      "6037": 1,
-      "10561": 1
-    },
-    "minSkill": 230,
-    "icon": "inv_helmet_49",
-    "url": "https://www.wowhead.com/classic/spell=12617/deepdive-helmet",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10607,
-      "recipeItemName": "Schematic: Deepdive Helmet"
-    }
-  },
-  {
-    "id": 3966,
-    "name": "Craftsman's Monocle",
-    "quality": 2,
-    "difficulty": {
-      "orange": 185,
-      "yellow": 205,
-      "green": 215,
-      "gray": 225
-    },
-    "materials": {
-      "3864": 2,
-      "4234": 6
-    },
-    "minSkill": 185,
-    "icon": "inv_helmet_44",
-    "url": "https://www.wowhead.com/classic/spell=3966/craftsmans-monocle",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4415,
-      "recipeItemName": "Schematic: Craftsman's Monocle"
-    }
-  },
-  {
-    "id": 12584,
-    "name": "Gold Power Core",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 150,
-      "green": 170,
-      "gray": 190
-    },
-    "materials": {
-      "3577": 1
-    },
-    "minSkill": 150,
-    "icon": "inv_battery_02",
-    "url": "https://www.wowhead.com/classic/spell=12584/gold-power-core",
-    "source": {
-      "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12615,
-    "name": "Spellpower Goggles Xtreme",
-    "quality": 2,
-    "difficulty": {
-      "orange": 225,
-      "yellow": 245,
-      "green": 255,
-      "gray": 265
-    },
-    "materials": {
-      "4304": 4,
-      "7910": 2
-    },
-    "minSkill": 225,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=12615/spellpower-goggles-xtreme",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10605,
-      "recipeItemName": "Schematic: Spellpower Goggles Xtreme"
-    }
-  },
-  {
-    "id": 3952,
-    "name": "Minor Recombobulator",
-    "quality": 2,
-    "difficulty": {
-      "orange": 140,
-      "yellow": 165,
-      "green": 177,
-      "gray": 190
-    },
-    "materials": {
-      "1206": 1,
-      "2319": 2,
-      "4371": 1,
-      "4375": 2
-    },
-    "minSkill": 140,
-    "icon": "inv_gizmo_07",
-    "url": "https://www.wowhead.com/classic/spell=3952/minor-recombobulator",
-    "source": {
-      "type": "item",
-      "recipeItemId": 14639,
-      "recipeItemName": "Schematic: Minor Recombobulator"
-    }
-  },
-  {
-    "id": 12614,
-    "name": "Mithril Heavy-bore Rifle",
-    "quality": 2,
-    "difficulty": {
-      "orange": 220,
-      "yellow": 240,
-      "green": 250,
-      "gray": 260
-    },
-    "materials": {
-      "3860": 6,
-      "3864": 2,
-      "4400": 1,
-      "10559": 2,
-      "10560": 1
-    },
-    "minSkill": 220,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=12614/mithril-heavy-bore-rifle",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10604,
-      "recipeItemName": "Schematic: Mithril Heavy-bore Rifle"
-    }
-  },
-  {
-    "id": 23096,
-    "name": "Alarm-O-Bot",
-    "quality": 1,
-    "difficulty": {
-      "orange": 265,
-      "yellow": 275,
-      "green": 280,
-      "gray": 285
-    },
-    "materials": {
-      "7191": 1,
-      "7910": 1,
-      "8170": 4,
-      "12359": 4,
-      "15994": 2
-    },
-    "minSkill": 265,
-    "icon": "inv_misc_enggizmos_13",
-    "url": "https://www.wowhead.com/classic/spell=23096/alarm-o-bot",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18654,
-      "recipeItemName": "Schematic: Gnomish Alarm-O-Bot"
-    }
-  },
-  {
-    "id": 8334,
-    "name": "Practice Lock",
-    "quality": 1,
-    "difficulty": {
-      "orange": 100,
-      "yellow": 115,
-      "green": 122,
-      "gray": 130
-    },
-    "materials": {
-      "2841": 1,
-      "2880": 1,
-      "4359": 2
-    },
-    "minSkill": 100,
-    "icon": "inv_box_01",
-    "url": "https://www.wowhead.com/classic/spell=8334/practice-lock",
-    "source": {
-      "type": "trainer",
-      "cost": 300,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12597,
-    "name": "Deadly Scope",
-    "quality": 1,
-    "difficulty": {
-      "orange": 210,
-      "yellow": 230,
-      "green": 240,
-      "gray": 250
-    },
-    "materials": {
-      "4304": 2,
-      "7909": 2,
-      "10559": 1
-    },
-    "minSkill": 210,
-    "icon": "inv_misc_spyglass_02",
-    "url": "https://www.wowhead.com/classic/spell=12597/deadly-scope",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10602,
-      "recipeItemName": "Schematic: Deadly Scope"
-    }
-  },
-  {
-    "id": 26443,
-    "name": "Firework Cluster Launcher",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 295,
-      "green": 305,
-      "gray": 315
-    },
-    "materials": {
-      "9060": 4,
-      "9061": 4,
-      "10561": 1,
-      "18631": 2
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_enggizmos_03",
-    "url": "https://www.wowhead.com/classic/spell=26443/firework-cluster-launcher",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21737,
-      "recipeItemName": "Schematic: Cluster Launcher"
-    }
-  },
-  {
-    "id": 12587,
-    "name": "Bright-Eye Goggles",
-    "quality": 2,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 195,
-      "green": 205,
-      "gray": 215
-    },
-    "materials": {
-      "3864": 2,
-      "4234": 6
-    },
-    "minSkill": 175,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=12587/bright-eye-goggles",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10601,
-      "recipeItemName": "Schematic: Bright-Eye Goggles"
-    }
-  },
-  {
-    "id": 12596,
-    "name": "Hi-Impact Mithril Slugs",
-    "quality": 2,
-    "difficulty": {
-      "orange": 210,
-      "yellow": 210,
-      "green": 230,
-      "gray": 250
-    },
-    "materials": {
-      "3860": 1,
-      "10505": 1
-    },
-    "minSkill": 210,
-    "icon": "inv_ammo_bullet_01",
-    "url": "https://www.wowhead.com/classic/spell=12596/hi-impact-mithril-slugs",
-    "source": {
-      "type": "trainer",
-      "cost": 1700,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 19831,
-    "name": "Arcane Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12359": 3,
-      "14047": 1,
-      "16006": 1
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_mindbomb",
-    "url": "https://www.wowhead.com/classic/spell=19831/arcane-bomb",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16055,
-      "recipeItemName": "Schematic: Arcane Bomb"
-    }
-  },
-  {
-    "id": 12586,
-    "name": "Solid Dynamite",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 185,
-      "gray": 195
-    },
-    "materials": {
-      "4306": 1,
-      "10505": 1
-    },
-    "minSkill": 175,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=12586/solid-dynamite",
-    "source": {
-      "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 23067,
-    "name": "Blue Firework",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 150,
-      "green": 162,
-      "gray": 175
-    },
-    "materials": {
-      "4234": 1,
-      "4377": 1
-    },
-    "minSkill": 150,
-    "icon": "spell_ice_magicdamage",
-    "url": "https://www.wowhead.com/classic/spell=23067/blue-firework",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18649,
-      "recipeItemName": "Schematic: Blue Firework"
-    }
-  },
-  {
-    "id": 19799,
-    "name": "Dark Iron Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 285,
-      "yellow": 305,
-      "green": 315,
-      "gray": 325
-    },
-    "materials": {
-      "11371": 1,
-      "14047": 3,
-      "15992": 3,
-      "15994": 2
-    },
-    "minSkill": 285,
-    "icon": "inv_misc_bomb_05",
-    "url": "https://www.wowhead.com/classic/spell=19799/dark-iron-bomb",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16049,
-      "recipeItemName": "Schematic: Dark Iron Bomb"
-    }
-  },
-  {
-    "id": 3978,
-    "name": "Standard Scope",
-    "quality": 1,
-    "difficulty": {
-      "orange": 110,
-      "yellow": 135,
-      "green": 147,
-      "gray": 160
-    },
-    "materials": {
-      "1206": 1,
-      "4371": 1
-    },
-    "minSkill": 110,
-    "icon": "inv_misc_spyglass_02",
-    "url": "https://www.wowhead.com/classic/spell=3978/standard-scope",
-    "source": {
-      "type": "trainer",
-      "cost": 400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 23080,
-    "name": "Powerful Seaforium Charge",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 275,
-      "green": 285,
-      "gray": 295
-    },
-    "materials": {
-      "159": 1,
-      "8170": 2,
-      "15992": 3,
-      "15994": 2
-    },
-    "minSkill": 275,
-    "icon": "spell_shadow_detectinvisibility",
-    "url": "https://www.wowhead.com/classic/spell=23080/powerful-seaforium-charge",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18656,
-      "recipeItemName": "Schematic: Powerful Seaforium Charge"
-    }
-  },
-  {
-    "id": 3958,
-    "name": "Iron Strut",
-    "quality": 1,
-    "difficulty": {
-      "orange": 160,
-      "yellow": 160,
-      "green": 170,
-      "gray": 180
-    },
-    "materials": {
-      "3575": 2
-    },
-    "minSkill": 160,
-    "icon": "inv_spear_05",
-    "url": "https://www.wowhead.com/classic/spell=3958/iron-strut",
-    "source": {
-      "type": "trainer",
-      "cost": 800,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12607,
-    "name": "Catseye Ultra Goggles",
-    "quality": 2,
-    "difficulty": {
-      "orange": 220,
-      "yellow": 240,
-      "green": 250,
-      "gray": 260
-    },
-    "materials": {
-      "4304": 4,
-      "7909": 2,
-      "10592": 1
-    },
-    "minSkill": 220,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=12607/catseye-ultra-goggles",
-    "source": {
-      "type": "item",
-      "recipeItemId": 10603,
-      "recipeItemName": "Schematic: Catseye Ultra Goggles"
-    }
-  },
-  {
-    "id": 12621,
-    "name": "Mithril Gyro-Shot",
-    "quality": 2,
-    "difficulty": {
-      "orange": 245,
-      "yellow": 245,
-      "green": 265,
-      "gray": 285
-    },
-    "materials": {
-      "3860": 2,
-      "10505": 2
-    },
-    "minSkill": 245,
-    "icon": "inv_ammo_bullet_01",
-    "url": "https://www.wowhead.com/classic/spell=12621/mithril-gyro-shot",
-    "source": {
-      "type": "trainer",
-      "cost": 2800,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3939,
-    "name": "Lovingly Crafted Boomstick",
-    "quality": 2,
-    "difficulty": {
-      "orange": 120,
-      "yellow": 145,
-      "green": 157,
-      "gray": 170
-    },
-    "materials": {
-      "1206": 3,
-      "4359": 2,
-      "4371": 2,
-      "4400": 1
-    },
-    "minSkill": 120,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=3939/lovingly-crafted-boomstick",
-    "source": {
-      "type": "item",
-      "recipeItemId": 13309,
-      "recipeItemName": "Schematic: Lovingly Crafted Boomstick"
-    }
-  },
-  {
-    "id": 12595,
-    "name": "Mithril Blunderbuss",
-    "quality": 2,
-    "difficulty": {
-      "orange": 205,
+      "orange": null,
       "yellow": 225,
       "green": 235,
       "gray": 245
     },
     "materials": {
       "3860": 4,
-      "4400": 1,
-      "7068": 2,
-      "10559": 1,
-      "10560": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=12595/mithril-blunderbuss",
-    "source": {
-      "type": "trainer",
-      "cost": 1600,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12718,
-    "name": "Goblin Construction Helmet",
-    "quality": 2,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 225,
-      "green": 235,
-      "gray": 245
-    },
-    "materials": {
-      "3860": 8,
-      "3864": 1,
-      "7068": 4
-    },
-    "minSkill": 205,
-    "icon": "inv_helmet_60",
-    "url": "https://www.wowhead.com/classic/spell=12718/goblin-construction-helmet",
-    "source": {
-      "type": "trainer",
-      "cost": 1500,
-      "trainers": [
-        {
-          "id": 8126,
-          "name": "Nixx Sprocketspring"
-        },
-        {
-          "id": 8738,
-          "name": "Vazario Linkgrease"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3923,
-    "name": "Rough Copper Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 30,
-      "yellow": 60,
-      "green": 75,
-      "gray": 90
-    },
-    "materials": {
-      "2589": 1,
-      "2840": 1,
-      "4357": 2,
-      "4359": 1
-    },
-    "minSkill": 30,
-    "icon": "inv_misc_bomb_09",
-    "url": "https://www.wowhead.com/classic/spell=3923/rough-copper-bomb",
-    "source": {
-      "type": "trainer",
-      "cost": 100,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3926,
-    "name": "Copper Modulator",
-    "quality": 1,
-    "difficulty": {
-      "orange": 65,
-      "yellow": 95,
-      "green": 110,
-      "gray": 125
-    },
-    "materials": {
-      "2589": 2,
-      "2840": 1,
-      "4359": 2
-    },
-    "minSkill": 65,
-    "icon": "inv_gizmo_03",
-    "url": "https://www.wowhead.com/classic/spell=3926/copper-modulator",
-    "source": {
-      "type": "trainer",
-      "cost": 200,
-      "trainers": [
-        {
-          "id": 1702,
-          "name": "Bronk Guzzlegear"
-        },
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 3290,
-          "name": "Deek Fizzlebizz"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 4586,
-          "name": "Graham Van Talen"
-        },
-        {
-          "id": 11028,
-          "name": "Jemma Quikswitch"
-        },
-        {
-          "id": 11037,
-          "name": "Jenna Lemkenilli"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 11025,
-          "name": "Mukdrak"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11026,
-          "name": "Sprite Jumpsprocket"
-        },
-        {
-          "id": 2857,
-          "name": "Thund"
-        },
-        {
-          "id": 3494,
-          "name": "Tinkerwiz"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        },
-        {
-          "id": 10993,
-          "name": "Twizwick Sprocketgrind"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12754,
-    "name": "The Big One",
-    "quality": 1,
-    "difficulty": {
-      "orange": 235,
-      "yellow": 235,
-      "green": 255,
-      "gray": 275
-    },
-    "materials": {
-      "9061": 1,
-      "10507": 6,
-      "10560": 1,
-      "10561": 1
-    },
-    "minSkill": 235,
-    "icon": "inv_misc_bomb_04",
-    "url": "https://www.wowhead.com/classic/spell=12754/the-big-one",
-    "source": {
-      "type": "trainer",
-      "cost": 2600,
-      "trainers": [
-        {
-          "id": 8126,
-          "name": "Nixx Sprocketspring"
-        },
-        {
-          "id": 8738,
-          "name": "Vazario Linkgrease"
-        }
-      ]
-    }
-  },
-  {
-    "id": 12755,
-    "name": "Goblin Bomb Dispenser",
-    "quality": 1,
-    "difficulty": {
-      "orange": 230,
-      "yellow": 230,
-      "green": 250,
-      "gray": 270
-    },
-    "materials": {
-      "4407": 2,
-      "6037": 6,
-      "10505": 4,
-      "10560": 1,
-      "10561": 2
-    },
-    "minSkill": 230,
-    "icon": "inv_gizmo_06",
-    "url": "https://www.wowhead.com/classic/spell=12755/goblin-bomb-dispenser",
-    "source": {
-      "type": "trainer",
-      "cost": 2400,
-      "trainers": [
-        {
-          "id": 8126,
-          "name": "Nixx Sprocketspring"
-        },
-        {
-          "id": 8738,
-          "name": "Vazario Linkgrease"
-        }
-      ]
-    }
-  },
-  {
-    "id": 19819,
-    "name": "Voice Amplification Modulator",
-    "quality": 2,
-    "difficulty": {
-      "orange": 290,
-      "yellow": 310,
-      "green": 320,
-      "gray": 330
-    },
-    "materials": {
+      "7068": 1,
+      "10505": 5,
       "10558": 1,
-      "12799": 1,
-      "15994": 1,
-      "16006": 2
+      "10559": 2
     },
-    "minSkill": 290,
-    "icon": "inv_jewelry_amulet_07",
-    "url": "https://www.wowhead.com/classic/spell=19819/voice-amplification-modulator",
+    "minSkill": null,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/classic/spell=12716/goblin-mortar",
     "source": {
       "type": "item",
-      "recipeItemId": 16052,
-      "recipeItemName": "Schematic: Voice Amplification Modulator"
+      "recipeItemId": 221337,
+      "recipeItemName": "Schematic: Goblin Mortar"
     }
   },
   {
-    "id": 19833,
-    "name": "Flawless Arcanite Rifle",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7076": 2,
-      "7078": 2,
-      "12360": 10,
-      "12800": 2,
-      "12810": 2,
-      "16000": 2
-    },
-    "minSkill": 300,
-    "icon": "inv_weapon_rifle_03",
-    "url": "https://www.wowhead.com/classic/spell=19833/flawless-arcanite-rifle",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16056,
-      "recipeItemName": "Schematic: Flawless Arcanite Rifle"
-    }
-  },
-  {
-    "id": 24357,
-    "name": "Bloodvine Lens",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12804": 8,
-      "12810": 4,
-      "16006": 1,
-      "19726": 5,
-      "19774": 5
-    },
-    "minSkill": 300,
-    "icon": "inv_helmet_44",
-    "url": "https://www.wowhead.com/classic/spell=24357/bloodvine-lens",
-    "source": {
-      "type": "item",
-      "recipeItemId": 20001,
-      "recipeItemName": "Schematic: Bloodvine Lens"
-    }
-  },
-  {
-    "id": 9269,
-    "name": "Gnomish Universal Remote",
-    "quality": 2,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 150,
-      "green": 162,
-      "gray": 175
-    },
-    "materials": {
-      "774": 1,
-      "814": 2,
-      "818": 1,
-      "2841": 6,
-      "4375": 1
-    },
-    "minSkill": 125,
-    "icon": "inv_misc_pocketwatch_01",
-    "url": "https://www.wowhead.com/classic/spell=9269/gnomish-universal-remote",
-    "source": {
-      "type": "item",
-      "recipeItemId": 7560,
-      "recipeItemName": "Schematic: Gnomish Universal Remote"
-    }
-  },
-  {
-    "id": 23066,
-    "name": "Red Firework",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 150,
-      "green": 162,
-      "gray": 175
-    },
-    "materials": {
-      "4234": 1,
-      "4377": 1
-    },
-    "minSkill": 150,
-    "icon": "spell_fire_fireball02",
-    "url": "https://www.wowhead.com/classic/spell=23066/red-firework",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18647,
-      "recipeItemName": "Schematic: Red Firework"
-    }
-  },
-  {
-    "id": 3946,
-    "name": "Heavy Dynamite",
+    "id": 3945,
+    "name": "Heavy Blasting Powder",
     "quality": 1,
     "difficulty": {
       "orange": 125,
@@ -4126,12 +1641,11 @@
       "gray": 145
     },
     "materials": {
-      "2592": 1,
-      "4377": 2
+      "2838": 1
     },
     "minSkill": 125,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=3946/heavy-dynamite",
+    "icon": "classic_inv_misc_dust_06",
+    "url": "https://www.wowhead.com/classic/spell=3945/heavy-blasting-powder",
     "source": {
       "type": "trainer",
       "cost": 500,
@@ -4207,25 +1721,286 @@
     }
   },
   {
-    "id": 3930,
-    "name": "Crafted Heavy Shot",
+    "id": 12589,
+    "name": "Mithril Tube",
     "quality": 1,
     "difficulty": {
-      "orange": 75,
-      "yellow": 85,
-      "green": 90,
-      "gray": 95
+      "orange": 195,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
     },
     "materials": {
-      "2840": 1,
-      "4364": 1
+      "3860": 3
     },
-    "minSkill": 75,
-    "icon": "inv_ammo_bullet_02",
-    "url": "https://www.wowhead.com/classic/spell=3930/crafted-heavy-shot",
+    "minSkill": 195,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/classic/spell=12589/mithril-tube",
     "source": {
       "type": "trainer",
-      "cost": 200,
+      "cost": 1300,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12591,
+    "name": "Unstable Trigger",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "3860": 1,
+      "4338": 1,
+      "10505": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_battery_01",
+    "url": "https://www.wowhead.com/classic/spell=12591/unstable-trigger",
+    "source": {
+      "type": "trainer",
+      "cost": 1500,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12905,
+    "name": "Gnomish Rocket Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4234": 4,
+      "4389": 4,
+      "10026": 1,
+      "10505": 8,
+      "10559": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_boots_02",
+    "url": "https://www.wowhead.com/classic/spell=12905/gnomish-rocket-boots",
+    "source": {
+      "type": "trainer",
+      "cost": 2200,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
+    }
+  },
+  {
+    "id": 15633,
+    "name": "Lil' Smoky",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "3860": 2,
+      "4389": 2,
+      "6037": 1,
+      "7075": 1,
+      "7191": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_misc_idol_02",
+    "url": "https://www.wowhead.com/classic/spell=15633/lil-smoky",
+    "source": {
+      "type": "item",
+      "recipeItemId": 11827,
+      "recipeItemName": "Schematic: Lil' Smoky"
+    }
+  },
+  {
+    "id": 12895,
+    "name": "Inlaid Mithril Cylinder Plans",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "10647": 1,
+      "10648": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_scroll_05",
+    "url": "https://www.wowhead.com/classic/spell=12895/inlaid-mithril-cylinder-plans",
+    "source": {
+      "type": "trainer",
+      "cost": 1500,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12902,
+    "name": "Gnomish Net-o-Matic Projector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "3860": 4,
+      "4337": 4,
+      "10285": 2,
+      "10505": 2,
+      "10559": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_misc_net_01",
+    "url": "https://www.wowhead.com/classic/spell=12902/gnomish-net-o-matic-projector",
+    "source": {
+      "type": "trainer",
+      "cost": 1800,
+      "trainers": [
+        {
+          "id": 7406,
+          "name": "Oglethorpe Obnoticus"
+        },
+        {
+          "id": 7944,
+          "name": "Tinkmaster Overspark"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3967,
+    "name": "Big Iron Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3575": 3,
+      "4377": 3,
+      "4404": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/classic/spell=3967/big-iron-bomb",
+    "source": {
+      "type": "trainer",
+      "cost": 1400,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12616,
+    "name": "Parachute Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4339": 4,
+      "10285": 2,
+      "10505": 4,
+      "10560": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_cape_11",
+    "url": "https://www.wowhead.com/classic/spell=12616/parachute-cloak",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10606,
+      "recipeItemName": "Schematic: Parachute Cloak"
+    }
+  },
+  {
+    "id": 3922,
+    "name": "Handful of Copper Bolts",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 45,
+      "green": 52,
+      "gray": 60
+    },
+    "materials": {
+      "2840": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_gear_06",
+    "url": "https://www.wowhead.com/classic/spell=3922/handful-of-copper-bolts",
+    "source": {
+      "type": "trainer",
+      "cost": 115,
       "trainers": [
         {
           "id": 1702,
@@ -4303,6 +2078,716 @@
     }
   },
   {
+    "id": 3929,
+    "name": "Coarse Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 85,
+      "green": 90,
+      "gray": 95
+    },
+    "materials": {
+      "2836": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_dust_02",
+    "url": "https://www.wowhead.com/classic/spell=3929/coarse-blasting-powder",
+    "source": {
+      "type": "trainer",
+      "cost": 250,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12617,
+    "name": "Deepdive Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "774": 4,
+      "818": 4,
+      "3860": 8,
+      "6037": 1,
+      "10561": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/classic/spell=12617/deepdive-helmet",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10607,
+      "recipeItemName": "Schematic: Deepdive Helmet"
+    }
+  },
+  {
+    "id": 12620,
+    "name": "Sniper Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "6037": 2,
+      "7910": 1,
+      "10559": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/classic/spell=12620/sniper-scope",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10608,
+      "recipeItemName": "Schematic: Sniper Scope"
+    }
+  },
+  {
+    "id": 12754,
+    "name": "The Big One",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "9061": 1,
+      "10507": 6,
+      "10560": 1,
+      "10561": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_misc_bomb_04",
+    "url": "https://www.wowhead.com/classic/spell=12754/the-big-one",
+    "source": {
+      "type": "trainer",
+      "cost": 2600,
+      "trainers": [
+        {
+          "id": 8126,
+          "name": "Nixx Sprocketspring"
+        },
+        {
+          "id": 8738,
+          "name": "Vazario Linkgrease"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3918,
+    "name": "Rough Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 20,
+      "green": 30,
+      "gray": 40
+    },
+    "materials": {
+      "2835": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_dust_01",
+    "url": "https://www.wowhead.com/classic/spell=3918/rough-blasting-powder",
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3978,
+    "name": "Standard Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 147,
+      "gray": 160
+    },
+    "materials": {
+      "1206": 1,
+      "4371": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/classic/spell=3978/standard-scope",
+    "source": {
+      "type": "trainer",
+      "cost": 475,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 7430,
+    "name": "Arclight Spanner",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 70,
+      "green": 80,
+      "gray": 90
+    },
+    "materials": {
+      "2840": 6
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_wrench_01",
+    "url": "https://www.wowhead.com/classic/spell=7430/arclight-spanner",
+    "source": {
+      "type": "trainer",
+      "cost": 150,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 15628,
+    "name": "Pet Bombling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "3860": 6,
+      "4394": 1,
+      "7077": 1,
+      "7191": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_misc_bomb_04",
+    "url": "https://www.wowhead.com/classic/spell=15628/pet-bombling",
+    "source": {
+      "type": "item",
+      "recipeItemId": 11828,
+      "recipeItemName": "Schematic: Pet Bombling"
+    }
+  },
+  {
+    "id": 3954,
+    "name": "Moonsight Rifle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 182,
+      "gray": 195
+    },
+    "materials": {
+      "1705": 2,
+      "4371": 3,
+      "4375": 3,
+      "4400": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_weapon_rifle_06",
+    "url": "https://www.wowhead.com/classic/spell=3954/moonsight-rifle",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4412,
+      "recipeItemName": "Schematic: Moonsight Rifle"
+    }
+  },
+  {
+    "id": 3923,
+    "name": "Rough Copper Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 60,
+      "green": 75,
+      "gray": 90
+    },
+    "materials": {
+      "2589": 1,
+      "2840": 1,
+      "4357": 2,
+      "4359": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_bomb_09",
+    "url": "https://www.wowhead.com/classic/spell=3923/rough-copper-bomb",
+    "source": {
+      "type": "trainer",
+      "cost": 130,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 8334,
+    "name": "Practice Lock",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
+    },
+    "materials": {
+      "2841": 1,
+      "2880": 1,
+      "4359": 2
+    },
+    "minSkill": 100,
+    "icon": "inv_box_01",
+    "url": "https://www.wowhead.com/classic/spell=8334/practice-lock",
+    "source": {
+      "type": "trainer",
+      "cost": 300,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12615,
+    "name": "Spellpower Goggles Xtreme",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 4,
+      "7910": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=12615/spellpower-goggles-xtreme",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10605,
+      "recipeItemName": "Schematic: Spellpower Goggles Xtreme"
+    }
+  },
+  {
+    "id": 3969,
+    "name": "Mechanical Dragonling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "3864": 2,
+      "4382": 1,
+      "4387": 4,
+      "4389": 4,
+      "7191": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/classic/spell=3969/mechanical-dragonling",
+    "source": {
+      "type": "item",
+      "recipeItemId": 13311,
+      "recipeItemName": "Schematic: Mechanical Dragonling"
+    }
+  },
+  {
+    "id": 23082,
+    "name": "Ultra-Flash Shadow Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 8,
+      "12799": 2,
+      "12800": 2,
+      "12803": 6,
+      "12808": 4,
+      "18631": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_16",
+    "url": "https://www.wowhead.com/classic/spell=23082/ultra-flash-shadow-reflector",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18658,
+      "recipeItemName": "Schematic: Ultra-Flash Shadow Reflector"
+    }
+  },
+  {
+    "id": 3972,
+    "name": "Large Seaforium Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "159": 1,
+      "4234": 2,
+      "10505": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_urn_01",
+    "url": "https://www.wowhead.com/classic/spell=3972/large-seaforium-charge",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4417,
+      "recipeItemName": "Schematic: Large Seaforium Charge"
+    }
+  },
+  {
+    "id": 12584,
+    "name": "Gold Power Core",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "3577": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_battery_02",
+    "url": "https://www.wowhead.com/classic/spell=12584/gold-power-core",
+    "source": {
+      "type": "trainer",
+      "cost": 1000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
     "id": 3959,
     "name": "Discombobulator Ray",
     "quality": 1,
@@ -4328,31 +2813,803 @@
     }
   },
   {
-    "id": 12618,
-    "name": "Rose Colored Goggles",
-    "quality": 2,
+    "id": 19790,
+    "name": "Thorium Grenade",
+    "quality": 1,
     "difficulty": {
-      "orange": 230,
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 3,
+      "15992": 3,
+      "15994": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_bomb_08",
+    "url": "https://www.wowhead.com/classic/spell=19790/thorium-grenade",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16041,
+      "recipeItemName": "Schematic: Thorium Grenade"
+    }
+  },
+  {
+    "id": 3953,
+    "name": "Bronze Framework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 145,
+      "green": 170,
+      "gray": 195
+    },
+    "materials": {
+      "2319": 1,
+      "2592": 1,
+      "2841": 2
+    },
+    "minSkill": 145,
+    "icon": "inv_gizmo_bronzeframework_01",
+    "url": "https://www.wowhead.com/classic/spell=3953/bronze-framework",
+    "source": {
+      "type": "trainer",
+      "cost": 600,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3930,
+    "name": "Crafted Heavy Shot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 85,
+      "green": 90,
+      "gray": 95
+    },
+    "materials": {
+      "2840": 1,
+      "4364": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/classic/spell=3930/crafted-heavy-shot",
+    "source": {
+      "type": "trainer",
+      "cost": 250,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 22795,
+    "name": "Core Marksman Rifle",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 6,
+      "16000": 2,
+      "16006": 2,
+      "17010": 4,
+      "17011": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_rifle_05",
+    "url": "https://www.wowhead.com/classic/spell=22795/core-marksman-rifle",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18292,
+      "recipeItemName": "Schematic: Core Marksman Rifle"
+    }
+  },
+  {
+    "id": 23096,
+    "name": "Alarm-O-Bot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "7191": 1,
+      "7910": 1,
+      "8170": 4,
+      "12359": 4,
+      "15994": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_enggizmos_13",
+    "url": "https://www.wowhead.com/classic/spell=23096/alarm-o-bot",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18654,
+      "recipeItemName": "Schematic: Gnomish Alarm-O-Bot"
+    }
+  },
+  {
+    "id": 23081,
+    "name": "Hyper-Radiant Flame Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7080": 6,
+      "7910": 4,
+      "11371": 4,
+      "12800": 2,
+      "18631": 3
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_enggizmos_04",
+    "url": "https://www.wowhead.com/classic/spell=23081/hyper-radiant-flame-reflector",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18657,
+      "recipeItemName": "Schematic: Hyper-Radiant Flame Reflector"
+    }
+  },
+  {
+    "id": 3955,
+    "name": "Explosive Sheep",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "2592": 2,
+      "4375": 1,
+      "4377": 2,
+      "4382": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_nature_polymorph",
+    "url": "https://www.wowhead.com/classic/spell=3955/explosive-sheep",
+    "source": {
+      "type": "trainer",
+      "cost": 750,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 23070,
+    "name": "Dense Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
       "yellow": 250,
       "green": 260,
       "gray": 270
     },
     "materials": {
-      "4304": 6,
-      "7910": 2
+      "14047": 3,
+      "15992": 2
     },
-    "minSkill": 230,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=12618/rose-colored-goggles",
+    "minSkill": 250,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=23070/dense-dynamite",
     "source": {
       "type": "trainer",
-      "cost": 2200,
+      "cost": 5000,
       "trainers": [
         {
           "id": 8736,
           "name": "Buzzek Bracketswing"
         }
       ]
+    }
+  },
+  {
+    "id": 3952,
+    "name": "Minor Recombobulator",
+    "quality": 2,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 177,
+      "gray": 190
+    },
+    "materials": {
+      "1206": 1,
+      "2319": 2,
+      "4371": 1,
+      "4375": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_gizmo_07",
+    "url": "https://www.wowhead.com/classic/spell=3952/minor-recombobulator",
+    "source": {
+      "type": "item",
+      "recipeItemId": 14639,
+      "recipeItemName": "Schematic: Minor Recombobulator"
+    }
+  },
+  {
+    "id": 23077,
+    "name": "Gyrofreeze Ice Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "3829": 2,
+      "7078": 4,
+      "12361": 2,
+      "13467": 4,
+      "15994": 6,
+      "18631": 2
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_enggizmos_02",
+    "url": "https://www.wowhead.com/classic/spell=23077/gyrofreeze-ice-reflector",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18652,
+      "recipeItemName": "Schematic: Gyrofreeze Ice Reflector"
+    }
+  },
+  {
+    "id": 3925,
+    "name": "Rough Boomstick",
+    "quality": 2,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 80,
+      "green": 95,
+      "gray": 110
+    },
+    "materials": {
+      "4359": 1,
+      "4361": 1,
+      "4399": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_weapon_rifle_03",
+    "url": "https://www.wowhead.com/classic/spell=3925/rough-boomstick",
+    "source": {
+      "type": "trainer",
+      "cost": 150,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 23080,
+    "name": "Powerful Seaforium Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "159": 1,
+      "8170": 2,
+      "15992": 3,
+      "15994": 2
+    },
+    "minSkill": 275,
+    "icon": "spell_shadow_detectinvisibility",
+    "url": "https://www.wowhead.com/classic/spell=23080/powerful-seaforium-charge",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18656,
+      "recipeItemName": "Schematic: Powerful Seaforium Charge"
+    }
+  },
+  {
+    "id": 19831,
+    "name": "Arcane Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 1,
+      "16006": 1
+    },
+    "minSkill": 300,
+    "icon": "spell_shadow_mindbomb",
+    "url": "https://www.wowhead.com/classic/spell=19831/arcane-bomb",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16055,
+      "recipeItemName": "Schematic: Arcane Bomb"
+    }
+  },
+  {
+    "id": 3931,
+    "name": "Coarse Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 90,
+      "green": 97,
+      "gray": 105
+    },
+    "materials": {
+      "2589": 1,
+      "4364": 3
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=3931/coarse-dynamite",
+    "source": {
+      "type": "trainer",
+      "cost": 250,
+      "trainers": [
+        {
+          "id": 1702,
+          "name": "Bronk Guzzlegear"
+        },
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 3290,
+          "name": "Deek Fizzlebizz"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 4586,
+          "name": "Graham Van Talen"
+        },
+        {
+          "id": 11028,
+          "name": "Jemma Quikswitch"
+        },
+        {
+          "id": 11037,
+          "name": "Jenna Lemkenilli"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 11025,
+          "name": "Mukdrak"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11026,
+          "name": "Sprite Jumpsprocket"
+        },
+        {
+          "id": 2857,
+          "name": "Thund"
+        },
+        {
+          "id": 3494,
+          "name": "Tinkerwiz"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        },
+        {
+          "id": 10993,
+          "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12587,
+    "name": "Bright-Eye Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "3864": 2,
+      "4234": 6
+    },
+    "minSkill": 175,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=12587/bright-eye-goggles",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10601,
+      "recipeItemName": "Schematic: Bright-Eye Goggles"
+    }
+  },
+  {
+    "id": 3942,
+    "name": "Whirring Bronze Gizmo",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 150,
+      "gray": 175
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_gizmo_02",
+    "url": "https://www.wowhead.com/classic/spell=3942/whirring-bronze-gizmo",
+    "source": {
+      "type": "trainer",
+      "cost": 500,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12621,
+    "name": "Mithril Gyro-Shot",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 2,
+      "10505": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_ammo_bullet_01",
+    "url": "https://www.wowhead.com/classic/spell=12621/mithril-gyro-shot",
+    "source": {
+      "type": "trainer",
+      "cost": 2800,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12718,
+    "name": "Goblin Construction Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 8,
+      "3864": 1,
+      "7068": 4
+    },
+    "minSkill": 205,
+    "icon": "inv_helmet_60",
+    "url": "https://www.wowhead.com/classic/spell=12718/goblin-construction-helmet",
+    "source": {
+      "type": "trainer",
+      "cost": 1500,
+      "trainers": [
+        {
+          "id": 8126,
+          "name": "Nixx Sprocketspring"
+        },
+        {
+          "id": 8738,
+          "name": "Vazario Linkgrease"
+        }
+      ]
+    }
+  },
+  {
+    "id": 23079,
+    "name": "Major Recombobulator",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 290,
+      "gray": 295
+    },
+    "materials": {
+      "14047": 2,
+      "16000": 2,
+      "18631": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_09",
+    "url": "https://www.wowhead.com/classic/spell=23079/major-recombobulator",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18655,
+      "recipeItemName": "Schematic: Major Recombobulator"
     }
   },
   {
@@ -4394,74 +3651,353 @@
     }
   },
   {
-    "id": 26423,
-    "name": "Blue Rocket Cluster",
-    "quality": 1,
+    "id": 19833,
+    "name": "Flawless Arcanite Rifle",
+    "quality": 3,
     "difficulty": {
-      "orange": 225,
-      "yellow": 225,
-      "green": 237,
-      "gray": 250
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
     },
     "materials": {
-      "4304": 1,
+      "7076": 2,
+      "7078": 2,
+      "12360": 10,
+      "12800": 2,
+      "12810": 2,
+      "16000": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_rifle_03",
+    "url": "https://www.wowhead.com/classic/spell=19833/flawless-arcanite-rifle",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16056,
+      "recipeItemName": "Schematic: Flawless Arcanite Rifle"
+    }
+  },
+  {
+    "id": 23069,
+    "name": "EZ-Thro Dynamite II",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "4338": 2,
       "10505": 1
     },
-    "minSkill": 225,
-    "icon": "inv_misc_missilesmallcluster_blue",
-    "url": "https://www.wowhead.com/classic/spell=26423/blue-rocket-cluster",
+    "minSkill": 200,
+    "icon": "inv_misc_bomb_03",
+    "url": "https://www.wowhead.com/classic/spell=23069/ez-thro-dynamite-ii",
     "source": {
       "type": "item",
-      "recipeItemId": 21730,
-      "recipeItemName": "Schematic: Blue Rocket Cluster"
+      "recipeItemId": 18650,
+      "recipeItemName": "Schematic: EZ-Thro Dynamite II"
     }
   },
   {
-    "id": 26442,
-    "name": "Firework Launcher",
+    "id": 24357,
+    "name": "Bloodvine Lens",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12804": 8,
+      "12810": 4,
+      "16006": 1,
+      "19726": 5,
+      "19774": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/classic/spell=24357/bloodvine-lens",
+    "source": {
+      "type": "item",
+      "recipeItemId": 20001,
+      "recipeItemName": "Schematic: Bloodvine Lens"
+    }
+  },
+  {
+    "id": 3947,
+    "name": "Crafted Solid Shot",
     "quality": 1,
     "difficulty": {
-      "orange": 225,
-      "yellow": 245,
-      "green": 255,
-      "gray": 265
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
     },
     "materials": {
-      "9060": 1,
-      "9061": 1,
-      "10560": 1,
-      "10561": 1
+      "2841": 1,
+      "4377": 1
     },
-    "minSkill": 225,
-    "icon": "inv_musket_04",
-    "url": "https://www.wowhead.com/classic/spell=26442/firework-launcher",
+    "minSkill": 125,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/classic/spell=3947/crafted-solid-shot",
     "source": {
-      "type": "item",
-      "recipeItemId": 21738,
-      "recipeItemName": "Schematic: Firework Launcher"
+      "type": "trainer",
+      "cost": 300,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
     }
   },
   {
-    "id": 3925,
-    "name": "Rough Boomstick",
-    "quality": 2,
+    "id": 24356,
+    "name": "Bloodvine Goggles",
+    "quality": 3,
     "difficulty": {
-      "orange": 50,
-      "yellow": 80,
-      "green": 95,
-      "gray": 110
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
     },
     "materials": {
-      "4359": 1,
-      "4361": 1,
-      "4399": 1
+      "12804": 8,
+      "12810": 4,
+      "16006": 2,
+      "19726": 4,
+      "19774": 5
     },
-    "minSkill": 50,
-    "icon": "inv_weapon_rifle_03",
-    "url": "https://www.wowhead.com/classic/spell=3925/rough-boomstick",
+    "minSkill": 300,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=24356/bloodvine-goggles",
+    "source": {
+      "type": "item",
+      "recipeItemId": 20000,
+      "recipeItemName": "Schematic: Bloodvine Goggles"
+    }
+  },
+  {
+    "id": 3958,
+    "name": "Iron Strut",
+    "quality": 1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 160,
+      "green": 170,
+      "gray": 180
+    },
+    "materials": {
+      "3575": 2
+    },
+    "minSkill": 160,
+    "icon": "inv_spear_05",
+    "url": "https://www.wowhead.com/classic/spell=3958/iron-strut",
     "source": {
       "type": "trainer",
-      "cost": 100,
+      "cost": 800,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12624,
+    "name": "Mithril Mechanical Dragonling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "3860": 14,
+      "6037": 4,
+      "7077": 4,
+      "7910": 2,
+      "9060": 2,
+      "9061": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/classic/spell=12624/mithril-mechanical-dragonling",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10609,
+      "recipeItemName": "Schematic: Mithril Mechanical Dragonling"
+    }
+  },
+  {
+    "id": 19794,
+    "name": "Spellpower Goggles Xtreme Plus",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7910": 4,
+      "10502": 1,
+      "12810": 2,
+      "14047": 8
+    },
+    "minSkill": 270,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=19794/spellpower-goggles-xtreme-plus",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16045,
+      "recipeItemName": "Schematic: Spellpower Goggles Xtreme Plus"
+    }
+  },
+  {
+    "id": 19799,
+    "name": "Dark Iron Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "11371": 1,
+      "14047": 3,
+      "15992": 3,
+      "15994": 2
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_bomb_05",
+    "url": "https://www.wowhead.com/classic/spell=19799/dark-iron-bomb",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16049,
+      "recipeItemName": "Schematic: Dark Iron Bomb"
+    }
+  },
+  {
+    "id": 3937,
+    "name": "Large Copper Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 105,
+      "green": 130,
+      "gray": 155
+    },
+    "materials": {
+      "2840": 3,
+      "4364": 4,
+      "4404": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/classic/spell=3937/large-copper-bomb",
+    "source": {
+      "type": "trainer",
+      "cost": 450,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3926,
+    "name": "Copper Modulator",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 95,
+      "green": 110,
+      "gray": 125
+    },
+    "materials": {
+      "2589": 2,
+      "2840": 1,
+      "4359": 2
+    },
+    "minSkill": 65,
+    "icon": "inv_gizmo_03",
+    "url": "https://www.wowhead.com/classic/spell=3926/copper-modulator",
+    "source": {
+      "type": "trainer",
+      "cost": 225,
       "trainers": [
         {
           "id": 1702,
@@ -4539,54 +4075,63 @@
     }
   },
   {
-    "id": 19792,
-    "name": "Thorium Rifle",
+    "id": 12596,
+    "name": "Hi-Impact Mithril Slugs",
     "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 280,
-      "green": 290,
-      "gray": 300
+      "orange": 210,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
     },
     "materials": {
-      "10546": 1,
-      "10559": 2,
-      "10561": 2,
-      "12359": 4,
-      "15994": 2
+      "3860": 1,
+      "10505": 1
     },
-    "minSkill": 260,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=19792/thorium-rifle",
+    "minSkill": 210,
+    "icon": "inv_ammo_bullet_01",
+    "url": "https://www.wowhead.com/classic/spell=12596/hi-impact-mithril-slugs",
     "source": {
-      "type": "item",
-      "recipeItemId": 16043,
-      "recipeItemName": "Schematic: Thorium Rifle"
+      "type": "trainer",
+      "cost": 1700,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
     }
   },
   {
-    "id": 19794,
-    "name": "Spellpower Goggles Xtreme Plus",
-    "quality": 2,
+    "id": 12597,
+    "name": "Deadly Scope",
+    "quality": 1,
     "difficulty": {
-      "orange": 270,
-      "yellow": 290,
-      "green": 300,
-      "gray": 310
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
     },
     "materials": {
-      "7910": 4,
-      "10502": 1,
-      "12810": 2,
-      "14047": 8
+      "4304": 2,
+      "7909": 2,
+      "10559": 1
     },
-    "minSkill": 270,
-    "icon": "inv_helmet_47",
-    "url": "https://www.wowhead.com/classic/spell=19794/spellpower-goggles-xtreme-plus",
+    "minSkill": 210,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/classic/spell=12597/deadly-scope",
     "source": {
       "type": "item",
-      "recipeItemId": 16045,
-      "recipeItemName": "Schematic: Spellpower Goggles Xtreme Plus"
+      "recipeItemId": 10602,
+      "recipeItemName": "Schematic: Deadly Scope"
     }
   },
   {
@@ -4641,182 +4186,50 @@
     }
   },
   {
-    "id": 23069,
-    "name": "EZ-Thro Dynamite II",
+    "id": 3933,
+    "name": "Small Seaforium Charge",
     "quality": 1,
     "difficulty": {
-      "orange": 200,
-      "yellow": 200,
-      "green": 210,
-      "gray": 220
+      "orange": 100,
+      "yellow": 130,
+      "green": 145,
+      "gray": 160
     },
     "materials": {
-      "4338": 2,
-      "10505": 1
+      "159": 1,
+      "2318": 1,
+      "4363": 1,
+      "4364": 2
     },
-    "minSkill": 200,
-    "icon": "inv_misc_bomb_03",
-    "url": "https://www.wowhead.com/classic/spell=23069/ez-thro-dynamite-ii",
+    "minSkill": 100,
+    "icon": "inv_misc_urn_01",
+    "url": "https://www.wowhead.com/classic/spell=3933/small-seaforium-charge",
     "source": {
       "type": "item",
-      "recipeItemId": 18650,
-      "recipeItemName": "Schematic: EZ-Thro Dynamite II"
+      "recipeItemId": 4409,
+      "recipeItemName": "Schematic: Small Seaforium Charge"
     }
   },
   {
-    "id": 3960,
-    "name": "Portable Bronze Mortar",
+    "id": 3924,
+    "name": "Copper Tube",
     "quality": 1,
     "difficulty": {
-      "orange": 165,
-      "yellow": 185,
-      "green": 195,
-      "gray": 205
+      "orange": 50,
+      "yellow": 80,
+      "green": 95,
+      "gray": 110
     },
     "materials": {
-      "2319": 4,
-      "4371": 4,
-      "4377": 4,
-      "4387": 1
+      "2840": 2,
+      "2880": 1
     },
-    "minSkill": 165,
-    "icon": "inv_musket_01",
-    "url": "https://www.wowhead.com/classic/spell=3960/portable-bronze-mortar",
-    "source": {
-      "type": "item",
-      "recipeItemId": 4414,
-      "recipeItemName": "Schematic: Portable Bronze Mortar"
-    }
-  },
-  {
-    "id": 23507,
-    "name": "Snake Burst Firework",
-    "quality": 1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 250,
-      "green": 260,
-      "gray": 270
-    },
-    "materials": {
-      "8150": 1,
-      "14047": 2,
-      "15992": 2
-    },
-    "minSkill": 250,
-    "icon": "spell_holy_holybolt",
-    "url": "https://www.wowhead.com/classic/spell=23507/snake-burst-firework",
-    "source": {
-      "type": "item",
-      "recipeItemId": 19027,
-      "recipeItemName": "Schematic: Snake Burst Firework"
-    }
-  },
-  {
-    "id": 28327,
-    "name": "Steam Tonk Controller",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 295,
-      "green": 305,
-      "gray": 315
-    },
-    "materials": {
-      "10558": 1,
-      "10561": 1,
-      "15994": 2
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_enggizmos_20",
-    "url": "https://www.wowhead.com/classic/spell=28327/steam-tonk-controller",
-    "source": {
-      "type": "item",
-      "recipeItemId": 22729,
-      "recipeItemName": "Schematic: Steam Tonk Controller"
-    }
-  },
-  {
-    "id": 3963,
-    "name": "Compact Harvest Reaper Kit",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 195,
-      "gray": 215
-    },
-    "materials": {
-      "4234": 4,
-      "4382": 1,
-      "4387": 2,
-      "4389": 2
-    },
-    "minSkill": 175,
-    "icon": "inv_helmet_08",
-    "url": "https://www.wowhead.com/classic/spell=3963/compact-harvest-reaper-kit",
+    "minSkill": 50,
+    "icon": "inv_gizmo_pipe_02",
+    "url": "https://www.wowhead.com/classic/spell=3924/copper-tube",
     "source": {
       "type": "trainer",
-      "cost": 1000,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
-    "id": 23068,
-    "name": "Green Firework",
-    "quality": 1,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 150,
-      "green": 162,
-      "gray": 175
-    },
-    "materials": {
-      "4234": 1,
-      "4377": 1
-    },
-    "minSkill": 150,
-    "icon": "spell_nature_abolishmagic",
-    "url": "https://www.wowhead.com/classic/spell=23068/green-firework",
-    "source": {
-      "type": "item",
-      "recipeItemId": 18648,
-      "recipeItemName": "Schematic: Green Firework"
-    }
-  },
-  {
-    "id": 3931,
-    "name": "Coarse Dynamite",
-    "quality": 1,
-    "difficulty": {
-      "orange": 75,
-      "yellow": 90,
-      "green": 97,
-      "gray": 105
-    },
-    "materials": {
-      "2589": 1,
-      "4364": 3
-    },
-    "minSkill": 75,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=3931/coarse-dynamite",
-    "source": {
-      "type": "trainer",
-      "cost": 200,
+      "cost": 150,
       "trainers": [
         {
           "id": 1702,
@@ -4889,6 +4302,318 @@
         {
           "id": 10993,
           "name": "Twizwick Sprocketgrind"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3963,
+    "name": "Compact Harvest Reaper Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "4234": 4,
+      "4382": 1,
+      "4387": 2,
+      "4389": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_helmet_08",
+    "url": "https://www.wowhead.com/classic/spell=3963/compact-harvest-reaper-kit",
+    "source": {
+      "type": "trainer",
+      "cost": 1000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12607,
+    "name": "Catseye Ultra Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4304": 4,
+      "7909": 2,
+      "10592": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=12607/catseye-ultra-goggles",
+    "source": {
+      "type": "item",
+      "recipeItemId": 10603,
+      "recipeItemName": "Schematic: Catseye Ultra Goggles"
+    }
+  },
+  {
+    "id": 12586,
+    "name": "Solid Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "4306": 1,
+      "10505": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=12586/solid-dynamite",
+    "source": {
+      "type": "trainer",
+      "cost": 1000,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12618,
+    "name": "Rose Colored Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "4304": 6,
+      "7910": 2
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/classic/spell=12618/rose-colored-goggles",
+    "source": {
+      "type": "trainer",
+      "cost": 2200,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12755,
+    "name": "Goblin Bomb Dispenser",
+    "quality": 1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "4407": 2,
+      "6037": 6,
+      "10505": 4,
+      "10560": 1,
+      "10561": 2
+    },
+    "minSkill": 230,
+    "icon": "inv_gizmo_06",
+    "url": "https://www.wowhead.com/classic/spell=12755/goblin-bomb-dispenser",
+    "source": {
+      "type": "trainer",
+      "cost": 2400,
+      "trainers": [
+        {
+          "id": 8126,
+          "name": "Nixx Sprocketspring"
+        },
+        {
+          "id": 8738,
+          "name": "Vazario Linkgrease"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3960,
+    "name": "Portable Bronze Mortar",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 195,
+      "gray": 205
+    },
+    "materials": {
+      "2319": 4,
+      "4371": 4,
+      "4377": 4,
+      "4387": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/classic/spell=3960/portable-bronze-mortar",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4414,
+      "recipeItemName": "Schematic: Portable Bronze Mortar"
+    }
+  },
+  {
+    "id": 9269,
+    "name": "Gnomish Universal Remote",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "774": 1,
+      "814": 2,
+      "818": 1,
+      "2841": 6,
+      "4375": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_pocketwatch_01",
+    "url": "https://www.wowhead.com/classic/spell=9269/gnomish-universal-remote",
+    "source": {
+      "type": "item",
+      "recipeItemId": 7560,
+      "recipeItemName": "Schematic: Gnomish Universal Remote"
+    }
+  },
+  {
+    "id": 3919,
+    "name": "Rough Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 30,
+      "green": 45,
+      "gray": 60
+    },
+    "materials": {
+      "2589": 1,
+      "4357": 2
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=3919/rough-dynamite",
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3944,
+    "name": "Flame Deflector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 150,
+      "gray": 175
+    },
+    "materials": {
+      "4375": 1,
+      "4402": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/classic/spell=3944/flame-deflector",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4411,
+      "recipeItemName": "Schematic: Flame Deflector"
+    }
+  },
+  {
+    "id": 3946,
+    "name": "Heavy Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
+    },
+    "materials": {
+      "2592": 1,
+      "4377": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=3946/heavy-dynamite",
+    "source": {
+      "type": "trainer",
+      "cost": 500,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
         }
       ]
     }
@@ -4951,28 +4676,496 @@
     }
   },
   {
-    "id": 3933,
-    "name": "Small Seaforium Charge",
+    "id": 8339,
+    "name": "EZ-Thro Dynamite",
     "quality": 1,
     "difficulty": {
       "orange": 100,
-      "yellow": 130,
-      "green": 145,
-      "gray": 160
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
     },
     "materials": {
-      "159": 1,
-      "2318": 1,
-      "4363": 1,
-      "4364": 2
+      "2592": 1,
+      "4364": 4
     },
     "minSkill": 100,
-    "icon": "inv_misc_urn_01",
-    "url": "https://www.wowhead.com/classic/spell=3933/small-seaforium-charge",
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/classic/spell=8339/ez-thro-dynamite",
     "source": {
       "type": "item",
-      "recipeItemId": 4409,
-      "recipeItemName": "Schematic: Small Seaforium Charge"
+      "recipeItemId": 6716,
+      "recipeItemName": "Schematic: EZ-Thro Dynamite"
+    }
+  },
+  {
+    "id": 23067,
+    "name": "Blue Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_ice_magicdamage",
+    "url": "https://www.wowhead.com/classic/spell=23067/blue-firework",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18649,
+      "recipeItemName": "Schematic: Blue Firework"
+    }
+  },
+  {
+    "id": 3928,
+    "name": "Mechanical Squirrel",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
+    },
+    "materials": {
+      "774": 2,
+      "2840": 1,
+      "4359": 1,
+      "4363": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_crate_01",
+    "url": "https://www.wowhead.com/classic/spell=3928/mechanical-squirrel",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4408,
+      "recipeItemName": "Schematic: Mechanical Squirrel"
+    }
+  },
+  {
+    "id": 3966,
+    "name": "Craftsman's Monocle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 215,
+      "gray": 225
+    },
+    "materials": {
+      "3864": 2,
+      "4234": 6
+    },
+    "minSkill": 185,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/classic/spell=3966/craftsmans-monocle",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4415,
+      "recipeItemName": "Schematic: Craftsman's Monocle"
+    }
+  },
+  {
+    "id": 12595,
+    "name": "Mithril Blunderbuss",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 4,
+      "4400": 1,
+      "7068": 2,
+      "10559": 1,
+      "10560": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=12595/mithril-blunderbuss",
+    "source": {
+      "type": "trainer",
+      "cost": 1600,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 19793,
+    "name": "Lifelike Mechanical Toad",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "8170": 1,
+      "10558": 1,
+      "12803": 1,
+      "15994": 4
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_monsterhead_03",
+    "url": "https://www.wowhead.com/classic/spell=19793/lifelike-mechanical-toad",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16044,
+      "recipeItemName": "Schematic: Lifelike Mechanical Toad"
+    }
+  },
+  {
+    "id": 26011,
+    "name": "Tranquil Mechanical Yeti",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7079": 2,
+      "10558": 1,
+      "15407": 1,
+      "15994": 4,
+      "18631": 2
+    },
+    "minSkill": 250,
+    "icon": "ability_hunter_pet_gorilla",
+    "url": "https://www.wowhead.com/classic/spell=26011/tranquil-mechanical-yeti",
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3939,
+    "name": "Lovingly Crafted Boomstick",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "1206": 3,
+      "4359": 2,
+      "4371": 2,
+      "4400": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=3939/lovingly-crafted-boomstick",
+    "source": {
+      "type": "item",
+      "recipeItemId": 13309,
+      "recipeItemName": "Schematic: Lovingly Crafted Boomstick"
+    }
+  },
+  {
+    "id": 6458,
+    "name": "Ornate Spyglass",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 172,
+      "gray": 185
+    },
+    "materials": {
+      "1206": 1,
+      "4363": 1,
+      "4371": 2,
+      "4375": 2
+    },
+    "minSkill": 135,
+    "icon": "inv_misc_spyglass_01",
+    "url": "https://www.wowhead.com/classic/spell=6458/ornate-spyglass",
+    "source": {
+      "type": "trainer",
+      "cost": 400,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 19792,
+    "name": "Thorium Rifle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "10546": 1,
+      "10559": 2,
+      "10561": 2,
+      "12359": 4,
+      "15994": 2
+    },
+    "minSkill": 260,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=19792/thorium-rifle",
+    "source": {
+      "type": "item",
+      "recipeItemId": 16043,
+      "recipeItemName": "Schematic: Thorium Rifle"
+    }
+  },
+  {
+    "id": 3949,
+    "name": "Silver-plated Shotgun",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 167,
+      "gray": 180
+    },
+    "materials": {
+      "2842": 3,
+      "4371": 2,
+      "4375": 2,
+      "4400": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/classic/spell=3949/silver-plated-shotgun",
+    "source": {
+      "type": "trainer",
+      "cost": 550,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 1676,
+          "name": "Finbus Geargrind"
+        },
+        {
+          "id": 11031,
+          "name": "Franklin Lloyd"
+        },
+        {
+          "id": 5518,
+          "name": "Lilliam Sparkspindle"
+        },
+        {
+          "id": 3412,
+          "name": "Nogg"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        },
+        {
+          "id": 11029,
+          "name": "Trixie Quikswitch"
+        }
+      ]
+    }
+  },
+  {
+    "id": 23066,
+    "name": "Red Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_fire_fireball02",
+    "url": "https://www.wowhead.com/classic/spell=23066/red-firework",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18647,
+      "recipeItemName": "Schematic: Red Firework"
+    }
+  },
+  {
+    "id": 26443,
+    "name": "Firework Cluster Launcher",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "9060": 4,
+      "9061": 4,
+      "10561": 1,
+      "18631": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_03",
+    "url": "https://www.wowhead.com/classic/spell=26443/firework-cluster-launcher",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21737,
+      "recipeItemName": "Schematic: Cluster Launcher"
+    }
+  },
+  {
+    "id": 3957,
+    "name": "Ice Deflector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "3829": 1,
+      "4375": 1
+    },
+    "minSkill": 155,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/classic/spell=3957/ice-deflector",
+    "source": {
+      "type": "item",
+      "recipeItemId": 13308,
+      "recipeItemName": "Schematic: Ice Deflector"
+    }
+  },
+  {
+    "id": 23507,
+    "name": "Snake Burst Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "8150": 1,
+      "14047": 2,
+      "15992": 2
+    },
+    "minSkill": 250,
+    "icon": "spell_holy_holybolt",
+    "url": "https://www.wowhead.com/classic/spell=23507/snake-burst-firework",
+    "source": {
+      "type": "item",
+      "recipeItemId": 19027,
+      "recipeItemName": "Schematic: Snake Burst Firework"
+    }
+  },
+  {
+    "id": 26442,
+    "name": "Firework Launcher",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "9060": 1,
+      "9061": 1,
+      "10560": 1,
+      "10561": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_musket_04",
+    "url": "https://www.wowhead.com/classic/spell=26442/firework-launcher",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21738,
+      "recipeItemName": "Schematic: Firework Launcher"
+    }
+  },
+  {
+    "id": 28327,
+    "name": "Steam Tonk Controller",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "10558": 1,
+      "10561": 1,
+      "15994": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_20",
+    "url": "https://www.wowhead.com/classic/spell=28327/steam-tonk-controller",
+    "source": {
+      "type": "item",
+      "recipeItemId": 22729,
+      "recipeItemName": "Schematic: Steam Tonk Controller"
     }
   },
   {
@@ -5034,444 +5227,6 @@
     }
   },
   {
-    "id": 3947,
-    "name": "Crafted Solid Shot",
-    "quality": 1,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 135,
-      "gray": 145
-    },
-    "materials": {
-      "2841": 1,
-      "4377": 1
-    },
-    "minSkill": 125,
-    "icon": "inv_ammo_bullet_02",
-    "url": "https://www.wowhead.com/classic/spell=3947/crafted-solid-shot",
-    "source": {
-      "type": "trainer",
-      "cost": 300,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 8339,
-    "name": "EZ-Thro Dynamite",
-    "quality": 1,
-    "difficulty": {
-      "orange": 100,
-      "yellow": 115,
-      "green": 122,
-      "gray": 130
-    },
-    "materials": {
-      "2592": 1,
-      "4364": 4
-    },
-    "minSkill": 100,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=8339/ez-thro-dynamite",
-    "source": {
-      "type": "item",
-      "recipeItemId": 6716,
-      "recipeItemName": "Schematic: EZ-Thro Dynamite"
-    }
-  },
-  {
-    "id": 19793,
-    "name": "Lifelike Mechanical Toad",
-    "quality": 1,
-    "difficulty": {
-      "orange": 265,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "8170": 1,
-      "10558": 1,
-      "12803": 1,
-      "15994": 4
-    },
-    "minSkill": 265,
-    "icon": "inv_misc_monsterhead_03",
-    "url": "https://www.wowhead.com/classic/spell=19793/lifelike-mechanical-toad",
-    "source": {
-      "type": "item",
-      "recipeItemId": 16044,
-      "recipeItemName": "Schematic: Lifelike Mechanical Toad"
-    }
-  },
-  {
-    "id": 26418,
-    "name": "Small Red Rocket",
-    "quality": 1,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 137,
-      "gray": 150
-    },
-    "materials": {
-      "2319": 1,
-      "4364": 1
-    },
-    "minSkill": 125,
-    "icon": "inv_misc_missilesmall_red",
-    "url": "https://www.wowhead.com/classic/spell=26418/small-red-rocket",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21726,
-      "recipeItemName": "Schematic: Small Red Rocket"
-    }
-  },
-  {
-    "id": 26427,
-    "name": "Large Green Rocket Cluster",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 275,
-      "green": 280,
-      "gray": 285
-    },
-    "materials": {
-      "8170": 1,
-      "15992": 1
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_missilelargecluster_green",
-    "url": "https://www.wowhead.com/classic/spell=26427/large-green-rocket-cluster",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21734,
-      "recipeItemName": "Schematic: Large Green Rocket Cluster"
-    }
-  },
-  {
-    "id": 3919,
-    "name": "Rough Dynamite",
-    "quality": 1,
-    "difficulty": {
-      "orange": 1,
-      "yellow": 30,
-      "green": 45,
-      "gray": 60
-    },
-    "materials": {
-      "2589": 1,
-      "4357": 2
-    },
-    "minSkill": 1,
-    "icon": "inv_misc_bomb_06",
-    "url": "https://www.wowhead.com/classic/spell=3919/rough-dynamite",
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 3937,
-    "name": "Large Copper Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 105,
-      "yellow": 105,
-      "green": 130,
-      "gray": 155
-    },
-    "materials": {
-      "2840": 3,
-      "4364": 4,
-      "4404": 1
-    },
-    "minSkill": 105,
-    "icon": "inv_misc_bomb_01",
-    "url": "https://www.wowhead.com/classic/spell=3937/large-copper-bomb",
-    "source": {
-      "type": "trainer",
-      "cost": 400,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3949,
-    "name": "Silver-plated Shotgun",
-    "quality": 2,
-    "difficulty": {
-      "orange": 130,
-      "yellow": 155,
-      "green": 167,
-      "gray": 180
-    },
-    "materials": {
-      "2842": 3,
-      "4371": 2,
-      "4375": 2,
-      "4400": 1
-    },
-    "minSkill": 130,
-    "icon": "inv_weapon_rifle_07",
-    "url": "https://www.wowhead.com/classic/spell=3949/silver-plated-shotgun",
-    "source": {
-      "type": "trainer",
-      "cost": 500,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 1676,
-          "name": "Finbus Geargrind"
-        },
-        {
-          "id": 11031,
-          "name": "Franklin Lloyd"
-        },
-        {
-          "id": 5518,
-          "name": "Lilliam Sparkspindle"
-        },
-        {
-          "id": 3412,
-          "name": "Nogg"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        },
-        {
-          "id": 11029,
-          "name": "Trixie Quikswitch"
-        }
-      ]
-    }
-  },
-  {
-    "id": 26424,
-    "name": "Green Rocket Cluster",
-    "quality": 1,
-    "difficulty": {
-      "orange": 225,
-      "yellow": 225,
-      "green": 237,
-      "gray": 250
-    },
-    "materials": {
-      "4304": 1,
-      "10505": 1
-    },
-    "minSkill": 225,
-    "icon": "inv_misc_missilesmallcluster_green",
-    "url": "https://www.wowhead.com/classic/spell=26424/green-rocket-cluster",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21731,
-      "recipeItemName": "Schematic: Green Rocket Cluster"
-    }
-  },
-  {
-    "id": 26426,
-    "name": "Large Blue Rocket Cluster",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 275,
-      "green": 280,
-      "gray": 285
-    },
-    "materials": {
-      "8170": 1,
-      "15992": 1
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_missilelargecluster_blue",
-    "url": "https://www.wowhead.com/classic/spell=26426/large-blue-rocket-cluster",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21733,
-      "recipeItemName": "Schematic: Large Blue Rocket Cluster"
-    }
-  },
-  {
-    "id": 26421,
-    "name": "Large Green Rocket",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 187,
-      "gray": 200
-    },
-    "materials": {
-      "4234": 1,
-      "4377": 1
-    },
-    "minSkill": 175,
-    "icon": "inv_misc_missilelarge_green",
-    "url": "https://www.wowhead.com/classic/spell=26421/large-green-rocket",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21728,
-      "recipeItemName": "Schematic: Large Green Rocket"
-    }
-  },
-  {
-    "id": 26422,
-    "name": "Large Red Rocket",
-    "quality": 1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 175,
-      "green": 187,
-      "gray": 200
-    },
-    "materials": {
-      "4234": 1,
-      "4377": 1
-    },
-    "minSkill": 175,
-    "icon": "inv_misc_missilelarge_red",
-    "url": "https://www.wowhead.com/classic/spell=26422/large-red-rocket",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21729,
-      "recipeItemName": "Schematic: Large Red Rocket"
-    }
-  },
-  {
-    "id": 3957,
-    "name": "Ice Deflector",
-    "quality": 1,
-    "difficulty": {
-      "orange": 155,
-      "yellow": 175,
-      "green": 185,
-      "gray": 195
-    },
-    "materials": {
-      "3829": 1,
-      "4375": 1
-    },
-    "minSkill": 155,
-    "icon": "inv_gizmo_01",
-    "url": "https://www.wowhead.com/classic/spell=3957/ice-deflector",
-    "source": {
-      "type": "item",
-      "recipeItemId": 13308,
-      "recipeItemName": "Schematic: Ice Deflector"
-    }
-  },
-  {
-    "id": 12603,
-    "name": "Mithril Frag Bomb",
-    "quality": 1,
-    "difficulty": {
-      "orange": 215,
-      "yellow": 215,
-      "green": 235,
-      "gray": 255
-    },
-    "materials": {
-      "10505": 1,
-      "10560": 1,
-      "10561": 1
-    },
-    "minSkill": 215,
-    "icon": "inv_misc_bomb_02",
-    "url": "https://www.wowhead.com/classic/spell=12603/mithril-frag-bomb",
-    "source": {
-      "type": "trainer",
-      "cost": 1800,
-      "trainers": [
-        {
-          "id": 8736,
-          "name": "Buzzek Bracketswing"
-        },
-        {
-          "id": 11017,
-          "name": "Roxxik"
-        },
-        {
-          "id": 5174,
-          "name": "Springspindle Fizzlegear"
-        }
-      ]
-    }
-  },
-  {
     "id": 15255,
     "name": "Mechanical Repair Kit",
     "quality": 1,
@@ -5509,54 +5264,33 @@
     }
   },
   {
-    "id": 21940,
-    "name": "SnowMaster 9000",
-    "quality": 1,
+    "id": 19819,
+    "name": "Voice Amplification Modulator",
+    "quality": 2,
     "difficulty": {
-      "orange": 190,
-      "yellow": 190,
-      "green": 210,
-      "gray": 230
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
     },
     "materials": {
-      "3829": 1,
-      "3860": 8,
-      "4389": 4,
-      "17202": 4
+      "10558": 1,
+      "12799": 1,
+      "15994": 1,
+      "16006": 2
     },
-    "minSkill": 190,
-    "icon": "spell_frost_windwalkon",
-    "url": "https://www.wowhead.com/classic/spell=21940/snowmaster-9000",
+    "minSkill": 290,
+    "icon": "inv_jewelry_amulet_07",
+    "url": "https://www.wowhead.com/classic/spell=19819/voice-amplification-modulator",
     "source": {
       "type": "item",
-      "recipeItemId": 17720,
-      "recipeItemName": "Schematic: Snowmaster 9000"
+      "recipeItemId": 16052,
+      "recipeItemName": "Schematic: Voice Amplification Modulator"
     }
   },
   {
-    "id": 3920,
-    "name": "Crafted Light Shot",
-    "quality": 1,
-    "difficulty": {
-      "orange": null,
-      "yellow": 30,
-      "green": 45,
-      "gray": 60
-    },
-    "materials": {
-      "2840": 1,
-      "4357": 1
-    },
-    "minSkill": null,
-    "icon": "inv_ammo_bullet_02",
-    "url": "https://www.wowhead.com/classic/spell=3920/crafted-light-shot",
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 26417,
-    "name": "Small Green Rocket",
+    "id": 26416,
+    "name": "Small Blue Rocket",
     "quality": 1,
     "difficulty": {
       "orange": 125,
@@ -5569,12 +5303,35 @@
       "4364": 1
     },
     "minSkill": 125,
-    "icon": "inv_misc_missilesmall_green",
-    "url": "https://www.wowhead.com/classic/spell=26417/small-green-rocket",
+    "icon": "inv_misc_missilesmall_blue",
+    "url": "https://www.wowhead.com/classic/spell=26416/small-blue-rocket",
     "source": {
       "type": "item",
-      "recipeItemId": 21725,
-      "recipeItemName": "Schematic: Small Green Rocket"
+      "recipeItemId": 21724,
+      "recipeItemName": "Schematic: Small Blue Rocket"
+    }
+  },
+  {
+    "id": 26418,
+    "name": "Small Red Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_red",
+    "url": "https://www.wowhead.com/classic/spell=26418/small-red-rocket",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21726,
+      "recipeItemName": "Schematic: Small Red Rocket"
     }
   },
   {
@@ -5675,8 +5432,138 @@
     }
   },
   {
-    "id": 26416,
-    "name": "Small Blue Rocket",
+    "id": 12603,
+    "name": "Mithril Frag Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "10505": 1,
+      "10560": 1,
+      "10561": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_misc_bomb_02",
+    "url": "https://www.wowhead.com/classic/spell=12603/mithril-frag-bomb",
+    "source": {
+      "type": "trainer",
+      "cost": 1800,
+      "trainers": [
+        {
+          "id": 8736,
+          "name": "Buzzek Bracketswing"
+        },
+        {
+          "id": 11017,
+          "name": "Roxxik"
+        },
+        {
+          "id": 5174,
+          "name": "Springspindle Fizzlegear"
+        }
+      ]
+    }
+  },
+  {
+    "id": 23068,
+    "name": "Green Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_nature_abolishmagic",
+    "url": "https://www.wowhead.com/classic/spell=23068/green-firework",
+    "source": {
+      "type": "item",
+      "recipeItemId": 18648,
+      "recipeItemName": "Schematic: Green Firework"
+    }
+  },
+  {
+    "id": 26423,
+    "name": "Blue Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_blue",
+    "url": "https://www.wowhead.com/classic/spell=26423/blue-rocket-cluster",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21730,
+      "recipeItemName": "Schematic: Blue Rocket Cluster"
+    }
+  },
+  {
+    "id": 26428,
+    "name": "Large Red Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_red",
+    "url": "https://www.wowhead.com/classic/spell=26428/large-red-rocket-cluster",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21735,
+      "recipeItemName": "Schematic: Large Red Rocket Cluster"
+    }
+  },
+  {
+    "id": 3968,
+    "name": "Goblin Land Mine",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 225,
+      "gray": 235
+    },
+    "materials": {
+      "3575": 2,
+      "4377": 3,
+      "4389": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_shield_08",
+    "url": "https://www.wowhead.com/classic/spell=3968/goblin-land-mine",
+    "source": {
+      "type": "item",
+      "recipeItemId": 4416,
+      "recipeItemName": "Schematic: Goblin Land Mine"
+    }
+  },
+  {
+    "id": 26417,
+    "name": "Small Green Rocket",
     "quality": 1,
     "difficulty": {
       "orange": 125,
@@ -5689,12 +5576,35 @@
       "4364": 1
     },
     "minSkill": 125,
-    "icon": "inv_misc_missilesmall_blue",
-    "url": "https://www.wowhead.com/classic/spell=26416/small-blue-rocket",
+    "icon": "inv_misc_missilesmall_green",
+    "url": "https://www.wowhead.com/classic/spell=26417/small-green-rocket",
     "source": {
       "type": "item",
-      "recipeItemId": 21724,
-      "recipeItemName": "Schematic: Small Blue Rocket"
+      "recipeItemId": 21725,
+      "recipeItemName": "Schematic: Small Green Rocket"
+    }
+  },
+  {
+    "id": 26427,
+    "name": "Large Green Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_green",
+    "url": "https://www.wowhead.com/classic/spell=26427/large-green-rocket-cluster",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21734,
+      "recipeItemName": "Schematic: Large Green Rocket Cluster"
     }
   },
   {
@@ -5721,6 +5631,119 @@
     }
   },
   {
+    "id": 26421,
+    "name": "Large Green Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_green",
+    "url": "https://www.wowhead.com/classic/spell=26421/large-green-rocket",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21728,
+      "recipeItemName": "Schematic: Large Green Rocket"
+    }
+  },
+  {
+    "id": 26422,
+    "name": "Large Red Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_red",
+    "url": "https://www.wowhead.com/classic/spell=26422/large-red-rocket",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21729,
+      "recipeItemName": "Schematic: Large Red Rocket"
+    }
+  },
+  {
+    "id": 3920,
+    "name": "Crafted Light Shot",
+    "quality": 1,
+    "difficulty": {
+      "orange": null,
+      "yellow": 30,
+      "green": 45,
+      "gray": 60
+    },
+    "materials": {
+      "2840": 1,
+      "4357": 1
+    },
+    "minSkill": null,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/classic/spell=3920/crafted-light-shot",
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 26424,
+    "name": "Green Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_green",
+    "url": "https://www.wowhead.com/classic/spell=26424/green-rocket-cluster",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21731,
+      "recipeItemName": "Schematic: Green Rocket Cluster"
+    }
+  },
+  {
+    "id": 26426,
+    "name": "Large Blue Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_blue",
+    "url": "https://www.wowhead.com/classic/spell=26426/large-blue-rocket-cluster",
+    "source": {
+      "type": "item",
+      "recipeItemId": 21733,
+      "recipeItemName": "Schematic: Large Blue Rocket Cluster"
+    }
+  },
+  {
     "id": 26425,
     "name": "Red Rocket Cluster",
     "quality": 1,
@@ -5741,29 +5764,6 @@
       "type": "item",
       "recipeItemId": 21732,
       "recipeItemName": "Schematic: Red Rocket Cluster"
-    }
-  },
-  {
-    "id": 26428,
-    "name": "Large Red Rocket Cluster",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 275,
-      "green": 280,
-      "gray": 285
-    },
-    "materials": {
-      "8170": 1,
-      "15992": 1
-    },
-    "minSkill": 275,
-    "icon": "inv_misc_missilelargecluster_red",
-    "url": "https://www.wowhead.com/classic/spell=26428/large-red-rocket-cluster",
-    "source": {
-      "type": "item",
-      "recipeItemId": 21735,
-      "recipeItemName": "Schematic: Large Red Rocket Cluster"
     }
   }
 ]

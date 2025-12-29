@@ -9,8 +9,8 @@ import rawLeatherworking  from '@/data/recipes/leatherworking.json';
 import rawTailoring  from '@/data/recipes/tailoring.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, PlanStep, blacklistedSpellIds, calculateTotalMaterials } from '@/lib/planner';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree } from '@/lib/recipeCalc';
+import { makeDynamicPlan, PlanStep, blacklistedSpellIds, calculateTotalMaterials, MaterialRequirement } from '@/lib/planner';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -84,26 +84,7 @@ const diffColor = (skill: number, d: Recipe['difficulty']) => {
 };
 const iconSrc = (id: number, professionId: string) => `/icons/${professionId.toLowerCase()}/${id}.jpg`;
 
-function expectedSkillUpsAt(X: number, d: Recipe['difficulty']): number {
-  // correct formula: (greySkill – yourSkill) / (greySkill – yellowSkill)
-  const G = d.gray!, Y = d.yellow!;
-  return (G - X) / (G - Y);
-}
-
-function expectedCraftsBetween(
-  low: number,
-  high: number,
-  d: Recipe['difficulty']
-): number {
-  let sum = 0;
-  for (let lvl = low; lvl < high; lvl++) {
-    const p = expectedSkillUpsAt(lvl, d);
-    if (p > 0) {
-      sum += Math.ceil(1 / p);
-    }
-  }
-  return sum;
-}
+// expectedCraftsBetween is now imported from recipeCalc.ts
 
 function CollapsibleSection({
   expanded,
@@ -311,12 +292,52 @@ export default function EnchantingPlanner() {
   const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
   const [visibleCardKey, setVisibleCardKey] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedProfession, setSelectedProfession] = useState('Enchanting');
-  const [selectedVersion, setSelectedVersion] = useState('Vanilla');
-  const [selectedRealm, setSelectedRealm] = useState('Thunderstrike');
-  const [selectedFaction, setSelectedFaction] = useState('Alliance');
+  // Initialize profession from URL if available, otherwise default to Enchanting
+  // Use lazy initializer function to read from URL params
+  const [selectedProfession, setSelectedProfession] = useState(() => {
+    if (urlProfession) {
+      const normalizedProfession = urlProfession.charAt(0).toUpperCase() + urlProfession.slice(1).toLowerCase();
+      if (professions.includes(normalizedProfession)) {
+        return normalizedProfession;
+      }
+    }
+    return 'Enchanting';
+  });
+  // Define realms and factions early for use in initial state
+  const realms = ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"];
+  const factions = ["Alliance", "Horde"];
+  
+  // Initialize from URL params if available
+  const [selectedVersion, setSelectedVersion] = useState(() => {
+    if (urlVersion) {
+      const normalizedVersion = urlVersion.charAt(0).toUpperCase() + urlVersion.slice(1).toLowerCase();
+      if (normalizedVersion === 'Vanilla' || normalizedVersion === 'The Burning Crusade' || normalizedVersion === 'Tbc') {
+        return normalizedVersion === 'Tbc' ? 'The Burning Crusade' : normalizedVersion;
+      }
+    }
+    return 'Vanilla';
+  });
+  const [selectedRealm, setSelectedRealm] = useState(() => {
+    if (urlRealm) {
+      const normalizedRealm = realms.find(r => r.toLowerCase() === urlRealm.toLowerCase());
+      if (normalizedRealm) {
+        return normalizedRealm;
+      }
+    }
+    return 'Thunderstrike';
+  });
+  const [selectedFaction, setSelectedFaction] = useState(() => {
+    if (urlFaction) {
+      const normalizedFaction = factions.find(f => f.toLowerCase() === urlFaction.toLowerCase());
+      if (normalizedFaction) {
+        return normalizedFaction;
+      }
+    }
+    return 'Alliance';
+  });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
   const [useMarketValue, setUseMarketValue] = useState(false);
+  const [optimizeSubCrafting, setOptimizeSubCrafting] = useState(false);
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
 
   // Add isSliding state to track active slider interaction
@@ -325,6 +346,7 @@ export default function EnchantingPlanner() {
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
   const [skipLimitedStock, setSkipLimitedStock] = useState(true);
+  const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
   const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -332,6 +354,8 @@ export default function EnchantingPlanner() {
   // Add state for prices
   const [prices, setPrices] = useState<any>({});
   const [isLoadingPrices, setIsLoadingPrices] = useState(true);
+  // Track the current price loading request to ignore outdated ones
+  const priceLoadRequestIdRef = useRef(0);
   
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
@@ -343,18 +367,26 @@ export default function EnchantingPlanner() {
     setSliderValue([committedSkill, committedTarget]);
   }, [committedSkill, committedTarget]);
 
-  // Handle URL profession parameter
+  // Handle URL profession parameter changes (when URL changes after initial load)
   useEffect(() => {
     if (urlProfession) {
       const normalizedProfession = urlProfession.charAt(0).toUpperCase() + urlProfession.slice(1).toLowerCase();
       if (professions.includes(normalizedProfession)) {
-        setSelectedProfession(normalizedProfession);
+        // Only update if it's different from current to prevent unnecessary updates
+        if (normalizedProfession !== selectedProfession) {
+          setSelectedProfession(normalizedProfession);
+        }
       } else {
         // Invalid profession in URL, redirect to default
         router.push('/enchanting');
       }
+    } else {
+      // No profession in URL, default to Enchanting
+      if (selectedProfession !== 'Enchanting') {
+        setSelectedProfession('Enchanting');
+      }
     }
-  }, [urlProfession, router]);
+  }, [urlProfession, router, selectedProfession]);
 
   // Handle URL skill parameter
   useEffect(() => {
@@ -408,42 +440,79 @@ export default function EnchantingPlanner() {
     if (skill > 1) params.set('skill', skill.toString());
     if (target < 300) params.set('target', target.toString());
     if (version !== 'Vanilla') params.set('version', version);
-    if (realm !== 'Thunderstrike') params.set('realm', realm);
-    if (faction !== 'Alliance') params.set('faction', faction);
+    // Always include realm parameter
+    params.set('realm', realm);
+    // Always include faction parameter
+    params.set('faction', faction);
     
     const queryString = params.toString();
     return `/${profession.toLowerCase()}${queryString ? `?${queryString}` : ''}`;
   };
 
   // Update URL when any selector changes
-  const updateUrl = () => {
-    const newUrl = buildUrlWithParams(selectedProfession, committedSkill, committedTarget, selectedVersion, selectedRealm, selectedFaction);
+  const updateUrl = (overrides?: { realm?: string; faction?: string; version?: string }) => {
+    const realm = overrides?.realm ?? selectedRealm;
+    const faction = overrides?.faction ?? selectedFaction;
+    const version = overrides?.version ?? selectedVersion;
+    const newUrl = buildUrlWithParams(selectedProfession, committedSkill, committedTarget, version, realm, faction);
     router.push(newUrl, { scroll: false });
   };
+  
+  // Track recent user-initiated changes to prevent URL effects from overwriting them
+  // We track the timestamp of any recent change, not the specific value
+  const recentUserChangeTimestampRef = useRef<number>(0);
 
+  // Ref to track pending profession change - prevents re-render until data is ready
+  const pendingProfessionRef = useRef<string | null>(null);
+  // Counter to force useMemo recalculation when pendingProfessionRef changes
+  // This doesn't affect UI rendering, just triggers useMemo dependencies
+  const [pendingProfessionCounter, setPendingProfessionCounter] = useState(0);
+  
   // Handle profession change and update URL
   const handleProfessionChange = (newProfession: string) => {
-    setSelectedProfession(newProfession);
+    // CRITICAL: Preserve current recipe and plan BEFORE starting profession change
+    // This keeps them visible until the new profession's data is ready
+    if (selected) {
+      preservedRecipeRef.current = selected;
+      preservedRecipeProfessionRef.current = selectedProfession; // Track which profession this recipe belongs to
+    }
+    // Preserve current plan
+    preservedPlanRef.current = plan;
+    // Update previous profession ref for animation detection
+    previousProfessionForAnimationRef.current = selectedProfession;
+    
+    // Store new profession in ref - DON'T update selectedProfession state yet
+    // This prevents re-render - we'll update state once all data is ready
+    pendingProfessionRef.current = newProfession;
+    
+    // Update URL immediately for navigation
     const newUrl = buildUrlWithParams(newProfession, committedSkill, committedTarget, selectedVersion, selectedRealm, selectedFaction);
-    router.push(newUrl);
+    router.push(newUrl, { scroll: false }); // Prevent scroll jump during navigation
+    
+    // Increment counter to trigger useMemo recalculation (but selectedProfession stays unchanged)
+    setPendingProfessionCounter(c => c + 1);
   };
 
   // Handle version change and update URL
   const handleVersionChange = (newVersion: string) => {
     setSelectedVersion(newVersion);
-    updateUrl();
+    updateUrl({ version: newVersion });
   };
 
   // Handle realm change and update URL
   const handleRealmChange = (newRealm: string) => {
+    // Track timestamp of user-initiated change
+    recentUserChangeTimestampRef.current = Date.now();
     setSelectedRealm(newRealm);
-    updateUrl();
+    updateUrl({ realm: newRealm });
   };
 
   // Handle faction change and update URL
   const handleFactionChange = (newFaction: string) => {
+    // Track timestamp of user-initiated change
+    recentUserChangeTimestampRef.current = Date.now();
     setSelectedFaction(newFaction);
-    updateUrl();
+    updateUrl({ faction: newFaction });
   };
 
   // Track the last non-debounced skill value
@@ -546,10 +615,25 @@ export default function EnchantingPlanner() {
 
   const tabs = ['route', 'all'] as const;
 
+  // CRITICAL: Declare all refs BEFORE recipes useMemo so they're available
+  // Ref to preserve the current recipe during profession transitions
+  // When profession changes, we keep showing this recipe until the new one is ready
+  const preservedRecipeRef = useRef<Recipe | null>(null);
+  // Track which profession the preserved recipe belongs to
+  const preservedRecipeProfessionRef = useRef<string | null>(null);
+  // Ref to preserve the current plan during profession transitions
+  // When profession changes, we keep showing the old plan until the new one is ready
+  const preservedPlanRef = useRef<ReturnType<typeof makeDynamicPlan> | null>(null);
+  // Track previous profession to detect profession changes (for animation)
+  const previousProfessionForAnimationRef = useRef<string>(selectedProfession);
+  
   const recipes: Recipe[] = useMemo(() => {
-    const raw = rawDataMap[selectedProfession] || [];
+    // Use pending profession if it exists, otherwise use current profession
+    // This allows us to calculate recipes for the new profession without updating selectedProfession
+    const activeProfession = pendingProfessionRef.current || selectedProfession;
+    const raw = rawDataMap[activeProfession] || [];
     
-    return raw.map(r => {
+    const newRecipes = raw.map(r => {
       const { quality: _badQuality, materials: _rawMats, ...base } = r;
   
       const materials: Record<string, number> = {};
@@ -567,10 +651,54 @@ export default function EnchantingPlanner() {
         materials,
       };
     });
-  }, [selectedProfession]);
+    
+    return newRecipes;
+  }, [selectedProfession, pendingProfessionCounter]);
+
+  // Create a Set of recipe IDs for the current profession (for sub-crafting optimization)
+  const currentProfessionRecipeIds = useMemo(() => {
+    return new Set(recipes.map(r => r.id));
+  }, [recipes]);
+
+  // Helper to get the correct profession for a recipe's icon
+  // Uses preserved profession if recipe is from preserved ref, otherwise uses active profession
+  const getRecipeProfession = (recipeId: number, currentProfession: string): string => {
+    // If recipe matches preserved recipe, use preserved profession
+    if (preservedRecipeRef.current && recipeId === preservedRecipeRef.current.id && preservedRecipeProfessionRef.current) {
+      return preservedRecipeProfessionRef.current;
+    }
+    // Check if recipe exists in current recipes array - if so, it belongs to the active profession
+    // (which could be pendingProfessionRef.current during transition)
+    const activeProfession = pendingProfessionRef.current || currentProfession;
+    const recipeExistsInCurrent = recipes.some(r => r.id === recipeId);
+    if (recipeExistsInCurrent) {
+      return activeProfession;
+    }
+    // Recipe not in current recipes and not preserved - use current profession as fallback
+    return currentProfession;
+  };
 
   // Use committedSkill for the plan calculation
   const plan = useMemo(() => {
+    // If there's a pending profession change, show preserved plan to prevent flickering
+    // We'll update to the new plan once selectedProfession updates
+    if (pendingProfessionRef.current && preservedPlanRef.current) {
+      return preservedPlanRef.current;
+    }
+    
+    // Use pending profession if it exists, otherwise use current profession
+    // This allows us to calculate plan for the new profession without updating selectedProfession
+    const activeProfession = pendingProfessionRef.current || selectedProfession;
+    
+    // Don't calculate plan while prices are loading to prevent empty plan flash
+    if (isLoadingPrices) {
+      return {
+        steps: [],
+        totalCost: 0,
+        finalSkill: committedSkill,
+      };
+    }
+    
     if (!recipes.length) {
       return {
         steps: [],
@@ -578,18 +706,36 @@ export default function EnchantingPlanner() {
         finalSkill: committedSkill,
       };
     }
-    return makeDynamicPlan(
+    
+    // Don't calculate if prices object is empty (not yet loaded)
+    if (Object.keys(prices).length === 0) {
+      return {
+        steps: [],
+        totalCost: 0,
+        finalSkill: committedSkill,
+      };
+    }
+    
+    const newPlan = makeDynamicPlan(
       committedSkill,
         committedTarget,
         recipes,
         prices,
         materialInfo,
-      selectedProfession,
+      activeProfession,
         includeRecipeCost,
       skipLimitedStock,
-      useMarketValue
-  );
-  }, [committedSkill, committedTarget, recipes, prices, materialInfo, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue]);
+      useMarketValue,
+      recalculateForEachLevel,
+      optimizeSubCrafting,
+      currentProfessionRecipeIds
+    );
+    
+    // Update preserved plan ref for next transition
+    preservedPlanRef.current = newPlan;
+    
+    return newPlan;
+  }, [committedSkill, committedTarget, recipes, prices, materialInfo, selectedProfession, pendingProfessionCounter, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -601,26 +747,26 @@ export default function EnchantingPlanner() {
     setRngHigh(committedTarget);
   }, [committedSkill, committedTarget]);
 
+
   // Use committedSkill for effects that trigger recipe selection
   useEffect(() => {
+    // Skip if there's a pending profession change (it will handle selection)
+    if (pendingProfessionRef.current) return;
+    
     // Reset states when view changes
     setSelectedCardKey(null);
     setVisibleCardKey(null);
-    
-    if (view === 'route') {
-      // When switching to route view, select the first recipe from steps
-      const first = plan.steps.find((s): s is Extract<PlanStep, { recipe: Recipe }> => 'recipe' in s);
-      if (first) {
-        setSelectedRecipeId(first.recipe.id);
-        setRngLow(committedSkill);
-        setRngHigh(first.endSkill);
-      }
-    }
-  }, [view, plan, committedSkill]);
+    // Don't automatically select a recipe - let user select manually
+  }, [view]);
 
   // Use faster debounced value for visual updates like difficulty colors
   const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
-  const sortedAll = useMemo(() => [...recipes].sort((a, b) => a.minSkill - b.minSkill), [recipes]);
+  const sortedAll = useMemo(() => 
+    [...recipes]
+      .filter(r => !blacklistedSpellIds.has(r.id))
+      .sort((a, b) => (a.minSkill ?? 1) - (b.minSkill ?? 1)), 
+    [recipes]
+  );
 
   const filteredRecipes = useMemo(() => {
     if (view === 'all') {
@@ -630,11 +776,34 @@ export default function EnchantingPlanner() {
     }
     return [];
   }, [view, searchTerm, fuse, sortedAll]);
-
-  const selected = useMemo<Recipe|null>(
-    () => recipes.find(r => r.id === selectedRecipeId) ?? null,
-    [selectedRecipeId]
-  );
+  
+  // Store previous recipe to show during profession transitions
+  // Why useMemo here?
+  // 1. Memoization: Avoids recalculating the selected recipe on every render
+  // 2. Side effects: Updates refs (previousRecipeRef, previousProfessionRef) when dependencies change
+  // 3. Dependency tracking: Only recalculates when selectedRecipeId, recipes, or profession changes
+  // 4. React optimization: Prevents unnecessary re-renders of components that depend on `selected`
+  // Without useMemo, this would run on every render, even when nothing relevant changed
+  const selected = useMemo<Recipe|null>(() => {
+    // If selectedRecipeId is set, use it - this is the correct recipe
+    if (selectedRecipeId !== null) {
+      const found = recipes.find(r => r.id === selectedRecipeId);
+      if (found) {
+        // Update preserved recipe ref for next transition
+        preservedRecipeRef.current = found;
+        preservedRecipeProfessionRef.current = selectedProfession; // Track current profession
+        return found;
+      }
+    }
+    
+    // If selectedRecipeId is null, show preserved recipe (keeps current recipe visible during transition)
+    if (preservedRecipeRef.current) {
+      return preservedRecipeRef.current;
+    }
+    
+    // No recipe available
+    return null;
+  }, [selectedRecipeId, recipes, selectedProfession]);
 
   const [rngLow, setRngLow]   = useState( selected ? selected.minSkill : 1 );
   const [rngHigh, setRngHigh] = useState( selected ? (selected.difficulty.gray||selected.minSkill) : 300 );
@@ -755,12 +924,10 @@ export default function EnchantingPlanner() {
   };
 
   const expCrafts = useMemo(() => {
-    if (!selected) return 0;
-    // round up so crafts are always whole numbers
-    return Math.ceil(
-      expectedCraftsBetween(rngLow, rngHigh, selected.difficulty)
-    );
-  }, [rngLow, rngHigh, selected]);
+    if (!selected || totalLevelUps <= 0) return 0;
+    // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
+    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty);
+  }, [selected, clampedLow, clampedHigh]);
 
   useEffect(() => {
     if (!selected) return;
@@ -786,7 +953,7 @@ export default function EnchantingPlanner() {
       const buyUnit = useMarketValue ?
         (prices[itemId]?.marketValue ?? prices[itemId]?.minBuyout ?? Infinity) :
         (prices[itemId]?.minBuyout ?? prices[itemId]?.marketValue ?? Infinity);
-      const craftUnit = getItemCost(itemId, prices, materialInfo, new Map(), true, useMarketValue);
+      const craftUnit = getItemCost(itemId, prices, materialInfo, new Map(), true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
       
       const buyCost = buyUnit * qty;
       const craftCost = craftUnit * qty;
@@ -795,10 +962,10 @@ export default function EnchantingPlanner() {
       out[id] = { qty, buyCost, craftCost, saved };
     }
     return out;
-  }, [selected, expCrafts, prices, materialInfo, useMarketValue]);
+  }, [selected, expCrafts, prices, materialInfo, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds]);
 
   const materialTrees = Object.entries(materialTotals).map(([id, { qty }]) => {
-    return buildMaterialTree(parseInt(id), qty, prices, materialInfo, true, new Set(), useMarketValue);
+    return buildMaterialTree(parseInt(id), qty, prices, materialInfo, true, new Set(), useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
   });
   
 
@@ -835,11 +1002,12 @@ export default function EnchantingPlanner() {
   };
 
 const xTicks = selected
-  ? [selected.difficulty.orange,
+  ? Array.from(new Set([
+      selected.difficulty.orange,
       selected.difficulty.yellow,
       selected.difficulty.green,
-      selected.difficulty.gray]
-      .filter((v): v is number => typeof v === 'number')
+      selected.difficulty.gray
+    ].filter((v): v is number => typeof v === 'number')))
       .sort((a, b) => a - b)
   : [];
 
@@ -873,79 +1041,202 @@ const renderXTick = selected
     setPreviouslyVisible(currentlyVisible);
   }, [committedSkill]);
 
-  const lastProfessionChange = useRef(selectedProfession);
   const lastViewChange = useRef(view);
 
-  // Update selected card and recipe when profession changes
+  // CRITICAL: Effect to handle pending profession changes
+  // This batches all state updates together - only triggers ONE re-render when everything is ready
   useEffect(() => {
-    if (lastProfessionChange.current === selectedProfession) return;
-    lastProfessionChange.current = selectedProfession;
-
-    if (plan.steps.length > 0) {
-      const firstStep = plan.steps[0];
-      if ('recipe' in firstStep) {
-        const recipeStep = firstStep as Extract<PlanStep, { recipe: Recipe }>;
-        const cardKey = `${recipeStep.recipe.name}-${recipeStep.endSkill}`;
-        setSelectedCardKey(cardKey);
-        setSelectedRecipeId(recipeStep.recipe.id);
+    // Check if there's a pending profession change
+    if (!pendingProfessionRef.current) return;
+    
+    const pendingProfession = pendingProfessionRef.current;
+    
+    // Wait for prices to load (they're already loading based on realm/faction)
+    // Prices are needed for plan calculation, so we must wait for them
+    if (isLoadingPrices) return;
+    
+    // Get recipes for pending profession (they're already available in rawDataMap)
+    const rawPendingRecipes = rawDataMap[pendingProfession] || [];
+    if (rawPendingRecipes.length === 0) return;
+    
+    // Process recipes the same way the useMemo does
+    const pendingRecipes: Recipe[] = rawPendingRecipes.map(r => {
+      const { quality: _badQuality, materials: _rawMats, ...base } = r;
+      const materials: Record<string, number> = {};
+      for (const [id, qty] of Object.entries(_rawMats)) {
+        if (typeof qty === 'number' && qty > 0) {
+          materials[id] = qty;
+        }
       }
-    } else if (recipes.length > 0) {
-      const firstRecipe = recipes[0];
-      const cardKey = `${firstRecipe.name}-${firstRecipe.minSkill}`;
-      setSelectedCardKey(cardKey);
-      setSelectedRecipeId(firstRecipe.id);
+      const quality = typeof _badQuality === 'number' ? _badQuality : 1;
+      return { ...base, quality, materials };
+    });
+    
+    // Calculate plan for pending profession BEFORE updating state
+    // This ensures we have the recipe selected before the re-render
+    const pendingPlan = makeDynamicPlan(
+      committedSkill,
+      committedTarget,
+      pendingRecipes,
+      prices,
+      materialInfo,
+      pendingProfession,
+      includeRecipeCost,
+      skipLimitedStock,
+      useMarketValue,
+      recalculateForEachLevel,
+      optimizeSubCrafting,
+      currentProfessionRecipeIds
+    );
+    
+    // Update preserved plan ref with the new plan BEFORE updating state
+    // This ensures the plan useMemo uses the new plan when selectedProfession updates
+    preservedPlanRef.current = pendingPlan;
+    
+    // Select the topmost recipe (first in sorted list by minSkill, excluding blacklisted)
+    let selectedRecipeIdToSet: number | null = null;
+    let selectedCardKeyToSet: string | null = null;
+    
+    if (pendingRecipes.length > 0) {
+      // Filter out blacklisted recipes and sort by minSkill to get the topmost one
+      // Treat null minSkill as 1
+      const sortedRecipes = [...pendingRecipes]
+        .filter(r => !blacklistedSpellIds.has(r.id))
+        .sort((a, b) => (a.minSkill ?? 1) - (b.minSkill ?? 1));
+      
+      if (sortedRecipes.length > 0) {
+        const topRecipe = sortedRecipes[0];
+        selectedRecipeIdToSet = topRecipe.id;
+        selectedCardKeyToSet = `${topRecipe.name}-${topRecipe.minSkill}`;
+        
+        // Update preserved recipe ref
+        preservedRecipeRef.current = topRecipe;
+        preservedRecipeProfessionRef.current = pendingProfession; // Track which profession this recipe belongs to
+      }
     }
-  }, [selectedProfession, plan, recipes]);
+    
+    // Everything is ready - batch update ALL state in one go
+    // React 18+ automatically batches these updates, so this triggers only ONE re-render
+    setSelectedRecipeId(selectedRecipeIdToSet);
+    setSelectedCardKey(selectedCardKeyToSet);
+    setVisibleCardKey(null);
+    setSelectedProfession(pendingProfession);
+    
+    // Update previous profession ref AFTER state update for animation detection
+    // This will be used in the next render to detect profession change
+    previousProfessionForAnimationRef.current = pendingProfession;
+    
+    // Clear pending profession ref and reset counter
+    // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
+    pendingProfessionRef.current = null;
+    setPendingProfessionCounter(0);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds]);
+
+  // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
+  useEffect(() => {
+    // Skip if there's a pending profession change (it will handle refs)
+    if (pendingProfessionRef.current) return;
+    
+    // Update preserved recipe ref during normal operation
+    if (selectedRecipeId !== null) {
+      const currentRecipe = recipes.find(r => r.id === selectedRecipeId);
+      if (currentRecipe) {
+        preservedRecipeRef.current = currentRecipe;
+        preservedRecipeProfessionRef.current = selectedProfession; // Track current profession
+      }
+    }
+  }, [selectedRecipeId, recipes, selectedProfession]);
+  
+  // Auto-select topmost recipe when recipes load and no recipe is selected (initial load)
+  useEffect(() => {
+    // Skip if there's a pending profession change (it will handle selection)
+    if (pendingProfessionRef.current) return;
+    
+    // Only auto-select if no recipe is currently selected and recipes are available
+    if (selectedRecipeId === null && sortedAll.length > 0) {
+      const topRecipe = sortedAll[0];
+      setSelectedRecipeId(topRecipe.id);
+      setSelectedCardKey(`${topRecipe.name}-${topRecipe.minSkill}`);
+      preservedRecipeRef.current = topRecipe;
+      preservedRecipeProfessionRef.current = selectedProfession; // Track current profession
+    }
+  }, [selectedRecipeId, sortedAll, selectedProfession]);
 
   // New selectors state and options
   const versions = ["Vanilla", "The Burning Crusade"];
-  const realms = ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"];
-  const factions = ["Alliance", "Horde"];
+  // realms and factions are defined earlier (around line 307) for use in initial state
 
   // Handle URL realm parameter
   useEffect(() => {
     if (urlRealm) {
       const normalizedRealm = realms.find(r => r.toLowerCase() === urlRealm.toLowerCase());
-      if (normalizedRealm) {
-        setSelectedRealm(normalizedRealm);
+      if (normalizedRealm && normalizedRealm !== selectedRealm) {
+        // Only update if there hasn't been a recent user-initiated change
+        const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
+        const isRecentUserChange = timeSinceLastUserChange < 1000; // 1 second window
+        
+        if (!isRecentUserChange) {
+          setSelectedRealm(normalizedRealm);
+        }
       }
     }
-  }, [urlRealm]);
+  }, [urlRealm, selectedRealm]);
 
   // Handle URL faction parameter
   useEffect(() => {
     if (urlFaction) {
       const normalizedFaction = factions.find(f => f.toLowerCase() === urlFaction.toLowerCase());
-      if (normalizedFaction) {
-        setSelectedFaction(normalizedFaction);
+      if (normalizedFaction && normalizedFaction !== selectedFaction) {
+        // Only update if there hasn't been a recent user-initiated change
+        const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
+        const isRecentUserChange = timeSinceLastUserChange < 1000; // 1 second window
+        
+        if (!isRecentUserChange) {
+          setSelectedFaction(normalizedFaction);
+        }
       }
     }
-  }, [urlFaction]);
+  }, [urlFaction, selectedFaction]);
 
   // Load prices when realm or faction changes
   useEffect(() => {
     async function loadPrices() {
+      // Increment request ID for this new request
+      const requestId = ++priceLoadRequestIdRef.current;
       setIsLoadingPrices(true);
       console.log(`Loading prices for ${selectedRealm} ${selectedFaction}...`);
       try {
         const priceRows = await loadPriceData(selectedRealm, selectedFaction);
-        console.log(`Loaded ${priceRows.length} price rows for ${selectedRealm} ${selectedFaction}`);
-        const priceMap = toPriceMap(
-          priceRows,
-          Object.entries(materialInfo).reduce<Record<string, { vendorPrice?: number }>>((acc, [id, val]) => {
-            if (val.vendorPrice != null) {
-              acc[String(id)] = { vendorPrice: val.vendorPrice };
-            }
-            return acc;
-          }, {})
-        );
-        setPrices(priceMap);
+        
+        // Only update prices if this is still the latest request
+        if (requestId === priceLoadRequestIdRef.current) {
+          console.log(`Loaded ${priceRows.length} price rows for ${selectedRealm} ${selectedFaction}`);
+          const priceMap = toPriceMap(
+            priceRows,
+            Object.entries(materialInfo).reduce<Record<string, { vendorPrice?: number; limitedStock?: boolean }>>((acc, [id, val]) => {
+              acc[String(id)] = {
+                vendorPrice: val.vendorPrice,
+                limitedStock: val.limitedStock
+              };
+              return acc;
+            }, {})
+          );
+          setPrices(priceMap);
+        } else {
+          console.log(`Ignoring outdated price data for ${selectedRealm} ${selectedFaction} (request ${requestId}, current ${priceLoadRequestIdRef.current})`);
+        }
       } catch (error) {
         console.error('Failed to load prices:', error);
-        // Set empty prices as fallback
-        setPrices({});
+        // Only update prices if this is still the latest request
+        if (requestId === priceLoadRequestIdRef.current) {
+          // Set empty prices as fallback
+          setPrices({});
+        }
       } finally {
-        setIsLoadingPrices(false);
+        // Only update loading state if this is still the latest request
+        if (requestId === priceLoadRequestIdRef.current) {
+          setIsLoadingPrices(false);
+        }
       }
     }
 
@@ -984,9 +1275,9 @@ const renderXTick = selected
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
-          const baseCost = calculateCraftCost(r, prices, materialInfo);
-          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true) : 0;
-          const cost = (baseCost * crafts) + recipeCost;
+          const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
+          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+          const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
           return {
             recipe: r,
             crafts,
@@ -999,10 +1290,48 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue]);
+
+  // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
+  // instead of planner's batch-based craft counts
+  const { displayedMaterialTotals, displayedTotalCost } = useMemo(() => {
+    const materialTotals: Record<number, number> = {};
+    let totalCost = 0;
+    
+    for (let i = 0; i < plan.steps.length; i++) {
+      const s = plan.steps[i];
+      if ('recipe' in s) {
+        const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
+        const end = s.endSkill;
+        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty);
+        
+        // Calculate cost for this step based on displayed crafts
+        const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
+        const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
+        const displayedRecipeCost = includeRecipeCost && s.recipe.source ? 
+          calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+        totalCost += displayedMaterialCost + displayedRecipeCost;
+        
+        // Calculate materials needed
+        for (const [itemId, quantity] of Object.entries(s.recipe.materials)) {
+          const numItemId = Number(itemId);
+          materialTotals[numItemId] = (materialTotals[numItemId] || 0) + quantity * displayedCrafts;
+        }
+      }
+    }
+    
+    return {
+      displayedMaterialTotals: Object.entries(materialTotals).map(([itemId, quantity]) => ({
+        itemId: Number(itemId),
+        quantity,
+        name: materialInfo[Number(itemId)]?.name
+      })).sort((a, b) => a.itemId - b.itemId),
+      displayedTotalCost: totalCost
+    };
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue]);
 
   return (
-    <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">
+    <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
 
       {/* Panels */}
       <div className="flex flex-1 min-h-0 relative">
@@ -1010,11 +1339,12 @@ const renderXTick = selected
         <aside className="w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px]">
           {/* Slider + Tabs */}
           <div className="flex-none bg-neutral-900 px-3 pt-6 pb-2">
-            {/* Logo and name */}
+            {/* Logo and name 
             <div className="flex items-center gap-2 mb-4">
               <img src="/icons/WoWCraft.png" alt="WoWCraft Logo" className="w-16 h-16 mb-2 ml-2" />
               <span className="text-[32px] font-bold text-white"><span className="text-[#e3b056]">WoW</span>Craft.io</span>
             </div>
+            */}
             {/* End logo and name */}
             <div className="flex gap-2 mb-4">
               {/* Version Selector */}
@@ -1201,6 +1531,36 @@ const renderXTick = selected
                               <span
                                 className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
                                   useMarketValue ? 'translate-x-5' : 'translate-x-1'
+                                }`}
+                              />
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
+                            <button 
+                              onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                                recalculateForEachLevel ? 'bg-yellow-400' : 'bg-neutral-700'
+                              }`}
+                            >
+                              <span
+                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                  recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
+                                }`}
+                              />
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <label className="text-xs text-neutral-400">Optimize for materials sub-crafting</label>
+                            <button 
+                              onClick={() => setOptimizeSubCrafting(!optimizeSubCrafting)}
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                                optimizeSubCrafting ? 'bg-yellow-400' : 'bg-neutral-700'
+                              }`}
+                            >
+                              <span
+                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                  optimizeSubCrafting ? 'translate-x-5' : 'translate-x-1'
                                 }`}
                               />
                             </button>
@@ -1494,12 +1854,13 @@ const renderXTick = selected
                 }}
               />
               
-              <AnimatePresence mode="popLayout">
+              <AnimatePresence mode="wait">
                 <motion.div
-                  key={`${view}-${committedSkill}`}
-                  initial={{ opacity: 1 }}
+                  key={`${view}-${selectedProfession}`}
+                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="relative will-change-transform"
                   style={{
                     transformOrigin: 'top center',
@@ -1535,6 +1896,17 @@ const renderXTick = selected
                           
                           const { candidates, start, end, best } = stepData;
                           
+                          // Calculate crafts needed for the displayed range (start to end)
+                          // This ensures consistency with the Level-up Calculator
+                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty);
+                          
+                          // Recalculate cost based on displayed crafts instead of planner's s.crafts
+                          const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
+                          const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
+                          const displayedRecipeCost = includeRecipeCost && best.source ? 
+                            calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+                          const displayedTotalCost = displayedMaterialCost + displayedRecipeCost;
+                          
                           return (
                             <motion.div
                               key={`card-${best.name}-${end}-${committedSkill}`}
@@ -1564,16 +1936,16 @@ const renderXTick = selected
                                     diffColor(committedSkill, best.difficulty)
                                   }`} />
                                   <span className="text-[16px] flex items-center justify-center w-8">
-                                    {s.crafts}×
+                                    {displayedCrafts}×
                                   </span>
-                                  <img src={iconSrc(best.id, selectedProfession)} alt="" className="w-7 h-7 rounded object-cover" />
+                                  <img src={iconSrc(best.id, getRecipeProfession(best.id, selectedProfession))} alt="" className="w-7 h-7 rounded object-cover" />
                                   <span 
                                     className="truncate whitespace-nowrap flex-1 text-[16px]"
                                     style={{ color: qualityColors[s.recipe.quality] }}>
                                     {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                   </span>
                                   <span className="text-[16px]">
-                                    <FormatMoney copper={s.cost} />
+                                    <FormatMoney copper={displayedTotalCost} />
                                   </span>
                                   <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
                                     {start} → {end}
@@ -1630,7 +2002,7 @@ const renderXTick = selected
                                           or {alt.crafts}×
                                         </span>
                                         <img
-                                          src={iconSrc(alt.recipe.id, selectedProfession)}
+                                          src={iconSrc(alt.recipe.id, getRecipeProfession(alt.recipe.id, selectedProfession))}
                                           alt=""
                                           className="w-7 h-7 rounded object-cover"
                                         />
@@ -1676,7 +2048,7 @@ const renderXTick = selected
                             />
                             <div className="pl-3">
                               <img
-                                src={iconSrc(r.id, selectedProfession)}
+                                src={iconSrc(r.id, getRecipeProfession(r.id, selectedProfession))}
                                 alt=""
                                 className="w-7 h-7 rounded object-cover"
                               />
@@ -1718,7 +2090,7 @@ const renderXTick = selected
                       <div>
                         <span className="text-neutral-400">Total Cost: </span>
                         <span className="text-yellow-300">
-                          <FormatMoney copper={plan.totalCost} />
+                          <FormatMoney copper={displayedTotalCost} />
                         </span>
                       </div>
                       <div className="absolute right-0">
@@ -1769,7 +2141,7 @@ const renderXTick = selected
                   </button>
                 </div>
                 <div className="space-y-2 overflow-y-auto flex-1">
-                  {calculateTotalMaterials(plan.steps, materialInfo).map(material => (
+                  {displayedMaterialTotals.map((material: MaterialRequirement) => (
                     <div key={material.itemId} className="flex justify-between items-center text-neutral-200">
                       <span className="flex-1">{material.name || `Item ${material.itemId}`}</span>
                       <span className="text-yellow-300 font-medium">
@@ -1805,7 +2177,7 @@ const renderXTick = selected
             <div className="flex-none items-center">
               <div className="flex pb-5 text-[36px] items-center">
                 <img
-                  src={iconSrc(selected.id, selectedProfession)}
+                  src={iconSrc(selected.id, getRecipeProfession(selected.id, selectedProfession))}
                   alt={`${selected.name} icon`}
                   className="w-16 h-16 rounded mr-2 flex-shrink-0"
                 />
@@ -2092,27 +2464,13 @@ const renderXTick = selected
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Base Cost Per Attempt</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo)} />
+                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds)} />
                   </span>
                 </div>
                 {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
                   (() => {
                     const recipeInfo = materialInfo[selected.source.recipeItemId];
-                    const recipeId = selected.source.recipeItemId;
-                    const priceData = prices[recipeId];
-                    console.log('Recipe Info:', {
-                      recipeId,
-                      recipeInfo,
-                      priceData,
-                      rawPrices: prices[recipeId],
-                      minBuyout: priceData?.minBuyout,
-                      marketValue: priceData?.marketValue,
-                      vendorPrice: recipeInfo?.buyPrice,
-                      limitedStock: recipeInfo?.limitedStock,
-                      auctionhouse: recipeInfo?.auctionhouse
-                    });
-                    // Get AH price directly from price data
-                    const ahPrice = priceData?.minBuyout ?? priceData?.marketValue;
+                    const recipeCostData = getRecipeCost(selected, prices, materialInfo, useMarketValue);
                     
                     if (recipeInfo?.bop) {
                       return (
@@ -2126,7 +2484,7 @@ const renderXTick = selected
                     // For all non-BoP recipes, show both vendor and AH prices if they exist
                     return (
                       <>
-                        {recipeInfo?.buyPrice && (
+                        {recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice > 0 && (
                           <div className="flex-1 flex flex-col items-center justify-center p-4">
                             <span className="text-neutral-400 mb-2">Vendor Recipe Cost</span>
                             <div className="flex flex-col items-center gap-1">
@@ -2136,20 +2494,20 @@ const renderXTick = selected
                                 </div>
                               )}
                               <span className="text-xl font-semibold">
-                                <FormatMoney copper={recipeInfo.buyPrice} />
+                                <FormatMoney copper={recipeCostData.vendorPrice} />
                               </span>
                             </div>
                           </div>
                         )}
-                        {ahPrice && ahPrice > 0 && (
+                        {recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0 && (
                           <div className="flex-1 flex flex-col items-center justify-center p-4">
                             <span className="text-neutral-400 mb-2">AH Recipe Cost</span>
                             <span className="text-xl font-semibold">
-                              <FormatMoney copper={ahPrice} />
+                              <FormatMoney copper={recipeCostData.ahPrice} />
                             </span>
                           </div>
                         )}
-                        {!recipeInfo?.buyPrice && (!ahPrice || ahPrice <= 0) && (
+                        {recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null && (
                           <div className="flex-1 flex flex-col items-center justify-center p-4">
                             <span className="text-neutral-400 mb-2">Recipe Cost</span>
                             <span className="text-red-400 text-base">No price available</span>
@@ -2169,7 +2527,12 @@ const renderXTick = selected
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Average Cost Per Level</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={selected ? (Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0) / totalLevelUps) : 0} />
+                    <FormatMoney copper={selected ? (() => {
+                      const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
+                      const recipeCost = includeRecipeCost && selected.source ? 
+                        calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+                      return (totalMaterialCost + recipeCost) / totalLevelUps;
+                    })() : 0} />
                   </span>
                 </div>
               </div>

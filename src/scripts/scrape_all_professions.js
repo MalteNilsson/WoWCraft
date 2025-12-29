@@ -25,7 +25,64 @@ const BASE_URL = 'https://www.wowhead.com/classic/spells/professions/';
 const FILTER_QUERY = '?filter=20:21;1:5;0:11400';
 
 const args = process.argv.slice(2); // Get command line args
-const requestedProfession = args[0];
+
+// Parse command line arguments
+const phases = {
+  scrape: true,
+  enrich: true,
+  downloadIcons: true
+};
+
+let requestedProfession = null;
+
+// Parse arguments
+for (let i = 0; i < args.length; i++) {
+  const arg = args[i];
+  
+  if (arg === '--phase' || arg === '-p') {
+    const phaseArg = args[i + 1];
+    if (phaseArg) {
+      // Reset all phases, then enable only specified ones
+      phases.scrape = false;
+      phases.enrich = false;
+      phases.downloadIcons = false;
+      
+      const phaseList = phaseArg.split(',');
+      phaseList.forEach(phase => {
+        const trimmed = phase.trim();
+        if (trimmed === 'scrape') phases.scrape = true;
+        if (trimmed === 'enrich') phases.enrich = true;
+        if (trimmed === 'icons' || trimmed === 'downloadIcons') phases.downloadIcons = true;
+      });
+      i++; // Skip next arg as it's the phase value
+    }
+  } else if (arg === '--profession' || arg === '-prof') {
+    requestedProfession = args[i + 1];
+    i++; // Skip next arg as it's the profession value
+  } else if (!arg.startsWith('-') && PROFESSIONS.includes(arg)) {
+    // Legacy support: first non-flag arg is profession
+    requestedProfession = arg;
+  }
+}
+
+// Show help if requested
+if (args.includes('--help') || args.includes('-h')) {
+  console.log(`
+Usage: node scrape_all_professions.js [options]
+
+Options:
+  --profession <name>  Scrape only specified profession (${PROFESSIONS.join(', ')})
+  --phase <phases>     Run only specified phases (comma-separated)
+                       Available phases: scrape, enrich, icons
+  --help, -h           Show this help message
+
+Examples:
+  node scrape_all_professions.js --profession enchanting
+  node scrape_all_professions.js --phase enrich
+  node scrape_all_professions.js --profession enchanting --phase scrape,enrich
+  `);
+  process.exit(0);
+}
 
 const globalMaterialIds = new Set();
 const globalMaterialData = {};
@@ -266,23 +323,71 @@ const scrapeProfession = async (browser, profession) => {
                   };
                 }
               } else {
-                // Check for trainer cost
-                const moneySpan = document.querySelector('span.moneygold, span.moneysilver, span.moneycopper');
+                // Check for trainer cost by finding the div with data-markup-content-target="1" containing "Training cost:"
                 let trainerCost = 0;
                 
-                if (moneySpan) {
-                  const text = moneySpan.textContent.trim();
-                  const amount = parseInt(text.replace(/[^\d]/g, ''));
+                // Find the specific div with data-markup-content-target="1" that contains "Training cost:"
+                let trainingCostDiv = null;
+                
+                // First try to find divs with the data attribute
+                const divsWithAttribute = document.querySelectorAll('div[data-markup-content-target="1"]');
+                for (const div of divsWithAttribute) {
+                  const text = div.textContent || '';
+                  if (text.includes('Training cost:')) {
+                    trainingCostDiv = div;
+                    break;
+                  }
+                }
+                
+                // If not found, fall back to searching for any div containing "Training cost:"
+                if (!trainingCostDiv) {
+                  const allDivs = document.querySelectorAll('div');
+                  for (const div of allDivs) {
+                    const text = div.textContent || '';
+                    if (text.includes('Training cost:')) {
+                      trainingCostDiv = div;
+                      break;
+                    }
+                  }
+                }
+                
+                if (trainingCostDiv) {
+                  // Find all money spans within this div only (not nested deeper)
+                  const moneySpans = trainingCostDiv.querySelectorAll('span.moneygold, span.moneysilver, span.moneycopper');
                   
-                  if (moneySpan.classList.contains('moneygold')) {
-                    trainerCost = amount * 10000;
+                  moneySpans.forEach(moneySpan => {
+                    const text = moneySpan.textContent.trim();
+                    // Extract only digits from the text
+                    const amount = parseInt(text.replace(/[^\d]/g, ''), 10);
+                    
+                    if (!isNaN(amount) && amount > 0) {
+                      if (moneySpan.classList.contains('moneygold')) {
+                        trainerCost += amount * 10000;
+                      } else if (moneySpan.classList.contains('moneysilver')) {
+                        trainerCost += amount * 100;
+                      } else if (moneySpan.classList.contains('moneycopper')) {
+                        trainerCost += amount;
+                      }
+                    }
+                  });
+                  
+                  // Debug logging for recipe 3452 (Mana Potion) to see what's being parsed
+                  if (recipeId === 3452) {
+                    console.log(`🔍 [${recipeId}] Training cost parsing:`, {
+                      divHTML: trainingCostDiv.innerHTML,
+                      divText: trainingCostDiv.textContent,
+                      moneySpansFound: moneySpans.length,
+                      spans: Array.from(moneySpans).map(s => ({ text: s.textContent, class: s.className })),
+                      totalCost: trainerCost
+                    });
                   }
-                  if (moneySpan.classList.contains('moneysilver')) {
-                    trainerCost = amount * 100;
+                  
+                  // Debug logging
+                  if (moneySpans.length === 0) {
+                    console.log(`⚠️ [${recipeId}] Found "Training cost:" div but no money spans. Div HTML: "${trainingCostDiv.innerHTML}"`);
                   }
-                  if (moneySpan.classList.contains('moneycopper')) {
-                    trainerCost = amount;
-                  }
+                } else {
+                  console.log(`⚠️ [${recipeId}] Could not find div containing "Training cost:" text`);
                 }
 
                 // Get all trainers
@@ -372,21 +477,87 @@ const scrapeProfession = async (browser, profession) => {
   }
 };
 
-const enrichMaterialData = async () => {
+const enrichMaterialData = async (browser) => {
     const materialPath = path.join(__dirname, '..', 'data', 'materials', 'materials.json');
-    const raw = await fs.readFile(materialPath, 'utf-8');
-    const materials = JSON.parse(raw);
+    const recipesDir = path.join(__dirname, '..', 'data', 'recipes');
+    
+    let materials = {};
+    
+    // Try to load existing materials.json
+    try {
+        const raw = await fs.readFile(materialPath, 'utf-8');
+        materials = JSON.parse(raw);
+        console.log(`📦 Loaded ${Object.keys(materials).length} existing materials from materials.json`);
+    } catch (err) {
+        // If materials.json doesn't exist, rebuild it from recipe files
+        console.log(`📁 materials.json not found. Rebuilding from recipe files...`);
+        
+        try {
+            const recipeFiles = await fs.readdir(recipesDir);
+            const jsonFiles = recipeFiles.filter(f => f.endsWith('.json') && !f.includes('_items'));
+            
+            for (const file of jsonFiles) {
+                const filePath = path.join(recipesDir, file);
+                const recipes = JSON.parse(await fs.readFile(filePath, 'utf-8'));
+                
+                // Extract all material IDs from recipes
+                recipes.forEach(recipe => {
+                    Object.keys(recipe.materials || {}).forEach(id => {
+                        if (!materials[id]) {
+                            materials[id] = {
+                                name: "",
+                                quality: 1
+                            };
+                        }
+                    });
+                });
+            }
+            
+            console.log(`📦 Rebuilt materials.json with ${Object.keys(materials).length} materials from recipe files`);
+            
+            // Save the rebuilt materials.json
+            await fs.mkdir(path.dirname(materialPath), { recursive: true });
+            await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
+        } catch (rebuildErr) {
+            console.error(`❌ Failed to rebuild materials.json: ${rebuildErr.message}`);
+            throw new Error('Cannot enrich materials: materials.json missing and cannot be rebuilt');
+        }
+    }
   
-    const materialIds = Object.keys(materials).filter(id => !materials[id].name);
-    console.log(`🔄 Processing ${materialIds.length} materials in parallel...`);
+    // Filter for materials that need enrichment: empty name or missing name
+    const materialIds = Object.keys(materials).filter(id => {
+      const mat = materials[id];
+      return !mat.name || mat.name === "" || mat.name.trim() === "";
+    });
+    console.log(`🔄 Processing ${materialIds.length} materials for enrichment...`);
+    
+    if (materialIds.length === 0) {
+      console.log(`✅ All materials already enriched. Nothing to process.`);
+      return;
+    }
 
-    const results = await Promise.all(materialIds.map(async (id) => {
+    // Process materials sequentially to avoid overwhelming the browser
+    let processed = 0;
+    console.log(`  Starting to process materials...`);
+    
+    for (const id of materialIds) {
+      processed++;
+      console.log(`  [${processed}/${materialIds.length}] Processing item ${id}...`);
+      
+      if (processed % 10 === 0) {
+        console.log(`  Progress: ${processed}/${materialIds.length} materials processed...`);
+      }
+      
       const url = `https://www.wowhead.com/classic/item=${id}&xml`;
     
       let createdBy = null;
+      let limitedStock = false;
     
       try {
+        // Fetch XML data
+        console.log(`    Fetching XML for item ${id}...`);
         const response = await fetch(url);
+        console.log(`    XML fetched for item ${id}, parsing...`);
         const xml = await response.text();
         const parsed = await parseStringPromise(xml);
     
@@ -447,39 +618,114 @@ const enrichMaterialData = async () => {
             };
           }
         }
-    
-        // Return enriched data
-        if (name) {
-          return {
-            id,
-            data: {
-              name,
-              quality,
-              class: itemClass,
-              subclass,
-              icon,
-              slot,
-              link,
-              vendorPrice,
-              ...(createdBy ? { createdBy } : {})
+
+        // Check for limited stock using Puppeteer (only if item has vendor price)
+        if (vendorPrice !== null && browser) {
+          try {
+            console.log(`    Checking limited stock for item ${id} (vendor price: ${vendorPrice})...`);
+            const page = await browser.newPage();
+            const itemUrl = `https://www.wowhead.com/classic/item=${id}#sold-by`;
+            
+            console.log(`    Navigating to ${itemUrl}...`);
+            // Use a shorter timeout and don't wait for networkidle0 (faster)
+            await page.goto(itemUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+            console.log(`    Page loaded for item ${id}, checking vendor table...`);
+            
+            // Wait for vendor table to load (if it exists) with shorter timeout
+            try {
+              await page.waitForSelector('table.listview-mode-default tbody tr.listview-row', { timeout: 3000 });
+            } catch (e) {
+              // Table might not exist if item isn't sold by vendors - this is fine
             }
+
+            // Parse vendor table to check for limited stock AND verify price is in currency
+            const vendorInfo = await page.evaluate(() => {
+              const vendorTable = document.querySelector('table.listview-mode-default');
+              if (!vendorTable) return { limitedStock: false, hasCurrencyPrice: false };
+
+              const rows = vendorTable.querySelectorAll('tbody tr.listview-row');
+              if (rows.length === 0) return { limitedStock: false, hasCurrencyPrice: false };
+
+              let hasCurrencyPrice = false;
+              let limitedStock = false;
+
+              // Check each row
+              for (const row of rows) {
+                const cells = row.querySelectorAll('td');
+                if (cells.length >= 7) {
+                  // Check Cost column (7th column, index 6)
+                  const costCell = cells[6];
+                  if (costCell) {
+                    // Check if price contains currency classes (moneygold, moneysilver, moneycopper)
+                    // Exclude moneyitem which indicates special currency items
+                    const hasCurrency = costCell.querySelector('.moneygold, .moneysilver, .moneycopper') !== null;
+                    const hasItemCurrency = costCell.querySelector('.moneyitem') !== null;
+                    
+                    if (hasCurrency && !hasItemCurrency) {
+                      hasCurrencyPrice = true;
+                      
+                      // Check Stock column (5th column, index 4) - only for currency vendors
+                      const stockCell = cells[4];
+                      if (stockCell) {
+                        const stockText = stockCell.textContent.trim();
+                        
+                        // If stock is not ∞ (infinity), it's limited stock
+                        if (stockText !== '∞' && stockText !== '' && !isNaN(parseInt(stockText))) {
+                          limitedStock = true;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              
+              return { limitedStock, hasCurrencyPrice };
+            });
+
+            // If no vendors have currency prices, clear vendorPrice
+            if (!vendorInfo.hasCurrencyPrice) {
+              vendorPrice = null;
+              limitedStock = false;
+              console.log(`    ⚠️ Item ${id} has only non-currency vendor prices (reputation/token/etc), clearing vendor price`);
+            } else {
+              limitedStock = vendorInfo.limitedStock;
+            }
+
+            await page.close();
+          } catch (err) {
+            console.warn(`⚠️ Failed to check limited stock for item ${id}: ${err.message}`);
+            limitedStock = false;
+          }
+        }
+    
+        // Save enriched data (only if we got a name from XML)
+        if (name && name.trim() !== "") {
+          materials[id] = {
+            name,
+            quality,
+            class: itemClass,
+            subclass,
+            icon,
+            slot,
+            link,
+            vendorPrice,
+            ...(limitedStock ? { limitedStock: true } : {}),
+            ...(createdBy ? { createdBy } : {})
           };
+          console.log(`    ✅ Enriched item ${id}: ${name}`);
+        } else {
+          console.warn(`    ⚠️ No name found for item ${id}, skipping enrichment`);
         }
     
       } catch (err) {
         console.warn(`❌ Error fetching item ${id}: ${err.message}`);
       }
     
+      // Small delay to avoid rate limiting (reduced from 500ms)
       await new Promise(r => setTimeout(r, 250));
-      return { id, data: null };
-    }));
-
-    // Update materials with enriched data
-    results.forEach(result => {
-      if (result && result.data) {
-        materials[result.id] = result.data;
-      }
-    });
+    }
+    
+    console.log(`✅ Processed ${processed} materials`);
   
     await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
     console.log(`✅ Enrichment complete → ${materialPath}`);
@@ -677,37 +923,53 @@ const processRecipeItems = async (profession, recipes, browser) => {
 
   const browser = await puppeteer.launch({ headless: 'new' });
 
-  if (requestedProfession) {
-    if (!PROFESSIONS.includes(requestedProfession)) {
-      console.error(`❌ Invalid profession: ${requestedProfession}`);
-      console.log(`➡️ Valid options: ${PROFESSIONS.join(', ')}`);
-      await browser.close();
-      process.exit(1);
+  // Phase 1: Scrape professions
+  if (phases.scrape) {
+    if (requestedProfession) {
+      if (!PROFESSIONS.includes(requestedProfession)) {
+        console.error(`❌ Invalid profession: ${requestedProfession}`);
+        console.log(`➡️ Valid options: ${PROFESSIONS.join(', ')}`);
+        await browser.close();
+        process.exit(1);
+      }
+      const recipes = await scrapeProfession(browser, requestedProfession);
+      await processRecipeItems(requestedProfession, recipes, browser);
+    } else {
+      for (const profession of PROFESSIONS) {
+        const recipes = await scrapeProfession(browser, profession);
+        await processRecipeItems(profession, recipes, browser);
+      }
+      console.log(`\n🎉 All professions scraped successfully.`);
     }
-    const recipes = await scrapeProfession(browser, requestedProfession);
-    await processRecipeItems(requestedProfession, recipes, browser);
+    
+    // ✅ Write materials.json after scraping
+    await fs.mkdir(outputDirMaterials, { recursive: true });
+    await fs.writeFile(materialPath, JSON.stringify(globalMaterialData, null, 2));
+    console.log(`✅ Saved ${Object.keys(globalMaterialData).length} unique materials → ${materialPath}`);
   } else {
-    for (const profession of PROFESSIONS) {
-      const recipes = await scrapeProfession(browser, profession);
-      await processRecipeItems(profession, recipes, browser);
-    }
-    console.log(`\n🎉 All professions scraped successfully.`);  
+    console.log(`⏭️  Skipping scrape phase`);
   }
-  
-  // ✅ Write materials.json in all cases
-  await fs.mkdir(outputDirMaterials, { recursive: true });
-  await fs.writeFile(materialPath, JSON.stringify(globalMaterialData, null, 2));
-  
-  console.log(`✅ Saved ${Object.keys(globalMaterialData).length} unique materials → ${materialPath}`);
 
-  // ✅ Enrich it with WoWHead XML data
-  await enrichMaterialData(materialPath);
+  // Phase 2: Enrich material data
+  if (phases.enrich) {
+    console.log(`\n🔄 Starting material enrichment phase...`);
+    await enrichMaterialData(browser);
+  } else {
+    console.log(`⏭️  Skipping enrichment phase`);
+  }
 
-  await downloadMaterialIcons();
-
-  for (const profession of requestedProfession ? [requestedProfession] : PROFESSIONS) {
-    await downloadRecipeIcons(profession);
+  // Phase 3: Download icons
+  if (phases.downloadIcons) {
+    await downloadMaterialIcons();
+    
+    const professionsToProcess = requestedProfession ? [requestedProfession] : PROFESSIONS;
+    for (const profession of professionsToProcess) {
+      await downloadRecipeIcons(profession);
+    }
+  } else {
+    console.log(`⏭️  Skipping icon download phase`);
   }
 
   await browser.close();
+  console.log(`\n✅ All selected phases complete!`);
 })();

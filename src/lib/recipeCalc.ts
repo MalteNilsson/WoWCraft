@@ -76,7 +76,9 @@ export function craftCost(
   materialInfo: Record<number, MaterialInfo>,
   includeRecipeCost: boolean = false,
   recipeOnly: boolean = false,
-  useMarketValue: boolean = false
+  useMarketValue: boolean = false,
+  allowSubCrafting: boolean = true,
+  currentProfessionRecipeIds?: Set<number>
 ): number {
   // If we only want the recipe cost
   if (recipeOnly) {
@@ -97,19 +99,10 @@ export function craftCost(
     const itemId = parseInt(id);
     const matInfo = materialInfo[itemId];
     
-    // First check AH price
-    const priceData = prices[itemId];
-    const ahPrice = useMarketValue ?
-      (priceData?.marketValue ?? priceData?.minBuyout ?? Infinity) :
-      (priceData?.minBuyout ?? priceData?.marketValue ?? Infinity);
+    // Use getItemCost which handles sub-crafting optimization
+    const itemCost = getItemCost(itemId, prices, materialInfo, new Map(), false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds);
     
-    // Then check vendor price
-    const vendorPrice = matInfo?.buyPrice ?? Infinity;
-    
-    // Use the lower of the two prices
-    const itemPrice = Math.min(ahPrice, vendorPrice);
-
-    // For enchanting rods, include their recipe cost
+    // For enchanting rods, include their recipe cost (always allow crafting rods)
     if (matInfo?.createdBy && ENCHANTING_ROD_SPELL_IDS.has(recipe.id)) {
       const rodRecipe = {
         id: matInfo.createdBy?.spellId ?? 0,
@@ -121,11 +114,11 @@ export function craftCost(
         difficulty: { orange: 0, yellow: 0, green: 0, gray: 0 },
         icon: matInfo.icon || ''
       };
-      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true, false, useMarketValue);
-      return sum + (Math.min(itemPrice, rodCraftCost) * qty);
+      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true, false, useMarketValue, true, currentProfessionRecipeIds);
+      return sum + (Math.min(itemCost, rodCraftCost) * qty);
     }
 
-    return sum + (itemPrice * qty);
+    return sum + (itemCost * qty);
   }, 0);
 
   // Add recipe cost if requested
@@ -153,7 +146,9 @@ export function costPerSkillUp(
   prices: PriceMap,
   materialInfo: Record<number, MaterialInfo>,
   includeRecipeCost: boolean = false,
-  useMarketValue: boolean = false
+  useMarketValue: boolean = false,
+  allowSubCrafting: boolean = true,
+  currentProfessionRecipeIds?: Set<number>
 ): {
   cost: number;
   isLimitedStock?: boolean;
@@ -165,7 +160,7 @@ export function costPerSkillUp(
     return { cost: Infinity };
   }
 
-  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost, false, useMarketValue);
+  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost, false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds);
   const recipeCost = getRecipeCost(r, prices, materialInfo, useMarketValue);
 
   return {
@@ -218,7 +213,9 @@ export function getItemCost(
   materialInfo: Record<number, MaterialInfo>,
   memo = new Map<number, number>(),
   isTopLevel: boolean = false,
-  useMarketValue: boolean = false
+  useMarketValue: boolean = false,
+  allowSubCrafting: boolean = true,
+  currentProfessionRecipeIds?: Set<number>
 ): number {
   // Use cached result if already computed
   if (memo.has(itemId)) return memo.get(itemId)!;
@@ -241,8 +238,15 @@ export function getItemCost(
     return finalPrice;
   }
 
-  // Use the lower of AH and vendor price
-  let directPrice = Math.min(ahPrice, vendorPrice);
+  // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
+  // because you can't buy enough from vendor
+  let directPrice;
+  if (itemData?.limitedStock && ahPrice < Infinity) {
+    directPrice = ahPrice;
+  } else {
+    // Use the lower of AH and vendor price
+    directPrice = Math.min(ahPrice, vendorPrice);
+  }
 
   // Don't allow zero unless it's a vendor item
   if (directPrice === Infinity && itemData?.createdBy) {
@@ -257,14 +261,30 @@ export function getItemCost(
   // Prevent cycles early
   memo.set(itemId, Infinity);
 
-  if (itemData?.createdBy && !shouldBlockCrafting) {
+  // If allowSubCrafting is false, only use buy prices (AH/vendor)
+  if (!allowSubCrafting) {
+    memo.set(itemId, directPrice);
+    return directPrice;
+  }
+
+  // Only consider crafting if:
+  // 1. allowSubCrafting is true
+  // 2. Item can be crafted (has createdBy)
+  // 3. Not blocked by tedious items
+  // 4. If currentProfessionRecipeIds is provided, the spellId must be in that set (same profession)
+  const canCraft = itemData?.createdBy && !shouldBlockCrafting;
+  const isSameProfession = !currentProfessionRecipeIds || 
+    (itemData?.createdBy?.spellId && currentProfessionRecipeIds.has(itemData.createdBy.spellId));
+  
+  if (canCraft && isSameProfession && itemData.createdBy) {
     const { reagents, minCount = 0, maxCount = 0 } = itemData.createdBy;
     const outputCount = Math.max(1, maxCount + 1);
 
     const totalReagentCost = Object.entries(reagents).reduce((sum, [idStr, qty]) => {
       const id = parseInt(idStr);
-      const cost = getItemCost(id, prices, materialInfo, memo, false, useMarketValue);
-      return sum + cost * qty;
+      const qtyNum = typeof qty === 'number' ? qty : 0;
+      const cost = getItemCost(id, prices, materialInfo, memo, false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds);
+      return sum + cost * qtyNum;
     }, 0);
 
     craftCost = totalReagentCost / outputCount;
@@ -292,6 +312,39 @@ export function expectedSkillUps(r: Recipe, skill: number): number {
   return (G - skill) / (G - Y);
 }
 
+/**
+ * Calculate the expected number of crafts needed to go from low to high skill level
+ * Uses sum-of-reciprocals method: sum(1/p for each level), then round once
+ * This is mathematically correct - using average success rate becomes asymptotically wrong as rates approach 0%
+ */
+export function expectedCraftsBetween(
+  low: number,
+  high: number,
+  d: Recipe['difficulty']
+): number {
+  const totalSkillUps = high - low;
+  if (totalSkillUps <= 0) return 0;
+  
+  // Sum up the reciprocals (1/p for each level)
+  // This is the correct way to calculate expected crafts when success rates vary
+  let sumOfReciprocals = 0;
+  for (let lvl = low; lvl < high; lvl++) {
+    const Y = d.yellow ?? 0;
+    const G = d.gray ?? Infinity;
+    const p = (lvl < Y) ? 1 : (lvl >= G) ? 0 : (G - lvl) / (G - Y);
+    
+    if (p > 0) {
+      sumOfReciprocals += 1 / p;
+    } else {
+      // If p is 0, we can't progress, return Infinity
+      return Infinity;
+    }
+  }
+  
+  // Round once at the end
+  return Math.ceil(sumOfReciprocals);
+}
+
 export function buildMaterialTree(
   itemId: number,
   quantity: number,
@@ -299,7 +352,9 @@ export function buildMaterialTree(
   materialInfo: Record<number, MaterialInfo>,
   isTopLevel: boolean = true,
   visited: Set<number> = new Set(),
-  useMarketValue: boolean = false
+  useMarketValue: boolean = false,
+  allowSubCrafting: boolean = true,
+  currentProfessionRecipeIds?: Set<number>
 ): MaterialTreeNode {
   const info = materialInfo[itemId];
   const vendorPrice = info?.buyPrice;
@@ -310,8 +365,16 @@ export function buildMaterialTree(
   const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
   const usedCrafting = !isListed && !isVendorItem;
 
-  const buyCost = isVendorItem ? vendorPrice! : 
-    (typeof vendorPrice === 'number' && vendorPrice < ahPrice ? vendorPrice : ahPrice);
+  // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
+  // because you can't buy enough from vendor
+  let buyCost;
+  if (info?.limitedStock && ahPrice < Infinity) {
+    buyCost = ahPrice;
+  } else if (isVendorItem) {
+    buyCost = vendorPrice!;
+  } else {
+    buyCost = typeof vendorPrice === 'number' && vendorPrice < ahPrice ? vendorPrice : ahPrice;
+  }
 
   let craftCost = Infinity;
   let children: MaterialTreeNode[] = [];
@@ -348,21 +411,28 @@ export function buildMaterialTree(
   // Mark as visited
   visited.add(itemId);
 
-  if (info?.createdBy && !isTedious) {
+  const canCraft = info?.createdBy && !isTedious;
+  const isSameProfession = !currentProfessionRecipeIds || 
+    (info?.createdBy?.spellId && currentProfessionRecipeIds.has(info.createdBy.spellId));
+  
+  if (canCraft && allowSubCrafting && isSameProfession && info.createdBy) {
     const { reagents, minCount = 0, maxCount = 0 } = info.createdBy;
     const outputCount = Math.max(1, maxCount + 1);
     const craftsNeeded = quantity / outputCount;
 
     children = Object.entries(reagents).map(([idStr, qty]) => {
       const childId = parseInt(idStr);
+      const qtyNum = typeof qty === 'number' ? qty : 0;
       return buildMaterialTree(
         childId,
-        qty * craftsNeeded,
+        qtyNum * craftsNeeded,
         prices,
         materialInfo,
         false,
         new Set(visited), // Pass a copy to avoid corrupting sibling paths
-        useMarketValue
+        useMarketValue,
+        allowSubCrafting,
+        currentProfessionRecipeIds
       );
     });
 

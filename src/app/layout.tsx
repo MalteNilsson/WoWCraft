@@ -51,7 +51,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${inter.className} overflow-hidden`}>
+    <html lang="en" className={`${inter.className} overflow-hidden`} suppressHydrationWarning>
       <body className="overflow-hidden">
         {children}
         <Analytics />
