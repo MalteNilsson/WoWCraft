@@ -9,7 +9,7 @@ import rawLeatherworking  from '@/data/recipes/leatherworking.json';
 import rawTailoring  from '@/data/recipes/tailoring.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, PlanStep, blacklistedSpellIds, calculateTotalMaterials, MaterialRequirement } from '@/lib/planner';
+import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement } from '@/lib/planner';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
@@ -19,7 +19,6 @@ import materialInfo from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
-import { Analytics } from "@vercel/analytics/next"
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 
 // map WoW quality IDs to standard hex colors
@@ -41,11 +40,7 @@ const professions = [
   'Tailoring',
 ];
 
-const versions = [
-  'Vanilla',
-  'TBC',
-];
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const rawDataMap: Record<string, any[]> = {
   Alchemy: rawAlchemy,
   Blacksmithing: rawBlacksmithing,
@@ -56,6 +51,7 @@ const rawDataMap: Record<string, any[]> = {
 };
 
 // Function to dynamically load price data
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function loadPriceData(realm: string, faction: string): Promise<any[]> {
   try {
     const filename = `${realm}_${faction.toLowerCase()}.json`;
@@ -170,6 +166,7 @@ function MaterialCard({
         <div className="flex items-center gap-3">
           <span className="text-base">{node.quantity}</span>
           {iconUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={iconUrl}
               alt={info?.name ?? 'Item'}
