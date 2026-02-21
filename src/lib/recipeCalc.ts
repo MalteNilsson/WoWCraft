@@ -264,6 +264,13 @@ export const forceAhOnlyItems = new Set<number>([
   7076, // Essence of Earth
   7078, // Essence of Fire
   15409, // Refined Deeprock Salt
+  22572, // Mote of Air
+  22573, // Mote of Earth
+  22574, // Mote of Fire
+  22575, // Mote of Life
+  22576, // Mote of Mana
+  22577, // Mote of Shadow
+  22578, // Mote of Water
   // Add more as needed
 ]);
 
@@ -291,11 +298,10 @@ export function getItemCost(
   // Then check vendor price
   const vendorPrice = itemData?.buyPrice ?? Infinity;
 
-  // Always use direct price if item is on force-AH list
+  // Force AH-only items to use auction house price only (ignore vendor)
   if (forceAhOnlyItems.has(itemId)) {
-    const finalPrice = Math.min(ahPrice, vendorPrice);
-    memo.set(itemId, finalPrice);
-    return finalPrice;
+    memo.set(itemId, ahPrice);
+    return ahPrice;
   }
 
   // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
@@ -428,7 +434,9 @@ export function buildMaterialTree(
   // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
   // because you can't buy enough from vendor
   let buyCost;
-  if (info?.limitedStock && ahPrice < Infinity) {
+  if (forceAhOnlyItems.has(itemId)) {
+    buyCost = ahPrice;
+  } else if (info?.limitedStock && ahPrice < Infinity) {
     buyCost = ahPrice;
   } else if (isVendorItem) {
     buyCost = vendorPrice!;
