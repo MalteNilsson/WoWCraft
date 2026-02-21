@@ -271,6 +271,13 @@ export const forceAhOnlyItems = new Set<number>([
   22576, // Mote of Mana
   22577, // Mote of Shadow
   22578, // Mote of Water
+  23782, // Fel Iron Casing
+  23783, // Handful of Fel Iron Bolts
+  23781, // Elemental Blasting Powder
+  23787, // Felsteel Stabilizer
+  23784, // Adamantite Frame
+  23786, // Khorium Power Core
+  23785, // Hardened Adamantite Tube
   // Add more as needed
 ]);
 
