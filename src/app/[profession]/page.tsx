@@ -1,21 +1,31 @@
 'use client';
 
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
-import rawAlchemy  from '@/data/recipes/alchemy.json';
-import rawBlacksmithing  from '@/data/recipes/blacksmithing.json';
-import rawEnchanting  from '@/data/recipes/enchanting.json';
-import rawEngineering  from '@/data/recipes/engineering.json';
-import rawLeatherworking  from '@/data/recipes/leatherworking.json';
-import rawTailoring  from '@/data/recipes/tailoring.json';
+// Vanilla recipes
+import vanillaAlchemy from '@/data/recipes/vanilla/alchemy.json';
+import vanillaBlacksmithing from '@/data/recipes/vanilla/blacksmithing.json';
+import vanillaEnchanting from '@/data/recipes/vanilla/enchanting.json';
+import vanillaEngineering from '@/data/recipes/vanilla/engineering.json';
+import vanillaLeatherworking from '@/data/recipes/vanilla/leatherworking.json';
+import vanillaTailoring from '@/data/recipes/vanilla/tailoring.json';
+// TBC recipes
+import tbcAlchemy from '@/data/recipes/tbc/alchemy.json';
+import tbcBlacksmithing from '@/data/recipes/tbc/blacksmithing.json';
+import tbcEnchanting from '@/data/recipes/tbc/enchanting.json';
+import tbcEngineering from '@/data/recipes/tbc/engineering.json';
+import tbcJewelcrafting from '@/data/recipes/tbc/jewelcrafting.json';
+import tbcLeatherworking from '@/data/recipes/tbc/leatherworking.json';
+import tbcTailoring from '@/data/recipes/tbc/tailoring.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
 import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement } from '@/lib/planner';
+import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
 import { Listbox } from '@headlessui/react';
-import materialInfo from '@/lib/materialsLoader';
+import { materialInfoMap } from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
@@ -36,17 +46,38 @@ const professions = [
   'Blacksmithing',
   'Enchanting',
   'Engineering',
+  'Jewelcrafting',
   'Leatherworking',
   'Tailoring',
 ];
 
-const rawDataMap: Record<string, any[]> = {
-  Alchemy: rawAlchemy,
-  Blacksmithing: rawBlacksmithing,
-  Enchanting: rawEnchanting,
-  Engineering: rawEngineering,
-  Leatherworking: rawLeatherworking,
-  Tailoring: rawTailoring,
+// Max skill level per version
+const MAX_SKILL_VANILLA = 300;
+const MAX_SKILL_TBC = 375;
+
+function getMaxSkill(version: string): number {
+  return version === 'The Burning Crusade' ? MAX_SKILL_TBC : MAX_SKILL_VANILLA;
+}
+
+// Version-keyed recipe data (vanilla/ and tbc/ directories)
+const rawDataMap: Record<string, Record<string, any[]>> = {
+  Vanilla: {
+    Alchemy: vanillaAlchemy as any[],
+    Blacksmithing: vanillaBlacksmithing as any[],
+    Enchanting: vanillaEnchanting as any[],
+    Engineering: vanillaEngineering as any[],
+    Leatherworking: vanillaLeatherworking as any[],
+    Tailoring: vanillaTailoring as any[],
+  },
+  'The Burning Crusade': {
+    Alchemy: tbcAlchemy as any[],
+    Blacksmithing: tbcBlacksmithing as any[],
+    Enchanting: tbcEnchanting as any[],
+    Engineering: tbcEngineering as any[],
+    Jewelcrafting: tbcJewelcrafting as any[],
+    Leatherworking: tbcLeatherworking as any[],
+    Tailoring: tbcTailoring as any[],
+  },
 };
 
 // Function to dynamically load price data
@@ -279,8 +310,19 @@ export default function EnchantingPlanner() {
   const [skill, setSkill] = useState(1);
   const [debouncedSkill] = useDebounce(skill, 200);
   const [committedSkill, setCommittedSkill] = useState(1);
-  const [target, setTarget] = useState(300);
-  const [committedTarget, setCommittedTarget] = useState(300);
+  // Initialize target based on version (default to TBC max)
+  const [target, setTarget] = useState(() => {
+    if (urlVersion && urlVersion.toLowerCase() === 'vanilla') {
+      return MAX_SKILL_VANILLA;
+    }
+    return MAX_SKILL_TBC;
+  });
+  const [committedTarget, setCommittedTarget] = useState(() => {
+    if (urlVersion && urlVersion.toLowerCase() === 'vanilla') {
+      return MAX_SKILL_VANILLA;
+    }
+    return MAX_SKILL_TBC;
+  });
   const [view, setView] = useState<'route'|'all'>('route');
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
   const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
@@ -291,7 +333,14 @@ export default function EnchantingPlanner() {
   const [selectedProfession, setSelectedProfession] = useState(() => {
     if (urlProfession) {
       const normalizedProfession = urlProfession.charAt(0).toUpperCase() + urlProfession.slice(1).toLowerCase();
-      if (professions.includes(normalizedProfession)) {
+      // Check if profession is valid and available for the initial version
+      const initialVersion = urlVersion ? 
+        (urlVersion.toLowerCase() === 'the burning crusade' || urlVersion.toLowerCase() === 'tbc' ? 'The Burning Crusade' : 'Vanilla') 
+        : 'The Burning Crusade';
+      const initialAvailableProfessions = initialVersion === 'The Burning Crusade' 
+        ? professions 
+        : professions.filter(p => p !== 'Jewelcrafting');
+      if (initialAvailableProfessions.includes(normalizedProfession)) {
         return normalizedProfession;
       }
     }
@@ -309,8 +358,22 @@ export default function EnchantingPlanner() {
         return normalizedVersion === 'Tbc' ? 'The Burning Crusade' : normalizedVersion;
       }
     }
-    return 'Vanilla';
+    return 'The Burning Crusade';
   });
+
+  // Get max skill for current version
+  const maxSkill = useMemo(() => getMaxSkill(selectedVersion), [selectedVersion]);
+
+  // Version-specific material data (vanilla vs TBC have different vendor prices, createdBy, etc.)
+  const materialInfo = materialInfoMap[selectedVersion] ?? materialInfoMap['The Burning Crusade'];
+
+  // Filter professions based on version (Jewelcrafting only available in TBC)
+  const availableProfessions = useMemo(() => {
+    if (selectedVersion === 'The Burning Crusade') {
+      return professions; // All professions including Jewelcrafting
+    }
+    return professions.filter(p => p !== 'Jewelcrafting'); // Exclude Jewelcrafting in Vanilla
+  }, [selectedVersion]);
   const [selectedRealm, setSelectedRealm] = useState(() => {
     if (urlRealm) {
       const normalizedRealm = realms.find(r => r.toLowerCase() === urlRealm.toLowerCase());
@@ -365,13 +428,13 @@ export default function EnchantingPlanner() {
   useEffect(() => {
     if (urlProfession) {
       const normalizedProfession = urlProfession.charAt(0).toUpperCase() + urlProfession.slice(1).toLowerCase();
-      if (professions.includes(normalizedProfession)) {
+      if (availableProfessions.includes(normalizedProfession)) {
         // Only update if it's different from current to prevent unnecessary updates
         if (normalizedProfession !== selectedProfession) {
           setSelectedProfession(normalizedProfession);
         }
       } else {
-        // Invalid profession in URL, redirect to default
+        // Invalid profession in URL or not available for current version, redirect to default
         router.push('/enchanting');
       }
     } else {
@@ -380,13 +443,29 @@ export default function EnchantingPlanner() {
         setSelectedProfession('Enchanting');
       }
     }
-  }, [urlProfession, router, selectedProfession]);
+  }, [urlProfession, router, selectedProfession, availableProfessions]);
+
+  // Redirect away from Jewelcrafting if switching from TBC to Vanilla
+  useEffect(() => {
+    if (selectedVersion === 'Vanilla' && selectedProfession === 'Jewelcrafting') {
+      // Redirect to Enchanting if on Jewelcrafting when switching to Vanilla
+      const params = new URLSearchParams();
+      if (committedSkill > 1) params.set('skill', committedSkill.toString());
+      if (committedTarget < getMaxSkill(selectedVersion)) params.set('target', committedTarget.toString());
+      params.set('realm', selectedRealm);
+      params.set('faction', selectedFaction);
+      const queryString = params.toString();
+      const newUrl = `/enchanting${queryString ? `?${queryString}` : ''}`;
+      router.push(newUrl, { scroll: false });
+      setSelectedProfession('Enchanting');
+    }
+  }, [selectedVersion, selectedProfession, committedSkill, committedTarget, selectedRealm, selectedFaction, router]);
 
   // Handle URL skill parameter
   useEffect(() => {
     if (urlSkill) {
       const skillLevel = parseInt(urlSkill);
-      if (!isNaN(skillLevel) && skillLevel >= 1 && skillLevel <= 300) {
+      if (!isNaN(skillLevel) && skillLevel >= 1 && skillLevel <= maxSkill) {
         setSkill(skillLevel);
         setCommittedSkill(skillLevel);
         lastSkillValue.current = skillLevel;
@@ -396,14 +475,25 @@ export default function EnchantingPlanner() {
 
   // Handle URL target parameter
   useEffect(() => {
+    // Store the previous max skill before checking URL
+    const previousMaxFromUrl = urlMaxSkillRef.current;
+    
     if (urlTarget) {
       const targetLevel = parseInt(urlTarget);
-      if (!isNaN(targetLevel) && targetLevel >= 1 && targetLevel <= 300) {
-        setTarget(targetLevel);
-        setCommittedTarget(targetLevel);
+      if (!isNaN(targetLevel) && targetLevel >= 1 && targetLevel <= maxSkill) {
+        // Only update if the URL target is different from current committed target
+        // Also check if the URL target is the previous max skill from URL (indicating a version change)
+        // In that case, ignore it and let the version change effect handle the update
+        const isPreviousMaxSkillFromUrl = targetLevel === previousMaxFromUrl;
+        if (targetLevel !== committedTarget && !isPreviousMaxSkillFromUrl) {
+          setTarget(targetLevel);
+          setCommittedTarget(targetLevel);
+        }
       }
     }
-  }, [urlTarget]);
+    // Update the URL max skill ref when maxSkill changes (after checking)
+    urlMaxSkillRef.current = maxSkill;
+  }, [urlTarget, maxSkill, committedTarget]);
 
   // Handle URL version parameter
   useEffect(() => {
@@ -433,8 +523,9 @@ export default function EnchantingPlanner() {
   const buildUrlWithParams = (profession: string, skill: number, target: number, version: string, realm: string, faction: string) => {
     const params = new URLSearchParams();
     if (skill > 1) params.set('skill', skill.toString());
-    if (target < 300) params.set('target', target.toString());
-    if (version !== 'Vanilla') params.set('version', version);
+    const maxSkillForVersion = getMaxSkill(version);
+    if (target < maxSkillForVersion) params.set('target', target.toString());
+    if (version !== 'The Burning Crusade') params.set('version', version);
     // Always include realm parameter
     params.set('realm', realm);
     // Always include faction parameter
@@ -456,6 +547,22 @@ export default function EnchantingPlanner() {
   // Track recent user-initiated changes to prevent URL effects from overwriting them
   // We track the timestamp of any recent change, not the specific value
   const recentUserChangeTimestampRef = useRef<number>(0);
+  // Track previous max skill to detect version changes
+  const previousMaxSkillRef = useRef(getMaxSkill(selectedVersion));
+  // Track the max skill that was in the URL before version change (for URL handler)
+  const urlMaxSkillRef = useRef(getMaxSkill(selectedVersion));
+  // Refs to access current values in useEffect without adding them as dependencies
+  const committedSkillRef = useRef(committedSkill);
+  const committedTargetRef = useRef(committedTarget);
+  
+  // Keep refs in sync with state
+  useEffect(() => {
+    committedSkillRef.current = committedSkill;
+  }, [committedSkill]);
+  
+  useEffect(() => {
+    committedTargetRef.current = committedTarget;
+  }, [committedTarget]);
 
   // Ref to track pending profession change - prevents re-render until data is ready
   const pendingProfessionRef = useRef<string | null>(null);
@@ -488,10 +595,11 @@ export default function EnchantingPlanner() {
     setPendingProfessionCounter(c => c + 1);
   };
 
-  // Handle version change and update URL
+  // Handle version change - URL will be updated by the version change effect
   const handleVersionChange = (newVersion: string) => {
     setSelectedVersion(newVersion);
-    updateUrl({ version: newVersion });
+    // Don't call updateUrl here - let the version change effect handle it
+    // after it has updated the skill/target values
   };
 
   // Handle realm change and update URL
@@ -563,7 +671,7 @@ export default function EnchantingPlanner() {
   };
 
   const handleDirectSkillChange = (newValue: number) => {
-    const boundedValue = Math.min(300, Math.max(1, newValue));
+    const boundedValue = Math.min(maxSkill, Math.max(1, newValue));
     setIsDirectChange(true);
     setIsSliding(false);
     setIsReleased(false);
@@ -580,7 +688,7 @@ export default function EnchantingPlanner() {
     
     // Ensure target is at least skill + 1
     if (target <= boundedValue) {
-      const newTarget = Math.min(300, boundedValue + 1);
+      const newTarget = Math.min(maxSkill, boundedValue + 1);
       setTarget(newTarget);
       setCommittedTarget(newTarget);
     }
@@ -624,31 +732,22 @@ export default function EnchantingPlanner() {
   
   const recipes: Recipe[] = useMemo(() => {
     // Use pending profession if it exists, otherwise use current profession
-    // This allows us to calculate recipes for the new profession without updating selectedProfession
     const activeProfession = pendingProfessionRef.current || selectedProfession;
-    const raw = rawDataMap[activeProfession] || [];
-    
-    const newRecipes = raw.map(r => {
-      const { quality: _badQuality, materials: _rawMats, ...base } = r;
-  
+    const versionData = rawDataMap[selectedVersion];
+    const raw = (versionData?.[activeProfession] || []) as any[];
+
+    return raw.map((r) => {
       const materials: Record<string, number> = {};
-      for (const [id, qty] of Object.entries(_rawMats)) {
-        if (typeof qty === 'number' && qty > 0) {
-          materials[id] = qty;
-        }
+      for (const [id, qty] of Object.entries(r.materials || {})) {
+        if (typeof qty === 'number' && qty > 0) materials[id] = qty;
       }
-  
-      const quality = typeof _badQuality === 'number' ? _badQuality : 1;
-  
       return {
-        ...base,
-        quality,
+        ...r,
+        quality: typeof r.quality === 'number' ? r.quality : 1,
         materials,
-      };
+      } as Recipe;
     });
-    
-    return newRecipes;
-  }, [selectedProfession]);
+  }, [selectedProfession, selectedVersion, pendingProfessionCounter]);
 
   // Create a Set of recipe IDs for the current profession (for sub-crafting optimization)
   const currentProfessionRecipeIds = useMemo(() => {
@@ -800,12 +899,12 @@ export default function EnchantingPlanner() {
     return null;
   }, [selectedRecipeId, recipes, selectedProfession]);
 
-  const [rngLow, setRngLow]   = useState( selected ? selected.minSkill : 1 );
-  const [rngHigh, setRngHigh] = useState( selected ? (selected.difficulty.gray||selected.minSkill) : 300 );
+  const [rngLow, setRngLow]   = useState(1);
+  const [rngHigh, setRngHigh] = useState(maxSkill);
 
 
   const sliderMin = selected?.minSkill            ?? 1;
-  const sliderMax = selected?.difficulty.gray     ?? 300;
+  const sliderMax = selected?.difficulty.gray     ?? maxSkill;
 
   const clampedLow  = Math.max(sliderMin, Math.min(rngLow,  sliderMax));
   const clampedHigh = Math.max(sliderMin, Math.min(rngHigh, sliderMax));
@@ -925,12 +1024,16 @@ export default function EnchantingPlanner() {
   }, [selected, clampedLow, clampedHigh, totalLevelUps]);
 
   useEffect(() => {
-    if (!selected) return;
+    if (!selected) {
+      // If no recipe selected, update rngHigh to maxSkill when version changes
+      setRngHigh(maxSkill);
+      return;
+    }
     const min = selected.minSkill;
     const max = selected.difficulty.gray ?? min;
-    setRngLow(current => Math.max(min, Math.min(current, max)));
-    setRngHigh(current => Math.max(min, Math.min(current, max)));
-  }, [selected]);
+    setRngLow((current: number) => Math.max(min, Math.min(current, max)));
+    setRngHigh((current: number) => Math.max(min, Math.min(current, max)));
+  }, [selected, maxSkill]);
 
   const materialTotals = useMemo(() => {
     if (!selected) return {};
@@ -943,6 +1046,7 @@ export default function EnchantingPlanner() {
     
     for (const [id, perCraft] of Object.entries(selected.materials)) {
       const itemId = parseInt(id);
+      if (ENCHANTING_ROD_SPELL_IDS.has(selected.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
       const qty = perCraft * expCrafts;
     
       const buyUnit = useMarketValue ?
@@ -1051,20 +1155,16 @@ const renderXTick = selected
     if (isLoadingPrices) return;
     
     // Get recipes for pending profession (they're already available in rawDataMap)
-    const rawPendingRecipes = rawDataMap[pendingProfession] || [];
+    const versionData = rawDataMap[selectedVersion];
+    const rawPendingRecipes = (versionData?.[pendingProfession] || []) as any[];
     if (rawPendingRecipes.length === 0) return;
-    
-    // Process recipes the same way the useMemo does
-    const pendingRecipes: Recipe[] = rawPendingRecipes.map(r => {
-      const { quality: _badQuality, materials: _rawMats, ...base } = r;
+
+    const pendingRecipes: Recipe[] = rawPendingRecipes.map((r) => {
       const materials: Record<string, number> = {};
-      for (const [id, qty] of Object.entries(_rawMats)) {
-        if (typeof qty === 'number' && qty > 0) {
-          materials[id] = qty;
-        }
+      for (const [id, qty] of Object.entries(r.materials || {})) {
+        if (typeof qty === 'number' && qty > 0) materials[id] = qty;
       }
-      const quality = typeof _badQuality === 'number' ? _badQuality : 1;
-      return { ...base, quality, materials };
+      return { ...r, quality: typeof r.quality === 'number' ? r.quality : 1, materials } as Recipe;
     });
     
     // Calculate plan for pending profession BEFORE updating state
@@ -1125,7 +1225,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -1238,6 +1338,81 @@ const renderXTick = selected
     loadPrices();
   }, [selectedRealm, selectedFaction]);
 
+  // Reset skill and target when version changes to ensure they're within valid range
+  useEffect(() => {
+    const currentMaxSkill = getMaxSkill(selectedVersion);
+    const previousMaxSkill = previousMaxSkillRef.current;
+    
+    // Only run if version actually changed (max skill changed)
+    if (currentMaxSkill === previousMaxSkill) {
+      // Update ref even if no change needed
+      previousMaxSkillRef.current = currentMaxSkill;
+      return;
+    }
+    
+    // Use refs to get current values without adding them as dependencies
+    const currentSkill = committedSkillRef.current;
+    const currentTarget = committedTargetRef.current;
+    
+    // Always reset skill to 1 when version changes
+    let newSkill = 1;
+    let newTarget = currentTarget;
+    
+    // Check if we're switching to a version with a higher max (e.g., Vanilla -> TBC)
+    const isSwitchingToHigherMax = currentMaxSkill > previousMaxSkill;
+    
+    // If switching to a higher max version, set target to the new max
+    if (isSwitchingToHigherMax) {
+      newTarget = currentMaxSkill;
+    } else {
+      // Clamp target to valid range when switching to lower max
+      if (currentTarget > currentMaxSkill) {
+        newTarget = currentMaxSkill;
+      }
+    }
+    
+    // Ensure target is at least skill + 1
+    if (newTarget <= newSkill) {
+      // If target would be <= skill, try to set target to skill + 1
+      if (newSkill + 1 <= currentMaxSkill) {
+        newTarget = newSkill + 1;
+      } else {
+        // If skill is already at max, reduce skill to make room for target
+        newSkill = Math.max(1, currentMaxSkill - 1);
+        newTarget = currentMaxSkill;
+      }
+    }
+    
+    // Only update if values changed
+    if (newSkill !== currentSkill) {
+      setSkill(newSkill);
+      setCommittedSkill(newSkill);
+      lastSkillValue.current = newSkill;
+    }
+    if (newTarget !== currentTarget) {
+      setTarget(newTarget);
+      setCommittedTarget(newTarget);
+      // Update URL after state has been set to reflect the new target
+      // Use setTimeout to ensure state updates have been applied
+      setTimeout(() => {
+        const finalSkill = newSkill !== currentSkill ? newSkill : currentSkill;
+        const finalTarget = newTarget;
+        const newUrl = buildUrlWithParams(
+          selectedProfession, 
+          finalSkill, 
+          finalTarget, 
+          selectedVersion, 
+          selectedRealm, 
+          selectedFaction
+        );
+        router.push(newUrl, { scroll: false });
+      }, 0);
+    }
+    
+    // Update the ref to track the current max for next comparison
+    previousMaxSkillRef.current = currentMaxSkill;
+  }, [selectedVersion, selectedProfession, selectedRealm, selectedFaction, router]); // Only depend on selectedVersion, not on committedSkill/committedTarget
+
   // Add effect to reset realm if version changes and current realm is not available
   useEffect(() => {
     if (!realms.includes(selectedRealm)) {
@@ -1265,7 +1440,8 @@ const renderXTick = selected
           (!skipLimitedStock || !(
             r.source?.type === 'item' &&
             r.source.recipeItemId &&
-            (materialInfo[r.source.recipeItemId]?.bop || materialInfo[r.source.recipeItemId]?.limitedStock)
+            materialInfo[r.source.recipeItemId]?.limitedStock &&
+            materialInfo[r.source.recipeItemId]?.bop
           ))
         )
         .map(r => {
@@ -1307,9 +1483,10 @@ const renderXTick = selected
           calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
         totalCost += displayedMaterialCost + displayedRecipeCost;
         
-        // Calculate materials needed
+        // Calculate materials needed (exclude rod products for rod recipes - made in previous step)
         for (const [itemId, quantity] of Object.entries(s.recipe.materials)) {
           const numItemId = Number(itemId);
+          if (ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) continue;
           materialTotals[numItemId] = (materialTotals[numItemId] || 0) + quantity * displayedCrafts;
         }
       }
@@ -1428,7 +1605,7 @@ const renderXTick = selected
                         </svg>
                       </Listbox.Button>
                       <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
-                        {professions.map((prof) => (
+                        {availableProfessions.map((prof) => (
                           <Listbox.Option
                             key={prof}
                             value={prof}
@@ -1457,7 +1634,7 @@ const renderXTick = selected
             <div className="mb-4">
               <div className="flex justify-between items-center mb-1">
                 <label className="text-xs">
-                  Skill Range <span className="font-semibold text-yellow-300">{skill}</span> → <span className="font-semibold text-yellow-300">{target}</span>
+                  Skill Range <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{skill}</span> → <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{target}</span>
                 </label>
                 <div className="relative">
                   <button
@@ -1573,7 +1750,7 @@ const renderXTick = selected
                   values={[skill, target]}
                   step={1}
                   min={1}
-                  max={300}
+                  max={maxSkill}
                   onChange={([low, high]) => {
                     // Only update the skill value during dragging, target updates immediately
                     handleSliderChange(low);
@@ -1597,9 +1774,9 @@ const renderXTick = selected
                           borderRadius: '3px',
                           background: getTrackBackground({
                             values: [skill, target],
-                            colors: ['#4b5563', '#eab308', '#4b5563'],
+                            colors: ['#4b5563', selectedVersion === 'The Burning Crusade' ? '#10b981' : '#eab308', '#4b5563'],
                             min: 1,
-                            max: 300
+                            max: maxSkill
                           }),
                           pointerEvents: 'auto'
                         }}
@@ -1612,6 +1789,9 @@ const renderXTick = selected
                   }}
                   renderThumb={({ props, index }) => {
                     const { key, style, ...rest } = props;
+                    const thumbColor = selectedVersion === 'The Burning Crusade' 
+                      ? '#059669' // emerald-600 for both thumbs in TBC
+                      : (index === 0 ? '#eab308' : '#f59e0b'); // yellow for Vanilla
                     return (
                       <div
                         key={key}
@@ -1621,7 +1801,7 @@ const renderXTick = selected
                           height: '16px',
                           width: '16px',
                           borderRadius: '8px',
-                          backgroundColor: index === 0 ? '#eab308' : '#f59e0b',
+                          backgroundColor: thumbColor,
                           boxShadow: '0 0 4px rgba(0,0,0,0.5)',
                           pointerEvents: 'auto'
                         }}
@@ -1653,9 +1833,9 @@ const renderXTick = selected
                           handleDirectSkillChange(val);
                         }
                       }}
-                      className="text-lg text-center w-12 bg-transparent outline-none appearance-none text-yellow-300
+                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
                                 [&::-webkit-inner-spin-button]:appearance-none 
-                                [&::-webkit-outer-spin-button]:appearance-none"
+                                [&::-webkit-outer-spin-button]:appearance-none`}
                     />
                     
                     <button
@@ -1682,18 +1862,18 @@ const renderXTick = selected
                       type="number"
                       value={target}
                       min={skill + 1}
-                      max={300}
+                      max={maxSkill}
                       onChange={(e) => {
                         const val = parseInt(e.target.value);
                         if (!isNaN(val)) {
-                          const boundedVal = Math.max(skill + 1, Math.min(300, val));
+                          const boundedVal = Math.max(skill + 1, Math.min(maxSkill, val));
                           setTarget(boundedVal);
                           setCommittedTarget(boundedVal);
                         }
                       }}
-                      className="text-lg text-center w-12 bg-transparent outline-none appearance-none text-yellow-300
+                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
                                 [&::-webkit-inner-spin-button]:appearance-none 
-                                [&::-webkit-outer-spin-button]:appearance-none"
+                                [&::-webkit-outer-spin-button]:appearance-none`}
                     />
                     
                     <button
@@ -1718,7 +1898,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('cost')}
                   className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
                     priceSourcing === 'cost'
-                      ? 'bg-yellow-400 text-neutral-900 font-semibold border-yellow-400 shadow-sm'
+                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Raw material cost"
@@ -1734,7 +1914,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('cost-vendor')}
                   className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
                     priceSourcing === 'cost-vendor'
-                      ? 'bg-yellow-400 text-neutral-900 font-semibold border-yellow-400 shadow-sm'
+                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Subtract vendor value"
@@ -1750,7 +1930,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('disenchant')}
                   className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
                     priceSourcing === 'disenchant'
-                      ? 'bg-yellow-400 text-neutral-900 font-semibold border-yellow-400 shadow-sm'
+                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Subtract disenchant value"
@@ -1766,7 +1946,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('auction-house')}
                   className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
                     priceSourcing === 'auction-house'
-                      ? 'bg-yellow-400 text-neutral-900 font-semibold border-yellow-400 shadow-sm'
+                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Sell crafted items"
@@ -1793,7 +1973,7 @@ const renderXTick = selected
                   {view === tab && (
                     <motion.div
                       layoutId="tab-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-400"
+                      className={`absolute bottom-0 left-0 right-0 h-0.5 ${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500' : 'bg-yellow-400'}`}
                     />
                   )}
                 </button>
@@ -2177,7 +2357,7 @@ const renderXTick = selected
                   className="w-16 h-16 rounded mr-2 flex-shrink-0"
                 />
                 <a
-                  href={`https://www.wowhead.com/classic/spell=${selected.id}`}
+                  href={selected.url || `https://www.wowhead.com/${selectedVersion === 'The Burning Crusade' ? 'tbc' : 'classic'}/spell=${selected.id}`}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:underline font-semibold"
@@ -2467,7 +2647,8 @@ const renderXTick = selected
                     const recipeInfo = materialInfo[selected.source.recipeItemId];
                     const recipeCostData = getRecipeCost(selected, prices, materialInfo, useMarketValue);
                     
-                    if (recipeInfo?.bop) {
+                    // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
+                    if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
                       return (
                         <div className="flex-1 flex flex-col items-center justify-center p-4">
                           <span className="text-neutral-400 mb-2">Recipe Cost</span>
@@ -2476,14 +2657,16 @@ const renderXTick = selected
                       );
                     }
 
-                    // For all non-BoP recipes, show both vendor and AH prices if they exist
+                    // Show vendor/AH cost, or "Free" when vendorPrice is 0 (BoP from drops)
                     return (
                       <>
-                        {recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice > 0 && (
+                        {(recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice >= 0) && (
                           <div className="flex-1 flex flex-col items-center justify-center p-4">
-                            <span className="text-neutral-400 mb-2">Vendor Recipe Cost</span>
+                            <span className="text-neutral-400 mb-2">
+                              {recipeCostData.vendorPrice === 0 ? 'Recipe Cost' : 'Vendor Recipe Cost'}
+                            </span>
                             <div className="flex flex-col items-center gap-1">
-                              {recipeInfo.limitedStock && (
+                              {recipeInfo?.limitedStock && (
                                 <div className="text-base text-yellow-400 flex items-center gap-1">
                                   <span>⚠️ Limited Stock</span>
                                 </div>
@@ -2522,12 +2705,15 @@ const renderXTick = selected
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Average Cost Per Level</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={selected ? (() => {
-                      const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
-                      const recipeCost = includeRecipeCost && selected.source ? 
-                        calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
-                      return (totalMaterialCost + recipeCost) / totalLevelUps;
-                    })() : 0} />
+                    <SafeMoney
+                      value={selected ? (() => {
+                        const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
+                        const recipeCost = includeRecipeCost && selected.source ?
+                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+                        return totalLevelUps > 0 ? (totalMaterialCost + recipeCost) / totalLevelUps : 0;
+                      })() : 0}
+                      fallback="—"
+                    />
                   </span>
                 </div>
               </div>

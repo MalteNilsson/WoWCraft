@@ -1,5 +1,5 @@
 import { PriceMap } from "./types";
-import type materialInfo from '@/lib/materialsLoader';
+import type { MaterialInfo } from './types';
 
 type TsmAuction = {
   itemId: number;

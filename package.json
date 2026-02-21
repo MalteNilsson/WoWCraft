@@ -20,6 +20,8 @@
     "next": "^15.5.9",
     "node-fetch": "^3.3.2",
     "puppeteer": "^24.8.2",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-range": "^1.10.0",

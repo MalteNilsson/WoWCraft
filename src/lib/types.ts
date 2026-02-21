@@ -38,6 +38,7 @@ export type Recipe = {
     };
     materials:  Record<string, number>;
     icon:       string;
+    url?:       string;  // WoWhead link (version-specific: classic or tbc)
     produces?: {
         id: number;
         name: string;

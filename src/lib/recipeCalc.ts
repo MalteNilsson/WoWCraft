@@ -1,5 +1,5 @@
 import { Recipe, PriceMap, MaterialInfo, MaterialTreeNode } from "./types";
-import { ENCHANTING_ROD_SPELL_IDS } from "./planner";
+import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 
 
 function getAverageOutput(minCount?: number, maxCount?: number): number {
@@ -42,19 +42,66 @@ export function getRecipeCost(
   
   // Handle item-based recipes
   if (recipe.source.type === 'item' && recipe.source.recipeItemId) {
-    const recipeInfo = materialInfo[recipe.source.recipeItemId];
-    const priceData = prices[recipe.source.recipeItemId];
+    const recipeItemId = recipe.source.recipeItemId;
+    const override = RECIPE_COST_MATERIAL_OVERRIDES[recipeItemId];
+    if (override) {
+      // Cost is paid in materials (e.g. Thorium Brotherhood turn-in)
+      const materialCost = getItemCost(
+        override.materialId,
+        prices,
+        materialInfo,
+        new Map(),
+        false,
+        useMarketValue,
+        true
+      );
+      const totalCost = override.quantity * materialCost;
+      return {
+        vendorPrice: totalCost < Infinity ? totalCost : null,
+        ahPrice: null,
+        isLimitedStock: false,
+        type: 'item'
+      };
+    }
+
+    const recipeInfo = materialInfo[recipeItemId];
+    const priceData = prices[recipeItemId];
+    
+    // Vendor price takes precedence: BoP items sold by vendors (e.g. faction vendors) have a buyPrice
+    const vendorPrice = recipeInfo?.buyPrice != null && recipeInfo.buyPrice > 0
+      ? recipeInfo.buyPrice
+      : null;
     
     // Get AH price from either minBuyout or marketValue based on toggle
     const minBuyout = priceData?.minBuyout ?? 0;
     const marketValue = priceData?.marketValue ?? 0;
-    const ahPrice = useMarketValue ? 
+    const ahPrice = useMarketValue ?
       (marketValue > 0 ? marketValue : (minBuyout > 0 ? minBuyout : null)) :
       (minBuyout > 0 ? minBuyout : (marketValue > 0 ? marketValue : null));
     
+    // If we have vendor or AH price, use it (vendor takes precedence for BoP items sold by vendors)
+    if (vendorPrice != null || ahPrice != null) {
+      return {
+        vendorPrice,
+        ahPrice,
+        isLimitedStock: recipeInfo?.limitedStock ?? false,
+        type: 'item'
+      };
+    }
+    
+    // No vendor/AH price: BoP drops or missing recipeInfo → treat as free
+    if (recipeInfo?.bop || !recipeInfo) {
+      return {
+        vendorPrice: 0,
+        ahPrice: null,
+        isLimitedStock: false,
+        type: 'item'
+      };
+    }
+    
     return {
-      vendorPrice: recipeInfo?.buyPrice ?? null,
-      ahPrice,
+      vendorPrice: null,
+      ahPrice: null,
       isLimitedStock: recipeInfo?.limitedStock ?? false,
       type: 'item'
     };
@@ -98,11 +145,18 @@ export function craftCost(
   const baseCost = Object.entries(recipe.materials).reduce((sum, [id, qty]) => {
     const itemId = parseInt(id);
     const matInfo = materialInfo[itemId];
-    
+
+    // For rod recipes: exclude rod products (e.g. Runed Truesilver Rod when making Runed Arcanite Rod)
+    // They're made in the previous rod step, not bought
+    if (ENCHANTING_ROD_SPELL_IDS.has(recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) {
+      return sum;
+    }
+
     // Use getItemCost which handles sub-crafting optimization
     const itemCost = getItemCost(itemId, prices, materialInfo, new Map(), false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds);
-    
+
     // For enchanting rods, include their recipe cost (always allow crafting rods)
+    // Only for non-rod materials (rod products are excluded above)
     if (matInfo?.createdBy && ENCHANTING_ROD_SPELL_IDS.has(recipe.id)) {
       const rodRecipe = {
         id: matInfo.createdBy?.spellId ?? 0,
@@ -194,6 +248,12 @@ export const skipCraftingUnlessTopLevel = new Set<number>([
   7068, // Elemental Fire
   // Add more if needed
 ]);
+
+/** Recipe items whose cost is paid in materials (e.g. Thorium Brotherhood turn-ins) */
+const RECIPE_COST_MATERIAL_OVERRIDES: Record<number, { materialId: number; quantity: number }> = {
+  12690: { materialId: 12359, quantity: 10 }, // Plans: Imperial Plate Bracers = 10 Thorium Bars
+  12700: { materialId: 12359, quantity: 20 }, // Plans: Imperial Plate Boots = 20 Thorium Bars
+};
 
 export const forceAhOnlyItems = new Set<number>([
   12360, // Arcanite Bar

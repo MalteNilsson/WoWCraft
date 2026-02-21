@@ -1,0 +1,5646 @@
+[
+  {
+    "id": 7418,
+    "name": "Enchant Bracer - Minor Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "10940": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 0,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7418",
+    "spellLink": "https://www.wowhead.com/classic/spell=7418",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7420,
+    "name": "Enchant Chest - Minor Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "10940": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 15,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7420",
+    "spellLink": "https://www.wowhead.com/classic/spell=7420",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 7421,
+    "name": "Runed Copper Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 5,
+      "green": 7,
+      "gray": 10
+    },
+    "materials": {
+      "6217": 1,
+      "10938": 1,
+      "10940": 1
+    },
+    "inputItems": [
+      {
+        "id": 6217,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 1,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7421",
+    "spellLink": "https://www.wowhead.com/classic/spell=7421",
+    "produces": {
+      "id": 6218,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7426,
+    "name": "Enchant Chest - Minor Absorption",
+    "quality": -1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 2
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 40,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7426",
+    "spellLink": "https://www.wowhead.com/classic/spell=7426",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 7428,
+    "name": "Enchant Bracer - Minor Deflect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 1
+    },
+    "inputItems": [
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 0,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7428",
+    "spellLink": "https://www.wowhead.com/classic/spell=7428",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7443,
+    "name": "Enchant Chest - Minor Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1
+    },
+    "inputItems": [
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 20,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7443",
+    "spellLink": "https://www.wowhead.com/classic/spell=7443",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7454,
+    "name": "Enchant Cloak - Minor Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 95,
+      "green": 115,
+      "gray": 135
+    },
+    "materials": {
+      "10938": 2,
+      "10940": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 45,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7454",
+    "spellLink": "https://www.wowhead.com/classic/spell=7454",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 7457,
+    "name": "Enchant Bracer - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "10940": 3
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 50,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7457",
+    "spellLink": "https://www.wowhead.com/classic/spell=7457",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 7745,
+    "name": "Enchant 2H Weapon - Minor Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 4,
+      "10978": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 10978,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 100,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7745",
+    "spellLink": "https://www.wowhead.com/classic/spell=7745",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 7748,
+    "name": "Enchant Chest - Lesser Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 2,
+      "10940": 2
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 60,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7748",
+    "spellLink": "https://www.wowhead.com/classic/spell=7748",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 7766,
+    "name": "Enchant Bracer - Minor Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 2
+    },
+    "inputItems": [
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 60,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7766",
+    "spellLink": "https://www.wowhead.com/classic/spell=7766",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7771,
+    "name": "Enchant Cloak - Minor Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 3
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 70,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7771",
+    "spellLink": "https://www.wowhead.com/classic/spell=7771",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 200
+    }
+  },
+  {
+    "id": 7776,
+    "name": "Enchant Chest - Lesser Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10938": 1,
+      "10939": 1
+    },
+    "inputItems": [
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 80,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7776",
+    "spellLink": "https://www.wowhead.com/classic/spell=7776",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7779,
+    "name": "Enchant Bracer - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 2
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 80,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7779",
+    "spellLink": "https://www.wowhead.com/classic/spell=7779",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 400
+    }
+  },
+  {
+    "id": 7782,
+    "name": "Enchant Bracer - Minor Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10940": 5
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 5
+      }
+    ],
+    "minSkill": 80,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7782",
+    "spellLink": "https://www.wowhead.com/classic/spell=7782",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7786,
+    "name": "Enchant Weapon - Minor Beastslayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10939": 2,
+      "10940": 4
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 90,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7786",
+    "spellLink": "https://www.wowhead.com/classic/spell=7786",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7788,
+    "name": "Enchant Weapon - Minor Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 2,
+      "10978": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10978,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 90,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7788",
+    "spellLink": "https://www.wowhead.com/classic/spell=7788",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 7793,
+    "name": "Enchant 2H Weapon - Lesser Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10939": 3
+    },
+    "inputItems": [
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 100,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7793",
+    "spellLink": "https://www.wowhead.com/classic/spell=7793",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7795,
+    "name": "Runed Silver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "1210": 1,
+      "6338": 1,
+      "10939": 3,
+      "10940": 6
+    },
+    "inputItems": [
+      {
+        "id": 6338,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 1210,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 100,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7795",
+    "spellLink": "https://www.wowhead.com/classic/spell=7795",
+    "produces": {
+      "id": 6339,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7857,
+    "name": "Enchant Chest - Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10940": 4,
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 120,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7857",
+    "spellLink": "https://www.wowhead.com/classic/spell=7857",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7859,
+    "name": "Enchant Bracer - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10998": 2
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 120,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7859",
+    "spellLink": "https://www.wowhead.com/classic/spell=7859",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7861,
+    "name": "Enchant Cloak - Lesser Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "6371": 1,
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 6371,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 125,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7861",
+    "spellLink": "https://www.wowhead.com/classic/spell=7861",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1250
+    }
+  },
+  {
+    "id": 7863,
+    "name": "Enchant Boots - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 8
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 8
+      }
+    ],
+    "minSkill": 125,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7863",
+    "spellLink": "https://www.wowhead.com/classic/spell=7863",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1400
+    }
+  },
+  {
+    "id": 7867,
+    "name": "Enchant Boots - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 6,
+      "10998": 2
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 125,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=7867",
+    "spellLink": "https://www.wowhead.com/classic/spell=7867",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13378,
+    "name": "Enchant Shield - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 2,
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 105,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13378",
+    "spellLink": "https://www.wowhead.com/classic/spell=13378",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 600
+    }
+  },
+  {
+    "id": 13380,
+    "name": "Enchant 2H Weapon - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10940": 6,
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 110,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13380",
+    "spellLink": "https://www.wowhead.com/classic/spell=13380",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13419,
+    "name": "Enchant Cloak - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 110,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13419",
+    "spellLink": "https://www.wowhead.com/classic/spell=13419",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13421,
+    "name": "Enchant Cloak - Lesser Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 6,
+      "10978": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 10978,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 115,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13421",
+    "spellLink": "https://www.wowhead.com/classic/spell=13421",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 800
+    }
+  },
+  {
+    "id": 13464,
+    "name": "Enchant Shield - Lesser Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 1,
+      "10978": 1,
+      "10998": 1
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10978,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 115,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13464",
+    "spellLink": "https://www.wowhead.com/classic/spell=13464",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13485,
+    "name": "Enchant Shield - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "10940": 4,
+      "10998": 2
+    },
+    "inputItems": [
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 130,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13485",
+    "spellLink": "https://www.wowhead.com/classic/spell=13485",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 13501,
+    "name": "Enchant Bracer - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "11083": 2
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 130,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13501",
+    "spellLink": "https://www.wowhead.com/classic/spell=13501",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 13503,
+    "name": "Enchant Weapon - Lesser Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 2,
+      "11084": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11084,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 140,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13503",
+    "spellLink": "https://www.wowhead.com/classic/spell=13503",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2000
+    }
+  },
+  {
+    "id": 13522,
+    "name": "Enchant Cloak - Lesser Shadow Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "6048": 1,
+      "11082": 1
+    },
+    "inputItems": [
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 6048,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 135,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13522",
+    "spellLink": "https://www.wowhead.com/classic/spell=13522",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13529,
+    "name": "Enchant 2H Weapon - Lesser Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "11083": 3,
+      "11084": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11084,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 145,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13529",
+    "spellLink": "https://www.wowhead.com/classic/spell=13529",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 13536,
+    "name": "Enchant Bracer - Lesser Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 2
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 140,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13536",
+    "spellLink": "https://www.wowhead.com/classic/spell=13536",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13538,
+    "name": "Enchant Chest - Lesser Absorption",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "10940": 2,
+      "11082": 1,
+      "11084": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11084,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 140,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13538",
+    "spellLink": "https://www.wowhead.com/classic/spell=13538",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13607,
+    "name": "Enchant Chest - Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "10998": 2,
+      "11082": 1
+    },
+    "inputItems": [
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10998,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 145,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13607",
+    "spellLink": "https://www.wowhead.com/classic/spell=13607",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 13612,
+    "name": "Enchant Gloves - Mining",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "2772": 3,
+      "11083": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 2772,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 145,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13612",
+    "spellLink": "https://www.wowhead.com/classic/spell=13612",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13617,
+    "name": "Enchant Gloves - Herbalism",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "3356": 3,
+      "11083": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 3356,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 145,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13617",
+    "spellLink": "https://www.wowhead.com/classic/spell=13617",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13620,
+    "name": "Enchant Gloves - Fishing",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "6370": 3,
+      "11083": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 6370,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 145,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13620",
+    "spellLink": "https://www.wowhead.com/classic/spell=13620",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13622,
+    "name": "Enchant Bracer - Lesser Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11082": 2
+    },
+    "inputItems": [
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 150,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13622",
+    "spellLink": "https://www.wowhead.com/classic/spell=13622",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13626,
+    "name": "Enchant Chest - Minor Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11082": 1,
+      "11083": 1,
+      "11084": 1
+    },
+    "inputItems": [
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11084,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 150,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13626",
+    "spellLink": "https://www.wowhead.com/classic/spell=13626",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13628,
+    "name": "Runed Golden Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "5500": 1,
+      "11082": 2,
+      "11083": 2,
+      "11128": 1
+    },
+    "inputItems": [
+      {
+        "id": 11128,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 5500,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11082,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 150,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13628",
+    "spellLink": "https://www.wowhead.com/classic/spell=13628",
+    "produces": {
+      "id": 11130,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13631,
+    "name": "Enchant Shield - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 155,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13631",
+    "spellLink": "https://www.wowhead.com/classic/spell=13631",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 13635,
+    "name": "Enchant Cloak - Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 3,
+      "11138": 1
+    },
+    "inputItems": [
+      {
+        "id": 11138,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 155,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13635",
+    "spellLink": "https://www.wowhead.com/classic/spell=13635",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 13637,
+    "name": "Enchant Boots - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 160,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13637",
+    "spellLink": "https://www.wowhead.com/classic/spell=13637",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13640,
+    "name": "Enchant Chest - Greater Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 3
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 160,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13640",
+    "spellLink": "https://www.wowhead.com/classic/spell=13640",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2700
+    }
+  },
+  {
+    "id": 13642,
+    "name": "Enchant Bracer - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "11134": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 165,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13642",
+    "spellLink": "https://www.wowhead.com/classic/spell=13642",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13644,
+    "name": "Enchant Boots - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 4
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 170,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13644",
+    "spellLink": "https://www.wowhead.com/classic/spell=13644",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13646,
+    "name": "Enchant Bracer - Lesser Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 2,
+      "11134": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 170,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13646",
+    "spellLink": "https://www.wowhead.com/classic/spell=13646",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13648,
+    "name": "Enchant Bracer - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 6
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 170,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13648",
+    "spellLink": "https://www.wowhead.com/classic/spell=13648",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13653,
+    "name": "Enchant Weapon - Lesser Beastslayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "5637": 2,
+      "11134": 1,
+      "11138": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 5637,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11138,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 175,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13653",
+    "spellLink": "https://www.wowhead.com/classic/spell=13653",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13655,
+    "name": "Enchant Weapon - Lesser Elemental Slayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7067": 1,
+      "11134": 1,
+      "11138": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7067,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11138,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 175,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13655",
+    "spellLink": "https://www.wowhead.com/classic/spell=13655",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13657,
+    "name": "Enchant Cloak - Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7068": 1,
+      "11134": 1
+    },
+    "inputItems": [
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7068,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 175,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13657",
+    "spellLink": "https://www.wowhead.com/classic/spell=13657",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 13659,
+    "name": "Enchant Shield - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 180,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13659",
+    "spellLink": "https://www.wowhead.com/classic/spell=13659",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3200
+    }
+  },
+  {
+    "id": 13661,
+    "name": "Enchant Bracer - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11137": 1
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 180,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13661",
+    "spellLink": "https://www.wowhead.com/classic/spell=13661",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3600
+    }
+  },
+  {
+    "id": 13663,
+    "name": "Enchant Chest - Greater Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "11135": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 185,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13663",
+    "spellLink": "https://www.wowhead.com/classic/spell=13663",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3800
+    }
+  },
+  {
+    "id": 13687,
+    "name": "Enchant Boots - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "11134": 2,
+      "11135": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 190,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13687",
+    "spellLink": "https://www.wowhead.com/classic/spell=13687",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13689,
+    "name": "Enchant Shield - Lesser Block",
+    "quality": -1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 2,
+      "11137": 2,
+      "11139": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11139,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 195,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13689",
+    "spellLink": "https://www.wowhead.com/classic/spell=13689",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13693,
+    "name": "Enchant Weapon - Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 2,
+      "11139": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11139,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 195,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13693",
+    "spellLink": "https://www.wowhead.com/classic/spell=13693",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13695,
+    "name": "Enchant 2H Weapon - Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11137": 4,
+      "11139": 1
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 11139,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 200,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13695",
+    "spellLink": "https://www.wowhead.com/classic/spell=13695",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13698,
+    "name": "Enchant Gloves - Skinning",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7392": 3,
+      "11137": 1
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7392,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 200,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13698",
+    "spellLink": "https://www.wowhead.com/classic/spell=13698",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13700,
+    "name": "Enchant Chest - Lesser Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11135": 2,
+      "11137": 2,
+      "11139": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11139,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 200,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13700",
+    "spellLink": "https://www.wowhead.com/classic/spell=13700",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13702,
+    "name": "Runed Truesilver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7971": 1,
+      "11135": 2,
+      "11137": 2,
+      "11144": 1
+    },
+    "inputItems": [
+      {
+        "id": 11144,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7971,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 200,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13702",
+    "spellLink": "https://www.wowhead.com/classic/spell=13702",
+    "produces": {
+      "id": 11145,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13746,
+    "name": "Enchant Cloak - Greater Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11137": 3
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 205,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13746",
+    "spellLink": "https://www.wowhead.com/classic/spell=13746",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4200
+    }
+  },
+  {
+    "id": 13794,
+    "name": "Enchant Cloak - Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11174": 1
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 205,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13794",
+    "spellLink": "https://www.wowhead.com/classic/spell=13794",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4200
+    }
+  },
+  {
+    "id": 13815,
+    "name": "Enchant Gloves - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 1
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 210,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13815",
+    "spellLink": "https://www.wowhead.com/classic/spell=13815",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4400
+    }
+  },
+  {
+    "id": 13817,
+    "name": "Enchant Shield - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 5
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 5
+      }
+    ],
+    "minSkill": 210,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13817",
+    "spellLink": "https://www.wowhead.com/classic/spell=13817",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13822,
+    "name": "Enchant Bracer - Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11174": 2
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 210,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13822",
+    "spellLink": "https://www.wowhead.com/classic/spell=13822",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4400
+    }
+  },
+  {
+    "id": 13836,
+    "name": "Enchant Boots - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "11137": 5
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 5
+      }
+    ],
+    "minSkill": 215,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13836",
+    "spellLink": "https://www.wowhead.com/classic/spell=13836",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4600
+    }
+  },
+  {
+    "id": 13841,
+    "name": "Enchant Gloves - Advanced Mining",
+    "quality": -1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "6037": 3,
+      "11137": 3
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 6037,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 215,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13841",
+    "spellLink": "https://www.wowhead.com/classic/spell=13841",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13846,
+    "name": "Enchant Bracer - Greater Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 3
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 220,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13846",
+    "spellLink": "https://www.wowhead.com/classic/spell=13846",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13858,
+    "name": "Enchant Chest - Superior Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 6
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 220,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13858",
+    "spellLink": "https://www.wowhead.com/classic/spell=13858",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4800
+    }
+  },
+  {
+    "id": 13868,
+    "name": "Enchant Gloves - Advanced Herbalism",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "8838": 3,
+      "11137": 3
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 8838,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 225,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13868",
+    "spellLink": "https://www.wowhead.com/classic/spell=13868",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13882,
+    "name": "Enchant Cloak - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11174": 2
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 225,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13882",
+    "spellLink": "https://www.wowhead.com/classic/spell=13882",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13887,
+    "name": "Enchant Gloves - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11137": 3,
+      "11174": 2
+    },
+    "inputItems": [
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 225,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13887",
+    "spellLink": "https://www.wowhead.com/classic/spell=13887",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 13890,
+    "name": "Enchant Boots - Minor Speed",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "7909": 1,
+      "11174": 1,
+      "11177": 1
+    },
+    "inputItems": [
+      {
+        "id": 11177,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7909,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 225,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13890",
+    "spellLink": "https://www.wowhead.com/classic/spell=13890",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 13898,
+    "name": "Enchant Weapon - Fiery Weapon",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11177": 4
+    },
+    "inputItems": [
+      {
+        "id": 11177,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7078,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 265,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13898",
+    "spellLink": "https://www.wowhead.com/classic/spell=13898",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13905,
+    "name": "Enchant Shield - Greater Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    },
+    "inputItems": [
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 230,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13905",
+    "spellLink": "https://www.wowhead.com/classic/spell=13905",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5400
+    }
+  },
+  {
+    "id": 13915,
+    "name": "Enchant Weapon - Demonslaying",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "9224": 1,
+      "11176": 2,
+      "11177": 1
+    },
+    "inputItems": [
+      {
+        "id": 11177,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 9224,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 230,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13915",
+    "spellLink": "https://www.wowhead.com/classic/spell=13915",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13917,
+    "name": "Enchant Chest - Superior Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11174": 2,
+      "11175": 1
+    },
+    "inputItems": [
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11174,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 230,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13917",
+    "spellLink": "https://www.wowhead.com/classic/spell=13917",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5400
+    }
+  },
+  {
+    "id": 13931,
+    "name": "Enchant Bracer - Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    },
+    "inputItems": [
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 235,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13931",
+    "spellLink": "https://www.wowhead.com/classic/spell=13931",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13933,
+    "name": "Enchant Shield - Frost Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "3829": 1,
+      "11178": 1
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 3829,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 235,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13933",
+    "spellLink": "https://www.wowhead.com/classic/spell=13933",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13935,
+    "name": "Enchant Boots - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11175": 2
+    },
+    "inputItems": [
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 235,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13935",
+    "spellLink": "https://www.wowhead.com/classic/spell=13935",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5800
+    }
+  },
+  {
+    "id": 13937,
+    "name": "Enchant 2H Weapon - Greater Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11176": 2,
+      "11178": 2
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 240,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13937",
+    "spellLink": "https://www.wowhead.com/classic/spell=13937",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13939,
+    "name": "Enchant Bracer - Greater Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 2
+    },
+    "inputItems": [
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 240,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13939",
+    "spellLink": "https://www.wowhead.com/classic/spell=13939",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13941,
+    "name": "Enchant Chest - Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 3,
+      "11178": 1
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 245,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13941",
+    "spellLink": "https://www.wowhead.com/classic/spell=13941",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13943,
+    "name": "Enchant Weapon - Greater Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 2,
+      "11178": 2
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11175,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 245,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13943",
+    "spellLink": "https://www.wowhead.com/classic/spell=13943",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13945,
+    "name": "Enchant Bracer - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11176": 5
+    },
+    "inputItems": [
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 5
+      }
+    ],
+    "minSkill": 245,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13945",
+    "spellLink": "https://www.wowhead.com/classic/spell=13945",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13947,
+    "name": "Enchant Gloves - Riding Skill",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "11176": 3,
+      "11178": 2
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 250,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13947",
+    "spellLink": "https://www.wowhead.com/classic/spell=13947",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 13948,
+    "name": "Enchant Gloves - Minor Haste",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "8153": 2,
+      "11178": 2
+    },
+    "inputItems": [
+      {
+        "id": 11178,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 8153,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 250,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=13948",
+    "spellLink": "https://www.wowhead.com/classic/spell=13948",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6500
+    }
+  },
+  {
+    "id": 14293,
+    "name": "Lesser Magic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 10,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "4470": 1,
+      "10938": 1
+    },
+    "inputItems": [
+      {
+        "id": 4470,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10938,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 10,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=14293",
+    "spellLink": "https://www.wowhead.com/classic/spell=14293",
+    "produces": {
+      "id": 11287,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 14807,
+    "name": "Greater Magic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "4470": 1,
+      "10939": 1
+    },
+    "inputItems": [
+      {
+        "id": 4470,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 10939,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 70,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=14807",
+    "spellLink": "https://www.wowhead.com/classic/spell=14807",
+    "produces": {
+      "id": 11288,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 200
+    }
+  },
+  {
+    "id": 14809,
+    "name": "Lesser Mystic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1,
+      "11291": 1
+    },
+    "inputItems": [
+      {
+        "id": 11291,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11134,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 155,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=14809",
+    "spellLink": "https://www.wowhead.com/classic/spell=14809",
+    "produces": {
+      "id": 11289,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 14810,
+    "name": "Greater Mystic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11291": 1
+    },
+    "inputItems": [
+      {
+        "id": 11291,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 175,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=14810",
+    "spellLink": "https://www.wowhead.com/classic/spell=14810",
+    "produces": {
+      "id": 11290,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 15596,
+    "name": "Smoking Heart of the Mountain",
+    "quality": 3,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11382": 1,
+      "14343": 3
+    },
+    "inputItems": [
+      {
+        "id": 11382,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7078,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 14343,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 265,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=15596",
+    "spellLink": "https://www.wowhead.com/classic/spell=15596",
+    "produces": {
+      "id": 11811,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 17180,
+    "name": "Enchanted Thorium",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "11176": 3,
+      "12359": 1
+    },
+    "inputItems": [
+      {
+        "id": 12359,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 250,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=17180",
+    "spellLink": "https://www.wowhead.com/classic/spell=17180",
+    "produces": {
+      "id": 12655,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 17181,
+    "name": "Enchanted Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8170": 1,
+      "16202": 1
+    },
+    "inputItems": [
+      {
+        "id": 8170,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 250,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=17181",
+    "spellLink": "https://www.wowhead.com/classic/spell=17181",
+    "produces": {
+      "id": 12810,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 20008,
+    "name": "Enchant Bracer - Greater Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 295,
+      "gray": 315
+    },
+    "materials": {
+      "16202": 3
+    },
+    "inputItems": [
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 255,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20008",
+    "spellLink": "https://www.wowhead.com/classic/spell=20008",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20009,
+    "name": "Enchant Bracer - Superior Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "11176": 10,
+      "16202": 3
+    },
+    "inputItems": [
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 270,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20009",
+    "spellLink": "https://www.wowhead.com/classic/spell=20009",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20010,
+    "name": "Enchant Bracer - Superior Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 6,
+      "16204": 6
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 295,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20010",
+    "spellLink": "https://www.wowhead.com/classic/spell=20010",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20011,
+    "name": "Enchant Bracer - Superior Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16204": 15
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 15
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20011",
+    "spellLink": "https://www.wowhead.com/classic/spell=20011",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20012,
+    "name": "Enchant Gloves - Greater Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "16202": 3,
+      "16204": 3
+    },
+    "inputItems": [
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 3
+      }
+    ],
+    "minSkill": 270,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20012",
+    "spellLink": "https://www.wowhead.com/classic/spell=20012",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20013,
+    "name": "Enchant Gloves - Greater Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 4,
+      "16204": 4
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 295,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20013",
+    "spellLink": "https://www.wowhead.com/classic/spell=20013",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20014,
+    "name": "Enchant Cloak - Greater Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7075": 1,
+      "7077": 1,
+      "7079": 1,
+      "7081": 1,
+      "7972": 1,
+      "16202": 2
+    },
+    "inputItems": [
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 7077,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7075,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7079,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7081,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7972,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 265,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20014",
+    "spellLink": "https://www.wowhead.com/classic/spell=20014",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20015,
+    "name": "Enchant Cloak - Superior Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "16204": 8
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 8
+      }
+    ],
+    "minSkill": 285,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20015",
+    "spellLink": "https://www.wowhead.com/classic/spell=20015",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20016,
+    "name": "Enchant Shield - Superior Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 4
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 280,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20016",
+    "spellLink": "https://www.wowhead.com/classic/spell=20016",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20017,
+    "name": "Enchant Shield - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "11176": 10
+    },
+    "inputItems": [
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 265,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20017",
+    "spellLink": "https://www.wowhead.com/classic/spell=20017",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20020,
+    "name": "Enchant Boots - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "11176": 10
+    },
+    "inputItems": [
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 260,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20020",
+    "spellLink": "https://www.wowhead.com/classic/spell=20020",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20023,
+    "name": "Enchant Boots - Greater Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 8
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 8
+      }
+    ],
+    "minSkill": 295,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20023",
+    "spellLink": "https://www.wowhead.com/classic/spell=20023",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20024,
+    "name": "Enchant Boots - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "16202": 1,
+      "16203": 2
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 16202,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 275,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20024",
+    "spellLink": "https://www.wowhead.com/classic/spell=20024",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20025,
+    "name": "Enchant Chest - Greater Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 4,
+      "16203": 10,
+      "16204": 15
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 15
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20025",
+    "spellLink": "https://www.wowhead.com/classic/spell=20025",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20026,
+    "name": "Enchant Chest - Major Health",
+    "quality": -1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "14343": 1,
+      "16204": 6
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 14343,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 275,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20026",
+    "spellLink": "https://www.wowhead.com/classic/spell=20026",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20028,
+    "name": "Enchant Chest - Major Mana",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "14343": 1,
+      "16203": 3
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14343,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20028",
+    "spellLink": "https://www.wowhead.com/classic/spell=20028",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20029,
+    "name": "Enchant Weapon - Icy Chill",
+    "quality": -1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7080": 1,
+      "7082": 1,
+      "13467": 1,
+      "14343": 4
+    },
+    "inputItems": [
+      {
+        "id": 14343,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7080,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 7082,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 13467,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 285,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20029",
+    "spellLink": "https://www.wowhead.com/classic/spell=20029",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20030,
+    "name": "Enchant 2H Weapon - Superior Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "14344": 4,
+      "16204": 10
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 295,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20030",
+    "spellLink": "https://www.wowhead.com/classic/spell=20030",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20031,
+    "name": "Enchant Weapon - Superior Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 10
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 10
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20031",
+    "spellLink": "https://www.wowhead.com/classic/spell=20031",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20032,
+    "name": "Enchant Weapon - Lifestealing",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "12808": 6,
+      "14344": 6
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 12808,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 12803,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20032",
+    "spellLink": "https://www.wowhead.com/classic/spell=20032",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20033,
+    "name": "Enchant Weapon - Unholy Weapon",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "12808": 4,
+      "14344": 4
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 12808,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 295,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20033",
+    "spellLink": "https://www.wowhead.com/classic/spell=20033",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20034,
+    "name": "Enchant Weapon - Crusader",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 2,
+      "14344": 4
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 12811,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20034",
+    "spellLink": "https://www.wowhead.com/classic/spell=20034",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20035,
+    "name": "Enchant 2H Weapon - Major Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 12
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20035",
+    "spellLink": "https://www.wowhead.com/classic/spell=20035",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20036,
+    "name": "Enchant 2H Weapon - Major Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    },
+    "inputItems": [
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 12
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20036",
+    "spellLink": "https://www.wowhead.com/classic/spell=20036",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 20051,
+    "name": "Runed Arcanite Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "13926": 1,
+      "14343": 4,
+      "14344": 2,
+      "16203": 4,
+      "16204": 10,
+      "16206": 1
+    },
+    "inputItems": [
+      {
+        "id": 16206,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 13926,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 14343,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=20051",
+    "spellLink": "https://www.wowhead.com/classic/spell=20051",
+    "produces": {
+      "id": 16207,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 21931,
+    "name": "Enchant Weapon - Winter's Might",
+    "quality": -1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3819": 2,
+      "11135": 3,
+      "11137": 3,
+      "11139": 1
+    },
+    "inputItems": [
+      {
+        "id": 11135,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 11139,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 3819,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 190,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=21931",
+    "spellLink": "https://www.wowhead.com/classic/spell=21931",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 22749,
+    "name": "Enchant Weapon - Spell Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "7080": 4,
+      "7082": 4,
+      "13926": 2,
+      "14344": 4,
+      "16203": 12
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 12
+      },
+      {
+        "id": 7078,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7080,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7082,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 13926,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=22749",
+    "spellLink": "https://www.wowhead.com/classic/spell=22749",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 22750,
+    "name": "Enchant Weapon - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 6,
+      "12803": 6,
+      "12811": 1,
+      "14344": 4,
+      "16203": 8
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 12803,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 7080,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 12811,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=22750",
+    "spellLink": "https://www.wowhead.com/classic/spell=22750",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23799,
+    "name": "Enchant Weapon - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7076": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7076,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23799",
+    "spellLink": "https://www.wowhead.com/classic/spell=23799",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23800,
+    "name": "Enchant Weapon - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7082,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23800",
+    "spellLink": "https://www.wowhead.com/classic/spell=23800",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23801,
+    "name": "Enchant Bracer - Mana Regeneration",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7080": 2,
+      "16203": 4,
+      "16204": 16
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 16
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 7080,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23801",
+    "spellLink": "https://www.wowhead.com/classic/spell=23801",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23802,
+    "name": "Enchant Bracer - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "14344": 2,
+      "16203": 4,
+      "16204": 20
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 20
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 12803,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23802",
+    "spellLink": "https://www.wowhead.com/classic/spell=23802",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23803,
+    "name": "Enchant Weapon - Mighty Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 10,
+      "16203": 8,
+      "16204": 15
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 15
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23803",
+    "spellLink": "https://www.wowhead.com/classic/spell=23803",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23804,
+    "name": "Enchant Weapon - Mighty Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 15,
+      "16203": 12,
+      "16204": 20
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 15
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 12
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 20
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=23804",
+    "spellLink": "https://www.wowhead.com/classic/spell=23804",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25072,
+    "name": "Enchant Gloves - Threat",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 6,
+      "18512": 8,
+      "20725": 4
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 18512,
+        "name": "",
+        "quantity": 8
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25072",
+    "spellLink": "https://www.wowhead.com/classic/spell=25072",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25073,
+    "name": "Enchant Gloves - Shadow Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12808": 6,
+      "14344": 10,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 12808,
+        "name": "",
+        "quantity": 6
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25073",
+    "spellLink": "https://www.wowhead.com/classic/spell=25073",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25074,
+    "name": "Enchant Gloves - Frost Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 4,
+      "14344": 10,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 7080,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25074",
+    "spellLink": "https://www.wowhead.com/classic/spell=25074",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25078,
+    "name": "Enchant Gloves - Fire Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 10,
+      "20725": 2
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 7078,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25078",
+    "spellLink": "https://www.wowhead.com/classic/spell=25078",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25079,
+    "name": "Enchant Gloves - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 1,
+      "14344": 8,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 12811,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25079",
+    "spellLink": "https://www.wowhead.com/classic/spell=25079",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25080,
+    "name": "Enchant Gloves - Superior Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 8,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 7082,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25080",
+    "spellLink": "https://www.wowhead.com/classic/spell=25080",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25081,
+    "name": "Enchant Cloak - Greater Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 8,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 7078,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25081",
+    "spellLink": "https://www.wowhead.com/classic/spell=25081",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25082,
+    "name": "Enchant Cloak - Greater Nature Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 4,
+      "14344": 8,
+      "20725": 2
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 12803,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25082",
+    "spellLink": "https://www.wowhead.com/classic/spell=25082",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25083,
+    "name": "Enchant Cloak - Stealth",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "13468": 2,
+      "14344": 8,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 13468,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25083",
+    "spellLink": "https://www.wowhead.com/classic/spell=25083",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25084,
+    "name": "Enchant Cloak - Subtlety",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11754": 2,
+      "14344": 6,
+      "20725": 4
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 4
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 11754,
+        "name": "",
+        "quantity": 2
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25084",
+    "spellLink": "https://www.wowhead.com/classic/spell=25084",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25086,
+    "name": "Enchant Cloak - Dodge",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12809": 8,
+      "14344": 8,
+      "20725": 3
+    },
+    "inputItems": [
+      {
+        "id": 20725,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 8
+      },
+      {
+        "id": 12809,
+        "name": "",
+        "quantity": 8
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25086",
+    "spellLink": "https://www.wowhead.com/classic/spell=25086",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25124,
+    "name": "Minor Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 55,
+      "green": 65,
+      "gray": 75
+    },
+    "materials": {
+      "3371": 1,
+      "10940": 2,
+      "17034": 1
+    },
+    "inputItems": [
+      {
+        "id": 10940,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 17034,
+        "name": "",
+        "quantity": 1
+      },
+      {
+        "id": 3371,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 45,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25124",
+    "spellLink": "https://www.wowhead.com/classic/spell=25124",
+    "produces": {
+      "id": 20744,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25125,
+    "name": "Minor Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 160,
+      "green": 170,
+      "gray": 180
+    },
+    "materials": {
+      "3372": 1,
+      "11083": 3,
+      "17034": 2
+    },
+    "inputItems": [
+      {
+        "id": 11083,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 17034,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 3372,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 150,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25125",
+    "spellLink": "https://www.wowhead.com/classic/spell=25125",
+    "produces": {
+      "id": 20745,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25126,
+    "name": "Lesser Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "3372": 1,
+      "11137": 3,
+      "17035": 2
+    },
+    "inputItems": [
+      {
+        "id": 11137,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 17035,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 3372,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 200,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25126",
+    "spellLink": "https://www.wowhead.com/classic/spell=25126",
+    "produces": {
+      "id": 20746,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25127,
+    "name": "Lesser Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "8831": 2,
+      "8925": 1,
+      "11176": 3
+    },
+    "inputItems": [
+      {
+        "id": 11176,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 8831,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 8925,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 250,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25127",
+    "spellLink": "https://www.wowhead.com/classic/spell=25127",
+    "produces": {
+      "id": 20747,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25128,
+    "name": "Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 2,
+      "8925": 1,
+      "16204": 3
+    },
+    "inputItems": [
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 4625,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 8925,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 275,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25128",
+    "spellLink": "https://www.wowhead.com/classic/spell=25128",
+    "produces": {
+      "id": 20750,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25129,
+    "name": "Brilliant Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "4625": 3,
+      "14344": 2,
+      "18256": 1
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 4625,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 18256,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25129",
+    "spellLink": "https://www.wowhead.com/classic/spell=25129",
+    "produces": {
+      "id": 20749,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25130,
+    "name": "Brilliant Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8831": 3,
+      "14344": 2,
+      "18256": 1
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 2
+      },
+      {
+        "id": 8831,
+        "name": "",
+        "quantity": 3
+      },
+      {
+        "id": 18256,
+        "name": "",
+        "quantity": 1
+      }
+    ],
+    "minSkill": 300,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=25130",
+    "spellLink": "https://www.wowhead.com/classic/spell=25130",
+    "produces": {
+      "id": 20748,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 27837,
+    "name": "Enchant 2H Weapon - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 10,
+      "16203": 6,
+      "16204": 14
+    },
+    "inputItems": [
+      {
+        "id": 14344,
+        "name": "",
+        "quantity": 10
+      },
+      {
+        "id": 16203,
+        "name": "",
+        "quantity": 6
+      },
+      {
+        "id": 16204,
+        "name": "",
+        "quantity": 14
+      },
+      {
+        "id": 7082,
+        "name": "",
+        "quantity": 4
+      }
+    ],
+    "minSkill": 290,
+    "icon": "",
+    "url": "https://www.wowhead.com/classic/spell=27837",
+    "spellLink": "https://www.wowhead.com/classic/spell=27837",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  }
+]

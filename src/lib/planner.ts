@@ -1,15 +1,9 @@
 import { Recipe, PriceMap } from "./types";
 import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
-import materialInfo from "./materialsLoader";
+import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 
-export const ENCHANTING_ROD_SPELL_IDS = new Set<number>([
-    7421,   // Runed Copper Rod
-    7795,   // Runed Silver Rod
-    13628,  // Runed Golden Rod
-    13702,  // Runed Truesilver Rod
-    20051,  // Runed Arcanite Rod
-]);
+export { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS };
 
 export const blacklistedSpellIds = new Set<number>([
     15596, // Smoking Heart of the Mountain
@@ -30,17 +24,19 @@ export const blacklistedSpellIds = new Set<number>([
     23489, // Ultrasafe Transporter - Gadgetzan
     23486, // Dimensional Ripper - Everlook+
     12716, // Goblin Mortar
+    22757, // Elemental Sharpening Stone
+    28463, // Ironvine Belt
+    36122, // Earthforged Leggings
+    36128, // Light Emberforged Hammer
+    36125, // Light Earthforged Blade
+    36124, // Windforged Leggings
+    36126, // Light Skyforged Axe
+    36129, // Heavy Earthforged Breastplate
+    36130, // Stormforged Hauberk
+    36131, // Windforged Rapier
+    36133, // Stoneforged Claymore
 ]);
 
-// Items that should be crafted for their entire level span (from minSkill to gray)
-// const fullSpanCraftItems = new Set([
-//   // Tailoring
-//   2963,  // Bolt of Linen Cloth
-//   2964,  // Bolt of Woolen Cloth
-//   3865,  // Bolt of Silk Cloth
-//   3866,  // Bolt of Mageweave
-//   18401, // Bolt of Runecloth
-// ]);
 
 // Items that should be crafted to cover material needs
 const materialCraftItems = new Set([
@@ -134,15 +130,7 @@ export function makeDynamicPlan(
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
     
-    // Handle special cases first (rods, upgrades)
-    const allUpgrades = [
-        { level: 350, name: "Artisan" },
-    ];
-    
     const startSkill = skill;
-    const upgrades = allUpgrades.filter(
-        u => u.level > startSkill && u.level <= target
-    );
     
     const rodRecipes = profession === "Enchanting"
         ? recipes
@@ -198,9 +186,10 @@ export function makeDynamicPlan(
                     shoppingList: new Map(currentState.shoppingList)
                 };
                 
-                // Add rod materials to shopping list
+                // Add rod materials to shopping list (exclude rod products - made in previous rod step)
                 for (const [matId, qty] of Object.entries(rod.materials)) {
                     const itemId = Number(matId);
+                    if (ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
                     const current = newState.shoppingList.get(itemId) || 0;
                     newState.shoppingList.set(itemId, current + qty);
                 }
@@ -214,29 +203,6 @@ export function makeDynamicPlan(
                 
                 dp[currentSkill - 1] = newState;
                 continue;
-            }
-        }
-
-        // Handle upgrades if needed
-        if (upgrades.length) {
-            const upgrade = upgrades.find(u => u.level === currentSkill);
-            if (upgrade) {
-                const newState: BackwardDPState = {
-                    steps: [{
-                        upgradeName: upgrade.name,
-                    cost: 0,
-                    endSkill: currentSkill,
-                        note: `Upgrade to ${upgrade.name}`
-                    }, ...currentState.steps],
-                totalCost: currentState.totalCost,
-                    startSkill: currentSkill,
-                    shoppingList: new Map(currentState.shoppingList)
-            };
-
-            if (!dp[currentSkill] || newState.totalCost < dp[currentSkill].totalCost) {
-                dp[currentSkill] = newState;
-            }
-            continue;
             }
         }
 
@@ -363,8 +329,10 @@ export function makeDynamicPlan(
             const selectedRecipeCostAmortized = selectedRecipeData.recipeCostValue / estimatedSkillUpsUsed;
             const selectedTotalCostPerSkillUp = selectedMaterialCostPerSkillUp + selectedRecipeCostAmortized;
             
-            // Compare with top alternatives
-            const topAlternatives = recipeCosts.slice(0, Math.min(3, recipeCosts.length))
+            // Compare with top alternatives: top 3 by material cost + free recipes (can be cheaper overall)
+            const topByMaterial = recipeCosts.slice(0, Math.min(3, recipeCosts.length));
+            const freeRecipes = recipeCosts.filter(r => r.recipeCostValue === 0 && !topByMaterial.some(t => t.recipe.id === r.recipe.id));
+            const alternativesToConsider = [...topByMaterial, ...freeRecipes]
                 .filter(r => r.recipe.id !== selectedRecipe.id)
                 .map(alt => {
                     const altGray = alt.recipe.difficulty.gray ?? Infinity;
@@ -381,8 +349,8 @@ export function makeDynamicPlan(
                 });
             
             // Find cheapest alternative including recipe costs
-            topAlternatives.sort((a, b) => a.totalCostPerSkillUp - b.totalCostPerSkillUp);
-            const cheapestAlternative = topAlternatives[0];
+            alternativesToConsider.sort((a, b) => a.totalCostPerSkillUp - b.totalCostPerSkillUp);
+            const cheapestAlternative = alternativesToConsider[0];
             
             // Switch if alternative is cheaper overall
             if (cheapestAlternative && cheapestAlternative.totalCostPerSkillUp < selectedTotalCostPerSkillUp) {
@@ -473,30 +441,6 @@ export function makeDynamicPlan(
                 continue;
             }
 
-            // Handle upgrades if needed
-            if (upgrades.length) {
-                const upgrade = upgrades.find(u => u.level >= batchStart && u.level <= batchEnd);
-                if (upgrade) {
-                const newState: BackwardDPState = {
-                    steps: [{
-                            upgradeName: upgrade.name,
-                            cost: 0,
-                            endSkill: batchEnd,
-                            note: `Upgrade to ${upgrade.name}`
-                        }, ...currentState.steps],
-                        totalCost: currentState.totalCost,
-                        startSkill: batchEnd,
-                        shoppingList: new Map(currentState.shoppingList)
-                    };
-
-                    if (!dp[batchEnd] || newState.totalCost < dp[batchEnd].totalCost) {
-                        dp[batchEnd] = newState;
-                    }
-                    processedSkills.add(batchEnd); // Mark as processed
-                    continue;
-                }
-            }
-
             // Find all valid recipes for this batch
             // Exclude rods - they are handled separately (ALWAYS exclude, regardless of profession check)
             const validRecipes = recipes.filter(r => {
@@ -506,7 +450,7 @@ export function makeDynamicPlan(
                 }
                 
                 if (r.minSkill > batchStart || 
-                    expectedSkillUps(r, batchEnd) <= 0 || 
+                    expectedSkillUps(r, batchEnd - 1) <= 0 || 
                     blacklistedSpellIds.has(r.id)) {
                     return false;
                 }
@@ -633,8 +577,10 @@ export function makeDynamicPlan(
                 const selectedRecipeCostAmortized = selectedRecipeData.recipeCostValue / estimatedSkillUpsUsed;
                 const selectedTotalCostPerSkillUp = selectedMaterialCostPerSkillUp + selectedRecipeCostAmortized;
                 
-                // Compare with top alternatives
-                const topAlternatives = recipeCosts.slice(0, Math.min(3, recipeCosts.length))
+                // Compare with top alternatives: top 3 by material cost + free recipes (can be cheaper overall)
+                const topByMaterial = recipeCosts.slice(0, Math.min(3, recipeCosts.length));
+                const freeRecipes = recipeCosts.filter(r => r.recipeCostValue === 0 && !topByMaterial.some(t => t.recipe.id === r.recipe.id));
+                const alternativesToConsider = [...topByMaterial, ...freeRecipes]
                     .filter(r => r.recipe.id !== selectedRecipe.id)
                     .map(alt => {
                         const altGray = alt.recipe.difficulty.gray ?? Infinity;
@@ -651,8 +597,8 @@ export function makeDynamicPlan(
                     });
                 
                 // Find cheapest alternative including recipe costs
-                topAlternatives.sort((a, b) => a.totalCostPerSkillUp - b.totalCostPerSkillUp);
-                const cheapestAlternative = topAlternatives[0];
+                alternativesToConsider.sort((a, b) => a.totalCostPerSkillUp - b.totalCostPerSkillUp);
+                const cheapestAlternative = alternativesToConsider[0];
                 
                 // Switch if alternative is cheaper overall
                 if (cheapestAlternative && cheapestAlternative.totalCostPerSkillUp < selectedTotalCostPerSkillUp) {
@@ -798,9 +744,10 @@ export function makeDynamicPlan(
                         note: "Required enchanting rod"
                 });
                 
-                // Add rod materials to shopping list
+                // Add rod materials to shopping list (exclude rod products - made in previous rod step)
                 for (const [matId, qty] of Object.entries(rod.materials)) {
                     const itemId = Number(matId);
+                    if (ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
                     const current = newShoppingList.get(itemId) || 0;
                     newShoppingList.set(itemId, current + qty);
                 }
@@ -926,12 +873,6 @@ export function makeDynamicPlan(
                 endSkill: step.endSkill,
                 note: step.note
             };
-        } else if ('upgradeName' in step && step.upgradeName) {
-            return {
-                upgradeName: step.upgradeName,
-                endSkill: step.endSkill,
-                note: step.note
-            };
         }
         throw new Error('Invalid step type');
     });
@@ -995,13 +936,12 @@ export function makeDynamicPlan(
                 }
             }
         } else {
-            // Handle upgrade steps
+            // Non-recipe step (e.g. upgrade) - push as-is
             if (currentStep) {
                 mergedSteps.push(currentStep);
                 currentStep = null;
             }
             mergedSteps.push(step);
-            // After upgrade, next step starts at upgrade's endSkill
             currentStartSkill = step.endSkill;
         }
     }
