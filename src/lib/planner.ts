@@ -35,6 +35,19 @@ export const blacklistedSpellIds = new Set<number>([
     36130, // Stormforged Hauberk
     36131, // Windforged Rapier
     36133, // Stoneforged Claymore
+    26011, // Tranquil Mechanical Yeti
+    26426, // Rockets
+    26423,
+    26416,
+    26428,
+    26427,
+    26420,
+    26425,
+    26424,
+    26422,
+    26417,
+    26421,
+    26418,
 ]);
 
 
