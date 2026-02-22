@@ -274,7 +274,7 @@ export function makeDynamicPlan(
                 if (recipeCostData.isLimitedStock && recipeCostData.ahPrice !== null) {
                     recipeCostValue = recipeCostData.ahPrice;
                 } else if (recipeCostData.vendorPrice !== null || recipeCostData.ahPrice !== null) {
-                    recipeCostValue = recipeCostData.vendorPrice ?? recipeCostData.ahPrice ?? 0;
+                    recipeCostValue = recipeCostData.ahPrice ?? recipeCostData.vendorPrice ?? 0;
                 }
             }
             
@@ -523,7 +523,7 @@ export function makeDynamicPlan(
                     if (recipeCostData.isLimitedStock && recipeCostData.ahPrice !== null) {
                         recipeCostValue = recipeCostData.ahPrice;
                     } else if (recipeCostData.vendorPrice !== null || recipeCostData.ahPrice !== null) {
-                        recipeCostValue = recipeCostData.vendorPrice ?? recipeCostData.ahPrice ?? 0;
+                        recipeCostValue = recipeCostData.ahPrice ?? recipeCostData.vendorPrice ?? 0;
                     }
                 }
                 

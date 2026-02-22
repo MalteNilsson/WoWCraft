@@ -138,7 +138,7 @@ export function craftCost(
     if (recipeCost.vendorPrice === null && recipeCost.ahPrice === null) {
       return Infinity;
     }
-    return recipeCost.vendorPrice ?? recipeCost.ahPrice ?? Infinity;
+    return recipeCost.ahPrice ?? recipeCost.vendorPrice ?? Infinity;
   }
 
   // Calculate base material costs
@@ -186,7 +186,7 @@ export function craftCost(
       // If recipe is completely unavailable, the craft is impossible
       return Infinity;
     } else {
-      recipePrice = recipeCost.vendorPrice ?? recipeCost.ahPrice ?? Infinity;
+      recipePrice = recipeCost.ahPrice ?? recipeCost.vendorPrice ?? Infinity;
     }
     return baseCost + recipePrice;
   }
@@ -311,14 +311,15 @@ export function getItemCost(
     return ahPrice;
   }
 
-  // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
-  // because you can't buy enough from vendor
+  // Limited stock items: always use AH price when available (vendor can't supply enough)
+  // Non-limited: prefer AH when available, else vendor
   let directPrice;
-  if (itemData?.limitedStock && ahPrice < Infinity) {
+  if (itemData?.limitedStock) {
+    directPrice = ahPrice < Infinity ? ahPrice : Infinity;
+  } else if (ahPrice < Infinity) {
     directPrice = ahPrice;
   } else {
-    // Use the lower of AH and vendor price
-    directPrice = Math.min(ahPrice, vendorPrice);
+    directPrice = vendorPrice;
   }
 
   // Don't allow zero unless it's a vendor item
@@ -436,19 +437,22 @@ export function buildMaterialTree(
   const isVendorItem = info?.buyPrice && !info?.auctionhouse;
 
   const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
-  const usedCrafting = !isListed && !isVendorItem;
+  // Limited stock + no AH: treat as "no AH" so we show craft cost (vendor can't supply enough)
+  const usedCrafting = (!isListed && !isVendorItem) || (info?.limitedStock && !isListed);
 
-  // If item has limited stock at vendor, prefer AH price (even if vendor is cheaper)
-  // because you can't buy enough from vendor
+  // Limited stock items: always use AH price when available (vendor can't supply enough)
+  // Non-limited: prefer AH when available, else vendor
   let buyCost;
   if (forceAhOnlyItems.has(itemId)) {
     buyCost = ahPrice;
-  } else if (info?.limitedStock && ahPrice < Infinity) {
-    buyCost = ahPrice;
+  } else if (info?.limitedStock) {
+    buyCost = ahPrice < Infinity ? ahPrice : Infinity;
   } else if (isVendorItem) {
     buyCost = vendorPrice!;
+  } else if (ahPrice < Infinity) {
+    buyCost = ahPrice;
   } else {
-    buyCost = typeof vendorPrice === 'number' && vendorPrice < ahPrice ? vendorPrice : ahPrice;
+    buyCost = typeof vendorPrice === 'number' ? vendorPrice : Infinity;
   }
 
   let craftCost = Infinity;

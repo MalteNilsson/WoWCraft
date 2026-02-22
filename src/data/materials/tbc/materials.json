@@ -38,7 +38,8 @@
     "icon": "inv_misc_herb_10",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=765",
-    "vendorPrice": 40
+    "vendorPrice": 40,
+    "limitedStock": true
   },
   "774": {
     "name": "Malachite",
@@ -68,7 +69,8 @@
     "icon": "inv_jewelry_talisman_03",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=785",
-    "vendorPrice": 80
+    "vendorPrice": 80,
+    "limitedStock": true
   },
   "814": {
     "name": "Flask of Oil",
@@ -99,6 +101,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=858",
     "vendorPrice": 100,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 2337,
       "spellName": "Lesser Healing Potion",
@@ -119,6 +122,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=929",
     "vendorPrice": 300,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3447,
       "spellName": "Healing Potion",
@@ -190,6 +194,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=1710",
     "vendorPrice": 500,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 7181,
       "spellName": "Greater Healing Potion",
@@ -535,6 +540,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2319",
     "vendorPrice": 200,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 20648,
       "spellName": "Medium Leather",
@@ -593,7 +599,8 @@
     "icon": "inv_misc_flower_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2447",
-    "vendorPrice": 40
+    "vendorPrice": 40,
+    "limitedStock": true
   },
   "2449": {
     "name": "Earthroot",
@@ -603,7 +610,8 @@
     "icon": "inv_misc_herb_07",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2449",
-    "vendorPrice": 80
+    "vendorPrice": 80,
+    "limitedStock": true
   },
   "2450": {
     "name": "Briarthorn",
@@ -633,7 +641,8 @@
     "icon": "inv_misc_herb_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2453",
-    "vendorPrice": 100
+    "vendorPrice": 100,
+    "limitedStock": true
   },
   "2454": {
     "name": "Elixir of Lion's Strength",
@@ -665,6 +674,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2455",
     "vendorPrice": 40,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 2331,
       "spellName": "Minor Mana Potion",
@@ -1080,7 +1090,8 @@
     "icon": "inv_fabric_linen_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2589",
-    "vendorPrice": 55
+    "vendorPrice": 55,
+    "limitedStock": true
   },
   "2592": {
     "name": "Wool Cloth",
@@ -1090,7 +1101,8 @@
     "icon": "inv_fabric_wool_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2592",
-    "vendorPrice": 135
+    "vendorPrice": 135,
+    "limitedStock": true
   },
   "2604": {
     "name": "Red Dye",
@@ -1613,6 +1625,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2996",
     "vendorPrice": 160,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 2963,
       "spellName": "Bolt of Linen Cloth",
@@ -1632,6 +1645,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=2997",
     "vendorPrice": 400,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 2964,
       "spellName": "Bolt of Woolen Cloth",
@@ -1730,7 +1744,8 @@
     "icon": "inv_misc_flower_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3355",
-    "vendorPrice": 200
+    "vendorPrice": 200,
+    "limitedStock": true
   },
   "3356": {
     "name": "Kingsblood",
@@ -1740,7 +1755,8 @@
     "icon": "inv_misc_herb_03",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3356",
-    "vendorPrice": 120
+    "vendorPrice": 120,
+    "limitedStock": true
   },
   "3357": {
     "name": "Liferoot",
@@ -1750,7 +1766,8 @@
     "icon": "inv_misc_root_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3357",
-    "vendorPrice": 300
+    "vendorPrice": 300,
+    "limitedStock": true
   },
   "3358": {
     "name": "Khadgar's Whisker",
@@ -1760,7 +1777,8 @@
     "icon": "inv_misc_herb_08",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3358",
-    "vendorPrice": 700
+    "vendorPrice": 700,
+    "limitedStock": true
   },
   "3369": {
     "name": "Grave Moss",
@@ -1864,6 +1882,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3385",
     "vendorPrice": 120,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3173,
       "spellName": "Lesser Mana Potion",
@@ -2618,6 +2637,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3827",
     "vendorPrice": 480,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3452,
       "spellName": "Mana Potion",
@@ -3164,6 +3184,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3928",
     "vendorPrice": 1000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 11457,
       "spellName": "Superior Healing Potion",
@@ -3245,6 +3266,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4234",
     "vendorPrice": 600,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 20649,
       "spellName": "Heavy Leather",
@@ -3889,6 +3911,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4304",
     "vendorPrice": 1200,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 20650,
       "spellName": "Thick Leather",
@@ -3908,6 +3931,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4305",
     "vendorPrice": 2400,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3839,
       "spellName": "Bolt of Silk Cloth",
@@ -3926,7 +3950,8 @@
     "icon": "inv_fabric_silk_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4306",
-    "vendorPrice": 600
+    "vendorPrice": 600,
+    "limitedStock": true
   },
   "4307": {
     "name": "Heavy Linen Gloves",
@@ -4577,7 +4602,8 @@
     "icon": "inv_fabric_mageweave_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4338",
-    "vendorPrice": 1000
+    "vendorPrice": 1000,
+    "limitedStock": true
   },
   "4339": {
     "name": "Bolt of Mageweave",
@@ -4677,6 +4703,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4357",
     "vendorPrice": 16,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3918,
       "spellName": "Rough Blasting Powder",
@@ -4757,6 +4784,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4361",
     "vendorPrice": 480,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3924,
       "spellName": "Copper Tube",
@@ -4798,6 +4826,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4363",
     "vendorPrice": 200,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3926,
       "spellName": "Copper Modulator",
@@ -4819,6 +4848,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4364",
     "vendorPrice": 48,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3929,
       "spellName": "Coarse Blasting Powder",
@@ -4965,6 +4995,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4371",
     "vendorPrice": 800,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3938,
       "spellName": "Bronze Tube",
@@ -5108,6 +5139,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4378",
     "vendorPrice": 1400,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3946,
       "spellName": "Heavy Dynamite",
@@ -5193,6 +5225,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4382",
     "vendorPrice": null,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3953,
       "spellName": "Bronze Framework",
@@ -5340,6 +5373,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4389",
     "vendorPrice": 3000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3961,
       "spellName": "Gyrochronatom",
@@ -5628,6 +5662,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=4404",
     "vendorPrice": 100,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 3973,
       "spellName": "Silver Contact",
@@ -6774,6 +6809,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=6149",
     "vendorPrice": 480,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 11448,
       "spellName": "Greater Mana Potion",
@@ -7342,6 +7378,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=6533",
     "vendorPrice": 250,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 9271,
       "spellName": "Aquadynamic Fish Attractor",
@@ -10104,6 +10141,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=8170",
     "vendorPrice": 2000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 22331,
       "spellName": "Rugged Leather",
@@ -10996,7 +11034,8 @@
     "icon": "inv_mushroom_08",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=8845",
-    "vendorPrice": 1500
+    "vendorPrice": 1500,
+    "limitedStock": true
   },
   "8846": {
     "name": "Gromsblood",
@@ -11006,7 +11045,8 @@
     "icon": "inv_misc_herb_16",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=8846",
-    "vendorPrice": 1000
+    "vendorPrice": 1000,
+    "limitedStock": true
   },
   "8925": {
     "name": "Crystal Vial",
@@ -11444,7 +11484,8 @@
     "icon": "inv_drink_01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=9260",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "limitedStock": true
   },
   "9262": {
     "name": "Black Vitriol",
@@ -13422,7 +13463,8 @@
     "icon": "inv_enchant_essencemagicsmall",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=10938",
-    "vendorPrice": 800
+    "vendorPrice": 800,
+    "limitedStock": true
   },
   "10939": {
     "name": "Greater Magic Essence",
@@ -13442,7 +13484,8 @@
     "icon": "",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=10940",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "limitedStock": true
   },
   "10978": {
     "name": "Small Glimmering Shard",
@@ -15519,6 +15562,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=12810",
     "vendorPrice": 2000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 17181,
       "spellName": "Enchanted Leather",
@@ -15609,6 +15653,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13443",
     "vendorPrice": 1600,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 17553,
       "spellName": "Superior Mana Potion",
@@ -15630,6 +15675,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13444",
     "vendorPrice": 6000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 17580,
       "spellName": "Major Mana Potion",
@@ -15672,6 +15718,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13446",
     "vendorPrice": 4000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 17556,
       "spellName": "Major Healing Potion",
@@ -15923,7 +15970,8 @@
     "icon": "inv_misc_herb_dreamfoil",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13463",
-    "vendorPrice": 400
+    "vendorPrice": 400,
+    "limitedStock": true
   },
   "13464": {
     "name": "Golden Sansam",
@@ -15933,7 +15981,8 @@
     "icon": "inv_misc_herb_sansamroot",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13464",
-    "vendorPrice": 400
+    "vendorPrice": 400,
+    "limitedStock": true
   },
   "13465": {
     "name": "Mountain Silversage",
@@ -15943,7 +15992,8 @@
     "icon": "inv_misc_herb_mountainsilversage",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13465",
-    "vendorPrice": 600
+    "vendorPrice": 600,
+    "limitedStock": true
   },
   "13466": {
     "name": "Plaguebloom",
@@ -15963,7 +16013,8 @@
     "icon": "inv_misc_herb_icecap",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13467",
-    "vendorPrice": 1000
+    "vendorPrice": 1000,
+    "limitedStock": true
   },
   "13468": {
     "name": "Black Lotus",
@@ -15973,7 +16024,8 @@
     "icon": "inv_misc_herb_blacklotus",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=13468",
-    "vendorPrice": 4000
+    "vendorPrice": 4000,
+    "limitedStock": true
   },
   "13503": {
     "name": "Alchemist's Stone",
@@ -17162,7 +17214,8 @@
     "icon": "inv_fabric_felrag",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=14256",
-    "vendorPrice": 8000
+    "vendorPrice": 8000,
+    "limitedStock": true
   },
   "14341": {
     "name": "Rune Thread",
@@ -24537,6 +24590,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=21887",
     "vendorPrice": 5000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 32454,
       "spellName": "Knothide Leather",
@@ -25276,7 +25330,8 @@
     "icon": "inv_elemental_mote_air01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22572",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "limitedStock": true
   },
   "22573": {
     "name": "Mote of Earth",
@@ -25286,7 +25341,8 @@
     "icon": "inv_elemental_mote_earth01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22573",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "limitedStock": true
   },
   "22574": {
     "name": "Mote of Fire",
@@ -25296,7 +25352,8 @@
     "icon": "inv_elemental_mote_fire01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22574",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "limitedStock": true
   },
   "22578": {
     "name": "Mote of Water",
@@ -25306,7 +25363,8 @@
     "icon": "inv_elemental_mote_water01",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22578",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "limitedStock": true
   },
   "22652": {
     "name": "Glacial Vest",
@@ -25853,7 +25911,8 @@
     "icon": "inv_misc_herb_felweed",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22785",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "limitedStock": true
   },
   "22786": {
     "name": "Dreaming Glory",
@@ -25863,7 +25922,8 @@
     "icon": "inv_misc_herb_dreamingglory",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22786",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "limitedStock": true
   },
   "22787": {
     "name": "Ragveil",
@@ -25873,7 +25933,8 @@
     "icon": "inv_misc_herb_ragveil",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22787",
-    "vendorPrice": 2400
+    "vendorPrice": 2400,
+    "limitedStock": true
   },
   "22789": {
     "name": "Terocone",
@@ -25883,7 +25944,8 @@
     "icon": "inv_misc_herb_terrocone",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22789",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "limitedStock": true
   },
   "22790": {
     "name": "Ancient Lichen",
@@ -25893,7 +25955,8 @@
     "icon": "inv_misc_herb_ancientlichen",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22790",
-    "vendorPrice": 3000
+    "vendorPrice": 3000,
+    "limitedStock": true
   },
   "22791": {
     "name": "Netherbloom",
@@ -25903,7 +25966,8 @@
     "icon": "inv_misc_herb_netherbloom",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22791",
-    "vendorPrice": 4000
+    "vendorPrice": 4000,
+    "limitedStock": true
   },
   "22792": {
     "name": "Nightmare Vine",
@@ -25913,7 +25977,8 @@
     "icon": "inv_misc_herb_nightmarevine",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22792",
-    "vendorPrice": 5000
+    "vendorPrice": 5000,
+    "limitedStock": true
   },
   "22793": {
     "name": "Mana Thistle",
@@ -25923,7 +25988,8 @@
     "icon": "inv_misc_herb_manathistle",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22793",
-    "vendorPrice": 10000
+    "vendorPrice": 10000,
+    "limitedStock": true
   },
   "22794": {
     "name": "Fel Lotus",
@@ -25933,7 +25999,8 @@
     "icon": "inv_misc_herb_fellotus",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22794",
-    "vendorPrice": 40000
+    "vendorPrice": 40000,
+    "limitedStock": true
   },
   "22823": {
     "name": "Elixir of Camouflage",
@@ -26069,6 +26136,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22829",
     "vendorPrice": 20000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28551,
       "spellName": "Super Healing Potion",
@@ -26132,6 +26200,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22832",
     "vendorPrice": 20000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28555,
       "spellName": "Super Mana Potion",
@@ -26384,6 +26453,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22845",
     "vendorPrice": 24000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28575,
       "spellName": "Major Arcane Protection Potion",
@@ -26405,6 +26475,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=22846",
     "vendorPrice": 24000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28576,
       "spellName": "Major Shadow Protection Potion",
@@ -26662,6 +26733,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23094",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28903,
       "spellName": "Teardrop Blood Garnet",
@@ -26681,6 +26753,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23095",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28905,
       "spellName": "Bold Blood Garnet",
@@ -26700,6 +26773,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23096",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28906,
       "spellName": "Runed Blood Garnet",
@@ -26719,6 +26793,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23097",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28907,
       "spellName": "Delicate Blood Garnet",
@@ -26738,6 +26813,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23098",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28910,
       "spellName": "Inscribed Flame Spessarite",
@@ -26757,6 +26833,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23099",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28912,
       "spellName": "Luminous Flame Spessarite",
@@ -26776,6 +26853,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23100",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28914,
       "spellName": "Glinting Flame Spessarite",
@@ -26795,6 +26873,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23101",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28915,
       "spellName": "Potent Flame Spessarite",
@@ -26814,6 +26893,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23103",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28916,
       "spellName": "Radiant Deep Peridot",
@@ -26833,6 +26913,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23104",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28917,
       "spellName": "Jagged Deep Peridot",
@@ -26852,6 +26933,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23105",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28918,
       "spellName": "Enduring Deep Peridot",
@@ -26871,6 +26953,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23106",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28924,
       "spellName": "Dazzling Deep Peridot",
@@ -26900,6 +26983,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23108",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28925,
       "spellName": "Glowing Shadow Draenite",
@@ -26919,6 +27003,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23109",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28927,
       "spellName": "Royal Shadow Draenite",
@@ -26938,6 +27023,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23110",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28933,
       "spellName": "Shifting Shadow Draenite",
@@ -26957,6 +27043,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23111",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28936,
       "spellName": "Sovereign Shadow Draenite",
@@ -26986,6 +27073,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23113",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28938,
       "spellName": "Brilliant Golden Draenite",
@@ -27005,6 +27093,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23114",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28944,
       "spellName": "Gleaming Golden Draenite",
@@ -27024,6 +27113,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23115",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28947,
       "spellName": "Thick Golden Draenite",
@@ -27043,6 +27133,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23116",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28948,
       "spellName": "Rigid Golden Draenite",
@@ -27072,6 +27163,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23118",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28950,
       "spellName": "Solid Azure Moonstone",
@@ -27091,6 +27183,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23119",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28953,
       "spellName": "Sparkling Azure Moonstone",
@@ -27110,6 +27203,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23120",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28955,
       "spellName": "Stormy Azure Moonstone",
@@ -27129,6 +27223,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23121",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 28957,
       "spellName": "Lustrous Azure Moonstone",
@@ -27157,7 +27252,8 @@
     "icon": "inv_jewelcrafting_livingruby_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23436",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23437": {
     "name": "Talasite",
@@ -27167,7 +27263,8 @@
     "icon": "inv_jewelcrafting_talasite_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23437",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23438": {
     "name": "Star of Elune",
@@ -27177,7 +27274,8 @@
     "icon": "inv_jewelcrafting_starofelune_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23438",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23439": {
     "name": "Noble Topaz",
@@ -27187,7 +27285,8 @@
     "icon": "inv_jewelcrafting_nobletopaz_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23439",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23440": {
     "name": "Dawnstone",
@@ -27197,7 +27296,8 @@
     "icon": "inv_jewelcrafting_dawnstone_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23440",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23441": {
     "name": "Nightseye",
@@ -27207,7 +27307,8 @@
     "icon": "inv_jewelcrafting_nightseye_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23441",
-    "vendorPrice": 120000
+    "vendorPrice": 120000,
+    "limitedStock": true
   },
   "23445": {
     "name": "Fel Iron Bar",
@@ -28653,6 +28754,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23736",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30310,
       "spellName": "Fel Iron Bomb",
@@ -28674,6 +28776,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23737",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30311,
       "spellName": "Adamantite Grenade",
@@ -28950,6 +29053,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23768",
     "vendorPrice": 1000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30341,
       "spellName": "White Smoke Flare",
@@ -28970,6 +29074,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23771",
     "vendorPrice": 1000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30344,
       "spellName": "Green Smoke Flare",
@@ -29053,6 +29158,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23781",
     "vendorPrice": 2000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30303,
       "spellName": "Elemental Blasting Powder",
@@ -29073,6 +29179,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23782",
     "vendorPrice": 32000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30304,
       "spellName": "Fel Iron Casing",
@@ -29092,6 +29199,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23783",
     "vendorPrice": 6000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30305,
       "spellName": "Handful of Fel Iron Bolts",
@@ -29111,6 +29219,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23784",
     "vendorPrice": 40000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30306,
       "spellName": "Adamantite Frame",
@@ -29131,6 +29240,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23785",
     "vendorPrice": 120000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30307,
       "spellName": "Hardened Adamantite Tube",
@@ -29150,6 +29260,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23786",
     "vendorPrice": 48000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30308,
       "spellName": "Khorium Power Core",
@@ -29170,6 +29281,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23787",
     "vendorPrice": 48000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 30309,
       "spellName": "Felsteel Stabilizer",
@@ -29189,6 +29301,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=23793",
     "vendorPrice": 25000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 32455,
       "spellName": "Heavy Knothide Leather",
@@ -32169,7 +32282,8 @@
     "icon": "inv_misc_leatherscrap_14",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=25708",
-    "vendorPrice": 3000
+    "vendorPrice": 3000,
+    "limitedStock": true
   },
   "25719": {
     "name": "Arakkoa Feather",
@@ -32560,7 +32674,8 @@
     "icon": "inv_scroll_02",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=27503",
-    "vendorPrice": 500
+    "vendorPrice": 500,
+    "limitedStock": true
   },
   "27860": {
     "name": "Purified Draenic Water",
@@ -32581,6 +32696,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=28100",
     "vendorPrice": 4000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 33732,
       "spellName": "Volatile Healing Potion",
@@ -32602,6 +32718,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=28101",
     "vendorPrice": 6000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 33733,
       "spellName": "Unstable Mana Potion",
@@ -32686,6 +32803,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=28290",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 34069,
       "spellName": "Smooth Golden Draenite",
@@ -33184,6 +33302,7 @@
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=28595",
     "vendorPrice": 10000,
+    "limitedStock": true,
     "createdBy": {
       "spellId": 34590,
       "spellName": "Bright Blood Garnet",

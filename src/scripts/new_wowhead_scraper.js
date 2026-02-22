@@ -339,7 +339,7 @@ function parseRecipeItemFullInfo(html) {
 
 /**
  * Parse material item page for materials.json format.
- * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice }.
+ * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice, limitedStock }.
  */
 function parseMaterialItemInfo(html, itemId, wowheadPath) {
   const idStr = String(itemId);
@@ -352,6 +352,7 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
     slot: '',
     link: `https://www.wowhead.com/${wowheadPath}/item=${itemId}`,
     vendorPrice: null,
+    limitedStock: false,
   };
 
   // g_pageInfo for name
@@ -378,6 +379,29 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
           if (je?.slot != null) result.slot = String(je.slot);
         }
       } catch {}
+    }
+  }
+
+  // limitedStock: from sold-by listview (same logic as parseRecipeItemFullInfo)
+  const soldByIdx = html.includes("id: 'sold-by'") ? html.indexOf("id: 'sold-by'") : html.indexOf('id: "sold-by"');
+  if (soldByIdx !== -1) {
+    const dataIdx = html.indexOf('data:', soldByIdx);
+    if (dataIdx !== -1) {
+      const arrayStart = dataIdx + 'data:'.length;
+      const dataRaw = extractBalanced(html, arrayStart - 1, '[', ']');
+      if (dataRaw) {
+        const vendors = (() => {
+          try {
+            return new Function('return ' + dataRaw)();
+          } catch {
+            return [];
+          }
+        })();
+        if (Array.isArray(vendors) && vendors.length > 0) {
+          const stock = vendors[0]?.stock;
+          if (stock != null && stock >= 0) result.limitedStock = true;
+        }
+      }
     }
   }
 
@@ -712,6 +736,7 @@ async function main() {
           slot: info.slot || '',
           link: info.link,
           vendorPrice: info.vendorPrice ?? null,
+          ...(info.limitedStock && { limitedStock: true }),
         };
         if (recipe) {
           const qty = recipe.produces?.quantity ?? 1;
