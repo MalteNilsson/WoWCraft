@@ -302,8 +302,11 @@ export function getItemCost(
     (prices[itemId]?.minBuyout ?? prices[itemId]?.marketValue);
   const ahPrice = ahPriceRaw && ahPriceRaw > 0 ? ahPriceRaw : Infinity;
   
-  // Then check vendor price
-  const vendorPrice = itemData?.buyPrice ?? Infinity;
+  // Then check vendor price (divide by vendorStack when sold in stacks - price is per stack)
+  const rawVendorPrice = itemData?.buyPrice ?? Infinity;
+  const vendorPrice = (itemData?.vendorStack && itemData.vendorStack > 1 && rawVendorPrice < Infinity)
+    ? rawVendorPrice / itemData.vendorStack
+    : rawVendorPrice;
 
   // Force AH-only items to use auction house price only (ignore vendor)
   if (forceAhOnlyItems.has(itemId)) {
@@ -431,10 +434,14 @@ export function buildMaterialTree(
   currentProfessionRecipeIds?: Set<number>
 ): MaterialTreeNode {
   const info = materialInfo[itemId];
-  const vendorPrice = info?.buyPrice;
+  const rawVendorPrice = info?.buyPrice;
+  // Divide by vendorStack when sold in stacks - price is per stack
+  const vendorPrice = (info?.vendorStack && info.vendorStack > 1 && typeof rawVendorPrice === 'number')
+    ? rawVendorPrice / info.vendorStack
+    : rawVendorPrice;
   const ahEntry = prices[itemId];
   const isListed = !!(ahEntry && (useMarketValue ? ahEntry.marketValue : ahEntry.minBuyout) && (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) > 0);
-  const isVendorItem = info?.buyPrice && !info?.auctionhouse;
+  const isVendorItem = rawVendorPrice != null && !info?.auctionhouse;
 
   const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
   // Limited stock + no AH: treat as "no AH" so we show craft cost (vendor can't supply enough)

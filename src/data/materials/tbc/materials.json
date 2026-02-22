@@ -28,7 +28,8 @@
     "icon": "inv_drink_07",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=159",
-    "vendorPrice": 25
+    "vendorPrice": 25,
+    "vendorStack": 5
   },
   "765": {
     "name": "Silverleaf",
@@ -1798,7 +1799,8 @@
     "icon": "inv_drink_06",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3371",
-    "vendorPrice": 20
+    "vendorPrice": 20,
+    "vendorStack": 5
   },
   "3372": {
     "name": "Leaded Vial",
@@ -1808,7 +1810,8 @@
     "icon": "inv_drink_06",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=3372",
-    "vendorPrice": 200
+    "vendorPrice": 200,
+    "vendorStack": 5
   },
   "3382": {
     "name": "Weak Troll's Blood Potion",
@@ -11056,7 +11059,8 @@
     "icon": "inv_drink_06",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=8925",
-    "vendorPrice": 2500
+    "vendorPrice": 2500,
+    "vendorStack": 5
   },
   "8949": {
     "name": "Elixir of Agility",
@@ -19463,7 +19467,8 @@
     "icon": "inv_ammo_snowball",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=17202",
-    "vendorPrice": 10
+    "vendorPrice": 10,
+    "vendorStack": 5
   },
   "17203": {
     "name": "Sulfuron Ingot",
@@ -19710,7 +19715,8 @@
     "icon": "inv_drink_06",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=18256",
-    "vendorPrice": 20000
+    "vendorPrice": 20000,
+    "vendorStack": 5
   },
   "18258": {
     "name": "Gordok Ogre Suit",
@@ -32685,7 +32691,8 @@
     "icon": "inv_drink_waterskin_12",
     "slot": "",
     "link": "https://www.wowhead.com/tbc/item=27860",
-    "vendorPrice": 6400
+    "vendorPrice": 6400,
+    "vendorStack": 5
   },
   "28100": {
     "name": "Volatile Healing Potion",

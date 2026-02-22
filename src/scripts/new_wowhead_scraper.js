@@ -281,12 +281,13 @@ async function runWithConcurrency(tasks, concurrency = CONCURRENCY) {
 
 /**
  * Parse recipe item page (e.g. Plans: Adamantite Maul) for full info.
- * Returns { buyPrice, limitedStock, bop, auctionhouse } for profession_items.json.
+ * Returns { buyPrice, limitedStock, vendorStack, bop, auctionhouse } for profession_items.json.
  */
 function parseRecipeItemFullInfo(html) {
   const result = {
     buyPrice: null,
     limitedStock: false,
+    vendorStack: null,
     bop: false,
     auctionhouse: false,
   };
@@ -326,6 +327,10 @@ function parseRecipeItemFullInfo(html) {
           // limitedStock: vendor stock is a number >= 0
           const stock = vendors[0]?.stock;
           if (stock != null && stock >= 0) result.limitedStock = true;
+          // vendorStack: column to the right of stock (items sold in stacks > 1, e.g. Water, Vials)
+          const v0 = vendors[0];
+          const stack = v0?.stack ?? v0?.stacksize ?? v0?.stockstack;
+          if (stack != null && stack > 1) result.vendorStack = stack;
         }
       }
     }
@@ -339,7 +344,7 @@ function parseRecipeItemFullInfo(html) {
 
 /**
  * Parse material item page for materials.json format.
- * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice, limitedStock }.
+ * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice, limitedStock, vendorStack }.
  */
 function parseMaterialItemInfo(html, itemId, wowheadPath) {
   const idStr = String(itemId);
@@ -353,6 +358,7 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
     link: `https://www.wowhead.com/${wowheadPath}/item=${itemId}`,
     vendorPrice: null,
     limitedStock: false,
+    vendorStack: null,
   };
 
   // g_pageInfo for name
@@ -400,6 +406,10 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
         if (Array.isArray(vendors) && vendors.length > 0) {
           const stock = vendors[0]?.stock;
           if (stock != null && stock >= 0) result.limitedStock = true;
+          // vendorStack: column to the right of stock (items sold in stacks > 1, e.g. Water, Vials)
+          const v0 = vendors[0];
+          const stack = v0?.stack ?? v0?.stacksize ?? v0?.stockstack;
+          if (stack != null && stack > 1) result.vendorStack = stack;
         }
       }
     }
@@ -564,6 +574,7 @@ async function main() {
               recipeItems[String(itemId)] = {
                 buyPrice: info.buyPrice,
                 limitedStock: info.limitedStock,
+                vendorStack: info.vendorStack,
                 bop: info.bop,
                 auctionhouse: info.auctionhouse,
               };
@@ -659,6 +670,7 @@ async function main() {
         buyPrice: data.buyPrice ?? null,
       };
       if (data.auctionhouse) entry.auctionhouse = true;
+      if (data.vendorStack != null && data.vendorStack > 1) entry.vendorStack = data.vendorStack;
       itemsOutput[id] = entry;
     }
     await fs.writeFile(itemsPath, JSON.stringify(itemsOutput, null, 2));
@@ -737,6 +749,7 @@ async function main() {
           link: info.link,
           vendorPrice: info.vendorPrice ?? null,
           ...(info.limitedStock && { limitedStock: true }),
+          ...(info.vendorStack != null && info.vendorStack > 1 && { vendorStack: info.vendorStack }),
         };
         if (recipe) {
           const qty = recipe.produces?.quantity ?? 1;

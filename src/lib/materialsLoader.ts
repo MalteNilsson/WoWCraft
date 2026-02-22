@@ -21,14 +21,15 @@ import tbcJewelcraftingItems from '@/data/recipes/tbc/jewelcrafting_items.json';
 function processMaterials(raw: Record<string, any>): Record<number, MaterialInfo> {
   return Object.fromEntries(
     Object.entries(raw).map(([id, val]: [string, any]) => {
-      const { vendorPrice, limitedStock, ...rest } = val;
+      const { vendorPrice, limitedStock, vendorStack, ...rest } = val;
       const safeVendorPrice = typeof vendorPrice === "number" ? vendorPrice : undefined;
       const buyPrice = safeVendorPrice;
       return [parseInt(id), {
         ...rest,
         vendorPrice: safeVendorPrice,
         buyPrice,
-        limitedStock: limitedStock === true ? true : undefined
+        limitedStock: limitedStock === true ? true : undefined,
+        vendorStack: typeof vendorStack === "number" && vendorStack > 1 ? vendorStack : undefined
       }];
     })
   );
@@ -59,6 +60,7 @@ function mergeRecipeItems(
         buyPrice: val.buyPrice ?? undefined,
         vendorPrice: val.buyPrice ?? undefined,
         limitedStock: val.limitedStock,
+        vendorStack: val.vendorStack,
         auctionhouse: val.auctionhouse,
         bop: val.bop
       };
@@ -68,6 +70,7 @@ function mergeRecipeItems(
         buyPrice: val.buyPrice ?? materialInfo[itemId].buyPrice,
         vendorPrice: val.buyPrice ?? materialInfo[itemId].vendorPrice,
         limitedStock: val.limitedStock ?? materialInfo[itemId].limitedStock,
+        vendorStack: val.vendorStack ?? materialInfo[itemId].vendorStack,
         auctionhouse: val.auctionhouse ?? materialInfo[itemId].auctionhouse,
         bop: val.bop ?? materialInfo[itemId].bop
       };

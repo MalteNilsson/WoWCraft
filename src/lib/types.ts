@@ -82,6 +82,7 @@ export type MaterialInfo = {
   auctionhouse?: boolean;
   bop?: boolean;
   limitedStock?: boolean;
+  vendorStack?: number;
   createdBy?: {
     spellId?: number;
     spellName?: string;
