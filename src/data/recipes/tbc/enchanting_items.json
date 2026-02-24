@@ -1,43 +1,198 @@
 {
+  "6342": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 300
+  },
+  "6344": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 800
+  },
   "6346": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 240
+  },
+  "6348": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 800
   },
   "6349": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 500
   },
+  "6375": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "6377": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 1000
+  },
+  "11038": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 800
+  },
+  "11039": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2500
+  },
+  "11081": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 800
+  },
+  "11098": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
   },
   "11101": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 800
   },
+  "11150": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11151": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 120
+  },
+  "11152": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "11163": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 3000
+  },
+  "11164": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11165": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11166": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11167": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11168": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11202": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11203": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11204": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11205": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11206": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11207": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11208": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
   },
   "11223": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 5800
   },
+  "11224": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11225": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "11226": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 50000
+  },
+  "11813": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16215": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "16217": {
     "bop": true,
     "limitedStock": true,
     "buyPrice": 12000
   },
+  "16218": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16220": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "16221": {
     "bop": false,
     "limitedStock": true,
     "buyPrice": 16000
+  },
+  "16223": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
   },
   "16224": {
     "bop": false,
@@ -48,6 +203,71 @@
     "bop": true,
     "limitedStock": true,
     "buyPrice": 16000
+  },
+  "16246": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16247": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16248": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16249": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16250": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16251": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16252": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16253": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "16254": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "16255": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "17725": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "18259": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "18260": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
   },
   "19444": {
     "bop": true,
@@ -79,6 +299,36 @@
     "limitedStock": true,
     "buyPrice": 100000
   },
+  "20726": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20727": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20728": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20729": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20730": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20731": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "20732": {
     "bop": true,
     "limitedStock": false,
@@ -88,6 +338,21 @@
     "bop": true,
     "limitedStock": false,
     "buyPrice": 100000
+  },
+  "20734": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000
+  },
+  "20735": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "20736": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
   },
   "20752": {
     "bop": false,
@@ -129,7 +394,27 @@
     "limitedStock": false,
     "buyPrice": 25000
   },
+  "22530": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "22531": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 60000
+  },
+  "22532": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22533": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22534": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": 60000
@@ -159,15 +444,105 @@
     "limitedStock": true,
     "buyPrice": 60000
   },
+  "22540": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22541": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22542": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22543": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22544": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22545": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 16000
+  },
+  "22546": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6000
+  },
   "22547": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": 60000
   },
+  "22548": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22551": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "22552": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": 60000
+  },
+  "22553": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22554": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22555": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 350000
+  },
+  "22556": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 557054
+  },
+  "22557": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22558": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
+  "22559": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22560": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "22561": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
   },
   "22562": {
     "bop": false,
@@ -194,6 +569,11 @@
     "limitedStock": true,
     "buyPrice": 120000
   },
+  "28270": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
   "28271": {
     "bop": true,
     "limitedStock": false,
@@ -214,6 +594,26 @@
     "limitedStock": false,
     "buyPrice": 40000
   },
+  "28276": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "28277": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "28279": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
+  "28280": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1000
+  },
   "28281": {
     "bop": true,
     "limitedStock": false,
@@ -229,14 +629,29 @@
     "limitedStock": false,
     "buyPrice": 30000
   },
+  "33307": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "34872": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": 150000
   },
+  "35498": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
+  },
   "35500": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": 150000
+  },
+  "35756": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 140000
   }
 }

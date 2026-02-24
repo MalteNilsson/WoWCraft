@@ -27,6 +27,7 @@ import Fuse from 'fuse.js';
 import { Listbox } from '@headlessui/react';
 import { materialInfoMap } from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
+import { getDisenchantOutcomes, getExpectedDisenchantValue } from '@/lib/disenchant';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
@@ -151,6 +152,16 @@ function SafeMoney({
   return <FormatMoney copper={value} />;
 }
 
+/** Cost with red - for expense, green + for profit (used when price sourcing subtracts output value) */
+function SignedCost({ copper }: { copper: number }) {
+  if (copper > 0) {
+    return <span className="text-red-400">−<FormatMoney copper={copper} /></span>;
+  }
+  if (copper < 0) {
+    return <span className="text-green-400">+<FormatMoney copper={-copper} /></span>;
+  }
+  return <FormatMoney copper={0} />;
+}
 
 function MaterialCard({
   node,
@@ -822,14 +833,15 @@ export default function EnchantingPlanner() {
       useMarketValue,
       recalculateForEachLevel,
       optimizeSubCrafting,
-      currentProfessionRecipeIds
+      currentProfessionRecipeIds,
+      priceSourcing
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1181,7 +1193,8 @@ const renderXTick = selected
       useMarketValue,
       recalculateForEachLevel,
       optimizeSubCrafting,
-      currentProfessionRecipeIds
+      currentProfessionRecipeIds,
+      priceSourcing
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -1225,7 +1238,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -1446,8 +1459,8 @@ const renderXTick = selected
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
-          const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
-          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+          const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
           const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
           return {
             recipe: r,
@@ -1461,7 +1474,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -1477,10 +1490,10 @@ const renderXTick = selected
         const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty);
         
         // Calculate cost for this step based on displayed crafts
-        const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
+        const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
         const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
-        const displayedRecipeCost = includeRecipeCost && s.recipe.source ? 
-          calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+        const displayedRecipeCost = includeRecipeCost && s.recipe.source ?
+          calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
         totalCost += displayedMaterialCost + displayedRecipeCost;
         
         // Calculate materials needed (exclude rod products for rod recipes - made in previous step)
@@ -1500,7 +1513,7 @@ const renderXTick = selected
       })).sort((a, b) => a.itemId - b.itemId),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing]);
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
@@ -1951,7 +1964,7 @@ const renderXTick = selected
                   }`}
                   title="Sell crafted items"
                 >
-                  <span className="font-medium">AH</span>
+                  <span className="font-medium">Auction House</span>
                   {/* Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                     Sell crafted items
@@ -2076,10 +2089,10 @@ const renderXTick = selected
                           const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty);
                           
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
-                          const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
+                          const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
                           const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
-                          const displayedRecipeCost = includeRecipeCost && best.source ? 
-                            calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
+                          const displayedRecipeCost = includeRecipeCost && best.source ?
+                            calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
                           const displayedTotalCost = displayedMaterialCost + displayedRecipeCost;
                           
                           return (
@@ -2120,7 +2133,7 @@ const renderXTick = selected
                                     {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                   </span>
                                   <span className="text-[16px]">
-                                    <FormatMoney copper={displayedTotalCost} />
+                                    <SignedCost copper={displayedTotalCost} />
                                   </span>
                                   <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
                                     {start} → {end}
@@ -2189,7 +2202,7 @@ const renderXTick = selected
                                             : `${alt.recipe.name.slice(0, 33)}…`}
                                         </span>
                                         <span className="text-[16px]">
-                                          <FormatMoney copper={alt.cost} />
+                                          <SignedCost copper={alt.cost} />
                                         </span>
                                       </motion.div>
                                     ))}
@@ -2264,9 +2277,7 @@ const renderXTick = selected
                     <div className="text-2xl font-semibold flex items-center justify-center relative">
                       <div>
                         <span className="text-neutral-400">Total Cost: </span>
-                        <span className="text-yellow-300">
-                          <FormatMoney copper={displayedTotalCost} />
-                        </span>
+                        <SignedCost copper={displayedTotalCost} />
                       </div>
                       <div className="absolute right-0">
                         <button
@@ -2303,10 +2314,10 @@ const renderXTick = selected
                 duration: 0.2,
                 ease: "easeOut"
               }}
-              className="absolute left-[37.5rem] top-0 w-64 h-full bg-neutral-900/95 backdrop-blur-sm rounded shadow-lg border border-neutral-800 z-50 origin-left"
+              className="absolute left-[37.5rem] top-0 w-[330px] h-full bg-neutral-900/95 backdrop-blur-sm rounded shadow-lg border border-neutral-800 z-50 origin-left"
             >
-              <div className="p-3 h-full flex flex-col">
-                <div className="flex justify-between items-center mb-4">
+              <div className="p-3 h-full flex flex-col min-h-0">
+                <div className="flex justify-between items-center mb-4 flex-shrink-0">
                   <h3 className="text-lg font-semibold text-neutral-200">Required Materials</h3>
                   <button
                     onClick={() => setShowMaterials(false)}
@@ -2315,7 +2326,19 @@ const renderXTick = selected
                     ✕
                   </button>
                 </div>
-                <div className="space-y-2 overflow-y-auto flex-1">
+                <div className="space-y-2 flex-1 min-h-0 overflow-y-scroll pr-[10px]
+                  [&::-webkit-scrollbar]:w-2
+                  [&::-webkit-scrollbar-track]:bg-transparent
+                  [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
+                  [&::-webkit-scrollbar-thumb]:rounded-full
+                  [&::-webkit-scrollbar-thumb]:transition-colors
+                  [&::-webkit-scrollbar-thumb]:duration-300
+                  hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60
+                  motion-safe:transition-[scrollbar-color]
+                  motion-safe:duration-300
+                  scrollbar-thin
+                  scrollbar-thumb-neutral-600/40
+                  hover:scrollbar-thumb-neutral-600/60">
                   {displayedMaterialTotals.map((material: MaterialRequirement) => (
                     <div key={material.itemId} className="flex justify-between items-center text-neutral-200">
                       <span className="flex-1">{material.name || `Item ${material.itemId}`}</span>
@@ -2639,7 +2662,7 @@ const renderXTick = selected
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Base Cost Per Attempt</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds)} />
+                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing)} />
                   </span>
                 </div>
                 {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
@@ -2709,8 +2732,9 @@ const renderXTick = selected
                       value={selected ? (() => {
                         const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
                         const recipeCost = includeRecipeCost && selected.source ?
-                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds) : 0;
-                        return totalLevelUps > 0 ? (totalMaterialCost + recipeCost) / totalLevelUps : 0;
+                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+                        const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) * expCrafts;
+                        return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
                       })() : 0}
                       fallback="—"
                     />
@@ -2728,7 +2752,97 @@ const renderXTick = selected
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Auction House Profit Calculation</h3>
               </div>
-              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
+              <div className="flex flex-col divide-y divide-neutral-700">
+                {selected?.produces ? (() => {
+                  const outputItemId = selected.produces.id;
+                  const outputQty = selected.produces.quantity ?? 1;
+                  const totalOutput = outputQty * expCrafts;
+                  const info = materialInfo[outputItemId];
+                  const sellPrice = info?.sellPrice ?? 0;
+                  const vendorReturn = sellPrice * totalOutput;
+                  const quality = selected.quality ?? info?.quality ?? 1;
+                  const itemLevel = info?.itemLevel ?? 70;
+                  const isWeapon = info?.class === '2';
+                  const outcomes = getDisenchantOutcomes(itemLevel, quality, isWeapon, info?.class, info?.slot, outputItemId);
+                  const deTotal = getExpectedDisenchantValue(itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, info?.class, info?.slot, outputItemId);
+                  const ahMinBuyout = (prices[outputItemId]?.minBuyout ?? 0) * totalOutput;
+                  const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
+                  return (
+                    <>
+                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] min-h-[4rem]">
+                        <div className="flex-1 flex flex-col items-center justify-center p-4">
+                          <span className="text-neutral-400 mb-1 text-sm">Vendor Price Return</span>
+                          <span className="text-lg font-semibold">
+                            <FormatMoney copper={vendorReturn} />
+                          </span>
+                        </div>
+                        <div className="flex-1 flex flex-col items-center justify-center p-4">
+                          <span className="text-neutral-400 mb-1 text-sm">AH Returns (min buyout)</span>
+                          <span className="text-lg font-semibold">
+                            <FormatMoney copper={ahMinBuyout} />
+                          </span>
+                        </div>
+                        <div className="flex-1 flex flex-col items-center justify-center p-4">
+                          <span className="text-neutral-400 mb-1 text-sm">AH Returns (market avg)</span>
+                          <span className="text-lg font-semibold">
+                            <FormatMoney copper={ahMarketValue} />
+                          </span>
+                        </div>
+                      </div>
+                      {outcomes.length > 0 && (
+                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-4">
+                          <span className="text-neutral-400 mb-2 text-sm font-medium">Expected Disenchant Materials</span>
+                          <ul className="space-y-2 text-sm">
+                            {outcomes.map((o, idx) => {
+                              const avgQty = (o.minQty + o.maxQty) / 2;
+                              const expectedQty = o.chance * avgQty * totalOutput;
+                              const price = useMarketValue
+                                ? (prices[o.itemId]?.marketValue ?? prices[o.itemId]?.minBuyout ?? 0)
+                                : (prices[o.itemId]?.minBuyout ?? prices[o.itemId]?.marketValue ?? 0);
+                              const value = expectedQty * price;
+                              const matName = materialInfo[o.itemId]?.name ?? `Item #${o.itemId}`;
+                              const matQuality = materialInfo[o.itemId]?.quality ?? 1;
+                              const qtyRange = o.minQty === o.maxQty ? `${o.minQty}` : `${o.minQty}–${o.maxQty}`;
+                              const pct = (o.chance * 100).toFixed(0);
+                              const iconUrl = `/icons/materials/${o.itemId}.jpg`;
+                              return (
+                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-3">
+                                  <img
+                                    src={iconUrl}
+                                    alt=""
+                                    className="w-7 h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
+                                  />
+                                  <div className="flex-1 min-w-0">
+                                    <span className="font-medium" style={{ color: qualityColors[matQuality] }}>{matName}</span>
+                                    <span className="text-neutral-400 ml-1.5">
+                                      {pct}% ({qtyRange})
+                                    </span>
+                                  </div>
+                                  <div className="text-right flex-shrink-0">
+                                    <span className="text-neutral-400">
+                                      ~{expectedQty.toFixed(1)} × <FormatMoney copper={price} />
+                                    </span>
+                                    <span className="text-white font-medium ml-2">
+                                      = <FormatMoney copper={value} />
+                                    </span>
+                                  </div>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                          <div className="mt-2 pt-2 border-t border-neutral-600 flex justify-between items-center">
+                            <span className="text-neutral-400 text-sm">Total expected value</span>
+                            <span className="text-white font-semibold"><FormatMoney copper={deTotal * totalOutput} /></span>
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  );
+                })() : (
+                  <div className="flex items-center justify-center p-8 text-neutral-500 text-sm">
+                    Select a recipe to see profit calculations
+                  </div>
+                )}
               </div>
             </div>
           </div>

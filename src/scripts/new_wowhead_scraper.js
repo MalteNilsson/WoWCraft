@@ -230,6 +230,34 @@ async function fetchPageHtml(url) {
   return res.text();
 }
 
+/** Fetch XML tooltip for an item from Wowhead (e.g. https://www.wowhead.com/tbc/item=2578&xml) */
+async function fetchItemXml(itemId, wowheadPath) {
+  const url = `https://www.wowhead.com/${wowheadPath}/item=${itemId}&xml`;
+  const res = await fetch(url, {
+    headers: { 'User-Agent': FETCH_UA, 'Accept': 'application/xml,text/xml' },
+    redirect: 'follow',
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.text();
+}
+
+/**
+ * Parse Wowhead item XML tooltip. Extracts class, subclass, slot, itemLevel.
+ * Returns { class, subclass, slot, itemLevel } with empty strings for missing fields.
+ */
+function parseItemXml(xml) {
+  const result = { class: '', subclass: '', slot: '', itemLevel: null };
+  const classMatch = xml.match(/<class\s+id="(\d+)"[^>]*>/);
+  if (classMatch) result.class = classMatch[1];
+  const subclassMatch = xml.match(/<subclass\s+id="(\d+)"[^>]*>/);
+  if (subclassMatch) result.subclass = subclassMatch[1];
+  const slotMatch = xml.match(/<inventorySlot\s+id="(\d+)"[^>]*>/);
+  if (slotMatch) result.slot = slotMatch[1];
+  const levelMatch = xml.match(/<level>(\d+)<\/level>/);
+  if (levelMatch) result.itemLevel = parseInt(levelMatch[1], 10);
+  return result;
+}
+
 /**
  * Parse recipe detail page to determine source type.
  * Trainer-bound (takes precedence): has gold/silver/copper cost, no associated recipe items.
@@ -344,7 +372,7 @@ function parseRecipeItemFullInfo(html) {
 
 /**
  * Parse material item page for materials.json format.
- * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice, limitedStock, vendorStack }.
+ * Returns { name, quality, class, subclass, icon, slot, link, vendorPrice, sellPrice, limitedStock, vendorStack, itemLevel }.
  */
 function parseMaterialItemInfo(html, itemId, wowheadPath) {
   const idStr = String(itemId);
@@ -357,8 +385,10 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
     slot: '',
     link: `https://www.wowhead.com/${wowheadPath}/item=${itemId}`,
     vendorPrice: null,
+    sellPrice: null,
     limitedStock: false,
     vendorStack: null,
+    itemLevel: null,
   };
 
   // g_pageInfo for name
@@ -380,11 +410,36 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
           if (item.icon) result.icon = item.icon;
           const je = item.jsonequip;
           if (je?.buyprice != null) result.vendorPrice = parseInt(je.buyprice, 10);
+          if (je?.sellprice != null) result.sellPrice = parseInt(je.sellprice, 10);
           if (je?.classs != null) result.class = String(je.classs);
+          else if (item.classs != null) result.class = String(item.classs);
           if (je?.subclass != null) result.subclass = String(je.subclass);
+          else if (item.subclass != null) result.subclass = String(item.subclass);
           if (je?.slot != null) result.slot = String(je.slot);
+          else if (item.slot != null) result.slot = String(item.slot);
+          if (je?.itemlevel != null) result.itemLevel = parseInt(je.itemlevel, 10);
         }
       } catch {}
+    }
+  }
+
+  // Fallback: item level is in tooltip HTML as <!--ilvl-->N (jsonequip lacks it for TBC/Classic)
+  if (result.itemLevel == null) {
+    const ilvlMatch = html.match(/<!--ilvl-->(\d+)/);
+    if (ilvlMatch) result.itemLevel = parseInt(ilvlMatch[1], 10);
+  }
+
+  // Fallback: infer class from tooltip slot (jsonequip often lacks classs for TBC/Classic equip items)
+  if (!result.class || result.class === '') {
+    // Match slot in tooltip: <tr><td>One-Hand</td> or <tr><td>Main Hand<\/td> (escaped in JS string)
+    const slotMatch = html.match(/<tr><td>([^<]+)<\\?\/td><th><!--scstart2/);
+    if (slotMatch) {
+      const slot = slotMatch[1].trim();
+      const weaponSlots = ['One-Hand', 'Two-Hand', 'Main Hand', 'Off Hand', 'Ranged', 'Held In Off-hand', 'Thrown'];
+      const armorSlots = ['Head', 'Neck', 'Shoulder', 'Back', 'Chest', 'Shirt', 'Tabard', 'Wrist', 'Hands', 'Waist', 'Legs', 'Feet', 'Finger', 'Trinket', 'Shield'];
+      if (weaponSlots.includes(slot)) result.class = '2';
+      else if (armorSlots.includes(slot)) result.class = '4';
+      else if (slot === 'Projectile' || slot === 'Ammo') result.class = '6';
     }
   }
 
@@ -735,7 +790,20 @@ async function main() {
       const itemUrl = `${itemBase}item=${itemId}`;
       try {
         const itemHtml = await fetchPageHtml(itemUrl);
-        const info = parseMaterialItemInfo(itemHtml, itemId, wowheadPath);
+        let info = parseMaterialItemInfo(itemHtml, itemId, wowheadPath);
+        // Fallback: fetch XML tooltip for class/subclass/slot when HTML parse misses them
+        if (!info.class || !info.subclass || !info.slot || info.itemLevel == null) {
+          try {
+            const xml = await fetchItemXml(itemId, wowheadPath);
+            const xmlInfo = parseItemXml(xml);
+            if (!info.class && xmlInfo.class) info = { ...info, class: xmlInfo.class };
+            if (!info.subclass && xmlInfo.subclass) info = { ...info, subclass: xmlInfo.subclass };
+            if (!info.slot && xmlInfo.slot) info = { ...info, slot: xmlInfo.slot };
+            if (info.itemLevel == null && xmlInfo.itemLevel != null) info = { ...info, itemLevel: xmlInfo.itemLevel };
+          } catch (xmlErr) {
+            // Ignore XML fetch failures; keep HTML parse result
+          }
+        }
         const recipe = producedByRecipe.get(itemId);
         const fallbackName = itemNamesFromRecipes.get(itemId);
         const name = (info.name && info.name !== `Item #${itemId}`) ? info.name : (fallbackName || info.name);
@@ -748,8 +816,10 @@ async function main() {
           slot: info.slot || '',
           link: info.link,
           vendorPrice: info.vendorPrice ?? null,
+          ...(info.sellPrice != null && info.sellPrice > 0 && { sellPrice: info.sellPrice }),
           ...(info.limitedStock && { limitedStock: true }),
           ...(info.vendorStack != null && info.vendorStack > 1 && { vendorStack: info.vendorStack }),
+          ...(info.itemLevel != null && info.itemLevel > 0 && { itemLevel: info.itemLevel }),
         };
         if (recipe) {
           const qty = recipe.produces?.quantity ?? 1;

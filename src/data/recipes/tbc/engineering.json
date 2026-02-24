@@ -376,7 +376,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4408,
+      "recipeItemName": "Schematic: Mechanical Squirrel"
     }
   },
   {
@@ -593,7 +595,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4409,
+      "recipeItemName": "Schematic: Small Seaforium Charge"
     }
   },
   {
@@ -863,7 +867,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4410,
+      "recipeItemName": "Schematic: Shadow Goggles"
     }
   },
   {
@@ -994,7 +1000,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4411,
+      "recipeItemName": "Schematic: Flame Deflector"
     }
   },
   {
@@ -1356,7 +1364,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4412,
+      "recipeItemName": "Schematic: Moonsight Rifle"
     }
   },
   {
@@ -1580,7 +1590,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4413,
+      "recipeItemName": "Schematic: Discombobulator Ray"
     }
   },
   {
@@ -1631,7 +1643,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4414,
+      "recipeItemName": "Schematic: Portable Bronze Mortar"
     }
   },
   {
@@ -1860,7 +1874,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4415,
+      "recipeItemName": "Schematic: Craftsman's Monocle"
     }
   },
   {
@@ -1951,7 +1967,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4416,
+      "recipeItemName": "Schematic: Goblin Land Mine"
     }
   },
   {
@@ -2067,7 +2085,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7742,
+      "recipeItemName": "Schematic: Gnomish Cloaking Device"
     }
   },
   {
@@ -2112,7 +2132,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4417,
+      "recipeItemName": "Schematic: Large Seaforium Charge"
     }
   },
   {
@@ -2410,7 +2432,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6672,
+      "recipeItemName": "Schematic: Flash Bomb"
     }
   },
   {
@@ -2495,7 +2519,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6716,
+      "recipeItemName": "Schematic: EZ-Thro Dynamite"
     }
   },
   {
@@ -2552,7 +2578,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 2200
     }
   },
   {
@@ -2609,7 +2636,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7560,
+      "recipeItemName": "Schematic: Gnomish Universal Remote"
     }
   },
   {
@@ -2718,7 +2747,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7561,
+      "recipeItemName": "Schematic: Goblin Jumper Cables"
     }
   },
   {
@@ -2865,7 +2896,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10601,
+      "recipeItemName": "Schematic: Bright-Eye Goggles"
     }
   },
   {
@@ -3301,7 +3334,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10603,
+      "recipeItemName": "Schematic: Catseye Ultra Goggles"
     }
   },
   {
@@ -3358,7 +3393,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10604,
+      "recipeItemName": "Schematic: Mithril Heavy-bore Rifle"
     }
   },
   {
@@ -3397,7 +3434,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 2500
     }
   },
   {
@@ -3448,7 +3486,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10606,
+      "recipeItemName": "Schematic: Parachute Cloak"
     }
   },
   {
@@ -3638,7 +3678,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10608,
+      "recipeItemName": "Schematic: Sniper Scope"
     }
   },
   {
@@ -4909,7 +4951,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11828,
+      "recipeItemName": "Schematic: Pet Bombling"
     }
   },
   {
@@ -4966,7 +5010,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11827,
+      "recipeItemName": "Schematic: Lil' Smoky"
     }
   },
   {
@@ -5203,7 +5249,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -5254,7 +5301,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16044,
+      "recipeItemName": "Schematic: Lifelike Mechanical Toad"
     }
   },
   {
@@ -5305,7 +5354,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -5403,7 +5453,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16048,
+      "recipeItemName": "Schematic: Dark Iron Rifle"
     }
   },
   {
@@ -5454,7 +5506,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16049,
+      "recipeItemName": "Schematic: Dark Iron Bomb"
     }
   },
   {
@@ -5493,7 +5547,8 @@
       "quantity": 200
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -5650,7 +5705,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16052,
+      "recipeItemName": "Schematic: Voice Amplification Modulator"
     }
   },
   {
@@ -5695,7 +5752,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -5758,7 +5816,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16054,
+      "recipeItemName": "Schematic: Arcanite Dragonling"
     }
   },
   {
@@ -5803,7 +5863,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16055,
+      "recipeItemName": "Schematic: Arcane Bomb"
     }
   },
   {
@@ -5866,7 +5928,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16056,
+      "recipeItemName": "Schematic: Flawless Arcanite Rifle"
     }
   },
   {
@@ -5917,7 +5981,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 17720,
+      "recipeItemName": "Schematic: Snowmaster 9000"
     }
   },
   {
@@ -5956,7 +6022,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18235,
+      "recipeItemName": "Schematic: Field Repair Bot 74A"
     }
   },
   {
@@ -6013,7 +6081,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18290,
+      "recipeItemName": "Schematic: Biznicks 247x128 Accurascope"
     }
   },
   {
@@ -6070,7 +6140,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18292,
+      "recipeItemName": "Schematic: Core Marksman Rifle"
     }
   },
   {
@@ -6127,7 +6199,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18291,
+      "recipeItemName": "Schematic: Force Reactive Disk"
     }
   },
   {
@@ -6500,7 +6574,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18653,
+      "recipeItemName": "Schematic: Goblin Jumper Cables XL"
     }
   },
   {
@@ -6545,7 +6621,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18655,
+      "recipeItemName": "Schematic: Major Recombobulator"
     }
   },
   {
@@ -6655,7 +6733,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18657,
+      "recipeItemName": "Schematic: Hyper-Radiant Flame Reflector"
     }
   },
   {
@@ -6718,7 +6798,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18658,
+      "recipeItemName": "Schematic: Ultra-Flash Shadow Reflector"
     }
   },
   {
@@ -6775,7 +6857,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18654,
+      "recipeItemName": "Schematic: Gnomish Alarm-O-Bot"
     }
   },
   {
@@ -6832,7 +6916,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18661,
+      "recipeItemName": "Schematic: World Enlarger"
     }
   },
   {
@@ -7213,7 +7299,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21724,
+      "recipeItemName": "Schematic: Small Blue Rocket"
     }
   },
   {
@@ -7252,7 +7340,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21725,
+      "recipeItemName": "Schematic: Small Green Rocket"
     }
   },
   {
@@ -7291,7 +7381,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21726,
+      "recipeItemName": "Schematic: Small Red Rocket"
     }
   },
   {
@@ -7330,7 +7422,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21727,
+      "recipeItemName": "Schematic: Large Blue Rocket"
     }
   },
   {
@@ -7369,7 +7463,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21728,
+      "recipeItemName": "Schematic: Large Green Rocket"
     }
   },
   {
@@ -7408,7 +7504,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21729,
+      "recipeItemName": "Schematic: Large Red Rocket"
     }
   },
   {
@@ -7447,7 +7545,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21730,
+      "recipeItemName": "Schematic: Blue Rocket Cluster"
     }
   },
   {
@@ -7486,7 +7586,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21731,
+      "recipeItemName": "Schematic: Green Rocket Cluster"
     }
   },
   {
@@ -7525,7 +7627,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21732,
+      "recipeItemName": "Schematic: Red Rocket Cluster"
     }
   },
   {
@@ -7564,7 +7668,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21733,
+      "recipeItemName": "Schematic: Large Blue Rocket Cluster"
     }
   },
   {
@@ -7603,7 +7709,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21734,
+      "recipeItemName": "Schematic: Large Green Rocket Cluster"
     }
   },
   {
@@ -7642,7 +7750,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21735,
+      "recipeItemName": "Schematic: Large Red Rocket Cluster"
     }
   },
   {
@@ -7693,7 +7803,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21738,
+      "recipeItemName": "Schematic: Firework Launcher"
     }
   },
   {
@@ -7744,7 +7856,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21737,
+      "recipeItemName": "Schematic: Cluster Launcher"
     }
   },
   {
@@ -7783,7 +7897,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22729,
+      "recipeItemName": "Schematic: Steam Tonk Controller"
     }
   },
   {
@@ -8269,7 +8385,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23800,
+      "recipeItemName": "Schematic: Felsteel Boomstick"
     }
   },
   {
@@ -8320,7 +8438,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23802,
+      "recipeItemName": "Schematic: Ornate Khorium Rifle"
     }
   },
   {
@@ -8412,7 +8532,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23804,
+      "recipeItemName": "Schematic: Power Amplification Goggles"
     }
   },
   {
@@ -8516,7 +8638,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23806,
+      "recipeItemName": "Schematic: Hyper-Vision Goggles"
     }
   },
   {
@@ -8602,7 +8726,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23808,
+      "recipeItemName": "Schematic: Khorium Scope"
     }
   },
   {
@@ -8647,7 +8773,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23809,
+      "recipeItemName": "Schematic: Stabilized Eternium Scope"
     }
   },
   {
@@ -8698,7 +8826,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23810,
+      "recipeItemName": "Schematic: Crashin' Thrashin' Robot"
     }
   },
   {
@@ -8965,7 +9095,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23817,
+      "recipeItemName": "Schematic: Khorium Toolbox"
     }
   },
   {
@@ -9063,7 +9195,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23888,
+      "recipeItemName": "Schematic: Zapthrottle Mote Extractor"
     }
   },
   {
@@ -9114,7 +9248,9 @@
       "quantity": 20
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23883,
+      "recipeItemName": "Schematic: Healing Potion Injector"
     }
   },
   {
@@ -9165,7 +9301,9 @@
       "quantity": 20
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23884,
+      "recipeItemName": "Schematic: Mana Potion Injector"
     }
   },
   {
@@ -9216,7 +9354,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23887,
+      "recipeItemName": "Schematic: Rocket Boots Xtreme"
     }
   },
   {
@@ -9799,7 +9939,9 @@
       "quantity": 3
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25887,
+      "recipeItemName": "Schematic: Purple Smoke Flare"
     }
   },
   {
@@ -10859,7 +11001,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 33804,
+      "recipeItemName": "Schematic: Adamantite Arrow Maker"
     }
   },
   {
@@ -11020,7 +11164,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 34114,
+      "recipeItemName": "Schematic: Field Repair Bot 110G"
     }
   },
   {
@@ -11071,7 +11217,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35191,
+      "recipeItemName": "Schematic: Wonderheal XT68 Shades"
     }
   },
   {
@@ -11128,7 +11276,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35187,
+      "recipeItemName": "Schematic: Justicebringer 3000 Specs"
     }
   },
   {
@@ -11179,7 +11329,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35189,
+      "recipeItemName": "Schematic: Powerheal 9000 Lens"
     }
   },
   {
@@ -11230,7 +11382,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35190,
+      "recipeItemName": "Schematic: Hyper-Magnified Moon Specs"
     }
   },
   {
@@ -11287,7 +11441,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35192,
+      "recipeItemName": "Schematic: Primal-Attuned Goggles"
     }
   },
   {
@@ -11344,7 +11500,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35186,
+      "recipeItemName": "Schematic: Annihilator Holo-Gogs"
     }
   },
   {
@@ -11395,7 +11553,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35193,
+      "recipeItemName": "Schematic: Lightning Etched Specs"
     }
   },
   {
@@ -11440,7 +11600,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35194,
+      "recipeItemName": "Schematic: Surestrike Goggles v3.0"
     }
   },
   {
@@ -11485,7 +11647,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35195,
+      "recipeItemName": "Schematic: Mayhem Projection Goggles"
     }
   },
   {
@@ -11536,7 +11700,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35196,
+      "recipeItemName": "Schematic: Hard Khorium Goggles"
     }
   },
   {
@@ -11581,7 +11747,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35197,
+      "recipeItemName": "Schematic: Quad Deathblow X44 Goggles"
     }
   },
   {
@@ -11632,7 +11800,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35582,
+      "recipeItemName": "Schematic: Rocket Boots Xtreme Lite"
     }
   }
 ]

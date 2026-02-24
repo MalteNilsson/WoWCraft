@@ -903,7 +903,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20974,
+      "recipeItemName": "Design: Jade Pendant of Blasting"
     }
   },
   {
@@ -1081,7 +1083,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20976,
+      "recipeItemName": "Design: Citrine Pendant of Golden Healing"
     }
   },
   {
@@ -1172,7 +1176,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21940,
+      "recipeItemName": "Design: Golden Hare"
     }
   },
   {
@@ -1502,7 +1508,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21944,
+      "recipeItemName": "Design: Truesilver Boar"
     }
   },
   {
@@ -1621,7 +1629,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21945,
+      "recipeItemName": "Design: The Aquamarine Ward"
     }
   },
   {
@@ -1672,7 +1682,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21947,
+      "recipeItemName": "Design: Gem Studded Band"
     }
   },
   {
@@ -1782,7 +1794,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21949,
+      "recipeItemName": "Design: Ruby Serpent"
     }
   },
   {
@@ -2070,7 +2084,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21953,
+      "recipeItemName": "Design: Emerald Owl"
     }
   },
   {
@@ -2220,7 +2236,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21955,
+      "recipeItemName": "Design: Black Diamond Crab"
     }
   },
   {
@@ -2265,7 +2283,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21956,
+      "recipeItemName": "Design: Dark Iron Scorpid"
     }
   },
   {
@@ -2403,7 +2423,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21958,
+      "recipeItemName": "Design: Arcanite Sword Pendant"
     }
   },
   {
@@ -2454,7 +2476,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21959,
+      "recipeItemName": "Design: Blood Crown"
     }
   },
   {
@@ -3428,7 +3452,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 23154,
+      "recipeItemName": "Design: Stormy Azure Moonstone"
     }
   },
   {
@@ -3714,7 +3740,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24158,
+      "recipeItemName": "Design: Khorium Band of Shadows"
     }
   },
   {
@@ -3759,7 +3787,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24159,
+      "recipeItemName": "Design: Khorium Band of Frost"
     }
   },
   {
@@ -3804,7 +3834,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24160,
+      "recipeItemName": "Design: Khorium Inferno Band"
     }
   },
   {
@@ -3849,7 +3881,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24161,
+      "recipeItemName": "Design: Khorium Band of Leaves"
     }
   },
   {
@@ -3894,7 +3928,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24162,
+      "recipeItemName": "Design: Arcane Khorium Band"
     }
   },
   {
@@ -3933,7 +3969,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24163,
+      "recipeItemName": "Design: Heavy Felsteel Ring"
     }
   },
   {
@@ -3972,7 +4010,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24164,
+      "recipeItemName": "Design: Delicate Eternium Ring"
     }
   },
   {
@@ -4017,7 +4057,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24165,
+      "recipeItemName": "Design: Blazing Eternium Band"
     }
   },
   {
@@ -4315,7 +4357,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24166,
+      "recipeItemName": "Design: Thick Felsteel Necklace"
     }
   },
   {
@@ -4360,7 +4404,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24167,
+      "recipeItemName": "Design: Living Ruby Pendant"
     }
   },
   {
@@ -4399,7 +4445,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24168,
+      "recipeItemName": "Design: Braided Eternium Chain"
     }
   },
   {
@@ -4444,7 +4492,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24169,
+      "recipeItemName": "Design: Eye of the Night"
     }
   },
   {
@@ -4489,7 +4539,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24170,
+      "recipeItemName": "Design: Embrace of the Dawn"
     }
   },
   {
@@ -4534,7 +4586,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24171,
+      "recipeItemName": "Design: Chain of the Twilight Owl"
     }
   },
   {
@@ -4585,7 +4639,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24172,
+      "recipeItemName": "Design: Coronet of Verdant Flame"
     }
   },
   {
@@ -4636,7 +4692,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24173,
+      "recipeItemName": "Design: Circlet of Arcane Might"
     }
   },
   {
@@ -4904,7 +4962,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24193,
+      "recipeItemName": "Design: Bold Living Ruby"
     }
   },
   {
@@ -4937,7 +4997,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24194,
+      "recipeItemName": "Design: Delicate Living Ruby"
     }
   },
   {
@@ -4970,7 +5032,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24195,
+      "recipeItemName": "Design: Teardrop Living Ruby"
     }
   },
   {
@@ -5003,7 +5067,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24196,
+      "recipeItemName": "Design: Runed Living Ruby"
     }
   },
   {
@@ -5036,7 +5102,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24192,
+      "recipeItemName": "Design: Bright Living Ruby"
     }
   },
   {
@@ -5069,7 +5137,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24197,
+      "recipeItemName": "Design: Subtle Living Ruby"
     }
   },
   {
@@ -5102,7 +5172,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24198,
+      "recipeItemName": "Design: Flashing Living Ruby"
     }
   },
   {
@@ -5135,7 +5207,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24199,
+      "recipeItemName": "Design: Solid Star of Elune"
     }
   },
   {
@@ -5168,7 +5242,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24201,
+      "recipeItemName": "Design: Lustrous Star of Elune"
     }
   },
   {
@@ -5201,7 +5277,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24202,
+      "recipeItemName": "Design: Stormy Star of Elune"
     }
   },
   {
@@ -5234,7 +5312,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24203,
+      "recipeItemName": "Design: Brilliant Dawnstone"
     }
   },
   {
@@ -5267,7 +5347,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24204,
+      "recipeItemName": "Design: Smooth Dawnstone"
     }
   },
   {
@@ -5300,7 +5382,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24205,
+      "recipeItemName": "Design: Rigid Dawnstone"
     }
   },
   {
@@ -5333,7 +5417,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24206,
+      "recipeItemName": "Design: Gleaming Dawnstone"
     }
   },
   {
@@ -5366,7 +5452,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24207,
+      "recipeItemName": "Design: Thick Dawnstone"
     }
   },
   {
@@ -5434,7 +5522,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24209,
+      "recipeItemName": "Design: Sovereign Nightseye"
     }
   },
   {
@@ -5467,7 +5557,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24210,
+      "recipeItemName": "Design: Shifting Nightseye"
     }
   },
   {
@@ -5500,7 +5592,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24211,
+      "recipeItemName": "Design: Glowing Nightseye"
     }
   },
   {
@@ -5533,7 +5627,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24212,
+      "recipeItemName": "Design: Royal Nightseye"
     }
   },
   {
@@ -5566,7 +5662,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24213,
+      "recipeItemName": "Design: Inscribed Noble Topaz"
     }
   },
   {
@@ -5599,7 +5697,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24214,
+      "recipeItemName": "Design: Potent Noble Topaz"
     }
   },
   {
@@ -5632,7 +5732,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24215,
+      "recipeItemName": "Design: Luminous Noble Topaz"
     }
   },
   {
@@ -5665,7 +5767,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24216,
+      "recipeItemName": "Design: Glinting Noble Topaz"
     }
   },
   {
@@ -5698,7 +5802,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24217,
+      "recipeItemName": "Design: Enduring Talasite"
     }
   },
   {
@@ -5731,7 +5837,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24218,
+      "recipeItemName": "Design: Radiant Talasite"
     }
   },
   {
@@ -5764,7 +5872,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24219,
+      "recipeItemName": "Design: Dazzling Talasite"
     }
   },
   {
@@ -5797,7 +5907,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24220,
+      "recipeItemName": "Design: Jagged Talasite"
     }
   },
   {
@@ -5830,7 +5942,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24200,
+      "recipeItemName": "Design: Sparkling Star of Elune"
     }
   },
   {
@@ -6182,7 +6296,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25905,
+      "recipeItemName": "Design: Tenacious Earthstorm Diamond"
     }
   },
   {
@@ -6215,7 +6331,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25906,
+      "recipeItemName": "Design: Brutal Earthstorm Diamond"
     }
   },
   {
@@ -6283,7 +6401,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25907,
+      "recipeItemName": "Design: Destructive Skyfire Diamond"
     }
   },
   {
@@ -6316,7 +6436,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25909,
+      "recipeItemName": "Design: Mystical Skyfire Diamond"
     }
   },
   {
@@ -7130,7 +7252,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31870,
+      "recipeItemName": "Design: Great Golden Draenite"
     }
   },
   {
@@ -7163,7 +7287,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31875,
+      "recipeItemName": "Design: Great Dawnstone"
     }
   },
   {
@@ -7196,7 +7322,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31871,
+      "recipeItemName": "Design: Balanced Shadow Draenite"
     }
   },
   {
@@ -7229,7 +7357,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31872,
+      "recipeItemName": "Design: Infused Shadow Draenite"
     }
   },
   {
@@ -7262,7 +7392,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31877,
+      "recipeItemName": "Design: Infused Nightseye"
     }
   },
   {
@@ -7295,7 +7427,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31876,
+      "recipeItemName": "Design: Balanced Nightseye"
     }
   },
   {
@@ -7328,7 +7462,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31873,
+      "recipeItemName": "Design: Veiled Flame Spessarite"
     }
   },
   {
@@ -7361,7 +7497,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31874,
+      "recipeItemName": "Design: Wicked Flame Spessarite"
     }
   },
   {
@@ -7394,7 +7532,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31878,
+      "recipeItemName": "Design: Veiled Noble Topaz"
     }
   },
   {
@@ -7427,7 +7567,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31879,
+      "recipeItemName": "Design: Wicked Noble Topaz"
     }
   },
   {
@@ -7670,7 +7812,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32285,
+      "recipeItemName": "Design: Flashing Crimson Spinel"
     }
   },
   {
@@ -7808,7 +7952,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32289,
+      "recipeItemName": "Design: Stormy Empyrean Sapphire"
     }
   },
   {
@@ -8016,7 +8162,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32295,
+      "recipeItemName": "Design: Mystic Lionseye"
     }
   },
   {
@@ -8049,7 +8197,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32296,
+      "recipeItemName": "Design: Great Lionseye"
     }
   },
   {
@@ -8082,7 +8232,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32297,
+      "recipeItemName": "Design: Sovereign Shadowsong Amethyst"
     }
   },
   {
@@ -8115,7 +8267,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32298,
+      "recipeItemName": "Design: Shifting Shadowsong Amethyst"
     }
   },
   {
@@ -8288,7 +8442,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32303,
+      "recipeItemName": "Design: Inscribed Pyrestone"
     }
   },
   {
@@ -8426,7 +8582,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32307,
+      "recipeItemName": "Design: Veiled Pyrestone"
     }
   },
   {
@@ -8669,7 +8827,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32411,
+      "recipeItemName": "Design: Thundering Skyfire Diamond"
     }
   },
   {
@@ -9240,7 +9400,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 34221,
+      "recipeItemName": "Design: Chaotic Skyfire Diamond"
     }
   },
   {
@@ -9291,7 +9453,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35198,
+      "recipeItemName": "Design: Loop of Forged Power"
     }
   },
   {
@@ -9342,7 +9506,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35199,
+      "recipeItemName": "Design: Ring of Flowing Life"
     }
   },
   {
@@ -9393,7 +9559,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35200,
+      "recipeItemName": "Design: Hard Khorium Band"
     }
   },
   {
@@ -9438,7 +9606,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35201,
+      "recipeItemName": "Design: Pendant of Sunfire"
     }
   },
   {
@@ -9477,7 +9647,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35202,
+      "recipeItemName": "Design: Amulet of Flowing Life"
     }
   },
   {
@@ -9516,7 +9688,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35203,
+      "recipeItemName": "Design: Hard Khorium Choker"
     }
   },
   {

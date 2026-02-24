@@ -5,6 +5,7 @@ type TsmAuction = {
   itemId: number;
   minBuyout: number;
   marketValue: number;
+  numAuctions?: number;
 };
 
 /** Convert TSM auction rows → PriceMap keyed by itemId */
@@ -14,7 +15,7 @@ export const ignoreVendorPriceIds = new Set<number>([
 ]);
 
 export function toPriceMap(
-  rows: { itemId: number; minBuyout: number; marketValue: number }[],
+  rows: { itemId: number; minBuyout: number; marketValue: number; numAuctions?: number }[],
   materials: Record<string, { vendorPrice?: number; limitedStock?: boolean }>
 ): PriceMap {
   return rows.reduce<PriceMap>((map, row) => {
@@ -33,7 +34,8 @@ export function toPriceMap(
     map[id] = {
       minBuyout: row.minBuyout,
       marketValue: row.marketValue,
-      vendorPrice: vendor
+      vendorPrice: vendor,
+      numAuctions: row.numAuctions
     };
 
     return map;

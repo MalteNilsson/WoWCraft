@@ -200,7 +200,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=7443",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6342,
+      "recipeItemName": "Formula: Enchant Chest - Minor Mana"
     }
   },
   {
@@ -367,7 +369,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=7766",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6344,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Spirit"
     }
   },
   {
@@ -505,7 +509,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=7782",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6347,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Strength"
     }
   },
   {
@@ -540,7 +546,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=7786",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6348,
+      "recipeItemName": "Formula: Enchant Weapon - Minor Beastslayer"
     }
   },
   {
@@ -730,7 +738,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=7859",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6375,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Spirit"
     }
   },
   {
@@ -904,7 +914,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13380",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11038,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Lesser Spirit"
     }
   },
   {
@@ -933,7 +945,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13419",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11039,
+      "recipeItemName": "Formula: Enchant Cloak - Minor Agility"
     }
   },
   {
@@ -1010,7 +1024,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13464",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11081,
+      "recipeItemName": "Formula: Enchant Shield - Lesser Protection"
     }
   },
   {
@@ -1147,7 +1163,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13522",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11098,
+      "recipeItemName": "Formula: Enchant Cloak - Lesser Shadow Resistance"
     }
   },
   {
@@ -1327,7 +1345,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13612",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11150,
+      "recipeItemName": "Formula: Enchant Gloves - Mining"
     }
   },
   {
@@ -1362,7 +1382,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13617",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11151,
+      "recipeItemName": "Formula: Enchant Gloves - Herbalism"
     }
   },
   {
@@ -1397,7 +1419,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13620",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11152,
+      "recipeItemName": "Formula: Enchant Gloves - Fishing"
     }
   },
   {
@@ -1833,7 +1857,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13653",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11164,
+      "recipeItemName": "Formula: Enchant Weapon - Lesser Beastslayer"
     }
   },
   {
@@ -1874,7 +1900,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13655",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11165,
+      "recipeItemName": "Formula: Enchant Weapon - Lesser Elemental Slayer"
     }
   },
   {
@@ -2041,7 +2069,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13687",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11167,
+      "recipeItemName": "Formula: Enchant Boots - Lesser Spirit"
     }
   },
   {
@@ -2082,7 +2112,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13689",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11168,
+      "recipeItemName": "Formula: Enchant Shield - Lesser Block"
     }
   },
   {
@@ -2189,7 +2221,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13698",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11166,
+      "recipeItemName": "Formula: Enchant Gloves - Skinning"
     }
   },
   {
@@ -2414,7 +2448,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13817",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11202,
+      "recipeItemName": "Formula: Enchant Shield - Stamina"
     }
   },
   {
@@ -2509,7 +2545,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13841",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11203,
+      "recipeItemName": "Formula: Enchant Gloves - Advanced Mining"
     }
   },
   {
@@ -2544,7 +2582,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13846",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11204,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Spirit"
     }
   },
   {
@@ -2609,7 +2649,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13868",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11205,
+      "recipeItemName": "Formula: Enchant Gloves - Advanced Herbalism"
     }
   },
   {
@@ -2638,7 +2680,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13882",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11206,
+      "recipeItemName": "Formula: Enchant Cloak - Lesser Agility"
     }
   },
   {
@@ -2751,7 +2795,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13898",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11207,
+      "recipeItemName": "Formula: Enchant Weapon - Fiery Weapon"
     }
   },
   {
@@ -2828,7 +2874,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13915",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11208,
+      "recipeItemName": "Formula: Enchant Weapon - Demonslaying"
     }
   },
   {
@@ -2936,7 +2984,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13933",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11224,
+      "recipeItemName": "Formula: Enchant Shield - Frost Resistance"
     }
   },
   {
@@ -3145,7 +3195,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13945",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11225,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Stamina"
     }
   },
   {
@@ -3180,7 +3232,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=13947",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11226,
+      "recipeItemName": "Formula: Enchant Gloves - Riding Skill"
     }
   },
   {
@@ -3433,7 +3487,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 11813,
+      "recipeItemName": "Formula: Smoking Heart of the Mountain"
     }
   },
   {
@@ -3542,7 +3598,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20008",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -3577,7 +3634,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20009",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16218,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Spirit"
     }
   },
   {
@@ -3612,7 +3671,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20010",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16246,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Strength"
     }
   },
   {
@@ -3641,7 +3702,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20011",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16251,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Stamina"
     }
   },
   {
@@ -3676,7 +3739,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20012",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -3711,7 +3775,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20013",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -3770,7 +3835,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20014",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -3836,7 +3902,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20016",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -3896,7 +3963,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20020",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16215,
+      "recipeItemName": "Formula: Enchant Boots - Greater Stamina"
     }
   },
   {
@@ -3925,7 +3994,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20023",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -3960,7 +4030,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20024",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16220,
+      "recipeItemName": "Formula: Enchant Boots - Spirit"
     }
   },
   {
@@ -4001,7 +4073,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20025",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16253,
+      "recipeItemName": "Formula: Enchant Chest - Greater Stats"
     }
   },
   {
@@ -4073,7 +4147,8 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20028",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -4120,7 +4195,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20029",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16223,
+      "recipeItemName": "Formula: Enchant Weapon - Icy Chill"
     }
   },
   {
@@ -4155,7 +4232,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20030",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16247,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Superior Impact"
     }
   },
   {
@@ -4190,7 +4269,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20031",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16250,
+      "recipeItemName": "Formula: Enchant Weapon - Superior Striking"
     }
   },
   {
@@ -4231,7 +4312,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20032",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16254,
+      "recipeItemName": "Formula: Enchant Weapon - Lifestealing"
     }
   },
   {
@@ -4266,7 +4349,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20033",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16248,
+      "recipeItemName": "Formula: Enchant Weapon - Unholy"
     }
   },
   {
@@ -4301,7 +4386,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20034",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16252,
+      "recipeItemName": "Formula: Enchant Weapon - Crusader"
     }
   },
   {
@@ -4336,7 +4423,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20035",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16255,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Major Spirit"
     }
   },
   {
@@ -4371,7 +4460,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=20036",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 16249,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Major Intellect"
     }
   },
   {
@@ -4483,7 +4574,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=21931",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 17725,
+      "recipeItemName": "Formula: Enchant Weapon - Winter's Might"
     }
   },
   {
@@ -4542,7 +4635,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=22749",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18259,
+      "recipeItemName": "Formula: Enchant Weapon - Spell Power"
     }
   },
   {
@@ -4595,7 +4690,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=22750",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18260,
+      "recipeItemName": "Formula: Enchant Weapon - Healing Power"
     }
   },
   {
@@ -4912,7 +5009,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25072",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20726,
+      "recipeItemName": "Formula: Enchant Gloves - Threat"
     }
   },
   {
@@ -4953,7 +5052,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25073",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20727,
+      "recipeItemName": "Formula: Enchant Gloves - Shadow Power"
     }
   },
   {
@@ -4994,7 +5095,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25074",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20728,
+      "recipeItemName": "Formula: Enchant Gloves - Frost Power"
     }
   },
   {
@@ -5035,7 +5138,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25078",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20729,
+      "recipeItemName": "Formula: Enchant Gloves - Fire Power"
     }
   },
   {
@@ -5076,7 +5181,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25079",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20730,
+      "recipeItemName": "Formula: Enchant Gloves - Healing Power"
     }
   },
   {
@@ -5117,7 +5224,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25080",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20731,
+      "recipeItemName": "Formula: Enchant Gloves - Superior Agility"
     }
   },
   {
@@ -5244,7 +5353,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25083",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20734,
+      "recipeItemName": "Formula: Enchant Cloak - Stealth"
     }
   },
   {
@@ -5285,7 +5396,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25084",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20735,
+      "recipeItemName": "Formula: Enchant Cloak - Subtlety"
     }
   },
   {
@@ -5326,7 +5439,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=25086",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20736,
+      "recipeItemName": "Formula: Enchant Cloak - Dodge"
     }
   },
   {
@@ -5805,7 +5920,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27906",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22530,
+      "recipeItemName": "Formula: Enchant Bracer - Major Defense"
     }
   },
   {
@@ -5871,7 +5988,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27913",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22532,
+      "recipeItemName": "Formula: Enchant Bracer - Restore Mana Prime"
     }
   },
   {
@@ -5912,7 +6031,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27914",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22533,
+      "recipeItemName": "Formula: Enchant Bracer - Fortitude"
     }
   },
   {
@@ -5953,7 +6074,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27917",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22534,
+      "recipeItemName": "Formula: Enchant Bracer - Spellpower"
     }
   },
   {
@@ -6215,7 +6338,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27946",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22540,
+      "recipeItemName": "Formula: Enchant Shield - Shield Block"
     }
   },
   {
@@ -6268,7 +6393,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27947",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22541,
+      "recipeItemName": "Formula: Enchant Shield - Resistance"
     }
   },
   {
@@ -6309,7 +6436,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27948",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22542,
+      "recipeItemName": "Formula: Enchant Boots - Vitality"
     }
   },
   {
@@ -6338,7 +6467,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27950",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22543,
+      "recipeItemName": "Formula: Enchant Boots - Fortitude"
     }
   },
   {
@@ -6373,7 +6504,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27951",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22544,
+      "recipeItemName": "Formula: Enchant Boots - Dexterity"
     }
   },
   {
@@ -6414,7 +6547,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27954",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22545,
+      "recipeItemName": "Formula: Enchant Boots - Surefooted"
     }
   },
   {
@@ -6497,7 +6632,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27958",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22546,
+      "recipeItemName": "Formula: Enchant Chest - Exceptional Mana"
     }
   },
   {
@@ -6623,7 +6760,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27962",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22548,
+      "recipeItemName": "Formula: Enchant Cloak - Major Resistance"
     }
   },
   {
@@ -6701,7 +6840,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27968",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22551,
+      "recipeItemName": "Formula: Enchant Weapon - Major Intellect"
     }
   },
   {
@@ -6736,7 +6877,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27971",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22554,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Savagery"
     }
   },
   {
@@ -6777,7 +6920,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27972",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22553,
+      "recipeItemName": "Formula: Enchant Weapon - Potency"
     }
   },
   {
@@ -6812,7 +6957,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27975",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22555,
+      "recipeItemName": "Formula: Enchant Weapon - Major Spellpower"
     }
   },
   {
@@ -6853,7 +7000,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27977",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22556,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Major Agility"
     }
   },
   {
@@ -6906,7 +7055,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27981",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22560,
+      "recipeItemName": "Formula: Enchant Weapon - Sunfire"
     }
   },
   {
@@ -6959,7 +7110,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27982",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22561,
+      "recipeItemName": "Formula: Enchant Weapon - Soulfrost"
     }
   },
   {
@@ -7006,7 +7159,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=27984",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22559,
+      "recipeItemName": "Formula: Enchant Weapon - Mongoose"
     }
   },
   {
@@ -7047,7 +7202,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=28003",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22558,
+      "recipeItemName": "Formula: Enchant Weapon - Spellsurge"
     }
   },
   {
@@ -7088,7 +7245,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=28004",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22557,
+      "recipeItemName": "Formula: Enchant Weapon - Battlemaster"
     }
   },
   {
@@ -7556,7 +7715,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=33992",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 28270,
+      "recipeItemName": "Formula: Enchant Chest - Major Resilience"
     }
   },
   {
@@ -7967,7 +8128,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=34005",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 28276,
+      "recipeItemName": "Formula: Enchant Cloak - Greater Arcane Resistance"
     }
   },
   {
@@ -8002,7 +8165,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=34006",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 28277,
+      "recipeItemName": "Formula: Enchant Cloak - Greater Shadow Resistance"
     }
   },
   {
@@ -8037,7 +8202,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=34007",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 28279,
+      "recipeItemName": "Formula: Enchant Boots - Cat's Swiftness"
     }
   },
   {
@@ -8072,7 +8239,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=34008",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 28280,
+      "recipeItemName": "Formula: Enchant Boots - Boar's Speed"
     }
   },
   {
@@ -8316,7 +8485,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=42974",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 33307,
+      "recipeItemName": "Formula: Enchant Weapon - Executioner"
     }
   },
   {
@@ -8422,7 +8593,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=46578",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35498,
+      "recipeItemName": "Formula: Enchant Weapon - Deathfrost"
     }
   },
   {
@@ -8500,7 +8673,9 @@
     "spellLink": "https://www.wowhead.com/tbc/spell=47051",
     "produces": null,
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35756,
+      "recipeItemName": "Formula: Enchant Cloak - Steelweave"
     }
   }
 ]

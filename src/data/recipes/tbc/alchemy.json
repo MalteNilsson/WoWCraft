@@ -223,7 +223,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3396,
+      "recipeItemName": "Recipe: Elixir of Lesser Agility"
     }
   },
   {
@@ -314,7 +316,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2555,
+      "recipeItemName": "Recipe: Swiftness Potion"
     }
   },
   {
@@ -491,7 +495,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3393,
+      "recipeItemName": "Recipe: Minor Magic Resistance Potion"
     }
   },
   {
@@ -582,7 +588,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3394,
+      "recipeItemName": "Recipe: Potion of Curing"
     }
   },
   {
@@ -627,7 +635,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3395,
+      "recipeItemName": "Recipe: Limited Invulnerability Potion"
     }
   },
   {
@@ -764,7 +774,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6211,
+      "recipeItemName": "Recipe: Elixir of Ogre's Strength"
     }
   },
   {
@@ -809,7 +821,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2553,
+      "recipeItemName": "Recipe: Elixir of Minor Agility"
     }
   },
   {
@@ -993,7 +1007,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 6000
     }
   },
   {
@@ -1038,7 +1053,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3831,
+      "recipeItemName": "Recipe: Mighty Troll's Blood Potion"
     }
   },
   {
@@ -1129,7 +1146,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 3832,
+      "recipeItemName": "Recipe: Elixir of Detect Lesser Invisibility"
     }
   },
   {
@@ -1221,7 +1240,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4597,
+      "recipeItemName": "Recipe: Discolored Healing Potion"
     }
   },
   {
@@ -1266,7 +1287,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4624,
+      "recipeItemName": "Recipe: Lesser Stoneshield Potion"
     }
   },
   {
@@ -1984,7 +2007,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6663,
+      "recipeItemName": "Recipe: Elixir of Giant Growth"
     }
   },
   {
@@ -2258,7 +2283,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9293,
+      "recipeItemName": "Recipe: Magic Resistance Potion"
     }
   },
   {
@@ -2303,7 +2330,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10644,
+      "recipeItemName": "Recipe: Goblin Rocket Fuel"
     }
   },
   {
@@ -2394,7 +2423,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9294,
+      "recipeItemName": "Recipe: Wildvine Potion"
     }
   },
   {
@@ -2578,7 +2609,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9295,
+      "recipeItemName": "Recipe: Invisibility Potion"
     }
   },
   {
@@ -2669,7 +2702,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9296,
+      "recipeItemName": "Recipe: Gift of Arthas"
     }
   },
   {
@@ -2754,7 +2789,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9297,
+      "recipeItemName": "Recipe: Elixir of Dream Vision"
     }
   },
   {
@@ -2799,7 +2836,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 9298,
+      "recipeItemName": "Recipe: Elixir of Giants"
     }
   },
   {
@@ -3250,7 +3289,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -3389,7 +3429,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -3481,7 +3522,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -3654,7 +3696,9 @@
       "quantity": 0
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13486,
+      "recipeItemName": "Recipe: Transmute Undeath to Water"
     }
   },
   {
@@ -3687,7 +3731,9 @@
       "quantity": 0
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13487,
+      "recipeItemName": "Recipe: Transmute Water to Undeath"
     }
   },
   {
@@ -3720,7 +3766,9 @@
       "quantity": 0
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13488,
+      "recipeItemName": "Recipe: Transmute Life to Earth"
     }
   },
   {
@@ -3753,7 +3801,9 @@
       "quantity": 0
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13489,
+      "recipeItemName": "Recipe: Transmute Earth to Life"
     }
   },
   {
@@ -3798,7 +3848,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13490,
+      "recipeItemName": "Recipe: Greater Stoneshield Potion"
     }
   },
   {
@@ -3843,7 +3895,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13491,
+      "recipeItemName": "Recipe: Elixir of the Mongoose"
     }
   },
   {
@@ -3888,7 +3942,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -3933,7 +3988,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 20000
     }
   },
   {
@@ -3978,7 +4034,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13494,
+      "recipeItemName": "Recipe: Greater Fire Protection Potion"
     }
   },
   {
@@ -4023,7 +4081,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13495,
+      "recipeItemName": "Recipe: Greater Frost Protection Potion"
     }
   },
   {
@@ -4068,7 +4128,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13496,
+      "recipeItemName": "Recipe: Greater Nature Protection Potion"
     }
   },
   {
@@ -4113,7 +4175,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13497,
+      "recipeItemName": "Recipe: Greater Arcane Protection Potion"
     }
   },
   {
@@ -4158,7 +4222,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13499,
+      "recipeItemName": "Recipe: Greater Shadow Protection Potion"
     }
   },
   {
@@ -4203,7 +4269,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13501,
+      "recipeItemName": "Recipe: Major Mana Potion"
     }
   },
   {
@@ -4313,7 +4381,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13518,
+      "recipeItemName": "Recipe: Flask of Petrification"
     }
   },
   {
@@ -4364,7 +4434,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13519,
+      "recipeItemName": "Recipe: Flask of the Titans"
     }
   },
   {
@@ -4415,7 +4487,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13520,
+      "recipeItemName": "Recipe: Flask of Distilled Wisdom"
     }
   },
   {
@@ -4466,7 +4540,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13521,
+      "recipeItemName": "Recipe: Flask of Supreme Power"
     }
   },
   {
@@ -4517,7 +4593,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 13522,
+      "recipeItemName": "Recipe: Flask of Chromatic Resistance"
     }
   },
   {
@@ -4562,7 +4640,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 17709,
+      "recipeItemName": "Recipe: Elixir of Frost Power"
     }
   },
   {
@@ -4613,7 +4693,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18257,
+      "recipeItemName": "Recipe: Major Rejuvenation Potion"
     }
   },
   {
@@ -4984,7 +5066,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21547,
+      "recipeItemName": "Recipe: Elixir of Greater Firepower"
     }
   },
   {
@@ -5256,7 +5340,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22903,
+      "recipeItemName": "Recipe: Insane Strength Potion"
     }
   },
   {
@@ -5347,7 +5433,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22904,
+      "recipeItemName": "Recipe: Elixir of the Searching Eye"
     }
   },
   {
@@ -5721,7 +5809,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22912,
+      "recipeItemName": "Recipe: Heroic Potion"
     }
   },
   {
@@ -5766,7 +5856,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22913,
+      "recipeItemName": "Recipe: Haste Potion"
     }
   },
   {
@@ -5811,7 +5903,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22914,
+      "recipeItemName": "Recipe: Destruction Potion"
     }
   },
   {
@@ -5996,7 +6090,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22919,
+      "recipeItemName": "Recipe: Elixir of Major Mageblood"
     }
   },
   {
@@ -6041,7 +6137,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22920,
+      "recipeItemName": "Recipe: Major Fire Protection Potion"
     }
   },
   {
@@ -6086,7 +6184,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22921,
+      "recipeItemName": "Recipe: Major Frost Protection Potion"
     }
   },
   {
@@ -6178,7 +6278,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22923,
+      "recipeItemName": "Recipe: Major Arcane Protection Potion"
     }
   },
   {
@@ -6223,7 +6325,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22924,
+      "recipeItemName": "Recipe: Major Shadow Protection Potion"
     }
   },
   {
@@ -6268,7 +6372,9 @@
       "quantity": 5
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22925,
+      "recipeItemName": "Recipe: Major Holy Protection Potion"
     }
   },
   {
@@ -6313,7 +6419,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22926,
+      "recipeItemName": "Recipe: Elixir of Empowerment"
     }
   },
   {
@@ -6358,7 +6466,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22927,
+      "recipeItemName": "Recipe: Ironshield Potion"
     }
   },
   {
@@ -7360,7 +7470,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31680,
+      "recipeItemName": "Recipe: Fel Strength Elixir"
     }
   },
   {
@@ -7405,7 +7517,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31682,
+      "recipeItemName": "Recipe: Fel Mana Potion"
     }
   },
   {
@@ -7450,7 +7564,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 31681,
+      "recipeItemName": "Recipe: Fel Regeneration Potion"
     }
   },
   {

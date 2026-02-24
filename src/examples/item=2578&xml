@@ -1,0 +1,24 @@
+<?xml
+version="1.0" encoding="UTF-8"?>
+<wowhead>
+    <item id="2578">
+        <name><![CDATA[Barbaric Linen Vest]]></name>
+        <level>14</level>
+        <quality id="2">Uncommon</quality>
+        <class id="4"><![CDATA[Armor]]></class>
+        <subclass id="1"><![CDATA[Cloth Armor]]></subclass>
+        <icon displayId="7811">inv_chest_fur</icon>
+        <inventorySlot id="5">Chest</inventorySlot>
+        <htmlTooltip><![CDATA[<table><tr><td><table style="display:inline-table; vertical-align:inherit"><tr><td><!--nstart--><b class="q2">Barbaric Linen Vest</b><!--nend--></td><th><b class="q0 whtt-extra">Phase 1</b></th></tr></table><!--ndstart--><!--ndend--><span class="q"><br>Item Level <!--ilvl-->14</span><!--bo--><br>Binds when equipped<!--ue--><table width="100%"><tr><td>Chest</td><th><!--scstart4:1--><span class="q1">Cloth</span><!--scend--></th></tr></table><!--rf--><span><!--amr-->26 Armor</span><br><span><!--stat7-->+2 Stamina</span><br><span><!--stat6-->+2 Spirit</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><!--ps--><br>Durability 50 / 50</td></tr></table><table><tr><td>Requires Level <!--rlvl-->9<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class="whtt-sellprice">Sell Price: <span class="moneysilver">2</span> <span class="moneycopper">24</span></div></td></tr></table>]]></htmlTooltip>
+        <json><![CDATA["appearances":{"0":[7811,""]},"armor":26,"classs":4,"displayid":7811,"flags2":24580,"id":2578,"level":14,"name":"Barbaric Linen Vest","quality":2,"reqlevel":9,"slot":5,"slotbak":5,"source":[1],"sourcemore":[{"c":11,"icon":"inv_chest_fur","n":"Barbaric Linen Vest","s":197,"t":6,"ti":2395}],"subclass":1]]></json>
+        <jsonEquip><![CDATA["appearances":{"0":[7811,""]},"armor":26,"avgbuyout":1499,"displayid":7811,"dmgrange":0.20,"dura":50,"reqlevel":9,"sellprice":224,"slotbak":5,"spi":2,"sta":2]]></jsonEquip>
+        <createdBy>
+            <spell id="2395" name="Barbaric Linen Vest" icon="inv_chest_fur" minCount="0" maxCount="0">
+                <reagent id="2996" name="Bolt of Linen Cloth" quality="1" icon="inv_fabric_linen_02" count="4"/>
+                <reagent id="2318" name="Light Leather" quality="1" icon="inv_misc_leatherscrap_03" count="1"/>
+                <reagent id="2321" name="Fine Thread" quality="1" icon="inv_fabric_wool_02" count="1"/>
+            </spell>
+        </createdBy>
+        <link>https://www.wowhead.com/tbc/item=2578/barbaric-linen-vest</link>
+    </item>
+</wowhead>

@@ -65,6 +65,7 @@ export type PriceMap = Record<
     minBuyout?: number;
     marketValue?: number;
     vendorPrice?: number;
+    numAuctions?: number;
   }
 >;
 
@@ -79,10 +80,12 @@ export type MaterialInfo = {
   link?: string;
   vendorPrice?: number;
   buyPrice?: number;
+  sellPrice?: number;
   auctionhouse?: boolean;
   bop?: boolean;
   limitedStock?: boolean;
   vendorStack?: number;
+  itemLevel?: number;
   createdBy?: {
     spellId?: number;
     spellName?: string;

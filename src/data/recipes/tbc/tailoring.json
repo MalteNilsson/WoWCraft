@@ -166,7 +166,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2598,
+      "recipeItemName": "Pattern: Red Linen Robe"
     }
   },
   {
@@ -613,7 +615,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2601,
+      "recipeItemName": "Pattern: Gray Woolen Robe"
     }
   },
   {
@@ -851,7 +855,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4292,
+      "recipeItemName": "Pattern: Green Woolen Bag"
     }
   },
   {
@@ -1142,7 +1148,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4346,
+      "recipeItemName": "Pattern: Heavy Woolen Cloak"
     }
   },
   {
@@ -1239,7 +1247,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4345,
+      "recipeItemName": "Pattern: Red Woolen Boots"
     }
   },
   {
@@ -1324,7 +1334,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4347,
+      "recipeItemName": "Pattern: Reinforced Woolen Shoulders"
     }
   },
   {
@@ -1409,7 +1421,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4349,
+      "recipeItemName": "Pattern: Phoenix Pants"
     }
   },
   {
@@ -1605,7 +1619,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4350,
+      "recipeItemName": "Pattern: Spider Silk Slippers"
     }
   },
   {
@@ -1697,7 +1713,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4351,
+      "recipeItemName": "Pattern: Shadow Hood"
     }
   },
   {
@@ -1782,7 +1800,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4352,
+      "recipeItemName": "Pattern: Boots of the Enchanter"
     }
   },
   {
@@ -1926,7 +1946,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4353,
+      "recipeItemName": "Pattern: Spider Belt"
     }
   },
   {
@@ -1983,7 +2005,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4356,
+      "recipeItemName": "Pattern: Star Belt"
     }
   },
   {
@@ -2114,7 +2138,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4348,
+      "recipeItemName": "Pattern: Phoenix Gloves"
     }
   },
   {
@@ -2299,7 +2325,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4354,
+      "recipeItemName": "Pattern: Rich Purple Silk Shirt"
     }
   },
   {
@@ -2516,7 +2544,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5771,
+      "recipeItemName": "Pattern: Red Linen Bag"
     }
   },
   {
@@ -2561,7 +2591,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5772,
+      "recipeItemName": "Pattern: Red Woolen Bag"
     }
   },
   {
@@ -2652,7 +2684,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5773,
+      "recipeItemName": "Pattern: Robes of Arcana"
     }
   },
   {
@@ -2703,7 +2737,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5774,
+      "recipeItemName": "Pattern: Green Silk Pack"
     }
   },
   {
@@ -2748,7 +2784,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5775,
+      "recipeItemName": "Pattern: Black Silk Pack"
     }
   },
   {
@@ -2879,7 +2917,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6271,
+      "recipeItemName": "Pattern: Red Linen Vest"
     }
   },
   {
@@ -3118,7 +3158,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6390,
+      "recipeItemName": "Pattern: Stylish Blue Shirt"
     }
   },
   {
@@ -3169,7 +3211,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6391,
+      "recipeItemName": "Pattern: Stylish Green Shirt"
     }
   },
   {
@@ -3842,7 +3886,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7092,
+      "recipeItemName": "Pattern: Hands of Darkness"
     }
   },
   {
@@ -3893,7 +3939,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7091,
+      "recipeItemName": "Pattern: Truefaith Gloves"
     }
   },
   {
@@ -3938,7 +3986,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7090,
+      "recipeItemName": "Pattern: Green Silk Armor"
     }
   },
   {
@@ -4135,7 +4185,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7084,
+      "recipeItemName": "Pattern: Crimson Silk Shoulders"
     }
   },
   {
@@ -4186,7 +4238,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7085,
+      "recipeItemName": "Pattern: Azure Shoulders"
     }
   },
   {
@@ -4243,7 +4297,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7086,
+      "recipeItemName": "Pattern: Earthen Silk Belt"
     }
   },
   {
@@ -4582,7 +4638,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10316,
+      "recipeItemName": "Pattern: Colorful Kilt"
     }
   },
   {
@@ -4879,7 +4937,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10300,
+      "recipeItemName": "Pattern: Red Mageweave Vest"
     }
   },
   {
@@ -4924,7 +4984,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10301,
+      "recipeItemName": "Pattern: White Bandit Mask"
     }
   },
   {
@@ -4969,7 +5031,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10302,
+      "recipeItemName": "Pattern: Red Mageweave Pants"
     }
   },
   {
@@ -5147,7 +5211,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10312,
+      "recipeItemName": "Pattern: Red Mageweave Gloves"
     }
   },
   {
@@ -5659,7 +5725,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10315,
+      "recipeItemName": "Pattern: Red Mageweave Shoulders"
     }
   },
   {
@@ -5896,7 +5964,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10320,
+      "recipeItemName": "Pattern: Red Mageweave Headband"
     }
   },
   {
@@ -5982,7 +6052,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 10463,
+      "recipeItemName": "Pattern: Shadoweave Mask"
     }
   },
   {
@@ -6346,7 +6418,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6391,7 +6464,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14467,
+      "recipeItemName": "Pattern: Frostweave Robe"
     }
   },
   {
@@ -6530,7 +6605,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6575,7 +6651,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14471,
+      "recipeItemName": "Pattern: Cindercloth Vest"
     }
   },
   {
@@ -6673,7 +6751,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6718,7 +6797,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6763,7 +6843,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14476,
+      "recipeItemName": "Pattern: Cindercloth Gloves"
     }
   },
   {
@@ -6814,7 +6896,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6859,7 +6942,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6904,7 +6988,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6955,7 +7040,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 12500
     }
   },
   {
@@ -7047,7 +7133,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14482,
+      "recipeItemName": "Pattern: Cindercloth Cloak"
     }
   },
   {
@@ -7139,7 +7227,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 12500
     }
   },
   {
@@ -7184,7 +7273,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 12500
     }
   },
   {
@@ -7241,7 +7331,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14486,
+      "recipeItemName": "Pattern: Cloak of Fire"
     }
   },
   {
@@ -7339,7 +7431,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7384,7 +7477,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14490,
+      "recipeItemName": "Pattern: Cindercloth Pants"
     }
   },
   {
@@ -7441,7 +7536,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14493,
+      "recipeItemName": "Pattern: Robe of Winter Night"
     }
   },
   {
@@ -7492,7 +7589,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7537,7 +7635,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7588,7 +7687,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14494,
+      "recipeItemName": "Pattern: Brightcloth Pants"
     }
   },
   {
@@ -7633,7 +7734,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14497,
+      "recipeItemName": "Pattern: Mooncloth Leggings"
     }
   },
   {
@@ -7678,7 +7781,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7723,7 +7827,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7768,7 +7873,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7813,7 +7919,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14499,
+      "recipeItemName": "Pattern: Mooncloth Bag"
     }
   },
   {
@@ -7858,7 +7966,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7903,7 +8012,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14501,
+      "recipeItemName": "Pattern: Mooncloth Vest"
     }
   },
   {
@@ -7948,7 +8059,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14507,
+      "recipeItemName": "Pattern: Mooncloth Shoulders"
     }
   },
   {
@@ -7999,7 +8112,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8050,7 +8164,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8101,7 +8216,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8158,7 +8274,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14509,
+      "recipeItemName": "Pattern: Mooncloth Circlet"
     }
   },
   {
@@ -8215,7 +8333,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8284,7 +8403,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14511,
+      "recipeItemName": "Pattern: Gloves of Spell Mastery"
     }
   },
   {
@@ -8341,7 +8462,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14510,
+      "recipeItemName": "Pattern: Bottomless Bag"
     }
   },
   {
@@ -8404,7 +8527,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14512,
+      "recipeItemName": "Pattern: Truefaith Vestments"
     }
   },
   {
@@ -8467,7 +8592,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14513,
+      "recipeItemName": "Pattern: Robe of the Archmage"
     }
   },
   {
@@ -8530,7 +8657,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 14514,
+      "recipeItemName": "Pattern: Robe of the Void"
     }
   },
   {
@@ -8779,7 +8908,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 17724,
+      "recipeItemName": "Pattern: Green Holiday Shirt"
     }
   },
   {
@@ -8836,7 +8967,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18265,
+      "recipeItemName": "Pattern: Flarecore Wraps"
     }
   },
   {
@@ -8956,7 +9089,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18414,
+      "recipeItemName": "Pattern: Belt of the Archmage"
     }
   },
   {
@@ -9013,7 +9148,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18415,
+      "recipeItemName": "Pattern: Felcloth Gloves"
     }
   },
   {
@@ -9064,7 +9201,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18416,
+      "recipeItemName": "Pattern: Inferno Gloves"
     }
   },
   {
@@ -9115,7 +9254,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18417,
+      "recipeItemName": "Pattern: Mooncloth Gloves"
     }
   },
   {
@@ -9166,7 +9307,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18418,
+      "recipeItemName": "Pattern: Cloak of Warding"
     }
   },
   {
@@ -9777,7 +9920,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20546,
+      "recipeItemName": "Pattern: Runed Stygian Leggings"
     }
   },
   {
@@ -9834,7 +9979,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20548,
+      "recipeItemName": "Pattern: Runed Stygian Belt"
     }
   },
   {
@@ -9891,7 +10038,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 20547,
+      "recipeItemName": "Pattern: Runed Stygian Boots"
     }
   },
   {
@@ -9995,7 +10144,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21369,
+      "recipeItemName": "Pattern: Felcloth Bag"
     }
   },
   {
@@ -10052,7 +10203,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21371,
+      "recipeItemName": "Pattern: Core Felcloth Bag"
     }
   },
   {
@@ -10103,7 +10256,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21722,
+      "recipeItemName": "Pattern: Festival Dress"
     }
   },
   {
@@ -10154,7 +10309,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21723,
+      "recipeItemName": "Pattern: Festival Suit"
     }
   },
   {
@@ -10590,7 +10747,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21911,
+      "recipeItemName": "Pattern: Spellfire Bag"
     }
   },
   {
@@ -10952,7 +11111,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21919,
+      "recipeItemName": "Pattern: Primal Mooncloth Bag"
     }
   },
   {
@@ -11526,7 +11687,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21903,
+      "recipeItemName": "Pattern: Soulcloth Shoulders"
     }
   },
   {
@@ -11565,7 +11728,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21904,
+      "recipeItemName": "Pattern: Soulcloth Vest"
     }
   },
   {
@@ -11610,7 +11775,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21905,
+      "recipeItemName": "Pattern: Arcanoweave Bracers"
     }
   },
   {
@@ -11655,7 +11822,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21906,
+      "recipeItemName": "Pattern: Arcanoweave Boots"
     }
   },
   {
@@ -11700,7 +11869,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21907,
+      "recipeItemName": "Pattern: Arcanoweave Robe"
     }
   },
   {
@@ -11845,7 +12016,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22309,
+      "recipeItemName": "Pattern: Big Bag of Enchantment"
     }
   },
   {
@@ -12002,7 +12175,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22684,
+      "recipeItemName": "Pattern: Glacial Gloves"
     }
   },
   {
@@ -12053,7 +12228,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22686,
+      "recipeItemName": "Pattern: Glacial Vest"
     }
   },
   {
@@ -12104,7 +12281,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22685,
+      "recipeItemName": "Pattern: Glacial Cloak"
     }
   },
   {
@@ -12155,7 +12334,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22687,
+      "recipeItemName": "Pattern: Glacial Wrists"
     }
   },
   {
@@ -12623,7 +12804,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24296,
+      "recipeItemName": "Pattern: Unyielding Bracers"
     }
   },
   {
@@ -12668,7 +12851,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24297,
+      "recipeItemName": "Pattern: Bracers of Havok"
     }
   },
   {
@@ -12707,7 +12892,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24298,
+      "recipeItemName": "Pattern: Blackstrike Bracers"
     }
   },
   {
@@ -12752,7 +12939,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24299,
+      "recipeItemName": "Pattern: Cloak of the Black Void"
     }
   },
   {
@@ -12791,7 +12980,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24300,
+      "recipeItemName": "Pattern: Cloak of Eternity"
     }
   },
   {
@@ -12830,7 +13021,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24301,
+      "recipeItemName": "Pattern: White Remedy Cape"
     }
   },
   {
@@ -12875,7 +13068,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24302,
+      "recipeItemName": "Pattern: Unyielding Girdle"
     }
   },
   {
@@ -12920,7 +13115,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24303,
+      "recipeItemName": "Pattern: Girdle of Ruination"
     }
   },
   {
@@ -12965,7 +13162,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24304,
+      "recipeItemName": "Pattern: Black Belt of Knowledge"
     }
   },
   {
@@ -13010,7 +13209,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24305,
+      "recipeItemName": "Pattern: Resolute Cape"
     }
   },
   {
@@ -13055,7 +13256,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24306,
+      "recipeItemName": "Pattern: Vengeance Wrap"
     }
   },
   {
@@ -13100,7 +13303,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24307,
+      "recipeItemName": "Pattern: Manaweave Cloak"
     }
   },
   {
@@ -13145,7 +13350,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24308,
+      "recipeItemName": "Pattern: Whitemend Pants"
     }
   },
   {
@@ -13190,7 +13397,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24309,
+      "recipeItemName": "Pattern: Spellstrike Pants"
     }
   },
   {
@@ -13235,7 +13444,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24310,
+      "recipeItemName": "Pattern: Battlecast Pants"
     }
   },
   {
@@ -13280,7 +13491,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24311,
+      "recipeItemName": "Pattern: Whitemend Hood"
     }
   },
   {
@@ -13325,7 +13538,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24312,
+      "recipeItemName": "Pattern: Spellstrike Hood"
     }
   },
   {
@@ -13370,7 +13585,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 24313,
+      "recipeItemName": "Pattern: Battlecast Hood"
     }
   },
   {
@@ -13496,7 +13713,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30280,
+      "recipeItemName": "Pattern: Belt of Blasting"
     }
   },
   {
@@ -13553,7 +13772,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30281,
+      "recipeItemName": "Pattern: Belt of the Long Road"
     }
   },
   {
@@ -13604,7 +13825,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30282,
+      "recipeItemName": "Pattern: Boots of Blasting"
     }
   },
   {
@@ -13655,7 +13878,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30283,
+      "recipeItemName": "Pattern: Boots of the Long Road"
     }
   },
   {
@@ -14242,7 +14467,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32754,
+      "recipeItemName": "Pattern: Bracers of Nimble Thought"
     }
   },
   {
@@ -14293,7 +14520,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32755,
+      "recipeItemName": "Pattern: Mantle of Nimble Thought"
     }
   },
   {
@@ -14344,7 +14573,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32752,
+      "recipeItemName": "Pattern: Swiftheal Wraps"
     }
   },
   {
@@ -14395,7 +14626,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32753,
+      "recipeItemName": "Pattern: Swiftheal Mantle"
     }
   },
   {
@@ -14546,7 +14779,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35204,
+      "recipeItemName": "Pattern: Sunfire Handwraps"
     }
   },
   {
@@ -14597,7 +14832,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35205,
+      "recipeItemName": "Pattern: Hands of Eternal Light"
     }
   },
   {
@@ -14642,7 +14879,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35206,
+      "recipeItemName": "Pattern: Sunfire Robe"
     }
   },
   {
@@ -14681,7 +14920,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35207,
+      "recipeItemName": "Pattern: Robe of Eternal Light"
     }
   },
   {

@@ -21,13 +21,15 @@ import tbcJewelcraftingItems from '@/data/recipes/tbc/jewelcrafting_items.json';
 function processMaterials(raw: Record<string, any>): Record<number, MaterialInfo> {
   return Object.fromEntries(
     Object.entries(raw).map(([id, val]: [string, any]) => {
-      const { vendorPrice, limitedStock, vendorStack, ...rest } = val;
+      const { vendorPrice, sellPrice, limitedStock, vendorStack, ...rest } = val;
       const safeVendorPrice = typeof vendorPrice === "number" ? vendorPrice : undefined;
       const buyPrice = safeVendorPrice;
+      const safeSellPrice = typeof sellPrice === "number" && sellPrice > 0 ? sellPrice : undefined;
       return [parseInt(id), {
         ...rest,
         vendorPrice: safeVendorPrice,
         buyPrice,
+        sellPrice: safeSellPrice,
         limitedStock: limitedStock === true ? true : undefined,
         vendorStack: typeof vendorStack === "number" && vendorStack > 1 ? vendorStack : undefined
       }];

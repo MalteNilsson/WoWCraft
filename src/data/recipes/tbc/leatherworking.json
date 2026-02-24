@@ -147,7 +147,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2406,
+      "recipeItemName": "Pattern: Fine Leather Boots"
     }
   },
   {
@@ -352,7 +354,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2407,
+      "recipeItemName": "Pattern: White Leather Jerkin"
     }
   },
   {
@@ -397,7 +401,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2408,
+      "recipeItemName": "Pattern: Fine Leather Gloves"
     }
   },
   {
@@ -620,7 +626,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 2409,
+      "recipeItemName": "Pattern: Dark Leather Tunic"
     }
   },
   {
@@ -910,7 +918,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4293,
+      "recipeItemName": "Pattern: Hillman's Leather Vest"
     }
   },
   {
@@ -1041,7 +1051,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7360,
+      "recipeItemName": "Pattern: Dark Leather Gloves"
     }
   },
   {
@@ -1138,7 +1150,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4294,
+      "recipeItemName": "Pattern: Hillman's Belt"
     }
   },
   {
@@ -1235,7 +1249,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4296,
+      "recipeItemName": "Pattern: Dark Leather Shoulders"
     }
   },
   {
@@ -1338,7 +1354,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4297,
+      "recipeItemName": "Pattern: Barbaric Gloves"
     }
   },
   {
@@ -1436,7 +1454,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4299,
+      "recipeItemName": "Pattern: Guardian Armor"
     }
   },
   {
@@ -1545,7 +1565,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4298,
+      "recipeItemName": "Pattern: Guardian Belt"
     }
   },
   {
@@ -1642,7 +1664,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4300,
+      "recipeItemName": "Pattern: Guardian Leather Bracers"
     }
   },
   {
@@ -1764,7 +1788,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4301,
+      "recipeItemName": "Pattern: Barbaric Belt"
     }
   },
   {
@@ -2063,7 +2089,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5083,
+      "recipeItemName": "Pattern: Kodo Hide Bag"
     }
   },
   {
@@ -2154,7 +2182,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5786,
+      "recipeItemName": "Pattern: Murloc Scale Belt"
     }
   },
   {
@@ -2205,7 +2235,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5787,
+      "recipeItemName": "Pattern: Murloc Scale Breastplate"
     }
   },
   {
@@ -2256,7 +2288,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5788,
+      "recipeItemName": "Pattern: Thick Murloc Armor"
     }
   },
   {
@@ -2307,7 +2341,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5789,
+      "recipeItemName": "Pattern: Murloc Scale Bracers"
     }
   },
   {
@@ -2391,7 +2427,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 5972,
+      "recipeItemName": "Pattern: Fine Leather Pants"
     }
   },
   {
@@ -2621,7 +2659,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 4295,
+      "recipeItemName": "Pattern: Double-stitched Leather Gloves OLD"
     }
   },
   {
@@ -2800,7 +2840,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6476,
+      "recipeItemName": "Pattern: Deviate Scale Belt"
     }
   },
   {
@@ -2851,7 +2893,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 6710,
+      "recipeItemName": "Pattern: Moonglow Vest"
     }
   },
   {
@@ -3048,7 +3092,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7288,
+      "recipeItemName": "Pattern: Rugged Leather Pants"
     }
   },
   {
@@ -3459,7 +3505,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7363,
+      "recipeItemName": "Pattern: Pilferer's Gloves"
     }
   },
   {
@@ -3510,7 +3558,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7364,
+      "recipeItemName": "Pattern: Heavy Earthen Gloves"
     }
   },
   {
@@ -3635,7 +3685,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7449,
+      "recipeItemName": "Pattern: Dusky Leather Leggings"
     }
   },
   {
@@ -3726,7 +3778,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7450,
+      "recipeItemName": "Pattern: Green Whelp Armor"
     }
   },
   {
@@ -3974,7 +4028,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7452,
+      "recipeItemName": "Pattern: Dusky Boots"
     }
   },
   {
@@ -4025,7 +4081,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 7453,
+      "recipeItemName": "Pattern: Swift Boots"
     }
   },
   {
@@ -4150,7 +4208,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8384,
+      "recipeItemName": "Pattern: Comfortable Leather Hat"
     }
   },
   {
@@ -4275,7 +4335,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8385,
+      "recipeItemName": "Pattern: Turtle Scale Gloves"
     }
   },
   {
@@ -4459,7 +4521,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8386,
+      "recipeItemName": "Pattern: Big Voodoo Robe"
     }
   },
   {
@@ -4504,7 +4568,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8395,
+      "recipeItemName": "Pattern: Tough Scorpid Breastplate"
     }
   },
   {
@@ -4549,7 +4615,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8403,
+      "recipeItemName": "Pattern: Wild Leather Shoulders"
     }
   },
   {
@@ -4594,7 +4662,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8387,
+      "recipeItemName": "Pattern: Big Voodoo Mask"
     }
   },
   {
@@ -4639,7 +4709,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8397,
+      "recipeItemName": "Pattern: Tough Scorpid Bracers"
     }
   },
   {
@@ -4684,7 +4756,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8398,
+      "recipeItemName": "Pattern: Tough Scorpid Gloves"
     }
   },
   {
@@ -4729,7 +4803,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8404,
+      "recipeItemName": "Pattern: Wild Leather Vest"
     }
   },
   {
@@ -4774,7 +4850,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8405,
+      "recipeItemName": "Pattern: Wild Leather Helmet"
     }
   },
   {
@@ -4905,7 +4983,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8399,
+      "recipeItemName": "Pattern: Tough Scorpid Boots"
     }
   },
   {
@@ -5036,7 +5116,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8389,
+      "recipeItemName": "Pattern: Big Voodoo Pants"
     }
   },
   {
@@ -5081,7 +5163,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8390,
+      "recipeItemName": "Pattern: Big Voodoo Cloak"
     }
   },
   {
@@ -5126,7 +5210,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8400,
+      "recipeItemName": "Pattern: Tough Scorpid Shoulders"
     }
   },
   {
@@ -5171,7 +5257,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8406,
+      "recipeItemName": "Pattern: Wild Leather Boots"
     }
   },
   {
@@ -5216,7 +5304,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8401,
+      "recipeItemName": "Pattern: Tough Scorpid Leggings"
     }
   },
   {
@@ -5261,7 +5351,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8402,
+      "recipeItemName": "Pattern: Tough Scorpid Helm"
     }
   },
   {
@@ -5306,7 +5398,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8407,
+      "recipeItemName": "Pattern: Wild Leather Leggings"
     }
   },
   {
@@ -5351,7 +5445,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 8408,
+      "recipeItemName": "Pattern: Wild Leather Cloak"
     }
   },
   {
@@ -6017,7 +6113,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15727,
+      "recipeItemName": "Pattern: Heavy Scorpid Vest"
     }
   },
   {
@@ -6062,7 +6160,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6154,7 +6253,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15730,
+      "recipeItemName": "Pattern: Red Dragonscale Breastplate"
     }
   },
   {
@@ -6199,7 +6300,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6284,7 +6386,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15732,
+      "recipeItemName": "Pattern: Volcanic Leggings"
     }
   },
   {
@@ -6329,7 +6433,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15733,
+      "recipeItemName": "Pattern: Green Dragonscale Leggings"
     }
   },
   {
@@ -6474,7 +6580,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15737,
+      "recipeItemName": "Pattern: Chimeric Boots"
     }
   },
   {
@@ -6519,7 +6627,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15738,
+      "recipeItemName": "Pattern: Heavy Scorpid Gauntlets"
     }
   },
   {
@@ -6570,7 +6680,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6715,7 +6826,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15742,
+      "recipeItemName": "Pattern: Warbear Harness"
     }
   },
   {
@@ -6760,7 +6873,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15743,
+      "recipeItemName": "Pattern: Heavy Scorpid Belt"
     }
   },
   {
@@ -6805,7 +6920,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6850,7 +6966,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 10000
     }
   },
   {
@@ -6895,7 +7012,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15746,
+      "recipeItemName": "Pattern: Chimeric Leggings"
     }
   },
   {
@@ -6940,7 +7059,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15747,
+      "recipeItemName": "Pattern: Frostsaber Leggings"
     }
   },
   {
@@ -6985,7 +7106,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15748,
+      "recipeItemName": "Pattern: Heavy Scorpid Leggings"
     }
   },
   {
@@ -7036,7 +7159,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15749,
+      "recipeItemName": "Pattern: Volcanic Breastplate"
     }
   },
   {
@@ -7140,7 +7265,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15752,
+      "recipeItemName": "Pattern: Living Leggings"
     }
   },
   {
@@ -7197,7 +7324,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15753,
+      "recipeItemName": "Pattern: Stormshroud Armor"
     }
   },
   {
@@ -7289,7 +7418,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15755,
+      "recipeItemName": "Pattern: Chimeric Vest"
     }
   },
   {
@@ -7387,7 +7518,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7544,7 +7676,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15760,
+      "recipeItemName": "Pattern: Ironfeather Breastplate"
     }
   },
   {
@@ -7589,7 +7723,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15761,
+      "recipeItemName": "Pattern: Frostsaber Gloves"
     }
   },
   {
@@ -7699,7 +7835,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15763,
+      "recipeItemName": "Pattern: Blue Dragonscale Shoulders"
     }
   },
   {
@@ -7756,7 +7894,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15764,
+      "recipeItemName": "Pattern: Stormshroud Shoulders"
     }
   },
   {
@@ -7807,7 +7947,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7852,7 +7993,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -7897,7 +8039,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15769,
+      "recipeItemName": "Pattern: Onyxia Scale Cloak"
     }
   },
   {
@@ -7954,7 +8098,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15770,
+      "recipeItemName": "Pattern: Black Dragonscale Shoulders"
     }
   },
   {
@@ -8011,7 +8157,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15771,
+      "recipeItemName": "Pattern: Living Breastplate"
     }
   },
   {
@@ -8062,7 +8210,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15772,
+      "recipeItemName": "Pattern: Devilsaur Leggings"
     }
   },
   {
@@ -8119,7 +8269,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8170,7 +8321,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15774,
+      "recipeItemName": "Pattern: Heavy Scorpid Shoulders"
     }
   },
   {
@@ -8221,7 +8374,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15775,
+      "recipeItemName": "Pattern: Volcanic Shoulders"
     }
   },
   {
@@ -8278,7 +8433,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8335,7 +8491,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 15000
     }
   },
   {
@@ -8386,7 +8543,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15779,
+      "recipeItemName": "Pattern: Frostsaber Tunic"
     }
   },
   {
@@ -8443,7 +8602,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 15781,
+      "recipeItemName": "Pattern: Black Dragonscale Leggings"
     }
   },
   {
@@ -8755,7 +8916,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 17722,
+      "recipeItemName": "Pattern: Gloves of the Greatfather"
     }
   },
   {
@@ -8893,7 +9056,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18252,
+      "recipeItemName": "Pattern: Core Armor Kit"
     }
   },
   {
@@ -8995,7 +9160,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18514,
+      "recipeItemName": "Pattern: Girdle of Insight"
     }
   },
   {
@@ -9052,7 +9219,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18515,
+      "recipeItemName": "Pattern: Mongoose Boots"
     }
   },
   {
@@ -9109,7 +9278,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18516,
+      "recipeItemName": "Pattern: Swift Flight Bracers"
     }
   },
   {
@@ -9172,7 +9343,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18517,
+      "recipeItemName": "Pattern: Chromatic Cloak"
     }
   },
   {
@@ -9235,7 +9408,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18518,
+      "recipeItemName": "Pattern: Hide of the Wild"
     }
   },
   {
@@ -9298,7 +9473,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 18519,
+      "recipeItemName": "Pattern: Shifting Cloak"
     }
   },
   {
@@ -10708,7 +10885,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 21548,
+      "recipeItemName": "Pattern: Stormshroud Gloves"
     }
   },
   {
@@ -10765,7 +10944,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22692,
+      "recipeItemName": "Pattern: Polar Tunic"
     }
   },
   {
@@ -10822,7 +11003,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22694,
+      "recipeItemName": "Pattern: Polar Gloves"
     }
   },
   {
@@ -10879,7 +11062,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22695,
+      "recipeItemName": "Pattern: Polar Bracers"
     }
   },
   {
@@ -10936,7 +11121,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22696,
+      "recipeItemName": "Pattern: Icy Scale Breastplate"
     }
   },
   {
@@ -10993,7 +11180,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22697,
+      "recipeItemName": "Pattern: Icy Scale Gauntlets"
     }
   },
   {
@@ -11050,7 +11239,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 22698,
+      "recipeItemName": "Pattern: Icy Scale Bracers"
     }
   },
   {
@@ -12221,7 +12412,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25728,
+      "recipeItemName": "Pattern: Stylin' Purple Hat"
     }
   },
   {
@@ -12278,7 +12471,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25729,
+      "recipeItemName": "Pattern: Stylin' Adventure Hat"
     }
   },
   {
@@ -12335,7 +12530,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25731,
+      "recipeItemName": "Pattern: Stylin' Crimson Hat"
     }
   },
   {
@@ -12386,7 +12583,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 25730,
+      "recipeItemName": "Pattern: Stylin' Jungle Hat"
     }
   },
   {
@@ -13097,7 +13296,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29669,
+      "recipeItemName": "Pattern: Shadow Armor Kit"
     }
   },
   {
@@ -13136,7 +13337,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29672,
+      "recipeItemName": "Pattern: Flame Armor Kit"
     }
   },
   {
@@ -13175,7 +13378,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29673,
+      "recipeItemName": "Pattern: Frost Armor Kit"
     }
   },
   {
@@ -13214,7 +13419,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29674,
+      "recipeItemName": "Pattern: Nature Armor Kit"
     }
   },
   {
@@ -13253,7 +13460,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29675,
+      "recipeItemName": "Pattern: Arcane Armor Kit"
     }
   },
   {
@@ -14355,7 +14564,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29723,
+      "recipeItemName": "Pattern: Cobrascale Hood"
     }
   },
   {
@@ -14412,7 +14623,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29724,
+      "recipeItemName": "Pattern: Cobrascale Gloves"
     }
   },
   {
@@ -14469,7 +14682,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29725,
+      "recipeItemName": "Pattern: Windscale Hood"
     }
   },
   {
@@ -14520,7 +14735,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29726,
+      "recipeItemName": "Pattern: Hood of Primal Life"
     }
   },
   {
@@ -14571,7 +14788,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29727,
+      "recipeItemName": "Pattern: Gloves of the Living Touch"
     }
   },
   {
@@ -14628,7 +14847,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29728,
+      "recipeItemName": "Pattern: Windslayer Wraps"
     }
   },
   {
@@ -14685,7 +14906,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29729,
+      "recipeItemName": "Pattern: Living Dragonscale Helm"
     }
   },
   {
@@ -14742,7 +14965,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29730,
+      "recipeItemName": "Pattern: Earthen Netherscale Boots"
     }
   },
   {
@@ -14799,7 +15024,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29731,
+      "recipeItemName": "Pattern: Windstrike Gloves"
     }
   },
   {
@@ -14856,7 +15083,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29732,
+      "recipeItemName": "Pattern: Netherdrake Helm"
     }
   },
   {
@@ -14913,7 +15142,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29733,
+      "recipeItemName": "Pattern: Netherdrake Gloves"
     }
   },
   {
@@ -14970,7 +15201,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 29734,
+      "recipeItemName": "Pattern: Thick Netherscale Breastplate"
     }
   },
   {
@@ -15987,7 +16220,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30301,
+      "recipeItemName": "Pattern: Belt of Natural Power"
     }
   },
   {
@@ -16044,7 +16279,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30302,
+      "recipeItemName": "Pattern: Belt of Deep Shadow"
     }
   },
   {
@@ -16101,7 +16338,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30303,
+      "recipeItemName": "Pattern: Belt of the Black Eagle"
     }
   },
   {
@@ -16158,7 +16397,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30304,
+      "recipeItemName": "Pattern: Monsoon Belt"
     }
   },
   {
@@ -16209,7 +16450,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30305,
+      "recipeItemName": "Pattern: Boots of Natural Grace"
     }
   },
   {
@@ -16260,7 +16503,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30306,
+      "recipeItemName": "Pattern: Boots of Utter Darkness"
     }
   },
   {
@@ -16317,7 +16562,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30307,
+      "recipeItemName": "Pattern: Boots of the Crimson Hawk"
     }
   },
   {
@@ -16374,7 +16621,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 30308,
+      "recipeItemName": "Pattern: Hurricane Boots"
     }
   },
   {
@@ -16897,7 +17146,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32744,
+      "recipeItemName": "Pattern: Bracers of Renewed Life"
     }
   },
   {
@@ -16948,7 +17199,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32745,
+      "recipeItemName": "Pattern: Shoulderpads of Renewed Life"
     }
   },
   {
@@ -16993,7 +17246,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32746,
+      "recipeItemName": "Pattern: Swiftstrike Bracers"
     }
   },
   {
@@ -17038,7 +17293,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32747,
+      "recipeItemName": "Pattern: Swiftstrike Shoulders"
     }
   },
   {
@@ -17095,7 +17352,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32748,
+      "recipeItemName": "Pattern: Bindings of Lightning Reflexes"
     }
   },
   {
@@ -17152,7 +17411,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32749,
+      "recipeItemName": "Pattern: Shoulders of Lightning Reflexes"
     }
   },
   {
@@ -17209,7 +17470,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32750,
+      "recipeItemName": "Pattern: Living Earth Bindings"
     }
   },
   {
@@ -17266,7 +17529,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 32751,
+      "recipeItemName": "Pattern: Living Earth Shoulders"
     }
   },
   {
@@ -17818,7 +18083,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 34491,
+      "recipeItemName": "Pattern: Bag of Many Hides"
     }
   },
   {
@@ -17875,7 +18142,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35212,
+      "recipeItemName": "Pattern: Leather Gauntlets of the Sun"
     }
   },
   {
@@ -17932,7 +18201,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35213,
+      "recipeItemName": "Pattern: Fletcher's Gloves of the Phoenix"
     }
   },
   {
@@ -17989,7 +18260,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35214,
+      "recipeItemName": "Pattern: Gloves of Immortal Dusk"
     }
   },
   {
@@ -18046,7 +18319,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35215,
+      "recipeItemName": "Pattern: Sun-Drenched Scale Gloves"
     }
   },
   {
@@ -18097,7 +18372,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35216,
+      "recipeItemName": "Pattern: Leather Chestguard of the Sun"
     }
   },
   {
@@ -18148,7 +18425,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35217,
+      "recipeItemName": "Pattern: Embrace of the Phoenix"
     }
   },
   {
@@ -18199,7 +18478,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35218,
+      "recipeItemName": "Pattern: Carapace of Sun and Shadow"
     }
   },
   {
@@ -18250,7 +18531,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 35219,
+      "recipeItemName": "Pattern: Sun-Drenched Scale Chestguard"
     }
   },
   {
