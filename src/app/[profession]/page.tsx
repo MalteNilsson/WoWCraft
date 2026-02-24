@@ -1459,8 +1459,8 @@ const renderXTick = selected
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
-          const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
-          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+          const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
+          const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
           const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
           return {
             recipe: r,
@@ -1474,7 +1474,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -1490,10 +1490,10 @@ const renderXTick = selected
         const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty);
         
         // Calculate cost for this step based on displayed crafts
-        const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+        const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
         const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
         const displayedRecipeCost = includeRecipeCost && s.recipe.source ?
-          calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+          calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
         totalCost += displayedMaterialCost + displayedRecipeCost;
         
         // Calculate materials needed (exclude rod products for rod recipes - made in previous step)
@@ -1513,7 +1513,7 @@ const renderXTick = selected
       })).sort((a, b) => a.itemId - b.itemId),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
@@ -2089,10 +2089,10 @@ const renderXTick = selected
                           const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty);
                           
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
-                          const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+                          const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
                           const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
                           const displayedRecipeCost = includeRecipeCost && best.source ?
-                            calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+                            calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
                           const displayedTotalCost = displayedMaterialCost + displayedRecipeCost;
                           
                           return (
@@ -2662,7 +2662,7 @@ const renderXTick = selected
                 <div className="flex-1 flex flex-col items-center justify-center p-4">
                   <span className="text-neutral-400 mb-2">Base Cost Per Attempt</span>
                   <span className="text-xl font-semibold">
-                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing)} />
+                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} />
                   </span>
                 </div>
                 {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
@@ -2732,8 +2732,8 @@ const renderXTick = selected
                       value={selected ? (() => {
                         const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
                         const recipeCost = includeRecipeCost && selected.source ?
-                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
-                        const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) * expCrafts;
+                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
+                        const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) * expCrafts;
                         return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
                       })() : 0}
                       fallback="—"

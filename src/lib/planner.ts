@@ -1,5 +1,5 @@
 import { Recipe, PriceMap } from "./types";
-import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, type PriceSourcing } from "./recipeCalc";
+import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 
@@ -162,10 +162,10 @@ export function makeDynamicPlan(
             .filter(
             r =>
                 ENCHANTING_ROD_SPELL_IDS.has(r.id) &&
-                r.minSkill >= startSkill &&
-                r.minSkill <= target
+                getEffectiveMinSkill(r) >= startSkill &&
+                getEffectiveMinSkill(r) <= target
             )
-            .sort((a, b) => a.minSkill - b.minSkill)
+            .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b))
         : [];
 
     // Initialize backward DP table
@@ -188,11 +188,11 @@ export function makeDynamicPlan(
 
         // Handle rods if needed (going backward, so check if rod is needed at currentSkill)
         if (rodRecipes.length) {
-            const rod = rodRecipes.find(r => r.minSkill === currentSkill);
+            const rod = rodRecipes.find(r => getEffectiveMinSkill(r) === currentSkill);
             if (rod) {
-                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const rodRecipeCost = includeRecipeCost ? 
-                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
                 // Calculate skill-up from crafting the rod at currentSkill - 1
                 const skillBeforeRod = currentSkill - 1;
                 const skillUpsFromRod = Math.floor(expectedSkillUps(rod, skillBeforeRod));
@@ -234,7 +234,7 @@ export function makeDynamicPlan(
         // Find all valid recipes for this skill level
         const validRecipes = recipes.filter(r => {
             const chance = expectedSkillUps(r, currentSkill - 1);
-            if (r.minSkill > currentSkill - 1 || 
+            if (getEffectiveMinSkill(r) > currentSkill - 1 || 
                 chance <= 0 || 
                 blacklistedSpellIds.has(r.id)) {
                 return false;
@@ -251,7 +251,7 @@ export function makeDynamicPlan(
                 if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                 // Exclude recipes with > 500% profit margin (likely outlier data)
-                const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost');
+                const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
                 const priceData = prices[r.produces.id];
                 const ahPricePerItem = useMarketValue
                     ? (priceData?.marketValue ?? priceData?.minBuyout ?? 0)
@@ -298,7 +298,7 @@ export function makeDynamicPlan(
             }
             
             // Material cost only (for selection)
-            const materialCostPerCraft = craftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+            const materialCostPerCraft = craftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
             const materialCostPerSkillUp = materialCostPerCraft / chance;
             
             // Recipe cost (for later comparison)
@@ -406,10 +406,10 @@ export function makeDynamicPlan(
         }
         const chance = expectedSkillUps(selectedRecipe, currentSkill - 1);
             const crafts = Math.ceil(1 / chance);
-        const materialCostPerCraft = craftCost(selectedRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+        const materialCostPerCraft = craftCost(selectedRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
         const materialCost = materialCostPerCraft * crafts;
         const recipeCost = includeRecipeCost ? 
-            craftCost(selectedRecipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+            craftCost(selectedRecipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
         // Store material cost in step.cost, recipe cost separately
         const totalStepCost = materialCost;
 
@@ -497,7 +497,7 @@ export function makeDynamicPlan(
                 }
 
                 const chance = expectedSkillUps(r, batchEnd - 1);
-                if (r.minSkill > batchStart || 
+                if (getEffectiveMinSkill(r) > batchStart || 
                     chance <= 0 || 
                     blacklistedSpellIds.has(r.id)) {
                     return false;
@@ -514,7 +514,7 @@ export function makeDynamicPlan(
                     if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                     // Exclude recipes with > 500% profit margin (likely outlier data)
-                    const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost');
+                    const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
                     const priceData = prices[r.produces.id];
                     const ahPricePerItem = useMarketValue
                         ? (priceData?.marketValue ?? priceData?.minBuyout ?? 0)
@@ -568,7 +568,7 @@ export function makeDynamicPlan(
                 }
                 
                 // Material cost only (for selection)
-                const materialCostPerCraft = craftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+                const materialCostPerCraft = craftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const totalMaterialCost = materialCostPerCraft * crafts;
                 const materialCostPerSkillUp = totalMaterialCost / totalSkillUps;
                 
@@ -680,30 +680,31 @@ export function makeDynamicPlan(
             let rod: Recipe | undefined;
             if (rodRecipes.length && profession === "Enchanting") {
                 // Check if rod falls within batch range (inclusive on both ends)
-                rod = rodRecipes.find(r => r.minSkill >= batchStart && r.minSkill <= batchEnd);
+                rod = rodRecipes.find(r => getEffectiveMinSkill(r) >= batchStart && getEffectiveMinSkill(r) <= batchEnd);
                 
                 // Special case: if batchStart is 1 (first batch), ensure we catch Runed Copper Rod at level 1
                 // This handles edge cases where batchEnd might be less than expected
                 if (!rod && batchStart === 1) {
-                    rod = rodRecipes.find(r => r.minSkill === 1);
+                    rod = rodRecipes.find(r => getEffectiveMinSkill(r) === 1);
                 }
             }
             
             // Calculate crafts needed for the batch, split by rod if present
             // If rod exists, we need:
-            // 1. Crafts from batchStart to rod.minSkill (exclusive)
-            // 2. Rod step at rod.minSkill
+            // 1. Crafts from batchStart to rod effective minSkill (exclusive)
+            // 2. Rod step at rod effective minSkill
             // 3. Crafts from endSkillAfterRod to batchEnd (if endSkillAfterRod < batchEnd)
             
             let craftsBeforeRod = 0;
             let craftsAfterRod = 0;
+            const rodMinSkill = rod ? getEffectiveMinSkill(rod) : 0;
             
             if (rod) {
                 // Calculate crafts before rod using sum-of-reciprocals
-                const skillUpsBeforeRod = rod.minSkill - batchStart;
+                const skillUpsBeforeRod = rodMinSkill - batchStart;
                 if (skillUpsBeforeRod > 0) {
                     let sumOfReciprocals = 0;
-                    for (let lvl = batchStart; lvl < rod.minSkill; lvl++) {
+                    for (let lvl = batchStart; lvl < rodMinSkill; lvl++) {
                         const chance = expectedSkillUps(selectedRecipe, lvl);
                         if (chance > 0) {
                             sumOfReciprocals += 1 / chance;
@@ -718,8 +719,8 @@ export function makeDynamicPlan(
                 }
                 
                 // Calculate skill-ups from rod and end skill after rod
-                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rod.minSkill));
-                const endSkillAfterRod = rod.minSkill + skillUpsFromRod;
+                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rodMinSkill));
+                const endSkillAfterRod = rodMinSkill + skillUpsFromRod;
                 
                 // Calculate crafts after rod using sum-of-reciprocals (if needed)
                 if (endSkillAfterRod < batchEnd) {
@@ -757,9 +758,9 @@ export function makeDynamicPlan(
                 }
             }
 
-            const materialCostPerCraft = craftCost(selectedRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+            const materialCostPerCraft = craftCost(selectedRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
             const recipeCost = includeRecipeCost ? 
-                craftCost(selectedRecipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+                craftCost(selectedRecipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
 
             // Create new state
             const newShoppingList = new Map(currentState.shoppingList);
@@ -767,13 +768,13 @@ export function makeDynamicPlan(
             
             // If rod exists in this batch, add rod step and regular recipe steps
             if (rod) {
-                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const rodRecipeCost = includeRecipeCost ? 
-                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing) : 0;
+                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
                 
                 // Calculate skill-ups from rod
-                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rod.minSkill));
-                const endSkillAfterRod = rod.minSkill + skillUpsFromRod;
+                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rodMinSkill));
+                const endSkillAfterRod = rodMinSkill + skillUpsFromRod;
                 
                 // Add recipe step for levels before rod (if any)
                 if (craftsBeforeRod > 0) {
@@ -783,7 +784,7 @@ export function makeDynamicPlan(
                         crafts: craftsBeforeRod,
                         cost: beforeRodCost,
                         recipeCost: recipeCost > 0 ? recipeCost : undefined,
-                        endSkill: rod.minSkill,
+                        endSkill: rodMinSkill,
                     });
                     
                     // Add materials for before-rod crafts
@@ -979,7 +980,7 @@ export function makeDynamicPlan(
                 
                 // Recalculate crafts and cost for combined range
                 const recalculatedCrafts = Math.ceil(sumOfReciprocals);
-                const materialCostPerCraft = craftCost(currentStep.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing);
+                const materialCostPerCraft = craftCost(currentStep.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const recalculatedCost = recalculatedCrafts !== Infinity ? materialCostPerCraft * recalculatedCrafts : Infinity;
                 
                 // Update current step with recalculated values

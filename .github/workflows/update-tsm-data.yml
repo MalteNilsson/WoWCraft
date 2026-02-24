@@ -10,6 +10,8 @@ on:
 jobs:
   update-prices:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for pushing commits
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

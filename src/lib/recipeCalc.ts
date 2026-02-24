@@ -2,6 +2,23 @@ import { Recipe, PriceMap, MaterialInfo, MaterialTreeNode } from "./types";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 import { getExpectedDisenchantValue } from "./disenchant";
 
+/**
+ * Recipes with messy data (minSkill: 0, difficulty levels with 0s) that are incorrectly
+ * treated as learned at level 1. Override to their lowest non-0 difficulty level.
+ */
+const RECIPE_MIN_SKILL_OVERRIDES: Record<number, number> = {
+  28022: 335,  // Large Prismatic Shard
+  42615: 335,  // Small Prismatic Shard
+  32667: 375,  // Runed Eternium Rod
+  42613: 300,  // Nexus Transformation
+  45765: 375,  // Void Shatter
+};
+
+/** Effective min skill to use a recipe; applies overrides for recipes with messy data. */
+export function getEffectiveMinSkill(recipe: Recipe): number {
+  const override = RECIPE_MIN_SKILL_OVERRIDES[recipe.id];
+  return override ?? recipe.minSkill;
+}
 
 function getAverageOutput(minCount?: number, maxCount?: number): number {
   const min = (minCount ?? 0) + 1;
@@ -129,7 +146,8 @@ export function craftCost(
   useMarketValue: boolean = false,
   allowSubCrafting: boolean = true,
   currentProfessionRecipeIds?: Set<number>,
-  priceSourcing: PriceSourcing = 'cost'
+  priceSourcing: PriceSourcing = 'cost',
+  profession?: string
 ): number {
   // If we only want the recipe cost
   if (recipeOnly) {
@@ -172,7 +190,7 @@ export function craftCost(
         difficulty: { orange: 0, yellow: 0, green: 0, gray: 0 },
         icon: matInfo.icon || ''
       };
-      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true, false, useMarketValue, true, currentProfessionRecipeIds, priceSourcing);
+      const rodCraftCost = craftCost(rodRecipe, prices, materialInfo, true, false, useMarketValue, true, currentProfessionRecipeIds, priceSourcing, profession);
       return sum + (Math.min(itemCost, rodCraftCost) * qty);
     }
 
@@ -193,7 +211,8 @@ export function craftCost(
   }
 
   // cost-vendor: subtract vendor sell value of crafted output (can be negative = profit)
-  if (priceSourcing === 'cost-vendor' && recipe.produces?.id) {
+  // Enchanting outputs (scrolls, rods, etc.) cannot be vendored or disenchanted
+  if (priceSourcing === 'cost-vendor' && recipe.produces?.id && profession !== 'Enchanting') {
     const outputItemId = recipe.produces.id;
     const outputQty = recipe.produces?.quantity ?? 1;
     const outputSellPrice = materialInfo[outputItemId]?.sellPrice ?? 0;
@@ -201,7 +220,9 @@ export function craftCost(
   }
 
   // disenchant: subtract expected disenchant value of crafted output (can be negative = profit)
-  if (priceSourcing === 'disenchant' && recipe.produces?.id) {
+  // Fall back to vendor sell price for items that cannot be disenchanted
+  // Enchanting outputs cannot be disenchanted
+  if (priceSourcing === 'disenchant' && recipe.produces?.id && profession !== 'Enchanting') {
     const outputItemId = recipe.produces.id;
     const outputQty = recipe.produces?.quantity ?? 1;
     const info = materialInfo[outputItemId];
@@ -209,7 +230,9 @@ export function craftCost(
     const quality = recipe.quality ?? info?.quality ?? 1;
     const isWeapon = info?.class === '2';
     const deValuePerItem = getExpectedDisenchantValue(itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, info?.class, info?.slot, outputItemId);
-    totalCost -= deValuePerItem * outputQty;
+    const outputSellPrice = materialInfo[outputItemId]?.sellPrice ?? 0;
+    const valuePerItem = deValuePerItem > 0 ? deValuePerItem : outputSellPrice;
+    totalCost -= valuePerItem * outputQty;
   }
 
   // auction-house: subtract expected AH returns from selling crafted output (can be negative = profit)
@@ -235,7 +258,8 @@ export function costPerSkillUp(
   useMarketValue: boolean = false,
   allowSubCrafting: boolean = true,
   currentProfessionRecipeIds?: Set<number>,
-  priceSourcing: PriceSourcing = 'cost'
+  priceSourcing: PriceSourcing = 'cost',
+  profession?: string
 ): {
   cost: number;
   isLimitedStock?: boolean;
@@ -247,7 +271,7 @@ export function costPerSkillUp(
     return { cost: Infinity };
   }
 
-  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost, false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds, priceSourcing);
+  const baseCost = craftCost(r, prices, materialInfo, includeRecipeCost, false, useMarketValue, allowSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
   const recipeCost = getRecipeCost(r, prices, materialInfo, useMarketValue);
 
   return {
