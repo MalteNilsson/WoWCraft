@@ -405,7 +405,7 @@ export default function EnchantingPlanner() {
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
   const [useMarketValue, setUseMarketValue] = useState(false);
-  const [optimizeSubCrafting, setOptimizeSubCrafting] = useState(false);
+  const optimizeSubCrafting = false; // Sub-crafting optimization disabled
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
 
   // Add isSliding state to track active slider interaction
@@ -413,7 +413,7 @@ export default function EnchantingPlanner() {
   const [isReleased, setIsReleased] = useState(false);
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
-  const [skipLimitedStock, setSkipLimitedStock] = useState(true);
+  const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
@@ -1691,21 +1691,6 @@ const renderXTick = selected
                     </button>
                   </div>
                           <div className="flex items-center justify-between">
-                    <label className="text-xs text-neutral-400">Skip Limited Stock</label>
-                    <button 
-                      onClick={() => setSkipLimitedStock(!skipLimitedStock)}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                        skipLimitedStock ? 'bg-yellow-400' : 'bg-neutral-700'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                          skipLimitedStock ? 'translate-x-5' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                          <div className="flex items-center justify-between">
                             <label className="text-xs text-neutral-400">Use Market Value</label>
                             <button 
                               onClick={() => setUseMarketValue(!useMarketValue)}
@@ -1731,21 +1716,6 @@ const renderXTick = selected
                               <span
                                 className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
                                   recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Optimize for materials sub-crafting</label>
-                            <button 
-                              onClick={() => setOptimizeSubCrafting(!optimizeSubCrafting)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                optimizeSubCrafting ? 'bg-yellow-400' : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  optimizeSubCrafting ? 'translate-x-5' : 'translate-x-1'
                                 }`}
                               />
                             </button>

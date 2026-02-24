@@ -59,6 +59,7 @@ export const blacklistedSpellIds = new Set<number>([
     26418,
     15295, // Dark Iron Shoulders
     15293, // Dark Iron Mail
+    9980,  // Ornate Mithril Helm
 ]);
 
 
