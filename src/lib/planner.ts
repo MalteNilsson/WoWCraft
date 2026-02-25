@@ -1,6 +1,7 @@
 import { Recipe, PriceMap } from "./types";
 import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
+import type { RegionSoldPerDayMap } from "./regionDataLoader";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 
 export { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS };
@@ -13,6 +14,11 @@ const MIN_NUM_AUCTIONS_AH_MODE = 4;
 
 /** In auction-house mode, reject recipes with profit margin above this (likely outlier data). 5 = 500% */
 const MAX_PROFIT_MARGIN_AH_MODE = 5;
+
+/** In auction-house mode, reject recipes whose output has soldPerDay below this (illiquid, unreliable prices). Alchemy: 10, others: 1. */
+export function getMinSoldPerDayForProfession(profession: string): number {
+  return profession === 'Alchemy' ? 10 : 1;
+}
 
 export const blacklistedSpellIds = new Set<number>([
     15596, // Smoking Heart of the Mountain
@@ -60,6 +66,20 @@ export const blacklistedSpellIds = new Set<number>([
     15295, // Dark Iron Shoulders
     15293, // Dark Iron Mail
     9980,  // Ornate Mithril Helm
+    32765, // Transmutes TBC
+    32766, 
+    28567,
+    28569,
+    28566,
+    28585,
+    28584,
+    28582,
+    28583,
+    28580,
+    28581,
+    29688,
+    28569,
+    28568,
 ]);
 
 
@@ -151,7 +171,8 @@ export function makeDynamicPlan(
     recalculateForEachLevel: boolean = false,
     optimizeSubCrafting: boolean = true,
     currentProfessionRecipeIds?: Set<number>,
-    priceSourcing: PriceSourcing = 'cost'
+    priceSourcing: PriceSourcing = 'cost',
+    regionSoldPerDay?: RegionSoldPerDayMap
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
@@ -250,6 +271,12 @@ export function makeDynamicPlan(
             if (priceSourcing === 'auction-house' && r.produces?.id) {
                 const numAuctions = prices[r.produces.id]?.numAuctions ?? 0;
                 if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
+
+                // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
+                if (regionSoldPerDay) {
+                    const soldPerDay = regionSoldPerDay.get(r.produces.id) ?? 0;
+                    if (soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
+                }
 
                 // Exclude recipes with > 500% profit margin (likely outlier data)
                 const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
@@ -513,6 +540,12 @@ export function makeDynamicPlan(
                 if (priceSourcing === 'auction-house' && r.produces?.id) {
                     const numAuctions = prices[r.produces.id]?.numAuctions ?? 0;
                     if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
+
+                    // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
+                    if (regionSoldPerDay) {
+                        const soldPerDay = regionSoldPerDay.get(r.produces.id) ?? 0;
+                        if (soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
+                    }
 
                     // Exclude recipes with > 500% profit margin (likely outlier data)
                     const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);

@@ -2,22 +2,22 @@ import { Recipe, PriceMap, MaterialInfo, MaterialTreeNode } from "./types";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
 import { getExpectedDisenchantValue } from "./disenchant";
 
-/**
- * Recipes with messy data (minSkill: 0, difficulty levels with 0s) that are incorrectly
- * treated as learned at level 1. Override to their lowest non-0 difficulty level.
- */
-const RECIPE_MIN_SKILL_OVERRIDES: Record<number, number> = {
-  28022: 335,  // Large Prismatic Shard
-  42615: 335,  // Small Prismatic Shard
-  32667: 375,  // Runed Eternium Rod
-  42613: 300,  // Nexus Transformation
-  45765: 375,  // Void Shatter
-};
+/** Get the lowest non-zero difficulty level from a recipe (orange, yellow, green, gray). */
+function getLowestNonZeroDifficulty(d: Recipe['difficulty']): number | null {
+  const vals = [d.orange, d.yellow, d.green, d.gray]
+    .filter((v): v is number => typeof v === 'number' && v > 0);
+  return vals.length > 0 ? Math.min(...vals) : null;
+}
 
-/** Effective min skill to use a recipe; applies overrides for recipes with messy data. */
+/**
+ * Effective min skill to use a recipe.
+ * When minSkill is 0 but difficulty has non-zero levels, use the lowest non-zero difficulty
+ * (e.g. yellow: 385 → recipe requires 385). Fixes recipes with messy scraper data.
+ */
 export function getEffectiveMinSkill(recipe: Recipe): number {
-  const override = RECIPE_MIN_SKILL_OVERRIDES[recipe.id];
-  return override ?? recipe.minSkill;
+  if (recipe.minSkill > 0) return recipe.minSkill;
+  const fromDifficulty = getLowestNonZeroDifficulty(recipe.difficulty);
+  return fromDifficulty ?? recipe.minSkill;
 }
 
 function getAverageOutput(minCount?: number, maxCount?: number): number {

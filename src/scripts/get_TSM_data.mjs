@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 // TSM API configuration
 const TSM_AUTH_URL = 'https://auth.tradeskillmaster.com/oauth2/token';
 const TSM_BASE_URL = 'https://pricing-api.tradeskillmaster.com/ah';
+const TSM_REGION_BASE_URL = 'https://pricing-api.tradeskillmaster.com/region';
 const TSM_API_KEY = process.env.TSM_API_KEY; // Get API key from environment variable
 
 // TSM OAuth2 client configuration
@@ -74,6 +75,43 @@ async function getAccessToken() {
     } catch (error) {
         console.error('✗ Failed to get access token:', error.message);
         throw error;
+    }
+}
+
+// Function to fetch region data from TSM API (GET /region/{regionId})
+async function fetchRegionData(regionId, regionName, accessToken) {
+    const url = `${TSM_REGION_BASE_URL}/${regionId}`;
+
+    const headers = {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+    };
+
+    try {
+        console.log(`Fetching region data for ${regionName} (regionId: ${regionId})...`);
+
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: headers
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // Save to file
+        const filename = `region_${regionId}_${regionName.replace(/\s+/g, '_')}.json`;
+        const filepath = path.join(outputDir, filename);
+
+        fs.writeFileSync(filepath, JSON.stringify(data, null, 2));
+        console.log(`✓ Saved region data for ${regionName} → ${filename}`);
+
+        return data;
+    } catch (error) {
+        console.error(`✗ Error fetching region data for ${regionName}:`, error.message);
+        return null;
     }
 }
 
@@ -377,6 +415,21 @@ async function testAPIConnection() {
     }
 }
 
+// Function to fetch region data for North America and Europe
+async function fetchRegionDataNAEU(accessToken) {
+    const regions = [
+        { id: 1, name: 'North America' },
+        { id: 2, name: 'Europe' }
+    ];
+
+    console.log('Fetching region data for North America and Europe...\n');
+
+    for (const region of regions) {
+        await fetchRegionData(region.id, region.name, accessToken);
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Rate limit: 10/24h for /region/{id}
+    }
+}
+
 // Function to show help
 function showHelp() {
     console.log('TSM Data Fetcher - Usage:');
@@ -386,10 +439,12 @@ function showHelp() {
     console.log('Options:');
     console.log('  anniversary     - Fetch Thunderstrike, Spineshatter, Soulseeker');
     console.log('  all             - Fetch ALL realms (default)');
+    console.log('  regions        - Fetch region-level data for North America and Europe');
     console.log('  help            - Show this help message');
     console.log('');
     console.log('Examples:');
     console.log('  node src/scripts/get_TSM_data.mjs anniversary');
+    console.log('  node src/scripts/get_TSM_data.mjs regions');
     console.log('  node src/scripts/get_TSM_data.mjs "Thunderstrike" "Alliance"');
     console.log('  node src/scripts/get_TSM_data.mjs all');
     console.log('');
@@ -427,6 +482,9 @@ async function main() {
         
         if (option === 'all') {
             await processAllRealms();
+        } else if (option === 'regions') {
+            const accessToken = await getAccessToken();
+            await fetchRegionDataNAEU(accessToken);
         } else if (REALM_LISTS[option]) {
             await processRealmList(option);
         } else {

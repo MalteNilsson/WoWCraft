@@ -18,7 +18,9 @@ import tbcLeatherworking from '@/data/recipes/tbc/leatherworking.json';
 import tbcTailoring from '@/data/recipes/tbc/tailoring.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement } from '@/lib/planner';
+import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
+import { getEffectiveMinSkill } from '@/lib/recipeCalc';
+import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
@@ -97,6 +99,19 @@ async function loadPriceData(realm: string, faction: string): Promise<any[]> {
       return loadPriceData('Thunderstrike', 'Alliance');
     }
     throw error;
+  }
+}
+
+// Function to load region data for soldPerDay sanity-check in auction-house mode
+async function loadRegionData(regionId: number): Promise<Map<number, number>> {
+  const regionNames: Record<number, string> = { 1: 'North_America', 2: 'Europe' };
+  const name = regionNames[regionId] ?? 'North_America';
+  try {
+    const data = await import(`@/data/prices/region_${regionId}_${name}.json`);
+    const rows = (data.default ?? data) as RegionItemStat[];
+    return buildRegionSoldPerDayMap(Array.isArray(rows) ? rows : []);
+  } catch {
+    return new Map();
   }
 }
 
@@ -422,6 +437,8 @@ export default function EnchantingPlanner() {
   // Add state for prices
   const [prices, setPrices] = useState<any>({});
   const [isLoadingPrices, setIsLoadingPrices] = useState(true);
+  // Region data for soldPerDay sanity-check in auction-house mode
+  const [regionSoldPerDay, setRegionSoldPerDay] = useState<Map<number, number> | null>(null);
   // Track the current price loading request to ignore outdated ones
   const priceLoadRequestIdRef = useRef(0);
   
@@ -834,14 +851,15 @@ export default function EnchantingPlanner() {
       recalculateForEachLevel,
       optimizeSubCrafting,
       currentProfessionRecipeIds,
-      priceSourcing
+      priceSourcing,
+      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1194,7 +1212,8 @@ const renderXTick = selected
       recalculateForEachLevel,
       optimizeSubCrafting,
       currentProfessionRecipeIds,
-      priceSourcing
+      priceSourcing,
+      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -1351,6 +1370,12 @@ const renderXTick = selected
     loadPrices();
   }, [selectedRealm, selectedFaction]);
 
+  // Load region data for soldPerDay sanity-check when realm changes
+  useEffect(() => {
+    const regionId = getRegionIdForRealm(selectedRealm);
+    loadRegionData(regionId).then(setRegionSoldPerDay);
+  }, [selectedRealm]);
+
   // Reset skill and target when version changes to ensure they're within valid range
   useEffect(() => {
     const currentMaxSkill = getMaxSkill(selectedVersion);
@@ -1446,7 +1471,7 @@ const renderXTick = selected
       
       const candidates = recipes
         .filter(r =>
-          r.minSkill <= start &&
+          getEffectiveMinSkill(r) <= start &&
           (r.difficulty.gray ?? Infinity) >= end &&
           r.id !== best.id &&
           !blacklistedSpellIds.has(r.id) &&
@@ -1455,7 +1480,9 @@ const renderXTick = selected
             r.source.recipeItemId &&
             materialInfo[r.source.recipeItemId]?.limitedStock &&
             materialInfo[r.source.recipeItemId]?.bop
-          ))
+          )) &&
+          // In auction-house mode: exclude low soldPerDay (illiquid) from alternatives too
+          !(priceSourcing === 'auction-house' && r.produces?.id && regionSoldPerDay && (regionSoldPerDay.get(r.produces.id) ?? 0) < getMinSoldPerDayForProfession(selectedProfession))
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
@@ -1474,7 +1501,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSoldPerDay]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
