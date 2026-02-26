@@ -15,9 +15,10 @@ const MIN_NUM_AUCTIONS_AH_MODE = 4;
 /** In auction-house mode, reject recipes with profit margin above this (likely outlier data). 5 = 500% */
 const MAX_PROFIT_MARGIN_AH_MODE = 5;
 
-/** In auction-house mode, reject recipes whose output has soldPerDay below this (illiquid, unreliable prices). Alchemy: 10, others: 1. */
-export function getMinSoldPerDayForProfession(profession: string): number {
-  return profession === 'Alchemy' ? 10 : 1;
+/** In auction-house mode, reject recipes whose output has soldPerDay below this (illiquid, unreliable prices).
+ * Region data uses fractional values (e.g. 0.007 = <1 sale/day). We only reject essentially dead items (soldPerDay ≈ 0). */
+export function getMinSoldPerDayForProfession(_profession: string): number {
+  return 0.001;
 }
 
 export const blacklistedSpellIds = new Set<number>([
@@ -273,9 +274,10 @@ export function makeDynamicPlan(
                 if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                 // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
+                // Only reject when we have data; items not in region map are allowed (no liquidity data)
                 if (regionSoldPerDay) {
-                    const soldPerDay = regionSoldPerDay.get(r.produces.id) ?? 0;
-                    if (soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
+                    const soldPerDay = regionSoldPerDay.get(r.produces.id);
+                    if (soldPerDay !== undefined && soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
                 }
 
                 // Exclude recipes with > 500% profit margin (likely outlier data)
@@ -542,9 +544,10 @@ export function makeDynamicPlan(
                     if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                     // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
+                    // Only reject when we have data; items not in region map are allowed (no liquidity data)
                     if (regionSoldPerDay) {
-                        const soldPerDay = regionSoldPerDay.get(r.produces.id) ?? 0;
-                        if (soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
+                        const soldPerDay = regionSoldPerDay.get(r.produces.id);
+                        if (soldPerDay !== undefined && soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
                     }
 
                     // Exclude recipes with > 500% profit margin (likely outlier data)

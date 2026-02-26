@@ -1,147 +1,110 @@
-# 🛠️ WoWCraft.io
+# WoWCraft
 
-**The ultimate World of Warcraft Classic crafting planner and leveling guide**
+A crafting planner and leveling guide for World of Warcraft Classic. WoWCraft calculates cost-effective profession leveling routes, material requirements, and skill progression paths using auction house data and vendor pricing.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.3.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+## Overview
 
-## 🎯 Overview
+WoWCraft helps players optimize profession leveling by finding the most efficient crafting sequences based on skill-up probabilities, material costs, and available price data. It supports both Vanilla (skill 1–300) and The Burning Crusade (skill 1–375).
 
-WoWCraft.io is a comprehensive crafting planner and leveling guide for World of Warcraft Classic. It helps players optimize their profession leveling by calculating the most cost-effective crafting routes, material requirements, and skill progression paths.
+**Live site:** [wowcraft.io](https://wowcraft.io)
 
-### ✨ Key Features
+## Supported Professions
 
-- **🎯 Smart Crafting Routes**: AI-powered algorithms find the most efficient leveling paths
-- **💰 Cost Optimization**: Real-time price calculations from auction house data
-- **📊 Visual Skill Progression**: Interactive charts showing skill-up probabilities
-- **🛒 Material Planning**: Complete material trees with vendor vs. craft cost analysis
-- **⚡ Real-time Updates**: Live price data from multiple realms and factions
-- **📱 Responsive Design**: Works perfectly on desktop and mobile devices
+- Alchemy
+- Blacksmithing
+- Enchanting
+- Engineering
+- Jewelcrafting (TBC only)
+- Leatherworking
+- Tailoring
 
-## 🚀 Live Demo
+## Features
 
-**[Visit WoWCraft.io →](https://wowcraft.io)**
+- **Dynamic route planning** – Calculates optimal crafting sequences using backward dynamic programming
+- **Multiple price sources** – Cost mode, vendor price, disenchant value, or auction house prices
+- **Realm and faction support** – Price data from multiple realms and regions (NA/EU)
+- **Material trees** – Nested crafting requirements with vendor vs. craft cost analysis
+- **Skill progression charts** – Visual difficulty zones and expected crafts per skill level
+- **Alternative recipes** – Compare alternative steps per level range
 
-## 🎮 Supported Professions
+## Technology Stack
 
-- **Alchemy** - Potions, elixirs, and transmutations
-- **Blacksmithing** - Weapons, armor, and tools
-- **Enchanting** - Enchants and disenchanting
-- **Engineering** - Gadgets, explosives, and devices
-- **Leatherworking** - Leather armor and bags
-- **Tailoring** - Cloth armor and bags
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- Recharts
+- Framer Motion
 
-## 🛠️ Technology Stack
-
-- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Charts**: [Recharts](https://recharts.org/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Deployment**: [Vercel](https://vercel.com/)
-
-## 📦 Installation
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18 or later
 - npm, yarn, pnpm, or bun
 
-### Setup
+### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MalteNilsson/WoWCraft.git
-   cd WoWCraft
-   ```
+```bash
+git clone https://github.com/MalteNilsson/WoWCraft.git
+cd WoWCraft
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+### Development
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
+```bash
+npm run dev
+```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000). The app redirects to the Enchanting planner by default.
 
-## 🎯 How to Use
+### Production Build
 
-1. **Select Your Profession**: Choose from Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, or Tailoring
-2. **Set Your Current Skill**: Use the slider to set your current profession skill level
-3. **Choose Your Target**: Set your desired target skill level (up to 300)
-4. **Configure Settings**: Adjust realm, faction, and pricing preferences
-5. **View Your Route**: The planner will show you the optimal crafting sequence
-6. **Analyze Materials**: See exactly what materials you need and their costs
+```bash
+npm run build
+npm start
+```
 
-## 📊 Features in Detail
+### Price Data
 
-### 🎯 Dynamic Route Planning
-- Calculates the most cost-effective crafting sequence
-- Considers skill-up probabilities and material costs
-- Updates in real-time as you adjust parameters
+The app includes bundled price data for several realms. To fetch fresh data from the TSM API:
 
-### 💰 Price Integration
-- Real auction house data from multiple realms
-- Vendor price fallbacks for unavailable items
-- Market value vs. minimum buyout options
+```bash
+npm run tsm:fetch
+```
 
-### 📈 Visual Analytics
-- Interactive skill progression charts
-- Color-coded difficulty zones (orange, yellow, green, gray)
-- Expected crafts and success rates
+Requires a TSM API access token. See `src/scripts/get_TSM_data.mjs` for configuration.
 
-### 🛒 Material Management
-- Complete material trees with nested crafting
-- Vendor vs. craft cost comparisons
-- Per-craft material requirements
+## Project Structure
 
-## 🤝 Contributing
+```
+src/
+  app/           # Next.js App Router pages and layout
+  data/          # Recipe data, price data, realm config
+  lib/           # Planner logic, recipe calculations, utilities
+  scripts/       # Scrapers and data fetch scripts
+```
 
-We welcome contributions! Here's how you can help:
+## Contributing
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
-### 🐛 Reporting Bugs
+Report bugs or request features via [GitHub Issues](https://github.com/MalteNilsson/WoWCraft/issues).
 
-Please use the [GitHub Issues](https://github.com/MalteNilsson/WoWCraft/issues) page to report bugs or request features.
+## License
 
-## 📄 License
+MIT License. See [LICENSE](LICENSE) for details.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Acknowledgments
 
-## 🙏 Acknowledgments
-
-- **Blizzard Entertainment** for World of Warcraft Classic
-- **WoWHead** for recipe data and item information
-- **TSM (TradeSkillMaster)** for auction house data inspiration
-- **The WoW Classic community** for feedback and testing
-
-## 📞 Support
-
-- **Website**: [wowcraft.io](https://wowcraft.io)
-- **GitHub Issues**: [Report a bug](https://github.com/MalteNilsson/WoWCraft/issues)
-- **Discord**: [Join our community](https://discord.gg/wowcraft)
+- TSM for their pricing API
+- WoWHead for recipe and item data
+- WoW Classic community for feedback and testing
 
 ---
-
-**Made with ❤️ for the WoW Classic community**
 
 *Not affiliated with Blizzard Entertainment. World of Warcraft is a registered trademark of Blizzard Entertainment.*

@@ -1481,8 +1481,8 @@ const renderXTick = selected
             materialInfo[r.source.recipeItemId]?.limitedStock &&
             materialInfo[r.source.recipeItemId]?.bop
           )) &&
-          // In auction-house mode: exclude low soldPerDay (illiquid) from alternatives too
-          !(priceSourcing === 'auction-house' && r.produces?.id && regionSoldPerDay && (regionSoldPerDay.get(r.produces.id) ?? 0) < getMinSoldPerDayForProfession(selectedProfession))
+          // In auction-house mode: exclude low soldPerDay (illiquid) from alternatives too; only when we have region data for the item
+          !(priceSourcing === 'auction-house' && r.produces?.id && regionSoldPerDay && (() => { const spd = regionSoldPerDay.get(r.produces!.id); return spd !== undefined && spd < getMinSoldPerDayForProfession(selectedProfession); })())
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
