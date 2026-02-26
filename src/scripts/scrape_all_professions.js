@@ -12,6 +12,7 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 
 puppeteer.use(StealthPlugin());
 import { parseStringPromise } from 'xml2js';
+import archiver from 'archiver';
 
 const streamPipeline = promisify(pipeline);
 
@@ -60,7 +61,8 @@ const args = process.argv.slice(2); // Get command line args
 const phases = {
   scrape: true,
   enrich: true,
-  downloadIcons: true
+  downloadIcons: true,
+  zip: true
 };
 
 let requestedProfession = null;
@@ -78,6 +80,7 @@ for (let i = 0; i < args.length; i++) {
       phases.scrape = false;
       phases.enrich = false;
       phases.downloadIcons = false;
+      phases.zip = false;
       
       const phaseList = phaseArg.split(',');
       phaseList.forEach(phase => {
@@ -85,6 +88,7 @@ for (let i = 0; i < args.length; i++) {
         if (trimmed === 'scrape') phases.scrape = true;
         if (trimmed === 'enrich') phases.enrich = true;
         if (trimmed === 'icons' || trimmed === 'downloadIcons') phases.downloadIcons = true;
+        if (trimmed === 'zip') phases.zip = true;
       });
       i++; // Skip next arg as it's the phase value
     }
@@ -113,7 +117,7 @@ Options:
   --profession <name>  Scrape only specified profession (${PROFESSIONS.join(', ')})
   --version <ver>      Scrape only specified version (vanilla, tbc). Default: both
   --phase <phases>     Run only specified phases (comma-separated)
-                       Available phases: scrape, enrich, icons
+                       Available phases: scrape, enrich, icons, zip
   --headed             Run browser visibly (helps avoid 403 blocks)
   --help, -h           Show this help message
 
@@ -132,6 +136,36 @@ const globalMaterialDataByVersion = { vanilla: {}, tbc: {} };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+/** Zip each icon subdirectory (materials, alchemy, etc.) into a .zip file. Can run standalone via --phase zip. */
+async function zipIcons() {
+  const projectRoot = path.join(__dirname, '..', '..');
+  const iconsDir = path.join(projectRoot, 'public', 'icons');
+  const entries = await fs.readdir(iconsDir, { withFileTypes: true });
+  const dirs = entries.filter(e => e.isDirectory()).map(e => e.name);
+
+  for (const dirName of dirs) {
+    const dirPath = path.join(iconsDir, dirName);
+    const files = await fs.readdir(dirPath);
+    const jpgFiles = files.filter(f => f.endsWith('.jpg'));
+    if (jpgFiles.length === 0) continue;
+
+    const zipPath = path.join(iconsDir, `${dirName}.zip`);
+    const output = createWriteStream(zipPath);
+    const archive = archiver('zip', { zlib: { level: 9 } });
+
+    await new Promise((resolve, reject) => {
+      output.on('close', resolve);
+      archive.on('error', reject);
+      archive.pipe(output);
+      archive.directory(dirPath, false);
+      archive.finalize();
+    });
+
+    const stats = await fs.stat(zipPath);
+    console.log(`Zipped ${dirName}: ${jpgFiles.length} icons -> ${dirName}.zip (${(stats.size / 1024).toFixed(1)} KB)`);
+  }
+}
 
 
 
@@ -1154,6 +1188,14 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
 };
 
 (async () => {
+  // When only zip phase is requested, run it standalone (no browser or materials needed)
+  const onlyZip = phases.zip && !phases.scrape && !phases.enrich && !phases.downloadIcons;
+  if (onlyZip) {
+    console.log('Running zip phase only...\n');
+    await zipIcons();
+    console.log('\n✅ Zip phase complete!');
+    process.exit(0);
+  }
 
     const outputDirMaterials = path.join(__dirname, '..', 'data', 'materials');
     const materialPath = path.join(outputDirMaterials, 'materials.json');
@@ -1255,5 +1297,14 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
   }
 
   await browser.close();
+
+  // Phase 4: Zip icons (runs after icon download, or standalone via --phase zip)
+  if (phases.zip) {
+    console.log(`\nZipping icon directories...`);
+    await zipIcons();
+  } else {
+    console.log(`⏭️  Skipping zip phase`);
+  }
+
   console.log(`\n✅ All selected phases complete!`);
 })();

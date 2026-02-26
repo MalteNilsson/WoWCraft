@@ -33,6 +33,8 @@ import { getDisenchantOutcomes, getExpectedDisenchantValue } from '@/lib/disench
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
+import { CachedIcon } from '@/components/CachedIcon';
+import { preloadIconZips } from '@/lib/iconStore';
 
 // map WoW quality IDs to standard hex colors
 const qualityColors: Record<number,string> = {
@@ -123,8 +125,6 @@ const diffColor = (skill: number, d: Recipe['difficulty']) => {
   if (skill < d.gray!)   return 'bg-green-500';
   return 'bg-neutral-500';
 };
-const iconSrc = (id: number, professionId: string) => `/icons/${professionId.toLowerCase()}/${id}.jpg`;
-
 // expectedCraftsBetween is now imported from recipeCalc.ts
 
 function CollapsibleSection({
@@ -200,7 +200,6 @@ function MaterialCard({
   const [expanded, setExpanded] = useState(true);
   const indent = depth * 64;
   const info = materialInfo[node.id];
-  const iconUrl = info ? `/icons/materials/${node.id}.jpg` : null;
 
   const isParent = node.children && node.children.length > 0;
   const canCraftCheaper = node.craftCost < node.buyCost;
@@ -220,9 +219,10 @@ function MaterialCard({
       >
         <div className="flex items-center gap-3">
           <span className="text-base">{node.quantity}</span>
-          {iconUrl && (
-            <img
-              src={iconUrl}
+          {info && (
+            <CachedIcon
+              category="materials"
+              id={node.id}
               alt={info?.name ?? 'Item'}
               className="w-8 h-8 rounded object-cover border border-neutral-700"
             />
@@ -451,6 +451,11 @@ export default function EnchantingPlanner() {
   useEffect(() => {
     setSliderValue([committedSkill, committedTarget]);
   }, [committedSkill, committedTarget]);
+
+  // Preload icon zips on mount and when profession changes (materials + current profession)
+  useEffect(() => {
+    preloadIconZips(['materials', selectedProfession.toLowerCase()]);
+  }, [selectedProfession]);
 
   // Handle URL profession parameter changes (when URL changes after initial load)
   useEffect(() => {
@@ -2123,7 +2128,7 @@ const renderXTick = selected
                                   <span className="text-[16px] flex items-center justify-center w-8">
                                     {displayedCrafts}×
                                   </span>
-                                  <img src={iconSrc(best.id, getRecipeProfession(best.id, selectedProfession))} alt="" className="w-7 h-7 rounded object-cover" />
+                                  <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-7 h-7 rounded object-cover" />
                                   <span 
                                     className="truncate whitespace-nowrap flex-1 text-[16px]"
                                     style={{ color: qualityColors[s.recipe.quality] }}>
@@ -2186,9 +2191,9 @@ const renderXTick = selected
                                         <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[16px]">
                                           or {alt.crafts}×
                                         </span>
-                                        <img
-                                          src={iconSrc(alt.recipe.id, getRecipeProfession(alt.recipe.id, selectedProfession))}
-                                          alt=""
+                                        <CachedIcon
+                                          category={getRecipeProfession(alt.recipe.id, selectedProfession)}
+                                          id={alt.recipe.id}
                                           className="w-7 h-7 rounded object-cover"
                                         />
                                         <span 
@@ -2232,9 +2237,9 @@ const renderXTick = selected
                               }`}
                             />
                             <div className="pl-3">
-                              <img
-                                src={iconSrc(r.id, getRecipeProfession(r.id, selectedProfession))}
-                                alt=""
+                              <CachedIcon
+                                category={getRecipeProfession(r.id, selectedProfession)}
+                                id={r.id}
                                 className="w-7 h-7 rounded object-cover"
                               />
                             </div>
@@ -2371,8 +2376,9 @@ const renderXTick = selected
           <div className="flex-1 w-full max-w-4xl py-12 mx-auto sm:px-6 lg:max-w-5xl lg:px-8">
             <div className="flex-none items-center">
               <div className="flex pb-5 text-[36px] items-center">
-                <img
-                  src={iconSrc(selected.id, getRecipeProfession(selected.id, selectedProfession))}
+                <CachedIcon
+                  category={getRecipeProfession(selected.id, selectedProfession)}
+                  id={selected.id}
                   alt={`${selected.name} icon`}
                   className="w-16 h-16 rounded mr-2 flex-shrink-0"
                 />
@@ -2801,12 +2807,11 @@ const renderXTick = selected
                               const matQuality = materialInfo[o.itemId]?.quality ?? 1;
                               const qtyRange = o.minQty === o.maxQty ? `${o.minQty}` : `${o.minQty}–${o.maxQty}`;
                               const pct = (o.chance * 100).toFixed(0);
-                              const iconUrl = `/icons/materials/${o.itemId}.jpg`;
                               return (
                                 <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-3">
-                                  <img
-                                    src={iconUrl}
-                                    alt=""
+                                  <CachedIcon
+                                    category="materials"
+                                    id={o.itemId}
                                     className="w-7 h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
                                   />
                                   <div className="flex-1 min-w-0">
