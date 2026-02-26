@@ -1548,7 +1548,7 @@ const renderXTick = selected
       {/* Panels */}
       <div className="flex flex-1 min-h-0 relative">
         {/* Aside */}
-        <aside className="w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px]">
+        <aside className={`w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px] ${isAdvancedSettingsOpen ? 'relative z-[60]' : ''}`}>
           {/* Slider + Tabs */}
           <div className="flex-none bg-neutral-900 px-3 pt-6 pb-2">
             {/* Logo and name 
@@ -1699,7 +1699,7 @@ const renderXTick = selected
                         animate={{ opacity: 1, x: 0, scaleX: 1 }}
                         exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute left-full top-0 ml-2 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-50 origin-left"
+                        className="absolute left-full top-0 ml-2 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[60] origin-left"
                       >
                         <div className="p-3 space-y-3">
                           <div className="flex items-center justify-between">
