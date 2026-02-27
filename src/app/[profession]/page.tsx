@@ -1254,13 +1254,19 @@ const renderXTick = selected
     // This ensures the plan useMemo uses the new plan when selectedProfession updates
     preservedPlanRef.current = pendingPlan;
     
-    // Don't auto-select a recipe when switching profession - show planner first
-    const selectedRecipeIdToSet: number | null = null;
-    const selectedCardKeyToSet: string | null = null;
+    // Select first recipe of planner so recipe view shows it when user opens it; mobile sees planner first (sidebarOpen=true)
+    const firstRecipeStep = pendingPlan.steps.find((s): s is Extract<typeof s, { recipe: Recipe }> => 'recipe' in s);
+    const firstRecipe = firstRecipeStep?.recipe;
+    const selectedRecipeIdToSet: number | null = firstRecipe?.id ?? null;
+    const selectedCardKeyToSet: string | null = firstRecipe ? `${firstRecipe.name}-${firstRecipeStep.endSkill}` : null;
     
-    // Clear preserved recipe so we don't show stale recipe from previous profession
-    preservedRecipeRef.current = null;
-    preservedRecipeProfessionRef.current = null;
+    if (firstRecipe) {
+      preservedRecipeRef.current = firstRecipe;
+      preservedRecipeProfessionRef.current = pendingProfession;
+    } else {
+      preservedRecipeRef.current = null;
+      preservedRecipeProfessionRef.current = null;
+    }
     
     // Everything is ready - batch update ALL state in one go
     // React 18+ automatically batches these updates, so this triggers only ONE re-render
@@ -1295,20 +1301,22 @@ const renderXTick = selected
     }
   }, [selectedRecipeId, recipes, selectedProfession]);
   
-  // Auto-select topmost recipe when recipes load and no recipe is selected (initial load)
+  // Auto-select first recipe of planner when plan loads and no recipe is selected (initial load)
   useEffect(() => {
     // Skip if there's a pending profession change (it will handle selection)
     if (pendingProfessionRef.current) return;
     
-    // Don't auto-select - show planner first so user can browse the leveling guide
-    if (selectedRecipeId === null && sortedAll.length > 0 && false) {
-      const topRecipe = sortedAll[0];
-      setSelectedRecipeId(topRecipe.id);
-      setSelectedCardKey(`${topRecipe.name}-${topRecipe.minSkill}`);
-      preservedRecipeRef.current = topRecipe;
-      preservedRecipeProfessionRef.current = selectedProfession; // Track current profession
+    if (selectedRecipeId === null && plan.steps.length > 0) {
+      const firstRecipeStep = plan.steps.find((s): s is Extract<typeof s, { recipe: Recipe }> => 'recipe' in s);
+      const firstRecipe = firstRecipeStep?.recipe;
+      if (firstRecipe) {
+        setSelectedRecipeId(firstRecipe.id);
+        setSelectedCardKey(`${firstRecipe.name}-${firstRecipeStep.endSkill}`);
+        preservedRecipeRef.current = firstRecipe;
+        preservedRecipeProfessionRef.current = selectedProfession;
+      }
     }
-  }, [selectedRecipeId, sortedAll, selectedProfession]);
+  }, [selectedRecipeId, plan.steps, selectedProfession]);
 
   // New selectors state and options
   const versions = ["Vanilla", "The Burning Crusade"];
@@ -1573,7 +1581,7 @@ const renderXTick = selected
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
-  const EDGE_DRAWER_WIDTH = 36;
+  const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
     const width = typeof window !== 'undefined' ? window.innerWidth : 0;
     const startX = sidebarOpen ? 0 : -width;
@@ -1613,7 +1621,8 @@ const renderXTick = selected
   const drawerTouchHandlers = useMemo(() => ({
     onTouchStart: (e: React.TouchEvent) => {
       const x = e.touches[0].clientX;
-      if (x <= EDGE_DRAWER_WIDTH) {
+      const edgePx = typeof window !== 'undefined' ? window.innerWidth * EDGE_DRAWER_FRACTION : 0;
+      if (x <= edgePx) {
         handleDrawerDragStart(x);
         const moveHandler = (ev: TouchEvent) => {
           if (drawerDragStartRef.current && ev.touches.length > 0) handleDrawerDragMove(ev.touches[0].clientX);
@@ -1634,7 +1643,7 @@ const renderXTick = selected
   const drawerRightEdgeTouchHandlers = useMemo(() => ({
     onTouchStart: (e: React.TouchEvent) => {
       const x = e.touches[0].clientX;
-      const rightEdge = typeof window !== 'undefined' ? window.innerWidth - EDGE_DRAWER_WIDTH : 0;
+      const rightEdge = typeof window !== 'undefined' ? window.innerWidth * (1 - EDGE_DRAWER_FRACTION) : 0;
       if (x >= rightEdge) {
         handleDrawerDragStart(x);
         const moveHandler = (ev: TouchEvent) => {
@@ -1657,7 +1666,8 @@ const renderXTick = selected
     onPointerDown: (e: React.PointerEvent) => {
       if (e.pointerType === 'touch') return;
       const x = e.clientX;
-      if (x <= EDGE_DRAWER_WIDTH) {
+      const edgePx = typeof window !== 'undefined' ? window.innerWidth * EDGE_DRAWER_FRACTION : 0;
+      if (x <= edgePx) {
         (e.target as HTMLElement).setPointerCapture(e.pointerId);
         handleDrawerDragStart(x);
       }
@@ -1679,7 +1689,7 @@ const renderXTick = selected
     onPointerDown: (e: React.PointerEvent) => {
       if (e.pointerType === 'touch') return;
       const x = e.clientX;
-      const rightEdge = typeof window !== 'undefined' ? window.innerWidth - EDGE_DRAWER_WIDTH : 0;
+      const rightEdge = typeof window !== 'undefined' ? window.innerWidth * (1 - EDGE_DRAWER_FRACTION) : 0;
       if (x >= rightEdge) {
         (e.target as HTMLElement).setPointerCapture(e.pointerId);
         handleDrawerDragStart(x);
@@ -1714,10 +1724,10 @@ const renderXTick = selected
         </button>
       )}
 
-      {/* Mobile: left-edge drag strip to open drawer when closed */}
+      {/* Mobile: left-edge drag strip - z-40 so above rest but below buttons/thumbs */}
       <div
-        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none"
-        style={{ zIndex: 45, width: EDGE_DRAWER_WIDTH }}
+        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none z-40"
+        style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
         {...drawerTouchHandlers}
         {...drawerPointerHandlers}
       />
@@ -1743,22 +1753,21 @@ const renderXTick = selected
           className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] lg:transform-none lg:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
           style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
         >
-          {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
+          {/* Mobile: drag handles - z-40 so above rest but below buttons/thumbs */}
           <div
-            className="lg:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
-            style={{ width: EDGE_DRAWER_WIDTH }}
+            className="lg:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-40"
+            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
             {...drawerTouchHandlers}
             {...drawerPointerHandlers}
           />
-          {/* Mobile: drag handle on right edge of drawer to close by dragging left (show recipe view) */}
           <div
-            className="lg:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
-            style={{ width: EDGE_DRAWER_WIDTH }}
+            className="lg:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-40"
+            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
             {...drawerRightEdgeTouchHandlers}
             {...drawerRightEdgePointerHandlers}
           />
-          {/* Slider + Tabs */}
-          <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
+          {/* Slider + Tabs - z-50 so buttons and thumbs are above drag zones */}
+          <div className="relative z-50 flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
             {/* Logo and name 
             <div className="flex items-center gap-2 mb-4">
               <img src="/icons/WoWCraft.png" alt="WoWCraft Logo" className="w-16 h-16 mb-2 ml-2" />
@@ -2662,15 +2671,21 @@ const renderXTick = selected
           )}
         </AnimatePresence>
 
-        {/* Main panel - z-0 so left-edge drag zone (z-45) stays interactable; sliders use z-20 within their containers */}
-        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
+        {/* Main panel - z-50 when sidebar closed so chart thumbs/buttons are above left strip (z-40); use hamburger to open when viewing recipe */}
+        <main
+          className={
+            'relative flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950 lg:z-0 ' +
+            (!sidebarOpen ? 'z-50' : 'z-0') +
+            ' [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60'
+          }
+        >
         
         {!selected ? (
           <p className="text-neutral-400 px-4 py-8">
             <span className="lg:hidden">Tap the menu to view the leveling guide or recipe list.</span>
             <span className="hidden lg:inline">Click a recipe to view details.</span>
           </p>
-        ) : (
+        ) : selected ? (
           <div className="flex-1 w-full max-w-4xl pt-14 pb-6 lg:py-12 mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8">
             <div className="flex-none items-center">
               <div className="flex pb-1 lg:pb-2 text-xl lg:text-[36px] items-center">
@@ -2697,7 +2712,7 @@ const renderXTick = selected
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Level-up Calculator</h3>
               </div>
-              <div className="flex flex-col lg:flex-row w-full h-full">
+              <div className="relative z-50 flex flex-col lg:flex-row w-full h-full">
                 <div className="w-full lg:w-3/5 relative p-4 lg:p-8 h-[min(75vw,300px)] lg:h-[350px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
@@ -3156,7 +3171,7 @@ const renderXTick = selected
               </div>
             </div>
           </div>
-        )}
+        ) : null}
         </main>
       </div>
     </div>
