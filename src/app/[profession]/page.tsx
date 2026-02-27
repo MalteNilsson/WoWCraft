@@ -421,6 +421,9 @@ export default function EnchantingPlanner() {
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [drawerDragX, setDrawerDragX] = useState<number | null>(null);
+  const drawerDragStartRef = useRef<{ x: number; startOpen: boolean } | null>(null);
+  const drawerDragXRef = useRef<number>(0);
   const [useMarketValue, setUseMarketValue] = useState(false);
   const optimizeSubCrafting = false; // Sub-crafting optimization disabled
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
@@ -1570,6 +1573,131 @@ const renderXTick = selected
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
+  const EDGE_DRAWER_WIDTH = 36;
+  const handleDrawerDragStart = useCallback((clientX: number) => {
+    const width = typeof window !== 'undefined' ? window.innerWidth : 0;
+    const startX = sidebarOpen ? 0 : -width;
+    drawerDragStartRef.current = { x: clientX, startOpen: sidebarOpen };
+    drawerDragXRef.current = startX;
+    setDrawerDragX(startX);
+  }, [sidebarOpen]);
+  const handleDrawerDragMove = useCallback((clientX: number) => {
+    const start = drawerDragStartRef.current;
+    if (!start || typeof window === 'undefined') return;
+    const delta = clientX - start.x;
+    const width = window.innerWidth;
+    let newX: number;
+    if (start.startOpen) {
+      newX = Math.min(0, delta);
+    } else {
+      newX = Math.max(-width, Math.min(0, -width + delta));
+    }
+    drawerDragXRef.current = newX;
+    setDrawerDragX(newX);
+  }, []);
+  const handleDrawerDragEnd = useCallback(() => {
+    const start = drawerDragStartRef.current;
+    if (!start || typeof window === 'undefined') return;
+    const width = window.innerWidth;
+    const threshold = width * 0.25;
+    const currentX = drawerDragXRef.current;
+    setDrawerDragX(null);
+    drawerDragStartRef.current = null;
+    if (start.startOpen) {
+      setSidebarOpen(currentX > -threshold);
+    } else {
+      setSidebarOpen(currentX > -width + threshold);
+    }
+  }, []);
+
+  const drawerTouchHandlers = useMemo(() => ({
+    onTouchStart: (e: React.TouchEvent) => {
+      const x = e.touches[0].clientX;
+      if (x <= EDGE_DRAWER_WIDTH) {
+        handleDrawerDragStart(x);
+        const moveHandler = (ev: TouchEvent) => {
+          if (drawerDragStartRef.current && ev.touches.length > 0) handleDrawerDragMove(ev.touches[0].clientX);
+        };
+        const cleanup = () => {
+          document.removeEventListener('touchmove', moveHandler);
+          document.removeEventListener('touchend', cleanup);
+          document.removeEventListener('touchcancel', cleanup);
+          if (drawerDragStartRef.current) handleDrawerDragEnd();
+        };
+        document.addEventListener('touchmove', moveHandler, { passive: true });
+        document.addEventListener('touchend', cleanup);
+        document.addEventListener('touchcancel', cleanup);
+      }
+    },
+  }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
+
+  const drawerRightEdgeTouchHandlers = useMemo(() => ({
+    onTouchStart: (e: React.TouchEvent) => {
+      const x = e.touches[0].clientX;
+      const rightEdge = typeof window !== 'undefined' ? window.innerWidth - EDGE_DRAWER_WIDTH : 0;
+      if (x >= rightEdge) {
+        handleDrawerDragStart(x);
+        const moveHandler = (ev: TouchEvent) => {
+          if (drawerDragStartRef.current && ev.touches.length > 0) handleDrawerDragMove(ev.touches[0].clientX);
+        };
+        const cleanup = () => {
+          document.removeEventListener('touchmove', moveHandler);
+          document.removeEventListener('touchend', cleanup);
+          document.removeEventListener('touchcancel', cleanup);
+          if (drawerDragStartRef.current) handleDrawerDragEnd();
+        };
+        document.addEventListener('touchmove', moveHandler, { passive: true });
+        document.addEventListener('touchend', cleanup);
+        document.addEventListener('touchcancel', cleanup);
+      }
+    },
+  }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
+
+  const drawerPointerHandlers = useMemo(() => ({
+    onPointerDown: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      const x = e.clientX;
+      if (x <= EDGE_DRAWER_WIDTH) {
+        (e.target as HTMLElement).setPointerCapture(e.pointerId);
+        handleDrawerDragStart(x);
+      }
+    },
+    onPointerMove: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      if (drawerDragStartRef.current) handleDrawerDragMove(e.clientX);
+    },
+    onPointerUp: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      if (drawerDragStartRef.current) {
+        handleDrawerDragEnd();
+        (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
+      }
+    },
+  }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
+
+  const drawerRightEdgePointerHandlers = useMemo(() => ({
+    onPointerDown: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      const x = e.clientX;
+      const rightEdge = typeof window !== 'undefined' ? window.innerWidth - EDGE_DRAWER_WIDTH : 0;
+      if (x >= rightEdge) {
+        (e.target as HTMLElement).setPointerCapture(e.pointerId);
+        handleDrawerDragStart(x);
+      }
+    },
+    onPointerMove: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      if (drawerDragStartRef.current) handleDrawerDragMove(e.clientX);
+    },
+    onPointerUp: (e: React.PointerEvent) => {
+      if (e.pointerType === 'touch') return;
+      if (drawerDragStartRef.current) {
+        handleDrawerDragEnd();
+        (e.target as HTMLElement).releasePointerCapture?.(e.pointerId);
+      }
+    },
+  }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
+
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
 
@@ -1577,7 +1705,7 @@ const renderXTick = selected
       {!sidebarOpen && (
         <button
           onClick={() => setSidebarOpen(true)}
-          className="lg:hidden fixed top-3 left-3 z-30 p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
+          className="lg:hidden fixed top-3 left-3 z-[100] p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
           aria-label="Open planner"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1585,6 +1713,14 @@ const renderXTick = selected
           </svg>
         </button>
       )}
+
+      {/* Mobile: left-edge drag strip to open drawer when closed */}
+      <div
+        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none"
+        style={{ zIndex: 45, width: EDGE_DRAWER_WIDTH }}
+        {...drawerTouchHandlers}
+        {...drawerPointerHandlers}
+      />
 
       {/* Panels */}
       <div className="flex flex-1 min-h-0 relative lg:pt-0">
@@ -1603,7 +1739,24 @@ const renderXTick = selected
         </AnimatePresence>
 
         {/* Aside - full-screen on mobile, sidebar on desktop */}
-        <aside className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] transform transition-transform duration-300 ease-out lg:transform-none lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <aside
+          className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] lg:transform-none lg:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
+          style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
+        >
+          {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
+          <div
+            className="lg:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
+            style={{ width: EDGE_DRAWER_WIDTH }}
+            {...drawerTouchHandlers}
+            {...drawerPointerHandlers}
+          />
+          {/* Mobile: drag handle on right edge of drawer to close by dragging left (show recipe view) */}
+          <div
+            className="lg:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
+            style={{ width: EDGE_DRAWER_WIDTH }}
+            {...drawerRightEdgeTouchHandlers}
+            {...drawerRightEdgePointerHandlers}
+          />
           {/* Slider + Tabs */}
           <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
             {/* Logo and name 
@@ -1897,7 +2050,7 @@ const renderXTick = selected
               </div>
               
               {/* Double-sided range slider */}
-              <div className="mb-4 w-full px-3 lg:px-0">
+              <div className="relative z-20 mb-4 w-full px-3 lg:px-0">
                 <Range
                   values={[skill, target]}
                   step={1}
@@ -2509,20 +2662,8 @@ const renderXTick = selected
           )}
         </AnimatePresence>
 
-        {/* Main panel */}
-        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950
-          [&::-webkit-scrollbar]:w-2
-          [&::-webkit-scrollbar-track]:bg-transparent
-          [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
-          [&::-webkit-scrollbar-thumb]:rounded-full
-          [&::-webkit-scrollbar-thumb]:transition-colors
-          [&::-webkit-scrollbar-thumb]:duration-300
-          hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60
-          motion-safe:transition-[scrollbar-color]
-          motion-safe:duration-300
-          scrollbar-thin
-          scrollbar-thumb-neutral-600/40
-          hover:scrollbar-thumb-neutral-600/60">
+        {/* Main panel - z-0 so left-edge drag zone (z-45) stays interactable; sliders use z-20 within their containers */}
+        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
         
         {!selected ? (
           <p className="text-neutral-400 px-4 py-8">
@@ -2532,12 +2673,12 @@ const renderXTick = selected
         ) : (
           <div className="flex-1 w-full max-w-4xl pt-14 pb-6 lg:py-12 mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8">
             <div className="flex-none items-center">
-              <div className="flex pb-5 text-[36px] items-center">
+              <div className="flex pb-1 lg:pb-2 text-xl lg:text-[36px] items-center">
                 <CachedIcon
                   category={getRecipeProfession(selected.id, selectedProfession)}
                   id={selected.id}
                   alt={`${selected.name} icon`}
-                  className="w-16 h-16 rounded mr-2 flex-shrink-0"
+                  className="w-10 h-10 lg:w-16 lg:h-16 rounded mr-2 flex-shrink-0"
                 />
                 <a
                   href={selected.url || `https://www.wowhead.com/${selectedVersion === 'The Burning Crusade' ? 'tbc' : 'classic'}/spell=${selected.id}`}
@@ -2552,7 +2693,7 @@ const renderXTick = selected
               <div className="flex-none">
               </div>
             </div>
-            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-4 pb-12">
+            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 lg:mt-2 pb-12">
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Level-up Calculator</h3>
               </div>
@@ -2684,7 +2825,7 @@ const renderXTick = selected
                       />
                     </LineChart>
                   </ResponsiveContainer>
-                  <div className="relative bottom-7 ml-9.5">
+                  <div className="relative z-20 bottom-7 ml-9.5">
                     <Range
                       values={[clampedLow, clampedHigh]}
                       step={1}
@@ -2754,8 +2895,8 @@ const renderXTick = selected
                 </div> {/* end chart container */} 
 
                 <aside className="flex-none w-full lg:w-2/5 bg-neutral-800 rounded-lg relative lg:h-full" style={{ minHeight: 200 }}>
-                  <div className="flex justify-center items-center">
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-r-0">
+                  <div className="flex w-full">
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-none lg:rounded-b border-0 lg:border lg:border-neutral-700 lg:border-t-0 lg:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                       <button
@@ -2779,7 +2920,7 @@ const renderXTick = selected
                       >+</button>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-l-0 border-r-0 -mr-1">
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-none lg:rounded-b border-0 lg:border lg:border-neutral-700 lg:border-t-0 lg:border-l-0 lg:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">TO</span>
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                       <button
