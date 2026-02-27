@@ -505,12 +505,11 @@ export function makeDynamicPlan(
             
             const batchEnd = availableSkills[0]; // Process highest unprocessed skill
             
-            // Calculate batchStart to ensure we cover exactly 5 levels (or remaining levels)
-            // For a batch ending at batchEnd, we want to start 5 levels earlier
-            // Example: batchEnd=125 means batchStart=120 (covering 120-124 to reach 125)
-            // But if startSkill is higher, use that instead
-            const idealBatchStart = batchEnd - 4;
-            const batchStart = Math.max(startSkill, idealBatchStart);
+            // Align batch boundaries to breakpoints at multiples of 5 (0, 5, 10, 15, ...)
+            // Recipe difficulty changes at these breakpoints, so batches should align with them.
+            // Example: 1→14 becomes 1→5, 5→10, 10→14 (not 1→4, 4→9, 9→14)
+            const breakpointBelow = Math.floor((batchEnd - 1) / 5) * 5;
+            const batchStart = Math.max(startSkill, breakpointBelow);
             const currentState = dp[batchEnd];
             
             if (!currentState) {
@@ -929,14 +928,14 @@ export function makeDynamicPlan(
             const newState: BackwardDPState = {
                 steps: [...steps, ...currentState.steps],
                 totalCost: currentState.totalCost + totalStepCost,
-                startSkill: batchStart - 1,
+                startSkill: batchStart,
                 shoppingList: newShoppingList
             };
 
-            // Update DP table
-            const existingState = dp[batchStart - 1];
+            // Update DP table - store at batchStart (skill level we must reach before crafting this batch)
+            const existingState = dp[batchStart];
             if (!existingState || newState.totalCost < existingState.totalCost) {
-                dp[batchStart - 1] = newState;
+                dp[batchStart] = newState;
             }
             
             // Mark batchEnd as processed after successfully processing the batch
@@ -952,16 +951,11 @@ export function makeDynamicPlan(
     // Find the best state at startSkill
     let bestState = dp[startSkill];
     if (!bestState) {
-        // Special case: if startSkill = 1, also check skill 0 (since batch 1-5 stores state at skill 0)
-        if (startSkill === 1 && dp[0]) {
-            bestState = dp[0];
-        } else {
-            // If we didn't reach the target skill, find the closest state
-            const availableSkills = Object.keys(dp).map(Number).filter(s => s >= startSkill);
-            if (availableSkills.length > 0) {
-                const closestSkill = Math.min(...availableSkills);
-                bestState = dp[closestSkill];
-            }
+        // If we didn't reach the target skill, find the closest state
+        const availableSkills = Object.keys(dp).map(Number).filter(s => s >= startSkill);
+        if (availableSkills.length > 0) {
+            const closestSkill = Math.min(...availableSkills);
+            bestState = dp[closestSkill];
         }
     }
 
@@ -985,78 +979,57 @@ export function makeDynamicPlan(
     });
 
     // Merge consecutive steps with same recipe and recalculate crafts to avoid rounding errors
-    const mergedSteps: PlanStep[] = [];
-    let currentStep: PlanStep | null = null;
-    let currentStartSkill: number = startSkill; // Track start skill for current merged step
+    // Skip merge when recalculateForEachLevel is ON to preserve 1-level steps
+    const mergedSteps: PlanStep[] = recalculateForEachLevel ? planSteps : (() => {
+      const result: PlanStep[] = [];
+      let currentStep: PlanStep | null = null;
+      let currentStartSkill: number = startSkill;
 
-    for (const step of planSteps) {
+      for (const step of planSteps) {
         if ('recipe' in step) {
             if (currentStep && 'recipe' in currentStep && currentStep.recipe.id === step.recipe.id) {
                 // Merge with current step - recalculate crafts for the combined range
-                // This avoids accumulating rounding errors from individual batch calculations
                 const combinedEndSkill = step.endSkill;
-                const totalSkillUps = combinedEndSkill - currentStartSkill;
-                
-                // Recalculate crafts for the entire combined range using sum-of-reciprocals
                 let sumOfReciprocals = 0;
                 for (let lvl = currentStartSkill; lvl < combinedEndSkill; lvl++) {
                     const chance = expectedSkillUps(currentStep.recipe, lvl);
                     if (chance > 0) {
                         sumOfReciprocals += 1 / chance;
                     } else {
-                        // If we hit a level with 0% chance, can't merge - push current and start new
-                        mergedSteps.push(currentStep);
+                        const prevEnd = currentStep.endSkill;
+                        result.push(currentStep);
                         currentStep = { ...step };
-                        // Infer start skill from previous step's endSkill
-                        currentStartSkill = mergedSteps.length > 0 && 'endSkill' in mergedSteps[mergedSteps.length - 1]
-                            ? mergedSteps[mergedSteps.length - 1].endSkill
-                            : startSkill;
+                        currentStartSkill = prevEnd;
                         continue;
                     }
                 }
-                
-                // Recalculate crafts and cost for combined range
                 const recalculatedCrafts = Math.ceil(sumOfReciprocals);
                 const materialCostPerCraft = craftCost(currentStep.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
-                const recalculatedCost = recalculatedCrafts !== Infinity ? materialCostPerCraft * recalculatedCrafts : Infinity;
-                
-                // Update current step with recalculated values
                 currentStep.crafts = recalculatedCrafts;
-                currentStep.cost = recalculatedCost;
+                currentStep.cost = materialCostPerCraft * recalculatedCrafts;
                 currentStep.endSkill = combinedEndSkill;
-                // Recipe cost: only add if this step has recipe cost and current doesn't
                 if (step.recipeCost && !currentStep.recipeCost) {
                     currentStep.recipeCost = step.recipeCost;
                 }
             } else {
-                // Start new step
-                if (currentStep) {
-                    mergedSteps.push(currentStep);
-                }
+                if (currentStep) result.push(currentStep);
                 currentStep = { ...step };
-                // Infer start skill from previous step's endSkill (or use startSkill if first step)
-                if (mergedSteps.length > 0) {
-                    const lastStep = mergedSteps[mergedSteps.length - 1];
-                    currentStartSkill = 'endSkill' in lastStep ? lastStep.endSkill : startSkill;
-                } else {
-                    currentStartSkill = startSkill;
-                }
+                currentStartSkill = result.length > 0 && 'endSkill' in result[result.length - 1]
+                    ? result[result.length - 1].endSkill
+                    : startSkill;
             }
         } else {
-            // Non-recipe step (e.g. upgrade) - push as-is
             if (currentStep) {
-                mergedSteps.push(currentStep);
+                result.push(currentStep);
                 currentStep = null;
             }
-            mergedSteps.push(step);
+            result.push(step);
             currentStartSkill = step.endSkill;
         }
-    }
-
-    // Add the last step if it exists
-    if (currentStep) {
-        mergedSteps.push(currentStep);
-    }
+      }
+      if (currentStep) result.push(currentStep);
+      return result;
+    })();
 
     const totalCost = mergedSteps.reduce((sum, step) => {
         if ('cost' in step) {

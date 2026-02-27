@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 // Vanilla recipes
 import vanillaAlchemy from '@/data/recipes/vanilla/alchemy.json';
 import vanillaBlacksmithing from '@/data/recipes/vanilla/blacksmithing.json';
@@ -442,6 +443,26 @@ export default function EnchantingPlanner() {
   const [regionSoldPerDay, setRegionSoldPerDay] = useState<Map<number, number> | null>(null);
   // Track the current price loading request to ignore outdated ones
   const priceLoadRequestIdRef = useRef(0);
+  const advancedSettingsAnchorRef = useRef<HTMLDivElement>(null);
+  const [advancedSettingsPosition, setAdvancedSettingsPosition] = useState<{ top: number; left: number } | null>(null);
+
+  useEffect(() => {
+    if (!isAdvancedSettingsOpen || typeof window === 'undefined') return;
+    const updatePosition = () => {
+      const el = advancedSettingsAnchorRef.current;
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        setAdvancedSettingsPosition({ top: rect.top, left: rect.right + 8 });
+      }
+    };
+    updatePosition();
+    window.addEventListener('resize', updatePosition);
+    window.addEventListener('scroll', updatePosition, true);
+    return () => {
+      window.removeEventListener('resize', updatePosition);
+      window.removeEventListener('scroll', updatePosition, true);
+    };
+  }, [isAdvancedSettingsOpen]);
   
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
@@ -1570,7 +1591,7 @@ const renderXTick = selected
         </AnimatePresence>
 
         {/* Aside - full-screen on mobile, sidebar on desktop */}
-        <aside className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] transform transition-transform duration-300 ease-out lg:transform-none lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} ${isAdvancedSettingsOpen ? 'relative z-[60]' : ''}`}>
+        <aside className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] transform transition-transform duration-300 ease-out lg:transform-none lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           {/* Slider + Tabs */}
           <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
             {/* Logo and name 
@@ -1698,7 +1719,7 @@ const renderXTick = selected
                 <label className="text-xs">
                   Skill Range <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{skill}</span> → <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{target}</span>
                 </label>
-                <div className="relative">
+                <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
                     onClick={() => setIsAdvancedSettingsOpen(!isAdvancedSettingsOpen)}
                     className="flex items-center gap-2 px-3 py-1.5 text-xs text-neutral-400 hover:text-neutral-200 bg-neutral-800 hover:bg-neutral-700 rounded transition-colors"
@@ -1716,13 +1737,15 @@ const renderXTick = selected
                   
                   <AnimatePresence>
                     {isAdvancedSettingsOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -10, scaleX: 0.95 }}
-                        animate={{ opacity: 1, x: 0, scaleX: 1 }}
-                        exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute right-0 lg:right-auto lg:left-full top-0 lg:ml-2 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[60] origin-left"
-                      >
+                      <>
+                        {/* Mobile: inline positioning */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -10, scaleX: 0.95 }}
+                          animate={{ opacity: 1, x: 0, scaleX: 1 }}
+                          exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          className="lg:hidden absolute right-0 top-0 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[100] origin-left"
+                        >
                         <div className="p-3 space-y-3">
                           <div className="flex items-center justify-between mb-1 lg:mb-0 lg:hidden">
                             <span className="text-xs font-medium text-neutral-300">Advanced Settings</span>
@@ -1783,6 +1806,79 @@ const renderXTick = selected
                           </div>
                         </div>
                       </motion.div>
+                        {/* Desktop: portal to body so it's always on top */}
+                        {typeof document !== 'undefined' && advancedSettingsPosition && createPortal(
+                          <motion.div
+                            initial={{ opacity: 0, x: -10, scaleX: 0.95 }}
+                            animate={{ opacity: 1, x: 0, scaleX: 1 }}
+                            exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
+                            transition={{ duration: 0.2 }}
+                            className="hidden lg:block fixed w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[9999] origin-left"
+                            style={{ top: advancedSettingsPosition.top, left: advancedSettingsPosition.left }}
+                          >
+                        <div className="p-3 space-y-3">
+                          <div className="flex items-center justify-between mb-1 lg:mb-0 lg:hidden">
+                            <span className="text-xs font-medium text-neutral-300">Advanced Settings</span>
+                            <button
+                              onClick={() => setIsAdvancedSettingsOpen(false)}
+                              className="p-1.5 -mr-1 -mt-1 text-neutral-400 hover:text-white rounded transition-colors"
+                              aria-label="Close"
+                            >
+                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-between">
+                    <label className="text-xs text-neutral-400">Include Recipe Cost</label>
+                    <button 
+                      onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                        includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
+                      }`}
+                    >
+                      <span
+                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                          includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+                          <div className="flex items-center justify-between">
+                            <label className="text-xs text-neutral-400">Use Market Value</label>
+                            <button 
+                              onClick={() => setUseMarketValue(!useMarketValue)}
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                                useMarketValue ? 'bg-yellow-400' : 'bg-neutral-700'
+                              }`}
+                            >
+                              <span
+                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                  useMarketValue ? 'translate-x-5' : 'translate-x-1'
+                                }`}
+                              />
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
+                            <button 
+                              onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
+                                recalculateForEachLevel ? 'bg-yellow-400' : 'bg-neutral-700'
+                              }`}
+                            >
+                              <span
+                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                  recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
+                                }`}
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </motion.div>,
+                      document.body
+                        )}
+                      </>
                     )}
                   </AnimatePresence>
                 </div>
