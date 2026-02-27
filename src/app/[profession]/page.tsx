@@ -528,27 +528,21 @@ export default function EnchantingPlanner() {
     }
   }, [urlSkill]);
 
-  // Handle URL target parameter
+  // Handle URL target parameter - only sync when URL actually changes (not when we change state from buttons/slider)
   useEffect(() => {
-    // Store the previous max skill before checking URL
     const previousMaxFromUrl = urlMaxSkillRef.current;
-    
     if (urlTarget) {
       const targetLevel = parseInt(urlTarget);
       if (!isNaN(targetLevel) && targetLevel >= 1 && targetLevel <= maxSkill) {
-        // Only update if the URL target is different from current committed target
-        // Also check if the URL target is the previous max skill from URL (indicating a version change)
-        // In that case, ignore it and let the version change effect handle the update
         const isPreviousMaxSkillFromUrl = targetLevel === previousMaxFromUrl;
-        if (targetLevel !== committedTarget && !isPreviousMaxSkillFromUrl) {
+        if (!isPreviousMaxSkillFromUrl) {
           setTarget(targetLevel);
           setCommittedTarget(targetLevel);
         }
       }
     }
-    // Update the URL max skill ref when maxSkill changes (after checking)
     urlMaxSkillRef.current = maxSkill;
-  }, [urlTarget, maxSkill, committedTarget]);
+  }, [urlTarget, maxSkill]);
 
   // Handle URL version parameter
   useEffect(() => {
@@ -591,11 +585,13 @@ export default function EnchantingPlanner() {
   };
 
   // Update URL when any selector changes
-  const updateUrl = useCallback((overrides?: { realm?: string; faction?: string; version?: string }) => {
+  const updateUrl = useCallback((overrides?: { realm?: string; faction?: string; version?: string; skill?: number; target?: number }) => {
     const realm = overrides?.realm ?? selectedRealm;
     const faction = overrides?.faction ?? selectedFaction;
     const version = overrides?.version ?? selectedVersion;
-    const newUrl = buildUrlWithParams(selectedProfession, committedSkill, committedTarget, version, realm, faction);
+    const skill = overrides?.skill ?? committedSkill;
+    const target = overrides?.target ?? committedTarget;
+    const newUrl = buildUrlWithParams(selectedProfession, skill, target, version, realm, faction);
     router.push(newUrl, { scroll: false });
   }, [selectedProfession, committedSkill, committedTarget, selectedRealm, selectedFaction, selectedVersion, router]);
   
@@ -1476,6 +1472,16 @@ const renderXTick = selected
 
   const [showMaterials, setShowMaterials] = useState(false);
 
+  // Desktop: smaller thumb hit area; mobile: larger for touch targets
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mq.matches);
+    const handler = () => setIsDesktop(mq.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
   // Optimize step candidates calculation to reduce expensive recalculations during sliding
   const stepCandidates = useMemo(() => {
     return plan.steps.map((s, i) => {
@@ -1932,6 +1938,7 @@ const renderXTick = selected
                     const thumbColor = selectedVersion === 'The Burning Crusade' 
                       ? '#059669' // emerald-600 for both thumbs in TBC
                       : (index === 0 ? '#eab308' : '#f59e0b'); // yellow for Vanilla
+                    const thumbSize = isDesktop ? 20 : 44;
                     return (
                       <div
                         key={key}
@@ -1941,8 +1948,8 @@ const renderXTick = selected
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          width: 44,
-                          height: 44,
+                          width: thumbSize,
+                          height: thumbSize,
                           pointerEvents: 'auto'
                         }}
                         className="touch-manipulation"
@@ -2007,6 +2014,7 @@ const renderXTick = selected
                         const newTarget = Math.max(skill + 1, target - 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
+                        updateUrl({ target: newTarget });
                       }}
                     >−</button>
                     
@@ -2021,6 +2029,7 @@ const renderXTick = selected
                           const boundedVal = Math.max(skill + 1, Math.min(maxSkill, val));
                           setTarget(boundedVal);
                           setCommittedTarget(boundedVal);
+                          updateUrl({ target: boundedVal });
                         }
                       }}
                       className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
@@ -2034,6 +2043,7 @@ const renderXTick = selected
                         const newTarget = target + 1;
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
+                        updateUrl({ target: newTarget });
                       }}
                     >+</button>
                   </div>
@@ -2701,6 +2711,7 @@ const renderXTick = selected
                       }}
                       renderThumb={({ props, index }) => {
                         const { key, style, ...rest } = props;
+                        const thumbSize = isDesktop ? 20 : 44;
                         return (
                           <div
                             key={key}
@@ -2710,8 +2721,8 @@ const renderXTick = selected
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              width: 44,
-                              height: 44,
+                              width: thumbSize,
+                              height: thumbSize,
                               pointerEvents: 'auto'
                             }}
                             className="touch-manipulation"
