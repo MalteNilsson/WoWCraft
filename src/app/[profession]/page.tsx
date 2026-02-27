@@ -213,47 +213,47 @@ function MaterialCard({
     <div style={{ marginLeft: `${indent}px` }}>
       <div
         onClick={() => displayChildren && setExpanded(prev => !prev)}
-        className={`flex justify-between items-center bg-neutral-900 p-4 shadow border border-neutral-700 mb-px transition-all duration-200 ${
+        className={`flex justify-between items-center bg-neutral-900 p-2 lg:p-4 shadow border border-neutral-700 mb-px transition-all duration-200 ${
           displayChildren ? 'hover:bg-neutral-700 active:scale-[0.98] cursor-pointer' : ''
         } ${roundedClass}`}
       >
-        <div className="flex items-center gap-3">
-          <span className="text-base">{node.quantity}</span>
+        <div className="flex items-center gap-2 lg:gap-3">
+          <span className="text-sm lg:text-base">{node.quantity}</span>
           {info && (
             <CachedIcon
               category="materials"
               id={node.id}
               alt={info?.name ?? 'Item'}
-              className="w-8 h-8 rounded object-cover border border-neutral-700"
+              className="w-6 h-6 lg:w-8 lg:h-8 rounded object-cover border border-neutral-700"
             />
           )}
-          <div className="flex flex-col">
-          <span className="text-base font-medium" style={{ color: qualityColors[info?.quality ?? 1] }}>
+          <div className="flex flex-col min-w-0">
+          <span className="text-sm lg:text-base font-medium truncate" style={{ color: qualityColors[info?.quality ?? 1] }}>
             {node.name}
           </span>
-            <span className="text-sm text-neutral-400">
+            <span className="text-xs lg:text-sm text-neutral-400">
               Per Craft: {perCraftQuantity}
           </span>
           </div>
         </div>
         <div className="flex flex-col items-end text-right">
           {node.noAhPrice ? (
-            <div className="flex flex-col items-end text-right text-yellow-400 font-medium">
+            <div className="flex flex-col items-end text-right text-yellow-400 font-medium text-xs lg:text-sm">
               <div>⚠️ No auction listing — crafting cost used instead</div>
               <div><SafeMoney value={node.craftCost} /></div>
-              <div className="text-xs text-neutral-400 mt-1">
+              <div className="text-[10px] lg:text-xs text-neutral-400 mt-0.5 lg:mt-1">
                 Per Craft: <SafeMoney value={node.craftCost / expCrafts} />
               </div>
             </div>
           ) : (
             <div className="flex flex-col items-end text-right">
-              <span className="text-yellow-300 text-base font-normal">
+              <span className="text-yellow-300 text-sm lg:text-base font-normal">
                 <SafeMoney
                   value={node.buyCost}
                   fallback="⚠️ No price available"
                 />
               </span>
-              <span className="text-xs text-neutral-400 mt-1">
+              <span className="text-[10px] lg:text-xs text-neutral-400 mt-0.5 lg:mt-1">
                 Per Craft: <SafeMoney value={node.buyCost / expCrafts} />
               </span>
             </div>
@@ -262,7 +262,7 @@ function MaterialCard({
           {Number.isFinite(node.buyCost) &&
             Number.isFinite(node.craftCost) &&
             node.buyCost > node.craftCost && (
-              <span className="text-green-400 text-xs font-semibold mt-2">
+              <span className="text-green-400 text-[10px] lg:text-xs font-semibold mt-1 lg:mt-2">
                 Or Craft For: <SafeMoney value={node.craftCost} />
               </span>
           )}
@@ -419,6 +419,7 @@ export default function EnchantingPlanner() {
     return 'Alliance';
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [useMarketValue, setUseMarketValue] = useState(false);
   const optimizeSubCrafting = false; // Sub-crafting optimization disabled
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
@@ -937,7 +938,6 @@ export default function EnchantingPlanner() {
   const [rngLow, setRngLow]   = useState(1);
   const [rngHigh, setRngHigh] = useState(maxSkill);
 
-
   const sliderMin = selected?.minSkill            ?? 1;
   const sliderMax = selected?.difficulty.gray     ?? maxSkill;
 
@@ -1018,6 +1018,9 @@ export default function EnchantingPlanner() {
     // Update skill range
     setRngLow(start);
     setRngHigh(end);
+
+    // Close mobile sidebar when selecting a step
+    setSidebarOpen(false);
   };
 
   // Update wasVisible to consider both previous visibility and click state
@@ -1225,27 +1228,13 @@ const renderXTick = selected
     // This ensures the plan useMemo uses the new plan when selectedProfession updates
     preservedPlanRef.current = pendingPlan;
     
-    // Select the topmost recipe (first in sorted list by minSkill, excluding blacklisted)
-    let selectedRecipeIdToSet: number | null = null;
-    let selectedCardKeyToSet: string | null = null;
+    // Don't auto-select a recipe when switching profession - show planner first
+    const selectedRecipeIdToSet: number | null = null;
+    const selectedCardKeyToSet: string | null = null;
     
-    if (pendingRecipes.length > 0) {
-      // Filter out blacklisted recipes and sort by minSkill to get the topmost one
-      // Treat null minSkill as 1
-      const sortedRecipes = [...pendingRecipes]
-        .filter(r => !blacklistedSpellIds.has(r.id))
-        .sort((a, b) => (a.minSkill ?? 1) - (b.minSkill ?? 1));
-      
-      if (sortedRecipes.length > 0) {
-        const topRecipe = sortedRecipes[0];
-        selectedRecipeIdToSet = topRecipe.id;
-        selectedCardKeyToSet = `${topRecipe.name}-${topRecipe.minSkill}`;
-        
-        // Update preserved recipe ref
-        preservedRecipeRef.current = topRecipe;
-        preservedRecipeProfessionRef.current = pendingProfession; // Track which profession this recipe belongs to
-      }
-    }
+    // Clear preserved recipe so we don't show stale recipe from previous profession
+    preservedRecipeRef.current = null;
+    preservedRecipeProfessionRef.current = null;
     
     // Everything is ready - batch update ALL state in one go
     // React 18+ automatically batches these updates, so this triggers only ONE re-render
@@ -1253,6 +1242,7 @@ const renderXTick = selected
     setSelectedCardKey(selectedCardKeyToSet);
     setVisibleCardKey(null);
     setSelectedProfession(pendingProfession);
+    setSidebarOpen(true); // Show planner on mobile when switching profession
     
     // Update previous profession ref AFTER state update for animation detection
     // This will be used in the next render to detect profession change
@@ -1284,8 +1274,8 @@ const renderXTick = selected
     // Skip if there's a pending profession change (it will handle selection)
     if (pendingProfessionRef.current) return;
     
-    // Only auto-select if no recipe is currently selected and recipes are available
-    if (selectedRecipeId === null && sortedAll.length > 0) {
+    // Don't auto-select - show planner first so user can browse the leveling guide
+    if (selectedRecipeId === null && sortedAll.length > 0 && false) {
       const topRecipe = sortedAll[0];
       setSelectedRecipeId(topRecipe.id);
       setSelectedCardKey(`${topRecipe.name}-${topRecipe.minSkill}`);
@@ -1550,12 +1540,39 @@ const renderXTick = selected
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
 
+      {/* Mobile: floating menu button when sidebar is closed */}
+      {!sidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="lg:hidden fixed top-3 left-3 z-30 p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
+          aria-label="Open planner"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
+
       {/* Panels */}
-      <div className="flex flex-1 min-h-0 relative">
-        {/* Aside */}
-        <aside className={`w-150 lg:w-150 flex flex-col bg-neutral-950 text-[16px] ${isAdvancedSettingsOpen ? 'relative z-[60]' : ''}`}>
+      <div className="flex flex-1 min-h-0 relative lg:pt-0">
+        {/* Mobile backdrop - closes sidebar when tapped */}
+        <AnimatePresence>
+          {sidebarOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="lg:hidden fixed inset-0 z-40 bg-black/60"
+              onClick={() => setSidebarOpen(false)}
+              aria-hidden
+            />
+          )}
+        </AnimatePresence>
+
+        {/* Aside - full-screen on mobile, sidebar on desktop */}
+        <aside className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] transform transition-transform duration-300 ease-out lg:transform-none lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} ${isAdvancedSettingsOpen ? 'relative z-[60]' : ''}`}>
           {/* Slider + Tabs */}
-          <div className="flex-none bg-neutral-900 px-3 pt-6 pb-2">
+          <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
             {/* Logo and name 
             <div className="flex items-center gap-2 mb-4">
               <img src="/icons/WoWCraft.png" alt="WoWCraft Logo" className="w-16 h-16 mb-2 ml-2" />
@@ -1563,13 +1580,13 @@ const renderXTick = selected
             </div>
             */}
             {/* End logo and name */}
-            <div className="flex gap-2 mb-4">
+            <div className="flex flex-row gap-1.5 lg:gap-2 mb-2 lg:mb-4">
               {/* Version Selector */}
               <Listbox value={selectedVersion} onChange={handleVersionChange}>
                 {({ open }) => (
-                  <div className="relative w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-sm flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold">{selectedVersion}</span>
+                  <div className="relative flex-1 min-w-0 lg:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className="font-semibold truncate">{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
                     <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
@@ -1587,9 +1604,9 @@ const renderXTick = selected
               {/* Realm Selector */}
               <Listbox value={selectedRealm} onChange={handleRealmChange}>
                 {({ open }) => (
-                  <div className="relative w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-sm flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold">{selectedRealm}</span>
+                  <div className="relative flex-1 min-w-0 lg:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className="font-semibold truncate">{selectedRealm}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
                     <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
@@ -1607,9 +1624,9 @@ const renderXTick = selected
               {/* Faction Selector */}
               <Listbox value={selectedFaction} onChange={handleFactionChange}>
                 {({ open }) => (
-                  <div className="relative w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-sm flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold">{selectedFaction}</span>
+                  <div className="relative flex-1 min-w-0 lg:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className="font-semibold truncate">{selectedFaction}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
                     <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
@@ -1625,15 +1642,15 @@ const renderXTick = selected
                 )}
               </Listbox>
             </div>
-            <div className="w-full mb-5 flex gap-2">
+            <div className="w-full mb-3 lg:mb-5 flex gap-2">
               <div className="flex-1">
                 <Listbox value={selectedProfession} onChange={handleProfessionChange}>
                   {({ open }) => (
                     <div className="relative w-full">
-                      <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-3 py-1.5 text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                        <div className="flex items-center gap-2">
-                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-10 h-10" />
-                          <span className="font-semibold">{selectedProfession}</span>
+                      <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-base lg:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                        <div className="flex items-center gap-2 min-w-0">
+                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-8 h-8 lg:w-10 lg:h-10 flex-shrink-0" />
+                          <span className="font-semibold truncate">{selectedProfession}</span>
                         </div>
                         <svg
                           className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}
@@ -1704,9 +1721,21 @@ const renderXTick = selected
                         animate={{ opacity: 1, x: 0, scaleX: 1 }}
                         exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute left-full top-0 ml-2 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[60] origin-left"
+                        className="absolute right-0 lg:right-auto lg:left-full top-0 lg:ml-2 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[60] origin-left"
                       >
                         <div className="p-3 space-y-3">
+                          <div className="flex items-center justify-between mb-1 lg:mb-0 lg:hidden">
+                            <span className="text-xs font-medium text-neutral-300">Advanced Settings</span>
+                            <button
+                              onClick={() => setIsAdvancedSettingsOpen(false)}
+                              className="p-1.5 -mr-1 -mt-1 text-neutral-400 hover:text-white rounded transition-colors"
+                              aria-label="Close"
+                            >
+                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          </div>
                           <div className="flex items-center justify-between">
                     <label className="text-xs text-neutral-400">Include Recipe Cost</label>
                     <button 
@@ -1760,7 +1789,7 @@ const renderXTick = selected
               </div>
               
               {/* Double-sided range slider */}
-              <div className="mb-4 w-full">
+              <div className="mb-4 w-full px-3 lg:px-0">
                 <Range
                   values={[skill, target]}
                   step={1}
@@ -1813,14 +1842,26 @@ const renderXTick = selected
                         {...rest}
                         style={{
                           ...style,
-                          height: '16px',
-                          width: '16px',
-                          borderRadius: '8px',
-                          backgroundColor: thumbColor,
-                          boxShadow: '0 0 4px rgba(0,0,0,0.5)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: 44,
+                          height: 44,
                           pointerEvents: 'auto'
                         }}
-                      />
+                        className="touch-manipulation"
+                      >
+                        <div
+                          style={{
+                            width: 16,
+                            height: 16,
+                            borderRadius: 8,
+                            backgroundColor: thumbColor,
+                            boxShadow: '0 0 4px rgba(0,0,0,0.5)',
+                            pointerEvents: 'none'
+                          }}
+                        />
+                      </div>
                     );
                   }}
                 />
@@ -1905,13 +1946,13 @@ const renderXTick = selected
             </div>
             <div className="mb-4">
               {/* Price Sourcing Selector */}
-              <div className="flex items-center justify-between mb-2">
-                <label className="text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
+              <div className="flex items-center justify-between mb-1 lg:mb-2">
+                <label className="text-[10px] lg:text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
               </div>
-              <div className="flex gap-1">
+              <div className="flex gap-0.5 lg:gap-1 flex-wrap">
                 <button
                   onClick={() => setPriceSourcing('cost')}
-                  className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
+                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -1927,7 +1968,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={() => setPriceSourcing('cost-vendor')}
-                  className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
+                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost-vendor'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -1943,7 +1984,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={() => setPriceSourcing('disenchant')}
-                  className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
+                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'disenchant'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -1959,7 +2000,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={() => setPriceSourcing('auction-house')}
-                  className={`px-2 py-1 text-xs rounded transition-all duration-200 border relative group flex-1 ${
+                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'auction-house'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -1975,7 +2016,7 @@ const renderXTick = selected
                 </button>
               </div>
             </div>
-            <div className="relative flex space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
+            <div className="hidden lg:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -1994,12 +2035,12 @@ const renderXTick = selected
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-1 px-2 py-1 w-full h-12 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[16px]">
-              <span className="w-8 text-center">#</span>
-              <span className="w-7" /> {/* icon space */}
-              <span className="flex-1">Recipe</span>
-              <span className="w-28 text-right">Total Cost</span>
-              <span className="w-24 text-center">Skill</span>
+            <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 lg:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] lg:text-[14px]">
+              <span className="w-5 lg:w-8 text-center shrink-0">#</span>
+              <span className="w-5 lg:w-7 shrink-0" /> {/* icon space */}
+              <span className="flex-1 min-w-0">Recipe</span>
+              <span className="w-16 lg:w-28 text-right shrink-0">Cost</span>
+              <span className="w-16 lg:w-24 text-center shrink-0">Skill</span>
             </div>
           </div>
 
@@ -2007,7 +2048,7 @@ const renderXTick = selected
           <div className="flex-1 flex flex-col min-h-0">
             <section 
               ref={scrollRef}
-              className="flex-1 overflow-y-scroll pb-15
+              className="flex-1 overflow-y-scroll pb-8
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
                 [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
@@ -2074,7 +2115,7 @@ const renderXTick = selected
                                   duration: 0.3,
                                   ease: "easeOut"
                                 }}
-                                className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[60px] font-bold text-yellow-400 will-change-transform"
+                                className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] lg:h-[60px] font-bold text-yellow-400 text-sm lg:text-base will-change-transform"
                               >
                                 ⚔️ {s.note ?? `Upgrade to ${s.upgradeName}`}
                               </motion.div>
@@ -2117,7 +2158,7 @@ const renderXTick = selected
                                 <div
                                   id={`craft-${best.id}-${end}`}
                                   onClick={() => handleCardClick(best.name, end, start, end, false, best.id)}
-                                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-[60px] cursor-pointer
+                                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-[43px] lg:h-[60px] cursor-pointer
                                     transition-all duration-100 ease-out will-change-transform
                                     hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                     ${isSelected(best.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2125,19 +2166,19 @@ const renderXTick = selected
                                   <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                     diffColor(committedSkill, best.difficulty)
                                   }`} />
-                                  <span className="text-[16px] flex items-center justify-center w-8">
+                                  <span className="text-[13px] lg:text-[16px] flex items-center justify-center w-6 lg:w-8">
                                     {displayedCrafts}×
                                   </span>
-                                  <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-7 h-7 rounded object-cover" />
+                                  <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover" />
                                   <span 
-                                    className="truncate whitespace-nowrap flex-1 text-[16px]"
+                                    className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
                                     style={{ color: qualityColors[s.recipe.quality] }}>
                                     {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                   </span>
-                                  <span className="text-[16px]">
+                                  <span className="text-[13px] lg:text-[16px]">
                                     <SignedCost copper={displayedTotalCost} />
                                   </span>
-                                  <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
+                                  <span className="flex-shrink-0 w-16 lg:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] lg:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
                                     {start} → {end}
                                   </span>
                                 </div>
@@ -2180,7 +2221,7 @@ const renderXTick = selected
                                           ease: "easeOut"
                                         }}
                                         onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
-                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[60px] 
+                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[43px] lg:h-[60px] 
                                           transition-all duration-100 ease-out will-change-transform
                                           hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                           ${isSelected(alt.recipe.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2188,22 +2229,22 @@ const renderXTick = selected
                                         <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                           diffColor(committedSkill, alt.recipe.difficulty)
                                         }`} />
-                                        <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[16px]">
+                                        <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] lg:text-[16px]">
                                           or {alt.crafts}×
                                         </span>
                                         <CachedIcon
                                           category={getRecipeProfession(alt.recipe.id, selectedProfession)}
                                           id={alt.recipe.id}
-                                          className="w-7 h-7 rounded object-cover"
+                                          className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
                                         />
                                         <span 
-                                          className="truncate whitespace-nowrap flex-1 text-[16px] pl-1"
+                                          className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px] pl-1"
                                           style={{ color: qualityColors[alt.recipe.quality] }}>
                                           {alt.recipe.name.length <= 35
                                             ? alt.recipe.name
                                             : `${alt.recipe.name.slice(0, 33)}…`}
                                         </span>
-                                        <span className="text-[16px]">
+                                        <span className="text-[13px] lg:text-[16px]">
                                           <SignedCost copper={alt.cost} />
                                         </span>
                                       </motion.div>
@@ -2226,9 +2267,10 @@ const renderXTick = selected
                               setSelectedRecipeId(r.id);
                               setRngLow(r.minSkill);
                               setRngHigh(r.difficulty.gray!);
+                              setSidebarOpen(false);
                             }}
                             id={`recipe-${r.id}`}
-                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[60px]
+                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[43px] lg:h-[60px]
                               ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
                           >
                             <span
@@ -2236,19 +2278,19 @@ const renderXTick = selected
                                 diffColor(committedSkill, r.difficulty)
                               }`}
                             />
-                            <div className="pl-3">
+                            <div className="pl-2 lg:pl-3">
                               <CachedIcon
                                 category={getRecipeProfession(r.id, selectedProfession)}
                                 id={r.id}
-                                className="w-7 h-7 rounded object-cover"
+                                className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
                               />
                             </div>
                             <span 
-                              className="truncate whitespace-nowrap flex-1 text-[16px]"
+                              className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
                               style={{ color: qualityColors[r.quality ?? 1] }}>
                               {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
                             </span>
-                            <span className="flex-shrink-0 w-24 text-center text-yellow-200 bg-neutral-800 text-[16px] px-0 py-0 rounded-full">
+                            <span className="flex-shrink-0 w-16 lg:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] lg:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
                               {r.minSkill}
                             </span>
                           </div>
@@ -2274,29 +2316,29 @@ const renderXTick = selected
                       ease: "easeOut"
                     }}
                     className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
-                              border-t border-neutral-700 py-3 px-4 text-center"
+                              border-t border-neutral-700 py-1 px-4 lg:py-1.5 lg:px-30"
                   >
-                    <div className="text-2xl font-semibold flex items-center justify-center relative">
-                      <div>
-                        <span className="text-neutral-400">Total Cost: </span>
-                        <SignedCost copper={displayedTotalCost} />
+                    <div className="text-sm lg:text-xl font-semibold flex items-center justify-between gap-2 min-w-0">
+                      <div className="flex items-center justify-start min-w-0 flex-1 overflow-hidden pl-[55px] lg:pl-0 pr-3">
+                        <span className="text-neutral-400 shrink-0">Total: </span>
+                        <span className="min-w-0 truncate">
+                          <SignedCost copper={displayedTotalCost} />
+                        </span>
                       </div>
-                      <div className="absolute right-0">
-                        <button
-                          onClick={() => setShowMaterials(!showMaterials)}
-                          className="flex items-center gap-2 px-3 py-1.5 text-[15px] text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-extrabold transition-colors border border-neutral-600"
+                      <button
+                        onClick={() => setShowMaterials(!showMaterials)}
+                        className="flex items-center gap-1 shrink-0 px-2 py-1 text-xs lg:text-sm lg:px-3 lg:py-1.5 text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-semibold transition-colors border border-neutral-600"
+                      >
+                        <span>Materials</span>
+                        <svg
+                          className={`w-3 h-3 lg:w-4 lg:h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <span>Materials</span>
-                          <svg
-                            className={`w-4 h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                          </svg>
-                        </button>
-                      </div>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
                     </div>
                   </motion.div>
                 )}
@@ -2309,14 +2351,11 @@ const renderXTick = selected
         <AnimatePresence>
           {showMaterials && view === 'route' && (
             <motion.div
-              initial={{ opacity: 0, x: -20, scaleX: 0.95 }}
-              animate={{ opacity: 1, x: 0, scaleX: 1 }}
-              exit={{ opacity: 0, x: -20, scaleX: 0.95 }}
-              transition={{ 
-                duration: 0.2,
-                ease: "easeOut"
-              }}
-              className="absolute left-[37.5rem] top-0 w-[330px] h-full bg-neutral-900/95 backdrop-blur-sm rounded shadow-lg border border-neutral-800 z-50 origin-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] lg:inset-auto lg:left-[37.5rem] lg:top-0 lg:bottom-auto lg:right-auto lg:w-[330px] lg:max-h-none lg:h-full rounded-t-xl lg:rounded shadow-lg border border-neutral-800 border-b-0 lg:border-b z-50 origin-bottom lg:origin-left bg-neutral-900/95 backdrop-blur-sm"
             >
               <div className="p-3 h-full flex flex-col min-h-0">
                 <div className="flex justify-between items-center mb-4 flex-shrink-0">
@@ -2371,9 +2410,12 @@ const renderXTick = selected
           hover:scrollbar-thumb-neutral-600/60">
         
         {!selected ? (
-          <p className="text-neutral-400">Click a recipe to view details.</p>
+          <p className="text-neutral-400 px-4 py-8">
+            <span className="lg:hidden">Tap the menu to view the leveling guide or recipe list.</span>
+            <span className="hidden lg:inline">Click a recipe to view details.</span>
+          </p>
         ) : (
-          <div className="flex-1 w-full max-w-4xl py-12 mx-auto sm:px-6 lg:max-w-5xl lg:px-8">
+          <div className="flex-1 w-full max-w-4xl pt-14 pb-6 lg:py-12 mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8">
             <div className="flex-none items-center">
               <div className="flex pb-5 text-[36px] items-center">
                 <CachedIcon
@@ -2399,8 +2441,8 @@ const renderXTick = selected
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Level-up Calculator</h3>
               </div>
-              <div className="flex w-full h-full">
-                <div className="w-3/5 relative p-8" style={{ height: 350 }}>
+              <div className="flex flex-col lg:flex-row w-full h-full">
+                <div className="w-full lg:w-3/5 relative p-4 lg:p-8 h-[min(75vw,300px)] lg:h-[350px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
                       <CartesianGrid
@@ -2463,7 +2505,6 @@ const renderXTick = selected
                                 x1={lowX}  y1={lowY}
                                 x2={lowX}  y2={y0}
                                 stroke="#888"
-                                //strokeDasharray="4 4"
                                 strokeWidth={1}
                               />
                               {/* upper slider guide */}
@@ -2471,7 +2512,6 @@ const renderXTick = selected
                                 x1={highX} y1={highY}
                                 x2={highX} y2={y0}
                                 stroke="#888"
-                                //strokeDasharray="4 4"
                                 strokeWidth={1}
                               />
                             </g>
@@ -2571,14 +2611,25 @@ const renderXTick = selected
                             {...rest}
                             style={{
                               ...style,
-                              height: '12px',
-                              width: '12px',
-                              borderRadius: '6px',
-                              backgroundColor: '#9ca3af',
-                              boxShadow: '0 0 2px rgba(0,0,0,0.5)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              width: 44,
+                              height: 44,
                               pointerEvents: 'auto'
                             }}
+                            className="touch-manipulation"
                           >
+                            <div
+                              style={{
+                                width: 12,
+                                height: 12,
+                                borderRadius: 6,
+                                backgroundColor: '#9ca3af',
+                                boxShadow: '0 0 2px rgba(0,0,0,0.5)',
+                                pointerEvents: 'none'
+                              }}
+                            />
                           </div>
                         );
                       }}
@@ -2586,7 +2637,7 @@ const renderXTick = selected
                   </div>
                 </div> {/* end chart container */} 
 
-                <aside className="flex-none w-2/5 bg-neutral-800 rounded-lg relative h-full" style={{ height: 350 }}>
+                <aside className="flex-none w-full lg:w-2/5 bg-neutral-800 rounded-lg relative lg:h-full" style={{ minHeight: 200 }}>
                   <div className="flex justify-center items-center">
                   <div className="flex flex-col items-center bg-neutral-900 rounded-b border border-neutral-700 w-1/2 p-3 border-t-0 -mt-0.5 border-r-0">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
@@ -2658,13 +2709,13 @@ const renderXTick = selected
                 </aside>
               </div>
 
-              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Cost Calculations</h3>
+              <div className="flex items-center justify-between px-4 py-4 lg:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
+                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
               </div>
-              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] h-24">
-                <div className="flex-1 flex flex-col items-center justify-center p-4">
-                  <span className="text-neutral-400 mb-2">Base Cost Per Attempt</span>
-                  <span className="text-xl font-semibold">
+              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] lg:text-[16px] min-w-0">
+                <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                  <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Base Cost Per Attempt</span>
+                  <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                     <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} />
                   </span>
                 </div>
@@ -2676,9 +2727,9 @@ const renderXTick = selected
                     // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
                     if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
                       return (
-                        <div className="flex-1 flex flex-col items-center justify-center p-4">
-                          <span className="text-neutral-400 mb-2">Recipe Cost</span>
-                          <span className="text-red-400 text-base">Not Available (BoP)</span>
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Recipe Cost</span>
+                          <span className="text-red-400 text-[10px] lg:text-base">Not Available (BoP)</span>
                         </div>
                       );
                     }
@@ -2687,50 +2738,50 @@ const renderXTick = selected
                     return (
                       <>
                         {(recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice >= 0) && (
-                          <div className="flex-1 flex flex-col items-center justify-center p-4">
-                            <span className="text-neutral-400 mb-2">
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">
                               {recipeCostData.vendorPrice === 0 ? 'Recipe Cost' : 'Vendor Recipe Cost'}
                             </span>
-                            <div className="flex flex-col items-center gap-1">
+                            <div className="flex flex-col items-center gap-0.5 lg:gap-1">
                               {recipeInfo?.limitedStock && (
-                                <div className="text-base text-yellow-400 flex items-center gap-1">
+                                <div className="text-[10px] lg:text-base text-yellow-400 flex items-center gap-1">
                                   <span>⚠️ Limited Stock</span>
                                 </div>
                               )}
-                              <span className="text-xl font-semibold">
+                              <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                                 <FormatMoney copper={recipeCostData.vendorPrice} />
                               </span>
                             </div>
                           </div>
                         )}
                         {recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0 && (
-                          <div className="flex-1 flex flex-col items-center justify-center p-4">
-                            <span className="text-neutral-400 mb-2">AH Recipe Cost</span>
-                            <span className="text-xl font-semibold">
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">AH Recipe Cost</span>
+                            <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                               <FormatMoney copper={recipeCostData.ahPrice} />
                             </span>
                           </div>
                         )}
                         {recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null && (
-                          <div className="flex-1 flex flex-col items-center justify-center p-4">
-                            <span className="text-neutral-400 mb-2">Recipe Cost</span>
-                            <span className="text-red-400 text-base">No price available</span>
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Recipe Cost</span>
+                            <span className="text-red-400 text-[10px] lg:text-base">No price available</span>
                           </div>
                         )}
                       </>
                     );
                   })()
                 ) : (
-                  <div className="flex-1 flex flex-col items-center justify-center p-4">
-                    <span className="text-neutral-400 mb-2">Recipe Cost</span>
-                    <span className="text-xl font-semibold">
+                  <div className="flex-1 flex flex-col items-center justify-center p-2 lg:p-4 min-w-0">
+                    <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-base">Recipe Cost</span>
+                    <span className="text-sm lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                       <FormatMoney copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} />
                     </span>
                   </div>
                 )}
-                <div className="flex-1 flex flex-col items-center justify-center p-4">
-                  <span className="text-neutral-400 mb-2">Average Cost Per Level</span>
-                  <span className="text-xl font-semibold">
+                <div className="flex-1 flex flex-col items-center justify-center p-2 lg:p-4 min-w-0">
+                  <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-base">Average Cost Per Level</span>
+                  <span className="text-sm lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                     <SafeMoney
                       value={selected ? (() => {
                         const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
@@ -2745,15 +2796,15 @@ const renderXTick = selected
                 </div>
               </div>
 
-              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Material Calculations</h3>
+              <div className="flex items-center justify-between px-2 py-3 lg:px-6 lg:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
+                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Material Calculations</h3>
               </div>
-              <div className="px-6 py-6">
+              <div className="px-2 py-2 lg:px-6 lg:py-6">
                 <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} />
               </div>
 
-              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Auction House Profit Calculation</h3>
+              <div className="flex items-center justify-between px-2 py-3 lg:px-6 lg:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
+                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Auction House Profit Calculation</h3>
               </div>
               <div className="flex flex-col divide-y divide-neutral-700">
                 {selected?.produces ? (() => {
@@ -2772,30 +2823,30 @@ const renderXTick = selected
                   const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
                   return (
                     <>
-                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-800 overflow-hidden text-neutral-100 text-[16px] min-h-[4rem]">
-                        <div className="flex-1 flex flex-col items-center justify-center p-4">
-                          <span className="text-neutral-400 mb-1 text-sm">Vendor Price Return</span>
-                          <span className="text-lg font-semibold">
+                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] lg:text-[16px] min-h-[3rem] lg:min-h-[4rem]">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">Vendor Price Return</span>
+                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={vendorReturn} />
                           </span>
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center p-4">
-                          <span className="text-neutral-400 mb-1 text-sm">AH Returns (min buyout)</span>
-                          <span className="text-lg font-semibold">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">AH Returns (min buyout)</span>
+                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={ahMinBuyout} />
                           </span>
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center p-4">
-                          <span className="text-neutral-400 mb-1 text-sm">AH Returns (market avg)</span>
-                          <span className="text-lg font-semibold">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">AH Returns (market avg)</span>
+                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={ahMarketValue} />
                           </span>
                         </div>
                       </div>
                       {outcomes.length > 0 && (
-                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-4">
-                          <span className="text-neutral-400 mb-2 text-sm font-medium">Expected Disenchant Materials</span>
-                          <ul className="space-y-2 text-sm">
+                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-2 lg:p-4">
+                          <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-sm font-medium">Expected Disenchant Materials</span>
+                          <ul className="space-y-1.5 lg:space-y-2 text-xs lg:text-sm">
                             {outcomes.map((o, idx) => {
                               const avgQty = (o.minQty + o.maxQty) / 2;
                               const expectedQty = o.chance * avgQty * totalOutput;
@@ -2808,23 +2859,23 @@ const renderXTick = selected
                               const qtyRange = o.minQty === o.maxQty ? `${o.minQty}` : `${o.minQty}–${o.maxQty}`;
                               const pct = (o.chance * 100).toFixed(0);
                               return (
-                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-3">
+                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-2 lg:gap-3">
                                   <CachedIcon
                                     category="materials"
                                     id={o.itemId}
-                                    className="w-7 h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
+                                    className="w-5 h-5 lg:w-7 lg:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
                                   />
                                   <div className="flex-1 min-w-0">
-                                    <span className="font-medium" style={{ color: qualityColors[matQuality] }}>{matName}</span>
-                                    <span className="text-neutral-400 ml-1.5">
+                                    <span className="font-medium truncate" style={{ color: qualityColors[matQuality] }}>{matName}</span>
+                                    <span className="text-neutral-400 ml-1 lg:ml-1.5 text-[10px] lg:text-sm">
                                       {pct}% ({qtyRange})
                                     </span>
                                   </div>
-                                  <div className="text-right flex-shrink-0">
+                                  <div className="text-right flex-shrink-0 text-[10px] lg:text-sm pt-[10px] lg:pt-0">
                                     <span className="text-neutral-400">
                                       ~{expectedQty.toFixed(1)} × <FormatMoney copper={price} />
                                     </span>
-                                    <span className="text-white font-medium ml-2">
+                                    <span className="text-white font-medium ml-1 lg:ml-2">
                                       = <FormatMoney copper={value} />
                                     </span>
                                   </div>
@@ -2832,8 +2883,8 @@ const renderXTick = selected
                               );
                             })}
                           </ul>
-                          <div className="mt-2 pt-2 border-t border-neutral-600 flex justify-between items-center">
-                            <span className="text-neutral-400 text-sm">Total expected value</span>
+                          <div className="mt-1.5 lg:mt-2 pt-1.5 lg:pt-2 border-t border-neutral-600 flex justify-between items-center text-[10px] lg:text-sm">
+                            <span className="text-neutral-400">Total expected value</span>
                             <span className="text-white font-semibold"><FormatMoney copper={deTotal * totalOutput} /></span>
                           </div>
                         </div>
@@ -2841,7 +2892,7 @@ const renderXTick = selected
                     </>
                   );
                 })() : (
-                  <div className="flex items-center justify-center p-8 text-neutral-500 text-sm">
+                  <div className="flex items-center justify-center p-4 lg:p-8 text-neutral-500 text-xs lg:text-sm">
                     Select a recipe to see profit calculations
                   </div>
                 )}
