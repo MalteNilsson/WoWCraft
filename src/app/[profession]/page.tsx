@@ -521,9 +521,13 @@ export default function EnchantingPlanner() {
     if (urlSkill) {
       const skillLevel = parseInt(urlSkill);
       if (!isNaN(skillLevel) && skillLevel >= 1 && skillLevel <= maxSkill) {
-        setSkill(skillLevel);
-        setCommittedSkill(skillLevel);
-        lastSkillValue.current = skillLevel;
+        const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
+        const isRecentUserChange = timeSinceLastUserChange < 1000;
+        if (!isRecentUserChange) {
+          setSkill(skillLevel);
+          setCommittedSkill(skillLevel);
+          lastSkillValue.current = skillLevel;
+        }
       }
     }
   }, [urlSkill]);
@@ -535,7 +539,9 @@ export default function EnchantingPlanner() {
       const targetLevel = parseInt(urlTarget);
       if (!isNaN(targetLevel) && targetLevel >= 1 && targetLevel <= maxSkill) {
         const isPreviousMaxSkillFromUrl = targetLevel === previousMaxFromUrl;
-        if (!isPreviousMaxSkillFromUrl) {
+        const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
+        const isRecentUserChange = timeSinceLastUserChange < 1000;
+        if (!isPreviousMaxSkillFromUrl && !isRecentUserChange) {
           setTarget(targetLevel);
           setCommittedTarget(targetLevel);
         }
@@ -681,10 +687,9 @@ export default function EnchantingPlanner() {
       setCommittedSkill(skill);
       setIsReleased(false);
       setIsBlurComplete(true);
-      // Update URL when skill is committed
-      updateUrl();
+      // Don't call updateUrl here - handleSliderEnd already did it when slider was released
     }
-  }, [debouncedSkill, isReleased, isSliding, skill, updateUrl]);
+  }, [debouncedSkill, isReleased, isSliding, skill]);
 
   const handleSliderStart = () => {
     setIsDirectChange(false);
@@ -713,6 +718,7 @@ export default function EnchantingPlanner() {
     setCommittedTarget(target);
     lastSkillValue.current = skill;
     setIsBlurComplete(true);
+    recentUserChangeTimestampRef.current = Date.now();
     updateUrl();
   };
 
@@ -744,7 +750,7 @@ export default function EnchantingPlanner() {
       setCommittedTarget(newTarget);
     }
     
-    // Update URL immediately for direct changes
+    recentUserChangeTimestampRef.current = Date.now();
     updateUrl();
   };
 
@@ -2014,6 +2020,7 @@ const renderXTick = selected
                         const newTarget = Math.max(skill + 1, target - 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
+                        recentUserChangeTimestampRef.current = Date.now();
                         updateUrl({ target: newTarget });
                       }}
                     >−</button>
@@ -2029,6 +2036,7 @@ const renderXTick = selected
                           const boundedVal = Math.max(skill + 1, Math.min(maxSkill, val));
                           setTarget(boundedVal);
                           setCommittedTarget(boundedVal);
+                          recentUserChangeTimestampRef.current = Date.now();
                           updateUrl({ target: boundedVal });
                         }
                       }}
@@ -2043,6 +2051,7 @@ const renderXTick = selected
                         const newTarget = target + 1;
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
+                        recentUserChangeTimestampRef.current = Date.now();
                         updateUrl({ target: newTarget });
                       }}
                     >+</button>
