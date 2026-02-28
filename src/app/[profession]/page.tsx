@@ -25,7 +25,7 @@ import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } fr
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
-import { Range, getTrackBackground } from 'react-range';
+import { PerformantRangeSlider } from '@/components/PerformantRangeSlider';
 import Fuse from 'fuse.js';
 import { Listbox } from '@headlessui/react';
 import { materialInfoMap } from '@/lib/materialsLoader';
@@ -424,9 +424,12 @@ export default function EnchantingPlanner() {
   const [drawerDragX, setDrawerDragX] = useState<number | null>(null);
   const drawerDragStartRef = useRef<{ x: number; startOpen: boolean } | null>(null);
   const drawerDragXRef = useRef<number>(0);
+  const asideRef = useRef<HTMLElement>(null);
+  const pendingDrawerCloseRef = useRef(false);
   const [useMarketValue, setUseMarketValue] = useState(false);
   const optimizeSubCrafting = false; // Sub-crafting optimization disabled
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
+  const [expandedPriceStrategyTooltip, setExpandedPriceStrategyTooltip] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house' | null>(null);
 
   // Add isSliding state to track active slider interaction
   const [isSliding, setIsSliding] = useState(false);
@@ -466,6 +469,23 @@ export default function EnchantingPlanner() {
       window.removeEventListener('scroll', updatePosition, true);
     };
   }, [isAdvancedSettingsOpen]);
+
+  // Close price strategy tooltip when user interacts elsewhere (click or touch)
+  useEffect(() => {
+    const closeIfOutside = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as Node;
+      const strategyEl = document.querySelector('[data-price-strategy-group]');
+      if (strategyEl && !strategyEl.contains(target)) {
+        setExpandedPriceStrategyTooltip(null);
+      }
+    };
+    document.addEventListener('click', closeIfOutside);
+    document.addEventListener('touchstart', closeIfOutside, { passive: true });
+    return () => {
+      document.removeEventListener('click', closeIfOutside);
+      document.removeEventListener('touchstart', closeIfOutside);
+    };
+  }, []);
   
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
@@ -707,7 +727,9 @@ export default function EnchantingPlanner() {
     }
   };
 
-  const handleSliderEnd = () => {
+  const handleSliderEnd = (finalSkill?: number, finalTarget?: number) => {
+    const skillToCommit = finalSkill ?? skill;
+    const targetToCommit = finalTarget ?? target;
     setIsReleased(true);
     setIsSliding(false);
     // Remove the delay: fade out blur immediately in parallel with content
@@ -717,9 +739,11 @@ export default function EnchantingPlanner() {
     setShouldBlur(false);
     blurTimeoutRef.current = null;
     // Immediately commit the current skill value when sliding ends
-    setCommittedSkill(skill);
-    setCommittedTarget(target);
-    lastSkillValue.current = skill;
+    setSkill(skillToCommit);
+    setTarget(targetToCommit);
+    setCommittedSkill(skillToCommit);
+    setCommittedTarget(targetToCommit);
+    lastSkillValue.current = skillToCommit;
     setIsBlurComplete(true);
     recentUserChangeTimestampRef.current = Date.now();
     updateUrl();
@@ -989,6 +1013,15 @@ export default function EnchantingPlanner() {
     }
   }, [selected, view]);
 
+  // Clamp rngLow/rngHigh when recipe changes (e.g. switching to recipe with smaller range)
+  useEffect(() => {
+    if (!selected) return;
+    const min = selected.minSkill ?? 1;
+    const max = selected.difficulty.gray ?? maxSkill;
+    setRngLow((prev) => Math.max(min, Math.min(prev, max)));
+    setRngHigh((prev) => Math.max(min, Math.min(prev, max)));
+  }, [selected?.id]);
+
   const probData = useMemo(() => {
     if (!selected) return [];
     const start = selected.minSkill;
@@ -1045,8 +1078,8 @@ export default function EnchantingPlanner() {
     setRngLow(start);
     setRngHigh(end);
 
-    // Close mobile sidebar when selecting a step
-    setSidebarOpen(false);
+    // Defer drawer close until after content has rendered (avoids jank)
+    pendingDrawerCloseRef.current = true;
   };
 
   // Update wasVisible to consider both previous visibility and click state
@@ -1601,7 +1634,9 @@ const renderXTick = selected
       newX = Math.max(-width, Math.min(0, -width + delta));
     }
     drawerDragXRef.current = newX;
-    setDrawerDragX(newX);
+    // Direct DOM update - avoids React re-renders during drag (major perf win on low-powered devices)
+    const el = asideRef.current;
+    if (el) el.style.transform = `translate3d(${newX}px, 0, 0)`;
   }, []);
   const handleDrawerDragEnd = useCallback(() => {
     const start = drawerDragStartRef.current;
@@ -1609,6 +1644,11 @@ const renderXTick = selected
     const width = window.innerWidth;
     const threshold = width * 0.25;
     const currentX = drawerDragXRef.current;
+    const el = asideRef.current;
+    if (el) {
+      el.style.removeProperty('transform');
+      el.style.removeProperty('will-change');
+    }
     setDrawerDragX(null);
     drawerDragStartRef.current = null;
     if (start.startOpen) {
@@ -1618,6 +1658,64 @@ const renderXTick = selected
     }
   }, []);
 
+  // Animate drawer closed on mobile (same slide as drag) when recipe is clicked or backdrop tapped
+  const DRAWER_ANIMATION_DURATION = 300;
+  const closeDrawerAnimated = useCallback(() => {
+    if (typeof window === 'undefined') return;
+    const isMobile = window.innerWidth < 1024;
+    if (!isMobile) {
+      setSidebarOpen(false);
+      return;
+    }
+    if (!sidebarOpen) return;
+    const width = window.innerWidth;
+    const el = asideRef.current;
+    setDrawerDragX(0); // One render: aside gets z-[60], no transition
+
+    const startTime = performance.now();
+    const startX = 0;
+    const endX = -width;
+
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / DRAWER_ANIMATION_DURATION, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 2);
+      const x = startX + (endX - startX) * easeOut;
+      drawerDragXRef.current = x;
+      // Direct DOM update - avoids 60+ React re-renders during animation
+      if (el) el.style.transform = `translate3d(${x}px, 0, 0)`;
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        if (el) {
+          el.style.removeProperty('transform');
+          el.style.removeProperty('will-change');
+        }
+        setDrawerDragX(null);
+        setSidebarOpen(false);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [sidebarOpen]);
+
+  // Defer drawer animation until after recipe content has rendered (avoids jank)
+  useEffect(() => {
+    if (!pendingDrawerCloseRef.current || !sidebarOpen) return;
+    if (typeof window === 'undefined' || window.innerWidth >= 1024) {
+      pendingDrawerCloseRef.current = false;
+      return;
+    }
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (pendingDrawerCloseRef.current && sidebarOpen) {
+          pendingDrawerCloseRef.current = false;
+          closeDrawerAnimated();
+        }
+      });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [selectedRecipeId, sidebarOpen, closeDrawerAnimated]);
+
   const drawerTouchHandlers = useMemo(() => ({
     onTouchStart: (e: React.TouchEvent) => {
       const x = e.touches[0].clientX;
@@ -1625,7 +1723,10 @@ const renderXTick = selected
       if (x <= edgePx) {
         handleDrawerDragStart(x);
         const moveHandler = (ev: TouchEvent) => {
-          if (drawerDragStartRef.current && ev.touches.length > 0) handleDrawerDragMove(ev.touches[0].clientX);
+          if (drawerDragStartRef.current && ev.touches.length > 0) {
+            ev.preventDefault(); // Block browser gesture during our drag (requires passive: false)
+            handleDrawerDragMove(ev.touches[0].clientX);
+          }
         };
         const cleanup = () => {
           document.removeEventListener('touchmove', moveHandler);
@@ -1633,7 +1734,7 @@ const renderXTick = selected
           document.removeEventListener('touchcancel', cleanup);
           if (drawerDragStartRef.current) handleDrawerDragEnd();
         };
-        document.addEventListener('touchmove', moveHandler, { passive: true });
+        document.addEventListener('touchmove', moveHandler, { passive: false });
         document.addEventListener('touchend', cleanup);
         document.addEventListener('touchcancel', cleanup);
       }
@@ -1647,7 +1748,10 @@ const renderXTick = selected
       if (x >= rightEdge) {
         handleDrawerDragStart(x);
         const moveHandler = (ev: TouchEvent) => {
-          if (drawerDragStartRef.current && ev.touches.length > 0) handleDrawerDragMove(ev.touches[0].clientX);
+          if (drawerDragStartRef.current && ev.touches.length > 0) {
+            ev.preventDefault(); // Block browser gesture during our drag (requires passive: false)
+            handleDrawerDragMove(ev.touches[0].clientX);
+          }
         };
         const cleanup = () => {
           document.removeEventListener('touchmove', moveHandler);
@@ -1655,7 +1759,7 @@ const renderXTick = selected
           document.removeEventListener('touchcancel', cleanup);
           if (drawerDragStartRef.current) handleDrawerDragEnd();
         };
-        document.addEventListener('touchmove', moveHandler, { passive: true });
+        document.addEventListener('touchmove', moveHandler, { passive: false });
         document.addEventListener('touchend', cleanup);
         document.addEventListener('touchcancel', cleanup);
       }
@@ -1724,9 +1828,9 @@ const renderXTick = selected
         </button>
       )}
 
-      {/* Mobile: left-edge drag strip - z-40 so above rest but below buttons/thumbs */}
+      {/* Mobile: left-edge drag strip - z-[60] so above main (z-50) when drawer closed, below hamburger (z-100) */}
       <div
-        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none z-40"
+        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none z-[60]"
         style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
         {...drawerTouchHandlers}
         {...drawerPointerHandlers}
@@ -1742,16 +1846,17 @@ const renderXTick = selected
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="lg:hidden fixed inset-0 z-40 bg-black/60"
-              onClick={() => setSidebarOpen(false)}
+              onClick={closeDrawerAnimated}
               aria-hidden
             />
           )}
         </AnimatePresence>
 
-        {/* Aside - full-screen on mobile, sidebar on desktop */}
+        {/* Aside - full-screen on mobile, sidebar on desktop; z-[60] when dragging so visible above main (z-50) */}
         <aside
-          className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] lg:transform-none lg:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
-          style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
+          ref={asideRef}
+          className={`fixed lg:static inset-0 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] lg:transform-none lg:translate-x-0 ${drawerDragX !== null ? 'z-[60]' : 'z-50'} ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
+          style={drawerDragX !== null ? { transform: `translate3d(${drawerDragX}px, 0, 0)`, willChange: 'transform' } : undefined}
         >
           {/* Mobile: drag handles - z-40 so above rest but below buttons/thumbs */}
           <div
@@ -1784,7 +1889,7 @@ const renderXTick = selected
                       <span className="font-semibold truncate">{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {versions.map((ver) => (
                         <Listbox.Option key={ver} value={ver} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
                           {({ selected }) => (
@@ -1804,7 +1909,7 @@ const renderXTick = selected
                       <span className="font-semibold truncate">{selectedRealm}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {realms.map((realm) => (
                         <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
                           {({ selected }) => (
@@ -1824,7 +1929,7 @@ const renderXTick = selected
                       <span className="font-semibold truncate">{selectedFaction}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {factions.map((fac) => (
                         <Listbox.Option key={fac} value={fac} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
                           {({ selected }) => (
@@ -1861,7 +1966,7 @@ const renderXTick = selected
                           />
                         </svg>
                       </Listbox.Button>
-                      <Listbox.Options className="absolute z-10 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
+                      <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
                         {availableProfessions.map((prof) => (
                           <Listbox.Option
                             key={prof}
@@ -2058,83 +2163,24 @@ const renderXTick = selected
                 </div>
               </div>
               
-              {/* Double-sided range slider */}
+              {/* Double-sided range slider - direct DOM during drag to avoid planner recalc overhead */}
               <div className="relative z-20 mb-4 w-full px-3 lg:px-0">
-                <Range
+                <PerformantRangeSlider
                   values={[skill, target]}
-                  step={1}
                   min={1}
                   max={maxSkill}
-                  onChange={([low, high]) => {
-                    // Only update the skill value during dragging, target updates immediately
-                    handleSliderChange(low);
+                  step={1}
+                  onChange={([low, high]) => handleSliderEnd(low, high)}
+                  onDragChange={([low, high]) => {
+                    setSkill(low);
                     setTarget(high);
                   }}
-                  onFinalChange={([low, high]) => {
-                    // Commit both values when slider is released
-                    handleSliderEnd();
-                  }}
-                  renderTrack={({ props, children }) => {
-                    const { key, style, ...rest } = props as any;
-                    return (
-                      <div
-                        key={key}
-                        {...rest}
-                        style={{
-                          ...style,
-                          height: '6px',
-                          width: '100%',
-                          minWidth: '100%',
-                          borderRadius: '3px',
-                          background: getTrackBackground({
-                            values: [skill, target],
-                            colors: ['#4b5563', selectedVersion === 'The Burning Crusade' ? '#10b981' : '#eab308', '#4b5563'],
-                            min: 1,
-                            max: maxSkill
-                          }),
-                          pointerEvents: 'auto'
-                        }}
-                        onMouseDown={handleSliderStart}
-                        onTouchStart={handleSliderStart}
-                      >
-                        {children}
-                      </div>
-                    );
-                  }}
-                  renderThumb={({ props, index }) => {
-                    const { key, style, ...rest } = props;
-                    const thumbColor = selectedVersion === 'The Burning Crusade' 
-                      ? '#059669' // emerald-600 for both thumbs in TBC
-                      : (index === 0 ? '#eab308' : '#f59e0b'); // yellow for Vanilla
-                    const thumbSize = isDesktop ? 20 : 44;
-                    return (
-                      <div
-                        key={key}
-                        {...rest}
-                        style={{
-                          ...style,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: thumbSize,
-                          height: thumbSize,
-                          pointerEvents: 'auto'
-                        }}
-                        className="touch-manipulation"
-                      >
-                        <div
-                          style={{
-                            width: 16,
-                            height: 16,
-                            borderRadius: 8,
-                            backgroundColor: thumbColor,
-                            boxShadow: '0 0 4px rgba(0,0,0,0.5)',
-                            pointerEvents: 'none'
-                          }}
-                        />
-                      </div>
-                    );
-                  }}
+                  onDragStart={handleSliderStart}
+                  trackColors={['#4b5563', selectedVersion === 'The Burning Crusade' ? '#10b981' : '#eab308', '#4b5563']}
+                  thumbSize={isDesktop ? 20 : 44}
+                  thumbColors={selectedVersion === 'The Burning Crusade' ? ['#059669', '#059669'] : ['#eab308', '#f59e0b']}
+                  thumbInnerSize={16}
+                  trackHeight="6px"
                 />
               </div>
 
@@ -2210,7 +2256,7 @@ const renderXTick = selected
                     <button
                       className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
-                        const newTarget = target + 1;
+                        const newTarget = Math.min(maxSkill, target + 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
                         recentUserChangeTimestampRef.current = Date.now();
@@ -2226,9 +2272,13 @@ const renderXTick = selected
               <div className="flex items-center justify-between mb-1 lg:mb-2">
                 <label className="text-[10px] lg:text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
               </div>
-              <div className="flex gap-0.5 lg:gap-1 flex-wrap">
+              <div className="flex gap-0.5 lg:gap-1 flex-wrap" data-price-strategy-group>
                 <button
-                  onClick={() => setPriceSourcing('cost')}
+                  data-price-strategy
+                  onClick={() => {
+                    setPriceSourcing('cost');
+                    setExpandedPriceStrategyTooltip((prev) => (prev === 'cost' ? null : 'cost'));
+                  }}
                   className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
@@ -2237,14 +2287,18 @@ const renderXTick = selected
                   title="Raw material cost"
                 >
                   <span className="font-medium">Cost</span>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  {/* Tooltip: hover on desktop, click-to-show on mobile */}
+                  <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10 ${expandedPriceStrategyTooltip === 'cost' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                     Raw material cost
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('cost-vendor')}
+                  data-price-strategy
+                  onClick={() => {
+                    setPriceSourcing('cost-vendor');
+                    setExpandedPriceStrategyTooltip((prev) => (prev === 'cost-vendor' ? null : 'cost-vendor'));
+                  }}
                   className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost-vendor'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
@@ -2253,14 +2307,18 @@ const renderXTick = selected
                   title="Subtract vendor value"
                 >
                   <span className="font-medium">Vendor</span>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  {/* Tooltip: hover on desktop, click-to-show on mobile */}
+                  <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10 ${expandedPriceStrategyTooltip === 'cost-vendor' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                     Subtract vendor value
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('disenchant')}
+                  data-price-strategy
+                  onClick={() => {
+                    setPriceSourcing('disenchant');
+                    setExpandedPriceStrategyTooltip((prev) => (prev === 'disenchant' ? null : 'disenchant'));
+                  }}
                   className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'disenchant'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
@@ -2269,14 +2327,18 @@ const renderXTick = selected
                   title="Subtract disenchant value"
                 >
                   <span className="font-medium">Disenchanting</span>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  {/* Tooltip: hover on desktop, click-to-show on mobile */}
+                  <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10 ${expandedPriceStrategyTooltip === 'disenchant' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                     Subtract disenchant value
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('auction-house')}
+                  data-price-strategy
+                  onClick={() => {
+                    setPriceSourcing('auction-house');
+                    setExpandedPriceStrategyTooltip((prev) => (prev === 'auction-house' ? null : 'auction-house'));
+                  }}
                   className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'auction-house'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
@@ -2285,8 +2347,8 @@ const renderXTick = selected
                   title="Sell crafted items"
                 >
                   <span className="font-medium">Auction House</span>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  {/* Tooltip: hover on desktop, click-to-show on mobile */}
+                  <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10 ${expandedPriceStrategyTooltip === 'auction-house' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                     Sell crafted items
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
@@ -2544,7 +2606,7 @@ const renderXTick = selected
                               setSelectedRecipeId(r.id);
                               setRngLow(r.minSkill);
                               setRngHigh(r.difficulty.gray!);
-                              setSidebarOpen(false);
+                              pendingDrawerCloseRef.current = true;
                             }}
                             id={`recipe-${r.id}`}
                             className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[43px] lg:h-[60px]
@@ -2671,11 +2733,11 @@ const renderXTick = selected
           )}
         </AnimatePresence>
 
-        {/* Main panel - z-50 when sidebar closed so chart thumbs/buttons are above left strip (z-40); use hamburger to open when viewing recipe */}
+        {/* Main panel - z-[70] when closed (not dragging) so chart thumbs above strip; z-0 when drawer open or during drag so aside visible; pointer-events-none on mobile lets touches pass through to strip for drag-to-open */}
         <main
           className={
             'relative flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950 lg:z-0 ' +
-            (!sidebarOpen ? 'z-50' : 'z-0') +
+            (!sidebarOpen && drawerDragX === null ? 'z-[70] pointer-events-none lg:pointer-events-auto' : 'z-0') +
             ' [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60'
           }
         >
@@ -2841,70 +2903,17 @@ const renderXTick = selected
                     </LineChart>
                   </ResponsiveContainer>
                   <div className="relative z-20 bottom-7 ml-9.5">
-                    <Range
+                    <PerformantRangeSlider
                       values={[clampedLow, clampedHigh]}
-                      step={1}
                       min={sliderMin}
                       max={sliderMax}
+                      step={1}
                       onChange={([low, high]) => {
                         setRngLow(low);
                         setRngHigh(high);
                       }}
-                      renderTrack={({ props, children }) => {
-                        // extract key so we don't spread it
-                        const { key, style, ...rest } = props as any;
-                        return (
-                          <div
-                            key={key}
-                            {...rest}
-                            style={{
-                              ...style,
-                              height: '2px',
-                              borderRadius: '2px',
-                              background: getTrackBackground({
-                                values: [rngLow, rngHigh],
-                                colors: ['#4b5563', '#d1d5db', '#4b5563'],
-                                min: selected.minSkill,
-                                max: selected.difficulty.gray!
-                              }),
-                              pointerEvents: 'auto'
-                            }}
-                          >
-                            {children}
-                          </div>
-                        );
-                      }}
-                      renderThumb={({ props, index }) => {
-                        const { key, style, ...rest } = props;
-                        const thumbSize = isDesktop ? 20 : 44;
-                        return (
-                          <div
-                            key={key}
-                            {...rest}
-                            style={{
-                              ...style,
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              width: thumbSize,
-                              height: thumbSize,
-                              pointerEvents: 'auto'
-                            }}
-                            className="touch-manipulation"
-                          >
-                            <div
-                              style={{
-                                width: 12,
-                                height: 12,
-                                borderRadius: 6,
-                                backgroundColor: '#9ca3af',
-                                boxShadow: '0 0 2px rgba(0,0,0,0.5)',
-                                pointerEvents: 'none'
-                              }}
-                            />
-                          </div>
-                        );
-                      }}
+                      thumbSize={isDesktop ? 20 : 44}
+                      trackColors={['#4b5563', '#d1d5db', '#4b5563']}
                     />
                   </div>
                 </div> {/* end chart container */} 
@@ -2914,24 +2923,24 @@ const renderXTick = selected
                   <div className="flex flex-col items-center bg-neutral-900 rounded-none lg:rounded-b border-0 lg:border lg:border-neutral-700 lg:border-t-0 lg:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
-                      <button
-                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngLow(Math.max(1, rngLow - 1))}
-                      >−</button>
-                      <input
-                        type="number"
-                        value={rngLow}
-                        onChange={(e) => {
-                          const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngLow(Math.max(1, Math.min(val, rngHigh - 1)));
-                        }}
+<button
+                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                      onClick={() => setRngLow(Math.max(sliderMin, rngLow - 1))}
+                    >−</button>
+                    <input
+                      type="number"
+                      value={rngLow}
+                      onChange={(e) => {
+                        const val = parseInt(e.target.value);
+                        if (!isNaN(val)) setRngLow(Math.max(sliderMin, Math.min(val, rngHigh - 1, sliderMax)));
+                      }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
                                   [&::-webkit-outer-spin-button]:appearance-none"
                       />
                       <button
                         className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngLow(rngLow + 1)}
+                        onClick={() => setRngLow(Math.min(rngHigh - 1, sliderMax, rngLow + 1))}
                       >+</button>
                     </div>
                   </div>
@@ -2947,7 +2956,7 @@ const renderXTick = selected
                         value={rngHigh}
                         onChange={(e) => {
                           const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngHigh(Math.max(1, Math.min(val, rngHigh - 1)));
+                          if (!isNaN(val)) setRngHigh(Math.max(rngLow + 1, Math.min(val, sliderMax)));
                         }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
@@ -2955,7 +2964,7 @@ const renderXTick = selected
                       />
                       <button
                         className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngHigh(rngHigh + 1)}
+                        onClick={() => setRngHigh(Math.min(sliderMax, rngHigh + 1))}
                       >+</button>
                     </div>
                   </div>
