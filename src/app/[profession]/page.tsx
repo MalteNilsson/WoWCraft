@@ -1862,7 +1862,7 @@ const renderXTick = selected
                           />
                         </svg>
                       </Listbox.Button>
-                      <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
+                      <Listbox.Options className="absolute z-40 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
                         {availableProfessions.map((prof) => (
                           <Listbox.Option
                             key={prof}
