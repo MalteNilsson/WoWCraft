@@ -36,12 +36,22 @@ export default function PromoPage() {
           <p>
             I&apos;m from Sweden and hold a Master&apos;s degree in Computer Science. I enjoy building full-stack web applications and tools that solve real problems. I&apos;m currently looking for employment. If you&apos;re interested in working together or have an opportunity you&apos;d like to discuss, please reach out:
           </p>
-          <a
-            href="mailto:malte.o.nilsson@gmail.com"
-            className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-900 font-semibold transition-colors"
-          >
-            malte.o.nilsson@gmail.com
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://discord.com/users/199570995592298496"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold transition-colors"
+            >
+              Discord: stabshot
+            </a>
+            <a
+              href="mailto:malte.o.nilsson@gmail.com"
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-900 font-semibold transition-colors"
+            >
+              malte.o.nilsson@gmail.com
+            </a>
+          </div>
         </div>
       </main>
     </div>

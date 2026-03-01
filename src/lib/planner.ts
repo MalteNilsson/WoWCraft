@@ -1043,8 +1043,7 @@ export function makeDynamicPlan(
     });
 
     // Merge consecutive steps with same recipe and recalculate crafts to avoid rounding errors
-    // Skip merge when recalculateForEachLevel is ON to preserve 1-level steps
-    const mergedSteps: PlanStep[] = recalculateForEachLevel ? planSteps : (() => {
+    const mergedSteps: PlanStep[] = (() => {
       const result: PlanStep[] = [];
       let currentStep: PlanStep | null = null;
       let currentStartSkill: number = startSkill;

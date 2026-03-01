@@ -38,6 +38,11 @@ import Link from 'next/link';
 import { CachedIcon } from '@/components/CachedIcon';
 import { preloadIconZips } from '@/lib/iconStore';
 
+/** Wowhead base path for links (classic or tbc) */
+function getWowheadBase(version: string): string {
+  return version === 'The Burning Crusade' ? 'tbc' : 'classic';
+}
+
 // map WoW quality IDs to standard hex colors
 const qualityColors: Record<number,string> = {
   0: '#9d9d9d', // poor (gray)
@@ -186,12 +191,14 @@ function MaterialCard({
   materialInfo,
   position = 'only',
   expCrafts,
+  wowheadBase,
 }: {
   node: MaterialTreeNode;
   depth?: number;
   materialInfo: Record<number, MaterialInfo>;
   position?: 'top' | 'middle' | 'bottom' | 'only';
   expCrafts: number;
+  wowheadBase: string;
 }) {
   const roundedClass = {
     only: 'rounded-xl',
@@ -221,22 +228,30 @@ function MaterialCard({
       >
         <div className="flex items-center gap-2 lg:gap-3">
           <span className="text-sm lg:text-base">{node.quantity}</span>
-          {info && (
-            <CachedIcon
-              category="materials"
-              id={node.id}
-              alt={info?.name ?? 'Item'}
-              className="w-6 h-6 lg:w-8 lg:h-8 rounded object-cover border border-neutral-700"
-            />
-          )}
-          <div className="flex flex-col min-w-0">
-          <span className="text-sm lg:text-base font-medium truncate" style={{ color: qualityColors[info?.quality ?? 1] }}>
-            {node.name}
-          </span>
-            <span className="text-xs lg:text-sm text-neutral-400">
-              Per Craft: {perCraftQuantity}
-          </span>
-          </div>
+          <a
+            href={`https://www.wowhead.com/${wowheadBase}/item=${node.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center gap-2 lg:gap-3 min-w-0 hover:underline"
+          >
+            {info && (
+              <CachedIcon
+                category="materials"
+                id={node.id}
+                alt={info?.name ?? 'Item'}
+                className="w-6 h-6 lg:w-8 lg:h-8 rounded object-cover border border-neutral-700 flex-shrink-0"
+              />
+            )}
+            <div className="flex flex-col min-w-0">
+              <span className="text-sm lg:text-base font-medium truncate" style={{ color: qualityColors[info?.quality ?? 1] }}>
+                {node.name}
+              </span>
+              <span className="text-xs lg:text-sm text-neutral-400">
+                Per Craft: {perCraftQuantity}
+              </span>
+            </div>
+          </a>
         </div>
         <div className="flex flex-col items-end text-right">
           {node.noAhPrice ? (
@@ -279,6 +294,7 @@ function MaterialCard({
               node={child}
               depth={depth + 1}
               materialInfo={materialInfo}
+              wowheadBase={wowheadBase}
               position={
                 arr.length === 1
                   ? 'only'
@@ -301,10 +317,12 @@ function MaterialTreeFlat({
   rootNodes,
   materialInfo,
   expCrafts,
+  wowheadBase,
 }: {
   rootNodes: MaterialTreeNode[];
   materialInfo: Record<number, MaterialInfo>;
   expCrafts: number;
+  wowheadBase: string;
 }) {
   return (
     <div>
@@ -313,6 +331,7 @@ function MaterialTreeFlat({
           key={`${node.id}-${i}`}
           node={node}
           materialInfo={materialInfo}
+          wowheadBase={wowheadBase}
           position={node.children?.length ? 'top' : 'only'}
           expCrafts={expCrafts}
         />
@@ -2534,11 +2553,14 @@ const renderXTick = selected
                                   <span className="text-[13px] lg:text-[16px] flex items-center justify-center w-6 lg:w-8">
                                     {displayedCrafts}×
                                   </span>
-                                  <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover" />
-                                  <span 
-                                    className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
-                                    style={{ color: qualityColors[s.recipe.quality] }}>
-                                    {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
+                                  <span className="flex items-center gap-1 flex-1 min-w-0">
+                                    <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover" />
+                                    <span
+                                      className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                      style={{ color: qualityColors[s.recipe.quality] }}
+                                    >
+                                      {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
+                                    </span>
                                   </span>
                                   <span className="text-[13px] lg:text-[16px]">
                                     <SignedCost copper={displayedTotalCost} />
@@ -2597,17 +2619,20 @@ const renderXTick = selected
                                         <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] lg:text-[16px]">
                                           or {alt.crafts}×
                                         </span>
-                                        <CachedIcon
-                                          category={getRecipeProfession(alt.recipe.id, selectedProfession)}
-                                          id={alt.recipe.id}
-                                          className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
-                                        />
-                                        <span 
-                                          className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px] pl-1"
-                                          style={{ color: qualityColors[alt.recipe.quality] }}>
-                                          {alt.recipe.name.length <= 35
-                                            ? alt.recipe.name
-                                            : `${alt.recipe.name.slice(0, 33)}…`}
+                                        <span className="flex items-center gap-1 flex-1 min-w-0 pl-1">
+                                          <CachedIcon
+                                            category={getRecipeProfession(alt.recipe.id, selectedProfession)}
+                                            id={alt.recipe.id}
+                                            className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
+                                          />
+                                          <span
+                                            className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                            style={{ color: qualityColors[alt.recipe.quality] }}
+                                          >
+                                            {alt.recipe.name.length <= 35
+                                              ? alt.recipe.name
+                                              : `${alt.recipe.name.slice(0, 33)}…`}
+                                          </span>
                                         </span>
                                         <span className="text-[13px] lg:text-[16px]">
                                           <SignedCost copper={alt.cost} />
@@ -2643,18 +2668,19 @@ const renderXTick = selected
                                 diffColor(committedSkill, r.difficulty)
                               }`}
                             />
-                            <div className="pl-2 lg:pl-3">
+                            <div className="pl-2 lg:pl-3 flex items-center gap-1 flex-1 min-w-0">
                               <CachedIcon
                                 category={getRecipeProfession(r.id, selectedProfession)}
                                 id={r.id}
                                 className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
                               />
+                              <span
+                                className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                style={{ color: qualityColors[r.quality ?? 1] }}
+                              >
+                                {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
+                              </span>
                             </div>
-                            <span 
-                              className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
-                              style={{ color: qualityColors[r.quality ?? 1] }}>
-                              {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
-                            </span>
                             <span className="flex-shrink-0 w-16 lg:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] lg:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
                               {r.minSkill}
                             </span>
@@ -3154,7 +3180,7 @@ const renderXTick = selected
                 <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Material Calculations</h3>
               </div>
               <div className="px-2 py-2 lg:px-6 lg:py-6">
-                <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} />
+                <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} wowheadBase={getWowheadBase(selectedVersion)} />
               </div>
 
               <div className="flex items-center justify-between px-2 py-3 lg:px-6 lg:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
@@ -3214,17 +3240,24 @@ const renderXTick = selected
                               const pct = (o.chance * 100).toFixed(0);
                               return (
                                 <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-2 lg:gap-3">
-                                  <CachedIcon
-                                    category="materials"
-                                    id={o.itemId}
-                                    className="w-5 h-5 lg:w-7 lg:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
-                                  />
-                                  <div className="flex-1 min-w-0">
-                                    <span className="font-medium truncate" style={{ color: qualityColors[matQuality] }}>{matName}</span>
-                                    <span className="text-neutral-400 ml-1 lg:ml-1.5 text-[10px] lg:text-sm">
-                                      {pct}% ({qtyRange})
-                                    </span>
-                                  </div>
+                                  <a
+                                    href={`https://www.wowhead.com/${getWowheadBase(selectedVersion)}/item=${o.itemId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 lg:gap-3 flex-1 min-w-0 hover:underline"
+                                  >
+                                    <CachedIcon
+                                      category="materials"
+                                      id={o.itemId}
+                                      className="w-5 h-5 lg:w-7 lg:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
+                                    />
+                                    <div className="flex-1 min-w-0">
+                                      <span className="font-medium truncate" style={{ color: qualityColors[matQuality] }}>{matName}</span>
+                                      <span className="text-neutral-400 ml-1 lg:ml-1.5 text-[10px] lg:text-sm">
+                                        {pct}% ({qtyRange})
+                                      </span>
+                                    </div>
+                                  </a>
                                   <div className="text-right flex-shrink-0 text-[10px] lg:text-sm pt-[10px] lg:pt-0">
                                     <span className="text-neutral-400">
                                       ~{expectedQty.toFixed(1)} × <FormatMoney copper={price} />

@@ -9,9 +9,6 @@ import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 
-<Script src="https://wow.zamimg.com/js/tooltips.js" strategy="lazyOnload" />
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -53,8 +50,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${inter.className} overflow-hidden overscroll-x-contain`} suppressHydrationWarning>
       <body className="overflow-hidden overscroll-x-contain">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: 'var whTooltips = {colorLinks: false, iconizeLinks: false, renameLinks: false};',
+          }}
+        />
         {children}
         <Analytics />
+        <Script src="https://wow.zamimg.com/widgets/power.js" strategy="lazyOnload" />
       </body>
     </html>
   )
