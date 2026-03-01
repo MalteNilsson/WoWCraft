@@ -167,8 +167,8 @@ export function PerformantRangeSlider({
       <div
         ref={trackRef}
         className="relative w-full touch-none select-none"
-        style={{ touchAction: 'none' }}
         style={{
+          touchAction: 'none',
           height: trackHeight,
           borderRadius: '2px',
           background: getTrackBackground({
