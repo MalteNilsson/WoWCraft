@@ -12,6 +12,31 @@ const STORE_ZIPS = 'zips';
 
 const ZIP_CATEGORIES = ['materials', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'jewelcrafting', 'leatherworking', 'tailoring'];
 
+// Manifest maps category -> hashed filename (e.g. materials -> materials-abc12345.zip)
+let manifestCache: Record<string, string> | null = null;
+let manifestPromise: Promise<Record<string, string>> | null = null;
+
+async function getManifest(): Promise<Record<string, string>> {
+  if (manifestCache) return manifestCache;
+  if (manifestPromise) return manifestPromise;
+  manifestPromise = (async () => {
+    try {
+      const res = await fetch('/icons/manifest.json', { cache: 'no-store' });
+      if (!res.ok) return {};
+      const data = await res.json();
+      manifestCache = data;
+      return data;
+    } catch {
+      return {};
+    }
+  })();
+  return manifestPromise;
+}
+
+function getZipFilename(category: string, manifest: Record<string, string>): string {
+  return manifest[category] ?? `${category}.zip`;
+}
+
 // In-memory cache of blob URLs
 const blobUrlCache = new Map<string, string>();
 
@@ -80,7 +105,9 @@ async function loadZip(category: string): Promise<JSZip> {
       if (cachedBlob) {
         blob = cachedBlob;
       } else {
-        const res = await fetch(`/icons/${category}.zip`);
+        const manifest = await getManifest();
+        const filename = getZipFilename(category, manifest);
+        const res = await fetch(`/icons/${filename}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         blob = await res.blob();
         await putZipBlobInDB(category, blob);

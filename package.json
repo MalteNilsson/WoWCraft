@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "tsm:fetch": "node src/scripts/get_TSM_data.mjs anniversary",
-    "scrape:zip": "node src/scripts/scrape_all_professions.js --phase zip"
+    "scrape:zip": "node src/scripts/scrape_all_professions.js --phase zip",
+    "hash:icons": "node src/scripts/hash_icon_zips.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.3",
