@@ -2,9 +2,9 @@ import { Recipe, PriceMap } from "./types";
 import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
 import type { RegionSoldPerDayMap } from "./regionDataLoader";
-import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
+import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from "./rodConstants";
 
-export { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS };
+export { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS };
 
 /** In profit modes (cost-vendor, disenchant, auction-house), reject recipes below this skill-up chance to avoid "use until exhaustion" */
 const MIN_SKILL_UP_CHANCE_PROFIT_MODE = 0.1;
@@ -191,6 +191,17 @@ export function makeDynamicPlan(
             .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b))
         : [];
 
+    const engineeringToolRecipes = profession === "Engineering"
+        ? recipes
+            .filter(
+            r =>
+                ENGINEERING_TOOL_SPELL_IDS.has(r.id) &&
+                getEffectiveMinSkill(r) >= startSkill &&
+                getEffectiveMinSkill(r) <= target
+            )
+            .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b))
+        : [];
+
     // Initialize backward DP table
     const dp: Record<number, BackwardDPState> = {};
 
@@ -254,8 +265,51 @@ export function makeDynamicPlan(
             }
         }
 
+        // Handle engineering tools if needed (going backward)
+        if (engineeringToolRecipes.length) {
+            const tool = engineeringToolRecipes.find(r => getEffectiveMinSkill(r) === currentSkill);
+            if (tool) {
+                const toolMaterialCost = craftCost(tool, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
+                const toolRecipeCost = includeRecipeCost ? 
+                    craftCost(tool, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
+                const skillBeforeTool = currentSkill - 1;
+                const skillUpsFromTool = Math.floor(expectedSkillUps(tool, skillBeforeTool));
+                const endSkillAfterTool = skillBeforeTool + skillUpsFromTool;
+                const newState: BackwardDPState = {
+                    steps: [{
+                        recipe: tool,
+                        crafts: 1,
+                        cost: toolMaterialCost,
+                        recipeCost: toolRecipeCost > 0 ? toolRecipeCost : undefined,
+                        endSkill: endSkillAfterTool,
+                        note: "Required engineering tool"
+                    }, ...currentState.steps],
+                    totalCost: currentState.totalCost + toolMaterialCost + toolRecipeCost,
+                    startSkill: currentSkill - 1,
+                    shoppingList: new Map(currentState.shoppingList)
+                };
+                
+                for (const [matId, qty] of Object.entries(tool.materials)) {
+                    const itemId = Number(matId);
+                    if (ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(itemId)) continue;
+                    const current = newState.shoppingList.get(itemId) || 0;
+                    newState.shoppingList.set(itemId, current + qty);
+                }
+                
+                const producesId = recipeProduces.get(tool.id);
+                if (producesId) {
+                    const current = newState.shoppingList.get(producesId) || 0;
+                    newState.shoppingList.set(producesId, Math.max(0, current - 1));
+                }
+                
+                dp[currentSkill - 1] = newState;
+                continue;
+            }
+        }
+
         // Find all valid recipes for this skill level
         const validRecipes = recipes.filter(r => {
+            if (ENCHANTING_ROD_SPELL_IDS.has(r.id) || ENGINEERING_TOOL_SPELL_IDS.has(r.id)) return false;
             const chance = expectedSkillUps(r, currentSkill - 1);
             if (getEffectiveMinSkill(r) > currentSkill - 1 || 
                 chance <= 0 || 
@@ -518,10 +572,14 @@ export function makeDynamicPlan(
             }
 
             // Find all valid recipes for this batch
-            // Exclude rods - they are handled separately (ALWAYS exclude, regardless of profession check)
+            // Exclude rods and engineering tools - they are handled separately (ALWAYS exclude, regardless of profession check)
             const validRecipes = recipes.filter(r => {
                 // ALWAYS exclude rods - they are handled separately
                 if (ENCHANTING_ROD_SPELL_IDS.has(r.id)) {
+                    return false;
+                }
+                // ALWAYS exclude engineering tools - they are handled separately
+                if (ENGINEERING_TOOL_SPELL_IDS.has(r.id)) {
                     return false;
                 }
 
@@ -712,8 +770,9 @@ export function makeDynamicPlan(
                 }
             }
 
-            // Check if a rod falls within this batch (AFTER selecting the optimal recipe)
+            // Check if a rod or engineering tool falls within this batch (AFTER selecting the optimal recipe)
             let rod: Recipe | undefined;
+            let tool: Recipe | undefined;
             if (rodRecipes.length && profession === "Enchanting") {
                 // Check if rod falls within batch range (inclusive on both ends)
                 rod = rodRecipes.find(r => getEffectiveMinSkill(r) >= batchStart && getEffectiveMinSkill(r) <= batchEnd);
@@ -724,19 +783,22 @@ export function makeDynamicPlan(
                     rod = rodRecipes.find(r => getEffectiveMinSkill(r) === 1);
                 }
             }
+            if (engineeringToolRecipes.length && profession === "Engineering") {
+                tool = engineeringToolRecipes.find(r => getEffectiveMinSkill(r) >= batchStart && getEffectiveMinSkill(r) <= batchEnd);
+            }
             
-            // Calculate crafts needed for the batch, split by rod if present
-            // If rod exists, we need:
-            // 1. Crafts from batchStart to rod effective minSkill (exclusive)
-            // 2. Rod step at rod effective minSkill
+            // Calculate crafts needed for the batch, split by rod/tool if present
+            // If rod/tool exists, we need:
+            // 1. Crafts from batchStart to rod/tool effective minSkill (exclusive)
+            // 2. Rod/tool step at rod/tool effective minSkill
             // 3. Crafts from endSkillAfterRod to batchEnd (if endSkillAfterRod < batchEnd)
-            
+            const requiredRecipe = rod ?? tool;
             let craftsBeforeRod = 0;
             let craftsAfterRod = 0;
-            const rodMinSkill = rod ? getEffectiveMinSkill(rod) : 0;
+            const rodMinSkill = requiredRecipe ? getEffectiveMinSkill(requiredRecipe) : 0;
             
-            if (rod) {
-                // Calculate crafts before rod using sum-of-reciprocals
+            if (requiredRecipe) {
+                // Calculate crafts before rod/tool using sum-of-reciprocals
                 const skillUpsBeforeRod = rodMinSkill - batchStart;
                 if (skillUpsBeforeRod > 0) {
                     let sumOfReciprocals = 0;
@@ -754,8 +816,8 @@ export function makeDynamicPlan(
                     }
                 }
                 
-                // Calculate skill-ups from rod and end skill after rod
-                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rodMinSkill));
+                // Calculate skill-ups from rod/tool and end skill after
+                const skillUpsFromRod = Math.floor(expectedSkillUps(requiredRecipe, rodMinSkill));
                 const endSkillAfterRod = rodMinSkill + skillUpsFromRod;
                 
                 // Calculate crafts after rod using sum-of-reciprocals (if needed)
@@ -802,14 +864,14 @@ export function makeDynamicPlan(
             const newShoppingList = new Map(currentState.shoppingList);
             const steps: DPStep[] = [];
             
-            // If rod exists in this batch, add rod step and regular recipe steps
-            if (rod) {
-                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
+            // If rod/tool exists in this batch, add rod/tool step and regular recipe steps
+            if (requiredRecipe) {
+                const rodMaterialCost = craftCost(requiredRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const rodRecipeCost = includeRecipeCost ? 
-                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
+                    craftCost(requiredRecipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
                 
-                // Calculate skill-ups from rod
-                const skillUpsFromRod = Math.floor(expectedSkillUps(rod, rodMinSkill));
+                // Calculate skill-ups from rod/tool
+                const skillUpsFromRod = Math.floor(expectedSkillUps(requiredRecipe, rodMinSkill));
                 const endSkillAfterRod = rodMinSkill + skillUpsFromRod;
                 
                 // Add recipe step for levels before rod (if any)
@@ -840,32 +902,34 @@ export function makeDynamicPlan(
                     }
                 }
                 
-                // Add rod step
+                // Add rod/tool step
+                const toolProductIds = rod ? ENCHANTING_ROD_PRODUCT_ITEM_IDS : ENGINEERING_TOOL_PRODUCT_ITEM_IDS;
+                const stepNote = rod ? "Required enchanting rod" : "Required engineering tool";
                 steps.push({
-                    recipe: rod,
+                    recipe: requiredRecipe,
                         crafts: 1,
                         cost: rodMaterialCost,
                         recipeCost: rodRecipeCost > 0 ? rodRecipeCost : undefined,
-                    endSkill: endSkillAfterRod,
-                        note: "Required enchanting rod"
+                        endSkill: endSkillAfterRod,
+                        note: stepNote
                 });
                 
-                // Add rod materials to shopping list (exclude rod products - made in previous rod step)
-                for (const [matId, qty] of Object.entries(rod.materials)) {
+                // Add rod/tool materials to shopping list (exclude products - made in previous step for rods; tools use basic mats)
+                for (const [matId, qty] of Object.entries(requiredRecipe.materials)) {
                     const itemId = Number(matId);
-                    if (ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
+                    if (toolProductIds.has(itemId)) continue;
                     const current = newShoppingList.get(itemId) || 0;
                     newShoppingList.set(itemId, current + qty);
                 }
                 
-                // Consume produced material if rod produces something
-                const producesId = recipeProduces.get(rod.id);
+                // Consume produced material if rod/tool produces something
+                const producesId = recipeProduces.get(requiredRecipe.id);
                 if (producesId) {
                     const current = newShoppingList.get(producesId) || 0;
                     newShoppingList.set(producesId, Math.max(0, current - 1));
                 }
                 
-                // Add recipe step for levels after rod (if any)
+                // Add recipe step for levels after rod/tool (if any)
                 if (craftsAfterRod > 0) {
                     const afterRodCost = materialCostPerCraft * craftsAfterRod;
                     steps.push({

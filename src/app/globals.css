@@ -86,3 +86,14 @@ aside {
   scrollbar-color: #2b2b2b #1a1a1a;
   scrollbar-width: thin;
 }
+
+/* Hide number input spinners (Chrome, Safari, Firefox) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

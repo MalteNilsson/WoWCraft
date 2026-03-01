@@ -21,3 +21,15 @@ export const ENCHANTING_ROD_PRODUCT_ITEM_IDS = new Set<number>([
     22462,  // Runed Adamantite Rod
     22463,  // Runed Eternium Rod
 ]);
+
+/** Spell IDs for engineering tool recipes (required tools, inserted at skill level) */
+export const ENGINEERING_TOOL_SPELL_IDS = new Set<number>([
+    7430,   // Arclight Spanner (skill 50)
+    12590,  // Gyromatic Micro-Adjustor (skill 175)
+]);
+
+/** Items produced by engineering tool recipes - not used as materials for other tools (empty set, but kept for API consistency) */
+export const ENGINEERING_TOOL_PRODUCT_ITEM_IDS = new Set<number>([
+    6219,   // Arclight Spanner
+    10498,  // Gyromatic Micro-Adjustor
+]);

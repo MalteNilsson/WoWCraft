@@ -22,7 +22,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Refe
 import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
 import { getEffectiveMinSkill } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
-import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
+import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
@@ -34,6 +34,7 @@ import { getDisenchantOutcomes, getExpectedDisenchantValue } from '@/lib/disench
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { CachedIcon } from '@/components/CachedIcon';
 import { preloadIconZips } from '@/lib/iconStore';
 
@@ -427,6 +428,31 @@ export default function EnchantingPlanner() {
   const [useMarketValue, setUseMarketValue] = useState(false);
   const optimizeSubCrafting = false; // Sub-crafting optimization disabled
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
+  const [showAuctionHouseDisclaimer, setShowAuctionHouseDisclaimer] = useState(false);
+  const [auctionHouseDisclaimerAcked, setAuctionHouseDisclaimerAcked] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const acked = localStorage.getItem('wowcraft-auction-house-disclaimer-acknowledged') === 'true';
+    setAuctionHouseDisclaimerAcked(acked);
+  }, []);
+
+  const handleAuctionHouseClick = useCallback(() => {
+    if (auctionHouseDisclaimerAcked) {
+      setPriceSourcing('auction-house');
+    } else {
+      setShowAuctionHouseDisclaimer(true);
+    }
+  }, [auctionHouseDisclaimerAcked]);
+
+  const acknowledgeAuctionHouseDisclaimer = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('wowcraft-auction-house-disclaimer-acknowledged', 'true');
+    }
+    setAuctionHouseDisclaimerAcked(true);
+    setShowAuctionHouseDisclaimer(false);
+    setPriceSourcing('auction-house');
+  }, []);
 
   // Add isSliding state to track active slider interaction
   const [isSliding, setIsSliding] = useState(false);
@@ -731,7 +757,8 @@ export default function EnchantingPlanner() {
   };
 
   const handleDirectSkillChange = (newValue: number) => {
-    const boundedValue = Math.min(maxSkill, Math.max(1, newValue));
+    const maxCurrent = Math.max(1, target - 1);
+    const boundedValue = Math.min(maxCurrent, Math.max(1, newValue));
     setIsDirectChange(true);
     setIsSliding(false);
     setIsReleased(false);
@@ -1110,7 +1137,8 @@ export default function EnchantingPlanner() {
     
     for (const [id, perCraft] of Object.entries(selected.materials)) {
       const itemId = parseInt(id);
-      if (ENCHANTING_ROD_SPELL_IDS.has(selected.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
+      if ((ENCHANTING_ROD_SPELL_IDS.has(selected.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) ||
+          (ENGINEERING_TOOL_SPELL_IDS.has(selected.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(itemId))) continue;
       const qty = perCraft * expCrafts;
     
       const buyUnit = useMarketValue ?
@@ -1565,7 +1593,8 @@ const renderXTick = selected
         // Calculate materials needed (exclude rod products for rod recipes - made in previous step)
         for (const [itemId, quantity] of Object.entries(s.recipe.materials)) {
           const numItemId = Number(itemId);
-          if (ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) continue;
+          if ((ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) ||
+              (ENGINEERING_TOOL_SPELL_IDS.has(s.recipe.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(numItemId))) continue;
           materialTotals[numItemId] = (materialTotals[numItemId] || 0) + quantity * displayedCrafts;
         }
       }
@@ -1710,6 +1739,48 @@ const renderXTick = selected
 
   return (
     <div className="flex flex-col h-screen bg-neutral-950 text-neutral-100 overflow-hidden">  
+
+      {/* Auction House Disclaimer Modal - first-time only */}
+      <AnimatePresence>
+        {showAuctionHouseDisclaimer && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80"
+            onClick={() => setShowAuctionHouseDisclaimer(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="max-w-md w-full bg-neutral-900 rounded-xl shadow-2xl border-2 border-amber-500/50 p-6 lg:p-8"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">⚠️</span>
+                <h2 className="text-xl lg:text-2xl font-bold text-amber-400">Important Notice</h2>
+              </div>
+              <p className="text-neutral-300 text-sm lg:text-base leading-relaxed mb-2">
+                <strong className="text-white">Auction House mode</strong> uses listing prices to estimate profit—we do <strong className="text-amber-400">not</strong> know actual sale prices.
+              </p>
+              <p className="text-neutral-300 text-sm lg:text-base leading-relaxed mb-4">
+                Prices can be <strong className="text-amber-400">highly volatile</strong>. Items may not sell at listed prices, or may take longer to sell than expected. Use this mode for rough estimates only.
+              </p>
+              <p className="text-neutral-400 text-xs lg:text-sm mb-6">
+                Click outside to cancel. By clicking &quot;I Understand&quot;, you acknowledge these limitations.
+              </p>
+              <button
+                onClick={acknowledgeAuctionHouseDisclaimer}
+                className="w-full py-4 px-6 text-lg font-bold rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-900 transition-colors duration-200 shadow-lg hover:shadow-amber-500/50"
+              >
+                I Understand
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Mobile: floating menu button when sidebar is closed */}
       {!sidebarOpen && (
@@ -2213,7 +2284,7 @@ const renderXTick = selected
                     <button
                       className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
-                        const newTarget = target + 1;
+                        const newTarget = Math.min(maxSkill, target + 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
                         recentUserChangeTimestampRef.current = Date.now();
@@ -2241,7 +2312,7 @@ const renderXTick = selected
                 >
                   <span className="font-medium">Cost</span>
                   {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                     Raw material cost
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
@@ -2257,7 +2328,7 @@ const renderXTick = selected
                 >
                   <span className="font-medium">Vendor</span>
                   {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                     Subtract vendor value
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
@@ -2273,13 +2344,13 @@ const renderXTick = selected
                 >
                   <span className="font-medium">Disenchanting</span>
                   {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                     Subtract disenchant value
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('auction-house')}
+                  onClick={handleAuctionHouseClick}
                   className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'auction-house'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
@@ -2289,12 +2360,26 @@ const renderXTick = selected
                 >
                   <span className="font-medium">Auction House</span>
                   {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
                     Sell crafted items
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
               </div>
+            </div>
+            <div className="flex items-center gap-2 py-2 border-b border-neutral-800">
+              <Link
+                href="/faq"
+                className="flex-1 py-2 px-3 text-sm lg:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/promo"
+                className="flex-1 py-2 px-3 text-sm lg:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+              >
+                About Project
+              </Link>
             </div>
             <div className="hidden lg:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
               {tabs.map((tab) => (
@@ -2913,14 +2998,14 @@ const renderXTick = selected
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                       <button
                         className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngLow(Math.max(1, rngLow - 1))}
+                        onClick={() => setRngLow(Math.max(sliderMin, rngLow - 1))}
                       >−</button>
                       <input
                         type="number"
                         value={rngLow}
                         onChange={(e) => {
                           const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngLow(Math.max(1, Math.min(val, rngHigh - 1)));
+                          if (!isNaN(val)) setRngLow(Math.max(sliderMin, Math.min(val, rngHigh - 1)));
                         }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
@@ -2928,7 +3013,7 @@ const renderXTick = selected
                       />
                       <button
                         className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngLow(rngLow + 1)}
+                        onClick={() => setRngLow(Math.min(rngHigh - 1, rngLow + 1))}
                       >+</button>
                     </div>
                   </div>
@@ -2944,7 +3029,7 @@ const renderXTick = selected
                         value={rngHigh}
                         onChange={(e) => {
                           const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngHigh(Math.max(1, Math.min(val, rngHigh - 1)));
+                          if (!isNaN(val)) setRngHigh(Math.max(rngLow + 1, Math.min(val, sliderMax)));
                         }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
@@ -2952,7 +3037,7 @@ const renderXTick = selected
                       />
                       <button
                         className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
-                        onClick={() => setRngHigh(rngHigh + 1)}
+                        onClick={() => setRngHigh(Math.min(sliderMax, rngHigh + 1))}
                       >+</button>
                     </div>
                   </div>
