@@ -213,8 +213,13 @@ export function makeDynamicPlan(
         shoppingList: new Map()
     };
 
+    // Use per-level mode for short ranges (target - skill <= 10) to fix empty planner for 1→10
+    const range = target - startSkill;
+    const usePerLevelForShortRange = range <= 10;
+    const effectiveRecalculate = recalculateForEachLevel || usePerLevelForShortRange;
+
     // Backward DP: work from target down to startSkill
-    if (recalculateForEachLevel) {
+    if (effectiveRecalculate) {
         // Original behavior: recalculate for each skill level
     for (let currentSkill = target; currentSkill > startSkill; currentSkill--) {
         const currentState = dp[currentSkill];
@@ -511,7 +516,8 @@ export function makeDynamicPlan(
         // Consume produced material from shopping list
         const producesId = recipeProduces.get(selectedRecipe.id);
         if (producesId) {
-            const produced = crafts * 1; // Always 1 per craft
+            const outputQty = selectedRecipe.produces?.quantity ?? 1;
+            const produced = crafts * outputQty;
             const current = newShoppingList.get(producesId) || 0;
             newShoppingList.set(producesId, Math.max(0, current - produced));
         }
@@ -896,7 +902,8 @@ export function makeDynamicPlan(
                     // Consume produced material
                     const producesId = recipeProduces.get(selectedRecipe.id);
                     if (producesId) {
-                        const produced = craftsBeforeRod * 1;
+                        const outputQty = selectedRecipe.produces?.quantity ?? 1;
+                        const produced = craftsBeforeRod * outputQty;
                         const current = newShoppingList.get(producesId) || 0;
                         newShoppingList.set(producesId, Math.max(0, current - produced));
                     }
@@ -951,7 +958,8 @@ export function makeDynamicPlan(
                     // Consume produced material
                     const producesId = recipeProduces.get(selectedRecipe.id);
                     if (producesId) {
-                        const produced = craftsAfterRod * 1;
+                        const outputQty = selectedRecipe.produces?.quantity ?? 1;
+                        const produced = craftsAfterRod * outputQty;
                         const current = newShoppingList.get(producesId) || 0;
                         newShoppingList.set(producesId, Math.max(0, current - produced));
                     }
@@ -981,7 +989,8 @@ export function makeDynamicPlan(
                     // Consume produced material from shopping list
                     const producesId = recipeProduces.get(selectedRecipe.id);
                     if (producesId) {
-                        const produced = totalCrafts * 1;
+                        const outputQty = selectedRecipe.produces?.quantity ?? 1;
+                        const produced = totalCrafts * outputQty;
                         const current = newShoppingList.get(producesId) || 0;
                         newShoppingList.set(producesId, Math.max(0, current - produced));
                     }

@@ -659,7 +659,53 @@ export default function EnchantingPlanner() {
   // Refs to access current values in useEffect without adding them as dependencies
   const committedSkillRef = useRef(committedSkill);
   const committedTargetRef = useRef(committedTarget);
-  
+  const skillRef = useRef(skill);
+  const targetRef = useRef(target);
+  const maxSkillRef = useRef(maxSkill);
+  skillRef.current = skill;
+  targetRef.current = target;
+  maxSkillRef.current = maxSkill;
+
+  // Debounce timers for skill inputs (1 second)
+  const skillDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const targetDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const rngLowDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const rngHighDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const COMMIT_DEBOUNCE_MS = 1000;
+
+  const clearSkillDebounce = () => {
+    if (skillDebounceRef.current) {
+      clearTimeout(skillDebounceRef.current);
+      skillDebounceRef.current = null;
+    }
+  };
+  const clearTargetDebounce = () => {
+    if (targetDebounceRef.current) {
+      clearTimeout(targetDebounceRef.current);
+      targetDebounceRef.current = null;
+    }
+  };
+  const clearRngLowDebounce = () => {
+    if (rngLowDebounceRef.current) {
+      clearTimeout(rngLowDebounceRef.current);
+      rngLowDebounceRef.current = null;
+    }
+  };
+  const clearRngHighDebounce = () => {
+    if (rngHighDebounceRef.current) {
+      clearTimeout(rngHighDebounceRef.current);
+      rngHighDebounceRef.current = null;
+    }
+  };
+
+  useEffect(() => () => {
+    clearSkillDebounce();
+    clearTargetDebounce();
+    clearRngLowDebounce();
+    clearRngHighDebounce();
+  }, []);
+
   // Keep refs in sync with state
   useEffect(() => {
     committedSkillRef.current = committedSkill;
@@ -1012,6 +1058,15 @@ export default function EnchantingPlanner() {
 
   const sliderMin = selected?.minSkill            ?? 1;
   const sliderMax = selected?.difficulty.gray     ?? maxSkill;
+
+  const rngLowRef = useRef(rngLow);
+  const rngHighRef = useRef(rngHigh);
+  const sliderMinRef = useRef(sliderMin);
+  const sliderMaxRef = useRef(sliderMax);
+  rngLowRef.current = rngLow;
+  rngHighRef.current = rngHigh;
+  sliderMinRef.current = sliderMin;
+  sliderMaxRef.current = sliderMax;
 
   const clampedLow  = Math.max(sliderMin, Math.min(rngLow,  sliderMax));
   const clampedHigh = Math.max(sliderMin, Math.min(rngHigh, sliderMax));
@@ -2248,9 +2303,24 @@ const renderXTick = selected
                       min={1}
                       max={target - 1}
                       onChange={(e) => {
-                        const val = parseInt(e.target.value);
+                        const val = parseInt(e.target.value, 10);
                         if (!isNaN(val)) {
-                          handleDirectSkillChange(val);
+                          setSkill(val);
+                          clearSkillDebounce();
+                          skillDebounceRef.current = setTimeout(() => {
+                            skillDebounceRef.current = null;
+                            handleDirectSkillChange(skillRef.current);
+                          }, COMMIT_DEBOUNCE_MS);
+                        }
+                      }}
+                      onBlur={() => {
+                        clearSkillDebounce();
+                        handleDirectSkillChange(skill);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          clearSkillDebounce();
+                          e.currentTarget.blur();
                         }
                       }}
                       className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
@@ -2286,13 +2356,32 @@ const renderXTick = selected
                       min={skill + 1}
                       max={maxSkill}
                       onChange={(e) => {
-                        const val = parseInt(e.target.value);
+                        const val = parseInt(e.target.value, 10);
                         if (!isNaN(val)) {
-                          const boundedVal = Math.max(skill + 1, Math.min(maxSkill, val));
-                          setTarget(boundedVal);
-                          setCommittedTarget(boundedVal);
-                          recentUserChangeTimestampRef.current = Date.now();
-                          updateUrl({ target: boundedVal });
+                          setTarget(val);
+                          clearTargetDebounce();
+                          targetDebounceRef.current = setTimeout(() => {
+                            targetDebounceRef.current = null;
+                            const boundedTarget = Math.max(skillRef.current + 1, Math.min(maxSkillRef.current, targetRef.current));
+                            setTarget(boundedTarget);
+                            setCommittedTarget(boundedTarget);
+                            recentUserChangeTimestampRef.current = Date.now();
+                            updateUrl({ target: boundedTarget });
+                          }, COMMIT_DEBOUNCE_MS);
+                        }
+                      }}
+                      onBlur={() => {
+                        clearTargetDebounce();
+                        const boundedTarget = Math.max(skill + 1, Math.min(maxSkill, target));
+                        setTarget(boundedTarget);
+                        setCommittedTarget(boundedTarget);
+                        recentUserChangeTimestampRef.current = Date.now();
+                        updateUrl({ target: boundedTarget });
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          clearTargetDebounce();
+                          e.currentTarget.blur();
                         }
                       }}
                       className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
@@ -3030,8 +3119,25 @@ const renderXTick = selected
                         type="number"
                         value={rngLow}
                         onChange={(e) => {
-                          const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngLow(Math.max(sliderMin, Math.min(val, rngHigh - 1)));
+                          const val = parseInt(e.target.value, 10);
+                          if (!isNaN(val)) {
+                            setRngLow(val);
+                            clearRngLowDebounce();
+                            rngLowDebounceRef.current = setTimeout(() => {
+                              rngLowDebounceRef.current = null;
+                              setRngLow(Math.max(sliderMinRef.current, Math.min(rngLowRef.current, rngHighRef.current - 1)));
+                            }, COMMIT_DEBOUNCE_MS);
+                          }
+                        }}
+                        onBlur={() => {
+                          clearRngLowDebounce();
+                          setRngLow(Math.max(sliderMin, Math.min(rngLow, rngHigh - 1)));
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            clearRngLowDebounce();
+                            e.currentTarget.blur();
+                          }
                         }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
@@ -3054,8 +3160,25 @@ const renderXTick = selected
                         type="number"
                         value={rngHigh}
                         onChange={(e) => {
-                          const val = parseInt(e.target.value);
-                          if (!isNaN(val)) setRngHigh(Math.max(rngLow + 1, Math.min(val, sliderMax)));
+                          const val = parseInt(e.target.value, 10);
+                          if (!isNaN(val)) {
+                            setRngHigh(val);
+                            clearRngHighDebounce();
+                            rngHighDebounceRef.current = setTimeout(() => {
+                              rngHighDebounceRef.current = null;
+                              setRngHigh(Math.max(rngLowRef.current + 1, Math.min(rngHighRef.current, sliderMaxRef.current)));
+                            }, COMMIT_DEBOUNCE_MS);
+                          }
+                        }}
+                        onBlur={() => {
+                          clearRngHighDebounce();
+                          setRngHigh(Math.max(rngLow + 1, Math.min(rngHigh, sliderMax)));
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            clearRngHighDebounce();
+                            e.currentTarget.blur();
+                          }
                         }}
                         className="text-lg text-center w-12 bg-transparent outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
