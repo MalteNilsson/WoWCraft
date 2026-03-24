@@ -10,12 +10,14 @@ import vanillaBlacksmithingItems from '@/data/recipes/vanilla/blacksmithing_item
 import vanillaLeatherworkingItems from '@/data/recipes/vanilla/leatherworking_items.json';
 import vanillaTailoringItems from '@/data/recipes/vanilla/tailoring_items.json';
 import vanillaAlchemyItems from '@/data/recipes/vanilla/alchemy_items.json';
+import vanillaCookingItems from '@/data/recipes/vanilla/cooking_items.json';
 import tbcEnchantingItems from '@/data/recipes/tbc/enchanting_items.json';
 import tbcEngineeringItems from '@/data/recipes/tbc/engineering_items.json';
 import tbcBlacksmithingItems from '@/data/recipes/tbc/blacksmithing_items.json';
 import tbcLeatherworkingItems from '@/data/recipes/tbc/leatherworking_items.json';
 import tbcTailoringItems from '@/data/recipes/tbc/tailoring_items.json';
 import tbcAlchemyItems from '@/data/recipes/tbc/alchemy_items.json';
+import tbcCookingItems from '@/data/recipes/tbc/cooking_items.json';
 import tbcJewelcraftingItems from '@/data/recipes/tbc/jewelcrafting_items.json';
 
 function processMaterials(raw: Record<string, any>): Record<number, MaterialInfo> {
@@ -50,7 +52,7 @@ function mergeRecipeItems(
       if (itemType === 'engineering') icon = 'inv_scroll_05';
       else if (itemType === 'blacksmithing') icon = 'inv_scroll_06';
       else if (itemType === 'leatherworking' || itemType === 'tailoring') icon = 'inv_scroll_04';
-      else if (itemType === 'alchemy' || itemType === 'jewelcrafting') icon = 'inv_scroll_03';
+      else if (itemType === 'alchemy' || itemType === 'cooking' || itemType === 'jewelcrafting') icon = 'inv_scroll_03';
       materialInfo[itemId] = {
         name: `${itemType === 'engineering' ? 'Schematic' : itemType === 'blacksmithing' ? 'Plan' : itemType === 'leatherworking' || itemType === 'tailoring' ? 'Pattern' : itemType === 'jewelcrafting' ? 'Design' : 'Recipe'} #${id}`,
         quality: 1,
@@ -88,6 +90,7 @@ mergeRecipeItems(vanillaMaterialInfo, vanillaBlacksmithingItems as Record<string
 mergeRecipeItems(vanillaMaterialInfo, vanillaLeatherworkingItems as Record<string, any>, 'leatherworking', 'classic');
 mergeRecipeItems(vanillaMaterialInfo, vanillaTailoringItems as Record<string, any>, 'tailoring', 'classic');
 mergeRecipeItems(vanillaMaterialInfo, vanillaAlchemyItems as Record<string, any>, 'alchemy', 'classic');
+mergeRecipeItems(vanillaMaterialInfo, vanillaCookingItems as Record<string, any>, 'cooking', 'classic');
 
 const tbcMaterialInfo = processMaterials(tbcMaterials as Record<string, any>);
 mergeRecipeItems(tbcMaterialInfo, tbcEnchantingItems as Record<string, any>, 'enchanting', 'tbc');
@@ -96,6 +99,7 @@ mergeRecipeItems(tbcMaterialInfo, tbcBlacksmithingItems as Record<string, any>, 
 mergeRecipeItems(tbcMaterialInfo, tbcLeatherworkingItems as Record<string, any>, 'leatherworking', 'tbc');
 mergeRecipeItems(tbcMaterialInfo, tbcTailoringItems as Record<string, any>, 'tailoring', 'tbc');
 mergeRecipeItems(tbcMaterialInfo, tbcAlchemyItems as Record<string, any>, 'alchemy', 'tbc');
+mergeRecipeItems(tbcMaterialInfo, tbcCookingItems as Record<string, any>, 'cooking', 'tbc');
 mergeRecipeItems(tbcMaterialInfo, tbcJewelcraftingItems as Record<string, any>, 'jewelcrafting', 'tbc');
 
 export const materialInfoMap: Record<string, Record<number, MaterialInfo>> = {

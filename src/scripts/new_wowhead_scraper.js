@@ -6,6 +6,7 @@ import fsSync from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
 import { fileURLToPath } from 'url';
+import { wowheadHtmlHeaders, wowheadXmlHeaders, WOWHEAD_USER_AGENT } from './wowheadFetchHeaders.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,6 +14,7 @@ const __dirname = path.dirname(__filename);
 const PROFESSIONS = [
   'alchemy',
   'blacksmithing',
+  'cooking',
   'enchanting',
   'engineering',
   'jewelcrafting',
@@ -33,7 +35,22 @@ const VERSION_FILTERS = {
 
 const TBC_ONLY_PROFESSIONS = ['jewelcrafting'];
 
-const FETCH_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+/**
+ * List page URL for a profession. Cooking uses secondary-skills, not professions:
+ * https://www.wowhead.com/tbc/spells/secondary-skills/cooking?filter=20;1;0
+ */
+function getProfessionListUrl(version, profession) {
+  const filterQuery = VERSION_FILTERS[version] || VERSION_FILTERS['Vanilla'];
+  if (profession === 'cooking') {
+    const prefix =
+      version === 'Vanilla'
+        ? 'https://www.wowhead.com/classic/spells/secondary-skills/'
+        : 'https://www.wowhead.com/tbc/spells/secondary-skills/';
+    return `${prefix}cooking${filterQuery}`;
+  }
+  const baseUrl = VERSION_BASE_URLS[version];
+  return `${baseUrl}${profession}${filterQuery}`;
+}
 
 // Parse CLI args
 let requestedProfession = null;
@@ -204,12 +221,10 @@ function parseListviewSpellsFromHtml(html, spellBaseUrl) {
 
 /** Fetch HTML for a profession page (single request, no JS) */
 async function fetchProfessionHtml(profession, version) {
-  const baseUrl = VERSION_BASE_URLS[version];
-  const filter = VERSION_FILTERS[version] || VERSION_FILTERS['Vanilla'];
-  const url = `${baseUrl}${profession}${filter}`;
+  const url = getProfessionListUrl(version, profession);
 
   const res = await fetch(url, {
-    headers: { 'User-Agent': FETCH_UA, 'Accept': 'text/html,application/xhtml+xml' },
+    headers: wowheadHtmlHeaders,
     redirect: 'follow',
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -223,7 +238,7 @@ function sleep(ms) {
 /** Fetch HTML for a recipe spell page or item page */
 async function fetchPageHtml(url) {
   const res = await fetch(url, {
-    headers: { 'User-Agent': FETCH_UA, 'Accept': 'text/html,application/xhtml+xml' },
+    headers: wowheadHtmlHeaders,
     redirect: 'follow',
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -234,7 +249,7 @@ async function fetchPageHtml(url) {
 async function fetchItemXml(itemId, wowheadPath) {
   const url = `https://www.wowhead.com/${wowheadPath}/item=${itemId}&xml`;
   const res = await fetch(url, {
-    headers: { 'User-Agent': FETCH_UA, 'Accept': 'application/xml,text/xml' },
+    headers: wowheadXmlHeaders,
     redirect: 'follow',
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -511,7 +526,7 @@ async function downloadMissingMaterialIcons(versionDirs) {
     const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`;
     try {
       const res = await fetch(iconUrl, {
-        headers: { 'User-Agent': FETCH_UA },
+        headers: { 'User-Agent': WOWHEAD_USER_AGENT },
         redirect: 'follow',
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);

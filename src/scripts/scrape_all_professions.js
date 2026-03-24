@@ -13,12 +13,14 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 puppeteer.use(StealthPlugin());
 import { parseStringPromise } from 'xml2js';
 import archiver from 'archiver';
+import { wowheadHtmlHeaders, wowheadXmlHeaders, WOWHEAD_USER_AGENT } from './wowheadFetchHeaders.js';
 
 const streamPipeline = promisify(pipeline);
 
 const PROFESSIONS = [
   'alchemy',
   'blacksmithing',
+  'cooking',
   'enchanting',
   'engineering',
   'jewelcrafting',
@@ -39,6 +41,30 @@ const VERSION_FILTERS = {
 
 // Jewelcrafting only exists in TBC
 const TBC_ONLY_PROFESSIONS = ['jewelcrafting'];
+
+/**
+ * List page URL for a profession on Wowhead.
+ * Cooking is under secondary-skills, not professions (see e.g. TBC:
+ * https://www.wowhead.com/tbc/spells/secondary-skills/cooking?filter=20;1;0 ).
+ */
+function getProfessionListUrl(version, profession) {
+  const filterQuery = VERSION_FILTERS[version] || VERSION_FILTERS['Vanilla'];
+  if (profession === 'cooking') {
+    const prefix =
+      version === 'Vanilla'
+        ? 'https://www.wowhead.com/classic/spells/secondary-skills/'
+        : 'https://www.wowhead.com/tbc/spells/secondary-skills/';
+    return `${prefix}cooking${filterQuery}`;
+  }
+  const baseUrl = VERSION_BASE_URLS[version];
+  return `${baseUrl}${profession}${filterQuery}`;
+}
+
+/** Site root for spell/item links, e.g. https://www.wowhead.com/tbc/ */
+function getSpellBaseUrlForVersion(version) {
+  const baseUrl = VERSION_BASE_URLS[version];
+  return baseUrl.replace(/\/spells\/professions\/?$/, '/') || baseUrl.split('/spells/')[0] + '/';
+}
 
 // Directory names for version-specific recipe storage
 const VERSION_TO_DIR = { 'Vanilla': 'vanilla', 'The Burning Crusade': 'tbc' };
@@ -169,12 +195,10 @@ async function zipIcons() {
 
 
 
-/** Fetch listview data from HTML (avoids Puppeteer, less likely to be blocked) */
-const FETCH_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
-
+/** Fetch listview data from HTML (avoids Puppeteer; browser-like headers reduce 403s) */
 const fetchListviewData = async (url) => {
   const res = await fetch(url, {
-    headers: { 'User-Agent': FETCH_UA, 'Accept': 'text/html,application/xhtml+xml' },
+    headers: wowheadHtmlHeaders,
     redirect: 'follow',
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -343,10 +367,8 @@ const waitForListViewReady = async (page, listviewSelector, opts = {}) => {
 };
 
 const scrapeProfessionForVersion = async (browser, profession, version) => {
-  const baseUrl = VERSION_BASE_URLS[version];
-  const filterQuery = VERSION_FILTERS[version] || VERSION_FILTERS['Vanilla'];
-  const listUrl = `${baseUrl}${profession}${filterQuery}`;
-  const spellBaseUrl = baseUrl.replace(/\/spells\/professions\/?$/, '/') || baseUrl.split('/spells/')[0] + '/';
+  const listUrl = getProfessionListUrl(version, profession);
+  const spellBaseUrl = getSpellBaseUrlForVersion(version);
 
   console.log(`\n🔍 Scraping: ${profession} (${version})`);
 
@@ -881,7 +903,7 @@ const enrichMaterialData = async (browser) => {
     const fetchOneXml = async (id) => {
       const url = `https://www.wowhead.com/${wowheadPath}/item=${id}&xml`;
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, { headers: wowheadXmlHeaders, redirect: 'follow' });
         const xml = await response.text();
         const parsed = await parseStringPromise(xml);
         const item = parsed?.wowhead?.item?.[0];
@@ -1035,7 +1057,7 @@ const enrichMaterialData = async (browser) => {
       const targetPath = path.join(iconDir, `${id}.jpg`);
   
       try {
-        const response = await fetch(iconUrl);
+        const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         await streamPipeline(response.body, createWriteStream(targetPath));
         console.log(`🟢 Saved material icon ${id} → ${material.icon}.jpg`);
@@ -1067,7 +1089,7 @@ const enrichMaterialData = async (browser) => {
       const targetPath = path.join(iconDir, `${id}.jpg`);
   
       try {
-        const response = await fetch(iconUrl);
+        const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         await streamPipeline(response.body, createWriteStream(targetPath));
         console.log(`🟢 Saved recipe icon ${id} → ${icon}.jpg`);
@@ -1122,14 +1144,14 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
         let xmlData;
         try {
           const xmlUrl = `https://www.wowhead.com/${wowheadPath}/item=${itemId}&xml`;
-          const xmlText = await fetch(xmlUrl).then(r => r.text());
+          const xmlText = await fetch(xmlUrl, { headers: wowheadXmlHeaders, redirect: 'follow' }).then((r) => r.text());
           xmlData = await parseXml(xmlText);
         } catch (primaryErr) {
           // Fallback: try other endpoint if version-specific parse fails (e.g. TBC item on classic)
           const fallbackPath = wowheadPath === 'tbc' ? 'classic' : 'tbc';
           try {
             const fallbackUrl = `https://www.wowhead.com/${fallbackPath}/item=${itemId}&xml`;
-            const xmlText = await fetch(fallbackUrl).then(r => r.text());
+            const xmlText = await fetch(fallbackUrl, { headers: wowheadXmlHeaders, redirect: 'follow' }).then((r) => r.text());
             xmlData = await parseXml(xmlText);
           } catch {
             throw primaryErr;
@@ -1138,7 +1160,7 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
 
         // Fetch HTML data for limited stock info (parses sold-by Listview, no scripts required)
         const htmlUrl = `https://www.wowhead.com/${wowheadPath}/item=${itemId}`;
-        const htmlData = await fetch(htmlUrl)
+        const htmlData = await fetch(htmlUrl, { headers: wowheadHtmlHeaders, redirect: 'follow' })
           .then(response => response.text())
           .then(html => ({
             limitedStock: parseLimitedStockFromHtml(html)

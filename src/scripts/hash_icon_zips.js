@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ICONS_DIR = path.join(__dirname, '..', '..', 'public', 'icons');
-const ZIP_CATEGORIES = ['materials', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'jewelcrafting', 'leatherworking', 'tailoring'];
+const ZIP_CATEGORIES = ['materials', 'alchemy', 'blacksmithing', 'cooking', 'enchanting', 'engineering', 'jewelcrafting', 'leatherworking', 'tailoring'];
 
 async function hashFile(filePath) {
   const buf = await readFile(filePath);

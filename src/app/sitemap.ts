@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next';
 const professions = [
   'alchemy',
   'blacksmithing',
+  'cooking',
   'enchanting',
   'engineering',
   'jewelcrafting',

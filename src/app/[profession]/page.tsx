@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 // Vanilla recipes
 import vanillaAlchemy from '@/data/recipes/vanilla/alchemy.json';
 import vanillaBlacksmithing from '@/data/recipes/vanilla/blacksmithing.json';
+import vanillaCooking from '@/data/recipes/vanilla/cooking.json';
 import vanillaEnchanting from '@/data/recipes/vanilla/enchanting.json';
 import vanillaEngineering from '@/data/recipes/vanilla/engineering.json';
 import vanillaLeatherworking from '@/data/recipes/vanilla/leatherworking.json';
@@ -12,6 +13,7 @@ import vanillaTailoring from '@/data/recipes/vanilla/tailoring.json';
 // TBC recipes
 import tbcAlchemy from '@/data/recipes/tbc/alchemy.json';
 import tbcBlacksmithing from '@/data/recipes/tbc/blacksmithing.json';
+import tbcCooking from '@/data/recipes/tbc/cooking.json';
 import tbcEnchanting from '@/data/recipes/tbc/enchanting.json';
 import tbcEngineering from '@/data/recipes/tbc/engineering.json';
 import tbcJewelcrafting from '@/data/recipes/tbc/jewelcrafting.json';
@@ -56,6 +58,7 @@ const qualityColors: Record<number,string> = {
 const professions = [
   'Alchemy',
   'Blacksmithing',
+  'Cooking',
   'Enchanting',
   'Engineering',
   'Jewelcrafting',
@@ -76,6 +79,7 @@ const rawDataMap: Record<string, Record<string, any[]>> = {
   Vanilla: {
     Alchemy: vanillaAlchemy as any[],
     Blacksmithing: vanillaBlacksmithing as any[],
+    Cooking: vanillaCooking as any[],
     Enchanting: vanillaEnchanting as any[],
     Engineering: vanillaEngineering as any[],
     Leatherworking: vanillaLeatherworking as any[],
@@ -84,6 +88,7 @@ const rawDataMap: Record<string, Record<string, any[]>> = {
   'The Burning Crusade': {
     Alchemy: tbcAlchemy as any[],
     Blacksmithing: tbcBlacksmithing as any[],
+    Cooking: tbcCooking as any[],
     Enchanting: tbcEnchanting as any[],
     Engineering: tbcEngineering as any[],
     Jewelcrafting: tbcJewelcrafting as any[],

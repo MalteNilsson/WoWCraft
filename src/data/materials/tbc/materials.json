@@ -35,6 +35,46 @@
     "vendorStack": 5,
     "itemLevel": 5
   },
+  "723": {
+    "name": "Goretusk Liver",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_organ_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=723/goretusk-liver",
+    "vendorPrice": null
+  },
+  "729": {
+    "name": "Stringy Vulture Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=729/stringy-vulture-meat",
+    "vendorPrice": null
+  },
+  "730": {
+    "name": "Murloc Eye",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_eye_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=730/murloc-eye",
+    "vendorPrice": null
+  },
+  "731": {
+    "name": "Goretusk Snout",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "spell_magic_polymorphpig",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=731/goretusk-snout",
+    "vendorPrice": null
+  },
   "765": {
     "name": "Silverleaf",
     "quality": 1,
@@ -47,6 +87,16 @@
     "sellPrice": 10,
     "limitedStock": true,
     "itemLevel": 5
+  },
+  "769": {
+    "name": "Chunk of Boar Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=769/chunk-of-boar-meat",
+    "vendorPrice": null
   },
   "774": {
     "name": "Malachite",
@@ -156,6 +206,46 @@
       "maxCount": 1
     }
   },
+  "1015": {
+    "name": "Lean Wolf Flank",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=1015/lean-wolf-flank",
+    "vendorPrice": null
+  },
+  "1080": {
+    "name": "Tough Condor Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_72",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=1080/tough-condor-meat",
+    "vendorPrice": null
+  },
+  "1081": {
+    "name": "Crisp Spider Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterspidercarapace_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=1081/crisp-spider-meat",
+    "vendorPrice": null
+  },
+  "1179": {
+    "name": "Ice Cold Milk",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_milk_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=1179/ice-cold-milk",
+    "vendorPrice": null
+  },
   "1206": {
     "name": "Moss Agate",
     "quality": 2,
@@ -190,6 +280,16 @@
     "vendorPrice": null,
     "sellPrice": 185,
     "itemLevel": 1
+  },
+  "1468": {
+    "name": "Murloc Fin",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=1468/murloc-fin",
+    "vendorPrice": null
   },
   "1529": {
     "name": "Jade",
@@ -237,6 +337,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "2251": {
+    "name": "Gooey Spider Leg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterspidercarapace_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2251/gooey-spider-leg",
+    "vendorPrice": null
   },
   "2300": {
     "name": "Embossed Leather Vest",
@@ -1231,6 +1341,36 @@
     "limitedStock": true,
     "itemLevel": 15
   },
+  "2593": {
+    "name": "Flask of Stormwind Tawny",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_potion_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2593/flask-of-stormwind-tawny",
+    "vendorPrice": null
+  },
+  "2594": {
+    "name": "Flagon of Dwarven Honeymead",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2594/flagon-of-dwarven-honeymead",
+    "vendorPrice": null
+  },
+  "2596": {
+    "name": "Skin of Dwarven Stout",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_milk_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2596/skin-of-dwarven-stout",
+    "vendorPrice": null
+  },
   "2604": {
     "name": "Red Dye",
     "quality": 1,
@@ -1254,6 +1394,86 @@
     "vendorPrice": 100,
     "sellPrice": 25,
     "itemLevel": 15
+  },
+  "2665": {
+    "name": "Stormwind Seasoning Herbs",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_dust_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2665/stormwind-seasoning-herbs",
+    "vendorPrice": null
+  },
+  "2672": {
+    "name": "Stringy Wolf Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2672/stringy-wolf-meat",
+    "vendorPrice": null
+  },
+  "2673": {
+    "name": "Coyote Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_69",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2673/coyote-meat",
+    "vendorPrice": null
+  },
+  "2674": {
+    "name": "Crawler Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2674/crawler-meat",
+    "vendorPrice": null
+  },
+  "2675": {
+    "name": "Crawler Claw",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_birdbeck_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2675/crawler-claw",
+    "vendorPrice": null
+  },
+  "2677": {
+    "name": "Boar Ribs",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2677/boar-ribs",
+    "vendorPrice": null
+  },
+  "2678": {
+    "name": "Mild Spices",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_food_wheat_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2678/mild-spices",
+    "vendorPrice": null
+  },
+  "2692": {
+    "name": "Hot Spices",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_food_wheat_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2692/hot-spices",
+    "vendorPrice": null
   },
   "2772": {
     "name": "Iron Ore",
@@ -1791,6 +2011,36 @@
     "sellPrice": 25,
     "itemLevel": 5
   },
+  "2886": {
+    "name": "Crag Boar Rib",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2886/crag-boar-rib",
+    "vendorPrice": null
+  },
+  "2894": {
+    "name": "Rhapsody Malt",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_13",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2894/rhapsody-malt",
+    "vendorPrice": null
+  },
+  "2924": {
+    "name": "Crocolisk Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=2924/crocolisk-meat",
+    "vendorPrice": null
+  },
   "2934": {
     "name": "Ruined Leather Scraps",
     "quality": 1,
@@ -1856,6 +2106,36 @@
     "link": "https://www.wowhead.com/tbc/item=3164",
     "vendorPrice": null,
     "itemLevel": 1
+  },
+  "3172": {
+    "name": "Boar Intestines",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_organ_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3172/boar-intestines",
+    "vendorPrice": null
+  },
+  "3173": {
+    "name": "Bear Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_71",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3173/bear-meat",
+    "vendorPrice": null
+  },
+  "3174": {
+    "name": "Spider Ichor",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_slime_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3174/spider-ichor",
+    "vendorPrice": null
   },
   "3182": {
     "name": "Spider's Silk",
@@ -2252,6 +2532,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "3404": {
+    "name": "Buzzard Wing",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterscales_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3404/buzzard-wing",
+    "vendorPrice": null
   },
   "3466": {
     "name": "Strong Flux",
@@ -2762,6 +3052,46 @@
       "maxCount": 0
     }
   },
+  "3667": {
+    "name": "Tender Crocolisk Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3667/tender-crocolisk-meat",
+    "vendorPrice": null
+  },
+  "3685": {
+    "name": "Raptor Egg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_egg_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3685/raptor-egg",
+    "vendorPrice": null
+  },
+  "3712": {
+    "name": "Turtle Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_70",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3712/turtle-meat",
+    "vendorPrice": null
+  },
+  "3713": {
+    "name": "Soothing Spices",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_food_wheat_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3713/soothing-spices",
+    "vendorPrice": null
+  },
   "3719": {
     "name": "Hillman's Cloak",
     "quality": 1,
@@ -2783,6 +3113,26 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "3730": {
+    "name": "Big Bear Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3730/big-bear-meat",
+    "vendorPrice": null
+  },
+  "3731": {
+    "name": "Lion Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_71",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=3731/lion-meat",
+    "vendorPrice": null
   },
   "3818": {
     "name": "Fadeleaf",
@@ -6394,6 +6744,26 @@
     "sellPrice": 9,
     "itemLevel": 5
   },
+  "4536": {
+    "name": "Shiny Red Apple",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_food_19",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=4536/shiny-red-apple",
+    "vendorPrice": null
+  },
+  "4539": {
+    "name": "Goldenbark Apple",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_food_20",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=4539/goldenbark-apple",
+    "vendorPrice": null
+  },
   "4589": {
     "name": "Long Elegant Feather",
     "quality": 1,
@@ -6428,6 +6798,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "4603": {
+    "name": "Raw Spotted Yellowtail",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=4603/raw-spotted-yellowtail",
+    "vendorPrice": null
   },
   "4611": {
     "name": "Blue Pearl",
@@ -6475,6 +6855,16 @@
     "sellPrice": 250,
     "itemLevel": 41
   },
+  "4655": {
+    "name": "Giant Clam Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=4655/giant-clam-meat",
+    "vendorPrice": null
+  },
   "4852": {
     "name": "Flash Bomb",
     "quality": 1,
@@ -6497,6 +6887,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "5051": {
+    "name": "Dig Rat",
+    "quality": 1,
+    "class": "",
+    "subclass": "",
+    "icon": "inv_misc_pelt_bear_ruin_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5051/dig-rat",
+    "vendorPrice": null
   },
   "5081": {
     "name": "Kodo Hide Bag",
@@ -6557,6 +6957,76 @@
     "sellPrice": 72,
     "itemLevel": 1
   },
+  "5465": {
+    "name": "Small Spider Leg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterspidercarapace_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5465/small-spider-leg",
+    "vendorPrice": null
+  },
+  "5466": {
+    "name": "Scorpid Stinger",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "spell_nature_nullifypoison",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5466/scorpid-stinger",
+    "vendorPrice": null
+  },
+  "5467": {
+    "name": "Kodo Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5467/kodo-meat",
+    "vendorPrice": null
+  },
+  "5468": {
+    "name": "Soft Frenzy Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5468/soft-frenzy-flesh",
+    "vendorPrice": null
+  },
+  "5469": {
+    "name": "Strider Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5469/strider-meat",
+    "vendorPrice": null
+  },
+  "5470": {
+    "name": "Thunder Lizard Tail",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_bone_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5470/thunder-lizard-tail",
+    "vendorPrice": null
+  },
+  "5471": {
+    "name": "Stag Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_pelt_wolf_ruin_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5471/stag-meat",
+    "vendorPrice": null
+  },
   "5498": {
     "name": "Small Lustrous Pearl",
     "quality": 2,
@@ -6580,6 +7050,26 @@
     "vendorPrice": null,
     "sellPrice": 750,
     "itemLevel": 25
+  },
+  "5503": {
+    "name": "Clam Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5503/clam-meat",
+    "vendorPrice": null
+  },
+  "5504": {
+    "name": "Tangy Clam Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=5504/tangy-clam-meat",
+    "vendorPrice": null
   },
   "5507": {
     "name": "Ornate Spyglass",
@@ -7789,6 +8279,56 @@
       "maxCount": 1
     }
   },
+  "6289": {
+    "name": "Raw Longjaw Mud Snapper",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_32",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6289/raw-longjaw-mud-snapper",
+    "vendorPrice": null
+  },
+  "6291": {
+    "name": "Raw Brilliant Smallfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_08",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6291/raw-brilliant-smallfish",
+    "vendorPrice": null
+  },
+  "6303": {
+    "name": "Raw Slitherskin Mackerel",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_24",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6303/raw-slitherskin-mackerel",
+    "vendorPrice": null
+  },
+  "6308": {
+    "name": "Raw Bristle Whisker Catfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_30",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6308/raw-bristle-whisker-catfish",
+    "vendorPrice": null
+  },
+  "6317": {
+    "name": "Raw Loch Frenzy",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6317/raw-loch-frenzy",
+    "vendorPrice": null
+  },
   "6338": {
     "name": "Silver Rod",
     "quality": 1,
@@ -7880,6 +8420,26 @@
     "vendorPrice": null,
     "sellPrice": 5,
     "itemLevel": 25
+  },
+  "6361": {
+    "name": "Raw Rainbow Fin Albacore",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_25",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6361/raw-rainbow-fin-albacore",
+    "vendorPrice": null
+  },
+  "6362": {
+    "name": "Raw Rockscale Cod",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6362/raw-rockscale-cod",
+    "vendorPrice": null
   },
   "6370": {
     "name": "Blackmouth Oil",
@@ -8388,6 +8948,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "6889": {
+    "name": "Small Egg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_egg_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=6889/small-egg",
+    "vendorPrice": null
   },
   "7026": {
     "name": "Linen Belt",
@@ -10988,6 +11558,16 @@
     "sellPrice": 400,
     "itemLevel": 45
   },
+  "7974": {
+    "name": "Zesty Clam Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=7974/zesty-clam-meat",
+    "vendorPrice": null
+  },
   "8067": {
     "name": "Crafted Light Shot",
     "quality": 1,
@@ -12063,6 +12643,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "8365": {
+    "name": "Raw Mithril Head Trout",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=8365/raw-mithril-head-trout",
+    "vendorPrice": null
   },
   "8367": {
     "name": "Dragonscale Breastplate",
@@ -15496,6 +16086,26 @@
       "maxCount": 1
     }
   },
+  "12037": {
+    "name": "Mystery Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_67",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12037/mystery-meat",
+    "vendorPrice": null
+  },
+  "12184": {
+    "name": "Raptor Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_69",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12184/raptor-flesh",
+    "vendorPrice": null
+  },
   "12190": {
     "name": "Dreamless Sleep Potion",
     "quality": 1,
@@ -15517,6 +16127,86 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "12202": {
+    "name": "Tiger Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12202/tiger-meat",
+    "vendorPrice": null
+  },
+  "12203": {
+    "name": "Red Wolf Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_71",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12203/red-wolf-meat",
+    "vendorPrice": null
+  },
+  "12204": {
+    "name": "Heavy Kodo Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_70",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12204/heavy-kodo-meat",
+    "vendorPrice": null
+  },
+  "12205": {
+    "name": "White Spider Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12205/white-spider-meat",
+    "vendorPrice": null
+  },
+  "12206": {
+    "name": "Tender Crab Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12206/tender-crab-meat",
+    "vendorPrice": null
+  },
+  "12207": {
+    "name": "Giant Egg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_egg_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12207/giant-egg",
+    "vendorPrice": null
+  },
+  "12208": {
+    "name": "Tender Wolf Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12208/tender-wolf-meat",
+    "vendorPrice": null
+  },
+  "12223": {
+    "name": "Meaty Bat Wing",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_pelt_bear_ruin_05",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=12223/meaty-bat-wing",
+    "vendorPrice": null
   },
   "12259": {
     "name": "Glinting Steel Dagger",
@@ -17779,6 +18469,76 @@
       "maxCount": 1
     }
   },
+  "13754": {
+    "name": "Raw Glossy Mightfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_monsterhead_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13754/raw-glossy-mightfish",
+    "vendorPrice": null
+  },
+  "13755": {
+    "name": "Winter Squid",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_fish_13",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13755/winter-squid",
+    "vendorPrice": null
+  },
+  "13756": {
+    "name": "Raw Summer Bass",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_03",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13756/raw-summer-bass",
+    "vendorPrice": null
+  },
+  "13757": {
+    "name": "Lightning Eel",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_fish_12",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13757/lightning-eel",
+    "vendorPrice": null
+  },
+  "13758": {
+    "name": "Raw Redgill",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_06",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13758/raw-redgill",
+    "vendorPrice": null
+  },
+  "13759": {
+    "name": "Raw Nightfin Snapper",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_23",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13759/raw-nightfin-snapper",
+    "vendorPrice": null
+  },
+  "13760": {
+    "name": "Raw Sunscale Salmon",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_19",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13760/raw-sunscale-salmon",
+    "vendorPrice": null
+  },
   "13856": {
     "name": "Runecloth Belt",
     "quality": 2,
@@ -18077,6 +18837,36 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "13888": {
+    "name": "Darkclaw Lobster",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13888/darkclaw-lobster",
+    "vendorPrice": null
+  },
+  "13889": {
+    "name": "Raw Whitescale Salmon",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_20",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13889/raw-whitescale-salmon",
+    "vendorPrice": null
+  },
+  "13893": {
+    "name": "Large Raw Mightfish",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_monsterhead_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=13893/large-raw-mightfish",
+    "vendorPrice": null
   },
   "13926": {
     "name": "Golden Pearl",
@@ -21386,6 +22176,26 @@
       "maxCount": 1
     }
   },
+  "17194": {
+    "name": "Holiday Spices",
+    "quality": 1,
+    "class": "Miscellaneous",
+    "subclass": "Holiday",
+    "icon": "inv_misc_bag_11",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=17194/holiday-spices",
+    "vendorPrice": null
+  },
+  "17196": {
+    "name": "Holiday Spirits",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_drink_10",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=17196/holiday-spirits",
+    "vendorPrice": null
+  },
   "17202": {
     "name": "Snowball",
     "quality": 1,
@@ -21656,6 +22466,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "18255": {
+    "name": "Runn Tum Tuber",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Food & Drinks",
+    "icon": "inv_misc_food_55",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=18255/runn-tum-tuber",
+    "vendorPrice": null
   },
   "18256": {
     "name": "Imbued Vial",
@@ -23787,6 +24607,16 @@
     "sellPrice": 5000,
     "itemLevel": 63
   },
+  "20424": {
+    "name": "Sandworm Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=20424/sandworm-meat",
+    "vendorPrice": null
+  },
   "20475": {
     "name": "Adamantite Arrow Maker",
     "quality": 1,
@@ -24961,6 +25791,36 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "21024": {
+    "name": "Chimaerok Tenderloin",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_70",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=21024/chimaerok-tenderloin",
+    "vendorPrice": null
+  },
+  "21071": {
+    "name": "Raw Sagefish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_20",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=21071/raw-sagefish",
+    "vendorPrice": null
+  },
+  "21153": {
+    "name": "Raw Greater Sagefish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_21",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=21153/raw-greater-sagefish",
+    "vendorPrice": null
   },
   "21154": {
     "name": "Festival Dress",
@@ -27834,6 +28694,16 @@
     "sellPrice": 400,
     "limitedStock": true,
     "itemLevel": 65
+  },
+  "22644": {
+    "name": "Crunchy Spider Leg",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_ahnqirajtrinket_02",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=22644/crunchy-spider-leg",
+    "vendorPrice": null
   },
   "22652": {
     "name": "Glacial Vest",
@@ -31554,6 +32424,16 @@
       "maxCount": 1
     }
   },
+  "23676": {
+    "name": "Moongraze Stag Tenderloin",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_69",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=23676/moongraze-stag-tenderloin",
+    "vendorPrice": null
+  },
   "23736": {
     "name": "Fel Iron Bomb",
     "quality": 1,
@@ -34402,6 +35282,16 @@
       "maxCount": 1
     }
   },
+  "24477": {
+    "name": "Jaggal Clam Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_51",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=24477/jaggal-clam-meat",
+    "vendorPrice": null
+  },
   "24478": {
     "name": "Jaggal Pearl",
     "quality": 2,
@@ -35856,6 +36746,76 @@
       "maxCount": 1
     }
   },
+  "27422": {
+    "name": "Barbed Gill Trout",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_37",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27422/barbed-gill-trout",
+    "vendorPrice": null
+  },
+  "27425": {
+    "name": "Spotted Feltail",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_39",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27425/spotted-feltail",
+    "vendorPrice": null
+  },
+  "27429": {
+    "name": "Zangarian Sporefish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_34",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27429/zangarian-sporefish",
+    "vendorPrice": null
+  },
+  "27435": {
+    "name": "Figluster's Mudfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_41",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27435/figlusters-mudfish",
+    "vendorPrice": null
+  },
+  "27437": {
+    "name": "Icefin Bluefish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_23",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27437/icefin-bluefish",
+    "vendorPrice": null
+  },
+  "27438": {
+    "name": "Golden Darter",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_36",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27438/golden-darter",
+    "vendorPrice": null
+  },
+  "27439": {
+    "name": "Furious Crawdad",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_14",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27439/furious-crawdad",
+    "vendorPrice": null
+  },
   "27503": {
     "name": "Scroll of Strength V",
     "quality": 1,
@@ -35868,6 +36828,116 @@
     "sellPrice": 125,
     "limitedStock": true,
     "itemLevel": 70
+  },
+  "27515": {
+    "name": "Huge Spotted Feltail",
+    "quality": 1,
+    "class": "Armor",
+    "subclass": "Off-hand Frills",
+    "icon": "inv_misc_fish_39",
+    "slot": "Held In Off-hand",
+    "link": "https://www.wowhead.com/tbc/item=27515/huge-spotted-feltail",
+    "vendorPrice": null
+  },
+  "27516": {
+    "name": "Enormous Barbed Gill Trout",
+    "quality": 1,
+    "class": "Armor",
+    "subclass": "Off-hand Frills",
+    "icon": "inv_misc_fish_37",
+    "slot": "Held In Off-hand",
+    "link": "https://www.wowhead.com/tbc/item=27516/enormous-barbed-gill-trout",
+    "vendorPrice": null
+  },
+  "27668": {
+    "name": "Lynx Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_71",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27668/lynx-meat",
+    "vendorPrice": null
+  },
+  "27669": {
+    "name": "Bat Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_70",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27669/bat-flesh",
+    "vendorPrice": null
+  },
+  "27671": {
+    "name": "Buzzard Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_82",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27671/buzzard-meat",
+    "vendorPrice": null
+  },
+  "27674": {
+    "name": "Ravager Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_72",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27674/ravager-flesh",
+    "vendorPrice": null
+  },
+  "27676": {
+    "name": "Strange Spores",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "classic_inv_misc_dust_04",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27676/strange-spores",
+    "vendorPrice": null
+  },
+  "27677": {
+    "name": "Chunk o' Basilisk",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_81",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27677/chunk-o-basilisk",
+    "vendorPrice": null
+  },
+  "27678": {
+    "name": "Clefthoof Meat",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_80",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27678/clefthoof-meat",
+    "vendorPrice": null
+  },
+  "27681": {
+    "name": "Warped Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_83_talbuksteak",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27681/warped-flesh",
+    "vendorPrice": null
+  },
+  "27682": {
+    "name": "Talbuk Venison",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_71",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=27682/talbuk-venison",
+    "vendorPrice": null
   },
   "27860": {
     "name": "Purified Draenic Water",
@@ -38987,6 +40057,16 @@
       "maxCount": 1
     }
   },
+  "30817": {
+    "name": "Simple Flour",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Other (Trade Goods)",
+    "icon": "inv_misc_food_wheat_01",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=30817/simple-flour",
+    "vendorPrice": null
+  },
   "30825": {
     "name": "Ring of Arcane Shielding",
     "quality": 3,
@@ -39361,6 +40441,26 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "31670": {
+    "name": "Raptor Ribs",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_16",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=31670/raptor-ribs",
+    "vendorPrice": null
+  },
+  "31671": {
+    "name": "Serpent Flesh",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_98_talbuk",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=31671/serpent-flesh",
+    "vendorPrice": null
   },
   "31676": {
     "name": "Fel Regeneration Potion",
@@ -42370,6 +43470,26 @@
       "maxCount": 1
     }
   },
+  "33823": {
+    "name": "Bloodfin Catfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_29",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=33823/bloodfin-catfish",
+    "vendorPrice": null
+  },
+  "33824": {
+    "name": "Crescent-Tail Skullfish",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_fish_40",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=33824/crescent-tail-skullfish",
+    "vendorPrice": null
+  },
   "34060": {
     "name": "Flying Machine Control",
     "quality": 3,
@@ -43326,6 +44446,16 @@
       "maxCount": 1
     }
   },
+  "34412": {
+    "name": "Sparkling Apple Cider",
+    "quality": 1,
+    "class": "Consumables",
+    "subclass": "Consumables",
+    "icon": "inv_drink_22",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=34412/sparkling-apple-cider",
+    "vendorPrice": null
+  },
   "34440": {
     "name": "Mad Alchemist's Potion",
     "quality": 1,
@@ -43696,6 +44826,16 @@
       "minCount": 1,
       "maxCount": 1
     }
+  },
+  "35562": {
+    "name": "Bear Flank",
+    "quality": 1,
+    "class": "Trade Goods",
+    "subclass": "Meat",
+    "icon": "inv_misc_food_13",
+    "slot": "",
+    "link": "https://www.wowhead.com/tbc/item=35562/bear-flank",
+    "vendorPrice": null
   },
   "35581": {
     "name": "Rocket Boots Xtreme Lite",

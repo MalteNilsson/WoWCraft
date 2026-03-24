@@ -10,7 +10,7 @@ const DB_VERSION = 2;
 const STORE_ICONS = 'icons';
 const STORE_ZIPS = 'zips';
 
-const ZIP_CATEGORIES = ['materials', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'jewelcrafting', 'leatherworking', 'tailoring'];
+const ZIP_CATEGORIES = ['materials', 'alchemy', 'blacksmithing', 'cooking', 'enchanting', 'engineering', 'jewelcrafting', 'leatherworking', 'tailoring'];
 
 // Manifest maps category -> hashed filename (e.g. materials -> materials-abc12345.zip)
 let manifestCache: Record<string, string> | null = null;
