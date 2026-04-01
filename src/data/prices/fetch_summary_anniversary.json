@@ -1,6 +1,6 @@
 {
   "realmList": "anniversary",
-  "timestamp": "2026-04-01T15:09:02.497Z",
+  "timestamp": "2026-04-01T17:00:41.509Z",
   "totalRequests": 12,
   "successful": 12,
   "failed": 0,
@@ -10,84 +10,84 @@
       "faction": "Horde",
       "auctionHouseId": 560,
       "success": true,
-      "timestamp": "2026-04-01T15:08:39.725Z"
+      "timestamp": "2026-04-01T17:00:20.732Z"
     },
     {
       "realm": "Thunderstrike",
       "faction": "Alliance",
       "auctionHouseId": 559,
       "success": true,
-      "timestamp": "2026-04-01T15:08:41.008Z"
+      "timestamp": "2026-04-01T17:00:22.327Z"
     },
     {
       "realm": "Spineshatter",
       "faction": "Horde",
       "auctionHouseId": 562,
       "success": true,
-      "timestamp": "2026-04-01T15:08:42.981Z"
+      "timestamp": "2026-04-01T17:00:24.021Z"
     },
     {
       "realm": "Spineshatter",
       "faction": "Alliance",
       "auctionHouseId": 561,
       "success": true,
-      "timestamp": "2026-04-01T15:08:45.188Z"
+      "timestamp": "2026-04-01T17:00:29.404Z"
     },
     {
       "realm": "Soulseeker",
       "faction": "Horde",
       "auctionHouseId": 564,
       "success": true,
-      "timestamp": "2026-04-01T15:08:46.966Z"
+      "timestamp": "2026-04-01T17:00:30.765Z"
     },
     {
       "realm": "Soulseeker",
       "faction": "Alliance",
       "auctionHouseId": 563,
       "success": true,
-      "timestamp": "2026-04-01T15:08:48.955Z"
+      "timestamp": "2026-04-01T17:00:32.156Z"
     },
     {
       "realm": "Dreamscythe",
       "faction": "Horde",
       "auctionHouseId": 554,
       "success": true,
-      "timestamp": "2026-04-01T15:08:51.009Z"
+      "timestamp": "2026-04-01T17:00:33.542Z"
     },
     {
       "realm": "Dreamscythe",
       "faction": "Alliance",
       "auctionHouseId": 553,
       "success": true,
-      "timestamp": "2026-04-01T15:08:53.989Z"
+      "timestamp": "2026-04-01T17:00:35.207Z"
     },
     {
       "realm": "Nightslayer",
       "faction": "Horde",
       "auctionHouseId": 556,
       "success": true,
-      "timestamp": "2026-04-01T15:08:56.123Z"
+      "timestamp": "2026-04-01T17:00:36.506Z"
     },
     {
       "realm": "Nightslayer",
       "faction": "Alliance",
       "auctionHouseId": 555,
       "success": true,
-      "timestamp": "2026-04-01T15:08:58.471Z"
+      "timestamp": "2026-04-01T17:00:37.928Z"
     },
     {
       "realm": "Doomhowl",
       "faction": "Horde",
       "auctionHouseId": 558,
       "success": true,
-      "timestamp": "2026-04-01T15:08:59.997Z"
+      "timestamp": "2026-04-01T17:00:39.135Z"
     },
     {
       "realm": "Doomhowl",
       "faction": "Alliance",
       "auctionHouseId": 557,
       "success": true,
-      "timestamp": "2026-04-01T15:09:01.498Z"
+      "timestamp": "2026-04-01T17:00:40.508Z"
     }
   ]
 }
