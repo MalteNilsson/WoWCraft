@@ -27,8 +27,8 @@ const faqs = [
 
 export default function FAQPage() {
   return (
-    <div className="h-dvh lg:h-screen bg-neutral-950 text-neutral-100 flex flex-col overflow-hidden">
-      <header className="flex-none border-b border-neutral-800 px-4 py-4 lg:px-8 shrink-0">
+    <div className="h-dvh desktop-layout:h-screen bg-neutral-950 text-neutral-100 flex flex-col overflow-hidden">
+      <header className="flex-none border-b border-neutral-800 px-4 py-4 desktop-layout:px-8 shrink-0">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <Link
             href="/enchanting"
@@ -41,16 +41,16 @@ export default function FAQPage() {
           </span>
         </div>
       </header>
-      <main className="flex-1 min-h-0 overflow-y-auto px-4 py-8 lg:px-8 lg:py-12 max-w-2xl mx-auto w-full">
-        <h1 className="text-2xl lg:text-3xl font-bold text-white mb-2">FAQ</h1>
-        <p className="text-neutral-400 text-sm lg:text-base mb-8">
+      <main className="flex-1 min-h-0 overflow-y-auto px-4 py-8 desktop-layout:px-8 desktop-layout:py-12 max-w-2xl mx-auto w-full">
+        <h1 className="text-2xl desktop-layout:text-3xl font-bold text-white mb-2">FAQ</h1>
+        <p className="text-neutral-400 text-sm desktop-layout:text-base mb-8">
           Frequently asked questions about WoWCraft
         </p>
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <div key={i} className="border-b border-neutral-800 pb-6 last:border-0">
-              <h2 className="text-base lg:text-lg font-semibold text-white mb-2">{faq.q}</h2>
-              <p className="text-neutral-300 text-sm lg:text-base leading-relaxed">{faq.a}</p>
+              <h2 className="text-base desktop-layout:text-lg font-semibold text-white mb-2">{faq.q}</h2>
+              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>

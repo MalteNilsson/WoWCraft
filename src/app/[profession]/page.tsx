@@ -227,32 +227,32 @@ function MaterialCard({
     <div style={{ marginLeft: `${indent}px` }}>
       <div
         onClick={() => displayChildren && setExpanded(prev => !prev)}
-        className={`flex justify-between items-center bg-neutral-900 p-2 lg:p-4 shadow border border-neutral-700 mb-px transition-all duration-200 ${
+        className={`flex justify-between items-center bg-neutral-900 p-2 desktop-layout:p-4 shadow border border-neutral-700 mb-px transition-all duration-200 ${
           displayChildren ? 'hover:bg-neutral-700 active:scale-[0.98] cursor-pointer' : ''
         } ${roundedClass}`}
       >
-        <div className="flex items-center gap-2 lg:gap-3">
-          <span className="text-sm lg:text-base">{node.quantity}</span>
+        <div className="flex items-center gap-2 desktop-layout:gap-3">
+          <span className="text-sm desktop-layout:text-base">{node.quantity}</span>
           <a
             href={`https://www.wowhead.com/${wowheadBase}/item=${node.id}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="flex items-center gap-2 lg:gap-3 min-w-0 hover:underline"
+            className="flex items-center gap-2 desktop-layout:gap-3 min-w-0 hover:underline"
           >
             {info && (
               <CachedIcon
                 category="materials"
                 id={node.id}
                 alt={info?.name ?? 'Item'}
-                className="w-6 h-6 lg:w-8 lg:h-8 rounded object-cover border border-neutral-700 flex-shrink-0"
+                className="w-6 h-6 desktop-layout:w-8 desktop-layout:h-8 rounded object-cover border border-neutral-700 flex-shrink-0"
               />
             )}
             <div className="flex flex-col min-w-0">
-              <span className="text-sm lg:text-base font-medium truncate" style={{ color: qualityColors[info?.quality ?? 1] }}>
+              <span className="text-sm desktop-layout:text-base font-medium truncate" style={{ color: qualityColors[info?.quality ?? 1] }}>
                 {node.name}
               </span>
-              <span className="text-xs lg:text-sm text-neutral-400">
+              <span className="text-xs desktop-layout:text-sm text-neutral-400">
                 Per Craft: {perCraftQuantity}
               </span>
             </div>
@@ -260,22 +260,22 @@ function MaterialCard({
         </div>
         <div className="flex flex-col items-end text-right">
           {node.noAhPrice ? (
-            <div className="flex flex-col items-end text-right text-yellow-400 font-medium text-xs lg:text-sm">
+            <div className="flex flex-col items-end text-right text-yellow-400 font-medium text-xs desktop-layout:text-sm">
               <div>⚠️ No auction listing — crafting cost used instead</div>
               <div><SafeMoney value={node.craftCost} /></div>
-              <div className="text-[10px] lg:text-xs text-neutral-400 mt-0.5 lg:mt-1">
+              <div className="text-[10px] desktop-layout:text-xs text-neutral-400 mt-0.5 desktop-layout:mt-1">
                 Per Craft: <SafeMoney value={node.craftCost / expCrafts} />
               </div>
             </div>
           ) : (
             <div className="flex flex-col items-end text-right">
-              <span className="text-yellow-300 text-sm lg:text-base font-normal">
+              <span className="text-yellow-300 text-sm desktop-layout:text-base font-normal">
                 <SafeMoney
                   value={node.buyCost}
                   fallback="⚠️ No price available"
                 />
               </span>
-              <span className="text-[10px] lg:text-xs text-neutral-400 mt-0.5 lg:mt-1">
+              <span className="text-[10px] desktop-layout:text-xs text-neutral-400 mt-0.5 desktop-layout:mt-1">
                 Per Craft: <SafeMoney value={node.buyCost / expCrafts} />
               </span>
             </div>
@@ -284,7 +284,7 @@ function MaterialCard({
           {Number.isFinite(node.buyCost) &&
             Number.isFinite(node.craftCost) &&
             node.buyCost > node.craftCost && (
-              <span className="text-green-400 text-[10px] lg:text-xs font-semibold mt-1 lg:mt-2">
+              <span className="text-green-400 text-[10px] desktop-layout:text-xs font-semibold mt-1 desktop-layout:mt-2">
                 Or Craft For: <SafeMoney value={node.craftCost} />
               </span>
           )}
@@ -1596,14 +1596,13 @@ const renderXTick = selected
 
   const [showMaterials, setShowMaterials] = useState(false);
 
-  // Desktop: smaller thumb hit area; mobile: larger for touch targets
+  // Desktop (landscape): smaller thumb hit area; mobile (portrait): larger for touch targets
   const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)');
-    setIsDesktop(mq.matches);
-    const handler = () => setIsDesktop(mq.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
+    const updateLayout = () => setIsDesktop(window.innerWidth >= window.innerHeight);
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
   }, []);
 
   // Optimize step candidates calculation to reduce expensive recalculations during sliding
@@ -1834,20 +1833,20 @@ const renderXTick = selected
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="max-w-md w-full bg-neutral-900 rounded-xl shadow-2xl border-2 border-amber-500/50 p-6 lg:p-8"
+              className="max-w-md w-full bg-neutral-900 rounded-xl shadow-2xl border-2 border-amber-500/50 p-6 desktop-layout:p-8"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">⚠️</span>
-                <h2 className="text-xl lg:text-2xl font-bold text-amber-400">Important Notice</h2>
+                <h2 className="text-xl desktop-layout:text-2xl font-bold text-amber-400">Important Notice</h2>
               </div>
-              <p className="text-neutral-300 text-sm lg:text-base leading-relaxed mb-2">
+              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-2">
                 <strong className="text-white">Auction House mode</strong> uses listing prices to estimate profit—we do <strong className="text-amber-400">not</strong> know actual sale prices.
               </p>
-              <p className="text-neutral-300 text-sm lg:text-base leading-relaxed mb-4">
+              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-4">
                 Prices can be <strong className="text-amber-400">highly volatile</strong>. Items may not sell at listed prices, or may take longer to sell than expected. Use this mode for rough estimates only.
               </p>
-              <p className="text-neutral-400 text-xs lg:text-sm mb-6">
+              <p className="text-neutral-400 text-xs desktop-layout:text-sm mb-6">
                 Click outside to cancel. By clicking &quot;I Understand&quot;, you acknowledge these limitations.
               </p>
               <button
@@ -1865,7 +1864,7 @@ const renderXTick = selected
       {!sidebarOpen && (
         <button
           onClick={() => setSidebarOpen(true)}
-          className="lg:hidden fixed top-3 left-3 z-[100] p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
+          className="desktop-layout:hidden fixed top-3 left-3 z-[100] p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
           aria-label="Open planner"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1876,14 +1875,14 @@ const renderXTick = selected
 
       {/* Mobile: left-edge drag strip to open drawer when closed */}
       <div
-        className="lg:hidden fixed left-0 top-0 bottom-0 touch-none"
+        className="desktop-layout:hidden fixed left-0 top-0 bottom-0 touch-none"
         style={{ zIndex: 45, width: `${EDGE_DRAWER_FRACTION * 100}%` }}
         {...drawerTouchHandlers}
         {...drawerPointerHandlers}
       />
 
       {/* Panels */}
-      <div className="flex flex-1 min-h-0 relative lg:pt-0">
+      <div className="flex flex-1 min-h-0 relative desktop-layout:pt-0">
         {/* Mobile backdrop - closes sidebar when tapped */}
         <AnimatePresence>
           {sidebarOpen && (
@@ -1891,7 +1890,7 @@ const renderXTick = selected
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="lg:hidden fixed inset-0 z-40 bg-black/60"
+              className="desktop-layout:hidden fixed inset-0 z-40 bg-black/60"
               onClick={() => setSidebarOpen(false)}
               aria-hidden
             />
@@ -1900,25 +1899,25 @@ const renderXTick = selected
 
         {/* Aside - full-screen on mobile, sidebar on desktop */}
         <aside
-          className={`fixed lg:static inset-0 z-50 lg:z-auto w-full lg:w-150 flex flex-col bg-neutral-950 text-[16px] lg:transform-none lg:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
+          className={`fixed desktop-layout:static inset-0 z-50 desktop-layout:z-auto w-full desktop-layout:w-150 flex flex-col bg-neutral-950 text-[16px] desktop-layout:transform-none desktop-layout:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
           style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
         >
           {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
           <div
-            className="lg:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
+            className="desktop-layout:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
             style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
             {...drawerTouchHandlers}
             {...drawerPointerHandlers}
           />
           {/* Mobile: drag handle on right edge of drawer to close by dragging left (show recipe view) */}
           <div
-            className="lg:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
+            className="desktop-layout:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
             style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
             {...drawerRightEdgeTouchHandlers}
             {...drawerRightEdgePointerHandlers}
           />
           {/* Slider + Tabs */}
-          <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 lg:pt-6">
+          <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 desktop-layout:pt-6">
             {/* Logo and name 
             <div className="flex items-center gap-2 mb-4">
               <img src="/icons/WoWCraft.png" alt="WoWCraft Logo" className="w-16 h-16 mb-2 ml-2" />
@@ -1926,12 +1925,12 @@ const renderXTick = selected
             </div>
             */}
             {/* End logo and name */}
-            <div className="flex flex-row gap-1.5 lg:gap-2 mb-2 lg:mb-4">
+            <div className="flex flex-row gap-1.5 desktop-layout:gap-2 mb-2 desktop-layout:mb-4">
               {/* Version Selector */}
               <Listbox value={selectedVersion} onChange={handleVersionChange}>
                 {({ open }) => (
-                  <div className="relative flex-1 min-w-0 lg:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
                       <span className="font-semibold truncate">{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
@@ -1950,8 +1949,8 @@ const renderXTick = selected
               {/* Realm Selector */}
               <Listbox value={selectedRealm} onChange={handleRealmChange}>
                 {({ open }) => (
-                  <div className="relative flex-1 min-w-0 lg:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
                       <span className="font-semibold truncate">{selectedRealm}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
@@ -1970,8 +1969,8 @@ const renderXTick = selected
               {/* Faction Selector */}
               <Listbox value={selectedFaction} onChange={handleFactionChange}>
                 {({ open }) => (
-                  <div className="relative flex-1 min-w-0 lg:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-xs lg:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
                       <span className="font-semibold truncate">{selectedFaction}</span>
                       <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
@@ -1988,14 +1987,14 @@ const renderXTick = selected
                 )}
               </Listbox>
             </div>
-            <div className="w-full mb-3 lg:mb-5 flex gap-2">
+            <div className="w-full mb-3 desktop-layout:mb-5 flex gap-2">
               <div className="flex-1">
                 <Listbox value={selectedProfession} onChange={handleProfessionChange}>
                   {({ open }) => (
                     <div className="relative w-full">
-                      <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 lg:px-3 lg:py-1.5 text-base lg:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-base desktop-layout:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
                         <div className="flex items-center gap-2 min-w-0">
-                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-8 h-8 lg:w-10 lg:h-10 flex-shrink-0" />
+                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-8 h-8 desktop-layout:w-10 desktop-layout:h-10 flex-shrink-0" />
                           <span className="font-semibold truncate">{selectedProfession}</span>
                         </div>
                         <svg
@@ -2069,10 +2068,10 @@ const renderXTick = selected
                           animate={{ opacity: 1, x: 0, scaleX: 1 }}
                           exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="lg:hidden absolute right-0 top-0 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[100] origin-left"
+                          className="desktop-layout:hidden absolute right-0 top-0 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[100] origin-left"
                         >
                         <div className="p-3 space-y-3">
-                          <div className="flex items-center justify-between mb-1 lg:mb-0 lg:hidden">
+                          <div className="flex items-center justify-between mb-1 desktop-layout:mb-0 desktop-layout:hidden">
                             <span className="text-xs font-medium text-neutral-300">Advanced Settings</span>
                             <button
                               onClick={() => setIsAdvancedSettingsOpen(false)}
@@ -2139,11 +2138,11 @@ const renderXTick = selected
                               animate={{ opacity: 1, x: 0, scaleX: 1 }}
                               exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                               transition={{ duration: 0.2 }}
-                              className="hidden lg:block fixed w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[9999] origin-left"
+                              className="hidden desktop-layout:block fixed w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[9999] origin-left"
                               style={{ top: advancedSettingsPosition.top, left: advancedSettingsPosition.left }}
                             >
                               <div className="p-3 space-y-3">
-                                <div className="flex items-center justify-between mb-1 lg:mb-0 lg:hidden">
+                                <div className="flex items-center justify-between mb-1 desktop-layout:mb-0 desktop-layout:hidden">
                                   <span className="text-xs font-medium text-neutral-300">Advanced Settings</span>
                                   <button
                                     onClick={() => setIsAdvancedSettingsOpen(false)}
@@ -2212,7 +2211,7 @@ const renderXTick = selected
               </div>
               
               {/* Double-sided range slider */}
-              <div className="relative z-20 mb-4 w-full px-3 lg:px-0">
+              <div className="relative z-20 mb-4 w-full px-3 desktop-layout:px-0">
                 <Range
                   values={[skill, target]}
                   step={1}
@@ -2410,13 +2409,13 @@ const renderXTick = selected
             </div>
             <div className="mb-4">
               {/* Price Sourcing Selector */}
-              <div className="flex items-center justify-between mb-1 lg:mb-2">
-                <label className="text-[10px] lg:text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
+              <div className="flex items-center justify-between mb-1 desktop-layout:mb-2">
+                <label className="text-[10px] desktop-layout:text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
               </div>
-              <div className="flex gap-0.5 lg:gap-1 flex-wrap">
+              <div className="flex gap-0.5 desktop-layout:gap-1 flex-wrap">
                 <button
                   onClick={() => setPriceSourcing('cost')}
-                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
+                  className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -2432,7 +2431,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={() => setPriceSourcing('cost-vendor')}
-                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
+                  className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost-vendor'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -2448,7 +2447,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={() => setPriceSourcing('disenchant')}
-                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
+                  className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'disenchant'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -2464,7 +2463,7 @@ const renderXTick = selected
                 </button>
                 <button
                   onClick={handleAuctionHouseClick}
-                  className={`px-1 py-0.5 lg:px-2 lg:py-1 text-[10px] lg:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
+                  className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'auction-house'
                       ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
@@ -2483,18 +2482,18 @@ const renderXTick = selected
             <div className="flex items-center gap-2 py-2 border-b border-neutral-800">
               <Link
                 href="/faq"
-                className="flex-1 py-2 px-3 text-sm lg:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+                className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
               >
                 FAQ
               </Link>
               <Link
                 href="/promo"
-                className="flex-1 py-2 px-3 text-sm lg:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+                className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
               >
                 About Project
               </Link>
             </div>
-            <div className="hidden lg:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
+            <div className="hidden desktop-layout:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -2513,12 +2512,12 @@ const renderXTick = selected
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 lg:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] lg:text-[14px]">
-              <span className="w-5 lg:w-8 text-center shrink-0">#</span>
-              <span className="w-5 lg:w-7 shrink-0" /> {/* icon space */}
+            <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] desktop-layout:text-[14px]">
+              <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
+              <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
               <span className="flex-1 min-w-0">Recipe</span>
-              <span className="w-16 lg:w-28 text-right shrink-0">Cost</span>
-              <span className="w-16 lg:w-24 text-center shrink-0">Skill</span>
+              <span className="w-16 desktop-layout:w-28 text-right shrink-0">Cost</span>
+              <span className="w-16 desktop-layout:w-24 text-center shrink-0">Skill</span>
             </div>
           </div>
 
@@ -2593,7 +2592,7 @@ const renderXTick = selected
                                   duration: 0.3,
                                   ease: "easeOut"
                                 }}
-                                className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] lg:h-[60px] font-bold text-yellow-400 text-sm lg:text-base will-change-transform"
+                                className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] font-bold text-yellow-400 text-sm desktop-layout:text-base will-change-transform"
                               >
                                 ⚔️ {s.note ?? `Upgrade to ${s.upgradeName}`}
                               </motion.div>
@@ -2636,7 +2635,7 @@ const renderXTick = selected
                                 <div
                                   id={`craft-${best.id}-${end}`}
                                   onClick={() => handleCardClick(best.name, end, start, end, false, best.id)}
-                                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-[43px] lg:h-[60px] cursor-pointer
+                                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] cursor-pointer
                                     transition-all duration-100 ease-out will-change-transform
                                     hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                     ${isSelected(best.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2644,22 +2643,22 @@ const renderXTick = selected
                                   <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                     diffColor(committedSkill, best.difficulty)
                                   }`} />
-                                  <span className="text-[13px] lg:text-[16px] flex items-center justify-center w-6 lg:w-8">
+                                  <span className="text-[13px] desktop-layout:text-[16px] flex items-center justify-center w-6 desktop-layout:w-8">
                                     {displayedCrafts}×
                                   </span>
                                   <span className="flex items-center gap-1 flex-1 min-w-0">
-                                    <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover" />
+                                    <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover" />
                                     <span
-                                      className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                      className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
                                       style={{ color: qualityColors[s.recipe.quality] }}
                                     >
                                       {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                     </span>
                                   </span>
-                                  <span className="text-[13px] lg:text-[16px]">
+                                  <span className="text-[13px] desktop-layout:text-[16px]">
                                     <SignedCost copper={displayedTotalCost} />
                                   </span>
-                                  <span className="flex-shrink-0 w-16 lg:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] lg:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
+                                  <span className="flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
                                     {start} → {end}
                                   </span>
                                 </div>
@@ -2702,7 +2701,7 @@ const renderXTick = selected
                                           ease: "easeOut"
                                         }}
                                         onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
-                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[43px] lg:h-[60px] 
+                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[43px] desktop-layout:h-[60px] 
                                           transition-all duration-100 ease-out will-change-transform
                                           hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                           ${isSelected(alt.recipe.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2710,17 +2709,17 @@ const renderXTick = selected
                                         <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                           diffColor(committedSkill, alt.recipe.difficulty)
                                         }`} />
-                                        <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] lg:text-[16px]">
+                                        <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] desktop-layout:text-[16px]">
                                           or {alt.crafts}×
                                         </span>
                                         <span className="flex items-center gap-1 flex-1 min-w-0 pl-1">
                                           <CachedIcon
                                             category={getRecipeProfession(alt.recipe.id, selectedProfession)}
                                             id={alt.recipe.id}
-                                            className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
+                                            className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                                           />
                                           <span
-                                            className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                            className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
                                             style={{ color: qualityColors[alt.recipe.quality] }}
                                           >
                                             {alt.recipe.name.length <= 35
@@ -2728,7 +2727,7 @@ const renderXTick = selected
                                               : `${alt.recipe.name.slice(0, 33)}…`}
                                           </span>
                                         </span>
-                                        <span className="text-[13px] lg:text-[16px]">
+                                        <span className="text-[13px] desktop-layout:text-[16px]">
                                           <SignedCost copper={alt.cost} />
                                         </span>
                                       </motion.div>
@@ -2754,7 +2753,7 @@ const renderXTick = selected
                               setSidebarOpen(false);
                             }}
                             id={`recipe-${r.id}`}
-                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[43px] lg:h-[60px]
+                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[43px] desktop-layout:h-[60px]
                               ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
                           >
                             <span
@@ -2762,20 +2761,20 @@ const renderXTick = selected
                                 diffColor(committedSkill, r.difficulty)
                               }`}
                             />
-                            <div className="pl-2 lg:pl-3 flex items-center gap-1 flex-1 min-w-0">
+                            <div className="pl-2 desktop-layout:pl-3 flex items-center gap-1 flex-1 min-w-0">
                               <CachedIcon
                                 category={getRecipeProfession(r.id, selectedProfession)}
                                 id={r.id}
-                                className="w-6 h-6 lg:w-7 lg:h-7 rounded object-cover"
+                                className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                               />
                               <span
-                                className="truncate whitespace-nowrap flex-1 text-[13px] lg:text-[16px]"
+                                className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
                                 style={{ color: qualityColors[r.quality ?? 1] }}
                               >
                                 {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
                               </span>
                             </div>
-                            <span className="flex-shrink-0 w-16 lg:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] lg:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
+                            <span className="flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
                               {r.minSkill}
                             </span>
                           </div>
@@ -2801,10 +2800,10 @@ const renderXTick = selected
                       ease: "easeOut"
                     }}
                     className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
-                              border-t border-neutral-700 py-1 px-4 lg:py-1.5 lg:px-30"
+                              border-t border-neutral-700 py-1 px-4 desktop-layout:py-1.5 desktop-layout:px-30"
                   >
-                    <div className="text-sm lg:text-xl font-semibold flex items-center justify-between gap-2 min-w-0">
-                      <div className="flex items-center justify-start min-w-0 flex-1 overflow-hidden pl-[55px] lg:pl-0 pr-3">
+                    <div className="text-sm desktop-layout:text-xl font-semibold flex items-center justify-between gap-2 min-w-0">
+                      <div className="flex items-center justify-start min-w-0 flex-1 overflow-hidden pl-[55px] desktop-layout:pl-0 pr-3">
                         <span className="text-neutral-400 shrink-0">Total: </span>
                         <span className="min-w-0 truncate">
                           <SignedCost copper={displayedTotalCost} />
@@ -2812,11 +2811,11 @@ const renderXTick = selected
                       </div>
                       <button
                         onClick={() => setShowMaterials(!showMaterials)}
-                        className="flex items-center gap-1 shrink-0 px-2 py-1 text-xs lg:text-sm lg:px-3 lg:py-1.5 text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-semibold transition-colors border border-neutral-600"
+                        className="flex items-center gap-1 shrink-0 px-2 py-1 text-xs desktop-layout:text-sm desktop-layout:px-3 desktop-layout:py-1.5 text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-semibold transition-colors border border-neutral-600"
                       >
                         <span>Materials</span>
                         <svg
-                          className={`w-3 h-3 lg:w-4 lg:h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
+                          className={`w-3 h-3 desktop-layout:w-4 desktop-layout:h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -2840,7 +2839,7 @@ const renderXTick = selected
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] lg:inset-auto lg:left-[37.5rem] lg:top-0 lg:bottom-auto lg:right-auto lg:w-[330px] lg:max-h-none lg:h-full rounded-t-xl lg:rounded shadow-lg border border-neutral-800 border-b-0 lg:border-b z-50 origin-bottom lg:origin-left bg-neutral-900/95 backdrop-blur-sm"
+              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] desktop-layout:inset-auto desktop-layout:left-[37.5rem] desktop-layout:top-0 desktop-layout:bottom-auto desktop-layout:right-auto desktop-layout:w-[330px] desktop-layout:max-h-none desktop-layout:h-full rounded-t-xl desktop-layout:rounded shadow-lg border border-neutral-800 border-b-0 desktop-layout:border-b z-50 origin-bottom desktop-layout:origin-left bg-neutral-900/95 backdrop-blur-sm"
             >
               <div className="p-3 h-full flex flex-col min-h-0">
                 <div className="flex justify-between items-center mb-4 flex-shrink-0">
@@ -2880,22 +2879,22 @@ const renderXTick = selected
         </AnimatePresence>
 
         {/* Main panel - z-0 so left-edge drag zone (z-45) stays interactable; sliders use z-20 within their containers */}
-        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none xl:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
+        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none desktop-layout:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
         
         {!selected ? (
           <p className="text-neutral-400 px-4 py-8">
-            <span className="lg:hidden">Tap the menu to view the leveling guide or recipe list.</span>
-            <span className="hidden lg:inline">Click a recipe to view details.</span>
+            <span className="desktop-layout:hidden">Tap the menu to view the leveling guide or recipe list.</span>
+            <span className="hidden desktop-layout:inline">Click a recipe to view details.</span>
           </p>
         ) : (
-          <div className="flex-1 w-full max-w-4xl pt-14 pb-6 lg:py-12 mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8">
+          <div className="flex-1 w-full max-w-4xl pt-14 pb-6 desktop-layout:py-12 mx-auto px-4 sm:px-6 desktop-layout:max-w-5xl desktop-layout:px-8">
             <div className="flex-none items-center">
-              <div className="flex pb-1 lg:pb-2 text-xl lg:text-[36px] items-center">
+              <div className="flex pb-1 desktop-layout:pb-2 text-xl desktop-layout:text-[36px] items-center">
                 <CachedIcon
                   category={getRecipeProfession(selected.id, selectedProfession)}
                   id={selected.id}
                   alt={`${selected.name} icon`}
-                  className="w-10 h-10 lg:w-16 lg:h-16 rounded mr-2 flex-shrink-0"
+                  className="w-10 h-10 desktop-layout:w-16 desktop-layout:h-16 rounded mr-2 flex-shrink-0"
                 />
                 <a
                   href={selected.url || `https://www.wowhead.com/${selectedVersion === 'The Burning Crusade' ? 'tbc' : 'classic'}/spell=${selected.id}`}
@@ -2910,12 +2909,12 @@ const renderXTick = selected
               <div className="flex-none">
               </div>
             </div>
-            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 lg:mt-2 pb-12">
+            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 desktop-layout:mt-2 pb-12">
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-base font-medium leading-6 text-white lg:text-lg">Level-up Calculator</h3>
+                <h3 className="text-base font-medium leading-6 text-white desktop-layout:text-lg">Level-up Calculator</h3>
               </div>
-              <div className="flex flex-col lg:flex-row w-full h-full">
-                <div className="w-full lg:w-3/5 relative p-4 lg:p-8 h-[min(75vw,300px)] lg:h-[350px]">
+              <div className="flex flex-col desktop-layout:flex-row w-full h-full">
+                <div className="w-full desktop-layout:w-3/5 relative p-4 desktop-layout:p-8 h-[min(75vw,300px)] desktop-layout:h-[350px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
                       <CartesianGrid
@@ -3111,9 +3110,9 @@ const renderXTick = selected
                   </div>
                 </div> {/* end chart container */} 
 
-                <aside className="flex-none w-full lg:w-2/5 bg-neutral-800 rounded-lg relative lg:h-full" style={{ minHeight: 200 }}>
+                <aside className="flex-none w-full desktop-layout:w-2/5 bg-neutral-800 rounded-lg relative desktop-layout:h-full" style={{ minHeight: 200 }}>
                   <div className="flex w-full">
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-none lg:rounded-b border-0 lg:border lg:border-neutral-700 lg:border-t-0 lg:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-none desktop-layout:rounded-b border-0 desktop-layout:border desktop-layout:border-neutral-700 desktop-layout:border-t-0 desktop-layout:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                       <button
@@ -3154,7 +3153,7 @@ const renderXTick = selected
                       >+</button>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-none lg:rounded-b border-0 lg:border lg:border-neutral-700 lg:border-t-0 lg:border-l-0 lg:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
+                  <div className="flex flex-col items-center bg-neutral-900 rounded-none desktop-layout:rounded-b border-0 desktop-layout:border desktop-layout:border-neutral-700 desktop-layout:border-t-0 desktop-layout:border-l-0 desktop-layout:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
                     <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">TO</span>
                     <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                       <button
@@ -3217,13 +3216,13 @@ const renderXTick = selected
                 </aside>
               </div>
 
-              <div className="flex items-center justify-between px-4 py-4 lg:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
+              <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
               </div>
-              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] lg:text-[16px] min-w-0">
-                <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                  <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Base Cost Per Attempt</span>
-                  <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] desktop-layout:text-[16px] min-w-0">
+                <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                  <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Base Cost Per Attempt</span>
+                  <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                     <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} />
                   </span>
                 </div>
@@ -3235,9 +3234,9 @@ const renderXTick = selected
                     // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
                     if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
                       return (
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Recipe Cost</span>
-                          <span className="text-red-400 text-[10px] lg:text-base">Not Available (BoP)</span>
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
+                          <span className="text-red-400 text-[10px] desktop-layout:text-base">Not Available (BoP)</span>
                         </div>
                       );
                     }
@@ -3246,50 +3245,50 @@ const renderXTick = selected
                     return (
                       <>
                         {(recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice >= 0) && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">
                               {recipeCostData.vendorPrice === 0 ? 'Recipe Cost' : 'Vendor Recipe Cost'}
                             </span>
-                            <div className="flex flex-col items-center gap-0.5 lg:gap-1">
+                            <div className="flex flex-col items-center gap-0.5 desktop-layout:gap-1">
                               {recipeInfo?.limitedStock && (
-                                <div className="text-[10px] lg:text-base text-yellow-400 flex items-center gap-1">
+                                <div className="text-[10px] desktop-layout:text-base text-yellow-400 flex items-center gap-1">
                                   <span>⚠️ Limited Stock</span>
                                 </div>
                               )}
-                              <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                              <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                                 <FormatMoney copper={recipeCostData.vendorPrice} />
                               </span>
                             </div>
                           </div>
                         )}
                         {recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0 && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">AH Recipe Cost</span>
-                            <span className="text-xs lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">AH Recipe Cost</span>
+                            <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                               <FormatMoney copper={recipeCostData.ahPrice} />
                             </span>
                           </div>
                         )}
                         {recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 lg:mb-2 text-[9px] lg:text-base">Recipe Cost</span>
-                            <span className="text-red-400 text-[10px] lg:text-base">No price available</span>
+                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
+                            <span className="text-red-400 text-[10px] desktop-layout:text-base">No price available</span>
                           </div>
                         )}
                       </>
                     );
                   })()
                 ) : (
-                  <div className="flex-1 flex flex-col items-center justify-center p-2 lg:p-4 min-w-0">
-                    <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-base">Recipe Cost</span>
-                    <span className="text-sm lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                  <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
+                    <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Recipe Cost</span>
+                    <span className="text-sm desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                       <FormatMoney copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} />
                     </span>
                   </div>
                 )}
-                <div className="flex-1 flex flex-col items-center justify-center p-2 lg:p-4 min-w-0">
-                  <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-base">Average Cost Per Level</span>
-                  <span className="text-sm lg:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
+                  <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Average Cost Per Level</span>
+                  <span className="text-sm desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                     <SafeMoney
                       value={selected ? (() => {
                         const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
@@ -3304,15 +3303,15 @@ const renderXTick = selected
                 </div>
               </div>
 
-              <div className="flex items-center justify-between px-2 py-3 lg:px-6 lg:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
-                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Material Calculations</h3>
+              <div className="flex items-center justify-between px-2 py-3 desktop-layout:px-6 desktop-layout:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Material Calculations</h3>
               </div>
-              <div className="px-2 py-2 lg:px-6 lg:py-6">
+              <div className="px-2 py-2 desktop-layout:px-6 desktop-layout:py-6">
                 <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} wowheadBase={getWowheadBase(selectedVersion)} />
               </div>
 
-              <div className="flex items-center justify-between px-2 py-3 lg:px-6 lg:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
-                <h3 className="text-sm lg:text-lg font-medium leading-6 text-white">Auction House Profit Calculation</h3>
+              <div className="flex items-center justify-between px-2 py-3 desktop-layout:px-6 desktop-layout:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Auction House Profit Calculation</h3>
               </div>
               <div className="flex flex-col divide-y divide-neutral-700">
                 {selected?.produces ? (() => {
@@ -3331,30 +3330,30 @@ const renderXTick = selected
                   const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
                   return (
                     <>
-                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] lg:text-[16px] min-h-[3rem] lg:min-h-[4rem]">
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">Vendor Price Return</span>
-                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] desktop-layout:text-[16px] min-h-[3rem] desktop-layout:min-h-[4rem]">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">Vendor Price Return</span>
+                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={vendorReturn} />
                           </span>
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">AH Returns (min buyout)</span>
-                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">AH Returns (min buyout)</span>
+                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={ahMinBuyout} />
                           </span>
                         </div>
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 lg:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 lg:mb-1 text-[9px] lg:text-sm">AH Returns (market avg)</span>
-                          <span className="text-xs lg:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">AH Returns (market avg)</span>
+                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
                             <FormatMoney copper={ahMarketValue} />
                           </span>
                         </div>
                       </div>
                       {outcomes.length > 0 && (
-                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-2 lg:p-4">
-                          <span className="text-neutral-400 mb-1 lg:mb-2 text-[10px] lg:text-sm font-medium">Expected Disenchant Materials</span>
-                          <ul className="space-y-1.5 lg:space-y-2 text-xs lg:text-sm">
+                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-2 desktop-layout:p-4">
+                          <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-sm font-medium">Expected Disenchant Materials</span>
+                          <ul className="space-y-1.5 desktop-layout:space-y-2 text-xs desktop-layout:text-sm">
                             {outcomes.map((o, idx) => {
                               const avgQty = (o.minQty + o.maxQty) / 2;
                               const expectedQty = o.chance * avgQty * totalOutput;
@@ -3367,30 +3366,30 @@ const renderXTick = selected
                               const qtyRange = o.minQty === o.maxQty ? `${o.minQty}` : `${o.minQty}–${o.maxQty}`;
                               const pct = (o.chance * 100).toFixed(0);
                               return (
-                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-2 lg:gap-3">
+                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-2 desktop-layout:gap-3">
                                   <a
                                     href={`https://www.wowhead.com/${getWowheadBase(selectedVersion)}/item=${o.itemId}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 lg:gap-3 flex-1 min-w-0 hover:underline"
+                                    className="flex items-center gap-2 desktop-layout:gap-3 flex-1 min-w-0 hover:underline"
                                   >
                                     <CachedIcon
                                       category="materials"
                                       id={o.itemId}
-                                      className="w-5 h-5 lg:w-7 lg:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
+                                      className="w-5 h-5 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
                                     />
                                     <div className="flex-1 min-w-0">
                                       <span className="font-medium truncate" style={{ color: qualityColors[matQuality] }}>{matName}</span>
-                                      <span className="text-neutral-400 ml-1 lg:ml-1.5 text-[10px] lg:text-sm">
+                                      <span className="text-neutral-400 ml-1 desktop-layout:ml-1.5 text-[10px] desktop-layout:text-sm">
                                         {pct}% ({qtyRange})
                                       </span>
                                     </div>
                                   </a>
-                                  <div className="text-right flex-shrink-0 text-[10px] lg:text-sm pt-[10px] lg:pt-0">
+                                  <div className="text-right flex-shrink-0 text-[10px] desktop-layout:text-sm pt-[10px] desktop-layout:pt-0">
                                     <span className="text-neutral-400">
                                       ~{expectedQty.toFixed(1)} × <FormatMoney copper={price} />
                                     </span>
-                                    <span className="text-white font-medium ml-1 lg:ml-2">
+                                    <span className="text-white font-medium ml-1 desktop-layout:ml-2">
                                       = <FormatMoney copper={value} />
                                     </span>
                                   </div>
@@ -3398,7 +3397,7 @@ const renderXTick = selected
                               );
                             })}
                           </ul>
-                          <div className="mt-1.5 lg:mt-2 pt-1.5 lg:pt-2 border-t border-neutral-600 flex justify-between items-center text-[10px] lg:text-sm">
+                          <div className="mt-1.5 desktop-layout:mt-2 pt-1.5 desktop-layout:pt-2 border-t border-neutral-600 flex justify-between items-center text-[10px] desktop-layout:text-sm">
                             <span className="text-neutral-400">Total expected value</span>
                             <span className="text-white font-semibold"><FormatMoney copper={deTotal * totalOutput} /></span>
                           </div>
@@ -3407,7 +3406,7 @@ const renderXTick = selected
                     </>
                   );
                 })() : (
-                  <div className="flex items-center justify-center p-4 lg:p-8 text-neutral-500 text-xs lg:text-sm">
+                  <div className="flex items-center justify-center p-4 desktop-layout:p-8 text-neutral-500 text-xs desktop-layout:text-sm">
                     Select a recipe to see profit calculations
                   </div>
                 )}

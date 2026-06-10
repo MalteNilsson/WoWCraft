@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+/* Mobile when height > width; desktop when width >= height */
+@custom-variant mobile-layout (@media (max-aspect-ratio: 999/1000));
+@custom-variant desktop-layout (@media (min-aspect-ratio: 1/1));
+
 @layer theme, base, components, utilities;
 
 @layer base {
