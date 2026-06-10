@@ -49,6 +49,13 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${inter.className} overflow-hidden overscroll-x-contain`} suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5113978673512478"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="overflow-hidden overscroll-x-contain">
         <script
           dangerouslySetInnerHTML={{
