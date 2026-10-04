@@ -1,15 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { professionGuides } from '@/lib/professionGuides';
 
-const professions = [
-  'alchemy',
-  'blacksmithing',
-  'cooking',
-  'enchanting',
-  'engineering',
-  'jewelcrafting',
-  'leatherworking',
-  'tailoring',
-];
+const professions = professionGuides.map((guide) => guide.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://wowcraft.io';
