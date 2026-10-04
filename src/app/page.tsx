@@ -110,19 +110,25 @@ export default async function HomePage({
               </>
             );
             return (
-              <li key={guide.slug}>
+              <li key={guide.slug} className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900">
                 {available ? (
                   <Link
                     href={professionHref(guide.slug, version)}
-                    className="flex h-full items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-3.5 transition-colors hover:border-[#e3b056]/70 hover:bg-neutral-800"
+                    className="flex flex-1 items-center gap-3 px-4 py-3.5 transition-colors hover:bg-neutral-800"
                   >
                     {card}
                   </Link>
                 ) : (
-                  <div className="flex h-full items-center gap-3 rounded-lg border border-neutral-800/70 bg-neutral-900/40 px-4 py-3.5">
+                  <div className="flex flex-1 items-center gap-3 bg-neutral-900/40 px-4 py-3.5">
                     {card}
                   </div>
                 )}
+                <Link
+                  href={`/guides/${guide.slug}`}
+                  className="border-t border-neutral-800 px-4 py-2 text-xs font-medium text-[#e3b056] hover:bg-neutral-800 hover:text-white"
+                >
+                  Read the {guide.name} guide
+                </Link>
               </li>
             );
           })}
@@ -163,8 +169,13 @@ export default async function HomePage({
         </section>
       </main>
 
-      <footer className="border-t border-neutral-800">
-        <p className="px-5 py-4 text-xs leading-relaxed text-neutral-500">
+      <footer className="border-t border-neutral-800 px-5 py-4">
+        <nav className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-neutral-400">
+          <Link href="/faq" className="hover:text-white">FAQ</Link>
+          <Link href="/about" className="hover:text-white">About</Link>
+          <Link href="/privacy" className="hover:text-white">Privacy</Link>
+        </nav>
+        <p className="mt-3 text-xs leading-relaxed text-neutral-500">
           WoWCraft is not affiliated with Blizzard Entertainment. World of Warcraft is a
           registered trademark of Blizzard Entertainment.
         </p>
