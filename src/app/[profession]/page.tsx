@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProfessionGuide, professionGuides } from '@/lib/professionGuides';
 import ProfessionPlanner from './ProfessionPlanner';
+import { ProfessionGuideSection } from './ProfessionGuideSection';
 
 type ProfessionPageProps = {
   params: Promise<{ profession: string }>;
@@ -48,7 +49,9 @@ export default async function ProfessionPage({ params, searchParams }: Professio
           realm: query.realm,
           faction: query.faction,
         }}
-      />
+      >
+        <ProfessionGuideSection guide={guide} />
+      </ProfessionPlanner>
     </div>
   );
 }

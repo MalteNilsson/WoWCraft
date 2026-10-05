@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { useState, useMemo, useEffect, useRef, useCallback, type ReactNode } from 'react';
+import { AdSlot, AD_SLOT_LEADERBOARD, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 import { createPortal } from 'react-dom';
 // Vanilla recipes
 import vanillaAlchemy from '@/data/recipes/vanilla/alchemy.json';
@@ -349,6 +350,7 @@ function MaterialTreeFlat({
 // ── component ──
 export default function ProfessionPlanner({
   initialSearchParams,
+  children,
 }: {
   initialSearchParams: {
     skill?: string;
@@ -357,6 +359,7 @@ export default function ProfessionPlanner({
     realm?: string;
     faction?: string;
   };
+  children?: ReactNode;
 }) {
   const router = useRouter();
   const params = useParams();
@@ -2854,7 +2857,7 @@ const renderXTick = selected
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] desktop-layout:inset-auto desktop-layout:!left-[37.5rem] desktop-layout:top-0 desktop-layout:bottom-auto desktop-layout:right-auto desktop-layout:w-[330px] desktop-layout:max-h-none desktop-layout:h-full rounded-t-xl desktop-layout:rounded shadow-lg border border-neutral-800 border-b-0 desktop-layout:border-b z-50 origin-bottom desktop-layout:origin-left bg-neutral-900/95 backdrop-blur-sm"
+              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] desktop-layout:inset-auto desktop-layout:max-[1919px]:!left-[37.5rem] min-[1920px]:!left-[calc(50.5rem+(100vw-119.5rem)/2)] desktop-layout:top-0 desktop-layout:bottom-auto desktop-layout:right-auto desktop-layout:w-[330px] desktop-layout:max-h-none desktop-layout:h-full rounded-t-xl desktop-layout:rounded shadow-lg border border-neutral-800 border-b-0 desktop-layout:border-b z-50 origin-bottom desktop-layout:origin-left bg-neutral-900/95 backdrop-blur-sm"
             >
               <div className="p-3 h-full flex flex-col min-h-0">
                 <div className="flex justify-between items-center mb-4 flex-shrink-0">
@@ -2902,8 +2905,8 @@ const renderXTick = selected
             <span className="hidden desktop-layout:inline">Click a recipe to view details.</span>
           </p>
         ) : (
-          <div className="flex-1 w-full max-w-4xl pt-14 pb-6 desktop-layout:max-w-5xl desktop-layout:py-12 mx-auto px-4 sm:px-6 desktop-layout:px-8">
-            <div className="flex-none items-center">
+          <div className="flex-1 w-full max-w-4xl pt-14 pb-6 desktop-layout:py-12 mx-auto px-4 sm:px-6 desktop-layout:max-[1919px]:max-w-5xl desktop-layout:max-[1919px]:px-8 min-[1920px]:grid min-[1920px]:w-max min-[1920px]:max-w-full min-[1920px]:flex-none min-[1920px]:self-center min-[1920px]:grid-cols-[160px_56rem_160px] min-[1920px]:justify-center min-[1920px]:items-start min-[1920px]:gap-6 min-[1920px]:px-6">
+            <div className="flex-none items-center min-[1920px]:col-start-2">
               <div className="flex pb-1 desktop-layout:pb-2 text-xl desktop-layout:text-[36px] items-center">
                 <CachedIcon
                   category={getRecipeProfession(selected.id, selectedProfession)}
@@ -2924,7 +2927,13 @@ const renderXTick = selected
               <div className="flex-none">
               </div>
             </div>
-            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 desktop-layout:mt-2 pb-12">
+            <AdSlot
+              slot={AD_SLOT_SKYSCRAPER}
+              width={160}
+              height={600}
+              className="sticky top-4 z-10 hidden h-[600px] w-[160px] items-center justify-center self-start min-[1920px]:col-start-1 min-[1920px]:row-start-2 min-[1920px]:flex"
+            />
+            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 desktop-layout:mt-2 pb-12 min-[1920px]:col-start-2 min-[1920px]:row-start-2 min-[1920px]:min-w-0">
               <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-base font-medium leading-6 text-white desktop-layout:text-lg">Level-up Calculator</h3>
               </div>
@@ -3231,6 +3240,15 @@ const renderXTick = selected
                 </aside>
               </div>
 
+              <div className="my-4 hidden w-full min-h-[60px] max-h-[120px] items-center justify-center min-[1920px]:flex">
+                <AdSlot
+                  slot={AD_SLOT_LEADERBOARD}
+                  width={728}
+                  height={90}
+                  className="flex h-[90px] w-[728px] max-w-full items-center justify-center"
+                />
+              </div>
+
               <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
               </div>
@@ -3427,8 +3445,15 @@ const renderXTick = selected
                 )}
               </div>
             </div>
+            <AdSlot
+              slot={AD_SLOT_SKYSCRAPER}
+              width={160}
+              height={600}
+              className="sticky top-4 z-10 hidden h-[600px] w-[160px] items-center justify-center self-start min-[1920px]:col-start-3 min-[1920px]:row-start-2 min-[1920px]:flex"
+            />
           </div>
         )}
+        {children}
         </main>
       </div>
     </div>
