@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# wowhead scrape resume cache
+src/data/.wowhead-cache/

@@ -1,39 +1,25 @@
 import type { MetadataRoute } from 'next';
+import { professionGuides } from '@/lib/professionGuides';
 
-const baseUrl = 'https://wowcraft.io';
-
-const professionSlugs = [
-  'alchemy',
-  'blacksmithing',
-  'cooking',
-  'enchanting',
-  'engineering',
-  'jewelcrafting',
-  'leatherworking',
-  'tailoring',
-] as const;
+const professions = professionGuides.map((guide) => guide.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date('2026-10-05T00:00:00.000Z');
+  const baseUrl = 'https://wowcraft.io';
 
-  return [
-    { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1 },
-    { url: `${baseUrl}/faq`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.4 },
-    ...professionSlugs.flatMap((slug) => [
-      {
-        url: `${baseUrl}/${slug}`,
-        lastModified,
-        changeFrequency: 'weekly' as const,
-        priority: 0.8,
-      },
-      {
-        url: `${baseUrl}/guides/${slug}`,
-        lastModified,
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-      },
-    ]),
+  const entries: MetadataRoute.Sitemap = [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    ...professions.map((profession) => ({
+      url: `${baseUrl}/${profession}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
   ];
+
+  return entries;
 }

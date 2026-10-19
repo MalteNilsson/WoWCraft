@@ -1,0 +1,3447 @@
+{
+  "note": "Season of Discovery profession recipes are classic Wowhead spells with seasonId 2. Items are outputs and reagents of those recipes that are not also used by a non-SoD classic recipe. inForever means the same id is in the Forever profession data.",
+  "summary": {
+    "alchemy": {
+      "classicList": 128,
+      "seasonOfDiscovery": 16
+    },
+    "blacksmithing": {
+      "classicList": 305,
+      "seasonOfDiscovery": 65
+    },
+    "cooking": {
+      "classicList": 89,
+      "seasonOfDiscovery": 7
+    },
+    "enchanting": {
+      "classicList": 199,
+      "seasonOfDiscovery": 48
+    },
+    "engineering": {
+      "classicList": 193,
+      "seasonOfDiscovery": 29
+    },
+    "leatherworking": {
+      "classicList": 313,
+      "seasonOfDiscovery": 80
+    },
+    "tailoring": {
+      "classicList": 283,
+      "seasonOfDiscovery": 57
+    }
+  },
+  "counts": {
+    "sodRecipes": 302,
+    "sodRecipesInForever": 301,
+    "sodRecipesNotInForever": 1,
+    "foreverRecipesNotOnClassic": 901,
+    "sodItems": 317,
+    "sodItemsInForever": 81,
+    "sodItemsNotInForever": 236
+  },
+  "sodRecipesInForever": [
+    {
+      "profession": "alchemy",
+      "id": 426607,
+      "name": "Elixir of Coalesced Regret",
+      "creates": 210708
+    },
+    {
+      "profession": "alchemy",
+      "id": 435969,
+      "name": "Insulating Gniodine",
+      "creates": 213372
+    },
+    {
+      "profession": "alchemy",
+      "id": 435971,
+      "name": "Mildly Irradiated Rejuvenation Potion",
+      "creates": 215162
+    },
+    {
+      "profession": "alchemy",
+      "id": 439960,
+      "name": "Lesser Arcane Elixir",
+      "creates": 217398
+    },
+    {
+      "profession": "alchemy",
+      "id": 446226,
+      "name": "Flask of Everlasting Nightmares",
+      "creates": 221024
+    },
+    {
+      "profession": "alchemy",
+      "id": 446851,
+      "name": "Flask of Nightmarish Mojo",
+      "creates": 221313
+    },
+    {
+      "profession": "alchemy",
+      "id": 448085,
+      "name": "Flask of Restless Dreams",
+      "creates": 222952
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213544,
+      "name": "Flask of Unyielding Sorrow",
+      "creates": 233966
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213546,
+      "name": "Flask of Ancient Knowledge",
+      "creates": 233964
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213548,
+      "name": "Flask of the Old Gods",
+      "creates": 233965
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213552,
+      "name": "Flask of Madness",
+      "creates": 233962
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213559,
+      "name": "Elixir of the Honey Badger",
+      "creates": 233967
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213563,
+      "name": "Elixir of the Mage-Lord",
+      "creates": 233968
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213565,
+      "name": "Elixir of the Ironside",
+      "creates": 233969
+    },
+    {
+      "profession": "alchemy",
+      "id": 1213571,
+      "name": "Elixir of Alacrity",
+      "creates": 233977
+    },
+    {
+      "profession": "alchemy",
+      "id": 1231583,
+      "name": "Major Discolored Healing Potion",
+      "creates": 241650
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 427061,
+      "name": "Mantle of the Second War",
+      "creates": 210773
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 429348,
+      "name": "Shifting Silver Breastplate",
+      "creates": 210794
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 430397,
+      "name": "Blackfathom Sharpening Stone",
+      "creates": 211845
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 435906,
+      "name": "Reflective Truesilver Braincage",
+      "creates": 215167
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 435908,
+      "name": "Tempered Interference-Negating Helmet",
+      "creates": 215161
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 435910,
+      "name": "Low-Background Truesilver Plates",
+      "creates": 213376
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439120,
+      "name": "Golden Scale Gauntlets",
+      "creates": 217273
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439122,
+      "name": "Golden Scale Boots",
+      "creates": 217275
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439124,
+      "name": "Golden Scale Cuirass",
+      "creates": 217277
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439126,
+      "name": "Golden Scale Coif",
+      "creates": 217279
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439128,
+      "name": "Moonsteel Broadsword",
+      "creates": 217281
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439130,
+      "name": "Golden Scale Shoulders",
+      "creates": 217283
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 439132,
+      "name": "Golden Scale Leggings",
+      "creates": 217285
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 446179,
+      "name": "Shoulderplates of Dread",
+      "creates": 220738
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 446188,
+      "name": "Fearmonger's Shoulderguards",
+      "creates": 220740
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 446191,
+      "name": "Baleful Pauldrons",
+      "creates": 220739
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 460460,
+      "name": "Sulfuron Hammer",
+      "creates": 227684
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461647,
+      "name": "Skyrider's Masterwork Stormhammer",
+      "creates": 227886
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461651,
+      "name": "Fiery Plate Gauntlets of the Hidden Technique",
+      "creates": 227865
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461667,
+      "name": "Tempered Dark Iron Plate",
+      "creates": 227871
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461669,
+      "name": "Refined Arcanite Champion",
+      "creates": 228125
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461671,
+      "name": "Stronger-hold Gauntlets",
+      "creates": 227885
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461675,
+      "name": "Refined Arcanite Reaper",
+      "creates": 227845
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461712,
+      "name": "Refined Hammer of the Titans",
+      "creates": 228230
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461714,
+      "name": "Desecration",
+      "creates": 227857
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461716,
+      "name": "Deadly Heartseeker",
+      "creates": 227884
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461718,
+      "name": "Tranquility",
+      "creates": 227881
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461730,
+      "name": "Hardened Frostguard",
+      "creates": 227887
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461733,
+      "name": "Finely-Enchanted Battlehammer",
+      "creates": 227880
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461735,
+      "name": "Invincible Mail",
+      "creates": 227876
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461737,
+      "name": "Tempest Gauntlets",
+      "creates": 227870
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461739,
+      "name": "Warcrest of the Great Chief",
+      "creates": 227872
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 461743,
+      "name": "Sageblade of the Archmagus",
+      "creates": 227850
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213481,
+      "name": "Razorspike Headcage",
+      "creates": 233795
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213484,
+      "name": "Razorspike Shoulderplate",
+      "creates": 233793
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213490,
+      "name": "Razorspike Battleplate",
+      "creates": 233492
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213492,
+      "name": "Obsidian Reaver",
+      "creates": 233491
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213498,
+      "name": "Obsidian Champion",
+      "creates": 233490
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213500,
+      "name": "Obsidian Destroyer",
+      "creates": 233796
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213502,
+      "name": "Obsidian Stormhammer",
+      "creates": 233797
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213504,
+      "name": "Obsidian Sageblade",
+      "creates": 233798
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213506,
+      "name": "Obsidian Defender",
+      "creates": 233801
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213643,
+      "name": "Obsidian Grinding Stone",
+      "creates": 234004
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213709,
+      "name": "Ironvine Belt",
+      "creates": 234288
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213711,
+      "name": "Ironvine Gloves",
+      "creates": 234290
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213715,
+      "name": "Ironvine Breastplate",
+      "creates": 234292
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213746,
+      "name": "Heavy Obsidian Belt",
+      "creates": 234319
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1213748,
+      "name": "Light Obsidian Belt",
+      "creates": 234321
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1214137,
+      "name": "Obsidian Heartseeker",
+      "creates": 234428
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1214257,
+      "name": "Black Grasp of the Destroyer",
+      "creates": 234086
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1214270,
+      "name": "Jagged Obsidian Shield",
+      "creates": 234459
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1214274,
+      "name": "Obsidian Mail Tunic",
+      "creates": 234460
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1214309,
+      "name": "Dreamscale Visor",
+      "creates": 234487
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1215507,
+      "name": "Thick Obsidian Breastplate",
+      "creates": 235040
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1223787,
+      "name": "Icebane Breastplate",
+      "creates": 236695
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1223789,
+      "name": "Icebane Gauntlets",
+      "creates": 236697
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1223791,
+      "name": "Icebane Bracers",
+      "creates": 236696
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224631,
+      "name": "Scarlet Soldier's Helmet",
+      "creates": 238288
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224632,
+      "name": "Scarlet Soldier's Spaulders",
+      "creates": 238289
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224633,
+      "name": "Scarlet Soldier's Chestplate",
+      "creates": 238290
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224635,
+      "name": "Scarlet Soldier's Protectors",
+      "creates": 238291
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224636,
+      "name": "Scarlet Soldier's Grips",
+      "creates": 238292
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224637,
+      "name": "Scarlet Soldier's Waistguard",
+      "creates": 238293
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224638,
+      "name": "Scarlet Soldier's Legplates",
+      "creates": 238294
+    },
+    {
+      "profession": "blacksmithing",
+      "id": 1224639,
+      "name": "Scarlet Soldier's Stompers",
+      "creates": 238295
+    },
+    {
+      "profession": "cooking",
+      "id": 470359,
+      "name": "Darkclaw Bisque",
+      "creates": 232436
+    },
+    {
+      "profession": "cooking",
+      "id": 470370,
+      "name": "Smoked Redgill",
+      "creates": 232438
+    },
+    {
+      "profession": "cooking",
+      "id": 1225758,
+      "name": "Prowler Steak",
+      "creates": 238637
+    },
+    {
+      "profession": "cooking",
+      "id": 1225759,
+      "name": "Filet o' Flank",
+      "creates": 238638
+    },
+    {
+      "profession": "cooking",
+      "id": 1225760,
+      "name": "Sunrise Omelette",
+      "creates": 238639
+    },
+    {
+      "profession": "cooking",
+      "id": 1225762,
+      "name": "Specklefin Feast",
+      "creates": 238641
+    },
+    {
+      "profession": "cooking",
+      "id": 1225763,
+      "name": "Grand Lobster Banquet",
+      "creates": 238642
+    },
+    {
+      "profession": "enchanting",
+      "id": 430409,
+      "name": "Blackfathom Mana Oil",
+      "creates": 211848
+    },
+    {
+      "profession": "enchanting",
+      "id": 435481,
+      "name": "Enchant Weapon - Dismantle",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 435903,
+      "name": "Enchant Chest - Retricutioner",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 439134,
+      "name": "Greater Mystic Wand",
+      "creates": 217287
+    },
+    {
+      "profession": "enchanting",
+      "id": 439156,
+      "name": "Sigil of Innovation",
+      "creates": 217308
+    },
+    {
+      "profession": "enchanting",
+      "id": 446243,
+      "name": "Sigil of Living Dreams",
+      "creates": 221028
+    },
+    {
+      "profession": "enchanting",
+      "id": 448624,
+      "name": "Scroll of Spatial Mending",
+      "creates": 220792
+    },
+    {
+      "profession": "enchanting",
+      "id": 463866,
+      "name": "Sigil of Flowing Waters",
+      "creates": 228978
+    },
+    {
+      "profession": "enchanting",
+      "id": 463869,
+      "name": "Conductive Shield Coating",
+      "creates": 228980
+    },
+    {
+      "profession": "enchanting",
+      "id": 463871,
+      "name": "Enchant Shield - Law of Nature",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 471400,
+      "name": "Magnificent Trollshine",
+      "creates": 232611
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213593,
+      "name": "Speedstone",
+      "creates": 233990
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213595,
+      "name": "Tear of the Dreamer",
+      "creates": 233991
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213598,
+      "name": "Lodestone of Retaliation",
+      "creates": 233992
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213600,
+      "name": "Enchanted Stopwatch",
+      "creates": 233993
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213603,
+      "name": "Ruby-Encrusted Broach",
+      "creates": 233994
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213607,
+      "name": "Scroll: Wrath of the Swarm",
+      "creates": 233995
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213610,
+      "name": "Enchanted Repellent",
+      "creates": 233996
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213616,
+      "name": "Enchant Chest - Living Stats",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213622,
+      "name": "Enchant Gloves - Holy Power",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213626,
+      "name": "Enchant Gloves - Arcane Power",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213628,
+      "name": "Enchanted Prayer Tome",
+      "creates": 234000
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213633,
+      "name": "Enchanted Totem",
+      "creates": 234001
+    },
+    {
+      "profession": "enchanting",
+      "id": 1213635,
+      "name": "Enchanted Mushroom",
+      "creates": 234002
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216005,
+      "name": "Libram of Righteousness",
+      "creates": 234477
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216007,
+      "name": "Libram of the Exorcist",
+      "creates": 234475
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216010,
+      "name": "Libram of Sanctity",
+      "creates": 234476
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216014,
+      "name": "Totem of Pyroclastic Thunder",
+      "creates": 234480
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216016,
+      "name": "Totem of Thunderous Strikes",
+      "creates": 234478
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216018,
+      "name": "Totem of Flowing Magma",
+      "creates": 234479
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216020,
+      "name": "Idol of Sidereal Wrath",
+      "creates": 234474
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216022,
+      "name": "Idol of Feline Ferocity",
+      "creates": 234469
+    },
+    {
+      "profession": "enchanting",
+      "id": 1216024,
+      "name": "Idol of Ursin Power",
+      "creates": 234468
+    },
+    {
+      "profession": "enchanting",
+      "id": 1217189,
+      "name": "Enchant Bracer - Spell Power",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1217203,
+      "name": "Enchant Bracer - Agility",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219577,
+      "name": "Enchant Off-Hand - Superior Intellect",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219578,
+      "name": "Enchant Off-Hand - Excellent Spirit",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219579,
+      "name": "Enchant Off-Hand - Wisdom",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219580,
+      "name": "Enchant 2H Weapon - Spellblasting",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219581,
+      "name": "Enchant Shield - Excellent Stamina",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1219587,
+      "name": "Enchant Cloak - Agility",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1220623,
+      "name": "Enchant Shield - Critical Strike",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1220624,
+      "name": "Enchant Bracer - Greater Spellpower",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1231128,
+      "name": "Enchant Weapon - Grand Crusader",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1231139,
+      "name": "Enchant 2H Weapon - Grand Arcanist",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1231164,
+      "name": "Enchant Weapon - Grand Sorceror",
+      "creates": null
+    },
+    {
+      "profession": "enchanting",
+      "id": 1232172,
+      "name": "Enchant 2H Weapon - Grand Inquisitor",
+      "creates": null
+    },
+    {
+      "profession": "engineering",
+      "id": 424641,
+      "name": "Shredder Autosalvage Unit",
+      "creates": 210147
+    },
+    {
+      "profession": "engineering",
+      "id": 431362,
+      "name": "Soul Vessel",
+      "creates": 211427
+    },
+    {
+      "profession": "engineering",
+      "id": 435956,
+      "name": "Polished Truesilver Gears",
+      "creates": 213383
+    },
+    {
+      "profession": "engineering",
+      "id": 435958,
+      "name": "Whirling Truesilver Gearwall",
+      "creates": 213390
+    },
+    {
+      "profession": "engineering",
+      "id": 435960,
+      "name": "Hyperconductive Goldwap",
+      "creates": 215115
+    },
+    {
+      "profession": "engineering",
+      "id": 435964,
+      "name": "High-Yield Radiation Bomb",
+      "creates": 215127
+    },
+    {
+      "profession": "engineering",
+      "id": 435966,
+      "name": "Ez-Thro Radiation Bomb",
+      "creates": 215168
+    },
+    {
+      "profession": "engineering",
+      "id": 446236,
+      "name": "Void-Powered Invoker's Vambraces",
+      "creates": 221025
+    },
+    {
+      "profession": "engineering",
+      "id": 446237,
+      "name": "Void-Powered Slayer's Vambraces",
+      "creates": 221026
+    },
+    {
+      "profession": "engineering",
+      "id": 446238,
+      "name": "Void-Powered Protector's Vambraces",
+      "creates": 221027
+    },
+    {
+      "profession": "engineering",
+      "id": 461710,
+      "name": "Fiery Core Sharpshooter Rifle",
+      "creates": 227849
+    },
+    {
+      "profession": "engineering",
+      "id": 1213573,
+      "name": "Arcane Megabomb",
+      "creates": 233984
+    },
+    {
+      "profession": "engineering",
+      "id": 1213576,
+      "name": "The Fumigator",
+      "creates": 233985
+    },
+    {
+      "profession": "engineering",
+      "id": 1213578,
+      "name": "Obsidian Bomb",
+      "creates": 233986
+    },
+    {
+      "profession": "engineering",
+      "id": 1213586,
+      "name": "G00 DV-1B3 Generator",
+      "creates": 233987
+    },
+    {
+      "profession": "engineering",
+      "id": 1213588,
+      "name": "Tuned Force Reactive Disk",
+      "creates": 233988
+    },
+    {
+      "profession": "engineering",
+      "id": 1213646,
+      "name": "Obsidian Blasting Powder",
+      "creates": 234005
+    },
+    {
+      "profession": "engineering",
+      "id": 1214145,
+      "name": "Obsidian Shotgun",
+      "creates": 234434
+    },
+    {
+      "profession": "engineering",
+      "id": 1217207,
+      "name": "Obsidian Scope",
+      "creates": 235529
+    },
+    {
+      "profession": "engineering",
+      "id": 1221012,
+      "name": "Creepy Censor Sensors",
+      "creates": 236871
+    },
+    {
+      "profession": "engineering",
+      "id": 1226206,
+      "name": "Tinkerbox",
+      "creates": 238737
+    },
+    {
+      "profession": "engineering",
+      "id": 1226207,
+      "name": "Tinkerbox: Teleport",
+      "creates": 238734
+    },
+    {
+      "profession": "engineering",
+      "id": 1226208,
+      "name": "Tinkerbox: Nitro Boosts",
+      "creates": 238735
+    },
+    {
+      "profession": "engineering",
+      "id": 1226209,
+      "name": "Tinkerbox: Magnetic Displacement",
+      "creates": 238736
+    },
+    {
+      "profession": "engineering",
+      "id": 1226210,
+      "name": "Tinker: Teleport",
+      "creates": null
+    },
+    {
+      "profession": "engineering",
+      "id": 1226211,
+      "name": "Tinker: Nitro Boosts",
+      "creates": null
+    },
+    {
+      "profession": "engineering",
+      "id": 1226212,
+      "name": "Tinker: Magnetic Displacement",
+      "creates": null
+    },
+    {
+      "profession": "engineering",
+      "id": 1226213,
+      "name": "Semisafe Transporter: New Avalon",
+      "creates": 238781
+    },
+    {
+      "profession": "engineering",
+      "id": 1228088,
+      "name": "Pop-Up Shrub",
+      "creates": 237023
+    },
+    {
+      "profession": "leatherworking",
+      "id": 429354,
+      "name": "Void-Touched Leather Gloves",
+      "creates": 211423
+    },
+    {
+      "profession": "leatherworking",
+      "id": 429869,
+      "name": "Void-Touched Leather Gauntlets",
+      "creates": 211502
+    },
+    {
+      "profession": "leatherworking",
+      "id": 435819,
+      "name": "Faintly Glowing Leather",
+      "creates": 213369
+    },
+    {
+      "profession": "leatherworking",
+      "id": 435904,
+      "name": "Glowing Gneuro-Linked Cowl",
+      "creates": 215166
+    },
+    {
+      "profession": "leatherworking",
+      "id": 435949,
+      "name": "Glowing Hyperconductive Scale Coif",
+      "creates": 215114
+    },
+    {
+      "profession": "leatherworking",
+      "id": 435951,
+      "name": "Gneuro-Conductive Channeler's Hood",
+      "creates": 215381
+    },
+    {
+      "profession": "leatherworking",
+      "id": 435953,
+      "name": "Rad-Resistant Scale Hood",
+      "creates": 215382
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439105,
+      "name": "Big Voodoo Mask",
+      "creates": 217259
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439108,
+      "name": "Big Voodoo Robe",
+      "creates": 217261
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439110,
+      "name": "Guardian Leather Bracers",
+      "creates": 217263
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439112,
+      "name": "Guardian Belt",
+      "creates": 217265
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439114,
+      "name": "Guardian Pants",
+      "creates": 217267
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439116,
+      "name": "Turtle Scale Breastplate",
+      "creates": 217268
+    },
+    {
+      "profession": "leatherworking",
+      "id": 439118,
+      "name": "Turtle Scale Gloves",
+      "creates": 217270
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446183,
+      "name": "Paranoia Mantle",
+      "creates": 220747
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446185,
+      "name": "Shrieking Spaulders",
+      "creates": 220742
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446186,
+      "name": "Cacophonous Chain Shoulderguards",
+      "creates": 220743
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446189,
+      "name": "Shoulderpads of Obsession",
+      "creates": 220748
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446190,
+      "name": "Wailing Chain Mantle",
+      "creates": 220744
+    },
+    {
+      "profession": "leatherworking",
+      "id": 446192,
+      "name": "Membrane of Dark Neurosis",
+      "creates": 220745
+    },
+    {
+      "profession": "leatherworking",
+      "id": 451706,
+      "name": "Screaming Chain Pauldrons",
+      "creates": 220741
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461645,
+      "name": "Honed Blue Dragonscale Shoulders",
+      "creates": 227873
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461649,
+      "name": "Living Green Dragonscale Leggings",
+      "creates": 227877
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461653,
+      "name": "Brilliant Chromatic Cloak",
+      "creates": 227869
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461655,
+      "name": "Hardened Black Dragonscale Breastplate",
+      "creates": 227851
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461657,
+      "name": "Hardened Black Dragonscale Leggings",
+      "creates": 227852
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461659,
+      "name": "Hardened Black Dragonscale Shoulders",
+      "creates": 227853
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461661,
+      "name": "Masterwork Volcanic Breastplate",
+      "creates": 227868
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461663,
+      "name": "Masterwork Volcanic Shoulders",
+      "creates": 227866
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461665,
+      "name": "Masterwork Volcanic Leggings",
+      "creates": 227867
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461673,
+      "name": "Honed Blue Dragonscale Breastplate",
+      "creates": 227875
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461677,
+      "name": "Living Green Dragonscale Gauntlets",
+      "creates": 227878
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461690,
+      "name": "Mastercrafted Shifting Cloak",
+      "creates": 227854
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461692,
+      "name": "Synthetic Gordok Ogre Suit",
+      "creates": 227855
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461706,
+      "name": "Swift Flight Vambraces",
+      "creates": 227883
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461720,
+      "name": "Living Green Dragonscale Breastplate",
+      "creates": 227879
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461722,
+      "name": "Devilcore Gauntlets",
+      "creates": 227848
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461724,
+      "name": "Devilcore Leggings",
+      "creates": 227847
+    },
+    {
+      "profession": "leatherworking",
+      "id": 461754,
+      "name": "Girdle of Arcane Insight",
+      "creates": 227882
+    },
+    {
+      "profession": "leatherworking",
+      "id": 462227,
+      "name": "Honed Blue Dragonscale Leggings",
+      "creates": 227874
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213513,
+      "name": "Glowing Chitin Armor Kit",
+      "creates": 233802
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213519,
+      "name": "Sharpened Chitin Armor Kit",
+      "creates": 233803
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213521,
+      "name": "Razorbramble Cowl",
+      "creates": 233808
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213523,
+      "name": "Razorbramble Shoulderpads",
+      "creates": 233804
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213525,
+      "name": "Razorbramble Leathers",
+      "creates": 233813
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213717,
+      "name": "Sandstalker Bracers",
+      "creates": 234294
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213720,
+      "name": "Sandstalker Gauntlets",
+      "creates": 234296
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213723,
+      "name": "Sandstalker Breastplate",
+      "creates": 234298
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213726,
+      "name": "Spitfire Bracers",
+      "creates": 234300
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213728,
+      "name": "Spitfire Gauntlets",
+      "creates": 234302
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213731,
+      "name": "Spitfire Breastplate",
+      "creates": 234304
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213734,
+      "name": "Bramblewood Belt",
+      "creates": 234306
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213736,
+      "name": "Bramblewood Boots",
+      "creates": 234308
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213738,
+      "name": "Bramblewood Helm",
+      "creates": 234310
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1213751,
+      "name": "Dreamscale Breastplate",
+      "creates": 234324
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1214303,
+      "name": "Dreamscale Kilt",
+      "creates": 234482
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223774,
+      "name": "Icy Scale Breastplate",
+      "creates": 236699
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223776,
+      "name": "Icy Scale Gauntlets",
+      "creates": 236700
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223778,
+      "name": "Icy Scale Bracers",
+      "creates": 236698
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223780,
+      "name": "Polar Tunic",
+      "creates": 236702
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223782,
+      "name": "Polar Gloves",
+      "creates": 236703
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1223784,
+      "name": "Polar Bracers",
+      "creates": 236701
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224615,
+      "name": "Scarlet Infiltrator's Bandana",
+      "creates": 238272
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224616,
+      "name": "Scarlet Infiltrator's Shoulderpads",
+      "creates": 238273
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224617,
+      "name": "Scarlet Infiltrator's Vest",
+      "creates": 238274
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224618,
+      "name": "Scarlet Infiltrator's Bracers",
+      "creates": 238275
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224619,
+      "name": "Scarlet Infiltrator's Gloves",
+      "creates": 238276
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224620,
+      "name": "Scarlet Infiltrator's Belt",
+      "creates": 238277
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224621,
+      "name": "Scarlet Infiltrator's Trousers",
+      "creates": 238278
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224622,
+      "name": "Scarlet Infiltrator's Shoes",
+      "creates": 238279
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224623,
+      "name": "Scarlet Huntsman's Coif",
+      "creates": 238280
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224624,
+      "name": "Scarlet Huntsman's Pauldrons",
+      "creates": 238281
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224625,
+      "name": "Scarlet Huntsman's Chain",
+      "creates": 238282
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224626,
+      "name": "Scarlet Huntsman's Wristguards",
+      "creates": 238283
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224627,
+      "name": "Scarlet Huntsman's Handguards",
+      "creates": 238284
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224628,
+      "name": "Scarlet Huntsman's Clasp",
+      "creates": 238285
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224629,
+      "name": "Scarlet Huntsman's Legguards",
+      "creates": 238286
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1224630,
+      "name": "Scarlet Huntsman's Boots",
+      "creates": 238287
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1226689,
+      "name": "Scarlet Quiver",
+      "creates": 238925
+    },
+    {
+      "profession": "leatherworking",
+      "id": 1226690,
+      "name": "Scarlet Ammo Pouch",
+      "creates": 238926
+    },
+    {
+      "profession": "tailoring",
+      "id": 428424,
+      "name": "Phoenix Bindings",
+      "creates": 210781
+    },
+    {
+      "profession": "tailoring",
+      "id": 429351,
+      "name": "Extraplanar Spidersilk Boots",
+      "creates": 210795
+    },
+    {
+      "profession": "tailoring",
+      "id": 435610,
+      "name": "Gneuro-Linked Arcano-Filament Monocle",
+      "creates": 215111
+    },
+    {
+      "profession": "tailoring",
+      "id": 435827,
+      "name": "Hyperconductive Arcano-Filament",
+      "creates": 213379
+    },
+    {
+      "profession": "tailoring",
+      "id": 435841,
+      "name": "Invoker's Cord",
+      "creates": 215366
+    },
+    {
+      "profession": "tailoring",
+      "id": 435848,
+      "name": "Invoker's Mantle",
+      "creates": 215365
+    },
+    {
+      "profession": "tailoring",
+      "id": 439085,
+      "name": "Crimson Silk Robe",
+      "creates": 217245
+    },
+    {
+      "profession": "tailoring",
+      "id": 439086,
+      "name": "Black Mageweave Vest",
+      "creates": 217246
+    },
+    {
+      "profession": "tailoring",
+      "id": 439088,
+      "name": "Black Mageweave Leggings",
+      "creates": 217247
+    },
+    {
+      "profession": "tailoring",
+      "id": 439091,
+      "name": "Earthen Silk Belt",
+      "creates": 217248
+    },
+    {
+      "profession": "tailoring",
+      "id": 439093,
+      "name": "Crimson Silk Shoulders",
+      "creates": 217250
+    },
+    {
+      "profession": "tailoring",
+      "id": 439094,
+      "name": "Long Silken Cloak",
+      "creates": 217252
+    },
+    {
+      "profession": "tailoring",
+      "id": 439097,
+      "name": "Boots of the Enchanter",
+      "creates": 217253
+    },
+    {
+      "profession": "tailoring",
+      "id": 439098,
+      "name": "Crimson Silk Belt",
+      "creates": 217255
+    },
+    {
+      "profession": "tailoring",
+      "id": 439100,
+      "name": "Earthen Vest",
+      "creates": 217256
+    },
+    {
+      "profession": "tailoring",
+      "id": 439102,
+      "name": "Enchanter's Cowl",
+      "creates": 217257
+    },
+    {
+      "profession": "tailoring",
+      "id": 446193,
+      "name": "Fractured Mind Pauldrons",
+      "creates": 220750
+    },
+    {
+      "profession": "tailoring",
+      "id": 446194,
+      "name": "Mantle of Insanity",
+      "creates": 220749
+    },
+    {
+      "profession": "tailoring",
+      "id": 446195,
+      "name": "Shoulderpads of the Deranged",
+      "creates": 220751
+    },
+    {
+      "profession": "tailoring",
+      "id": 461692,
+      "name": "Synthetic Gordok Ogre Suit",
+      "creates": 227855
+    },
+    {
+      "profession": "tailoring",
+      "id": 461708,
+      "name": "Incandescent Mooncloth Robe",
+      "creates": 227861
+    },
+    {
+      "profession": "tailoring",
+      "id": 461727,
+      "name": "Leather-Reinforced Runecloth Bag",
+      "creates": 227844
+    },
+    {
+      "profession": "tailoring",
+      "id": 461747,
+      "name": "Incandescent Mooncloth Vest",
+      "creates": 227860
+    },
+    {
+      "profession": "tailoring",
+      "id": 461750,
+      "name": "Incandescent Mooncloth Circlet",
+      "creates": 227863
+    },
+    {
+      "profession": "tailoring",
+      "id": 461752,
+      "name": "Incandescent Mooncloth Leggings",
+      "creates": 227864
+    },
+    {
+      "profession": "tailoring",
+      "id": 462282,
+      "name": "Embroidered Belt of the Archmage",
+      "creates": 228476
+    },
+    {
+      "profession": "tailoring",
+      "id": 463972,
+      "name": "Bottomless Bag",
+      "creates": 228994
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213527,
+      "name": "Vampiric Cowl",
+      "creates": 233826
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213530,
+      "name": "Vampiric Shawl",
+      "creates": 233833
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213532,
+      "name": "Vampiric Robe",
+      "creates": 233837
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213534,
+      "name": "Qiraji Silk Scarf",
+      "creates": 233956
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213536,
+      "name": "Qiraji Silk Cape",
+      "creates": 233958
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213538,
+      "name": "Qiraji Silk Cloak",
+      "creates": 233959
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213540,
+      "name": "Qiraji Silk Drape",
+      "creates": 233960
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213740,
+      "name": "Sylvan Shoulders",
+      "creates": 234312
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213742,
+      "name": "Sylvan Crown",
+      "creates": 234315
+    },
+    {
+      "profession": "tailoring",
+      "id": 1213744,
+      "name": "Sylvan Vest",
+      "creates": 234317
+    },
+    {
+      "profession": "tailoring",
+      "id": 1214173,
+      "name": "Bolt of Qiraji Silk",
+      "creates": 234009
+    },
+    {
+      "profession": "tailoring",
+      "id": 1214306,
+      "name": "Dreamscale Bracers",
+      "creates": 234484
+    },
+    {
+      "profession": "tailoring",
+      "id": 1214307,
+      "name": "Dreamscale Mitts",
+      "creates": 234485
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223760,
+      "name": "Glacial Vest",
+      "creates": 236694
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223762,
+      "name": "Glacial Cloak",
+      "creates": 236690
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223764,
+      "name": "Glacial Gloves",
+      "creates": 236692
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223766,
+      "name": "Glacial Wrists",
+      "creates": 236693
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223768,
+      "name": "Frosty Vest",
+      "creates": 236706
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223770,
+      "name": "Frosty Gloves",
+      "creates": 236705
+    },
+    {
+      "profession": "tailoring",
+      "id": 1223772,
+      "name": "Frosty Wrists",
+      "creates": 236704
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224607,
+      "name": "Scarlet Augur's Hood",
+      "creates": 238264
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224608,
+      "name": "Scarlet Augur's Mantle",
+      "creates": 238265
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224609,
+      "name": "Scarlet Augur's Vestaments",
+      "creates": 238266
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224610,
+      "name": "Scarlet Augur's Cuffs",
+      "creates": 238267
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224611,
+      "name": "Scarlet Augur's Mitts",
+      "creates": 238268
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224612,
+      "name": "Scarlet Augur's Strap",
+      "creates": 238269
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224613,
+      "name": "Scarlet Augur's Leggings",
+      "creates": 238270
+    },
+    {
+      "profession": "tailoring",
+      "id": 1224614,
+      "name": "Scarlet Augur's Soles",
+      "creates": 238271
+    },
+    {
+      "profession": "tailoring",
+      "id": 1227723,
+      "name": "Crusader's Knapsack",
+      "creates": 239147
+    },
+    {
+      "profession": "tailoring",
+      "id": 1227724,
+      "name": "Crimson Dawnwoven Bag",
+      "creates": 239148
+    }
+  ],
+  "sodRecipesNotInForever": [
+    {
+      "profession": "enchanting",
+      "id": 1219586,
+      "name": "Enchant Gloves - Superior Strength",
+      "creates": null
+    }
+  ],
+  "sodItemsInForever": [
+    {
+      "id": 12735,
+      "name": "Frayed Abomination Stitching",
+      "inForever": true
+    },
+    {
+      "id": 13180,
+      "name": "Stratholme Holy Water",
+      "inForever": true
+    },
+    {
+      "id": 16583,
+      "name": "Demonic Figurine",
+      "inForever": true
+    },
+    {
+      "id": 20867,
+      "name": "Onyx Idol",
+      "inForever": true
+    },
+    {
+      "id": 20868,
+      "name": "Lambent Idol",
+      "inForever": true
+    },
+    {
+      "id": 20870,
+      "name": "Jasper Idol",
+      "inForever": true
+    },
+    {
+      "id": 20871,
+      "name": "Obsidian Idol",
+      "inForever": true
+    },
+    {
+      "id": 20872,
+      "name": "Vermillion Idol",
+      "inForever": true
+    },
+    {
+      "id": 20873,
+      "name": "Alabaster Idol",
+      "inForever": true
+    },
+    {
+      "id": 20874,
+      "name": "Idol of the Sun",
+      "inForever": true
+    },
+    {
+      "id": 20875,
+      "name": "Idol of Night",
+      "inForever": true
+    },
+    {
+      "id": 20876,
+      "name": "Idol of Death",
+      "inForever": true
+    },
+    {
+      "id": 20877,
+      "name": "Idol of the Sage",
+      "inForever": true
+    },
+    {
+      "id": 20878,
+      "name": "Idol of Rebirth",
+      "inForever": true
+    },
+    {
+      "id": 20879,
+      "name": "Idol of Life",
+      "inForever": true
+    },
+    {
+      "id": 20881,
+      "name": "Idol of Strife",
+      "inForever": true
+    },
+    {
+      "id": 20882,
+      "name": "Idol of War",
+      "inForever": true
+    },
+    {
+      "id": 210147,
+      "name": "Shredder Autosalvage Unit",
+      "inForever": true
+    },
+    {
+      "id": 210708,
+      "name": "Elixir of Coalesced Regret",
+      "inForever": true
+    },
+    {
+      "id": 210781,
+      "name": "Phoenix Bindings",
+      "inForever": true
+    },
+    {
+      "id": 211422,
+      "name": "Shard of the Void",
+      "inForever": true
+    },
+    {
+      "id": 211427,
+      "name": "Soul Vessel",
+      "inForever": true
+    },
+    {
+      "id": 211845,
+      "name": "Blackfathom Sharpening Stone",
+      "inForever": true
+    },
+    {
+      "id": 213369,
+      "name": "Faintly Glowing Leather",
+      "inForever": true
+    },
+    {
+      "id": 213370,
+      "name": "Irradiated Leather Scraps",
+      "inForever": true
+    },
+    {
+      "id": 213371,
+      "name": "Crate of Tainted Gniodine Solution",
+      "inForever": true
+    },
+    {
+      "id": 213372,
+      "name": "Insulating Gniodine",
+      "inForever": true
+    },
+    {
+      "id": 213373,
+      "name": "Reflective Scrapmetal",
+      "inForever": true
+    },
+    {
+      "id": 213376,
+      "name": "Low-Background Truesilver Plates",
+      "inForever": true
+    },
+    {
+      "id": 213378,
+      "name": "Unstable Microfilament",
+      "inForever": true
+    },
+    {
+      "id": 213379,
+      "name": "Hyperconductive Arcano-Filament",
+      "inForever": true
+    },
+    {
+      "id": 213381,
+      "name": "Pile of Tarnished Gears",
+      "inForever": true
+    },
+    {
+      "id": 213383,
+      "name": "Polished Truesilver Gears",
+      "inForever": true
+    },
+    {
+      "id": 215127,
+      "name": "High-Yield Radiation Bomb",
+      "inForever": true
+    },
+    {
+      "id": 215168,
+      "name": "Ez-Thro Radiation Bomb",
+      "inForever": true
+    },
+    {
+      "id": 215365,
+      "name": "Invoker's Mantle",
+      "inForever": true
+    },
+    {
+      "id": 215366,
+      "name": "Invoker's Cord",
+      "inForever": true
+    },
+    {
+      "id": 215430,
+      "name": "Gnomeregan Fallout",
+      "inForever": true
+    },
+    {
+      "id": 217270,
+      "name": "Turtle Scale Gloves",
+      "inForever": true
+    },
+    {
+      "id": 217273,
+      "name": "Golden Scale Gauntlets",
+      "inForever": true
+    },
+    {
+      "id": 217287,
+      "name": "Greater Mystic Wand",
+      "inForever": true
+    },
+    {
+      "id": 217308,
+      "name": "Enchanted Sigil: Innovation",
+      "inForever": true
+    },
+    {
+      "id": 217398,
+      "name": "Lesser Arcane Elixir",
+      "inForever": true
+    },
+    {
+      "id": 220688,
+      "name": "Inert Mantle of Nightmares",
+      "inForever": true
+    },
+    {
+      "id": 220689,
+      "name": "Void-Powered Vambraces",
+      "inForever": true
+    },
+    {
+      "id": 220792,
+      "name": "Scroll of Spatial Mending",
+      "inForever": true
+    },
+    {
+      "id": 221021,
+      "name": "Nightmare Seed",
+      "inForever": true
+    },
+    {
+      "id": 221312,
+      "name": "Flask of Atal'ai Mojo",
+      "inForever": true
+    },
+    {
+      "id": 227813,
+      "name": "Drinkable Stratholme Holy Water",
+      "inForever": true
+    },
+    {
+      "id": 227844,
+      "name": "Leather-Reinforced Runecloth Bag",
+      "inForever": true
+    },
+    {
+      "id": 228978,
+      "name": "Enchanted Sigil: Flowing Waters",
+      "inForever": true
+    },
+    {
+      "id": 228980,
+      "name": "Conductive Shield Coating",
+      "inForever": true
+    },
+    {
+      "id": 232436,
+      "name": "Darkclaw Bisque",
+      "inForever": true
+    },
+    {
+      "id": 232438,
+      "name": "Smoked Redgill",
+      "inForever": true
+    },
+    {
+      "id": 232611,
+      "name": "Magnificent Trollshine",
+      "inForever": true
+    },
+    {
+      "id": 234003,
+      "name": "Obsidian-Infused Thorium Bar",
+      "inForever": true
+    },
+    {
+      "id": 234004,
+      "name": "Obsidian Grinding Stone",
+      "inForever": true
+    },
+    {
+      "id": 234005,
+      "name": "Obsidian Blasting Powder",
+      "inForever": true
+    },
+    {
+      "id": 234006,
+      "name": "Monstrous Silithid Chitin",
+      "inForever": true
+    },
+    {
+      "id": 234007,
+      "name": "Spiked Silithid Chitin",
+      "inForever": true
+    },
+    {
+      "id": 234008,
+      "name": "Qiraji Silk",
+      "inForever": true
+    },
+    {
+      "id": 234009,
+      "name": "Bolt of Qiraji Silk",
+      "inForever": true
+    },
+    {
+      "id": 234010,
+      "name": "Ancient Sandworm Bile",
+      "inForever": true
+    },
+    {
+      "id": 234011,
+      "name": "Qiraji Stalker Venom",
+      "inForever": true
+    },
+    {
+      "id": 234012,
+      "name": "Hive Thistle",
+      "inForever": true
+    },
+    {
+      "id": 236656,
+      "name": "Frozen Rune",
+      "inForever": true
+    },
+    {
+      "id": 237023,
+      "name": "Pop-Up Shrub",
+      "inForever": true
+    },
+    {
+      "id": 238637,
+      "name": "Prowler Steak",
+      "inForever": true
+    },
+    {
+      "id": 238638,
+      "name": "Filet o' Flank",
+      "inForever": true
+    },
+    {
+      "id": 238639,
+      "name": "Sunrise Omelette",
+      "inForever": true
+    },
+    {
+      "id": 238641,
+      "name": "Specklefin Feast",
+      "inForever": true
+    },
+    {
+      "id": 238642,
+      "name": "Grand Lobster Banquet",
+      "inForever": true
+    },
+    {
+      "id": 238734,
+      "name": "Tinkerbox: Teleport",
+      "inForever": true
+    },
+    {
+      "id": 238735,
+      "name": "Tinkerbox: Nitro Boosts",
+      "inForever": true
+    },
+    {
+      "id": 238736,
+      "name": "Tinkerbox: Magnetic Displacement",
+      "inForever": true
+    },
+    {
+      "id": 238737,
+      "name": "Tinkerbox",
+      "inForever": true
+    },
+    {
+      "id": 239016,
+      "name": "Holy Salts",
+      "inForever": true
+    },
+    {
+      "id": 239017,
+      "name": "Exquisite Spices",
+      "inForever": true
+    },
+    {
+      "id": 239147,
+      "name": "Crusader's Knapsack",
+      "inForever": true
+    },
+    {
+      "id": 239148,
+      "name": "Crimson Dawnwoven Bag",
+      "inForever": true
+    },
+    {
+      "id": 241650,
+      "name": "Major Discolored Healing Potion",
+      "inForever": true
+    }
+  ],
+  "sodItemsNotInForever": [
+    {
+      "id": 210773,
+      "name": "Mantle of the Second War",
+      "inForever": false
+    },
+    {
+      "id": 210794,
+      "name": "Shifting Silver Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 210795,
+      "name": "Extraplanar Spidersilk Boots",
+      "inForever": false
+    },
+    {
+      "id": 211423,
+      "name": "Void-Touched Leather Gloves",
+      "inForever": false
+    },
+    {
+      "id": 211502,
+      "name": "Void-Touched Leather Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 211848,
+      "name": "Blackfathom Mana Oil",
+      "inForever": false
+    },
+    {
+      "id": 213390,
+      "name": "Whirling Truesilver Gearwall",
+      "inForever": false
+    },
+    {
+      "id": 215111,
+      "name": "Gneuro-Linked Arcano-Filament Monocle",
+      "inForever": false
+    },
+    {
+      "id": 215114,
+      "name": "Glowing Hyperconductive Scale Coif",
+      "inForever": false
+    },
+    {
+      "id": 215115,
+      "name": "Hyperconductive Goldwrap",
+      "inForever": false
+    },
+    {
+      "id": 215161,
+      "name": "Tempered Interference-Negating Helmet",
+      "inForever": false
+    },
+    {
+      "id": 215162,
+      "name": "Mildly Irradiated Rejuvenation Potion",
+      "inForever": false
+    },
+    {
+      "id": 215166,
+      "name": "Glowing Gneuro-Linked Cowl",
+      "inForever": false
+    },
+    {
+      "id": 215167,
+      "name": "Reflective Truesilver Braincage",
+      "inForever": false
+    },
+    {
+      "id": 215381,
+      "name": "Gneuro-Conductive Channeler's Hood",
+      "inForever": false
+    },
+    {
+      "id": 215382,
+      "name": "Rad-Resistant Scale Hood",
+      "inForever": false
+    },
+    {
+      "id": 217245,
+      "name": "Crimson Silk Robe",
+      "inForever": false
+    },
+    {
+      "id": 217246,
+      "name": "Black Mageweave Vest",
+      "inForever": false
+    },
+    {
+      "id": 217247,
+      "name": "Black Mageweave Leggings",
+      "inForever": false
+    },
+    {
+      "id": 217248,
+      "name": "Earthen Silk Belt",
+      "inForever": false
+    },
+    {
+      "id": 217250,
+      "name": "Crimson Silk Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 217252,
+      "name": "Long Silken Cloak",
+      "inForever": false
+    },
+    {
+      "id": 217253,
+      "name": "Boots of the Enchanter",
+      "inForever": false
+    },
+    {
+      "id": 217255,
+      "name": "Crimson Silk Belt",
+      "inForever": false
+    },
+    {
+      "id": 217256,
+      "name": "Earthen Vest",
+      "inForever": false
+    },
+    {
+      "id": 217257,
+      "name": "Enchanter's Cowl",
+      "inForever": false
+    },
+    {
+      "id": 217259,
+      "name": "Big Voodoo Mask",
+      "inForever": false
+    },
+    {
+      "id": 217261,
+      "name": "Big Voodoo Robe",
+      "inForever": false
+    },
+    {
+      "id": 217263,
+      "name": "Guardian Leather Bracers",
+      "inForever": false
+    },
+    {
+      "id": 217265,
+      "name": "Guardian Belt",
+      "inForever": false
+    },
+    {
+      "id": 217267,
+      "name": "Guardian Pants",
+      "inForever": false
+    },
+    {
+      "id": 217268,
+      "name": "Turtle Scale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 217275,
+      "name": "Golden Scale Boots",
+      "inForever": false
+    },
+    {
+      "id": 217277,
+      "name": "Golden Scale Cuirass",
+      "inForever": false
+    },
+    {
+      "id": 217279,
+      "name": "Golden Scale Coif",
+      "inForever": false
+    },
+    {
+      "id": 217281,
+      "name": "Moonsteel Broadsword",
+      "inForever": false
+    },
+    {
+      "id": 217283,
+      "name": "Golden Scale Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 217285,
+      "name": "Golden Scale Leggings",
+      "inForever": false
+    },
+    {
+      "id": 220738,
+      "name": "Shoulderplates of Dread",
+      "inForever": false
+    },
+    {
+      "id": 220739,
+      "name": "Baleful Pauldrons",
+      "inForever": false
+    },
+    {
+      "id": 220740,
+      "name": "Fearmonger's Shoulderguards",
+      "inForever": false
+    },
+    {
+      "id": 220741,
+      "name": "Screaming Chain Pauldrons",
+      "inForever": false
+    },
+    {
+      "id": 220742,
+      "name": "Shrieking Spaulders",
+      "inForever": false
+    },
+    {
+      "id": 220743,
+      "name": "Cacophonous Chain Shoulderguards",
+      "inForever": false
+    },
+    {
+      "id": 220744,
+      "name": "Wailing Chain Mantle",
+      "inForever": false
+    },
+    {
+      "id": 220745,
+      "name": "Membrane of Dark Neurosis",
+      "inForever": false
+    },
+    {
+      "id": 220747,
+      "name": "Paranoia Mantle",
+      "inForever": false
+    },
+    {
+      "id": 220748,
+      "name": "Shoulderpads of Obsession",
+      "inForever": false
+    },
+    {
+      "id": 220749,
+      "name": "Mantle of Insanity",
+      "inForever": false
+    },
+    {
+      "id": 220750,
+      "name": "Fractured Mind Pauldrons",
+      "inForever": false
+    },
+    {
+      "id": 220751,
+      "name": "Shoulderpads of the Deranged",
+      "inForever": false
+    },
+    {
+      "id": 221024,
+      "name": "Flask of Everlasting Nightmares",
+      "inForever": false
+    },
+    {
+      "id": 221025,
+      "name": "Void-Powered Invoker's Vambraces",
+      "inForever": false
+    },
+    {
+      "id": 221026,
+      "name": "Void-Powered Slayer's Vambraces",
+      "inForever": false
+    },
+    {
+      "id": 221027,
+      "name": "Void-Powered Protector's Vambraces",
+      "inForever": false
+    },
+    {
+      "id": 221028,
+      "name": "Enchanted Sigil: Living Dreams",
+      "inForever": false
+    },
+    {
+      "id": 221313,
+      "name": "Flask of Nightmarish Mojo",
+      "inForever": false
+    },
+    {
+      "id": 222952,
+      "name": "Flask of Restless Dreams",
+      "inForever": false
+    },
+    {
+      "id": 227684,
+      "name": "Sulfuron Hammer",
+      "inForever": false
+    },
+    {
+      "id": 227845,
+      "name": "Refined Arcanite Reaper",
+      "inForever": false
+    },
+    {
+      "id": 227847,
+      "name": "Devilcore Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227848,
+      "name": "Devilcore Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 227849,
+      "name": "Fiery Core Sharpshooter Rifle",
+      "inForever": false
+    },
+    {
+      "id": 227850,
+      "name": "Sageblade of the Archmagus",
+      "inForever": false
+    },
+    {
+      "id": 227851,
+      "name": "Hardened Black Dragonscale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 227852,
+      "name": "Hardened Black Dragonscale Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227853,
+      "name": "Hardened Black Dragonscale Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 227854,
+      "name": "Mastercrafted Shifting Cloak",
+      "inForever": false
+    },
+    {
+      "id": 227855,
+      "name": "Synthetic Gordok Ogre Suit",
+      "inForever": false
+    },
+    {
+      "id": 227857,
+      "name": "Desecration",
+      "inForever": false
+    },
+    {
+      "id": 227860,
+      "name": "Incandescent Mooncloth Vest",
+      "inForever": false
+    },
+    {
+      "id": 227861,
+      "name": "Incandescent Mooncloth Robe",
+      "inForever": false
+    },
+    {
+      "id": 227863,
+      "name": "Incandescent Mooncloth Circlet",
+      "inForever": false
+    },
+    {
+      "id": 227864,
+      "name": "Incandescent Mooncloth Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227865,
+      "name": "Fiery Plate Gauntlets of the Hidden Technique",
+      "inForever": false
+    },
+    {
+      "id": 227866,
+      "name": "Masterwork Volcanic Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 227867,
+      "name": "Masterwork Volcanic Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227868,
+      "name": "Masterwork Volcanic Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 227869,
+      "name": "Brilliant Chromatic Cloak",
+      "inForever": false
+    },
+    {
+      "id": 227870,
+      "name": "Tempest Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 227871,
+      "name": "Tempered Dark Iron Plate",
+      "inForever": false
+    },
+    {
+      "id": 227872,
+      "name": "Warcrest of the Great Chief",
+      "inForever": false
+    },
+    {
+      "id": 227873,
+      "name": "Honed Blue Dragonscale Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 227874,
+      "name": "Honed Blue Dragonscale Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227875,
+      "name": "Honed Blue Dragonscale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 227876,
+      "name": "Invincible Mail",
+      "inForever": false
+    },
+    {
+      "id": 227877,
+      "name": "Living Green Dragonscale Leggings",
+      "inForever": false
+    },
+    {
+      "id": 227878,
+      "name": "Living Green Dragonscale Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 227879,
+      "name": "Living Green Dragonscale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 227880,
+      "name": "Finely-Enchanted Battlehammer",
+      "inForever": false
+    },
+    {
+      "id": 227881,
+      "name": "Tranquility",
+      "inForever": false
+    },
+    {
+      "id": 227882,
+      "name": "Girdle of Arcane Insight",
+      "inForever": false
+    },
+    {
+      "id": 227883,
+      "name": "Swift Flight Vambraces",
+      "inForever": false
+    },
+    {
+      "id": 227884,
+      "name": "Deadly Heartseeker",
+      "inForever": false
+    },
+    {
+      "id": 227885,
+      "name": "Stronger-hold Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 227886,
+      "name": "Skyrider's Masterwork Stormhammer",
+      "inForever": false
+    },
+    {
+      "id": 227887,
+      "name": "Hardened Frostguard",
+      "inForever": false
+    },
+    {
+      "id": 228125,
+      "name": "Refined Arcanite Champion",
+      "inForever": false
+    },
+    {
+      "id": 228230,
+      "name": "Refined Hammer of the Titans",
+      "inForever": false
+    },
+    {
+      "id": 228476,
+      "name": "Embroidered Belt of the Archmage",
+      "inForever": false
+    },
+    {
+      "id": 228994,
+      "name": "Bottomless Bag",
+      "inForever": false
+    },
+    {
+      "id": 233490,
+      "name": "Obsidian Champion",
+      "inForever": false
+    },
+    {
+      "id": 233491,
+      "name": "Obsidian Reaver",
+      "inForever": false
+    },
+    {
+      "id": 233492,
+      "name": "Razorspike Battleplate",
+      "inForever": false
+    },
+    {
+      "id": 233793,
+      "name": "Razorspike Shoulderplates",
+      "inForever": false
+    },
+    {
+      "id": 233795,
+      "name": "Razorspike Headcage",
+      "inForever": false
+    },
+    {
+      "id": 233796,
+      "name": "Obsidian Destroyer",
+      "inForever": false
+    },
+    {
+      "id": 233797,
+      "name": "Obsidian Stormhammer",
+      "inForever": false
+    },
+    {
+      "id": 233798,
+      "name": "Obsidian Sageblade",
+      "inForever": false
+    },
+    {
+      "id": 233801,
+      "name": "Obsidian Defender",
+      "inForever": false
+    },
+    {
+      "id": 233802,
+      "name": "Glowing Chitin Armor Kit",
+      "inForever": false
+    },
+    {
+      "id": 233803,
+      "name": "Sharpened Chitin Armor Kit",
+      "inForever": false
+    },
+    {
+      "id": 233804,
+      "name": "Razorbramble Shoulderpads",
+      "inForever": false
+    },
+    {
+      "id": 233808,
+      "name": "Razorbramble Cowl",
+      "inForever": false
+    },
+    {
+      "id": 233813,
+      "name": "Razorbramble Leathers",
+      "inForever": false
+    },
+    {
+      "id": 233826,
+      "name": "Vampiric Cowl",
+      "inForever": false
+    },
+    {
+      "id": 233833,
+      "name": "Vampiric Shawl",
+      "inForever": false
+    },
+    {
+      "id": 233837,
+      "name": "Vampiric Robe",
+      "inForever": false
+    },
+    {
+      "id": 233956,
+      "name": "Qiraji Silk Scarf",
+      "inForever": false
+    },
+    {
+      "id": 233958,
+      "name": "Qiraji Silk Cape",
+      "inForever": false
+    },
+    {
+      "id": 233959,
+      "name": "Qiraji Silk Cloak",
+      "inForever": false
+    },
+    {
+      "id": 233960,
+      "name": "Qiraji Silk Drape",
+      "inForever": false
+    },
+    {
+      "id": 233962,
+      "name": "Flask of Madness",
+      "inForever": false
+    },
+    {
+      "id": 233964,
+      "name": "Flask of Ancient Knowledge",
+      "inForever": false
+    },
+    {
+      "id": 233965,
+      "name": "Flask of the Old Gods",
+      "inForever": false
+    },
+    {
+      "id": 233966,
+      "name": "Flask of Unyielding Sorrow",
+      "inForever": false
+    },
+    {
+      "id": 233967,
+      "name": "Elixir of the Honey Badger",
+      "inForever": false
+    },
+    {
+      "id": 233968,
+      "name": "Elixir of the Mage-Lord",
+      "inForever": false
+    },
+    {
+      "id": 233969,
+      "name": "Elixir of the Ironside",
+      "inForever": false
+    },
+    {
+      "id": 233977,
+      "name": "Elixir of Alacrity",
+      "inForever": false
+    },
+    {
+      "id": 233984,
+      "name": "Arcane Megabomb",
+      "inForever": false
+    },
+    {
+      "id": 233985,
+      "name": "The Fumigator",
+      "inForever": false
+    },
+    {
+      "id": 233986,
+      "name": "Obsidian Bomb",
+      "inForever": false
+    },
+    {
+      "id": 233987,
+      "name": "G00 DV-1B3 Generator",
+      "inForever": false
+    },
+    {
+      "id": 233988,
+      "name": "Tuned Force Reactive Disk",
+      "inForever": false
+    },
+    {
+      "id": 233990,
+      "name": "Speedstone",
+      "inForever": false
+    },
+    {
+      "id": 233991,
+      "name": "Tear of the Dreamer",
+      "inForever": false
+    },
+    {
+      "id": 233992,
+      "name": "Lodestone of Retaliation",
+      "inForever": false
+    },
+    {
+      "id": 233993,
+      "name": "Enchanted Stopwatch",
+      "inForever": false
+    },
+    {
+      "id": 233994,
+      "name": "Ruby-Encrusted Broach",
+      "inForever": false
+    },
+    {
+      "id": 233995,
+      "name": "Scroll: Wrath of the Swarm",
+      "inForever": false
+    },
+    {
+      "id": 233996,
+      "name": "Enchanted Repellent",
+      "inForever": false
+    },
+    {
+      "id": 234000,
+      "name": "Enchanted Prayer Tome",
+      "inForever": false
+    },
+    {
+      "id": 234001,
+      "name": "Enchanted Totem",
+      "inForever": false
+    },
+    {
+      "id": 234002,
+      "name": "Enchanted Mushroom",
+      "inForever": false
+    },
+    {
+      "id": 234086,
+      "name": "Black Grasp of the Destroyer",
+      "inForever": false
+    },
+    {
+      "id": 234288,
+      "name": "Ironvine Belt",
+      "inForever": false
+    },
+    {
+      "id": 234290,
+      "name": "Ironvine Gloves",
+      "inForever": false
+    },
+    {
+      "id": 234292,
+      "name": "Ironvine Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 234294,
+      "name": "Sandstalker Bracers",
+      "inForever": false
+    },
+    {
+      "id": 234296,
+      "name": "Sandstalker Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 234298,
+      "name": "Sandstalker Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 234300,
+      "name": "Spitfire Bracers",
+      "inForever": false
+    },
+    {
+      "id": 234302,
+      "name": "Spitfire Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 234304,
+      "name": "Spitfire Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 234306,
+      "name": "Bramblewood Belt",
+      "inForever": false
+    },
+    {
+      "id": 234308,
+      "name": "Bramblewood Boots",
+      "inForever": false
+    },
+    {
+      "id": 234310,
+      "name": "Bramblewood Helm",
+      "inForever": false
+    },
+    {
+      "id": 234312,
+      "name": "Sylvan Shoulders",
+      "inForever": false
+    },
+    {
+      "id": 234315,
+      "name": "Sylvan Crown",
+      "inForever": false
+    },
+    {
+      "id": 234317,
+      "name": "Sylvan Vest",
+      "inForever": false
+    },
+    {
+      "id": 234319,
+      "name": "Heavy Obsidian Belt",
+      "inForever": false
+    },
+    {
+      "id": 234321,
+      "name": "Light Obsidian Belt",
+      "inForever": false
+    },
+    {
+      "id": 234324,
+      "name": "Dreamscale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 234428,
+      "name": "Obsidian Heartseeker",
+      "inForever": false
+    },
+    {
+      "id": 234434,
+      "name": "Obsidian Shotgun",
+      "inForever": false
+    },
+    {
+      "id": 234459,
+      "name": "Jagged Obsidian Shield",
+      "inForever": false
+    },
+    {
+      "id": 234460,
+      "name": "Obsidian Mail Tunic",
+      "inForever": false
+    },
+    {
+      "id": 234468,
+      "name": "Idol of Ursin Power",
+      "inForever": false
+    },
+    {
+      "id": 234469,
+      "name": "Idol of Feline Ferocity",
+      "inForever": false
+    },
+    {
+      "id": 234474,
+      "name": "Idol of Sidereal Wrath",
+      "inForever": false
+    },
+    {
+      "id": 234475,
+      "name": "Libram of the Exorcist",
+      "inForever": false
+    },
+    {
+      "id": 234476,
+      "name": "Libram of Sanctity",
+      "inForever": false
+    },
+    {
+      "id": 234477,
+      "name": "Libram of Righteousness",
+      "inForever": false
+    },
+    {
+      "id": 234478,
+      "name": "Totem of Thunderous Strikes",
+      "inForever": false
+    },
+    {
+      "id": 234479,
+      "name": "Totem of Flowing Magma",
+      "inForever": false
+    },
+    {
+      "id": 234480,
+      "name": "Totem of Pyroclastic Thunder",
+      "inForever": false
+    },
+    {
+      "id": 234482,
+      "name": "Dreamscale Kilt",
+      "inForever": false
+    },
+    {
+      "id": 234484,
+      "name": "Dreamscale Bracers",
+      "inForever": false
+    },
+    {
+      "id": 234485,
+      "name": "Dreamscale Mitts",
+      "inForever": false
+    },
+    {
+      "id": 234487,
+      "name": "Dreamscale Visor",
+      "inForever": false
+    },
+    {
+      "id": 235040,
+      "name": "Thick Obsidian Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 235529,
+      "name": "Obsidian Scope",
+      "inForever": false
+    },
+    {
+      "id": 236690,
+      "name": "Glacial Cloak",
+      "inForever": false
+    },
+    {
+      "id": 236692,
+      "name": "Glacial Gloves",
+      "inForever": false
+    },
+    {
+      "id": 236693,
+      "name": "Glacial Wrists",
+      "inForever": false
+    },
+    {
+      "id": 236694,
+      "name": "Glacial Vest",
+      "inForever": false
+    },
+    {
+      "id": 236695,
+      "name": "Icebane Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 236696,
+      "name": "Icebane Bracers",
+      "inForever": false
+    },
+    {
+      "id": 236697,
+      "name": "Icebane Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 236698,
+      "name": "Icy Scale Bracers",
+      "inForever": false
+    },
+    {
+      "id": 236699,
+      "name": "Icy Scale Breastplate",
+      "inForever": false
+    },
+    {
+      "id": 236700,
+      "name": "Icy Scale Gauntlets",
+      "inForever": false
+    },
+    {
+      "id": 236701,
+      "name": "Polar Bracers",
+      "inForever": false
+    },
+    {
+      "id": 236702,
+      "name": "Polar Tunic",
+      "inForever": false
+    },
+    {
+      "id": 236703,
+      "name": "Polar Gloves",
+      "inForever": false
+    },
+    {
+      "id": 236704,
+      "name": "Frosty Wrists",
+      "inForever": false
+    },
+    {
+      "id": 236705,
+      "name": "Frosty Gloves",
+      "inForever": false
+    },
+    {
+      "id": 236706,
+      "name": "Frosty Vest",
+      "inForever": false
+    },
+    {
+      "id": 236871,
+      "name": "Creepy Censor Sensors",
+      "inForever": false
+    },
+    {
+      "id": 238264,
+      "name": "Scarlet Augur's Hood",
+      "inForever": false
+    },
+    {
+      "id": 238265,
+      "name": "Scarlet Augur's Mantle",
+      "inForever": false
+    },
+    {
+      "id": 238266,
+      "name": "Scarlet Augur's Vestaments",
+      "inForever": false
+    },
+    {
+      "id": 238267,
+      "name": "Scarlet Augur's Cuffs",
+      "inForever": false
+    },
+    {
+      "id": 238268,
+      "name": "Scarlet Augur's Mitts",
+      "inForever": false
+    },
+    {
+      "id": 238269,
+      "name": "Scarlet Augur's Strap",
+      "inForever": false
+    },
+    {
+      "id": 238270,
+      "name": "Scarlet Augur's Leggings",
+      "inForever": false
+    },
+    {
+      "id": 238271,
+      "name": "Scarlet Augur's Soles",
+      "inForever": false
+    },
+    {
+      "id": 238272,
+      "name": "Scarlet Infiltrator's Bandana",
+      "inForever": false
+    },
+    {
+      "id": 238273,
+      "name": "Scarlet Infiltrator's Shoulderpads",
+      "inForever": false
+    },
+    {
+      "id": 238274,
+      "name": "Scarlet Infiltrator's Vest",
+      "inForever": false
+    },
+    {
+      "id": 238275,
+      "name": "Scarlet Infiltrator's Bracers",
+      "inForever": false
+    },
+    {
+      "id": 238276,
+      "name": "Scarlet Infiltrator's Gloves",
+      "inForever": false
+    },
+    {
+      "id": 238277,
+      "name": "Scarlet Infiltrator's Belt",
+      "inForever": false
+    },
+    {
+      "id": 238278,
+      "name": "Scarlet Infiltrator's Trousers",
+      "inForever": false
+    },
+    {
+      "id": 238279,
+      "name": "Scarlet Infiltrator's Shoes",
+      "inForever": false
+    },
+    {
+      "id": 238280,
+      "name": "Scarlet Huntsman's Coif",
+      "inForever": false
+    },
+    {
+      "id": 238281,
+      "name": "Scarlet Huntsman's Pauldrons",
+      "inForever": false
+    },
+    {
+      "id": 238282,
+      "name": "Scarlet Huntsman's Chain",
+      "inForever": false
+    },
+    {
+      "id": 238283,
+      "name": "Scarlet Huntsman's Wristguards",
+      "inForever": false
+    },
+    {
+      "id": 238284,
+      "name": "Scarlet Huntsman's Handguards",
+      "inForever": false
+    },
+    {
+      "id": 238285,
+      "name": "Scarlet Huntsman's Clasp",
+      "inForever": false
+    },
+    {
+      "id": 238286,
+      "name": "Scarlet Huntsman's Legguards",
+      "inForever": false
+    },
+    {
+      "id": 238287,
+      "name": "Scarlet Huntsman's Boots",
+      "inForever": false
+    },
+    {
+      "id": 238288,
+      "name": "Scarlet Soldier's Helmet",
+      "inForever": false
+    },
+    {
+      "id": 238289,
+      "name": "Scarlet Soldier's Spaulders",
+      "inForever": false
+    },
+    {
+      "id": 238290,
+      "name": "Scarlet Soldier's Chestplate",
+      "inForever": false
+    },
+    {
+      "id": 238291,
+      "name": "Scarlet Soldier's Protectors",
+      "inForever": false
+    },
+    {
+      "id": 238292,
+      "name": "Scarlet Soldier's Grips",
+      "inForever": false
+    },
+    {
+      "id": 238293,
+      "name": "Scarlet Soldier's Waistguard",
+      "inForever": false
+    },
+    {
+      "id": 238294,
+      "name": "Scarlet Soldier's Legplates",
+      "inForever": false
+    },
+    {
+      "id": 238295,
+      "name": "Scarlet Soldier's Stompers",
+      "inForever": false
+    },
+    {
+      "id": 238781,
+      "name": "Semisafe Transporter: New Avalon",
+      "inForever": false
+    },
+    {
+      "id": 238925,
+      "name": "Scarlet Quiver",
+      "inForever": false
+    },
+    {
+      "id": 238926,
+      "name": "Scarlet Ammo Pouch",
+      "inForever": false
+    },
+    {
+      "id": 241652,
+      "name": "Discolored Beast Heart",
+      "inForever": false
+    }
+  ]
+}

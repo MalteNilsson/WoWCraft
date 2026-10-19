@@ -1,5 +1,6 @@
 import type { PriceMap } from "./types";
 import type { MaterialInfo } from "./types";
+import { materialInfoMap } from "./materialsLoader";
 
 /** TBC disenchant outcome: { itemId, chance, minQty, maxQty } */
 export type DisenchantOutcome = {
@@ -104,6 +105,23 @@ export function isDisenchantableItemClass(itemClass: string | number | undefined
     if (!slot || slot.trim() === '') return true;
   }
   return false;
+}
+
+/**
+ * Forever materials do not store item level. Shared items use the Vanilla record
+ * so they follow the same disenchant brackets as Vanilla.
+ */
+export function resolveDisenchantItem(
+  itemId: number | undefined,
+  materialInfo: Record<number, MaterialInfo>,
+): { itemLevel: number; itemClass?: string | number; slot?: string } {
+  const current = itemId != null ? materialInfo[itemId] : undefined;
+  const vanilla = itemId != null ? materialInfoMap.Vanilla[itemId] : undefined;
+  return {
+    itemLevel: current?.itemLevel ?? vanilla?.itemLevel ?? 70,
+    itemClass: current?.class || vanilla?.class,
+    slot: current?.slot || vanilla?.slot,
+  };
 }
 
 /**

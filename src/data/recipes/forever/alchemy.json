@@ -1,0 +1,5444 @@
+[
+  {
+    "id": 2329,
+    "name": "Elixir of Minor Strength",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 55,
+      "green": 75,
+      "gray": 95
+    },
+    "materials": {
+      "765": 1,
+      "2449": 1,
+      "3371": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_potion_56",
+    "url": "https://www.wowhead.com/forever/spell=2329",
+    "produces": {
+      "id": 2454,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 2331,
+    "name": "Minor Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 65,
+      "green": 85,
+      "gray": 105
+    },
+    "materials": {
+      "785": 1,
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_potion_70",
+    "url": "https://www.wowhead.com/forever/spell=2331",
+    "produces": {
+      "id": 2455,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 2332,
+    "name": "Minor Rejuvenation Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "785": 2,
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 40,
+    "icon": "inv_potion_02",
+    "url": "https://www.wowhead.com/forever/spell=2332",
+    "produces": {
+      "id": 2456,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 2333,
+    "name": "Elixir of Lesser Agility",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "2452": 1,
+      "3355": 1,
+      "3372": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_potion_92",
+    "url": "https://www.wowhead.com/forever/spell=2333",
+    "produces": {
+      "id": 3390,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3396,
+      "recipeItemName": "Recipe: Elixir of Lesser Agility"
+    }
+  },
+  {
+    "id": 2334,
+    "name": "Elixir of Minor Fortitude",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "2447": 1,
+      "2449": 2,
+      "3371": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_potion_42",
+    "url": "https://www.wowhead.com/forever/spell=2334",
+    "produces": {
+      "id": 2458,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 2335,
+    "name": "Swiftness Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "2450": 1,
+      "2452": 1,
+      "3371": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_potion_95",
+    "url": "https://www.wowhead.com/forever/spell=2335",
+    "produces": {
+      "id": 2459,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2555,
+      "recipeItemName": "Recipe: Swiftness Potion"
+    }
+  },
+  {
+    "id": 2365,
+    "name": "Draught of Tongues",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "785": 2,
+      "2449": 2,
+      "3371": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=2365",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3170,
+    "name": "Minor Troll's Blood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 60,
+      "green": 80,
+      "gray": 100
+    },
+    "materials": {
+      "2447": 1,
+      "2449": 2,
+      "3371": 1
+    },
+    "minSkill": 15,
+    "icon": "inv_potion_78",
+    "url": "https://www.wowhead.com/forever/spell=3170",
+    "produces": {
+      "id": 3382,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 3171,
+    "name": "Elixir of Wisdom",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "785": 1,
+      "2450": 2,
+      "3371": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_potion_06",
+    "url": "https://www.wowhead.com/forever/spell=3171",
+    "produces": {
+      "id": 3383,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 3172,
+    "name": "Minor Magic Resistance Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "785": 3,
+      "3355": 1,
+      "3371": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_potion_08",
+    "url": "https://www.wowhead.com/forever/spell=3172",
+    "produces": {
+      "id": 3384,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3393,
+      "recipeItemName": "Recipe: Minor Magic Resistance Potion"
+    }
+  },
+  {
+    "id": 3173,
+    "name": "Lesser Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "785": 1,
+      "3371": 1,
+      "3820": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_potion_71",
+    "url": "https://www.wowhead.com/forever/spell=3173",
+    "produces": {
+      "id": 3385,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 3174,
+    "name": "Potion of Poison Cleansing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "1288": 1,
+      "2453": 1,
+      "3372": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_potion_12",
+    "url": "https://www.wowhead.com/forever/spell=3174",
+    "produces": {
+      "id": 3386,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3394,
+      "recipeItemName": "Recipe: Potion of Poison Cleansing"
+    }
+  },
+  {
+    "id": 3175,
+    "name": "Limited Invulnerability Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 275,
+      "green": 295,
+      "gray": 315
+    },
+    "materials": {
+      "8839": 2,
+      "8845": 1,
+      "8925": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_62",
+    "url": "https://www.wowhead.com/forever/spell=3175",
+    "produces": {
+      "id": 3387,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3395,
+      "recipeItemName": "Recipe: Limited Invulnerability Potion"
+    }
+  },
+  {
+    "id": 3176,
+    "name": "Lesser Troll's Blood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "2450": 2,
+      "2453": 2,
+      "3372": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_potion_79",
+    "url": "https://www.wowhead.com/forever/spell=3176",
+    "produces": {
+      "id": 3388,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 3177,
+    "name": "Elixir of Lesser Defense",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "3355": 1,
+      "3372": 1,
+      "3820": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_potion_64",
+    "url": "https://www.wowhead.com/forever/spell=3177",
+    "produces": {
+      "id": 3389,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2000
+    }
+  },
+  {
+    "id": 3188,
+    "name": "Elixir of Ogre Strength",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "2449": 1,
+      "3356": 1,
+      "3372": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_potion_57",
+    "url": "https://www.wowhead.com/forever/spell=3188",
+    "produces": {
+      "id": 3391,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6211,
+      "recipeItemName": "Recipe: Elixir of Ogre's Strength"
+    }
+  },
+  {
+    "id": 3230,
+    "name": "Elixir of Minor Agility",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "765": 1,
+      "2452": 1,
+      "3371": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_potion_91",
+    "url": "https://www.wowhead.com/forever/spell=3230",
+    "produces": {
+      "id": 2457,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2553,
+      "recipeItemName": "Recipe: Elixir of Minor Agility"
+    }
+  },
+  {
+    "id": 3448,
+    "name": "Lesser Invisibility Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "3355": 1,
+      "3372": 1,
+      "3818": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_potion_18",
+    "url": "https://www.wowhead.com/forever/spell=3448",
+    "produces": {
+      "id": 3823,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 3449,
+    "name": "Shadow Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3369": 4,
+      "3372": 1,
+      "3818": 4
+    },
+    "minSkill": 165,
+    "icon": "inv_potion_23",
+    "url": "https://www.wowhead.com/forever/spell=3449",
+    "produces": {
+      "id": 3824,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6068,
+      "recipeItemName": "Recipe: Shadow Oil"
+    }
+  },
+  {
+    "id": 3450,
+    "name": "Elixir of Lesser Fortitude",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "3355": 1,
+      "3372": 1,
+      "3821": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_potion_43",
+    "url": "https://www.wowhead.com/forever/spell=3450",
+    "produces": {
+      "id": 3825,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3830,
+      "recipeItemName": "Recipe: Elixir of Lesser Fortitude"
+    }
+  },
+  {
+    "id": 3451,
+    "name": "Troll's Blood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "2453": 1,
+      "3357": 1,
+      "3372": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_potion_80",
+    "url": "https://www.wowhead.com/forever/spell=3451",
+    "produces": {
+      "id": 3826,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3831,
+      "recipeItemName": "Recipe: Troll's Blood Elixir"
+    }
+  },
+  {
+    "id": 3452,
+    "name": "Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "3356": 1,
+      "3372": 1,
+      "3820": 1
+    },
+    "minSkill": 160,
+    "icon": "inv_potion_72",
+    "url": "https://www.wowhead.com/forever/spell=3452",
+    "produces": {
+      "id": 3827,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 3453,
+    "name": "Draught of Detect Lesser Invisibility",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "3358": 1,
+      "3372": 1,
+      "3818": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_potion_01",
+    "url": "https://www.wowhead.com/forever/spell=3453",
+    "produces": {
+      "id": 3828,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3832,
+      "recipeItemName": "Recipe: Elixir of Detect Lesser Invisibility"
+    }
+  },
+  {
+    "id": 3454,
+    "name": "Frost Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "3358": 4,
+      "3372": 1,
+      "3819": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_potion_20",
+    "url": "https://www.wowhead.com/forever/spell=3454",
+    "produces": {
+      "id": 3829,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 14634,
+      "recipeItemName": "Recipe: Frost Oil"
+    }
+  },
+  {
+    "id": 4508,
+    "name": "Minor Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 55,
+      "green": 75,
+      "gray": 95
+    },
+    "materials": {
+      "730": 1,
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_potion_35",
+    "url": "https://www.wowhead.com/forever/spell=4508",
+    "produces": {
+      "id": 4596,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4597,
+      "recipeItemName": "Recipe: Minor Discolored Healing Potion"
+    }
+  },
+  {
+    "id": 4942,
+    "name": "Lesser Stoneshield Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "3372": 1,
+      "3821": 1,
+      "3858": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_potion_67",
+    "url": "https://www.wowhead.com/forever/spell=4942",
+    "produces": {
+      "id": 4623,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4624,
+      "recipeItemName": "Recipe: Lesser Stoneshield Potion"
+    }
+  },
+  {
+    "id": 6617,
+    "name": "Rage Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "2450": 1,
+      "3371": 1,
+      "5635": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_potion_24",
+    "url": "https://www.wowhead.com/forever/spell=6617",
+    "produces": {
+      "id": 5631,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5640,
+      "recipeItemName": "Recipe: Rage Potion"
+    }
+  },
+  {
+    "id": 6618,
+    "name": "Great Rage Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "3356": 1,
+      "3372": 1,
+      "5637": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_potion_21",
+    "url": "https://www.wowhead.com/forever/spell=6618",
+    "produces": {
+      "id": 5633,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5643,
+      "recipeItemName": "Recipe: Great Rage Potion"
+    }
+  },
+  {
+    "id": 6624,
+    "name": "Free Action Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "3372": 1,
+      "3820": 1,
+      "6370": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_potion_04",
+    "url": "https://www.wowhead.com/forever/spell=6624",
+    "produces": {
+      "id": 5634,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5642,
+      "recipeItemName": "Recipe: Free Action Potion"
+    }
+  },
+  {
+    "id": 7179,
+    "name": "Draught of Water Breathing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "3371": 1,
+      "3820": 1,
+      "6370": 2
+    },
+    "minSkill": 90,
+    "icon": "inv_potion_17",
+    "url": "https://www.wowhead.com/forever/spell=7179",
+    "produces": {
+      "id": 5996,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 450
+    }
+  },
+  {
+    "id": 7183,
+    "name": "Elixir of Minor Defense",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 55,
+      "green": 75,
+      "gray": 95
+    },
+    "materials": {
+      "765": 1,
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_potion_63",
+    "url": "https://www.wowhead.com/forever/spell=7183",
+    "produces": {
+      "id": 5997,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7255,
+    "name": "Holy Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "2452": 1,
+      "2453": 1,
+      "3371": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_potion_09",
+    "url": "https://www.wowhead.com/forever/spell=7255",
+    "produces": {
+      "id": 6051,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6053,
+      "recipeItemName": "Recipe: Holy Protection Potion"
+    }
+  },
+  {
+    "id": 7256,
+    "name": "Shadow Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "3356": 1,
+      "3369": 1,
+      "3372": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_potion_44",
+    "url": "https://www.wowhead.com/forever/spell=7256",
+    "produces": {
+      "id": 6048,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6054,
+      "recipeItemName": "Recipe: Shadow Protection Potion"
+    }
+  },
+  {
+    "id": 7257,
+    "name": "Fire Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3372": 1,
+      "4402": 1,
+      "6371": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_potion_16",
+    "url": "https://www.wowhead.com/forever/spell=7257",
+    "produces": {
+      "id": 6049,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6055,
+      "recipeItemName": "Recipe: Fire Protection Potion"
+    }
+  },
+  {
+    "id": 7258,
+    "name": "Frost Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "3372": 1,
+      "3819": 1,
+      "3821": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_potion_13",
+    "url": "https://www.wowhead.com/forever/spell=7258",
+    "produces": {
+      "id": 6050,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6056,
+      "recipeItemName": "Recipe: Frost Protection Potion"
+    }
+  },
+  {
+    "id": 7259,
+    "name": "Nature Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3357": 1,
+      "3372": 1,
+      "3820": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_potion_06",
+    "url": "https://www.wowhead.com/forever/spell=7259",
+    "produces": {
+      "id": 6052,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6057,
+      "recipeItemName": "Recipe: Nature Protection Potion"
+    }
+  },
+  {
+    "id": 7836,
+    "name": "Blackmouth Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 80,
+      "green": 90,
+      "gray": 100
+    },
+    "materials": {
+      "3371": 1,
+      "6358": 2
+    },
+    "minSkill": 80,
+    "icon": "inv_drink_12",
+    "url": "https://www.wowhead.com/forever/spell=7836",
+    "produces": {
+      "id": 6370,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 7837,
+    "name": "Fire Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 150,
+      "green": 160,
+      "gray": 170
+    },
+    "materials": {
+      "3371": 1,
+      "6359": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_potion_38",
+    "url": "https://www.wowhead.com/forever/spell=7837",
+    "produces": {
+      "id": 6371,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7841,
+    "name": "Swim Speed Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "2452": 1,
+      "3371": 1,
+      "6370": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_potion_13",
+    "url": "https://www.wowhead.com/forever/spell=7841",
+    "produces": {
+      "id": 6372,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7845,
+    "name": "Elixir of Fire Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "3356": 1,
+      "3372": 1,
+      "6371": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_potion_55",
+    "url": "https://www.wowhead.com/forever/spell=7845",
+    "produces": {
+      "id": 6373,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 8240,
+    "name": "Elixir of Giant Growth",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "2449": 1,
+      "3371": 1,
+      "6522": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_potion_10",
+    "url": "https://www.wowhead.com/forever/spell=8240",
+    "produces": {
+      "id": 6662,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6663,
+      "recipeItemName": "Recipe: Elixir of Giant Growth"
+    }
+  },
+  {
+    "id": 11448,
+    "name": "Greater Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "3358": 1,
+      "3372": 1,
+      "3821": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_potion_73",
+    "url": "https://www.wowhead.com/forever/spell=11448",
+    "produces": {
+      "id": 6149,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 9000
+    }
+  },
+  {
+    "id": 11449,
+    "name": "Elixir of Agility",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "3372": 1,
+      "3820": 1,
+      "3821": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_potion_93",
+    "url": "https://www.wowhead.com/forever/spell=11449",
+    "produces": {
+      "id": 8949,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 6500
+    }
+  },
+  {
+    "id": 11450,
+    "name": "Elixir of Defense",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "3355": 1,
+      "3372": 1,
+      "3821": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_potion_65",
+    "url": "https://www.wowhead.com/forever/spell=11450",
+    "produces": {
+      "id": 8951,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 7500
+    }
+  },
+  {
+    "id": 11451,
+    "name": "Oil of Immolation",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "3821": 1,
+      "4625": 1,
+      "8925": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_potion_11",
+    "url": "https://www.wowhead.com/forever/spell=11451",
+    "produces": {
+      "id": 8956,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 8000
+    }
+  },
+  {
+    "id": 11452,
+    "name": "Restorative Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "3821": 1,
+      "7067": 1,
+      "8925": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_potion_01",
+    "url": "https://www.wowhead.com/forever/spell=11452",
+    "produces": {
+      "id": 9030,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 11453,
+    "name": "Magic Resistance Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "3358": 1,
+      "8831": 1,
+      "8925": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_potion_120",
+    "url": "https://www.wowhead.com/forever/spell=11453",
+    "produces": {
+      "id": 9036,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9293,
+      "recipeItemName": "Recipe: Magic Resistance Potion"
+    }
+  },
+  {
+    "id": 11456,
+    "name": "Goblin Rocket Fuel",
+    "quality": 1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "3372": 1,
+      "4625": 1,
+      "9260": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_cask_02",
+    "url": "https://www.wowhead.com/forever/spell=11456",
+    "produces": {
+      "id": 9061,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10644,
+      "recipeItemName": "Recipe: Goblin Rocket Fuel"
+    }
+  },
+  {
+    "id": 11458,
+    "name": "Wildvine Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "8153": 1,
+      "8831": 1,
+      "8925": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_potion_34",
+    "url": "https://www.wowhead.com/forever/spell=11458",
+    "produces": {
+      "id": 9144,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9294,
+      "recipeItemName": "Recipe: Wildvine Potion"
+    }
+  },
+  {
+    "id": 11459,
+    "name": "Philosopher's Stone",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "3575": 4,
+      "4625": 4,
+      "8831": 4,
+      "9262": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_orb_01",
+    "url": "https://www.wowhead.com/forever/spell=11459",
+    "produces": {
+      "id": 9149,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9303,
+      "recipeItemName": "Recipe: Philosopher's Stone"
+    }
+  },
+  {
+    "id": 11460,
+    "name": "Draught of Detect Undead",
+    "quality": 1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "8836": 1,
+      "8925": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_potion_53",
+    "url": "https://www.wowhead.com/forever/spell=11460",
+    "produces": {
+      "id": 9154,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 11461,
+    "name": "Arcane Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "3821": 1,
+      "8839": 1,
+      "8925": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_potion_30",
+    "url": "https://www.wowhead.com/forever/spell=11461",
+    "produces": {
+      "id": 9155,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 11464,
+    "name": "Invisibility Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "8838": 1,
+      "8845": 1,
+      "8925": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_potion_25",
+    "url": "https://www.wowhead.com/forever/spell=11464",
+    "produces": {
+      "id": 9172,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9295,
+      "recipeItemName": "Recipe: Invisibility Potion"
+    }
+  },
+  {
+    "id": 11465,
+    "name": "Elixir of Greater Intellect",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "3358": 1,
+      "8839": 1,
+      "8925": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_potion_10",
+    "url": "https://www.wowhead.com/forever/spell=11465",
+    "produces": {
+      "id": 9179,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 12000
+    }
+  },
+  {
+    "id": 11466,
+    "name": "Gift of Arthas",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "8836": 1,
+      "8839": 1,
+      "8925": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_potion_28",
+    "url": "https://www.wowhead.com/forever/spell=11466",
+    "produces": {
+      "id": 9088,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9296,
+      "recipeItemName": "Recipe: Gift of Arthas"
+    }
+  },
+  {
+    "id": 11467,
+    "name": "Elixir of Greater Agility",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "3821": 1,
+      "8838": 1,
+      "8925": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_potion_94",
+    "url": "https://www.wowhead.com/forever/spell=11467",
+    "produces": {
+      "id": 9187,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 12000
+    }
+  },
+  {
+    "id": 11468,
+    "name": "Draught of Dream Vision",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "8831": 3,
+      "8925": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_potion_14",
+    "url": "https://www.wowhead.com/forever/spell=11468",
+    "produces": {
+      "id": 9197,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9297,
+      "recipeItemName": "Recipe: Draught of Dream Vision"
+    }
+  },
+  {
+    "id": 11472,
+    "name": "Elixir of Greater Strength",
+    "quality": 1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "8838": 1,
+      "8846": 1,
+      "8925": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_potion_59",
+    "url": "https://www.wowhead.com/forever/spell=11472",
+    "produces": {
+      "id": 9206,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9298,
+      "recipeItemName": "Recipe: Elixir of Giants"
+    }
+  },
+  {
+    "id": 11473,
+    "name": "Ghost Dye",
+    "quality": 1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "4342": 1,
+      "8845": 2,
+      "8925": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_poison_mindnumbing",
+    "url": "https://www.wowhead.com/forever/spell=11473",
+    "produces": {
+      "id": 9210,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9302,
+      "recipeItemName": "Recipe: Ghost Dye"
+    }
+  },
+  {
+    "id": 11476,
+    "name": "Elixir of Shadow Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "8845": 3,
+      "8925": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_48",
+    "url": "https://www.wowhead.com/forever/spell=11476",
+    "produces": {
+      "id": 9264,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9301,
+      "recipeItemName": "Recipe: Elixir of Shadow Power"
+    }
+  },
+  {
+    "id": 11477,
+    "name": "Potion of Demon Slaying",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "8845": 1,
+      "8846": 1,
+      "8925": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_27",
+    "url": "https://www.wowhead.com/forever/spell=11477",
+    "produces": {
+      "id": 9224,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9300,
+      "recipeItemName": "Recipe: Potion of Demon Slaying"
+    }
+  },
+  {
+    "id": 11478,
+    "name": "Draught of Detect Demon",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "8846": 2,
+      "8925": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_53",
+    "url": "https://www.wowhead.com/forever/spell=11478",
+    "produces": {
+      "id": 9233,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 14000
+    }
+  },
+  {
+    "id": 11479,
+    "name": "Transmute: Iron to Gold",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "3575": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_ingot_03",
+    "url": "https://www.wowhead.com/forever/spell=11479",
+    "produces": {
+      "id": 3577,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9304,
+      "recipeItemName": "Recipe: Transmute Iron to Gold"
+    }
+  },
+  {
+    "id": 11480,
+    "name": "Transmute: Mithril to Truesilver",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "3860": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_ingot_08",
+    "url": "https://www.wowhead.com/forever/spell=11480",
+    "produces": {
+      "id": 6037,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 9305,
+      "recipeItemName": "Recipe: Transmute Mithril to Truesilver"
+    }
+  },
+  {
+    "id": 12609,
+    "name": "Catseye Draught",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "3372": 1,
+      "3818": 1,
+      "3821": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_potion_36",
+    "url": "https://www.wowhead.com/forever/spell=12609",
+    "produces": {
+      "id": 10592,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 8000
+    }
+  },
+  {
+    "id": 15833,
+    "name": "Dreamless Sleep Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "8831": 3,
+      "8925": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_potion_83",
+    "url": "https://www.wowhead.com/forever/spell=15833",
+    "produces": {
+      "id": 12190,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 17187,
+    "name": "Transmute: Arcanite",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "12359": 1,
+      "12363": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_stonetablet_05",
+    "url": "https://www.wowhead.com/forever/spell=17187",
+    "produces": {
+      "id": 12360,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12958,
+      "recipeItemName": "Recipe: Transmute Arcanite"
+    }
+  },
+  {
+    "id": 17551,
+    "name": "Stonescale Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "3372": 1,
+      "13422": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_68",
+    "url": "https://www.wowhead.com/forever/spell=17551",
+    "produces": {
+      "id": 13423,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 15000
+    }
+  },
+  {
+    "id": 17552,
+    "name": "Mighty Rage Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "8846": 3,
+      "8925": 1
+    },
+    "minSkill": 255,
+    "icon": "inv_potion_41",
+    "url": "https://www.wowhead.com/forever/spell=17552",
+    "produces": {
+      "id": 13442,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13476,
+      "recipeItemName": "Recipe: Mighty Rage Potion"
+    }
+  },
+  {
+    "id": 17553,
+    "name": "Superior Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 275,
+      "green": 295,
+      "gray": 315
+    },
+    "materials": {
+      "8838": 2,
+      "8839": 2,
+      "8925": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_potion_74",
+    "url": "https://www.wowhead.com/forever/spell=17553",
+    "produces": {
+      "id": 13443,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13477,
+      "recipeItemName": "Recipe: Superior Mana Potion"
+    }
+  },
+  {
+    "id": 17554,
+    "name": "Elixir of Greater Defense",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "8838": 1,
+      "8925": 1,
+      "13423": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_potion_66",
+    "url": "https://www.wowhead.com/forever/spell=17554",
+    "produces": {
+      "id": 13445,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13478,
+      "recipeItemName": "Recipe: Elixir of Superior Defense"
+    }
+  },
+  {
+    "id": 17555,
+    "name": "Elixir of the Sages",
+    "quality": 1,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 1,
+      "13466": 2
+    },
+    "minSkill": 270,
+    "icon": "inv_potion_29",
+    "url": "https://www.wowhead.com/forever/spell=17555",
+    "produces": {
+      "id": 13447,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13479,
+      "recipeItemName": "Recipe: Elixir of the Sages"
+    }
+  },
+  {
+    "id": 17557,
+    "name": "Elixir of Brute Force",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "8846": 2,
+      "8925": 1,
+      "13466": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_40",
+    "url": "https://www.wowhead.com/forever/spell=17557",
+    "produces": {
+      "id": 13453,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13481,
+      "recipeItemName": "Recipe: Elixir of Brute Force"
+    }
+  },
+  {
+    "id": 17559,
+    "name": "Transmute: Air to Fire",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7082": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_fire_volcano",
+    "url": "https://www.wowhead.com/forever/spell=17559",
+    "produces": {
+      "id": 7078,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13482,
+      "recipeItemName": "Recipe: Transmute Air to Fire"
+    }
+  },
+  {
+    "id": 17560,
+    "name": "Transmute: Fire to Earth",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7078": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_strengthofearthtotem02",
+    "url": "https://www.wowhead.com/forever/spell=17560",
+    "produces": {
+      "id": 7076,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13483,
+      "recipeItemName": "Recipe: Transmute Fire to Earth"
+    }
+  },
+  {
+    "id": 17561,
+    "name": "Transmute: Earth to Water",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7076": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_acid_01",
+    "url": "https://www.wowhead.com/forever/spell=17561",
+    "produces": {
+      "id": 7080,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13484,
+      "recipeItemName": "Recipe: Transmute Earth to Water"
+    }
+  },
+  {
+    "id": 17562,
+    "name": "Transmute: Water to Air",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7080": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_earthbind",
+    "url": "https://www.wowhead.com/forever/spell=17562",
+    "produces": {
+      "id": 7082,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13485,
+      "recipeItemName": "Recipe: Transmute Water to Air"
+    }
+  },
+  {
+    "id": 17563,
+    "name": "Transmute: Undeath to Water",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "12808": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_acid_01",
+    "url": "https://www.wowhead.com/forever/spell=17563",
+    "produces": {
+      "id": 7080,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13486,
+      "recipeItemName": "Recipe: Transmute Undeath to Water"
+    }
+  },
+  {
+    "id": 17564,
+    "name": "Transmute: Water to Undeath",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7080": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_shadow_shadetruesight",
+    "url": "https://www.wowhead.com/forever/spell=17564",
+    "produces": {
+      "id": 12808,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13487,
+      "recipeItemName": "Recipe: Transmute Water to Undeath"
+    }
+  },
+  {
+    "id": 17565,
+    "name": "Transmute: Life to Earth",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "12803": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_strengthofearthtotem02",
+    "url": "https://www.wowhead.com/forever/spell=17565",
+    "produces": {
+      "id": 7076,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13488,
+      "recipeItemName": "Recipe: Transmute Life to Earth"
+    }
+  },
+  {
+    "id": 17566,
+    "name": "Transmute: Earth to Life",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "7076": 1
+    },
+    "minSkill": 275,
+    "icon": "spell_nature_abolishmagic",
+    "url": "https://www.wowhead.com/forever/spell=17566",
+    "produces": {
+      "id": 12803,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13489,
+      "recipeItemName": "Recipe: Transmute Earth to Life"
+    }
+  },
+  {
+    "id": 17570,
+    "name": "Greater Stoneshield Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "8925": 1,
+      "10620": 1,
+      "13423": 3
+    },
+    "minSkill": 280,
+    "icon": "inv_potion_69",
+    "url": "https://www.wowhead.com/forever/spell=17570",
+    "produces": {
+      "id": 13455,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13490,
+      "recipeItemName": "Recipe: Greater Stoneshield Potion"
+    }
+  },
+  {
+    "id": 17571,
+    "name": "Elixir of the Mongoose",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "8925": 1,
+      "13465": 2,
+      "13466": 2
+    },
+    "minSkill": 280,
+    "icon": "inv_potion_32",
+    "url": "https://www.wowhead.com/forever/spell=17571",
+    "produces": {
+      "id": 13452,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13491,
+      "recipeItemName": "Recipe: Elixir of the Mongoose"
+    }
+  },
+  {
+    "id": 17572,
+    "name": "Purification Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "8925": 1,
+      "13466": 2,
+      "13467": 2
+    },
+    "minSkill": 285,
+    "icon": "inv_potion_31",
+    "url": "https://www.wowhead.com/forever/spell=17572",
+    "produces": {
+      "id": 13462,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13492,
+      "recipeItemName": "Recipe: Purification Potion"
+    }
+  },
+  {
+    "id": 17573,
+    "name": "Greater Arcane Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 3,
+      "13465": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_potion_109",
+    "url": "https://www.wowhead.com/forever/spell=17573",
+    "produces": {
+      "id": 13454,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13493,
+      "recipeItemName": "Recipe: Greater Arcane Elixir"
+    }
+  },
+  {
+    "id": 17574,
+    "name": "Greater Fire Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7068": 1,
+      "8925": 1,
+      "13463": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_24",
+    "url": "https://www.wowhead.com/forever/spell=17574",
+    "produces": {
+      "id": 13457,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13494,
+      "recipeItemName": "Recipe: Greater Fire Protection Potion"
+    }
+  },
+  {
+    "id": 17575,
+    "name": "Greater Frost Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7070": 1,
+      "8925": 1,
+      "13463": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_20",
+    "url": "https://www.wowhead.com/forever/spell=17575",
+    "produces": {
+      "id": 13456,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13495,
+      "recipeItemName": "Recipe: Greater Frost Protection Potion"
+    }
+  },
+  {
+    "id": 17576,
+    "name": "Greater Nature Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7067": 1,
+      "8925": 1,
+      "13463": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_22",
+    "url": "https://www.wowhead.com/forever/spell=17576",
+    "produces": {
+      "id": 13458,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13496,
+      "recipeItemName": "Recipe: Greater Nature Protection Potion"
+    }
+  },
+  {
+    "id": 17577,
+    "name": "Greater Arcane Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "8925": 1,
+      "11176": 1,
+      "13463": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_83",
+    "url": "https://www.wowhead.com/forever/spell=17577",
+    "produces": {
+      "id": 13461,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13497,
+      "recipeItemName": "Recipe: Greater Arcane Protection Potion"
+    }
+  },
+  {
+    "id": 17578,
+    "name": "Greater Shadow Protection Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "3824": 1,
+      "8925": 1,
+      "13463": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_23",
+    "url": "https://www.wowhead.com/forever/spell=17578",
+    "produces": {
+      "id": 13459,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13499,
+      "recipeItemName": "Recipe: Greater Shadow Protection Potion"
+    }
+  },
+  {
+    "id": 17580,
+    "name": "Major Mana Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 3,
+      "13467": 2
+    },
+    "minSkill": 295,
+    "icon": "inv_potion_76",
+    "url": "https://www.wowhead.com/forever/spell=17580",
+    "produces": {
+      "id": 13444,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13501,
+      "recipeItemName": "Recipe: Major Mana Potion"
+    }
+  },
+  {
+    "id": 17632,
+    "name": "Alchemist's Stone",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "7076": 8,
+      "7078": 8,
+      "7080": 8,
+      "7082": 8,
+      "9262": 2,
+      "12803": 8,
+      "13468": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_orb_02",
+    "url": "https://www.wowhead.com/forever/spell=17632",
+    "produces": {
+      "id": 13503,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13517,
+      "recipeItemName": "Recipe: Alchemist's Stone"
+    }
+  },
+  {
+    "id": 17634,
+    "name": "Flask of Petrification",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13423": 30,
+      "13465": 10,
+      "13468": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_26",
+    "url": "https://www.wowhead.com/forever/spell=17634",
+    "produces": {
+      "id": 13506,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13518,
+      "recipeItemName": "Recipe: Flask of Petrification"
+    }
+  },
+  {
+    "id": 17635,
+    "name": "Flask of the Titans",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8846": 30,
+      "8925": 1,
+      "13423": 10,
+      "13468": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_62",
+    "url": "https://www.wowhead.com/forever/spell=17635",
+    "produces": {
+      "id": 13510,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13519,
+      "recipeItemName": "Recipe: Flask of the Titans"
+    }
+  },
+  {
+    "id": 17636,
+    "name": "Flask of Distilled Wisdom",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 30,
+      "13467": 10,
+      "13468": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_97",
+    "url": "https://www.wowhead.com/forever/spell=17636",
+    "produces": {
+      "id": 13511,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13520,
+      "recipeItemName": "Recipe: Flask of Distilled Wisdom"
+    }
+  },
+  {
+    "id": 17637,
+    "name": "Flask of Supreme Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 30,
+      "13465": 10,
+      "13468": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_41",
+    "url": "https://www.wowhead.com/forever/spell=17637",
+    "produces": {
+      "id": 13512,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13521,
+      "recipeItemName": "Recipe: Flask of Supreme Power"
+    }
+  },
+  {
+    "id": 17638,
+    "name": "Flask of Chromatic Resistance",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13465": 10,
+      "13467": 30,
+      "13468": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_48",
+    "url": "https://www.wowhead.com/forever/spell=17638",
+    "produces": {
+      "id": 13513,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13522,
+      "recipeItemName": "Recipe: Flask of Chromatic Resistance"
+    }
+  },
+  {
+    "id": 21923,
+    "name": "Elixir of Frost Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3358": 1,
+      "3372": 1,
+      "3819": 2
+    },
+    "minSkill": 190,
+    "icon": "inv_potion_76",
+    "url": "https://www.wowhead.com/forever/spell=21923",
+    "produces": {
+      "id": 17708,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 17709,
+      "recipeItemName": "Recipe: Elixir of Frost Power"
+    }
+  },
+  {
+    "id": 22732,
+    "name": "Major Rejuvenation Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "10286": 1,
+      "13463": 4,
+      "13464": 4,
+      "18256": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_47",
+    "url": "https://www.wowhead.com/forever/spell=22732",
+    "produces": {
+      "id": 18253,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18257,
+      "recipeItemName": "Recipe: Major Rejuvenation Potion"
+    }
+  },
+  {
+    "id": 22808,
+    "name": "Draught of Greater Water Breathing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "7972": 1,
+      "8831": 2,
+      "8925": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_potion_05",
+    "url": "https://www.wowhead.com/forever/spell=22808",
+    "produces": {
+      "id": 18294,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 24266,
+    "name": "Gurubashi Mojo Madness",
+    "quality": 3,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "12804": 6,
+      "12938": 1,
+      "13468": 1,
+      "19943": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_poison_mindnumbing",
+    "url": "https://www.wowhead.com/forever/spell=24266",
+    "produces": {
+      "id": 19931,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 24365,
+    "name": "Mageblood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 1,
+      "13466": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_137",
+    "url": "https://www.wowhead.com/forever/spell=24365",
+    "produces": {
+      "id": 20007,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20011,
+      "recipeItemName": "Recipe: Mageblood Elixir"
+    }
+  },
+  {
+    "id": 24366,
+    "name": "Greater Dreamless Sleep Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 2,
+      "13464": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_83",
+    "url": "https://www.wowhead.com/forever/spell=24366",
+    "produces": {
+      "id": 20002,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20012,
+      "recipeItemName": "Recipe: Greater Dreamless Sleep"
+    }
+  },
+  {
+    "id": 24367,
+    "name": "Living Action Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "8925": 1,
+      "10286": 2,
+      "13465": 2,
+      "13467": 2
+    },
+    "minSkill": 285,
+    "icon": "inv_potion_07",
+    "url": "https://www.wowhead.com/forever/spell=24367",
+    "produces": {
+      "id": 20008,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20013,
+      "recipeItemName": "Recipe: Living Action Potion"
+    }
+  },
+  {
+    "id": 24368,
+    "name": "Major Troll's Blood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "8846": 1,
+      "8925": 1,
+      "13466": 2
+    },
+    "minSkill": 290,
+    "icon": "inv_potion_82",
+    "url": "https://www.wowhead.com/forever/spell=24368",
+    "produces": {
+      "id": 20004,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20014,
+      "recipeItemName": "Recipe: Major Troll's Blood Elixir"
+    }
+  },
+  {
+    "id": 25146,
+    "name": "Transmute: Elemental Fire",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 301,
+      "green": 305,
+      "gray": 310
+    },
+    "materials": {
+      "7077": 1
+    },
+    "minSkill": 300,
+    "icon": "spell_fire_fire",
+    "url": "https://www.wowhead.com/forever/spell=25146",
+    "produces": {
+      "id": 7068,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20761,
+      "recipeItemName": "Recipe: Transmute Elemental Fire"
+    }
+  },
+  {
+    "id": 26277,
+    "name": "Elixir of Holy Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 3,
+      "6371": 3,
+      "8925": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_62",
+    "url": "https://www.wowhead.com/forever/spell=26277",
+    "produces": {
+      "id": 21546,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21547,
+      "recipeItemName": "Recipe: Elixir of Greater Firepower"
+    }
+  },
+  {
+    "id": 426607,
+    "name": "Elixir of Coalesced Regret",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 90,
+      "green": 100,
+      "gray": 110
+    },
+    "materials": {
+      "3369": 5,
+      "3372": 1,
+      "3820": 5,
+      "11083": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_potion_19",
+    "url": "https://www.wowhead.com/forever/spell=426607",
+    "produces": {
+      "id": 210708,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 210709,
+      "recipeItemName": "Recipe: Elixir of Coalesced Regret"
+    }
+  },
+  {
+    "id": 435969,
+    "name": "Insulating Gniodine",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "3372": 1,
+      "213371": 5
+    },
+    "minSkill": 200,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=435969",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215434,
+      "recipeItemName": "UNUSED"
+    }
+  },
+  {
+    "id": 435971,
+    "name": "Mildly Irradiated Rejuvenation Potion",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 230,
+      "gray": 235
+    },
+    "materials": {
+      "2456": 1,
+      "8925": 5,
+      "213371": 1,
+      "215430": 3
+    },
+    "minSkill": 225,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=435971",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215163,
+      "recipeItemName": "Recipe: Mildly-Irradiated Rejuvenation Potion"
+    }
+  },
+  {
+    "id": 439960,
+    "name": "Lesser Arcane Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 212,
+      "gray": 215
+    },
+    "materials": {
+      "3356": 1,
+      "3821": 1,
+      "8925": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_potion_108",
+    "url": "https://www.wowhead.com/forever/spell=439960",
+    "produces": {
+      "id": 217398,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 217399,
+      "recipeItemName": "Recipe: Lesser Arcane Elixir"
+    }
+  },
+  {
+    "id": 446226,
+    "name": "Flask of Everlasting Nightmares",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8925": 1,
+      "220688": 1,
+      "221021": 10
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=446226",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 446851,
+    "name": "Jar of Nightmarish Mojo",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8925": 1,
+      "221021": 5,
+      "221312": 5
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=446851",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 448085,
+    "name": "Flask of Restless Dreams",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8925": 1,
+      "220688": 1,
+      "221021": 10
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=448085",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213544,
+    "name": "Flask of Unyielding Sorrow",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13511": 1,
+      "16203": 1,
+      "234012": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213544",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213546,
+    "name": "Flask of Ancient Knowledge",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13512": 1,
+      "16203": 1,
+      "234011": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213546",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213548,
+    "name": "Flask of the Old Gods",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13510": 1,
+      "16203": 1,
+      "234006": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213548",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213552,
+    "name": "Flask of Madness",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13513": 1,
+      "16203": 1,
+      "234010": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213552",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213559,
+    "name": "Elixir of the Honey Badger",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13465": 2,
+      "234011": 1,
+      "234012": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213559",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213563,
+    "name": "Elixir of the Mage-Lord",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13466": 2,
+      "234011": 1,
+      "234012": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213563",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213565,
+    "name": "Elixir of the Ironside",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13467": 2,
+      "234011": 1,
+      "234012": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213565",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213571,
+    "name": "Elixir of Alacrity",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 2,
+      "234011": 1,
+      "234012": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213571",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1230564,
+    "name": "Mana Well",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 20,
+      "green": 22,
+      "gray": 25
+    },
+    "materials": {
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_arcane_manatap",
+    "url": "https://www.wowhead.com/forever/spell=1230564",
+    "produces": {
+      "id": 279956,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 1231583,
+    "name": "Major Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "730": 1,
+      "8925": 1,
+      "13466": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_40",
+    "url": "https://www.wowhead.com/forever/spell=1231583",
+    "produces": {
+      "id": 241650,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 241651,
+      "recipeItemName": "Recipe: Major Discolored Healing Potion"
+    }
+  },
+  {
+    "id": 1244421,
+    "name": "Distilled Firewater",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 265,
+      "gray": 270
+    },
+    "materials": {
+      "3372": 1,
+      "3819": 4,
+      "8846": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_92",
+    "url": "https://www.wowhead.com/forever/spell=1244421",
+    "produces": {
+      "id": 246948,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 236754,
+      "recipeItemName": "Recipe: Distilled Firewater"
+    }
+  },
+  {
+    "id": 1244645,
+    "name": "Lesser Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 85,
+      "green": 105,
+      "gray": 125
+    },
+    "materials": {
+      "730": 1,
+      "2450": 1,
+      "3371": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_36",
+    "url": "https://www.wowhead.com/forever/spell=1244645",
+    "produces": {
+      "id": 247239,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 1244646,
+    "name": "Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "730": 1,
+      "2453": 1,
+      "3372": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_37",
+    "url": "https://www.wowhead.com/forever/spell=1244646",
+    "produces": {
+      "id": 247240,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 1244647,
+    "name": "Greater Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "730": 1,
+      "3356": 1,
+      "3372": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_38",
+    "url": "https://www.wowhead.com/forever/spell=1244647",
+    "produces": {
+      "id": 247241,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 1244648,
+    "name": "Superior Discolored Healing Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "730": 1,
+      "8838": 1,
+      "8925": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_39",
+    "url": "https://www.wowhead.com/forever/spell=1244648",
+    "produces": {
+      "id": 247242,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 1245246,
+    "name": "Minor Arcane Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 10,
+      "green": 12,
+      "gray": 15
+    },
+    "materials": {
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_106",
+    "url": "https://www.wowhead.com/forever/spell=1245246",
+    "produces": {
+      "id": 247754,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1245250,
+    "name": "Elixir of Minor Force",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 10,
+      "green": 12,
+      "gray": 15
+    },
+    "materials": {
+      "765": 1,
+      "3371": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_potion_77",
+    "url": "https://www.wowhead.com/forever/spell=1245250",
+    "produces": {
+      "id": 247755,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1249630,
+    "name": "Cerulean Dye",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 50,
+      "green": 70,
+      "gray": 90
+    },
+    "materials": {
+      "3371": 1,
+      "249399": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_inscription_inkcerulean01",
+    "url": "https://www.wowhead.com/forever/spell=1249630",
+    "produces": {
+      "id": 249409,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 1249631,
+    "name": "Magenta Dye",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "3372": 1,
+      "249424": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_inscription_inkpurple02",
+    "url": "https://www.wowhead.com/forever/spell=1249631",
+    "produces": {
+      "id": 249430,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 1249632,
+    "name": "Viridian Dye",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "8925": 1,
+      "249274": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_inscription_inkgreen01",
+    "url": "https://www.wowhead.com/forever/spell=1249632",
+    "produces": {
+      "id": 249431,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 1249633,
+    "name": "Sulfuric Acid",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 50,
+      "green": 70,
+      "gray": 90
+    },
+    "materials": {
+      "3371": 1,
+      "249391": 2
+    },
+    "minSkill": 0,
+    "icon": "trade_alchemy",
+    "url": "https://www.wowhead.com/forever/spell=1249633",
+    "produces": {
+      "id": 249410,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 1250775,
+    "name": "Revealing Draught",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "3358": 1,
+      "3372": 1,
+      "3818": 3
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1250775",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1250776,
+    "name": "Potion of Predatory Senses",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 200,
+      "green": 202,
+      "gray": 205
+    },
+    "materials": {
+      "3372": 1,
+      "3818": 2,
+      "3821": 2
+    },
+    "minSkill": 195,
+    "icon": "trade_alchemy_dpotion_d12",
+    "url": "https://www.wowhead.com/forever/spell=1250776",
+    "produces": {
+      "id": 250327,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250363,
+      "recipeItemName": "Recipe: Potion of Predatory Senses"
+    }
+  },
+  {
+    "id": 1250777,
+    "name": "Elixir of Cunning",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "8846": 2,
+      "8925": 1,
+      "13463": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_166",
+    "url": "https://www.wowhead.com/forever/spell=1250777",
+    "produces": {
+      "id": 250328,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250364,
+      "recipeItemName": "Recipe: Elixir of Cunning"
+    }
+  },
+  {
+    "id": 1250778,
+    "name": "Elixir of the Phalanx",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 257,
+      "gray": 260
+    },
+    "materials": {
+      "8838": 4,
+      "8925": 1,
+      "13464": 2
+    },
+    "minSkill": 250,
+    "icon": "trade_alchemy_dpotion_a25",
+    "url": "https://www.wowhead.com/forever/spell=1250778",
+    "produces": {
+      "id": 250329,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250365,
+      "recipeItemName": "Recipe: Elixir of the Phalanx"
+    }
+  },
+  {
+    "id": 1250779,
+    "name": "Minor Cleric's Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 50,
+      "green": 52,
+      "gray": 55
+    },
+    "materials": {
+      "785": 2,
+      "2453": 1,
+      "3371": 1
+    },
+    "minSkill": 45,
+    "icon": "trade_alchemy_dpotion_a17",
+    "url": "https://www.wowhead.com/forever/spell=1250779",
+    "produces": {
+      "id": 250330,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250366,
+      "recipeItemName": "Recipe: Minor Cleric's Elixir"
+    }
+  },
+  {
+    "id": 1250780,
+    "name": "Lesser Cleric's Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 100,
+      "green": 102,
+      "gray": 105
+    },
+    "materials": {
+      "3356": 2,
+      "3357": 2,
+      "3372": 1
+    },
+    "minSkill": 95,
+    "icon": "inv_potion_128",
+    "url": "https://www.wowhead.com/forever/spell=1250780",
+    "produces": {
+      "id": 250331,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250367,
+      "recipeItemName": "Recipe: Lesser Cleric's Elixir"
+    }
+  },
+  {
+    "id": 1250781,
+    "name": "Cleric's Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 150,
+      "green": 152,
+      "gray": 155
+    },
+    "materials": {
+      "3372": 1,
+      "3819": 2,
+      "4625": 2
+    },
+    "minSkill": 145,
+    "icon": "inv_potion_139",
+    "url": "https://www.wowhead.com/forever/spell=1250781",
+    "produces": {
+      "id": 250332,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250368,
+      "recipeItemName": "Recipe: Cleric's Elixir"
+    }
+  },
+  {
+    "id": 1250782,
+    "name": "Greater Cleric's Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 200,
+      "green": 202,
+      "gray": 205
+    },
+    "materials": {
+      "8831": 1,
+      "8836": 3,
+      "8925": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_potion_150",
+    "url": "https://www.wowhead.com/forever/spell=1250782",
+    "produces": {
+      "id": 250333,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250369,
+      "recipeItemName": "Recipe: Greater Cleric's Elixir"
+    }
+  },
+  {
+    "id": 1250783,
+    "name": "Elixir of Fortitude",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 155,
+      "green": 157,
+      "gray": 160
+    },
+    "materials": {
+      "3372": 1,
+      "3821": 4
+    },
+    "minSkill": 150,
+    "icon": "inv_potion_44",
+    "url": "https://www.wowhead.com/forever/spell=1250783",
+    "produces": {
+      "id": 250334,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250370,
+      "recipeItemName": "Recipe: Elixir of Fortitude"
+    }
+  },
+  {
+    "id": 1250784,
+    "name": "Elixir of Greater Fortitude",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "8838": 4,
+      "8925": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_potion_45",
+    "url": "https://www.wowhead.com/forever/spell=1250784",
+    "produces": {
+      "id": 250335,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250371,
+      "recipeItemName": "Recipe: Elixir of Greater Fortitude"
+    }
+  },
+  {
+    "id": 1250785,
+    "name": "Elixir of Wicked Regeneration",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 290,
+      "green": 292,
+      "gray": 295
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 2,
+      "13464": 3
+    },
+    "minSkill": 285,
+    "icon": "trade_alchemy_dpotion_a22",
+    "url": "https://www.wowhead.com/forever/spell=1250785",
+    "produces": {
+      "id": 250336,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250372,
+      "recipeItemName": "Recipe: Elixir of Wicked Regeneration"
+    }
+  },
+  {
+    "id": 1250786,
+    "name": "Elixir of the Owl",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 285,
+      "green": 287,
+      "gray": 290
+    },
+    "materials": {
+      "13463": 4,
+      "13465": 2,
+      "18256": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_potion_164",
+    "url": "https://www.wowhead.com/forever/spell=1250786",
+    "produces": {
+      "id": 250337,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250373,
+      "recipeItemName": "Recipe: Elixir of the Owl"
+    }
+  },
+  {
+    "id": 1250787,
+    "name": "Elixir of Sages",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "13463": 4,
+      "13464": 2,
+      "18256": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_165",
+    "url": "https://www.wowhead.com/forever/spell=1250787",
+    "produces": {
+      "id": 250338,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250374,
+      "recipeItemName": "Recipe: Elixir of Sages"
+    }
+  },
+  {
+    "id": 1250788,
+    "name": "Minor Mageblood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 30,
+      "green": 32,
+      "gray": 35
+    },
+    "materials": {
+      "785": 2,
+      "3371": 1
+    },
+    "minSkill": 25,
+    "icon": "trade_alchemy_dpotion_a12",
+    "url": "https://www.wowhead.com/forever/spell=1250788",
+    "produces": {
+      "id": 250339,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250375,
+      "recipeItemName": "Recipe: Minor Mageblood Elixir"
+    }
+  },
+  {
+    "id": 1250789,
+    "name": "Lesser Mageblood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 80,
+      "green": 82,
+      "gray": 85
+    },
+    "materials": {
+      "3356": 3,
+      "3371": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_potion_126",
+    "url": "https://www.wowhead.com/forever/spell=1250789",
+    "produces": {
+      "id": 250340,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250376,
+      "recipeItemName": "Recipe: Lesser Mageblood Elixir"
+    }
+  },
+  {
+    "id": 1250790,
+    "name": "Greater Mageblood Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
+    },
+    "materials": {
+      "8836": 2,
+      "8839": 3,
+      "8925": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_potion_168",
+    "url": "https://www.wowhead.com/forever/spell=1250790",
+    "produces": {
+      "id": 250341,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250377,
+      "recipeItemName": "Recipe: Greater Mageblood Elixir"
+    }
+  },
+  {
+    "id": 1250791,
+    "name": "Lesser Arcane Elixir",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 125,
+      "green": 127,
+      "gray": 130
+    },
+    "materials": {
+      "3356": 4,
+      "3372": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_potion_107",
+    "url": "https://www.wowhead.com/forever/spell=1250791",
+    "produces": {
+      "id": 250342,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250378,
+      "recipeItemName": "Recipe: Lesser Arcane Elixir"
+    }
+  },
+  {
+    "id": 1250792,
+    "name": "Elixir of Nature Power",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 290,
+      "green": 292,
+      "gray": 295
+    },
+    "materials": {
+      "8838": 2,
+      "8925": 1,
+      "13464": 4
+    },
+    "minSkill": 285,
+    "icon": "inv_potion_97",
+    "url": "https://www.wowhead.com/forever/spell=1250792",
+    "produces": {
+      "id": 250343,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250379,
+      "recipeItemName": "Recipe: Elixir of Nature Power"
+    }
+  },
+  {
+    "id": 1250793,
+    "name": "Elixir of Minor Spirit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 20,
+      "green": 22,
+      "gray": 25
+    },
+    "materials": {
+      "2447": 1,
+      "2449": 2,
+      "3371": 1
+    },
+    "minSkill": 15,
+    "icon": "inv_potion_113",
+    "url": "https://www.wowhead.com/forever/spell=1250793",
+    "produces": {
+      "id": 250344,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250380,
+      "recipeItemName": "Recipe: Elixir of Minor Spirit"
+    }
+  },
+  {
+    "id": 1250794,
+    "name": "Elixir of Lesser Spirit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 70,
+      "green": 72,
+      "gray": 75
+    },
+    "materials": {
+      "785": 1,
+      "3355": 2,
+      "3371": 1
+    },
+    "minSkill": 65,
+    "icon": "inv_potion_114",
+    "url": "https://www.wowhead.com/forever/spell=1250794",
+    "produces": {
+      "id": 250345,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250381,
+      "recipeItemName": "Recipe: Elixir of Lesser Spirit"
+    }
+  },
+  {
+    "id": 1250795,
+    "name": "Elixir of Spirit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 120,
+      "green": 122,
+      "gray": 125
+    },
+    "materials": {
+      "3356": 1,
+      "3358": 3,
+      "3372": 1
+    },
+    "minSkill": 115,
+    "icon": "inv_potion_115",
+    "url": "https://www.wowhead.com/forever/spell=1250795",
+    "produces": {
+      "id": 250346,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250382,
+      "recipeItemName": "Recipe: Elixir of Spirit"
+    }
+  },
+  {
+    "id": 1250796,
+    "name": "Elixir of Greater Spirit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 170,
+      "green": 172,
+      "gray": 175
+    },
+    "materials": {
+      "8831": 2,
+      "8836": 3,
+      "8925": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_potion_116",
+    "url": "https://www.wowhead.com/forever/spell=1250796",
+    "produces": {
+      "id": 250347,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250383,
+      "recipeItemName": "Recipe: Elixir of Greater Spirit"
+    }
+  },
+  {
+    "id": 1250797,
+    "name": "Elixir of the Whale",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "8846": 1,
+      "8925": 1,
+      "13463": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_163",
+    "url": "https://www.wowhead.com/forever/spell=1250797",
+    "produces": {
+      "id": 250348,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250384,
+      "recipeItemName": "Recipe: Elixir of the Whale"
+    }
+  },
+  {
+    "id": 1250798,
+    "name": "Elixir of Strength",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 155,
+      "green": 157,
+      "gray": 160
+    },
+    "materials": {
+      "3355": 3,
+      "3372": 1,
+      "3821": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_potion_58",
+    "url": "https://www.wowhead.com/forever/spell=1250798",
+    "produces": {
+      "id": 250349,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250385,
+      "recipeItemName": "Recipe: Elixir of Strength"
+    }
+  },
+  {
+    "id": 1250799,
+    "name": "Elixir of Ferocity",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "8845": 1,
+      "8846": 3,
+      "8925": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_161",
+    "url": "https://www.wowhead.com/forever/spell=1250799",
+    "produces": {
+      "id": 250350,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250386,
+      "recipeItemName": "Recipe: Elixir of Ferocity"
+    }
+  },
+  {
+    "id": 1250800,
+    "name": "Elixir of the Grizzly",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "8839": 1,
+      "8846": 3,
+      "8925": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_160",
+    "url": "https://www.wowhead.com/forever/spell=1250800",
+    "produces": {
+      "id": 250351,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250387,
+      "recipeItemName": "Recipe: Elixir of the Grizzly"
+    }
+  },
+  {
+    "id": 1250801,
+    "name": "Elixir of Lesser Intellect",
+    "quality": 1,
+    "difficulty": {
+      "orange": 95,
+      "yellow": 100,
+      "green": 102,
+      "gray": 105
+    },
+    "materials": {
+      "3356": 3,
+      "3372": 1
+    },
+    "minSkill": 95,
+    "icon": "inv_potion_43",
+    "url": "https://www.wowhead.com/forever/spell=1250801",
+    "produces": {
+      "id": 250353,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250388,
+      "recipeItemName": "Recipe: Elixir of Lesser Intellect"
+    }
+  },
+  {
+    "id": 1250802,
+    "name": "Elixir of Intellect",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 140,
+      "green": 142,
+      "gray": 145
+    },
+    "materials": {
+      "3358": 3,
+      "3372": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_potion_44",
+    "url": "https://www.wowhead.com/forever/spell=1250802",
+    "produces": {
+      "id": 250354,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250389,
+      "recipeItemName": "Recipe: Elixir of Intellect"
+    }
+  },
+  {
+    "id": 1251729,
+    "name": "Minor Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 40,
+      "green": 42,
+      "gray": 45
+    },
+    "materials": {
+      "765": 1,
+      "2447": 1,
+      "3371": 1
+    },
+    "minSkill": 35,
+    "icon": "trade_alchemy_dpotion_d14",
+    "url": "https://www.wowhead.com/forever/spell=1251729",
+    "produces": {
+      "id": 250932,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250976,
+      "recipeItemName": "Recipe: Minor Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251730,
+    "name": "Lesser Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 90,
+      "green": 92,
+      "gray": 95
+    },
+    "materials": {
+      "765": 2,
+      "785": 1,
+      "3371": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_potionsetc",
+    "url": "https://www.wowhead.com/forever/spell=1251730",
+    "produces": {
+      "id": 250933,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250977,
+      "recipeItemName": "Recipe: Lesser Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251731,
+    "name": "Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 140,
+      "green": 142,
+      "gray": 145
+    },
+    "materials": {
+      "3355": 1,
+      "3369": 1,
+      "3371": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_potiond_2",
+    "url": "https://www.wowhead.com/forever/spell=1251731",
+    "produces": {
+      "id": 250934,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250978,
+      "recipeItemName": "Recipe: Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251732,
+    "name": "Greater Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 190,
+      "green": 192,
+      "gray": 195
+    },
+    "materials": {
+      "3356": 2,
+      "3372": 1,
+      "3818": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_potionf_4",
+    "url": "https://www.wowhead.com/forever/spell=1251732",
+    "produces": {
+      "id": 250935,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250979,
+      "recipeItemName": "Recipe: Greater Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251733,
+    "name": "Superior Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 240,
+      "green": 242,
+      "gray": 245
+    },
+    "materials": {
+      "3358": 2,
+      "3372": 1,
+      "3819": 2
+    },
+    "minSkill": 235,
+    "icon": "inv_misc_potiona2",
+    "url": "https://www.wowhead.com/forever/spell=1251733",
+    "produces": {
+      "id": 250936,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250980,
+      "recipeItemName": "Recipe: Superior Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251734,
+    "name": "Major Spellblasting Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 290,
+      "green": 292,
+      "gray": 295
+    },
+    "materials": {
+      "13463": 2,
+      "13465": 1,
+      "18256": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_potione_4",
+    "url": "https://www.wowhead.com/forever/spell=1251734",
+    "produces": {
+      "id": 250937,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250981,
+      "recipeItemName": "Recipe: Major Spellblasting Potion"
+    }
+  },
+  {
+    "id": 1251735,
+    "name": "Minor Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 45,
+      "green": 47,
+      "gray": 50
+    },
+    "materials": {
+      "765": 1,
+      "2449": 1,
+      "3371": 1
+    },
+    "minSkill": 40,
+    "icon": "trade_alchemy_dpotion_d12",
+    "url": "https://www.wowhead.com/forever/spell=1251735",
+    "produces": {
+      "id": 250938,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250982,
+      "recipeItemName": "Recipe: Minor Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251736,
+    "name": "Lesser Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 95,
+      "green": 97,
+      "gray": 100
+    },
+    "materials": {
+      "2449": 2,
+      "2450": 1,
+      "3371": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_misc_potionsetf",
+    "url": "https://www.wowhead.com/forever/spell=1251736",
+    "produces": {
+      "id": 250939,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250983,
+      "recipeItemName": "Recipe: Lesser Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251737,
+    "name": "Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 145,
+      "green": 147,
+      "gray": 150
+    },
+    "materials": {
+      "2450": 2,
+      "3372": 1,
+      "3818": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_potiond_3",
+    "url": "https://www.wowhead.com/forever/spell=1251737",
+    "produces": {
+      "id": 250940,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250984,
+      "recipeItemName": "Recipe: Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251738,
+    "name": "Greater Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 195,
+      "green": 197,
+      "gray": 200
+    },
+    "materials": {
+      "3372": 1,
+      "3818": 2,
+      "4625": 3
+    },
+    "minSkill": 190,
+    "icon": "inv_potionf_1",
+    "url": "https://www.wowhead.com/forever/spell=1251738",
+    "produces": {
+      "id": 250941,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250985,
+      "recipeItemName": "Recipe: Greater Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251739,
+    "name": "Superior Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 245,
+      "green": 247,
+      "gray": 250
+    },
+    "materials": {
+      "4625": 2,
+      "8839": 3,
+      "8925": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_potiona6",
+    "url": "https://www.wowhead.com/forever/spell=1251739",
+    "produces": {
+      "id": 250942,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250986,
+      "recipeItemName": "Recipe: Superior Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251740,
+    "name": "Major Frenzy Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 295,
+      "green": 297,
+      "gray": 300
+    },
+    "materials": {
+      "8839": 2,
+      "13466": 3,
+      "18256": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_potione_6",
+    "url": "https://www.wowhead.com/forever/spell=1251740",
+    "produces": {
+      "id": 250943,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250987,
+      "recipeItemName": "Recipe: Major Frenzy Potion"
+    }
+  },
+  {
+    "id": 1251741,
+    "name": "Minor Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 35,
+      "green": 37,
+      "gray": 40
+    },
+    "materials": {
+      "785": 2,
+      "2453": 1,
+      "3371": 1
+    },
+    "minSkill": 30,
+    "icon": "trade_alchemy_dpotion_d13",
+    "url": "https://www.wowhead.com/forever/spell=1251741",
+    "produces": {
+      "id": 250944,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250988,
+      "recipeItemName": "Recipe: Minor Mender's Potion"
+    }
+  },
+  {
+    "id": 1251742,
+    "name": "Lesser Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 85,
+      "green": 87,
+      "gray": 90
+    },
+    "materials": {
+      "3356": 2,
+      "3357": 2,
+      "3372": 1
+    },
+    "minSkill": 80,
+    "icon": "inv_misc_potionsete",
+    "url": "https://www.wowhead.com/forever/spell=1251742",
+    "produces": {
+      "id": 250945,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250989,
+      "recipeItemName": "Recipe: Lesser Mender's Potion"
+    }
+  },
+  {
+    "id": 1251743,
+    "name": "Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 135,
+      "green": 137,
+      "gray": 140
+    },
+    "materials": {
+      "3372": 1,
+      "3819": 2,
+      "4625": 2
+    },
+    "minSkill": 130,
+    "icon": "inv_potiond_6",
+    "url": "https://www.wowhead.com/forever/spell=1251743",
+    "produces": {
+      "id": 250946,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250990,
+      "recipeItemName": "Recipe: Mender's Potion"
+    }
+  },
+  {
+    "id": 1251744,
+    "name": "Greater Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 185,
+      "green": 187,
+      "gray": 190
+    },
+    "materials": {
+      "8831": 1,
+      "8836": 2,
+      "8925": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_potionf_3",
+    "url": "https://www.wowhead.com/forever/spell=1251744",
+    "produces": {
+      "id": 250947,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250991,
+      "recipeItemName": "Recipe: Greater Mender's Potion"
+    }
+  },
+  {
+    "id": 1251745,
+    "name": "Superior Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 235,
+      "green": 237,
+      "gray": 240
+    },
+    "materials": {
+      "8836": 1,
+      "8838": 2,
+      "8925": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_misc_potiona3",
+    "url": "https://www.wowhead.com/forever/spell=1251745",
+    "produces": {
+      "id": 250948,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250992,
+      "recipeItemName": "Recipe: Superior Mender's Potion"
+    }
+  },
+  {
+    "id": 1251747,
+    "name": "Major Mender's Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 285,
+      "green": 287,
+      "gray": 290
+    },
+    "materials": {
+      "8838": 1,
+      "13463": 3,
+      "18256": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_potione_2",
+    "url": "https://www.wowhead.com/forever/spell=1251747",
+    "produces": {
+      "id": 250949,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250993,
+      "recipeItemName": "Recipe: Major Mender's Potion"
+    }
+  },
+  {
+    "id": 1251748,
+    "name": "Potion of Venomous Blood",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "8846": 3,
+      "8925": 1,
+      "13466": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_19",
+    "url": "https://www.wowhead.com/forever/spell=1251748",
+    "produces": {
+      "id": 250950,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250994,
+      "recipeItemName": "Recipe: Potion of Venomous Blood"
+    }
+  },
+  {
+    "id": 1251749,
+    "name": "Caustic Smog Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 270,
+      "green": 272,
+      "gray": 275
+    },
+    "materials": {
+      "3369": 2,
+      "8845": 2,
+      "8925": 1
+    },
+    "minSkill": 265,
+    "icon": "trade_alchemy_dpotion_c26",
+    "url": "https://www.wowhead.com/forever/spell=1251749",
+    "produces": {
+      "id": 250951,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250995,
+      "recipeItemName": "Recipe: Caustic Smog Potion"
+    }
+  },
+  {
+    "id": 1251751,
+    "name": "Dragonfire Potion",
+    "quality": 1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 250,
+      "green": 252,
+      "gray": 255
+    },
+    "materials": {
+      "4625": 2,
+      "8925": 1,
+      "13465": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_potion_33",
+    "url": "https://www.wowhead.com/forever/spell=1251751",
+    "produces": {
+      "id": 250953,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250997,
+      "recipeItemName": "Recipe: Dragonfire Potion"
+    }
+  },
+  {
+    "id": 1251752,
+    "name": "Potion of Elemental Purging",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 285,
+      "green": 287,
+      "gray": 290
+    },
+    "materials": {
+      "3819": 2,
+      "4625": 2,
+      "8925": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_alchemy_80_potion02blue",
+    "url": "https://www.wowhead.com/forever/spell=1251752",
+    "produces": {
+      "id": 250954,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250998,
+      "recipeItemName": "Recipe: Potion of Elemental Purging"
+    }
+  },
+  {
+    "id": 1251753,
+    "name": "Potion of Beast Slaying",
+    "quality": 1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 285,
+      "green": 287,
+      "gray": 290
+    },
+    "materials": {
+      "8846": 2,
+      "13466": 2,
+      "18256": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_alchemy_80_potion02yellow",
+    "url": "https://www.wowhead.com/forever/spell=1251753",
+    "produces": {
+      "id": 250955,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250999,
+      "recipeItemName": "Recipe: Potion of Beast Slaying"
+    }
+  },
+  {
+    "id": 1263005,
+    "name": "Fermenter",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 142,
+      "gray": 145
+    },
+    "materials": {
+      "2452": 1,
+      "3356": 1,
+      "3372": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_alchemy_90_cauldron",
+    "url": "https://www.wowhead.com/forever/spell=1263005",
+    "produces": {
+      "id": 279970,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273085,
+      "recipeItemName": "Blueprint: Fermenter"
+    }
+  },
+  {
+    "id": 1263078,
+    "name": "Alchemy Laboratory",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 300,
+      "green": 300,
+      "gray": 300
+    },
+    "materials": {
+      "8925": 1,
+      "13463": 2,
+      "273125": 1
+    },
+    "minSkill": 300,
+    "icon": "10prof_portabletable_alchemy01",
+    "url": "https://www.wowhead.com/forever/spell=1263078",
+    "produces": {
+      "id": 279990,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273112,
+      "recipeItemName": "Blueprint: Alchemy Laboratory"
+    }
+  },
+  {
+    "id": 1293559,
+    "name": "Flask of Natural Accuracy",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 325,
+      "gray": 330
+    },
+    "materials": {
+      "13464": 9,
+      "18256": 1,
+      "248821": 12,
+      "248822": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potionc_5",
+    "url": "https://www.wowhead.com/forever/spell=1293559",
+    "produces": {
+      "id": 274273,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274277,
+      "recipeItemName": "Recipe: Flask of Natural Accuracy"
+    }
+  },
+  {
+    "id": 1293560,
+    "name": "Flask of Natural Aggression",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 325,
+      "gray": 330
+    },
+    "materials": {
+      "13465": 6,
+      "18256": 1,
+      "248821": 18,
+      "248822": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potionc_1",
+    "url": "https://www.wowhead.com/forever/spell=1293560",
+    "produces": {
+      "id": 274274,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274278,
+      "recipeItemName": "Recipe: Flask of Natural Aggression"
+    }
+  },
+  {
+    "id": 1293561,
+    "name": "Flask of Natural Precision",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 325,
+      "gray": 330
+    },
+    "materials": {
+      "13463": 9,
+      "18256": 1,
+      "248822": 1,
+      "248823": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_potionc_3",
+    "url": "https://www.wowhead.com/forever/spell=1293561",
+    "produces": {
+      "id": 274275,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274279,
+      "recipeItemName": "Recipe: Flask of Natural Precision"
+    }
+  },
+  {
+    "id": 1293562,
+    "name": "Flask of Natural Swiftness",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 325,
+      "gray": 330
+    },
+    "materials": {
+      "13467": 6,
+      "18256": 1,
+      "248822": 1,
+      "248823": 18
+    },
+    "minSkill": 300,
+    "icon": "inv_potionc_4",
+    "url": "https://www.wowhead.com/forever/spell=1293562",
+    "produces": {
+      "id": 274276,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274280,
+      "recipeItemName": "Recipe: Flask of Natural Swiftness"
+    }
+  },
+  {
+    "id": 1317279,
+    "name": "Transmute: Legionite",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 282,
+      "gray": 290
+    },
+    "materials": {
+      "248819": 1,
+      "251291": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_blacksmithing_70_demonsteelbar",
+    "url": "https://www.wowhead.com/forever/spell=1317279",
+    "produces": {
+      "id": 251290,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 284871,
+      "recipeItemName": "Recipe: Transmute Legionite"
+    }
+  }
+]

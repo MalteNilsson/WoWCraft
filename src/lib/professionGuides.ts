@@ -12,10 +12,8 @@ export const auctionDataUpdatedLabel = fetchedAt.toLocaleDateString('en-US', {
 export const auctionRealms = [
   'Thunderstrike',
   'Spineshatter',
-  'Soulseeker',
   'Dreamscythe',
   'Nightslayer',
-  'Doomhowl',
 ] as const;
 
 export type ProfessionGuide = {

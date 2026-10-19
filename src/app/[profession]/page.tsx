@@ -1,18 +1,12 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProfessionGuide, professionGuides } from '@/lib/professionGuides';
+import { ForeverAnnouncement } from '@/components/ForeverAnnouncement';
 import ProfessionPlanner from './ProfessionPlanner';
-import { ProfessionGuideSection } from './ProfessionGuideSection';
 
 type ProfessionPageProps = {
   params: Promise<{ profession: string }>;
-  searchParams: Promise<{
-    skill?: string;
-    target?: string;
-    version?: string;
-    realm?: string;
-    faction?: string;
-  }>;
 };
 
 export function generateStaticParams() {
@@ -31,9 +25,16 @@ export async function generateMetadata({ params }: ProfessionPageProps): Promise
   };
 }
 
-export default async function ProfessionPage({ params, searchParams }: ProfessionPageProps) {
+function PlannerFallback() {
+  return (
+    <div className="flex min-h-0 flex-1 items-center justify-center bg-neutral-950 text-sm text-neutral-400">
+      Loading planner…
+    </div>
+  );
+}
+
+export default async function ProfessionPage({ params }: ProfessionPageProps) {
   const { profession } = await params;
-  const query = await searchParams;
   const guide = getProfessionGuide(profession);
   if (!guide) {
     notFound();
@@ -41,17 +42,10 @@ export default async function ProfessionPage({ params, searchParams }: Professio
 
   return (
     <div className="flex h-dvh min-h-0 flex-col overflow-hidden bg-neutral-950">
-      <ProfessionPlanner
-        initialSearchParams={{
-          skill: query.skill,
-          target: query.target,
-          version: query.version,
-          realm: query.realm,
-          faction: query.faction,
-        }}
-      >
-        <ProfessionGuideSection guide={guide} />
-      </ProfessionPlanner>
+      <ForeverAnnouncement />
+      <Suspense fallback={<PlannerFallback />}>
+        <ProfessionPlanner />
+      </Suspense>
     </div>
   );
 }

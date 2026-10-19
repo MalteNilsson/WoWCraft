@@ -1,23 +1,55 @@
 import { Recipe, PriceMap, MaterialInfo, MaterialTreeNode } from "./types";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS } from "./rodConstants";
-import { getExpectedDisenchantValue } from "./disenchant";
-
-/** Get the lowest non-zero difficulty level from a recipe (orange, yellow, green, gray). */
-function getLowestNonZeroDifficulty(d: Recipe['difficulty']): number | null {
-  const vals = [d.orange, d.yellow, d.green, d.gray]
-    .filter((v): v is number => typeof v === 'number' && v > 0);
-  return vals.length > 0 ? Math.min(...vals) : null;
-}
+import { getExpectedDisenchantValue, resolveDisenchantItem } from "./disenchant";
 
 /**
  * Effective min skill to use a recipe.
- * When minSkill is 0 but difficulty has non-zero levels, use the lowest non-zero difficulty
- * (e.g. yellow: 385 → recipe requires 385). Fixes recipes with messy scraper data.
+ * A stored min skill above 0 is explicit and wins.
+ * Wowhead stores 0 for recipes learned with the profession. That stays 0
+ * unless the highest difficulty that is actually set — orange, then yellow,
+ * then green, then grey — is above 50. That skill stands in for the missing minimum.
  */
+/** Bind-on-pickup recipe whose only practical source is a mob drop. */
+export function isBopMobDropRecipe(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): boolean {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return false;
+  const info = materialInfo[recipe.source.recipeItemId];
+  return info?.bop === true && info?.mobDrop === true;
+}
+
+/** Recipe items with no drop, vendor, quest, or container are not obtainable. */
+export function isRecipeObtainable(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): boolean {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return true;
+  return materialInfo[recipe.source.recipeItemId]?.hasSource !== false;
+}
+
+/** Recipe item is bought with a token, such as Merchant's Favor, rather than gold. */
+export function isCurrencyRecipe(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): boolean {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return false;
+  const cost = materialInfo[recipe.source.recipeItemId]?.currencyCost;
+  return Array.isArray(cost) && cost.length > 0;
+}
+
+/** Recipe item is rewarded by a quest that only Alliance or only Horde can complete. */
+export function isWrongFactionRecipe(recipe: Recipe, materialInfo: Record<number, MaterialInfo>, faction: string): boolean {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return false;
+  const itemFaction = materialInfo[recipe.source.recipeItemId]?.faction;
+  if (itemFaction !== 'Alliance' && itemFaction !== 'Horde') return false;
+  return itemFaction !== faction;
+}
+
+export function currencyCostLabel(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): string | null {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return null;
+  const cost = materialInfo[recipe.source.recipeItemId]?.currencyCost;
+  if (!cost?.length) return null;
+  return cost.map((entry) => `${entry.quantity} ${entry.name || `item ${entry.id}`}`).join(', ');
+}
+
 export function getEffectiveMinSkill(recipe: Recipe): number {
   if (recipe.minSkill > 0) return recipe.minSkill;
-  const fromDifficulty = getLowestNonZeroDifficulty(recipe.difficulty);
-  return fromDifficulty ?? recipe.minSkill;
+  const { orange, yellow, green, gray } = recipe.difficulty;
+  const highest = [orange, yellow, green, gray].find((value) => typeof value === 'number' && value > 0);
+  if (highest != null && highest > 50) return highest;
+  return recipe.minSkill;
 }
 
 function getAverageOutput(minCount?: number, maxCount?: number): number {
@@ -83,6 +115,14 @@ export function getRecipeCost(
     }
 
     const recipeInfo = materialInfo[recipeItemId];
+    if (recipeInfo?.currencyCost?.length) {
+      return {
+        vendorPrice: 0,
+        ahPrice: null,
+        isLimitedStock: false,
+        type: 'item'
+      };
+    }
     const priceData = prices[recipeItemId];
     
     // Vendor price takes precedence: BoP items sold by vendors (e.g. faction vendors) have a buyPrice
@@ -226,10 +266,10 @@ export function craftCost(
     const outputItemId = recipe.produces.id;
     const outputQty = recipe.produces?.quantity ?? 1;
     const info = materialInfo[outputItemId];
-    const itemLevel = info?.itemLevel ?? 70;
+    const disenchantItem = resolveDisenchantItem(outputItemId, materialInfo);
     const quality = recipe.quality ?? info?.quality ?? 1;
-    const isWeapon = info?.class === '2';
-    const deValuePerItem = getExpectedDisenchantValue(itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, info?.class, info?.slot, outputItemId);
+    const isWeapon = disenchantItem.itemClass === '2';
+    const deValuePerItem = getExpectedDisenchantValue(disenchantItem.itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
     const outputSellPrice = materialInfo[outputItemId]?.sellPrice ?? 0;
     const valuePerItem = deValuePerItem > 0 ? deValuePerItem : outputSellPrice;
     totalCost -= valuePerItem * outputQty;
@@ -338,6 +378,58 @@ export const forceAhOnlyItems = new Set<number>([
   // Add more as needed
 ]);
 
+/** Per-item vendor price. Only items an NPC actually sells have a buy price stored. */
+function unitVendorPrice(itemData: MaterialInfo | undefined): number {
+  const raw = itemData?.buyPrice;
+  if (typeof raw !== 'number' || raw <= 0) return Infinity;
+  if (itemData.vendorStack && itemData.vendorStack > 1) return raw / itemData.vendorStack;
+  return raw;
+}
+
+/** Cheapest buy price. Limited-stock vendors cannot supply a leveling route, so those stay on the auction house. */
+function cheapestBuyPrice(
+  itemId: number,
+  ahPrice: number,
+  vendorPrice: number,
+  itemData: MaterialInfo | undefined
+): number {
+  if (forceAhOnlyItems.has(itemId)) return ahPrice;
+  if (itemData?.limitedStock) return ahPrice < Infinity ? ahPrice : Infinity;
+  return Math.min(ahPrice, vendorPrice);
+}
+
+export type MaterialBuySource = 'vendor' | 'auction';
+
+/** Which listing the buy cost came from. Vendor wins ties, since the auction house is no cheaper. */
+export function materialBuySourceFromPrices(
+  itemId: number,
+  ahPrice: number,
+  vendorPrice: number,
+  itemData: MaterialInfo | undefined
+): MaterialBuySource | null {
+  if (!(cheapestBuyPrice(itemId, ahPrice, vendorPrice, itemData) < Infinity)) return null;
+  if (!forceAhOnlyItems.has(itemId) && !itemData?.limitedStock && vendorPrice < Infinity && vendorPrice <= ahPrice) {
+    return 'vendor';
+  }
+  return ahPrice < Infinity ? 'auction' : 'vendor';
+}
+
+export function materialBuySource(
+  itemId: number,
+  prices: PriceMap,
+  materialInfo: Record<number, MaterialInfo>,
+  useMarketValue = false
+): MaterialBuySource | null {
+  const itemData = materialInfo[itemId];
+  const vendorPrice = unitVendorPrice(itemData);
+  const ahEntry = prices[itemId];
+  const ahRaw = useMarketValue
+    ? (ahEntry?.marketValue ?? ahEntry?.minBuyout)
+    : (ahEntry?.minBuyout ?? ahEntry?.marketValue);
+  const ahPrice = ahRaw && ahRaw > 0 ? ahRaw : Infinity;
+  return materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, itemData);
+}
+
 export function getItemCost(
   itemId: number,
   prices: PriceMap,
@@ -359,11 +451,7 @@ export function getItemCost(
     (prices[itemId]?.minBuyout ?? prices[itemId]?.marketValue);
   const ahPrice = ahPriceRaw && ahPriceRaw > 0 ? ahPriceRaw : Infinity;
   
-  // Then check vendor price (divide by vendorStack when sold in stacks - price is per stack)
-  const rawVendorPrice = itemData?.buyPrice ?? Infinity;
-  const vendorPrice = (itemData?.vendorStack && itemData.vendorStack > 1 && rawVendorPrice < Infinity)
-    ? rawVendorPrice / itemData.vendorStack
-    : rawVendorPrice;
+  const vendorPrice = unitVendorPrice(itemData);
 
   // Force AH-only items to use auction house price only (ignore vendor)
   if (forceAhOnlyItems.has(itemId)) {
@@ -371,16 +459,7 @@ export function getItemCost(
     return ahPrice;
   }
 
-  // Limited stock items: always use AH price when available (vendor can't supply enough)
-  // Non-limited: prefer AH when available, else vendor
-  let directPrice;
-  if (itemData?.limitedStock) {
-    directPrice = ahPrice < Infinity ? ahPrice : Infinity;
-  } else if (ahPrice < Infinity) {
-    directPrice = ahPrice;
-  } else {
-    directPrice = vendorPrice;
-  }
+  let directPrice = cheapestBuyPrice(itemId, ahPrice, vendorPrice, itemData);
 
   // Don't allow zero unless it's a vendor item
   if (directPrice === Infinity && itemData?.createdBy) {
@@ -491,33 +570,17 @@ export function buildMaterialTree(
   currentProfessionRecipeIds?: Set<number>
 ): MaterialTreeNode {
   const info = materialInfo[itemId];
-  const rawVendorPrice = info?.buyPrice;
-  // Divide by vendorStack when sold in stacks - price is per stack
-  const vendorPrice = (info?.vendorStack && info.vendorStack > 1 && typeof rawVendorPrice === 'number')
-    ? rawVendorPrice / info.vendorStack
-    : rawVendorPrice;
+  const vendorPrice = unitVendorPrice(info);
   const ahEntry = prices[itemId];
   const isListed = !!(ahEntry && (useMarketValue ? ahEntry.marketValue : ahEntry.minBuyout) && (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) > 0);
-  const isVendorItem = rawVendorPrice != null && !info?.auctionhouse;
+  const isVendorItem = vendorPrice < Infinity && !info?.auctionhouse;
 
   const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
   // Limited stock + no AH: treat as "no AH" so we show craft cost (vendor can't supply enough)
   const usedCrafting = (!isListed && !isVendorItem) || (info?.limitedStock && !isListed);
 
-  // Limited stock items: always use AH price when available (vendor can't supply enough)
-  // Non-limited: prefer AH when available, else vendor
-  let buyCost;
-  if (forceAhOnlyItems.has(itemId)) {
-    buyCost = ahPrice;
-  } else if (info?.limitedStock) {
-    buyCost = ahPrice < Infinity ? ahPrice : Infinity;
-  } else if (isVendorItem) {
-    buyCost = vendorPrice!;
-  } else if (ahPrice < Infinity) {
-    buyCost = ahPrice;
-  } else {
-    buyCost = typeof vendorPrice === 'number' ? vendorPrice : Infinity;
-  }
+  const buyCost = cheapestBuyPrice(itemId, ahPrice, vendorPrice, info);
+  const buySource = materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, info);
 
   let craftCost = Infinity;
   let children: MaterialTreeNode[] = [];
@@ -535,6 +598,7 @@ export function buildMaterialTree(
       totalCost: buyCost * quantity,
       children: [],
       noAhPrice: usedCrafting,
+      buySource,
     };
   }
 
@@ -548,6 +612,7 @@ export function buildMaterialTree(
       totalCost: buyCost * quantity,
       children: [],
       noAhPrice: usedCrafting,
+      buySource,
     };
   }
 
@@ -593,5 +658,6 @@ export function buildMaterialTree(
     totalCost,
     children,
     noAhPrice: usedCrafting,
+    buySource,
   };
 }

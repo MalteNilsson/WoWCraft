@@ -10,23 +10,27 @@ export const metadata: Metadata = {
     'WoWCraft builds cost-effective profession leveling routes for World of Warcraft Classic and The Burning Crusade, using skill-up chances, vendor prices, and auction house listings.',
 };
 
-type GameVersion = 'vanilla' | 'tbc';
+type GameVersion = 'vanilla' | 'tbc' | 'forever';
 
 const gameVersions: { id: GameVersion; label: string }[] = [
+  { id: 'forever', label: 'Forever' },
   { id: 'tbc', label: 'The Burning Crusade' },
-  { id: 'vanilla', label: 'Vanilla' },
 ];
 
 function parseGameVersion(value?: string): GameVersion {
-  return value?.toLowerCase() === 'vanilla' ? 'vanilla' : 'tbc';
+  const normalized = value?.toLowerCase();
+  if (normalized === 'tbc' || normalized === 'the burning crusade' || normalized === 'vanilla') return 'tbc';
+  return 'forever';
 }
 
 function professionHref(slug: string, version: GameVersion): string {
-  return version === 'vanilla' ? `/${slug}?version=Vanilla` : `/${slug}`;
+  if (version === 'tbc') return `/${slug}?version=tbc`;
+  return `/${slug}`;
 }
 
 function isAvailableInVersion(slug: string, version: GameVersion): boolean {
   if (version === 'tbc') return true;
+  if (version === 'forever') return slug !== 'jewelcrafting';
   return slug !== 'jewelcrafting' && slug !== 'cooking';
 }
 
@@ -38,7 +42,7 @@ export default async function HomePage({
   const params = await searchParams;
   const version = parseGameVersion(params.version);
   if (params.skill && /^\d+$/.test(params.skill)) {
-    const versionQuery = version === 'vanilla' ? '&version=Vanilla' : '';
+    const versionQuery = version === 'tbc' ? '&version=tbc' : '';
     redirect(`/enchanting?skill=${params.skill}${versionQuery}`);
   }
 
@@ -63,13 +67,15 @@ export default async function HomePage({
               return (
                 <Link
                   key={option.id}
-                  href={option.id === 'vanilla' ? '/?version=vanilla' : '/'}
+                  href={option.id === 'tbc' ? '/?version=tbc' : '/'}
                   aria-current={selected ? 'true' : undefined}
                   className={`rounded-md px-3 py-1.5 text-sm font-semibold transition-colors ${
                     selected
                       ? option.id === 'tbc'
                         ? 'bg-emerald-500 text-neutral-950'
-                        : 'bg-[#e3b056] text-neutral-950'
+                        : option.id === 'forever'
+                          ? 'bg-[#1fb5f7] text-neutral-950'
+                          : 'bg-[#e3b056] text-neutral-950'
                       : 'text-neutral-300 hover:text-white'
                   }`}
                 >
@@ -110,25 +116,19 @@ export default async function HomePage({
               </>
             );
             return (
-              <li key={guide.slug} className="flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900">
+              <li key={guide.slug}>
                 {available ? (
                   <Link
                     href={professionHref(guide.slug, version)}
-                    className="flex flex-1 items-center gap-3 px-4 py-3.5 transition-colors hover:bg-neutral-800"
+                    className="flex h-full items-center gap-3 rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-3.5 transition-colors hover:border-[#e3b056]/70 hover:bg-neutral-800"
                   >
                     {card}
                   </Link>
                 ) : (
-                  <div className="flex flex-1 items-center gap-3 bg-neutral-900/40 px-4 py-3.5">
+                  <div className="flex h-full items-center gap-3 rounded-lg border border-neutral-800/70 bg-neutral-900/40 px-4 py-3.5">
                     {card}
                   </div>
                 )}
-                <Link
-                  href={`/guides/${guide.slug}`}
-                  className="border-t border-neutral-800 px-4 py-2 text-xs font-medium text-[#e3b056] hover:bg-neutral-800 hover:text-white"
-                >
-                  Read the {guide.name} guide
-                </Link>
               </li>
             );
           })}
@@ -164,18 +164,13 @@ export default async function HomePage({
           </ul>
           <p className="mt-6 text-sm leading-relaxed text-neutral-400">
             Auction prices are ready for {auctionRealms.join(', ')}, updated {auctionDataUpdatedLabel}.
-            Vanilla runs to 300. The Burning Crusade runs to 375.
+            Forever runs to 225. The Burning Crusade runs to 375.
           </p>
         </section>
       </main>
 
-      <footer className="border-t border-neutral-800 px-5 py-4">
-        <nav className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-neutral-400">
-          <Link href="/faq" className="hover:text-white">FAQ</Link>
-          <Link href="/about" className="hover:text-white">About</Link>
-          <Link href="/privacy" className="hover:text-white">Privacy</Link>
-        </nav>
-        <p className="mt-3 text-xs leading-relaxed text-neutral-500">
+      <footer className="border-t border-neutral-800">
+        <p className="px-5 py-4 text-xs leading-relaxed text-neutral-500">
           WoWCraft is not affiliated with Blizzard Entertainment. World of Warcraft is a
           registered trademark of Blizzard Entertainment.
         </p>

@@ -83,6 +83,14 @@ export type MaterialInfo = {
   sellPrice?: number;
   auctionhouse?: boolean;
   bop?: boolean;
+  /** False when the recipe item has no drop, vendor, quest, or container source. */
+  hasSource?: boolean;
+  /** Bind-on-pickup recipe learned only by killing a mob for the drop. */
+  mobDrop?: boolean;
+  /** Token cost, such as Merchant's Favor. The recipe is not bought with gold. */
+  currencyCost?: { id: number; name: string; quantity: number }[];
+  /** Set when the recipe item comes from a quest that only one faction can complete. */
+  faction?: 'Alliance' | 'Horde';
   limitedStock?: boolean;
   vendorStack?: number;
   itemLevel?: number;
@@ -103,5 +111,7 @@ export type MaterialTreeNode = {
   buyCost: number;
   craftCost: number;
   children: MaterialTreeNode[];
+  /** Where the buy cost comes from. Null when the item has no vendor or auction price. */
+  buySource?: 'vendor' | 'auction' | null;
   noAhPrice?: boolean;
 };

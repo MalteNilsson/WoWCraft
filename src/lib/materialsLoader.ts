@@ -1,6 +1,7 @@
 // Version-specific materials (vanilla = classic, tbc = burning crusade)
 import vanillaMaterials from '@/data/materials/vanilla/materials.json';
 import tbcMaterials from '@/data/materials/tbc/materials.json';
+import foreverMaterials from '@/data/materials/forever/materials.json';
 import { MaterialInfo } from './types';
 
 // Recipe items (use static imports so they work in client components; fs.readFileSync fails in browser)
@@ -19,6 +20,13 @@ import tbcTailoringItems from '@/data/recipes/tbc/tailoring_items.json';
 import tbcAlchemyItems from '@/data/recipes/tbc/alchemy_items.json';
 import tbcCookingItems from '@/data/recipes/tbc/cooking_items.json';
 import tbcJewelcraftingItems from '@/data/recipes/tbc/jewelcrafting_items.json';
+import foreverEnchantingItems from '@/data/recipes/forever/enchanting_items.json';
+import foreverEngineeringItems from '@/data/recipes/forever/engineering_items.json';
+import foreverBlacksmithingItems from '@/data/recipes/forever/blacksmithing_items.json';
+import foreverLeatherworkingItems from '@/data/recipes/forever/leatherworking_items.json';
+import foreverTailoringItems from '@/data/recipes/forever/tailoring_items.json';
+import foreverAlchemyItems from '@/data/recipes/forever/alchemy_items.json';
+import foreverCookingItems from '@/data/recipes/forever/cooking_items.json';
 
 function processMaterials(raw: Record<string, any>): Record<number, MaterialInfo> {
   return Object.fromEntries(
@@ -43,22 +51,25 @@ function mergeRecipeItems(
   materialInfo: Record<number, MaterialInfo>,
   items: Record<string, any>,
   itemType: string,
-  wowheadPath: 'classic' | 'tbc'
+  wowheadPath: 'classic' | 'tbc' | 'forever'
 ) {
   Object.entries(items).forEach(([id, val]) => {
     const itemId = parseInt(id);
+    const fallbackName = `${itemType === 'engineering' ? 'Schematic' : itemType === 'blacksmithing' ? 'Plan' : itemType === 'leatherworking' || itemType === 'tailoring' ? 'Pattern' : itemType === 'jewelcrafting' ? 'Design' : 'Recipe'} #${id}`;
+    let fallbackIcon = 'inv_scroll_03';
+    if (itemType === 'engineering') fallbackIcon = 'inv_scroll_05';
+    else if (itemType === 'blacksmithing') fallbackIcon = 'inv_scroll_06';
+    else if (itemType === 'leatherworking' || itemType === 'tailoring') fallbackIcon = 'inv_scroll_04';
+    const itemName = typeof val.name === 'string' && val.name.trim() ? val.name.trim() : fallbackName;
+    const itemQuality = typeof val.quality === 'number' ? val.quality : 1;
+    const itemIcon = typeof val.icon === 'string' && val.icon.trim() ? val.icon.trim() : fallbackIcon;
     if (!materialInfo[itemId]) {
-      let icon = 'inv_scroll_03';
-      if (itemType === 'engineering') icon = 'inv_scroll_05';
-      else if (itemType === 'blacksmithing') icon = 'inv_scroll_06';
-      else if (itemType === 'leatherworking' || itemType === 'tailoring') icon = 'inv_scroll_04';
-      else if (itemType === 'alchemy' || itemType === 'cooking' || itemType === 'jewelcrafting') icon = 'inv_scroll_03';
       materialInfo[itemId] = {
-        name: `${itemType === 'engineering' ? 'Schematic' : itemType === 'blacksmithing' ? 'Plan' : itemType === 'leatherworking' || itemType === 'tailoring' ? 'Pattern' : itemType === 'jewelcrafting' ? 'Design' : 'Recipe'} #${id}`,
-        quality: 1,
+        name: itemName,
+        quality: itemQuality,
         class: 'Trade Goods',
         subclass: 'Recipe',
-        icon,
+        icon: itemIcon,
         slot: '',
         link: `https://www.wowhead.com/${wowheadPath}/item=${id}`,
         buyPrice: val.buyPrice ?? undefined,
@@ -66,17 +77,30 @@ function mergeRecipeItems(
         limitedStock: val.limitedStock,
         vendorStack: val.vendorStack,
         auctionhouse: val.auctionhouse,
-        bop: val.bop
+        bop: val.bop,
+        hasSource: val.hasSource,
+        mobDrop: val.mobDrop,
+        currencyCost: Array.isArray(val.currencyCost) && val.currencyCost.length ? val.currencyCost : undefined,
+        faction: val.faction === 'Alliance' || val.faction === 'Horde' ? val.faction : undefined
       };
     } else {
+      const current = materialInfo[itemId];
+      const stub = !current.name;
       materialInfo[itemId] = {
-        ...materialInfo[itemId],
-        buyPrice: val.buyPrice ?? materialInfo[itemId].buyPrice,
-        vendorPrice: val.buyPrice ?? materialInfo[itemId].vendorPrice,
-        limitedStock: val.limitedStock ?? materialInfo[itemId].limitedStock,
-        vendorStack: val.vendorStack ?? materialInfo[itemId].vendorStack,
-        auctionhouse: val.auctionhouse ?? materialInfo[itemId].auctionhouse,
-        bop: val.bop ?? materialInfo[itemId].bop
+        ...current,
+        name: current.name || itemName,
+        quality: stub && typeof val.quality === 'number' ? val.quality : (current.quality ?? itemQuality),
+        icon: current.icon || itemIcon,
+        buyPrice: val.buyPrice ?? current.buyPrice,
+        vendorPrice: val.buyPrice ?? current.vendorPrice,
+        limitedStock: val.limitedStock ?? current.limitedStock,
+        vendorStack: val.vendorStack ?? current.vendorStack,
+        auctionhouse: val.auctionhouse ?? current.auctionhouse,
+        bop: val.bop ?? current.bop,
+        hasSource: val.hasSource ?? current.hasSource,
+        mobDrop: val.mobDrop ?? current.mobDrop,
+        currencyCost: Array.isArray(val.currencyCost) && val.currencyCost.length ? val.currencyCost : current.currencyCost,
+        faction: val.faction === 'Alliance' || val.faction === 'Horde' ? val.faction : current.faction
       };
     }
   });
@@ -102,9 +126,19 @@ mergeRecipeItems(tbcMaterialInfo, tbcAlchemyItems as Record<string, any>, 'alche
 mergeRecipeItems(tbcMaterialInfo, tbcCookingItems as Record<string, any>, 'cooking', 'tbc');
 mergeRecipeItems(tbcMaterialInfo, tbcJewelcraftingItems as Record<string, any>, 'jewelcrafting', 'tbc');
 
+const foreverMaterialInfo = processMaterials(foreverMaterials as Record<string, any>);
+mergeRecipeItems(foreverMaterialInfo, foreverEnchantingItems as Record<string, any>, 'enchanting', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverEngineeringItems as Record<string, any>, 'engineering', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverBlacksmithingItems as Record<string, any>, 'blacksmithing', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverLeatherworkingItems as Record<string, any>, 'leatherworking', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverTailoringItems as Record<string, any>, 'tailoring', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverAlchemyItems as Record<string, any>, 'alchemy', 'forever');
+mergeRecipeItems(foreverMaterialInfo, foreverCookingItems as Record<string, any>, 'cooking', 'forever');
+
 export const materialInfoMap: Record<string, Record<number, MaterialInfo>> = {
   'Vanilla': vanillaMaterialInfo,
-  'The Burning Crusade': tbcMaterialInfo
+  'The Burning Crusade': tbcMaterialInfo,
+  'Forever': foreverMaterialInfo,
 };
 
 export default materialInfoMap;

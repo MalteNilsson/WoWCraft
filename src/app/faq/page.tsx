@@ -14,8 +14,8 @@ const faqs = [
     a: 'WoWCraft plans a profession leveling route for World of Warcraft Classic and The Burning Crusade. You set a skill range, and it lists the crafts, how many to make, what they cost, and what to buy before you start.',
   },
   {
-    q: 'What is the difference between Vanilla and The Burning Crusade?',
-    a: 'Vanilla routes stop at skill 300. The Burning Crusade continues to 375 and adds its own recipes. Cooking and Jewelcrafting are available for The Burning Crusade. Jewelcrafting does not exist in Vanilla, and the Vanilla cooking list has no recipes yet.',
+    q: 'What is the difference between The Burning Crusade and Forever?',
+    a: 'The Burning Crusade routes run to skill 375 and include Jewelcrafting. Forever runs to 225, includes Cooking, and does not include Jewelcrafting. Each version uses its own recipes and its own auction prices.',
   },
   {
     q: 'How does Cost mode work?',
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: 'Does the site use cookies?',
-    a: 'Advertising pages use Google AdSense, which sets cookies. The privacy policy explains that, along with Vercel Analytics and the auction-house notice saved in your browser.',
+    a: 'Advertising pages use Google AdSense, which sets cookies. Closing the Forever announcement on a profession page also stores a cookie so that notice stays dismissed. The privacy policy explains both, along with Vercel Analytics and the auction-house notice saved in your browser.',
   },
 ];
 

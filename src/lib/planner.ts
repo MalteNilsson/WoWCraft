@@ -1,5 +1,5 @@
 import { Recipe, PriceMap } from "./types";
-import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, type PriceSourcing } from "./recipeCalc";
+import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, isRecipeObtainable, isCurrencyRecipe, isWrongFactionRecipe, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
 import type { RegionSoldPerDayMap } from "./regionDataLoader";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from "./rodConstants";
@@ -19,6 +19,30 @@ const MAX_PROFIT_MARGIN_AH_MODE = 5;
  * Region data uses fractional values (e.g. 0.007 = <1 sale/day). We only reject essentially dead items (soldPerDay ≈ 0). */
 export function getMinSoldPerDayForProfession(_profession: string): number {
   return 0.001;
+}
+
+/** Campfires share a cooldown, so they cannot be repeated to gain skill. */
+export function isSkillCooldownRecipe(recipe: Recipe): boolean {
+  return /\bcampfire\b/i.test(recipe.name);
+}
+
+/**
+ * Recipes sold only during a world event.
+ * "Winter" alone is not enough: Edge of Winter and Robe of Winter Night are available all year.
+ */
+export function isSeasonalRecipe(recipe: Recipe): boolean {
+  const name = recipe.name;
+  if (/\bfirework\b/i.test(name)) return true;
+  if (/\brocket cluster\b/i.test(name)) return true;
+  if (/^(?:small|large) (?:blue|green|red|purple|white|yellow) rocket$/i.test(name)) return true;
+  if (/^(?:festival|festive)\b/i.test(name)) return true;
+  if (/\bwinter clothes\b/i.test(name)) return true;
+  if (/^gingerbread cookie$/i.test(name)) return true;
+  if (/^egg nog$/i.test(name)) return true;
+  if (/winter's might/i.test(name)) return true;
+  if (/^steam tonk controller$/i.test(name)) return true;
+  if (/^dress shoes$/i.test(name)) return true;
+  return false;
 }
 
 export const blacklistedSpellIds = new Set<number>([
@@ -81,6 +105,8 @@ export const blacklistedSpellIds = new Set<number>([
     29688,
     28569,
     28568,
+    1230564, // Mana Well
+    2365, // Draught of Tongues
 ]);
 
 
@@ -173,7 +199,9 @@ export function makeDynamicPlan(
     optimizeSubCrafting: boolean = true,
     currentProfessionRecipeIds?: Set<number>,
     priceSourcing: PriceSourcing = 'cost',
-    regionSoldPerDay?: RegionSoldPerDayMap
+    regionSoldPerDay?: RegionSoldPerDayMap,
+    includeCurrencyRecipes: boolean = false,
+    faction: string = 'Alliance'
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
@@ -318,7 +346,12 @@ export function makeDynamicPlan(
             const chance = expectedSkillUps(r, currentSkill - 1);
             if (getEffectiveMinSkill(r) > currentSkill - 1 || 
                 chance <= 0 || 
-                blacklistedSpellIds.has(r.id)) {
+                blacklistedSpellIds.has(r.id) ||
+                isSkillCooldownRecipe(r) ||
+                isSeasonalRecipe(r) ||
+                !isRecipeObtainable(r, materialInfo) ||
+                (!includeCurrencyRecipes && isCurrencyRecipe(r, materialInfo)) ||
+                isWrongFactionRecipe(r, materialInfo, faction)) {
                 return false;
             }
 
@@ -329,8 +362,8 @@ export function makeDynamicPlan(
 
             // In auction-house mode: exclude recipes whose output has < 4 auctions (unreliable price data)
             if (priceSourcing === 'auction-house' && r.produces?.id) {
-                const numAuctions = prices[r.produces.id]?.numAuctions ?? 0;
-                if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
+                const numAuctions = prices[r.produces.id]?.numAuctions;
+                if (typeof numAuctions === 'number' && numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                 // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
                 // Only reject when we have data; items not in region map are allowed (no liquidity data)
@@ -592,7 +625,12 @@ export function makeDynamicPlan(
                 const chance = expectedSkillUps(r, batchEnd - 1);
                 if (getEffectiveMinSkill(r) > batchStart || 
                     chance <= 0 || 
-                    blacklistedSpellIds.has(r.id)) {
+                    blacklistedSpellIds.has(r.id) ||
+                    isSkillCooldownRecipe(r) ||
+                    isSeasonalRecipe(r) ||
+                    !isRecipeObtainable(r, materialInfo) ||
+                    (!includeCurrencyRecipes && isCurrencyRecipe(r, materialInfo)) ||
+                    isWrongFactionRecipe(r, materialInfo, faction)) {
                     return false;
                 }
 
@@ -603,8 +641,8 @@ export function makeDynamicPlan(
 
                 // In auction-house mode: exclude recipes whose output has < 4 auctions (unreliable price data)
                 if (priceSourcing === 'auction-house' && r.produces?.id) {
-                    const numAuctions = prices[r.produces.id]?.numAuctions ?? 0;
-                    if (numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
+                    const numAuctions = prices[r.produces.id]?.numAuctions;
+                    if (typeof numAuctions === 'number' && numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
                     // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
                     // Only reject when we have data; items not in region map are allowed (no liquidity data)

@@ -1,0 +1,4925 @@
+{
+  "2406": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fine Leather Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "2407": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: White Leather Jerkin",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "2408": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fine Leather Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "2409": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dark Leather Tunic",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4293": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hillman's Leather Vest",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4294": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hillman's Belt",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4296": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dark Leather Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4297": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Barbaric Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4298": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Belt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4299": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Armor",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4300": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Leather Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4301": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Barbaric Belt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5083": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Kodo Hide Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "faction": "Horde"
+  },
+  "5786": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 550,
+    "auctionhouse": false,
+    "name": "Pattern: Murloc Scale Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5787": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 600,
+    "auctionhouse": false,
+    "name": "Pattern: Murloc Scale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5788": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 650,
+    "auctionhouse": false,
+    "name": "Pattern: Thick Murloc Armor",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5789": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2800,
+    "auctionhouse": false,
+    "name": "Pattern: Murloc Scale Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5972": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fine Leather Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "5973": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 650,
+    "auctionhouse": false,
+    "name": "Pattern: Barbaric Leggings",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5974": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6474": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 550,
+    "auctionhouse": false,
+    "name": "Pattern: Deviate Scale Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6475": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Deviate Scale Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6476": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Deviate Scale Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6710": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Moonglow Vest",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "faction": "Alliance"
+  },
+  "7288": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Rugged Leather Pants",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7289": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 650,
+    "auctionhouse": false,
+    "name": "Pattern: Black Whelp Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7290": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1600,
+    "auctionhouse": false,
+    "name": "Pattern: Red Whelp Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7360": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dark Leather Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7361": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Pattern: Herbalist's Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7362": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Earthen Leather Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7363": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Pilferer's Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7364": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Earthen Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7449": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dusky Leather Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7450": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Whelp Armor",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7451": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2800,
+    "auctionhouse": false,
+    "name": "Pattern: Green Whelp Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7452": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dusky Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7453": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Swift Boots",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7613": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Green Leather Armor",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "8384": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Comfortable Leather Hat",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "8385": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 3500,
+    "auctionhouse": false,
+    "name": "Pattern: Turtle Scale Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "8386": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8387": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Mask",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8389": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8390": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8395": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Breastplate",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8397": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8398": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8399": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8400": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8401": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8402": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tough Scorpid Helm",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "8403": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8404": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Vest",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8405": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Helmet",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8406": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Boots",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8407": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8408": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "8409": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 4000,
+    "auctionhouse": false,
+    "name": "Pattern: Nightscape Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "12691": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wildthorn Mail",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "12703": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Storm Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "12716": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Helm of the Great Chief",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "12728": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Invulnerable Mail",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "13287": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Raptor Hide Harness",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "13288": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Raptor Hide Belt",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14635": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 3000,
+    "auctionhouse": false,
+    "name": "Pattern: Gem-studded Leather Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15724": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Heavy Scorpid Bracers",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15725": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Wicked Leather Gauntlets",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15726": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Green Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15727": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Vest",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15728": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15729": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Chimeric Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15730": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Red Dragonscale Breastplate",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "15731": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Gauntlets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15732": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Volcanic Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15733": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Dragonscale Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15734": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 14000,
+    "auctionhouse": false,
+    "name": "Pattern: Living Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15735": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 14000,
+    "auctionhouse": false,
+    "name": "Pattern: Ironfeather Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15737": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Chimeric Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15738": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Gauntlets",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15739": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15740": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Pattern: Frostsaber Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15741": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Pattern: Stormshroud Pants",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15742": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Warbear Harness",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15743": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Belt",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15744": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Headband",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15745": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15746": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Chimeric Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15747": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostsaber Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15748": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15749": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Volcanic Breastplate",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15751": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Blue Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15752": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Living Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "15753": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormshroud Armor",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15755": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Chimeric Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15756": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Runic Leather Headband",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15757": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15758": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Devilsaur Gauntlets",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15759": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Black Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15760": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ironfeather Breastplate",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15761": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostsaber Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15762": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 25000,
+    "auctionhouse": false,
+    "name": "Pattern: Heavy Scorpid Helm",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15763": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Dragonscale Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15764": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormshroud Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15765": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15768": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15770": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Dragonscale Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15771": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Living Breastplate",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15772": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Devilsaur Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "15773": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Armor",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15774": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "15775": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Volcanic Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15776": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Armor",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15777": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runic Leather Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15779": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostsaber Tunic",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "15781": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Dragonscale Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "17022": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 150000,
+    "auctionhouse": false,
+    "name": "Pattern: Corehound Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17023": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 160000,
+    "auctionhouse": false,
+    "name": "Pattern: Molten Helm",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17025": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 160000,
+    "auctionhouse": false,
+    "name": "Pattern: Black Dragonscale Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17722": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gloves of the Greatfather",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18239": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 3500,
+    "auctionhouse": false,
+    "name": "Pattern: Shadowskin Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18252": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Core Armor Kit",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "18514": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Girdle of Insight",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18515": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mongoose Boots",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18516": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Swift Flight Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18517": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Chromatic Cloak",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "18518": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hide of the Wild",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "18519": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Shifting Cloak",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "18731": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Heavy Leather Ball",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18949": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Barbaric Bracers",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19202": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Heavy Timbermaw Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19204": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Heavy Timbermaw Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19326": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Might of the Timbermaw",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19327": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Timbermaw Brawlers",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19328": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Dawn Treaders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19329": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Golden Mantle of the Dawn",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19330": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 60000,
+    "auctionhouse": false,
+    "name": "Pattern: Lava Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19331": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 90000,
+    "auctionhouse": false,
+    "name": "Pattern: Chromatic Gauntlets",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19332": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 90000,
+    "auctionhouse": false,
+    "name": "Pattern: Corehound Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19333": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 90000,
+    "auctionhouse": false,
+    "name": "Pattern: Molten Belt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19769": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Primal Batskin Jerkin",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19770": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Primal Batskin Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19771": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Primal Batskin Bracers",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19772": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Blood Tiger Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19773": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Blood Tiger Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "20254": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Warbear Woolies",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "20576": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1400,
+    "auctionhouse": false,
+    "name": "Pattern: Black Whelp Tunic",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "21548": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormshroud Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215152": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Glowing Gneuro-Linked Cowl",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215367": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 25000,
+    "auctionhouse": false,
+    "name": "Pattern: Faintly Glowing Leather",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215422": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Glowing Hyperconductive Scale Coif",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215423": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Gneuro-Conductive Channeler's Hood",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215424": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Rad-Resistant Scale Hood",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "217260": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Mask",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217262": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Voodoo Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217264": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Leather Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "217266": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Guardian Belt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "217271": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 3500,
+    "auctionhouse": false,
+    "name": "Pattern: Turtle Scale Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227898": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Honed Blue Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227899": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Honed Blue Dragonscale Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227900": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Living Green Dragonscale Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227902": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Hardened Black Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227903": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hardened Black Dragonscale Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "227904": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hardened Black Dragonscale Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "227906": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Masterwork Volcanic Breastplate",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "227907": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Masterwork Volcanic Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "227908": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Masterwork Volcanic Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "227910": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brilliant Chromatic Cloak",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "228119": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Devilcore Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228120": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Devilcore Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "228251": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Living Green Dragonscale Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228276": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mastercrafted Shifting Cloak",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "228301": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Swift Flight Vambraces",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "228309": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Living Green Dragonscale Breastplate",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228319": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Girdle of Arcane Insight",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "238306": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Bandana",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238307": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Shoulderpads",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238308": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Vest",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238309": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238310": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238311": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Belt",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238312": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Trousers",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238313": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Infiltrator's Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238314": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Coif",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238315": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Pauldrons",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238316": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Chain",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238317": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Wristguards",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238318": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Handguards",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238319": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Clasp",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238320": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Legguards",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238321": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Huntsman's Boots",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238927": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Scarlet Quiver",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "238928": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Scarlet Ammo Pouch",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "252761": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Black Whelp Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252762": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Dark Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252763": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Murloc Scale Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252764": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Moonglow Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252765": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252766": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252767": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252768": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252769": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252770": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252777": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252778": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252779": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252780": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252781": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252782": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252783": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Mystic Medium Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252784": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Forceful Medium Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252786": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252787": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252788": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252789": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252790": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252791": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252798": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252799": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252800": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252801": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252802": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252803": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Hood",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252804": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hillman's Leather Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252805": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252806": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252807": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252808": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252809": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252810": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Tunic",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "252811": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Mystic Heavy Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252812": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Forceful Heavy Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252820": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Brawler's Leather Legguards",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252821": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Trapper's Leather Legguards",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252822": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Defender's Leather Kilt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252823": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Totemic Leather Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252824": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Stormrider's Leather Kilt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252825": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom's Leather Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252826": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252827": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252828": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252829": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252830": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252831": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252832": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252833": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3500,
+    "auctionhouse": false,
+    "name": "Pattern: Mystic Thick Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252834": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4625,
+    "auctionhouse": false,
+    "name": "Pattern: Forceful Thick Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252836": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252837": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252838": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252839": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252840": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252841": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252842": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252843": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Prowler's Leather Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252844": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skulker's Leather Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252845": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Warden's Leather Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252846": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skycaller's Leather Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252847": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mender's Leather Shoes",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252848": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252849": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Shoulder",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252850": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252851": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252852": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252853": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252854": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252855": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252856": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252857": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252858": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252859": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Shoes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252860": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252861": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252862": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252863": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252864": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252865": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252866": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252867": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Prowler's Leather Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252868": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skulker's Leather Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252869": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Warden's Leather Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252870": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skycaller's Leather Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252871": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mender's Leather Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252872": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Prowler's Leather Waistguard",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252873": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Skulker's Leather Waistguard",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252874": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Warden's Leather Waistguard",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252875": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Leather Waistguard",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252876": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Leather Waistguard",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252877": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Tooled Leather Armor",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252878": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252879": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252880": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Gauntlets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252881": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252882": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Crown",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252883": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Blue Suede Armor",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252884": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wicked Leather Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252885": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252886": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252887": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Epaulets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252888": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252889": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Tooled Leather Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252890": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Suede Hat",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252891": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Living Crown",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252892": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Dawn Armor",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252893": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Timbermaw Tunic",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252894": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Warbear Helm",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252895": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ironfeather Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252896": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stalker's Mail Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252897": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skycaller's Mail Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252898": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skirmisher's Mail Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252899": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mender's Mail Boots",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252900": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Mail Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252901": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Mail Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252902": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Mail Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252903": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5250,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Mail Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "252904": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Mail Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252905": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Mail Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252906": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Mail Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252907": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Mail Bracers",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252908": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252909": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252910": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Mail Sabatons",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252911": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Mail Sabatons",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252912": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Mail Sabatons",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252913": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Mail Sabatons",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252914": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252915": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Helm",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252916": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252917": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252918": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stalker's Mail Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252919": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skycaller's Mail Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252920": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Skirmisher's Mail Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252921": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mender's Mail Gauntlets",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252922": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Stalker's Mail Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252923": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Skycaller's Mail Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252924": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Skirmisher's Mail Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252925": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Pattern: Mender's Mail Belt",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252926": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252927": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252928": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Scorpid Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252929": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252930": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Gauntlets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252931": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Helm",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252932": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252933": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Supple Scorpid Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252934": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252935": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Supple Scorpid Sabatons",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252936": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Charged Scorpid Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252937": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Dragonscale Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252938": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Blue Dragonscale Helm",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252939": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Dragonscale Helm",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252940": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Pristine Scorpid Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "252941": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Mystic Rugged Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "252942": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 5500,
+    "auctionhouse": false,
+    "name": "Pattern: Forceful Rugged Armor Kit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "273096": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Blueprint: Tanning Rack",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "273121": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Blueprint: Sewing Machine",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "273952": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Trousers",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273953": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Grips",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273954": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Shoulderpads",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273955": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Stompers",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273956": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Kilt",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273957": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Mitts",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273958": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Mantle",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273959": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Sandals",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273960": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Legguards",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273961": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Handguards",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273962": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Pauldrons",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273963": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Boots",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273964": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273965": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Gauntlets",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273966": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Spaulders",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273967": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grovekeeper Treads",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273968": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wildstalker's Legguards",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273969": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wildstalker's Gauntlets",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273970": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wildstalker's Spaulders",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273971": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wildstalker's Greaves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273996": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grimstitch Pants",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273997": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grimstitch Gloves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273998": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grimstitch Spaulders",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273999": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Grimstitch Boots",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274000": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274001": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Grips",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274002": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Spaulders",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274003": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Treads",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274004": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Pants",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274005": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Gauntlets",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274006": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Epaulets",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274007": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Greaves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "275586": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Bileblister Claws",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275587": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Bileblister Girdle",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275588": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Bileblister Boots",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275589": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Hivethrasher's Claws",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275590": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Hivethrasher's Girdle",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275591": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Hivethrasher's Boots",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275592": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Scalegut Clenchers",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275593": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Scalegut Belt",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275594": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Scalegut Treaders",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275595": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Broodwatcher's Clenchers",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275596": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Broodwatcher's Belt",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "275597": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Broodwatcher's Treaders",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "276542": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Kilt",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "276543": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Gloves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "276544": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Mantle",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "276545": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Spiritcaller Boots",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "276934": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Harness",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276935": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276936": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276937": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276938": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Trousers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276939": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276940": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Jerkin",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276941": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Armguards",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276942": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Mitts",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276943": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Strap",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276944": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276945": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Footwraps",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276958": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Harness",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276959": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Bracers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276960": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276961": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276962": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Trousers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276963": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276964": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Jerkin",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276965": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Armguards",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276966": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Mitts",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276967": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Strap",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276968": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276969": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Footwraps",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276978": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Hood",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276979": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Gustwoven Spaulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276980": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Cover",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276981": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Windraveled Drapes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276986": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Hood",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276987": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Gustwoven Spaulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276988": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Cover",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276989": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Windraveled Drapes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "277716": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 150,
+    "auctionhouse": false,
+    "name": "Pattern: Light Leather Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "279301": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Elderwild Waistcord",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279302": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Outlaw's Collar",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279303": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Elderwild Pants",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279304": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Eternity Pauldrons",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279305": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Tranquil Wristguards",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279306": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mourning Handguards",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279307": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Wild Leather Armor Kit",
+    "quality": 4,
+    "icon": "inv_scroll_05",
+    "hasSource": false
+  }
+}

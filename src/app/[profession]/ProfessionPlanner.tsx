@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useCallback, type ReactNode } from 'react';
-import { AdSlot, AD_SLOT_LEADERBOARD, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { AdSlot, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 import { createPortal } from 'react-dom';
 // Vanilla recipes
 import vanillaAlchemy from '@/data/recipes/vanilla/alchemy.json';
@@ -20,30 +20,63 @@ import tbcEngineering from '@/data/recipes/tbc/engineering.json';
 import tbcJewelcrafting from '@/data/recipes/tbc/jewelcrafting.json';
 import tbcLeatherworking from '@/data/recipes/tbc/leatherworking.json';
 import tbcTailoring from '@/data/recipes/tbc/tailoring.json';
-import type { Recipe, MaterialInfo, MaterialTreeNode } from '@/lib/types';
+// Forever recipes
+import foreverAlchemy from '@/data/recipes/forever/alchemy.json';
+import foreverBlacksmithing from '@/data/recipes/forever/blacksmithing.json';
+import foreverCooking from '@/data/recipes/forever/cooking.json';
+import foreverEnchanting from '@/data/recipes/forever/enchanting.json';
+import foreverEngineering from '@/data/recipes/forever/engineering.json';
+import foreverLeatherworking from '@/data/recipes/forever/leatherworking.json';
+import foreverTailoring from '@/data/recipes/forever/tailoring.json';
+import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
+import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, blacklistedSpellIds, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
-import { getEffectiveMinSkill } from '@/lib/recipeCalc';
+import { makeDynamicPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
+import { auctionatorShoppingList, copyText, tsmShoppingList } from '@/lib/shoppingList';
+import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
 import { Listbox } from '@headlessui/react';
 import { materialInfoMap } from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
-import { getDisenchantOutcomes, getExpectedDisenchantValue } from '@/lib/disenchant';
+import { getDisenchantOutcomes, getExpectedDisenchantValue, resolveDisenchantItem } from '@/lib/disenchant';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { CachedIcon } from '@/components/CachedIcon';
+import { PriceAgeNotice } from '@/components/PriceAgeNotice';
+import { FactionIcon, factionRingClass, factionTextClass } from '@/components/FactionMark';
+import { RealmName, foreverRealmKind, realmRingClass } from '@/components/RealmName';
 import { preloadIconZips } from '@/lib/iconStore';
 
-/** Wowhead base path for links (classic or tbc) */
+/** Wowhead base path for links (classic, tbc, or forever) */
 function getWowheadBase(version: string): string {
-  return version === 'The Burning Crusade' ? 'tbc' : 'classic';
+  if (version === 'The Burning Crusade') return 'tbc';
+  if (version === 'Forever') return 'forever';
+  return 'classic';
+}
+
+function parsePlannerVersion(value: string | null): string | null {
+  const normalized = value?.toLowerCase();
+  if (normalized === 'forever') return 'Forever';
+  if (normalized === 'tbc' || normalized === 'the burning crusade' || normalized === 'vanilla') return 'The Burning Crusade';
+  return null;
+}
+
+const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
+const FOREVER_REALMS = ['Forever Normal', 'Forever PvP'];
+
+function realmsForVersion(version: string): string[] {
+  return version === 'Forever' ? FOREVER_REALMS : ANNIVERSARY_REALMS;
+}
+
+function defaultRealmForVersion(version: string): string {
+  return version === 'Forever' ? 'Forever PvP' : 'Thunderstrike';
 }
 
 // map WoW quality IDs to standard hex colors
@@ -70,9 +103,46 @@ const professions = [
 // Max skill level per version
 const MAX_SKILL_VANILLA = 300;
 const MAX_SKILL_TBC = 375;
+const MAX_SKILL_FOREVER = 225;
 
 function getMaxSkill(version: string): number {
-  return version === 'The Burning Crusade' ? MAX_SKILL_TBC : MAX_SKILL_VANILLA;
+  if (version === 'The Burning Crusade') return MAX_SKILL_TBC;
+  if (version === 'Forever') return MAX_SKILL_FOREVER;
+  return MAX_SKILL_VANILLA;
+}
+
+function versionTextClass(version: string): string {
+  if (version === 'The Burning Crusade') return 'text-emerald-500';
+  if (version === 'Forever') return 'text-[#1fb5f7]';
+  return 'text-yellow-300';
+}
+
+function versionSelectedClass(version: string): string {
+  if (version === 'The Burning Crusade') return 'bg-emerald-500 border-emerald-500';
+  if (version === 'Forever') return 'bg-[#1fb5f7] border-[#1fb5f7]';
+  return 'bg-yellow-400 border-yellow-400';
+}
+
+function versionBarClass(version: string): string {
+  if (version === 'The Burning Crusade') return 'bg-emerald-500';
+  if (version === 'Forever') return 'bg-[#1fb5f7]';
+  return 'bg-yellow-400';
+}
+
+function versionRingClass(version: string): string {
+  if (version === 'The Burning Crusade') return 'shadow-[inset_0_0_0_1px_rgba(16,185,129,0.55)]';
+  if (version === 'Forever') return 'shadow-[inset_0_0_0_1px_rgba(31,181,247,0.55)]';
+  return '';
+}
+
+const FOREVER_SOD_SPELL_IDS = new Set<number>(foreverSodSpellIds);
+
+function withoutForeverSodRecipes<T extends { id: number }>(recipes: T[]): T[] {
+  return recipes.filter((recipe) => !FOREVER_SOD_SPELL_IDS.has(recipe.id));
+}
+
+function withoutHardGoldRecipes<T extends { name?: string }>(recipes: T[]): T[] {
+  return recipes.filter((recipe) => !recipe.name?.startsWith('Hard Gold'));
 }
 
 // Version-keyed recipe data (vanilla/ and tbc/ directories)
@@ -96,12 +166,29 @@ const rawDataMap: Record<string, Record<string, any[]>> = {
     Leatherworking: tbcLeatherworking as any[],
     Tailoring: tbcTailoring as any[],
   },
+  Forever: {
+    Alchemy: withoutForeverSodRecipes(foreverAlchemy as any[]),
+    Blacksmithing: withoutHardGoldRecipes(withoutForeverSodRecipes(foreverBlacksmithing as any[])),
+    Cooking: withoutForeverSodRecipes(foreverCooking as any[]),
+    Enchanting: withoutForeverSodRecipes(foreverEnchanting as any[]),
+    Engineering: withoutForeverSodRecipes(foreverEngineering as any[]),
+    Leatherworking: withoutForeverSodRecipes(foreverLeatherworking as any[]),
+    Tailoring: withoutForeverSodRecipes(foreverTailoring as any[]),
+  },
 };
 
 // Function to dynamically load price data
+const FOREVER_PRICE_FILES: Record<string, string> = {
+  'Forever Normal_horde': 'ForeverNormal_horde.json',
+  'Forever Normal_alliance': 'ForeverNormal_alliance.json',
+  'Forever PvP_horde': 'ForeverPvP_horde.json',
+  'Forever PvP_alliance': 'ForeverPvP_alliance.json',
+};
+
 async function loadPriceData(realm: string, faction: string): Promise<any[]> {
   try {
-    const filename = `${realm}_${faction.toLowerCase()}.json`;
+    const key = `${realm}_${faction.toLowerCase()}`;
+    const filename = FOREVER_PRICE_FILES[key] ?? `${key}.json`;
     
     // Import the price data directly from the src directory
     const data = await import(`@/data/prices/${filename}`);
@@ -181,6 +268,57 @@ function SafeMoney({
 }
 
 /** Cost with red - for expense, green + for profit (used when price sourcing subtracts output value) */
+function MobDropWarning() {
+  return (
+    <span className="inline-flex shrink-0 items-center whitespace-nowrap rounded border border-orange-400 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-orange-400 desktop-layout:text-xs">
+      [Warning: Recipe is a BoP drop]
+    </span>
+  );
+}
+
+function MobDropCostHint() {
+  const anchorRef = useRef<HTMLSpanElement>(null);
+  const [tip, setTip] = useState<{ top: number; left: number } | null>(null);
+
+  const show = () => {
+    const rect = anchorRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setTip({ top: rect.top - 8, left: rect.left + rect.width / 2 });
+  };
+
+  return (
+    <span className="inline-flex items-center gap-1.5 text-xs desktop-layout:text-xl font-semibold text-[#e3b056]">
+      Free
+      <span
+        ref={anchorRef}
+        className="inline-flex cursor-help text-orange-400"
+        onMouseEnter={show}
+        onMouseLeave={() => setTip(null)}
+        onFocus={show}
+        onBlur={() => setTip(null)}
+        tabIndex={0}
+        aria-label="[Warning: Recipe is a BoP drop]"
+      >
+        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 desktop-layout:h-5 desktop-layout:w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinejoin="round" d="M12 3.5 21.5 20.5H2.5L12 3.5z" />
+          <path strokeLinecap="round" d="M12 9.5v5" />
+          <circle cx="12" cy="17.2" r="0.8" fill="currentColor" stroke="none" />
+        </svg>
+      </span>
+      {tip && createPortal(
+        <span
+          role="tooltip"
+          className="pointer-events-none fixed z-[80] -translate-x-1/2 -translate-y-full whitespace-nowrap rounded border border-orange-400 bg-neutral-900 px-1.5 py-1 text-[10px] font-semibold leading-none text-orange-400 shadow-lg desktop-layout:text-xs"
+          style={{ top: tip.top, left: tip.left }}
+        >
+          [Warning: Recipe is a BoP drop]
+        </span>,
+        document.body
+      )}
+    </span>
+  );
+}
+
 function SignedCost({ copper }: { copper: number }) {
   if (copper > 0) {
     return <span className="text-red-400">−<FormatMoney copper={copper} /></span>;
@@ -189,6 +327,149 @@ function SignedCost({ copper }: { copper: number }) {
     return <span className="text-green-400">+<FormatMoney copper={-copper} /></span>;
   }
   return <FormatMoney copper={0} />;
+}
+
+function MaterialSourceBadge({ source, className = '' }: { source?: 'vendor' | 'auction' | null; className?: string }) {
+  if (!source) return null;
+  const vendor = source === 'vendor';
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center whitespace-nowrap rounded px-1.5 py-0.5 text-[10px] desktop-layout:text-xs font-semibold leading-none ${
+        vendor ? 'bg-emerald-500/15 text-emerald-300' : 'bg-[#1fb5f7]/15 text-[#7dd3fc]'
+      } ${className}`}
+      title={vendor ? 'Bought from a vendor' : 'Bought on the auction house'}
+    >
+      {vendor ? 'Vendor' : 'Auction House'}
+    </span>
+  );
+}
+
+function RecipeSourceMark({ recipe, materialInfo }: { recipe: Recipe; materialInfo: Record<number, MaterialInfo> }) {
+  const source = recipe.source;
+  if (!source) return null;
+  if (source.type === 'free') {
+    return (
+      <span
+        className="inline-flex w-fit items-center rounded bg-[#e3b056]/15 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-[#e3b056] desktop-layout:text-xs"
+        title="Learned for free"
+      >
+        Free
+      </span>
+    );
+  }
+  if (source.type === 'trainer') {
+    return (
+      <span
+        className="inline-flex w-fit items-center rounded bg-neutral-700 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-neutral-200 desktop-layout:text-xs"
+        title="Learned from a trainer"
+      >
+        Trainer
+      </span>
+    );
+  }
+  const name = source.recipeItemName || (source.recipeItemId ? `Item ${source.recipeItemId}` : 'Recipe item');
+  const quality = source.recipeItemId ? materialInfo[source.recipeItemId]?.quality ?? 1 : 1;
+  return (
+    <span
+      className="block truncate text-[10px] font-medium leading-tight desktop-layout:text-xs"
+      style={{ color: qualityColors[quality] }}
+      title={name}
+    >
+      {name}
+    </span>
+  );
+}
+
+function RecipeDetailsSection({
+  recipe,
+  wowheadBase,
+  materialInfo,
+  prices,
+  useMarketValue,
+}: {
+  recipe: Recipe;
+  wowheadBase: string;
+  materialInfo: Record<number, MaterialInfo>;
+  prices: PriceMap;
+  useMarketValue: boolean;
+}) {
+  const source = recipe.source;
+  if (!source) return null;
+
+  const label = source.type === 'free' ? 'Free' : source.type === 'trainer' ? 'Trainer' : 'Recipe';
+  const recipeItem = source.type === 'item' ? materialInfo[source.recipeItemId ?? -1] : undefined;
+  const recipeItemName = source.recipeItemName || recipeItem?.name || (source.recipeItemId ? `Item ${source.recipeItemId}` : 'Recipe item');
+  const priceData = source.recipeItemId ? prices[source.recipeItemId] : undefined;
+  const vendorPrice = recipeItem?.buyPrice != null && recipeItem.buyPrice > 0 ? recipeItem.buyPrice : null;
+  const marketValue = priceData?.marketValue ?? 0;
+  const minBuyout = priceData?.minBuyout ?? 0;
+  const ahPrice = useMarketValue
+    ? (marketValue > 0 ? marketValue : (minBuyout > 0 ? minBuyout : null))
+    : (minBuyout > 0 ? minBuyout : (marketValue > 0 ? marketValue : null));
+  const sentence = source.type === 'free'
+    ? 'This recipe is given for free when learning the Profession.'
+    : 'This recipe is learned at your profession trainer.';
+  const price = source.type === 'trainer'
+    ? (source.cost ?? 0)
+    : source.type === 'item'
+      ? (vendorPrice ?? ahPrice)
+      : null;
+  const currencyLabel = currencyCostLabel(recipe, materialInfo);
+
+  return (
+    <>
+      <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:px-6">
+        <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Recipe</h3>
+      </div>
+      <div className="flex items-center gap-3 px-4 py-4 desktop-layout:px-6 desktop-layout:py-5 bg-neutral-800 text-sm desktop-layout:text-base">
+        <span
+          className={`inline-flex shrink-0 items-center rounded px-2 py-1 text-xs desktop-layout:text-sm font-semibold leading-none ${
+            source.type === 'free'
+              ? 'bg-[#e3b056]/15 text-[#e3b056]'
+              : 'bg-neutral-700 text-neutral-200'
+          }`}
+        >
+          {label}
+        </span>
+        {source.type === 'item' ? (
+          source.recipeItemId ? (
+            <a
+              href={`https://www.wowhead.com/${wowheadBase}/item=${source.recipeItemId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-w-0 flex-1 items-center gap-2 hover:underline"
+            >
+              <CachedIcon
+                category="materials"
+                id={source.recipeItemId}
+                alt={recipeItemName}
+                className="h-6 w-6 desktop-layout:h-8 desktop-layout:w-8 rounded border border-neutral-700 object-cover flex-shrink-0"
+              />
+              <span
+                className="truncate font-medium"
+                style={{ color: qualityColors[recipeItem?.quality ?? 1] }}
+              >
+                {recipeItemName}
+              </span>
+            </a>
+          ) : (
+            <span className="min-w-0 flex-1 truncate font-medium text-neutral-200">{recipeItemName}</span>
+          )
+        ) : (
+          <span className="min-w-0 flex-1 text-neutral-300">{sentence}</span>
+        )}
+        {currencyLabel ? (
+          <span className="shrink-0 font-semibold text-neutral-100">{currencyLabel}</span>
+        ) : isBopMobDropRecipe(recipe, materialInfo) ? (
+          <MobDropWarning />
+        ) : price != null && (
+          <span className="shrink-0 font-semibold text-neutral-100" title={recipeItem?.limitedStock ? 'Limited stock' : undefined}>
+            <FormatMoney copper={price} />
+          </span>
+        )}
+      </div>
+    </>
+  );
 }
 
 function MaterialCard({
@@ -279,6 +560,7 @@ function MaterialCard({
               <span className="text-[10px] desktop-layout:text-xs text-neutral-400 mt-0.5 desktop-layout:mt-1">
                 Per Craft: <SafeMoney value={node.buyCost / expCrafts} />
               </span>
+              <MaterialSourceBadge source={node.buySource} className="mt-1" />
             </div>
           )}
 
@@ -348,45 +630,24 @@ function MaterialTreeFlat({
 
 
 // ── component ──
-export default function ProfessionPlanner({
-  initialSearchParams,
-  children,
-}: {
-  initialSearchParams: {
-    skill?: string;
-    target?: string;
-    version?: string;
-    realm?: string;
-    faction?: string;
-  };
-  children?: ReactNode;
-}) {
+export default function ProfessionPlanner() {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const urlProfession = params.profession as string;
-  const urlSkill = initialSearchParams.skill;
-  const urlTarget = initialSearchParams.target;
-  const urlVersion = initialSearchParams.version;
-  const urlRealm = initialSearchParams.realm;
-  const urlFaction = initialSearchParams.faction;
+  const urlSkill = searchParams.get('skill');
+  const urlTarget = searchParams.get('target');
+  const urlVersion = searchParams.get('version');
+  const urlRealm = searchParams.get('realm');
+  const urlFaction = searchParams.get('faction');
   
   const scrollRef = useRef<HTMLDivElement>(null);
   const [skill, setSkill] = useState(1);
   const [debouncedSkill] = useDebounce(skill, 200);
   const [committedSkill, setCommittedSkill] = useState(1);
   // Initialize target based on version (default to TBC max)
-  const [target, setTarget] = useState(() => {
-    if (urlVersion && urlVersion.toLowerCase() === 'vanilla') {
-      return MAX_SKILL_VANILLA;
-    }
-    return MAX_SKILL_TBC;
-  });
-  const [committedTarget, setCommittedTarget] = useState(() => {
-    if (urlVersion && urlVersion.toLowerCase() === 'vanilla') {
-      return MAX_SKILL_VANILLA;
-    }
-    return MAX_SKILL_TBC;
-  });
+  const [target, setTarget] = useState(() => getMaxSkill(parsePlannerVersion(urlVersion) ?? 'Forever'));
+  const [committedTarget, setCommittedTarget] = useState(() => getMaxSkill(parsePlannerVersion(urlVersion) ?? 'Forever'));
   const [view, setView] = useState<'route'|'all'>('route');
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
   const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
@@ -398,9 +659,7 @@ export default function ProfessionPlanner({
     if (urlProfession) {
       const normalizedProfession = urlProfession.charAt(0).toUpperCase() + urlProfession.slice(1).toLowerCase();
       // Check if profession is valid and available for the initial version
-      const initialVersion = urlVersion ? 
-        (urlVersion.toLowerCase() === 'the burning crusade' || urlVersion.toLowerCase() === 'tbc' ? 'The Burning Crusade' : 'Vanilla') 
-        : 'The Burning Crusade';
+      const initialVersion = parsePlannerVersion(urlVersion) ?? 'Forever';
       const initialAvailableProfessions = initialVersion === 'The Burning Crusade' 
         ? professions 
         : professions.filter(p => p !== 'Jewelcrafting');
@@ -411,19 +670,9 @@ export default function ProfessionPlanner({
     return 'Enchanting';
   });
   // Define realms and factions early for use in initial state
-  const realms = useMemo(() => ["Thunderstrike", "Spineshatter", "Soulseeker", "Dreamscythe", "Nightslayer", "Doomhowl"], []);
+  const [selectedVersion, setSelectedVersion] = useState(() => parsePlannerVersion(urlVersion) ?? 'Forever');
+  const realms = useMemo(() => realmsForVersion(selectedVersion), [selectedVersion]);
   const factions = useMemo(() => ["Alliance", "Horde"], []);
-  
-  // Initialize from URL params if available
-  const [selectedVersion, setSelectedVersion] = useState(() => {
-    if (urlVersion) {
-      const normalizedVersion = urlVersion.charAt(0).toUpperCase() + urlVersion.slice(1).toLowerCase();
-      if (normalizedVersion === 'Vanilla' || normalizedVersion === 'The Burning Crusade' || normalizedVersion === 'Tbc') {
-        return normalizedVersion === 'Tbc' ? 'The Burning Crusade' : normalizedVersion;
-      }
-    }
-    return 'The Burning Crusade';
-  });
 
   // Get max skill for current version
   const maxSkill = useMemo(() => getMaxSkill(selectedVersion), [selectedVersion]);
@@ -439,22 +688,20 @@ export default function ProfessionPlanner({
     return professions.filter(p => p !== 'Jewelcrafting'); // Exclude Jewelcrafting in Vanilla
   }, [selectedVersion]);
   const [selectedRealm, setSelectedRealm] = useState(() => {
+    const version = parsePlannerVersion(urlVersion) ?? 'Forever';
+    const available = realmsForVersion(version);
     if (urlRealm) {
-      const normalizedRealm = realms.find(r => r.toLowerCase() === urlRealm.toLowerCase());
-      if (normalizedRealm) {
-        return normalizedRealm;
-      }
+      const normalizedRealm = available.find(r => r.toLowerCase() === urlRealm.toLowerCase());
+      if (normalizedRealm) return normalizedRealm;
     }
-    return 'Thunderstrike';
+    return defaultRealmForVersion(version);
   });
   const [selectedFaction, setSelectedFaction] = useState(() => {
     if (urlFaction) {
       const normalizedFaction = factions.find(f => f.toLowerCase() === urlFaction.toLowerCase());
-      if (normalizedFaction) {
-        return normalizedFaction;
-      }
+      if (normalizedFaction) return normalizedFaction;
     }
-    return 'Alliance';
+    return (parsePlannerVersion(urlVersion) ?? 'Forever') === 'Forever' ? 'Horde' : 'Alliance';
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -495,6 +742,7 @@ export default function ProfessionPlanner({
   const [isReleased, setIsReleased] = useState(false);
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
+  const [includeCurrencyRecipes, setIncludeCurrencyRecipes] = useState(false);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [shouldBlur, setShouldBlur] = useState(false);
@@ -565,9 +813,9 @@ export default function ProfessionPlanner({
     }
   }, [urlProfession, router, selectedProfession, availableProfessions]);
 
-  // Redirect away from Jewelcrafting if switching from TBC to Vanilla
+  // Redirect away from Jewelcrafting outside The Burning Crusade
   useEffect(() => {
-    if (selectedVersion === 'Vanilla' && selectedProfession === 'Jewelcrafting') {
+    if (selectedVersion !== 'The Burning Crusade' && selectedProfession === 'Jewelcrafting') {
       // Redirect to Enchanting if on Jewelcrafting when switching to Vanilla
       const params = new URLSearchParams();
       if (committedSkill > 1) params.set('skill', committedSkill.toString());
@@ -618,10 +866,9 @@ export default function ProfessionPlanner({
   // Handle URL version parameter
   useEffect(() => {
     if (urlVersion) {
-      const normalizedVersion = urlVersion.charAt(0).toUpperCase() + urlVersion.slice(1).toLowerCase();
-      const versions = ["Vanilla", "The Burning Crusade"];
-      if (versions.includes(normalizedVersion) || normalizedVersion === 'Tbc') {
-        setSelectedVersion(normalizedVersion === 'Tbc' ? 'The Burning Crusade' : normalizedVersion);
+      const parsed = parsePlannerVersion(urlVersion);
+      if (parsed) {
+        setSelectedVersion(parsed);
       } else {
         // Invalid version in URL, redirect to default
         router.push('/enchanting');
@@ -645,7 +892,7 @@ export default function ProfessionPlanner({
     if (skill > 1) params.set('skill', skill.toString());
     const maxSkillForVersion = getMaxSkill(version);
     if (target < maxSkillForVersion) params.set('target', target.toString());
-    if (version !== 'The Burning Crusade') params.set('version', version);
+    if (version !== 'Forever') params.set('version', version);
     // Always include realm parameter
     params.set('realm', realm);
     // Always include faction parameter
@@ -671,6 +918,7 @@ export default function ProfessionPlanner({
   const recentUserChangeTimestampRef = useRef<number>(0);
   // Track previous max skill to detect version changes
   const previousMaxSkillRef = useRef(getMaxSkill(selectedVersion));
+  const previousVersionRef = useRef(selectedVersion);
   // Track the max skill that was in the URL before version change (for URL handler)
   const urlMaxSkillRef = useRef(getMaxSkill(selectedVersion));
   // Refs to access current values in useEffect without adding them as dependencies
@@ -765,9 +1013,10 @@ export default function ProfessionPlanner({
 
   // Handle version change - URL will be updated by the version change effect
   const handleVersionChange = (newVersion: string) => {
+    const nextRealms = realmsForVersion(newVersion);
+    const nextRealm = nextRealms.includes(selectedRealm) ? selectedRealm : defaultRealmForVersion(newVersion);
     setSelectedVersion(newVersion);
-    // Don't call updateUrl here - let the version change effect handle it
-    // after it has updated the skill/target values
+    if (nextRealm !== selectedRealm) setSelectedRealm(nextRealm);
   };
 
   // Handle realm change and update URL
@@ -993,14 +1242,16 @@ export default function ProfessionPlanner({
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
-      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined
+      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+      includeCurrencyRecipes,
+      selectedFaction
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1028,19 +1279,19 @@ export default function ProfessionPlanner({
   const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
   const sortedAll = useMemo(() => 
     [...recipes]
-      .filter(r => !blacklistedSpellIds.has(r.id))
-      .sort((a, b) => (a.minSkill ?? 1) - (b.minSkill ?? 1)), 
-    [recipes]
+      .filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction))
+      .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b)), 
+    [recipes, materialInfo, includeCurrencyRecipes, selectedFaction]
   );
 
   const filteredRecipes = useMemo(() => {
     if (view === 'all') {
       return searchTerm
-        ? fuse.search(searchTerm).map(result => result.item)
+        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction))
         : sortedAll;
     }
     return [];
-  }, [view, searchTerm, fuse, sortedAll]);
+  }, [view, searchTerm, fuse, sortedAll, materialInfo, includeCurrencyRecipes, selectedFaction]);
   
   // Store previous recipe to show during profession transitions
   // Why useMemo here?
@@ -1073,7 +1324,7 @@ export default function ProfessionPlanner({
   const [rngLow, setRngLow]   = useState(1);
   const [rngHigh, setRngHigh] = useState(maxSkill);
 
-  const sliderMin = selected?.minSkill            ?? 1;
+  const sliderMin = selected ? getEffectiveMinSkill(selected) : 1;
   const sliderMax = selected?.difficulty.gray     ?? maxSkill;
 
   const rngLowRef = useRef(rngLow);
@@ -1102,14 +1353,14 @@ export default function ProfessionPlanner({
 
   useEffect(() => {
     if (selected && view === 'all') {
-      setRngLow(selected.minSkill);
+      setRngLow(getEffectiveMinSkill(selected));
       setRngHigh(selected.difficulty.gray!);
     }
   }, [selected, view]);
 
   const probData = useMemo(() => {
     if (!selected) return [];
-    const start = selected.minSkill;
+    const start = getEffectiveMinSkill(selected);
     const end   = selected.difficulty.gray ?? start;
     const data  = [];
     for (let skill = start; skill <= end; skill++) {
@@ -1211,7 +1462,7 @@ export default function ProfessionPlanner({
       setRngHigh(maxSkill);
       return;
     }
-    const min = selected.minSkill;
+    const min = getEffectiveMinSkill(selected);
     const max = selected.difficulty.gray ?? min;
     setRngLow((current: number) => Math.max(min, Math.min(current, max)));
     setRngHigh((current: number) => Math.max(min, Math.min(current, max)));
@@ -1366,7 +1617,9 @@ const renderXTick = selected
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
-      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined
+      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+      includeCurrencyRecipes,
+      selectedFaction
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -1403,7 +1656,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -1438,7 +1691,7 @@ const renderXTick = selected
   }, [selectedRecipeId, plan.steps, selectedProfession]);
 
   // New selectors state and options
-  const versions = ["Vanilla", "The Burning Crusade"];
+  const versions = ["Forever", "The Burning Crusade"];
   // realms and factions are defined earlier (around line 307) for use in initial state
 
   // Handle URL realm parameter
@@ -1516,25 +1769,29 @@ const renderXTick = selected
     }
 
     loadPrices();
-  }, [selectedRealm, selectedFaction]);
+  }, [selectedRealm, selectedFaction, selectedVersion]);
 
   // Load region data for soldPerDay sanity-check when realm changes
   useEffect(() => {
+    if (selectedVersion === 'Forever') {
+      setRegionSoldPerDay(new Map());
+      return;
+    }
     const regionId = getRegionIdForRealm(selectedRealm);
     loadRegionData(regionId).then(setRegionSoldPerDay);
-  }, [selectedRealm]);
+  }, [selectedRealm, selectedVersion]);
 
   // Reset skill and target when version changes to ensure they're within valid range
   useEffect(() => {
     const currentMaxSkill = getMaxSkill(selectedVersion);
     const previousMaxSkill = previousMaxSkillRef.current;
     
-    // Only run if version actually changed (max skill changed)
-    if (currentMaxSkill === previousMaxSkill) {
-      // Update ref even if no change needed
+    const versionChanged = previousVersionRef.current !== selectedVersion;
+    if (!versionChanged) {
       previousMaxSkillRef.current = currentMaxSkill;
       return;
     }
+    previousVersionRef.current = selectedVersion;
     
     // Use refs to get current values without adding them as dependencies
     const currentSkill = committedSkillRef.current;
@@ -1602,11 +1859,13 @@ const renderXTick = selected
   // Add effect to reset realm if version changes and current realm is not available
   useEffect(() => {
     if (!realms.includes(selectedRealm)) {
-      setSelectedRealm(realms[0] || "");
+      setSelectedRealm(defaultRealmForVersion(selectedVersion));
     }
   }, [selectedVersion, realms, selectedRealm]);
 
   const [showMaterials, setShowMaterials] = useState(false);
+  const [copiedShoppingList, setCopiedShoppingList] = useState<'auctionator' | 'tsm' | null>(null);
+  const copiedShoppingTimer = useRef<number | null>(null);
 
   // Desktop (landscape): smaller thumb hit area; mobile (portrait): larger for touch targets
   const [isDesktop, setIsDesktop] = useState(false);
@@ -1632,6 +1891,11 @@ const renderXTick = selected
           (r.difficulty.gray ?? Infinity) >= end &&
           r.id !== best.id &&
           !blacklistedSpellIds.has(r.id) &&
+          !isSkillCooldownRecipe(r) &&
+          !isSeasonalRecipe(r) &&
+          isRecipeObtainable(r, materialInfo) &&
+          (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) &&
+          !isWrongFactionRecipe(r, materialInfo, selectedFaction) &&
           (!skipLimitedStock || !(
             r.source?.type === 'item' &&
             r.source.recipeItemId &&
@@ -1658,7 +1922,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSoldPerDay]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSoldPerDay]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -1699,6 +1963,19 @@ const renderXTick = selected
       displayedTotalCost: totalCost
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
+
+  const copyShoppingList = useCallback(async (kind: 'auctionator' | 'tsm') => {
+    const text = kind === 'auctionator'
+      ? auctionatorShoppingList(selectedProfession, committedSkill, committedTarget, displayedMaterialTotals)
+      : tsmShoppingList(displayedMaterialTotals);
+    if (!text || !(await copyText(text))) return;
+    setCopiedShoppingList(kind);
+    if (copiedShoppingTimer.current != null) window.clearTimeout(copiedShoppingTimer.current);
+    copiedShoppingTimer.current = window.setTimeout(() => {
+      copiedShoppingTimer.current = null;
+      setCopiedShoppingList(null);
+    }, 2000);
+  }, [displayedMaterialTotals, selectedProfession, committedSkill, committedTarget]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -1942,15 +2219,15 @@ const renderXTick = selected
               <Listbox value={selectedVersion} onChange={handleVersionChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold truncate">{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
-                      <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    <Listbox.Button className={`w-full bg-neutral-800 rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${versionRingClass(selectedVersion)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className={`font-semibold truncate ${versionTextClass(selectedVersion)}`}>{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
+                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {versions.map((ver) => (
-                        <Listbox.Option key={ver} value={ver} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
+                        <Listbox.Option key={ver} value={ver} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
                           {({ selected }) => (
-                            <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>{ver}</span>
+                            <span className={`block truncate font-semibold ${versionTextClass(ver)} ${selected ? '' : 'opacity-80'}`}>{ver}</span>
                           )}
                         </Listbox.Option>
                       ))}
@@ -1962,15 +2239,15 @@ const renderXTick = selected
               <Listbox value={selectedRealm} onChange={handleRealmChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold truncate">{selectedRealm}</span>
-                      <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${realmRingClass(selectedRealm)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className="font-semibold truncate"><RealmName realm={selectedRealm} /></span>
+                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[9.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {realms.map((realm) => (
-                        <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
+                        <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
                           {({ selected }) => (
-                            <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>{realm}</span>
+                            <span className={`block truncate font-semibold ${selected && !foreverRealmKind(realm) ? 'text-white' : ''}`}><RealmName realm={realm} /></span>
                           )}
                         </Listbox.Option>
                       ))}
@@ -1982,15 +2259,21 @@ const renderXTick = selected
               <Listbox value={selectedFaction} onChange={handleFactionChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
-                      <span className="font-semibold truncate">{selectedFaction}</span>
-                      <svg className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    <Listbox.Button className={`w-full bg-neutral-800 rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${factionRingClass(selectedFaction)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <span className={`flex items-center gap-1 min-w-0 font-semibold ${factionTextClass(selectedFaction)}`}>
+                        <FactionIcon faction={selectedFaction} className="h-5 w-5 shrink-0" />
+                        <span className="truncate">{selectedFaction}</span>
+                      </span>
+                      <svg className={`h-4 w-4 text-neutral-400 shrink-0 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[8.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {factions.map((fac) => (
-                        <Listbox.Option key={fac} value={fac} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-9 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
+                        <Listbox.Option key={fac} value={fac} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
                           {({ selected }) => (
-                            <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>{fac}</span>
+                            <span className={`flex items-center gap-2 truncate font-semibold ${factionTextClass(fac)} ${selected ? '' : 'opacity-80'}`}>
+                              <FactionIcon faction={fac} className="h-5 w-5 shrink-0" />
+                              {fac}
+                            </span>
                           )}
                         </Listbox.Option>
                       ))}
@@ -1999,6 +2282,7 @@ const renderXTick = selected
                 )}
               </Listbox>
             </div>
+            <PriceAgeNotice realm={selectedRealm} faction={selectedFaction} variant="inline" />
             <div className="w-full mb-3 desktop-layout:mb-5 flex gap-2">
               <div className="flex-1">
                 <Listbox value={selectedProfession} onChange={handleProfessionChange}>
@@ -2053,7 +2337,7 @@ const renderXTick = selected
             <div className="mb-4">
               <div className="flex justify-between items-center mb-1">
                 <label className="text-xs">
-                  Skill Range <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{skill}</span> → <span className={`font-semibold ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}`}>{target}</span>
+                  Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
                 </label>
                 <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
@@ -2099,8 +2383,8 @@ const renderXTick = selected
                     <label className="text-xs text-neutral-400">Include Recipe Cost</label>
                     <button 
                       onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                        includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
+                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                        includeRecipeCost ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                       }`}
                     >
                       <span
@@ -2114,8 +2398,8 @@ const renderXTick = selected
                             <label className="text-xs text-neutral-400">Use Market Value</label>
                             <button 
                               onClick={() => setUseMarketValue(!useMarketValue)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                useMarketValue ? 'bg-yellow-400' : 'bg-neutral-700'
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                useMarketValue ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                               }`}
                             >
                               <span
@@ -2129,13 +2413,28 @@ const renderXTick = selected
                             <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
                             <button 
                               onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                recalculateForEachLevel ? 'bg-yellow-400' : 'bg-neutral-700'
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                recalculateForEachLevel ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                               }`}
                             >
                               <span
                                 className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
                                   recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
+                                }`}
+                              />
+                            </button>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <label className="text-xs text-neutral-400">Include Currency Recipes</label>
+                            <button
+                              onClick={() => setIncludeCurrencyRecipes(!includeCurrencyRecipes)}
+                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                includeCurrencyRecipes ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
+                              }`}
+                            >
+                              <span
+                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                  includeCurrencyRecipes ? 'translate-x-5' : 'translate-x-1'
                                 }`}
                               />
                             </button>
@@ -2170,8 +2469,8 @@ const renderXTick = selected
                                   <label className="text-xs text-neutral-400">Include Recipe Cost</label>
                                   <button
                                     onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                      includeRecipeCost ? 'bg-yellow-400' : 'bg-neutral-700'
+                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                      includeRecipeCost ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                                     }`}
                                   >
                                     <span
@@ -2185,8 +2484,8 @@ const renderXTick = selected
                                   <label className="text-xs text-neutral-400">Use Market Value</label>
                                   <button
                                     onClick={() => setUseMarketValue(!useMarketValue)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                      useMarketValue ? 'bg-yellow-400' : 'bg-neutral-700'
+                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                      useMarketValue ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                                     }`}
                                   >
                                     <span
@@ -2200,13 +2499,28 @@ const renderXTick = selected
                                   <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
                                   <button
                                     onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400/50 ${
-                                      recalculateForEachLevel ? 'bg-yellow-400' : 'bg-neutral-700'
+                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                      recalculateForEachLevel ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
                                     }`}
                                   >
                                     <span
                                       className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
                                         recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
+                                      }`}
+                                    />
+                                  </button>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                  <label className="text-xs text-neutral-400">Include Currency Recipes</label>
+                                  <button
+                                    onClick={() => setIncludeCurrencyRecipes(!includeCurrencyRecipes)}
+                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+                                      includeCurrencyRecipes ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
+                                    }`}
+                                  >
+                                    <span
+                                      className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+                                        includeCurrencyRecipes ? 'translate-x-5' : 'translate-x-1'
                                       }`}
                                     />
                                   </button>
@@ -2252,7 +2566,7 @@ const renderXTick = selected
                           borderRadius: '3px',
                           background: getTrackBackground({
                             values: [skill, target],
-                            colors: ['#4b5563', selectedVersion === 'The Burning Crusade' ? '#10b981' : '#eab308', '#4b5563'],
+                            colors: ['#4b5563', selectedVersion === 'The Burning Crusade' ? '#10b981' : selectedVersion === 'Forever' ? '#1fb5f7' : '#eab308', '#4b5563'],
                             min: 1,
                             max: maxSkill
                           }),
@@ -2267,9 +2581,11 @@ const renderXTick = selected
                   }}
                   renderThumb={({ props, index }) => {
                     const { key, style, ...rest } = props;
-                    const thumbColor = selectedVersion === 'The Burning Crusade' 
-                      ? '#059669' // emerald-600 for both thumbs in TBC
-                      : (index === 0 ? '#eab308' : '#f59e0b'); // yellow for Vanilla
+                    const thumbColor = selectedVersion === 'The Burning Crusade'
+                      ? '#059669'
+                      : selectedVersion === 'Forever'
+                        ? (index === 0 ? '#0273ae' : '#1fb5f7')
+                        : (index === 0 ? '#eab308' : '#f59e0b');
                     const thumbSize = isDesktop ? 20 : 44;
                     return (
                       <div
@@ -2339,7 +2655,7 @@ const renderXTick = selected
                           e.currentTarget.blur();
                         }
                       }}
-                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
+                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${versionTextClass(selectedVersion)}
                                 [&::-webkit-inner-spin-button]:appearance-none 
                                 [&::-webkit-outer-spin-button]:appearance-none`}
                     />
@@ -2400,7 +2716,7 @@ const renderXTick = selected
                           e.currentTarget.blur();
                         }
                       }}
-                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${selectedVersion === 'The Burning Crusade' ? 'text-emerald-500' : 'text-yellow-300'}
+                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${versionTextClass(selectedVersion)}
                                 [&::-webkit-inner-spin-button]:appearance-none 
                                 [&::-webkit-outer-spin-button]:appearance-none`}
                     />
@@ -2429,7 +2745,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('cost')}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost'
-                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
+                      ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Raw material cost"
@@ -2445,7 +2761,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('cost-vendor')}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost-vendor'
-                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
+                      ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Subtract vendor value"
@@ -2461,7 +2777,7 @@ const renderXTick = selected
                   onClick={() => setPriceSourcing('disenchant')}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'disenchant'
-                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
+                      ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Subtract disenchant value"
@@ -2477,7 +2793,7 @@ const renderXTick = selected
                   onClick={handleAuctionHouseClick}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'auction-house'
-                      ? `${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500 border-emerald-500' : 'bg-yellow-400 border-yellow-400'} text-neutral-900 font-semibold shadow-sm`
+                      ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
                   title="Sell crafted items"
@@ -2499,16 +2815,10 @@ const renderXTick = selected
                 FAQ
               </Link>
               <Link
-                href="/about"
+                href="/promo"
                 className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
               >
-                About
-              </Link>
-              <Link
-                href="/privacy"
-                className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
-              >
-                Privacy
+                About Project
               </Link>
             </div>
             <div className="hidden desktop-layout:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
@@ -2524,7 +2834,7 @@ const renderXTick = selected
                   {view === tab && (
                     <motion.div
                       layoutId="tab-underline"
-                      className={`absolute bottom-0 left-0 right-0 h-0.5 ${selectedVersion === 'The Burning Crusade' ? 'bg-emerald-500' : 'bg-yellow-400'}`}
+                      className={`absolute bottom-0 left-0 right-0 h-0.5 ${versionBarClass(selectedVersion)}`}
                     />
                   )}
                 </button>
@@ -2610,7 +2920,7 @@ const renderXTick = selected
                                   duration: 0.3,
                                   ease: "easeOut"
                                 }}
-                                className="relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] font-bold text-yellow-400 text-sm desktop-layout:text-base will-change-transform"
+                                className={`relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] font-bold ${selectedVersion === 'Forever' ? 'text-[#1fb5f7]' : 'text-yellow-400'} text-sm desktop-layout:text-base will-change-transform`}
                               >
                                 ⚔️ {s.note ?? `Upgrade to ${s.upgradeName}`}
                               </motion.div>
@@ -2653,7 +2963,7 @@ const renderXTick = selected
                                 <div
                                   id={`craft-${best.id}-${end}`}
                                   onClick={() => handleCardClick(best.name, end, start, end, false, best.id)}
-                                  className={`relative flex items-center gap-1 px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] cursor-pointer
+                                  className={`relative flex items-center gap-1 px-2 py-1 w-full min-h-[43px] desktop-layout:min-h-[60px] cursor-pointer
                                     transition-all duration-100 ease-out will-change-transform
                                     hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                     ${isSelected(best.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2664,19 +2974,22 @@ const renderXTick = selected
                                   <span className="text-[13px] desktop-layout:text-[16px] flex items-center justify-center w-6 desktop-layout:w-8">
                                     {displayedCrafts}×
                                   </span>
-                                  <span className="flex items-center gap-1 flex-1 min-w-0">
+                                  <span className="flex min-w-0 flex-1 items-center gap-1">
                                     <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover" />
-                                    <span
-                                      className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
-                                      style={{ color: qualityColors[s.recipe.quality] }}
-                                    >
-                                      {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
+                                    <span className="flex min-w-0 flex-1 flex-col justify-center">
+                                      <span
+                                        className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
+                                        style={{ color: qualityColors[s.recipe.quality] }}
+                                      >
+                                        {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
+                                      </span>
+                                      <RecipeSourceMark recipe={best} materialInfo={materialInfo} />
                                     </span>
                                   </span>
                                   <span className="text-[13px] desktop-layout:text-[16px]">
                                     <SignedCost copper={displayedTotalCost} />
                                   </span>
-                                  <span className="flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
+                                  <span className={`flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'} bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap`}>
                                     {start} → {end}
                                   </span>
                                 </div>
@@ -2719,7 +3032,7 @@ const renderXTick = selected
                                           ease: "easeOut"
                                         }}
                                         onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
-                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer h-[43px] desktop-layout:h-[60px] 
+                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer min-h-[43px] desktop-layout:min-h-[60px] 
                                           transition-all duration-100 ease-out will-change-transform
                                           hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
                                           ${isSelected(alt.recipe.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
@@ -2730,19 +3043,22 @@ const renderXTick = selected
                                         <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] desktop-layout:text-[16px]">
                                           or {alt.crafts}×
                                         </span>
-                                        <span className="flex items-center gap-1 flex-1 min-w-0 pl-1">
+                                        <span className="flex min-w-0 flex-1 items-center gap-1 pl-1">
                                           <CachedIcon
                                             category={getRecipeProfession(alt.recipe.id, selectedProfession)}
                                             id={alt.recipe.id}
                                             className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                                           />
-                                          <span
-                                            className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
-                                            style={{ color: qualityColors[alt.recipe.quality] }}
-                                          >
-                                            {alt.recipe.name.length <= 35
-                                              ? alt.recipe.name
-                                              : `${alt.recipe.name.slice(0, 33)}…`}
+                                          <span className="flex min-w-0 flex-1 flex-col justify-center">
+                                            <span
+                                              className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
+                                              style={{ color: qualityColors[alt.recipe.quality] }}
+                                            >
+                                              {alt.recipe.name.length <= 35
+                                                ? alt.recipe.name
+                                                : `${alt.recipe.name.slice(0, 33)}…`}
+                                            </span>
+                                            <RecipeSourceMark recipe={alt.recipe} materialInfo={materialInfo} />
                                           </span>
                                         </span>
                                         <span className="text-[13px] desktop-layout:text-[16px]">
@@ -2766,12 +3082,12 @@ const renderXTick = selected
                             key={r.id}
                             onClick={() => {
                               setSelectedRecipeId(r.id);
-                              setRngLow(r.minSkill);
+                              setRngLow(getEffectiveMinSkill(r));
                               setRngHigh(r.difficulty.gray!);
                               setSidebarOpen(false);
                             }}
                             id={`recipe-${r.id}`}
-                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 h-[43px] desktop-layout:h-[60px]
+                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 min-h-[43px] desktop-layout:min-h-[60px]
                               ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
                           >
                             <span
@@ -2785,15 +3101,18 @@ const renderXTick = selected
                                 id={r.id}
                                 className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                               />
-                              <span
-                                className="truncate whitespace-nowrap flex-1 text-[13px] desktop-layout:text-[16px]"
-                                style={{ color: qualityColors[r.quality ?? 1] }}
-                              >
-                                {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
+                              <span className="flex min-w-0 flex-1 flex-col justify-center">
+                                <span
+                                  className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
+                                  style={{ color: qualityColors[r.quality ?? 1] }}
+                                >
+                                  {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
+                                </span>
+                                <RecipeSourceMark recipe={r} materialInfo={materialInfo} />
                               </span>
                             </div>
-                            <span className="flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center text-yellow-200 bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap">
-                              {r.minSkill}
+                            <span className={`flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'} bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap`}>
+                              {getEffectiveMinSkill(r)}
                             </span>
                           </div>
                         ))}
@@ -2857,7 +3176,7 @@ const renderXTick = selected
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] desktop-layout:inset-auto desktop-layout:max-[1919px]:!left-[37.5rem] min-[1920px]:!left-[calc(50.5rem+(100vw-119.5rem)/2)] desktop-layout:top-0 desktop-layout:bottom-auto desktop-layout:right-auto desktop-layout:w-[330px] desktop-layout:max-h-none desktop-layout:h-full rounded-t-xl desktop-layout:rounded shadow-lg border border-neutral-800 border-b-0 desktop-layout:border-b z-50 origin-bottom desktop-layout:origin-left bg-neutral-900/95 backdrop-blur-sm"
+              className="fixed inset-x-0 bottom-0 top-14 max-h-[85vh] desktop-layout:inset-auto desktop-layout:!left-150 desktop-layout:top-0 desktop-layout:bottom-auto desktop-layout:right-auto desktop-layout:w-[330px] desktop-layout:max-h-none desktop-layout:h-full rounded-t-xl desktop-layout:rounded shadow-lg border border-neutral-800 border-b-0 desktop-layout:border-b z-50 origin-bottom desktop-layout:origin-left bg-neutral-900/95 backdrop-blur-sm"
             >
               <div className="p-3 h-full flex flex-col min-h-0">
                 <div className="flex justify-between items-center mb-4 flex-shrink-0">
@@ -2883,13 +3202,34 @@ const renderXTick = selected
                   scrollbar-thumb-neutral-600/40
                   hover:scrollbar-thumb-neutral-600/60">
                   {displayedMaterialTotals.map((material: MaterialRequirement) => (
-                    <div key={material.itemId} className="flex justify-between items-center text-neutral-200">
-                      <span className="flex-1">{material.name || `Item ${material.itemId}`}</span>
-                      <span className="text-yellow-300 font-medium">
+                    <div key={material.itemId} className="flex justify-between items-center gap-2 text-neutral-200">
+                      <span className="flex min-w-0 flex-1 items-center gap-2">
+                        <span className="truncate">{material.name || `Item ${material.itemId}`}</span>
+                        <MaterialSourceBadge source={materialBuySource(material.itemId, prices, materialInfo, useMarketValue)} />
+                      </span>
+                      <span className={`${selectedVersion === 'Forever' ? 'text-[#64cbfb]' : 'text-yellow-300'} font-medium`}>
                         {material.quantity.toLocaleString()}
                       </span>
                     </div>
                   ))}
+                </div>
+                <div className="flex gap-2 pt-3 flex-shrink-0">
+                  <button
+                    type="button"
+                    disabled={displayedMaterialTotals.length === 0}
+                    onClick={() => copyShoppingList('auctionator')}
+                    className="flex-1 rounded border border-neutral-600 bg-neutral-800 px-2 py-2 text-xs font-semibold text-neutral-100 transition-colors hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    {copiedShoppingList === 'auctionator' ? 'Copied' : 'Auctionator'}
+                  </button>
+                  <button
+                    type="button"
+                    disabled={displayedMaterialTotals.length === 0}
+                    onClick={() => copyShoppingList('tsm')}
+                    className="flex-1 rounded border border-neutral-600 bg-neutral-800 px-2 py-2 text-xs font-semibold text-neutral-100 transition-colors hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    {copiedShoppingList === 'tsm' ? 'Copied' : 'TSM'}
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -2898,7 +3238,7 @@ const renderXTick = selected
 
         {/* Main panel - z-0 so left-edge drag zone (z-45) stays interactable; sliders use z-20 within their containers */}
         <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none desktop-layout:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
-        
+        <PriceAgeNotice realm={selectedRealm} faction={selectedFaction} variant="banner" />
         {!selected ? (
           <p className="text-neutral-400 px-4 py-8">
             <span className="desktop-layout:hidden">Tap the menu to view the leveling guide or recipe list.</span>
@@ -2915,7 +3255,7 @@ const renderXTick = selected
                   className="w-10 h-10 desktop-layout:w-16 desktop-layout:h-16 rounded mr-2 flex-shrink-0"
                 />
                 <a
-                  href={selected.url || `https://www.wowhead.com/${selectedVersion === 'The Burning Crusade' ? 'tbc' : 'classic'}/spell=${selected.id}`}
+                  href={selected.url || `https://www.wowhead.com/${getWowheadBase(selectedVersion)}/spell=${selected.id}`}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:underline font-semibold"
@@ -2938,7 +3278,7 @@ const renderXTick = selected
                 <h3 className="text-base font-medium leading-6 text-white desktop-layout:text-lg">Level-up Calculator</h3>
               </div>
               <div className="flex flex-col desktop-layout:flex-row w-full h-full">
-                <div className="w-full desktop-layout:w-3/5 relative p-4 desktop-layout:p-8 h-[min(75vw,300px)] desktop-layout:h-[350px]">
+                <div className="w-full desktop-layout:w-3/5 relative px-4 pt-4 pb-0 desktop-layout:px-8 desktop-layout:pt-8 desktop-layout:pb-0 h-[min(calc(75vw-1rem),284px)] desktop-layout:h-[318px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
                       <CartesianGrid
@@ -3040,7 +3380,7 @@ const renderXTick = selected
                           // build a single path: for each point we move to (M) and draw a circle via two arcs
                           const r = 2;  // half the previous 4px
                           const { orange, yellow, green, gray } = selected.difficulty;
-                          const minSkill = selected.minSkill ?? 1;
+                          const minSkill = getEffectiveMinSkill(selected);
 
                           const buildPath = (points: typeof probData) => points.map(({ skill, chance }) => {
                             const x = xScale(skill);
@@ -3089,7 +3429,7 @@ const renderXTick = selected
                               background: getTrackBackground({
                                 values: [rngLow, rngHigh],
                                 colors: ['#4b5563', '#d1d5db', '#4b5563'],
-                                min: selected.minSkill,
+                                min: sliderMin,
                                 max: selected.difficulty.gray!
                               }),
                               pointerEvents: 'auto'
@@ -3240,15 +3580,6 @@ const renderXTick = selected
                 </aside>
               </div>
 
-              <div className="my-4 hidden w-full min-h-[60px] max-h-[120px] items-center justify-center min-[1920px]:flex">
-                <AdSlot
-                  slot={AD_SLOT_LEADERBOARD}
-                  width={728}
-                  height={90}
-                  className="flex h-[90px] w-[728px] max-w-full items-center justify-center"
-                />
-              </div>
-
               <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
                 <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
               </div>
@@ -3263,7 +3594,26 @@ const renderXTick = selected
                   (() => {
                     const recipeInfo = materialInfo[selected.source.recipeItemId];
                     const recipeCostData = getRecipeCost(selected, prices, materialInfo, useMarketValue);
-                    
+                    const currencyLabel = currencyCostLabel(selected, materialInfo);
+
+                    if (currencyLabel) {
+                      return (
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
+                          <span className="text-xs desktop-layout:text-base font-semibold text-center leading-tight">{currencyLabel}</span>
+                        </div>
+                      );
+                    }
+
+                    if (recipeInfo?.mobDrop && recipeInfo?.bop) {
+                      return (
+                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
+                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
+                          <MobDropCostHint />
+                        </div>
+                      );
+                    }
+
                     // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
                     if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
                       return (
@@ -3336,6 +3686,14 @@ const renderXTick = selected
                 </div>
               </div>
 
+              <RecipeDetailsSection
+                recipe={selected}
+                wowheadBase={getWowheadBase(selectedVersion)}
+                materialInfo={materialInfo}
+                prices={prices}
+                useMarketValue={useMarketValue}
+              />
+
               <div className="flex items-center justify-between px-2 py-3 desktop-layout:px-6 desktop-layout:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
                 <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Material Calculations</h3>
               </div>
@@ -3355,10 +3713,10 @@ const renderXTick = selected
                   const sellPrice = info?.sellPrice ?? 0;
                   const vendorReturn = sellPrice * totalOutput;
                   const quality = selected.quality ?? info?.quality ?? 1;
-                  const itemLevel = info?.itemLevel ?? 70;
-                  const isWeapon = info?.class === '2';
-                  const outcomes = getDisenchantOutcomes(itemLevel, quality, isWeapon, info?.class, info?.slot, outputItemId);
-                  const deTotal = getExpectedDisenchantValue(itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, info?.class, info?.slot, outputItemId);
+                  const disenchantItem = resolveDisenchantItem(outputItemId, materialInfo);
+                  const isWeapon = disenchantItem.itemClass === '2';
+                  const outcomes = getDisenchantOutcomes(disenchantItem.itemLevel, quality, isWeapon, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
+                  const deTotal = getExpectedDisenchantValue(disenchantItem.itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
                   const ahMinBuyout = (prices[outputItemId]?.minBuyout ?? 0) * totalOutput;
                   const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
                   return (
@@ -3453,7 +3811,6 @@ const renderXTick = selected
             />
           </div>
         )}
-        {children}
         </main>
       </div>
     </div>

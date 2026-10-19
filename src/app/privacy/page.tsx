@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         </p>
         <h2 className="pt-4 text-lg font-semibold text-white">Saved on your device</h2>
         <p>
-          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device.
+          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device. Closing the Forever announcement on a profession page stores a cookie named wowcraft-forever-announced for one year so that notice is not shown again.
         </p>
         <h2 className="pt-4 text-lg font-semibold text-white">Contact</h2>
         <p>

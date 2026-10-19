@@ -1,0 +1,1960 @@
+{
+  "4408": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Mechanical Squirrel",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4409": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Small Seaforium Charge",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4410": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Shadow Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4411": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Flame Deflector",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4412": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Moonsight Rifle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4413": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Discombobulator Ray",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4414": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Portable Bronze Mortar",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4415": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Craftsman's Monocle",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4416": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Goblin Land Mine",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4417": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Large Seaforium Charge",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6672": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Flash Bomb",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6716": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Dynamite",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7192": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Goblin Rocket Boots",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7560": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1200,
+    "auctionhouse": false,
+    "name": "Schematic: Gnomish Universal Remote",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7561": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Schematic: Goblin Jumper Cables",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7742": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2400,
+    "auctionhouse": false,
+    "name": "Schematic: Gnomish Cloaking Device",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10601": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Bright-Eye Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10602": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 3000,
+    "auctionhouse": false,
+    "name": "Schematic: Deadly Scope",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10603": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Catseye Ultra Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10604": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Mithril Heavy-bore Rifle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10605": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Spellpower Goggles Xtreme",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10606": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Parachute Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10607": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 3600,
+    "auctionhouse": false,
+    "name": "Schematic: Deepdive Helmet",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10608": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Sniper Scope",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10609": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 4000,
+    "auctionhouse": false,
+    "name": "Schematic: Mithril Mechanical Dragonling",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "11827": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Lil' Smoky",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "11828": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Pet Bombling",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "13308": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Schematic: Ice Deflector",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "13309": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1000,
+    "auctionhouse": false,
+    "name": "Schematic: Lovingly Crafted Boomstick",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "13310": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Schematic: Accurate Scope",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "13311": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 10000,
+    "auctionhouse": false,
+    "name": "Schematic: Mechanical Dragonling",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14639": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Schematic: Minor Recombobulator",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16041": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Schematic: Thorium Grenade",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16042": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Schematic: Thorium Widget",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16043": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Thorium Rifle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16044": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Lifelike Mechanical Toad",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16045": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Spellpower Goggles Xtreme Plus",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16046": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Schematic: Masterwork Target Dummy",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16047": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Schematic: Thorium Tube",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16048": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Dark Iron Rifle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16049": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Dark Iron Bomb",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16050": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Schematic: Delicate Arcanite Converter",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "16051": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Thorium Shells",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16052": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Voice Amplification Modulator",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16053": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Master Engineer's Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16054": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Arcanite Dragonling",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16055": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Arcane Bomb",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "16056": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Flawless Arcanite Rifle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "17720": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Snowmaster 9000",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18235": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Field Repair Bot 74A",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18290": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Biznicks 247x128 Accurascope",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "18291": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Force Reactive Disk",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "18292": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Core Marksman Rifle",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "18647": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Schematic: Red Firework",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18648": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Schematic: Green Firework",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18649": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Schematic: Blue Firework",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18650": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: EZ-Thro Dynamite II",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18651": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Schematic: Truesilver Transformer",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18652": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Schematic: Gyrofreeze Ice Reflector",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18653": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Goblin Jumper Cables XL",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18654": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Gnomish Alarm-O-Bot",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18655": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Major Recombobulator",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18656": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Schematic: Powerful Seaforium Charge",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18657": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Hyper-Radiant Flame Reflector",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18658": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Ultra-Flash Shadow Reflector",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "18661": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: World Enlarger",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "19027": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Snake Burst Firework",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "20000": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 120000,
+    "auctionhouse": false,
+    "name": "Schematic: Bloodvine Goggles",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "20001": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Schematic: Bloodvine Lens",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "21724": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small Blue Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21725": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small Green Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21726": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small Red Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21727": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Blue Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21728": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Green Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21729": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Red Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21730": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Blue Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21731": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Green Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21732": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Red Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21733": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Blue Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21734": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Green Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21735": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Red Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "21737": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Cluster Launcher",
+    "quality": 2,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21738": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Firework Launcher",
+    "quality": 2,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "22729": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Steam Tonk Controller",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "210178": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Shredder Autosalvage Unit",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "212230": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Schematic: Soul Vessel",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215153": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Schematic: Whirling Truesilver Gearwall",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215156": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Schematic: Hyperconductive Goldwrap",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215429": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 25000,
+    "auctionhouse": false,
+    "name": "Schematic: Polished Truesilver Gears",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215431": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Schematic: High-Yield Radiation Bomb",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215432": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Schematic: Ez-Thro Radiation Bomb",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "221336": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Goblin Mining Helmet",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "236872": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Creepy Censor Sensors",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "238782": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Tinkerbox",
+    "quality": 1,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "238783": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Tinkerbox: Teleport",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "238784": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Tinkerbox: Nitro Boosts",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "238785": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Tinkerbox: Magnetic Displacement",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "238789": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Semisafe Transporter: New Avalon",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "239222": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Pop-Up Shrub",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "264201": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 625,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Tabs",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264202": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 625,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Dynamite",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264203": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1375,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Copper Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264204": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Schematic: EZ-Thro Wrap",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264205": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 3250,
+    "auctionhouse": false,
+    "name": "Schematic: EZ-Thro Copper Bomb XL",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264206": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 3625,
+    "auctionhouse": false,
+    "name": "Schematic: No Slip SAF-T Padding",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "264207": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Bronze Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264208": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Jumbo Dynamite",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264209": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Bell",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "264210": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Shafety Sheep",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264211": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 4750,
+    "auctionhouse": false,
+    "name": "Schematic: EZ-Thro Fireproof Fuse",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "264212": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Bronze Mortar",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264213": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Grenade",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264214": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Casing",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264215": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264216": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Schematic: Emergency Field Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "264217": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5625,
+    "auctionhouse": false,
+    "name": "Schematic: Compact Critter Carrier",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "264218": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Tru-Trigger",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264219": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Tru-Trigger Frag Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264220": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Disposable Parachute",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "264221": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6250,
+    "auctionhouse": false,
+    "name": "Schematic: Gnomish Army Knife",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "264222": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 6875,
+    "auctionhouse": false,
+    "name": "Schematic: Loot-A-Rang",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "264223": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Tube",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264224": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Clever Dynamite",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264225": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Shell",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264226": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Thorium Grenade",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264227": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Dark Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264228": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Mana Bomb",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264229": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Field Transporter: Gadgetzan",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264230": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Emergency Ripper: Everlook",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264231": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ and SAF Field Transporter: Mt. Hyjal",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264232": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 7500,
+    "auctionhouse": false,
+    "name": "Schematic: Ultrasafe Rechargeable Battery",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 360
+      }
+    ]
+  },
+  "264233": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Schematic: Dimensional Transporter: Mt. Hyjal",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264234": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 7500,
+    "auctionhouse": false,
+    "name": "Schematic: Gnomish Poultryizer",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 360
+      }
+    ]
+  },
+  "264235": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 7500,
+    "auctionhouse": false,
+    "name": "Schematic: Ultralight Goblin Glider",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 360
+      }
+    ]
+  },
+  "264236": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Gnomish Weather Machine",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "264237": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 7500,
+    "auctionhouse": false,
+    "name": "Schematic: Stealthman 52",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 360
+      }
+    ]
+  },
+  "264238": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Nitro Boosts",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264239": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: EZ-Thro Magnetic Displacer",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "264240": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: SAF-T Teleport",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "269901": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3000,
+    "auctionhouse": false,
+    "name": "Schematic: Centaur Banner Deployment Device",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "269903": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3000,
+    "auctionhouse": false,
+    "name": "Schematic: Hoof-Shaped Foot Pedal",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "273092": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Blueprint: Repair Bot",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "273117": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Blueprint: Anarchist's Workbench",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "274049": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: 9-60 Battery Pack",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "274389": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Swiftfeather Arrow",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "274390": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Swiftstrike Shot",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": false
+  },
+  "277470": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Harvester Override Signalcaster",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "279321": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: SAF-T Ultra Precision Scope",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279322": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Hyper Deluxe Sniper Rifle Mk XVII",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "280321": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Schematic: Whimsical Waistwrap",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280322": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Schematic: Gizmo Girdle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280323": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4375,
+    "auctionhouse": false,
+    "name": "Schematic: Clanking Cord",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280324": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Serrated Strap",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "280325": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Floppy Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280326": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Bent Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280327": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Stuckbutton Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "280328": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Dented Goggles",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "284870": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Schematic: Unsanctified Grenade",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "285285": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Satchel of Copper Bombs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 45
+      }
+    ]
+  },
+  "285286": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Satchel of Bronze Bombs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
+  },
+  "285287": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Satchel of Iron Bombs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "285288": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Schematic: Satchel of Dark Iron Bombs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 270
+      }
+    ]
+  },
+  "286076": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small Purple Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "286077": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small White Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "286078": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Small Yellow Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "286079": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Purple Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286080": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large White Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286081": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Yellow Rocket",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286082": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Purple Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286083": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: White Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286084": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Yellow Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "286085": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Purple Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "286086": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large White Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  },
+  "286087": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Schematic: Large Yellow Rocket Cluster",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": false
+  }
+}

@@ -1,0 +1,3933 @@
+{
+  "2598": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Linen Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "2601": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gray Woolen Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4292": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Woolen Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4345": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Woolen Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4346": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Heavy Woolen Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4347": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Reinforced Woolen Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4348": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Phoenix Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4349": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Phoenix Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4350": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Spider Silk Slippers",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4351": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Shadow Hood",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4352": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Boots of the Enchanter",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4353": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Spider Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "4354": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Rich Purple Silk Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "4355": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Icy Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "4356": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Star Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "5771": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 200,
+    "auctionhouse": false,
+    "name": "Pattern: Red Linen Bag",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5772": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 500,
+    "auctionhouse": false,
+    "name": "Pattern: Red Woolen Bag",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "5773": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Robes of Arcana",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "5774": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Silk Pack",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "5775": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Silk Pack",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6270": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 200,
+    "auctionhouse": false,
+    "name": "Pattern: Blue Linen Vest",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6271": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Linen Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6272": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 300,
+    "auctionhouse": false,
+    "name": "Pattern: Blue Linen Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6274": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 400,
+    "auctionhouse": false,
+    "name": "Pattern: Blue Overalls",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6275": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 800,
+    "auctionhouse": false,
+    "name": "Pattern: Greater Adept's Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "6390": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stylish Blue Shirt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6391": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stylish Green Shirt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "6401": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Dark Silk Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7084": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Crimson Silk Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7085": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Azure Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7086": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7087": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1200,
+    "auctionhouse": false,
+    "name": "Pattern: Crimson Silk Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7088": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Pattern: Crimson Silk Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7089": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Silk Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "7090": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Silk Armor",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7091": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Truefaith Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7092": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Hands of Darkness",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "7114": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Silk Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10300": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Mageweave Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10301": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: White Bandit Mask",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10302": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Mageweave Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10311": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 3000,
+    "auctionhouse": false,
+    "name": "Pattern: Orange Martial Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10312": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Mageweave Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10314": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 4000,
+    "auctionhouse": false,
+    "name": "Pattern: Lavender Mageweave Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10315": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Mageweave Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10316": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Colorful Kilt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10317": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 4000,
+    "auctionhouse": false,
+    "name": "Pattern: Pink Mageweave Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10318": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 7000,
+    "auctionhouse": false,
+    "name": "Pattern: Admiral's Hat",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10320": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Red Mageweave Headband",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10321": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 4500,
+    "auctionhouse": false,
+    "name": "Pattern: Tuxedo Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10323": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 4500,
+    "auctionhouse": false,
+    "name": "Pattern: Tuxedo Pants",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10325": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 10000,
+    "auctionhouse": false,
+    "name": "Pattern: White Wedding Dress",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10326": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Pattern: Tuxedo Jacket",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "10463": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Shadoweave Mask",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "10728": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Black Swashbuckler's Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14466": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostweave Tunic",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14467": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostweave Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14468": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Bag",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14469": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14470": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runecloth Tunic",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14471": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Cindercloth Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14472": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Cloak",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14473": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14474": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostweave Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14476": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Cindercloth Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14477": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14478": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brightcloth Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14479": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brightcloth Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14480": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14481": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14482": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Cindercloth Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14483": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 16000,
+    "auctionhouse": false,
+    "name": "Pattern: Felcloth Pants",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14484": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brightcloth Cloak",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14485": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wizardweave Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14486": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Cloak of Fire",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "14488": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14489": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frostweave Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14490": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Cindercloth Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14491": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runecloth Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14492": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Felcloth Boots",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14493": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Robe of Winter Night",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "14494": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brightcloth Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14495": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Pants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14496": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Felcloth Hood",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14497": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mooncloth Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14498": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runecloth Headband",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14499": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mooncloth Bag",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14500": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wizardweave Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14501": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mooncloth Vest",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14504": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runecloth Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14505": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wizardweave Turban",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14506": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Felcloth Robe",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14507": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mooncloth Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14508": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Felcloth Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "14509": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Mooncloth Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14510": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Bottomless Bag",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14511": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gloves of Spell Mastery",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14512": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Truefaith Vestments",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14513": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Robe of the Archmage",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14514": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Robe of the Void",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14526": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Mooncloth",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14627": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 800,
+    "auctionhouse": false,
+    "name": "Pattern: Bright Yellow Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "14630": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 1000,
+    "auctionhouse": false,
+    "name": "Pattern: Enchanter's Cowl",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17017": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 180000,
+    "auctionhouse": false,
+    "name": "Pattern: Flarecore Mantle",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17018": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 80000,
+    "auctionhouse": false,
+    "name": "Pattern: Flarecore Gloves",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "17724": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Green Holiday Shirt",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "18265": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Flarecore Wraps",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "18414": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Belt of the Archmage",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "18415": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Felcloth Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18416": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Inferno Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18417": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mooncloth Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18418": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Cloak of Warding",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "18487": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Mooncloth Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19215": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Wisdom of the Timbermaw",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19216": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 22000,
+    "auctionhouse": false,
+    "name": "Pattern: Argent Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19217": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Argent Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19218": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Mantle of the Timbermaw",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19219": {
+    "bop": true,
+    "limitedStock": true,
+    "buyPrice": 60000,
+    "auctionhouse": false,
+    "name": "Pattern: Flarecore Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19220": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 90000,
+    "auctionhouse": false,
+    "name": "Pattern: Flarecore Leggings",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19764": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Bloodvine Vest",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19765": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Bloodvine Leggings",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "19766": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Bloodvine Boots",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "20546": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runed Stygian Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "20547": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runed Stygian Boots",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "20548": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Runed Stygian Belt",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "21358": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Pattern: Soul Pouch",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "21371": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Core Felcloth Bag",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true
+  },
+  "21722": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Festival Dress",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "21723": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Festival Suit",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "22307": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 6000,
+    "auctionhouse": false,
+    "name": "Pattern: Enchanted Mageweave Pouch",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22308": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Enchanted Runecloth Bag",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22309": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Big Bag of Enchantment",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "22310": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 20000,
+    "auctionhouse": false,
+    "name": "Pattern: Cenarion Herb Bag",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22312": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Satchel of Cenarius",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22683": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 90000,
+    "auctionhouse": false,
+    "name": "Pattern: Gaea's Embrace",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22772": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Sylvan Shoulders",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22773": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Sylvan Crown",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "22774": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Sylvan Vest",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "34261": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Green Winter Clothes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "34319": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Red Winter Clothes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "211247": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Phoenix Bindings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215149": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Pattern: Gneuro-Linked Arcano-Filament Monocle",
+    "quality": 4,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215368": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 25000,
+    "auctionhouse": false,
+    "name": "Pattern: Hyperconductive Arcano-Filament",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "215369": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 700,
+    "auctionhouse": false,
+    "name": "Pattern: Invoker's Cord",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "215370": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 700,
+    "auctionhouse": false,
+    "name": "Pattern: Invoker's Mantle",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217244": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 5000,
+    "auctionhouse": false,
+    "name": "Pattern: Crimson Silk Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "217249": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Belt",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217251": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Crimson Silk Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217254": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Boots of the Enchanter",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "217258": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 1000,
+    "auctionhouse": false,
+    "name": "Pattern: Enchanter's Cowl",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228121": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Leather-Reinforced Runecloth Bag",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3469,
+        "name": "Tarnished Undermine Real",
+        "quantity": 50
+      }
+    ]
+  },
+  "228303": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Pattern: Incandescent Mooncloth Robe",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228316": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Incandescent Mooncloth Vest",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228317": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Incandescent Mooncloth Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228318": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Incandescent Mooncloth Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "228477": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Embroidered Belt of the Archmage",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "228993": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Bottomless Bag",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "238298": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Hood",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238299": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Mantle",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238300": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Vestments",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238301": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238302": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Mitts",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238303": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Strap",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238304": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "238305": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Scarlet Augur's Soles",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "239149": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Crusader's Knapsack",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "239150": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Crimson Dawnwoven Bag",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "253665": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 150,
+    "auctionhouse": false,
+    "name": "Pattern: Linen Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253668": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 250,
+    "auctionhouse": false,
+    "name": "Pattern: Woolen Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253886": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Novice Arcanist's Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253888": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Novice Ardent's Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253890": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253892": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253894": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253896": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253898": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253900": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Boots",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253902": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pristine Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253904": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Silky Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253906": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Flame Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253908": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shadow Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253910": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pearly Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253912": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shining Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253914": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253916": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253918": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253920": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253922": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253924": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1875,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253926": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253928": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253930": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253932": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253934": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253936": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2125,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Sash",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253938": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pristine Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253940": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Silky Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253942": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Flame Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253944": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shadow Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253946": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pearly Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253948": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shining Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253950": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253952": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253954": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253956": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253958": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253960": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253962": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253964": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253966": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253968": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253970": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253972": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 2750,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Gown",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253974": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1000,
+    "auctionhouse": false,
+    "name": "Pattern: Silk Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253976": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pristine Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253978": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Silky Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253980": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Flame Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253982": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shadow Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253984": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Pearly Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253986": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Filigreed Shining Circlet",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "253988": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Pristine Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253990": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Silky Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253992": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Flame Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253994": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Shadow Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253996": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Pearly Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "253998": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 3125,
+    "auctionhouse": false,
+    "name": "Pattern: Shining Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
+  },
+  "254000": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254002": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gilded Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254004": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frothing Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254006": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fiery Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254008": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254010": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Golden Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254012": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Radiant Slippers",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254014": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Slippers",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254016": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Hood",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254018": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254020": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Cuffs",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254022": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gilded Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254024": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4125,
+    "auctionhouse": false,
+    "name": "Pattern: Frothing Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254026": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4125,
+    "auctionhouse": false,
+    "name": "Pattern: Fiery Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254028": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4125,
+    "auctionhouse": false,
+    "name": "Pattern: Black Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254030": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4125,
+    "auctionhouse": false,
+    "name": "Pattern: Golden Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254032": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4125,
+    "auctionhouse": false,
+    "name": "Pattern: Radiant Handwraps",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254034": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthen Silk Shoulders",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254036": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4750,
+    "auctionhouse": false,
+    "name": "Pattern: Mageweave Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254038": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gilded Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254040": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frothing Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254042": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fiery Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254044": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254046": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Golden Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254048": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Radiant Cord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254050": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Nethergeld Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254052": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Netherfroth Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254054": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Netherflame Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254056": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Netherpearl Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254058": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Nethershine Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254060": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 4875,
+    "auctionhouse": false,
+    "name": "Pattern: Netherlight Shoulders",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254062": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Nethergeld Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254064": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Netherfroth Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254066": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Netherflame Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254068": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Netherpearl Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254070": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Nethershine Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254072": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5125,
+    "auctionhouse": false,
+    "name": "Pattern: Netherlight Cuffs",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254074": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Cord",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254076": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Gloves",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254078": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Cord",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254080": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254082": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Gilded Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254084": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Frothing Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254086": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Fiery Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254088": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Black Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254090": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Golden Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254092": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5375,
+    "auctionhouse": false,
+    "name": "Pattern: Radiant Waistcord",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
+  },
+  "254094": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Boots",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254096": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Gilded Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254098": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Frothing Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254100": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Fiery Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254102": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Black Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254104": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Golden Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254106": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Radiant Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254108": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Gilded Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254110": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Frothing Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254112": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Fiery Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254114": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Black Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254116": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Golden Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254118": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 5875,
+    "auctionhouse": false,
+    "name": "Pattern: Radiant Sandals",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
+  },
+  "254120": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Mantle",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254122": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Vest",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254124": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Runecloth Cuffs",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254126": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254128": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Mantle",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254130": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Boots",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254132": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Cuffs",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254134": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mooncloth Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "254136": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Ghostweave Hood",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254138": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Earthenweave Crown",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "254140": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Bottomless Reagent Bag",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true
+  },
+  "273099": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Blueprint: Spinning Wheel",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "273124": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Blueprint: Loom",
+    "quality": 2,
+    "icon": "inv_garrison_blueprints3",
+    "hasSource": true
+  },
+  "273972": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Manaflare Pants",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273973": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Manaflare Gloves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273974": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Manaflare Mantle",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273975": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Manaflare Boots",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273988": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Pants of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273989": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Gloves of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273990": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mantle of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273991": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Treads of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273992": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Leggings of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273993": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Handguards of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273994": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Pauldrons of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "273995": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Boots of Conviction",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274008": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Demonheart Leggings",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274009": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Demonheart Gloves",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274010": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Demonheart Spaulders",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "274011": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Demonheart Boots",
+    "quality": 4,
+    "icon": "inv_scroll_04",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "275580": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Venomspew Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "275581": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Venomspew Cord",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "275582": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Venomspew Footpads",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "275583": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Swarmtender's Gloves",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "275584": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Swarmtender's Cord",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "275585": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 75000,
+    "auctionhouse": false,
+    "name": "Pattern: Swarmtender's Footpads",
+    "quality": 3,
+    "icon": "inv_scroll_04",
+    "hasSource": true
+  },
+  "276946": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276947": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Cuffs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276948": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Handwraps",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276949": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Cord",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276950": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276951": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Shoes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276970": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Vest",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276971": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Cuffs",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276972": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Handwraps",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276973": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 950,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Cord",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276974": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1250,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Leggings",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276975": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 1100,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Shoes",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276982": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Cowl",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276983": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Cloudy Stormsewn Epaulets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276990": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Cowl",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "276991": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": 100000,
+    "auctionhouse": false,
+    "name": "Pattern: Azure Stormsewn Epaulets",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true
+  },
+  "279315": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Robes of Fiery Devastation",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279316": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Mana-infused Cord",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279317": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Rime-encrusted Boots",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279318": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Fel Cape",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279319": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Cloak of Earth and Sky",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  },
+  "279320": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Pattern: Felblood Soul Bag",
+    "quality": 4,
+    "icon": "inv_scroll_06",
+    "hasSource": false
+  }
+}

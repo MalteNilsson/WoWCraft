@@ -1,0 +1,7678 @@
+[
+  {
+    "id": 3918,
+    "name": "Rough Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 20,
+      "green": 30,
+      "gray": 40
+    },
+    "materials": {
+      "2835": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_dust_01",
+    "url": "https://www.wowhead.com/forever/spell=3918",
+    "produces": {
+      "id": 4357,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3919,
+    "name": "Rough Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 30,
+      "green": 45,
+      "gray": 60
+    },
+    "materials": {
+      "2589": 1,
+      "4357": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=3919",
+    "produces": {
+      "id": 4358,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3920,
+    "name": "Crafted Light Shot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 30,
+      "green": 45,
+      "gray": 60
+    },
+    "materials": {
+      "2840": 1,
+      "4357": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/forever/spell=3920",
+    "produces": {
+      "id": 8067,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 3922,
+    "name": "Handful of Copper Bolts",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 45,
+      "green": 52,
+      "gray": 60
+    },
+    "materials": {
+      "2840": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_gear_06",
+    "url": "https://www.wowhead.com/forever/spell=3922",
+    "produces": {
+      "id": 4359,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 115
+    }
+  },
+  {
+    "id": 3923,
+    "name": "Rough Copper Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 30,
+      "yellow": 60,
+      "green": 75,
+      "gray": 90
+    },
+    "materials": {
+      "2589": 1,
+      "2840": 1,
+      "4357": 2,
+      "4359": 1
+    },
+    "minSkill": 30,
+    "icon": "inv_misc_bomb_09",
+    "url": "https://www.wowhead.com/forever/spell=3923",
+    "produces": {
+      "id": 4360,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 130
+    }
+  },
+  {
+    "id": 3924,
+    "name": "Copper Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 80,
+      "green": 95,
+      "gray": 110
+    },
+    "materials": {
+      "2840": 2,
+      "2880": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_gizmo_pipe_02",
+    "url": "https://www.wowhead.com/forever/spell=3924",
+    "produces": {
+      "id": 4361,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 3925,
+    "name": "Rough Boomstick",
+    "quality": 2,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 80,
+      "green": 95,
+      "gray": 110
+    },
+    "materials": {
+      "4359": 1,
+      "4361": 1,
+      "4399": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_weapon_rifle_03",
+    "url": "https://www.wowhead.com/forever/spell=3925",
+    "produces": {
+      "id": 4362,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 3926,
+    "name": "Copper Modulator",
+    "quality": 1,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 95,
+      "green": 110,
+      "gray": 125
+    },
+    "materials": {
+      "2589": 2,
+      "2840": 1,
+      "4359": 2
+    },
+    "minSkill": 65,
+    "icon": "inv_gizmo_03",
+    "url": "https://www.wowhead.com/forever/spell=3926",
+    "produces": {
+      "id": 4363,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 225
+    }
+  },
+  {
+    "id": 3928,
+    "name": "Mechanical Squirrel",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
+    },
+    "materials": {
+      "774": 2,
+      "2840": 1,
+      "4359": 1,
+      "4363": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_crate_01",
+    "url": "https://www.wowhead.com/forever/spell=3928",
+    "produces": {
+      "id": 4401,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4408,
+      "recipeItemName": "Schematic: Mechanical Squirrel"
+    }
+  },
+  {
+    "id": 3929,
+    "name": "Coarse Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 85,
+      "green": 90,
+      "gray": 95
+    },
+    "materials": {
+      "2836": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_dust_02",
+    "url": "https://www.wowhead.com/forever/spell=3929",
+    "produces": {
+      "id": 4364,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 3930,
+    "name": "Crafted Heavy Shot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 85,
+      "green": 90,
+      "gray": 95
+    },
+    "materials": {
+      "2840": 1,
+      "4364": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/forever/spell=3930",
+    "produces": {
+      "id": 8068,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 3931,
+    "name": "Coarse Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 90,
+      "green": 97,
+      "gray": 105
+    },
+    "materials": {
+      "2589": 1,
+      "4364": 3
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=3931",
+    "produces": {
+      "id": 4365,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 3932,
+    "name": "Target Dummy",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 115,
+      "green": 130,
+      "gray": 145
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 1,
+      "4359": 2,
+      "4363": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_crate_06",
+    "url": "https://www.wowhead.com/forever/spell=3932",
+    "produces": {
+      "id": 4366,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 300
+    }
+  },
+  {
+    "id": 3933,
+    "name": "Small Seaforium Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 145,
+      "gray": 160
+    },
+    "materials": {
+      "159": 1,
+      "2318": 1,
+      "4363": 1,
+      "4364": 2
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_urn_01",
+    "url": "https://www.wowhead.com/forever/spell=3933",
+    "produces": {
+      "id": 4367,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4409,
+      "recipeItemName": "Schematic: Small Seaforium Charge"
+    }
+  },
+  {
+    "id": 3934,
+    "name": "Flying Tiger Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 145,
+      "gray": 160
+    },
+    "materials": {
+      "818": 2,
+      "2318": 6
+    },
+    "minSkill": 100,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=3934",
+    "produces": {
+      "id": 4368,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 400
+    }
+  },
+  {
+    "id": 3936,
+    "name": "Deadly Blunderbuss",
+    "quality": 2,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "2319": 2,
+      "4359": 4,
+      "4361": 2,
+      "4399": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=3936",
+    "produces": {
+      "id": 4369,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 420
+    }
+  },
+  {
+    "id": 3937,
+    "name": "Large Copper Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 105,
+      "green": 130,
+      "gray": 155
+    },
+    "materials": {
+      "2840": 3,
+      "4364": 4,
+      "4404": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/forever/spell=3937",
+    "produces": {
+      "id": 4370,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 450
+    }
+  },
+  {
+    "id": 3938,
+    "name": "Bronze Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 105,
+      "green": 130,
+      "gray": 155
+    },
+    "materials": {
+      "2841": 2,
+      "2880": 1
+    },
+    "minSkill": 105,
+    "icon": "inv_gizmo_pipe_01",
+    "url": "https://www.wowhead.com/forever/spell=3938",
+    "produces": {
+      "id": 4371,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 450
+    }
+  },
+  {
+    "id": 3939,
+    "name": "Lovingly Crafted Boomstick",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "1206": 3,
+      "4359": 2,
+      "4371": 2,
+      "4400": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=3939",
+    "produces": {
+      "id": 4372,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13309,
+      "recipeItemName": "Schematic: Lovingly Crafted Boomstick"
+    }
+  },
+  {
+    "id": 3940,
+    "name": "Shadow Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 157,
+      "gray": 170
+    },
+    "materials": {
+      "1210": 2,
+      "2319": 4
+    },
+    "minSkill": 120,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=3940",
+    "produces": {
+      "id": 4373,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4410,
+      "recipeItemName": "Schematic: Shadow Goggles"
+    }
+  },
+  {
+    "id": 3941,
+    "name": "Small Bronze Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 120,
+      "green": 145,
+      "gray": 170
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 2,
+      "4364": 4,
+      "4404": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_misc_bomb_09",
+    "url": "https://www.wowhead.com/forever/spell=3941",
+    "produces": {
+      "id": 4374,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 3942,
+    "name": "Whirring Bronze Gizmo",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 150,
+      "gray": 175
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_gizmo_02",
+    "url": "https://www.wowhead.com/forever/spell=3942",
+    "produces": {
+      "id": 4375,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 3944,
+    "name": "Flame Deflector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 150,
+      "gray": 175
+    },
+    "materials": {
+      "4375": 1,
+      "4402": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/forever/spell=3944",
+    "produces": {
+      "id": 4376,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4411,
+      "recipeItemName": "Schematic: Flame Deflector"
+    }
+  },
+  {
+    "id": 3945,
+    "name": "Heavy Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
+    },
+    "materials": {
+      "2838": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_dust_06",
+    "url": "https://www.wowhead.com/forever/spell=3945",
+    "produces": {
+      "id": 4377,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 3946,
+    "name": "Heavy Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
+    },
+    "materials": {
+      "2592": 1,
+      "4377": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=3946",
+    "produces": {
+      "id": 4378,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 3947,
+    "name": "Crafted Solid Shot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
+    },
+    "materials": {
+      "2841": 1,
+      "4377": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_ammo_bullet_02",
+    "url": "https://www.wowhead.com/forever/spell=3947",
+    "produces": {
+      "id": 8069,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 300
+    }
+  },
+  {
+    "id": 3949,
+    "name": "Silver-plated Shotgun",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 167,
+      "gray": 180
+    },
+    "materials": {
+      "2842": 3,
+      "4371": 2,
+      "4375": 2,
+      "4400": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=3949",
+    "produces": {
+      "id": 4379,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 550
+    }
+  },
+  {
+    "id": 3950,
+    "name": "Big Bronze Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 165,
+      "gray": 190
+    },
+    "materials": {
+      "2841": 3,
+      "4377": 2,
+      "4404": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_misc_bomb_05",
+    "url": "https://www.wowhead.com/forever/spell=3950",
+    "produces": {
+      "id": 4380,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 600
+    }
+  },
+  {
+    "id": 3952,
+    "name": "Minor Recombobulator",
+    "quality": 2,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 177,
+      "gray": 190
+    },
+    "materials": {
+      "1206": 1,
+      "2319": 2,
+      "4371": 1,
+      "4375": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_gizmo_07",
+    "url": "https://www.wowhead.com/forever/spell=3952",
+    "produces": {
+      "id": 4381,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 14639,
+      "recipeItemName": "Schematic: Minor Recombobulator"
+    }
+  },
+  {
+    "id": 3953,
+    "name": "Bronze Framework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 145,
+      "green": 170,
+      "gray": 195
+    },
+    "materials": {
+      "2319": 1,
+      "2592": 1,
+      "2841": 2
+    },
+    "minSkill": 145,
+    "icon": "inv_gizmo_bronzeframework_01",
+    "url": "https://www.wowhead.com/forever/spell=3953",
+    "produces": {
+      "id": 4382,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 600
+    }
+  },
+  {
+    "id": 3954,
+    "name": "Moonsight Rifle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 182,
+      "gray": 195
+    },
+    "materials": {
+      "1705": 2,
+      "4371": 3,
+      "4375": 3,
+      "4400": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_weapon_rifle_06",
+    "url": "https://www.wowhead.com/forever/spell=3954",
+    "produces": {
+      "id": 4383,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4412,
+      "recipeItemName": "Schematic: Moonsight Rifle"
+    }
+  },
+  {
+    "id": 3955,
+    "name": "Explosive Sheep",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "2592": 2,
+      "4375": 1,
+      "4377": 2,
+      "4382": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_nature_polymorph",
+    "url": "https://www.wowhead.com/forever/spell=3955",
+    "produces": {
+      "id": 4384,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 750
+    }
+  },
+  {
+    "id": 3956,
+    "name": "Green Tinted Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "1206": 2,
+      "2319": 4,
+      "4368": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=3956",
+    "produces": {
+      "id": 4385,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 750
+    }
+  },
+  {
+    "id": 3957,
+    "name": "Ice Deflector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "3829": 1,
+      "4375": 1
+    },
+    "minSkill": 155,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/forever/spell=3957",
+    "produces": {
+      "id": 4386,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13308,
+      "recipeItemName": "Schematic: Ice Deflector"
+    }
+  },
+  {
+    "id": 3958,
+    "name": "Iron Strut",
+    "quality": 1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 160,
+      "green": 170,
+      "gray": 180
+    },
+    "materials": {
+      "3575": 2
+    },
+    "minSkill": 160,
+    "icon": "inv_spear_05",
+    "url": "https://www.wowhead.com/forever/spell=3958",
+    "produces": {
+      "id": 4387,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 800
+    }
+  },
+  {
+    "id": 3959,
+    "name": "Discombobulator Ray",
+    "quality": 1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 190,
+      "gray": 200
+    },
+    "materials": {
+      "1529": 1,
+      "4306": 2,
+      "4371": 1,
+      "4375": 3
+    },
+    "minSkill": 160,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=3959",
+    "produces": {
+      "id": 4388,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4413,
+      "recipeItemName": "Schematic: Discombobulator Ray"
+    }
+  },
+  {
+    "id": 3960,
+    "name": "Portable Bronze Mortar",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 195,
+      "gray": 205
+    },
+    "materials": {
+      "2319": 4,
+      "4371": 4,
+      "4377": 4,
+      "4387": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/forever/spell=3960",
+    "produces": {
+      "id": 4403,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4414,
+      "recipeItemName": "Schematic: Portable Bronze Mortar"
+    }
+  },
+  {
+    "id": 3961,
+    "name": "Gyrochronatom",
+    "quality": 1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "3575": 1,
+      "10558": 1
+    },
+    "minSkill": 170,
+    "icon": "inv_misc_pocketwatch_02",
+    "url": "https://www.wowhead.com/forever/spell=3961",
+    "produces": {
+      "id": 4389,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 900
+    }
+  },
+  {
+    "id": 3962,
+    "name": "Iron Grenade",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "3575": 1,
+      "4306": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bomb_08",
+    "url": "https://www.wowhead.com/forever/spell=3962",
+    "produces": {
+      "id": 4390,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 3963,
+    "name": "Compact Harvest Reaper Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "4234": 4,
+      "4382": 1,
+      "4387": 2,
+      "4389": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_helmet_08",
+    "url": "https://www.wowhead.com/forever/spell=3963",
+    "produces": {
+      "id": 4391,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 3965,
+    "name": "Advanced Target Dummy",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "4234": 4,
+      "4382": 1,
+      "4387": 1,
+      "4389": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_crate_05",
+    "url": "https://www.wowhead.com/forever/spell=3965",
+    "produces": {
+      "id": 4392,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1200
+    }
+  },
+  {
+    "id": 3966,
+    "name": "Craftsman's Monocle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 215,
+      "gray": 225
+    },
+    "materials": {
+      "3864": 2,
+      "4234": 6
+    },
+    "minSkill": 185,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/forever/spell=3966",
+    "produces": {
+      "id": 4393,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4415,
+      "recipeItemName": "Schematic: Craftsman's Monocle"
+    }
+  },
+  {
+    "id": 3967,
+    "name": "Big Iron Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3575": 3,
+      "4377": 3,
+      "4404": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/forever/spell=3967",
+    "produces": {
+      "id": 4394,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1400
+    }
+  },
+  {
+    "id": 3968,
+    "name": "Goblin Land Mine",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 225,
+      "gray": 235
+    },
+    "materials": {
+      "3575": 2,
+      "4377": 3,
+      "4389": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_shield_08",
+    "url": "https://www.wowhead.com/forever/spell=3968",
+    "produces": {
+      "id": 4395,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4416,
+      "recipeItemName": "Schematic: Goblin Land Mine"
+    }
+  },
+  {
+    "id": 3969,
+    "name": "Mechanical Dragonling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "3864": 2,
+      "4382": 1,
+      "4387": 4,
+      "4389": 4,
+      "7191": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/forever/spell=3969",
+    "produces": {
+      "id": 4396,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13311,
+      "recipeItemName": "Schematic: Mechanical Dragonling"
+    }
+  },
+  {
+    "id": 3971,
+    "name": "Gnomish Cloaking Device",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "1529": 2,
+      "1705": 2,
+      "3864": 2,
+      "4389": 4,
+      "7191": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_gizmo_01",
+    "url": "https://www.wowhead.com/forever/spell=3971",
+    "produces": {
+      "id": 4397,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 7742,
+      "recipeItemName": "Schematic: Gnomish Cloaking Device"
+    }
+  },
+  {
+    "id": 3972,
+    "name": "Large Seaforium Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "159": 1,
+      "4234": 2,
+      "10505": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_urn_01",
+    "url": "https://www.wowhead.com/forever/spell=3972",
+    "produces": {
+      "id": 4398,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4417,
+      "recipeItemName": "Schematic: Large Seaforium Charge"
+    }
+  },
+  {
+    "id": 3973,
+    "name": "Silver Contact",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 110,
+      "green": 125,
+      "gray": 140
+    },
+    "materials": {
+      "2842": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_ingot_04",
+    "url": "https://www.wowhead.com/forever/spell=3973",
+    "produces": {
+      "id": 4404,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 300
+    }
+  },
+  {
+    "id": 3977,
+    "name": "Crude Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 90,
+      "green": 105,
+      "gray": 120
+    },
+    "materials": {
+      "774": 1,
+      "4359": 1,
+      "4361": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=3977",
+    "produces": {
+      "id": 4405,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 200
+    }
+  },
+  {
+    "id": 3978,
+    "name": "Standard Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 147,
+      "gray": 160
+    },
+    "materials": {
+      "1206": 1,
+      "4371": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=3978",
+    "produces": {
+      "id": 4406,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 475
+    }
+  },
+  {
+    "id": 3979,
+    "name": "Accurate Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "1529": 1,
+      "3864": 1,
+      "4371": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=3979",
+    "produces": {
+      "id": 4407,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13310,
+      "recipeItemName": "Schematic: Accurate Scope"
+    }
+  },
+  {
+    "id": 6458,
+    "name": "Ornate Spyglass",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 172,
+      "gray": 185
+    },
+    "materials": {
+      "1206": 1,
+      "4363": 1,
+      "4371": 2,
+      "4375": 2
+    },
+    "minSkill": 135,
+    "icon": "inv_misc_spyglass_01",
+    "url": "https://www.wowhead.com/forever/spell=6458",
+    "produces": {
+      "id": 5507,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 400
+    }
+  },
+  {
+    "id": 7430,
+    "name": "Arclight Spanner",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 70,
+      "green": 80,
+      "gray": 90
+    },
+    "materials": {
+      "2840": 6
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_wrench_01",
+    "url": "https://www.wowhead.com/forever/spell=7430",
+    "produces": {
+      "id": 6219,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 8243,
+    "name": "Flash Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "4306": 1,
+      "4377": 1,
+      "4611": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_misc_ammo_bullet_01",
+    "url": "https://www.wowhead.com/forever/spell=8243",
+    "produces": {
+      "id": 4852,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6672,
+      "recipeItemName": "Schematic: Flash Bomb"
+    }
+  },
+  {
+    "id": 8334,
+    "name": "Practice Lock",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
+    },
+    "materials": {
+      "2841": 1,
+      "2880": 1,
+      "4359": 2
+    },
+    "minSkill": 100,
+    "icon": "inv_box_01",
+    "url": "https://www.wowhead.com/forever/spell=8334",
+    "produces": {
+      "id": 6712,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 300
+    }
+  },
+  {
+    "id": 8339,
+    "name": "EZ-Thro Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
+    },
+    "materials": {
+      "2589": 1,
+      "4364": 3,
+      "260794": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=8339",
+    "produces": {
+      "id": 6714,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6716,
+      "recipeItemName": "Schematic: EZ-Thro Dynamite"
+    }
+  },
+  {
+    "id": 8895,
+    "name": "Goblin Rocket Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4234": 4,
+      "9061": 2,
+      "10026": 1,
+      "10559": 2,
+      "10560": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_gizmo_rocketboot_01",
+    "url": "https://www.wowhead.com/forever/spell=8895",
+    "produces": {
+      "id": 7189,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 7192,
+      "recipeItemName": "Schematic: Goblin Rocket Boots"
+    }
+  },
+  {
+    "id": 9269,
+    "name": "Gnomish Universal Remote",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "774": 1,
+      "814": 2,
+      "818": 1,
+      "2841": 6,
+      "4375": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_pocketwatch_01",
+    "url": "https://www.wowhead.com/forever/spell=9269",
+    "produces": {
+      "id": 7506,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 7560,
+      "recipeItemName": "Schematic: Gnomish Universal Remote"
+    }
+  },
+  {
+    "id": 9271,
+    "name": "Aquadynamic Fish Attractor",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 160,
+      "gray": 170
+    },
+    "materials": {
+      "2841": 2,
+      "4364": 1,
+      "6530": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_food_26",
+    "url": "https://www.wowhead.com/forever/spell=9271",
+    "produces": {
+      "id": 6533,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 9273,
+    "name": "Goblin Jumper Cables",
+    "quality": 1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 165,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "814": 2,
+      "1210": 2,
+      "3575": 6,
+      "4306": 2,
+      "4375": 2,
+      "7191": 1
+    },
+    "minSkill": 165,
+    "icon": "inv_misc_enggizmos_10",
+    "url": "https://www.wowhead.com/forever/spell=9273",
+    "produces": {
+      "id": 7148,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 7561,
+      "recipeItemName": "Schematic: Goblin Jumper Cables"
+    }
+  },
+  {
+    "id": 12584,
+    "name": "Gold Power Core",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "3577": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_battery_02",
+    "url": "https://www.wowhead.com/forever/spell=12584",
+    "produces": {
+      "id": 10558,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 12585,
+    "name": "Solid Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "7912": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_powder_black",
+    "url": "https://www.wowhead.com/forever/spell=12585",
+    "produces": {
+      "id": 10505,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 12586,
+    "name": "Solid Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
+    },
+    "materials": {
+      "4306": 1,
+      "10505": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=12586",
+    "produces": {
+      "id": 10507,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 12587,
+    "name": "Bright-Eye Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 205,
+      "gray": 215
+    },
+    "materials": {
+      "3864": 2,
+      "4234": 6
+    },
+    "minSkill": 175,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12587",
+    "produces": {
+      "id": 10499,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10601,
+      "recipeItemName": "Schematic: Bright-Eye Goggles"
+    }
+  },
+  {
+    "id": 12589,
+    "name": "Mithril Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "3860": 3
+    },
+    "minSkill": 195,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/forever/spell=12589",
+    "produces": {
+      "id": 10559,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1300
+    }
+  },
+  {
+    "id": 12590,
+    "name": "Gyromatic Micro-Adjustor",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "3859": 4
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_screwdriver_02",
+    "url": "https://www.wowhead.com/forever/spell=12590",
+    "produces": {
+      "id": 10498,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 12591,
+    "name": "Unstable Trigger",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "3860": 1,
+      "4338": 1,
+      "10505": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_battery_01",
+    "url": "https://www.wowhead.com/forever/spell=12591",
+    "produces": {
+      "id": 10560,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12594,
+    "name": "Fire Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3864": 2,
+      "4234": 4,
+      "4385": 1,
+      "7068": 2
+    },
+    "minSkill": 205,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12594",
+    "produces": {
+      "id": 10500,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1600
+    }
+  },
+  {
+    "id": 12595,
+    "name": "Mithril Blunderbuss",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 4,
+      "4400": 1,
+      "7068": 2,
+      "10559": 1,
+      "10560": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=12595",
+    "produces": {
+      "id": 10508,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1600
+    }
+  },
+  {
+    "id": 12596,
+    "name": "Hi-Impact Mithril Slugs",
+    "quality": 2,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3860": 1,
+      "10505": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_ammo_bullet_01",
+    "url": "https://www.wowhead.com/forever/spell=12596",
+    "produces": {
+      "id": 10512,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1700
+    }
+  },
+  {
+    "id": 12597,
+    "name": "Deadly Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 2,
+      "7909": 2,
+      "10559": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=12597",
+    "produces": {
+      "id": 10546,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10602,
+      "recipeItemName": "Schematic: Deadly Scope"
+    }
+  },
+  {
+    "id": 12599,
+    "name": "Mithril Casing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "3860": 3
+    },
+    "minSkill": 215,
+    "icon": "inv_gizmo_mithrilcasing_01",
+    "url": "https://www.wowhead.com/forever/spell=12599",
+    "produces": {
+      "id": 10561,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1800
+    }
+  },
+  {
+    "id": 12603,
+    "name": "Mithril Frag Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "10505": 1,
+      "10560": 1,
+      "10561": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_misc_bomb_02",
+    "url": "https://www.wowhead.com/forever/spell=12603",
+    "produces": {
+      "id": 10514,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1800
+    }
+  },
+  {
+    "id": 12607,
+    "name": "Catseye Ultra Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "4304": 4,
+      "7909": 2,
+      "10592": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12607",
+    "produces": {
+      "id": 10501,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10603,
+      "recipeItemName": "Schematic: Catseye Ultra Goggles"
+    }
+  },
+  {
+    "id": 12614,
+    "name": "Mithril Heavy-bore Rifle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 250,
+      "gray": 260
+    },
+    "materials": {
+      "3860": 6,
+      "3864": 2,
+      "4400": 1,
+      "10559": 2,
+      "10560": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=12614",
+    "produces": {
+      "id": 10510,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10604,
+      "recipeItemName": "Schematic: Mithril Heavy-bore Rifle"
+    }
+  },
+  {
+    "id": 12615,
+    "name": "Spellpower Goggles Xtreme",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4304": 4,
+      "7910": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12615",
+    "produces": {
+      "id": 10502,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10605,
+      "recipeItemName": "Schematic: Spellpower Goggles Xtreme"
+    }
+  },
+  {
+    "id": 12616,
+    "name": "Parachute Cloak",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4339": 4,
+      "10285": 2,
+      "10505": 4,
+      "10560": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_cape_11",
+    "url": "https://www.wowhead.com/forever/spell=12616",
+    "produces": {
+      "id": 10518,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10606,
+      "recipeItemName": "Schematic: Parachute Cloak"
+    }
+  },
+  {
+    "id": 12617,
+    "name": "Deepdive Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "774": 4,
+      "818": 4,
+      "3860": 8,
+      "6037": 1,
+      "10561": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/forever/spell=12617",
+    "produces": {
+      "id": 10506,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10607,
+      "recipeItemName": "Schematic: Deepdive Helmet"
+    }
+  },
+  {
+    "id": 12618,
+    "name": "Rose Colored Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "4304": 6,
+      "7910": 2
+    },
+    "minSkill": 230,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12618",
+    "produces": {
+      "id": 10503,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2200
+    }
+  },
+  {
+    "id": 12619,
+    "name": "Hi-Explosive Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "10505": 2,
+      "10560": 1,
+      "10561": 2
+    },
+    "minSkill": 235,
+    "icon": "inv_misc_bomb_07",
+    "url": "https://www.wowhead.com/forever/spell=12619",
+    "produces": {
+      "id": 10562,
+      "name": "",
+      "quantity": 4
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 12620,
+    "name": "Sniper Scope",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "6037": 2,
+      "7910": 1,
+      "10559": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=12620",
+    "produces": {
+      "id": 10548,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10608,
+      "recipeItemName": "Schematic: Sniper Scope"
+    }
+  },
+  {
+    "id": 12621,
+    "name": "Mithril Gyro-Shot",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 2,
+      "10505": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_ammo_bullet_01",
+    "url": "https://www.wowhead.com/forever/spell=12621",
+    "produces": {
+      "id": 10513,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 12622,
+    "name": "Green Lens",
+    "quality": 3,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "1529": 3,
+      "4304": 8,
+      "7909": 3,
+      "8153": 2,
+      "10286": 2
+    },
+    "minSkill": 245,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/forever/spell=12622",
+    "produces": {
+      "id": 10504,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 12624,
+    "name": "Mithril Mechanical Dragonling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "3860": 14,
+      "6037": 4,
+      "7077": 4,
+      "7910": 2,
+      "9060": 2,
+      "9061": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/forever/spell=12624",
+    "produces": {
+      "id": 10576,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 10609,
+      "recipeItemName": "Schematic: Mithril Mechanical Dragonling"
+    }
+  },
+  {
+    "id": 12715,
+    "name": "Goblin Rocket Fuel Recipe",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "10647": 1,
+      "10648": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_scroll_03",
+    "url": "https://www.wowhead.com/forever/spell=12715",
+    "produces": {
+      "id": 10644,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 12716,
+    "name": "Goblin Mortar",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 4,
+      "7068": 1,
+      "10505": 5,
+      "10558": 1,
+      "10559": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/forever/spell=12716",
+    "produces": {
+      "id": 10577,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 12717,
+    "name": "Goblin Mining Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 8,
+      "3864": 1,
+      "7067": 4
+    },
+    "minSkill": 205,
+    "icon": "inv_helmet_25",
+    "url": "https://www.wowhead.com/forever/spell=12717",
+    "produces": {
+      "id": 10542,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 221336,
+      "recipeItemName": "Schematic: Goblin Mining Helmet"
+    }
+  },
+  {
+    "id": 12718,
+    "name": "Goblin Construction Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "3860": 8,
+      "3864": 1,
+      "7068": 4
+    },
+    "minSkill": 0,
+    "icon": "inv_helmet_60",
+    "url": "https://www.wowhead.com/forever/spell=12718",
+    "produces": {
+      "id": 10543,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12754,
+    "name": "The Big One",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "9061": 1,
+      "10507": 6,
+      "10560": 1,
+      "10561": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_bomb_04",
+    "url": "https://www.wowhead.com/forever/spell=12754",
+    "produces": {
+      "id": 10586,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 12755,
+    "name": "Goblin Bomb Dispenser",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "4407": 2,
+      "6037": 6,
+      "10505": 4,
+      "10560": 1,
+      "10561": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_gizmo_06",
+    "url": "https://www.wowhead.com/forever/spell=12755",
+    "produces": {
+      "id": 10587,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 12758,
+    "name": "Goblin Rocket Helmet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 265,
+      "green": 275,
+      "gray": 285
+    },
+    "materials": {
+      "3860": 4,
+      "9061": 4,
+      "10543": 1,
+      "10560": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/forever/spell=12758",
+    "produces": {
+      "id": 10588,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 12759,
+    "name": "Gnomish Death Ray",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "7972": 4,
+      "9060": 1,
+      "10559": 2,
+      "10560": 1,
+      "12808": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_gizmo_08",
+    "url": "https://www.wowhead.com/forever/spell=12759",
+    "produces": {
+      "id": 10645,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 12760,
+    "name": "Goblin Sapper Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "4338": 1,
+      "10505": 3,
+      "10560": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_fire_selfdestruct",
+    "url": "https://www.wowhead.com/forever/spell=12760",
+    "produces": {
+      "id": 10646,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12895,
+    "name": "Inlaid Mithril Cylinder Plans",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "10647": 1,
+      "10648": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_scroll_05",
+    "url": "https://www.wowhead.com/forever/spell=12895",
+    "produces": {
+      "id": 10713,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12897,
+    "name": "Gnomish Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "4234": 2,
+      "8151": 2,
+      "10500": 1,
+      "10558": 2,
+      "10559": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=12897",
+    "produces": {
+      "id": 10545,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12899,
+    "name": "Gnomish Shrink Ray",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 225,
+      "green": 235,
+      "gray": 245
+    },
+    "materials": {
+      "1529": 2,
+      "3860": 4,
+      "8151": 4,
+      "10559": 1,
+      "10560": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_gizmo_09",
+    "url": "https://www.wowhead.com/forever/spell=12899",
+    "produces": {
+      "id": 10716,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 12902,
+    "name": "Gnomish Net-o-Matic Projector",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 230,
+      "green": 240,
+      "gray": 250
+    },
+    "materials": {
+      "3860": 4,
+      "4337": 4,
+      "10285": 2,
+      "10505": 2,
+      "10559": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_net_01",
+    "url": "https://www.wowhead.com/forever/spell=12902",
+    "produces": {
+      "id": 10720,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1800
+    }
+  },
+  {
+    "id": 12903,
+    "name": "Gnomish Harm Prevention Belt",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 235,
+      "green": 245,
+      "gray": 255
+    },
+    "materials": {
+      "3860": 4,
+      "6037": 2,
+      "7387": 1,
+      "7909": 2,
+      "10560": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/forever/spell=12903",
+    "produces": {
+      "id": 10721,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2000
+    }
+  },
+  {
+    "id": 12905,
+    "name": "Gnomish Rocket Boots",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4234": 4,
+      "4389": 4,
+      "10026": 1,
+      "10505": 8,
+      "10559": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_boots_02",
+    "url": "https://www.wowhead.com/forever/spell=12905",
+    "produces": {
+      "id": 10724,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2200
+    }
+  },
+  {
+    "id": 12906,
+    "name": "Gnomish Battle Chicken",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "1529": 2,
+      "3860": 6,
+      "6037": 6,
+      "9060": 2,
+      "10558": 1,
+      "10561": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_magic_polymorphchicken",
+    "url": "https://www.wowhead.com/forever/spell=12906",
+    "produces": {
+      "id": 10725,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 12907,
+    "name": "Gnomish Mind Control Cap",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 255,
+      "green": 265,
+      "gray": 275
+    },
+    "materials": {
+      "3860": 10,
+      "4338": 4,
+      "6037": 4,
+      "7910": 2,
+      "10558": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_helmet_49",
+    "url": "https://www.wowhead.com/forever/spell=12907",
+    "produces": {
+      "id": 10726,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 12908,
+    "name": "Goblin Dragon Gun",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "3860": 6,
+      "6037": 6,
+      "9061": 4,
+      "10559": 2,
+      "10560": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_fire_flamebolt",
+    "url": "https://www.wowhead.com/forever/spell=12908",
+    "produces": {
+      "id": 10727,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 15255,
+    "name": "Mechanical Repair Kit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "3860": 1,
+      "4338": 1,
+      "10505": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_gizmo_03",
+    "url": "https://www.wowhead.com/forever/spell=15255",
+    "produces": {
+      "id": 11590,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 15628,
+    "name": "Pet Bombling",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "3860": 6,
+      "4394": 1,
+      "7077": 1,
+      "7191": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_misc_bomb_04",
+    "url": "https://www.wowhead.com/forever/spell=15628",
+    "produces": {
+      "id": 11825,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 11828,
+      "recipeItemName": "Schematic: Pet Bombling"
+    }
+  },
+  {
+    "id": 15633,
+    "name": "Lil' Smoky",
+    "quality": 1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 205,
+      "gray": 205
+    },
+    "materials": {
+      "3860": 2,
+      "4389": 2,
+      "6037": 1,
+      "7075": 1,
+      "7191": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_mechagon_spareparts",
+    "url": "https://www.wowhead.com/forever/spell=15633",
+    "produces": {
+      "id": 11826,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 11827,
+      "recipeItemName": "Schematic: Lil' Smoky"
+    }
+  },
+  {
+    "id": 19567,
+    "name": "Salt Shaker",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "10558": 1,
+      "10560": 4,
+      "10561": 1,
+      "12359": 6
+    },
+    "minSkill": 250,
+    "icon": "inv_egg_05",
+    "url": "https://www.wowhead.com/forever/spell=19567",
+    "produces": {
+      "id": 15846,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 19788,
+    "name": "Dense Blasting Powder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "12365": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_ammo_gunpowder_01",
+    "url": "https://www.wowhead.com/forever/spell=19788",
+    "produces": {
+      "id": 15992,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 19790,
+    "name": "Thorium Grenade",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 3,
+      "15992": 3,
+      "15994": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_bomb_08",
+    "url": "https://www.wowhead.com/forever/spell=19790",
+    "produces": {
+      "id": 15993,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16041,
+      "recipeItemName": "Schematic: Thorium Grenade"
+    }
+  },
+  {
+    "id": 19791,
+    "name": "Thorium Widget",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_gizmo_04",
+    "url": "https://www.wowhead.com/forever/spell=19791",
+    "produces": {
+      "id": 15994,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16042,
+      "recipeItemName": "Schematic: Thorium Widget"
+    }
+  },
+  {
+    "id": 19792,
+    "name": "Thorium Rifle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "10546": 1,
+      "10559": 2,
+      "10561": 2,
+      "12359": 4,
+      "15994": 2
+    },
+    "minSkill": 260,
+    "icon": "inv_weapon_rifle_07",
+    "url": "https://www.wowhead.com/forever/spell=19792",
+    "produces": {
+      "id": 15995,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16043,
+      "recipeItemName": "Schematic: Thorium Rifle"
+    }
+  },
+  {
+    "id": 19793,
+    "name": "Lifelike Mechanical Toad",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "8170": 1,
+      "10558": 1,
+      "12803": 1,
+      "15994": 4
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_monsterhead_03",
+    "url": "https://www.wowhead.com/forever/spell=19793",
+    "produces": {
+      "id": 15996,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16044,
+      "recipeItemName": "Schematic: Lifelike Mechanical Toad"
+    }
+  },
+  {
+    "id": 19794,
+    "name": "Spellpower Goggles Xtreme Plus",
+    "quality": 2,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "7910": 4,
+      "10502": 1,
+      "12810": 2,
+      "14047": 8
+    },
+    "minSkill": 270,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=19794",
+    "produces": {
+      "id": 15999,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16045,
+      "recipeItemName": "Schematic: Spellpower Goggles Xtreme Plus"
+    }
+  },
+  {
+    "id": 19795,
+    "name": "Thorium Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "12359": 6
+    },
+    "minSkill": 275,
+    "icon": "inv_gizmo_pipe_04",
+    "url": "https://www.wowhead.com/forever/spell=19795",
+    "produces": {
+      "id": 16000,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16047,
+      "recipeItemName": "Schematic: Thorium Tube"
+    }
+  },
+  {
+    "id": 19796,
+    "name": "Dark Iron Rifle",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "8170": 4,
+      "10546": 2,
+      "11371": 6,
+      "12361": 2,
+      "12799": 2,
+      "16000": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_weapon_rifle_08",
+    "url": "https://www.wowhead.com/forever/spell=19796",
+    "produces": {
+      "id": 16004,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16048,
+      "recipeItemName": "Schematic: Dark Iron Rifle"
+    }
+  },
+  {
+    "id": 19799,
+    "name": "Dark Iron Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "11371": 1,
+      "14047": 3,
+      "15992": 3,
+      "15994": 2
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_bomb_05",
+    "url": "https://www.wowhead.com/forever/spell=19799",
+    "produces": {
+      "id": 16005,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16049,
+      "recipeItemName": "Schematic: Dark Iron Bomb"
+    }
+  },
+  {
+    "id": 19800,
+    "name": "Thorium Shells",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "12359": 2,
+      "15992": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_ammo_bullet_03",
+    "url": "https://www.wowhead.com/forever/spell=19800",
+    "produces": {
+      "id": 15997,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16051,
+      "recipeItemName": "Schematic: Thorium Shells"
+    }
+  },
+  {
+    "id": 19814,
+    "name": "Masterwork Target Dummy",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "6037": 1,
+      "8170": 2,
+      "10561": 1,
+      "14047": 4,
+      "15994": 2,
+      "16000": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_crate_02",
+    "url": "https://www.wowhead.com/forever/spell=19814",
+    "produces": {
+      "id": 16023,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16046,
+      "recipeItemName": "Schematic: Masterwork Target Dummy"
+    }
+  },
+  {
+    "id": 19815,
+    "name": "Delicate Arcanite Converter",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 315,
+      "gray": 325
+    },
+    "materials": {
+      "12360": 1,
+      "14227": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_gizmo_07",
+    "url": "https://www.wowhead.com/forever/spell=19815",
+    "produces": {
+      "id": 16006,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16050,
+      "recipeItemName": "Schematic: Delicate Arcanite Converter"
+    }
+  },
+  {
+    "id": 19819,
+    "name": "Voice Amplification Modulator",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "10558": 1,
+      "12799": 1,
+      "15994": 1,
+      "16006": 2
+    },
+    "minSkill": 290,
+    "icon": "inv_jewelry_amulet_07",
+    "url": "https://www.wowhead.com/forever/spell=19819",
+    "produces": {
+      "id": 16009,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16052,
+      "recipeItemName": "Schematic: Voice Amplification Modulator"
+    }
+  },
+  {
+    "id": 19825,
+    "name": "Master Engineer's Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "10500": 1,
+      "12364": 2,
+      "12810": 4
+    },
+    "minSkill": 290,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=19825",
+    "produces": {
+      "id": 16008,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16053,
+      "recipeItemName": "Schematic: Master Engineer's Goggles"
+    }
+  },
+  {
+    "id": 19830,
+    "name": "Arcanite Dragonling",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "10558": 4,
+      "10576": 1,
+      "12655": 10,
+      "12810": 6,
+      "15994": 6,
+      "16006": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_head_dragon_01",
+    "url": "https://www.wowhead.com/forever/spell=19830",
+    "produces": {
+      "id": 16022,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16054,
+      "recipeItemName": "Schematic: Arcanite Dragonling"
+    }
+  },
+  {
+    "id": 19831,
+    "name": "Arcane Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 1,
+      "16006": 1
+    },
+    "minSkill": 300,
+    "icon": "spell_shadow_mindbomb",
+    "url": "https://www.wowhead.com/forever/spell=19831",
+    "produces": {
+      "id": 16040,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16055,
+      "recipeItemName": "Schematic: Arcane Bomb"
+    }
+  },
+  {
+    "id": 19833,
+    "name": "Flawless Arcanite Rifle",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 2,
+      "7078": 2,
+      "12360": 10,
+      "12800": 2,
+      "12810": 2,
+      "16000": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_rifle_03",
+    "url": "https://www.wowhead.com/forever/spell=19833",
+    "produces": {
+      "id": 16007,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16056,
+      "recipeItemName": "Schematic: Flawless Arcanite Rifle"
+    }
+  },
+  {
+    "id": 21940,
+    "name": "Snowmaster 9000",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3829": 1,
+      "3860": 8,
+      "4389": 4,
+      "17202": 4
+    },
+    "minSkill": 190,
+    "icon": "spell_frost_windwalkon",
+    "url": "https://www.wowhead.com/forever/spell=21940",
+    "produces": {
+      "id": 17716,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 17720,
+      "recipeItemName": "Schematic: Snowmaster 9000"
+    }
+  },
+  {
+    "id": 22704,
+    "name": "Field Repair Bot 74A",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7067": 2,
+      "7068": 1,
+      "7191": 1,
+      "8170": 4,
+      "12359": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_egg_05",
+    "url": "https://www.wowhead.com/forever/spell=22704",
+    "produces": {
+      "id": 18232,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18235,
+      "recipeItemName": "Schematic: Field Repair Bot 74A"
+    }
+  },
+  {
+    "id": 22793,
+    "name": "Biznicks 247x128 Accurascope",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 2,
+      "11371": 6,
+      "16000": 1,
+      "16006": 4,
+      "17011": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_spyglass_02",
+    "url": "https://www.wowhead.com/forever/spell=22793",
+    "produces": {
+      "id": 18283,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18290,
+      "recipeItemName": "Schematic: Biznicks 247x128 Accurascope"
+    }
+  },
+  {
+    "id": 22795,
+    "name": "Core Marksman Rifle",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 6,
+      "16000": 2,
+      "16006": 2,
+      "17010": 4,
+      "17011": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_rifle_05",
+    "url": "https://www.wowhead.com/forever/spell=22795",
+    "produces": {
+      "id": 18282,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18292,
+      "recipeItemName": "Schematic: Core Marksman Rifle"
+    }
+  },
+  {
+    "id": 22797,
+    "name": "Force Reactive Disk",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 8,
+      "7082": 8,
+      "12360": 6,
+      "12803": 12,
+      "16006": 2
+    },
+    "minSkill": 300,
+    "icon": "spell_arcane_portaldarnassus",
+    "url": "https://www.wowhead.com/forever/spell=22797",
+    "produces": {
+      "id": 18168,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18291,
+      "recipeItemName": "Schematic: Force Reactive Disk"
+    }
+  },
+  {
+    "id": 23066,
+    "name": "Red Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_fire_fireball02",
+    "url": "https://www.wowhead.com/forever/spell=23066",
+    "produces": {
+      "id": 9318,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18647,
+      "recipeItemName": "Schematic: Red Firework"
+    }
+  },
+  {
+    "id": 23067,
+    "name": "Blue Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_ice_magicdamage",
+    "url": "https://www.wowhead.com/forever/spell=23067",
+    "produces": {
+      "id": 9312,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18649,
+      "recipeItemName": "Schematic: Blue Firework"
+    }
+  },
+  {
+    "id": 23068,
+    "name": "Green Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 162,
+      "gray": 175
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_nature_abolishmagic",
+    "url": "https://www.wowhead.com/forever/spell=23068",
+    "produces": {
+      "id": 9313,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18648,
+      "recipeItemName": "Schematic: Green Firework"
+    }
+  },
+  {
+    "id": 23069,
+    "name": "EZ-Thro Dynamite II",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "4306": 1,
+      "10505": 1,
+      "260801": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_bomb_03",
+    "url": "https://www.wowhead.com/forever/spell=23069",
+    "produces": {
+      "id": 18588,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18650,
+      "recipeItemName": "Schematic: EZ-Thro Dynamite II"
+    }
+  },
+  {
+    "id": 23070,
+    "name": "Dense Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "14047": 3,
+      "15992": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=23070",
+    "produces": {
+      "id": 18641,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 23071,
+    "name": "Truesilver Transformer",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 270,
+      "green": 275,
+      "gray": 280
+    },
+    "materials": {
+      "6037": 2,
+      "7067": 2,
+      "7069": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_staff_18",
+    "url": "https://www.wowhead.com/forever/spell=23071",
+    "produces": {
+      "id": 18631,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18651,
+      "recipeItemName": "Schematic: Truesilver Transformer"
+    }
+  },
+  {
+    "id": 23077,
+    "name": "Gyrofreeze Ice Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "3829": 2,
+      "7078": 4,
+      "12361": 2,
+      "13467": 4,
+      "15994": 6,
+      "18631": 2
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_enggizmos_02",
+    "url": "https://www.wowhead.com/forever/spell=23077",
+    "produces": {
+      "id": 18634,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18652,
+      "recipeItemName": "Schematic: Gyrofreeze Ice Reflector"
+    }
+  },
+  {
+    "id": 23078,
+    "name": "Goblin Jumper Cables XL",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "7191": 2,
+      "7910": 2,
+      "14227": 2,
+      "15994": 2,
+      "18631": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_enggizmos_11",
+    "url": "https://www.wowhead.com/forever/spell=23078",
+    "produces": {
+      "id": 18587,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18653,
+      "recipeItemName": "Schematic: Goblin Jumper Cables XL"
+    }
+  },
+  {
+    "id": 23079,
+    "name": "Major Recombobulator",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 290,
+      "gray": 295
+    },
+    "materials": {
+      "14047": 2,
+      "16000": 2,
+      "18631": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_09",
+    "url": "https://www.wowhead.com/forever/spell=23079",
+    "produces": {
+      "id": 18637,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18655,
+      "recipeItemName": "Schematic: Major Recombobulator"
+    }
+  },
+  {
+    "id": 23080,
+    "name": "Powerful Seaforium Charge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "159": 1,
+      "8170": 2,
+      "15992": 3,
+      "15994": 2
+    },
+    "minSkill": 275,
+    "icon": "spell_shadow_detectinvisibility",
+    "url": "https://www.wowhead.com/forever/spell=23080",
+    "produces": {
+      "id": 18594,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18656,
+      "recipeItemName": "Schematic: Powerful Seaforium Charge"
+    }
+  },
+  {
+    "id": 23081,
+    "name": "Hyper-Radiant Flame Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "7080": 6,
+      "7910": 4,
+      "11371": 4,
+      "12800": 2,
+      "18631": 3
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_enggizmos_04",
+    "url": "https://www.wowhead.com/forever/spell=23081",
+    "produces": {
+      "id": 18638,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18657,
+      "recipeItemName": "Schematic: Hyper-Radiant Flame Reflector"
+    }
+  },
+  {
+    "id": 23082,
+    "name": "Ultra-Flash Shadow Reflector",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 8,
+      "12799": 2,
+      "12800": 2,
+      "12803": 6,
+      "12808": 4,
+      "18631": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_16",
+    "url": "https://www.wowhead.com/forever/spell=23082",
+    "produces": {
+      "id": 18639,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18658,
+      "recipeItemName": "Schematic: Ultra-Flash Shadow Reflector"
+    }
+  },
+  {
+    "id": 23096,
+    "name": "Alarm-O-Bot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "7191": 1,
+      "7910": 1,
+      "8170": 4,
+      "12359": 4,
+      "15994": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_enggizmos_13",
+    "url": "https://www.wowhead.com/forever/spell=23096",
+    "produces": {
+      "id": 18645,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18654,
+      "recipeItemName": "Schematic: Gnomish Alarm-O-Bot"
+    }
+  },
+  {
+    "id": 23129,
+    "name": "World Enlarger",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 260,
+      "green": 265,
+      "gray": 270
+    },
+    "materials": {
+      "3864": 1,
+      "10558": 1,
+      "10560": 1,
+      "10561": 1,
+      "15994": 2
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_enggizmos_08",
+    "url": "https://www.wowhead.com/forever/spell=23129",
+    "produces": {
+      "id": 18660,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18661,
+      "recipeItemName": "Schematic: World Enlarger"
+    }
+  },
+  {
+    "id": 23486,
+    "name": "Dimensional Ripper - Everlook",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "3860": 10,
+      "7077": 4,
+      "7910": 2,
+      "10586": 1,
+      "18631": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_enggizmos_07",
+    "url": "https://www.wowhead.com/forever/spell=23486",
+    "produces": {
+      "id": 18984,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23489,
+    "name": "Ultrasafe Transporter - Gadgetzan",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "3860": 12,
+      "7075": 4,
+      "7079": 2,
+      "7909": 4,
+      "9060": 1,
+      "18631": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_enggizmos_12",
+    "url": "https://www.wowhead.com/forever/spell=23489",
+    "produces": {
+      "id": 18986,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 23507,
+    "name": "Snake Burst Firework",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
+    },
+    "materials": {
+      "8150": 1,
+      "14047": 2,
+      "15992": 2
+    },
+    "minSkill": 250,
+    "icon": "spell_holy_holybolt",
+    "url": "https://www.wowhead.com/forever/spell=23507",
+    "produces": {
+      "id": 19026,
+      "name": "",
+      "quantity": 4
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 19027,
+      "recipeItemName": "Schematic: Snake Burst Firework"
+    }
+  },
+  {
+    "id": 24356,
+    "name": "Bloodvine Goggles",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12804": 8,
+      "12810": 4,
+      "16006": 2,
+      "19726": 4,
+      "19774": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=24356",
+    "produces": {
+      "id": 19999,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20000,
+      "recipeItemName": "Schematic: Bloodvine Goggles"
+    }
+  },
+  {
+    "id": 24357,
+    "name": "Bloodvine Lens",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12804": 8,
+      "12810": 4,
+      "16006": 1,
+      "19726": 5,
+      "19774": 5
+    },
+    "minSkill": 300,
+    "icon": "inv_helmet_44",
+    "url": "https://www.wowhead.com/forever/spell=24357",
+    "produces": {
+      "id": 19998,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20001,
+      "recipeItemName": "Schematic: Bloodvine Lens"
+    }
+  },
+  {
+    "id": 26011,
+    "name": "Tranquil Mechanical Yeti",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7079": 2,
+      "10558": 1,
+      "15407": 1,
+      "15994": 4,
+      "18631": 2
+    },
+    "minSkill": 250,
+    "icon": "ability_hunter_pet_gorilla",
+    "url": "https://www.wowhead.com/forever/spell=26011",
+    "produces": {
+      "id": 21277,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 26416,
+    "name": "Small Blue Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_blue",
+    "url": "https://www.wowhead.com/forever/spell=26416",
+    "produces": {
+      "id": 21558,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21724,
+      "recipeItemName": "Schematic: Small Blue Rocket"
+    }
+  },
+  {
+    "id": 26417,
+    "name": "Small Green Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_green",
+    "url": "https://www.wowhead.com/forever/spell=26417",
+    "produces": {
+      "id": 21559,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21725,
+      "recipeItemName": "Schematic: Small Green Rocket"
+    }
+  },
+  {
+    "id": 26418,
+    "name": "Small Red Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_red",
+    "url": "https://www.wowhead.com/forever/spell=26418",
+    "produces": {
+      "id": 21557,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21726,
+      "recipeItemName": "Schematic: Small Red Rocket"
+    }
+  },
+  {
+    "id": 26420,
+    "name": "Large Blue Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_blue",
+    "url": "https://www.wowhead.com/forever/spell=26420",
+    "produces": {
+      "id": 21589,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21727,
+      "recipeItemName": "Schematic: Large Blue Rocket"
+    }
+  },
+  {
+    "id": 26421,
+    "name": "Large Green Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_green",
+    "url": "https://www.wowhead.com/forever/spell=26421",
+    "produces": {
+      "id": 21590,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21728,
+      "recipeItemName": "Schematic: Large Green Rocket"
+    }
+  },
+  {
+    "id": 26422,
+    "name": "Large Red Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_red",
+    "url": "https://www.wowhead.com/forever/spell=26422",
+    "produces": {
+      "id": 21592,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21729,
+      "recipeItemName": "Schematic: Large Red Rocket"
+    }
+  },
+  {
+    "id": 26423,
+    "name": "Blue Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_blue",
+    "url": "https://www.wowhead.com/forever/spell=26423",
+    "produces": {
+      "id": 21571,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21730,
+      "recipeItemName": "Schematic: Blue Rocket Cluster"
+    }
+  },
+  {
+    "id": 26424,
+    "name": "Green Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_green",
+    "url": "https://www.wowhead.com/forever/spell=26424",
+    "produces": {
+      "id": 21574,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21731,
+      "recipeItemName": "Schematic: Green Rocket Cluster"
+    }
+  },
+  {
+    "id": 26425,
+    "name": "Red Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_red",
+    "url": "https://www.wowhead.com/forever/spell=26425",
+    "produces": {
+      "id": 21576,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21732,
+      "recipeItemName": "Schematic: Red Rocket Cluster"
+    }
+  },
+  {
+    "id": 26426,
+    "name": "Large Blue Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_blue",
+    "url": "https://www.wowhead.com/forever/spell=26426",
+    "produces": {
+      "id": 21714,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21733,
+      "recipeItemName": "Schematic: Large Blue Rocket Cluster"
+    }
+  },
+  {
+    "id": 26427,
+    "name": "Large Green Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_green",
+    "url": "https://www.wowhead.com/forever/spell=26427",
+    "produces": {
+      "id": 21716,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21734,
+      "recipeItemName": "Schematic: Large Green Rocket Cluster"
+    }
+  },
+  {
+    "id": 26428,
+    "name": "Large Red Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_red",
+    "url": "https://www.wowhead.com/forever/spell=26428",
+    "produces": {
+      "id": 21718,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21735,
+      "recipeItemName": "Schematic: Large Red Rocket Cluster"
+    }
+  },
+  {
+    "id": 26442,
+    "name": "Firework Launcher",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "9060": 2,
+      "9061": 2,
+      "10560": 2,
+      "10561": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_musket_04",
+    "url": "https://www.wowhead.com/forever/spell=26442",
+    "produces": {
+      "id": 21569,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21738,
+      "recipeItemName": "Schematic: Firework Launcher"
+    }
+  },
+  {
+    "id": 26443,
+    "name": "Firework Cluster Launcher",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "9060": 3,
+      "9061": 3,
+      "10561": 1,
+      "18631": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_03",
+    "url": "https://www.wowhead.com/forever/spell=26443",
+    "produces": {
+      "id": 21570,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21737,
+      "recipeItemName": "Schematic: Cluster Launcher"
+    }
+  },
+  {
+    "id": 28327,
+    "name": "Steam Tonk Controller",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 305,
+      "gray": 315
+    },
+    "materials": {
+      "10558": 1,
+      "10561": 1,
+      "15994": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_enggizmos_20",
+    "url": "https://www.wowhead.com/forever/spell=28327",
+    "produces": {
+      "id": 22728,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 22729,
+      "recipeItemName": "Schematic: Steam Tonk Controller"
+    }
+  },
+  {
+    "id": 424641,
+    "name": "Shredder Autosalvage Unit",
+    "quality": 1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 135,
+      "green": 140,
+      "gray": 145
+    },
+    "materials": {
+      "4234": 1,
+      "4375": 2,
+      "4382": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_misc_enggizmos_12",
+    "url": "https://www.wowhead.com/forever/spell=424641",
+    "produces": {
+      "id": 210147,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 210178,
+      "recipeItemName": "Schematic: Shredder Autosalvage Unit"
+    }
+  },
+  {
+    "id": 431362,
+    "name": "Soul Vessel",
+    "quality": 3,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 205,
+      "green": 210,
+      "gray": 215
+    },
+    "materials": {
+      "1210": 4,
+      "9262": 1,
+      "16583": 1
+    },
+    "minSkill": 205,
+    "icon": "inv_jewelcrafting_nightseye_01",
+    "url": "https://www.wowhead.com/forever/spell=431362",
+    "produces": {
+      "id": 211427,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 212230,
+      "recipeItemName": "Schematic: Soul Vessel"
+    }
+  },
+  {
+    "id": 435956,
+    "name": "Polished Truesilver Gears",
+    "quality": 3,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "6037": 1,
+      "213381": 5
+    },
+    "minSkill": 200,
+    "icon": "inv_mace_107",
+    "url": "https://www.wowhead.com/forever/spell=435956",
+    "produces": {
+      "id": 213383,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 215429,
+      "recipeItemName": "Schematic: Polished Truesilver Gears"
+    }
+  },
+  {
+    "id": 435958,
+    "name": "Whirling Truesilver Gearwall",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 232,
+      "gray": 240
+    },
+    "materials": {
+      "3860": 15,
+      "4389": 2,
+      "10561": 2,
+      "213369": 2,
+      "213376": 3,
+      "213383": 5
+    },
+    "minSkill": 225,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=435958",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215153,
+      "recipeItemName": "Schematic: Whirling Truesilver Gearwall"
+    }
+  },
+  {
+    "id": 435960,
+    "name": "Hyperconductive Goldwap",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 230,
+      "gray": 235
+    },
+    "materials": {
+      "3577": 10,
+      "213369": 1,
+      "213379": 3,
+      "213383": 3
+    },
+    "minSkill": 225,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=435960",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215156,
+      "recipeItemName": "Schematic: Hyperconductive Goldwrap"
+    }
+  },
+  {
+    "id": 435964,
+    "name": "High-Yield Radiation Bomb",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 230,
+      "gray": 235
+    },
+    "materials": {
+      "3860": 2,
+      "10505": 1,
+      "215430": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_gizmo_felironbomb",
+    "url": "https://www.wowhead.com/forever/spell=435964",
+    "produces": {
+      "id": 215127,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 215431,
+      "recipeItemName": "Schematic: High-Yield Radiation Bomb"
+    }
+  },
+  {
+    "id": 435966,
+    "name": "Ez-Thro Radiation Bomb",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 230,
+      "gray": 235
+    },
+    "materials": {
+      "3860": 2,
+      "10505": 2,
+      "215430": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_gizmo_felironbomb",
+    "url": "https://www.wowhead.com/forever/spell=435966",
+    "produces": {
+      "id": 215168,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 215432,
+      "recipeItemName": "Schematic: Ez-Thro Radiation Bomb"
+    }
+  },
+  {
+    "id": 446236,
+    "name": "Void-Powered Invoker's Vambraces",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "10558": 2,
+      "15994": 2,
+      "220688": 1,
+      "220689": 1,
+      "221021": 10
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=446236",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 446237,
+    "name": "Void-Powered Slayer's Vambraces",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "7910": 2,
+      "15992": 3,
+      "220688": 1,
+      "220689": 1,
+      "221021": 10
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=446237",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 446238,
+    "name": "Void-Powered Protector's Vambraces",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "10558": 2,
+      "16000": 2,
+      "220688": 1,
+      "220689": 1,
+      "221021": 10
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=446238",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 461710,
+    "name": "Fiery Core Sharpshooter Rifle",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 6,
+      "16000": 2,
+      "16006": 2,
+      "17010": 4,
+      "17011": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=461710",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213573,
+    "name": "Arcane Megabomb",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "14047": 1,
+      "16006": 1,
+      "20725": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213573",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213576,
+    "name": "The Fumigator",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "14047": 1,
+      "234005": 2,
+      "234011": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213576",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213578,
+    "name": "Obsidian Bomb",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "12365": 1,
+      "234005": 3,
+      "234007": 1,
+      "234008": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213578",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213586,
+    "name": "G00 DV-1B3 Generator",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "234005": 20,
+      "234007": 8,
+      "234009": 8,
+      "234010": 8,
+      "234011": 8,
+      "234012": 30
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213586",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213588,
+    "name": "Tuned Force Reactive Disk",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "18168": 1,
+      "234003": 8,
+      "234005": 5,
+      "234007": 4
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213588",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213646,
+    "name": "Obsidian Blasting Powder",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 315,
+      "green": 322,
+      "gray": 330
+    },
+    "materials": {
+      "22202": 2
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1213646",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1214145,
+    "name": "Obsidian Shotgun",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12360": 30,
+      "20725": 3,
+      "20868": 3,
+      "20870": 3,
+      "20881": 2,
+      "234003": 8
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=1214145",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1217207,
+    "name": "Obsidian Scope",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12363": 1,
+      "16000": 1,
+      "234003": 1
+    },
+    "minSkill": 0,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1217207",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1221012,
+    "name": "Creepy Censor Sensors",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 275,
+      "green": 277,
+      "gray": 280
+    },
+    "materials": {
+      "8170": 8,
+      "12800": 2
+    },
+    "minSkill": 250,
+    "icon": "trade_engineering",
+    "url": "https://www.wowhead.com/forever/spell=1221012",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 236872,
+      "recipeItemName": "Schematic: Creepy Censor Sensors"
+    }
+  },
+  {
+    "id": 1226206,
+    "name": "Tinkerbox",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "10558": 2,
+      "10561": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_gizmo_goblingtonkcontroller",
+    "url": "https://www.wowhead.com/forever/spell=1226206",
+    "produces": {
+      "id": 238737,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238782,
+      "recipeItemName": "Schematic: Tinkerbox"
+    }
+  },
+  {
+    "id": 1226207,
+    "name": "Tinkerbox: Teleport",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "10560": 1,
+      "15994": 1,
+      "238737": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_enggizmos_16",
+    "url": "https://www.wowhead.com/forever/spell=1226207",
+    "produces": {
+      "id": 238734,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238783,
+      "recipeItemName": "Schematic: Tinkerbox: Teleport"
+    }
+  },
+  {
+    "id": 1226208,
+    "name": "Tinkerbox: Nitro Boosts",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "10560": 1,
+      "16000": 1,
+      "238737": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_enggizmos_03",
+    "url": "https://www.wowhead.com/forever/spell=1226208",
+    "produces": {
+      "id": 238735,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238784,
+      "recipeItemName": "Schematic: Tinkerbox: Nitro Boosts"
+    }
+  },
+  {
+    "id": 1226209,
+    "name": "Tinkerbox: Magnetic Displacement",
+    "quality": 2,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "4387": 2,
+      "10560": 1,
+      "238737": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_gizmo_hardenedadamantitetube",
+    "url": "https://www.wowhead.com/forever/spell=1226209",
+    "produces": {
+      "id": 238736,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238785,
+      "recipeItemName": "Schematic: Tinkerbox: Magnetic Displacement"
+    }
+  },
+  {
+    "id": 1226210,
+    "name": "Tinker: Teleport",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "15994": 1,
+      "16006": 1,
+      "238737": 1
+    },
+    "minSkill": 280,
+    "icon": "trade_engineering",
+    "url": "https://www.wowhead.com/forever/spell=1226210",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1226211,
+    "name": "Tinker: Nitro Boosts",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "16000": 1,
+      "16006": 1,
+      "238737": 1
+    },
+    "minSkill": 280,
+    "icon": "trade_engineering",
+    "url": "https://www.wowhead.com/forever/spell=1226211",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1226212,
+    "name": "Tinker: Magnetic Displacement",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "4387": 2,
+      "16006": 1,
+      "238737": 1
+    },
+    "minSkill": 280,
+    "icon": "trade_engineering",
+    "url": "https://www.wowhead.com/forever/spell=1226212",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1226213,
+    "name": "Semisafe Transporter: New Avalon",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 305,
+      "green": 305,
+      "gray": 305
+    },
+    "materials": {
+      "10560": 1,
+      "10561": 2,
+      "10588": 2,
+      "12811": 1,
+      "16006": 1,
+      "18631": 2
+    },
+    "minSkill": 300,
+    "icon": "trade_engineering",
+    "url": "https://www.wowhead.com/forever/spell=1226213",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 238789,
+      "recipeItemName": "Schematic: Semisafe Transporter: New Avalon"
+    }
+  },
+  {
+    "id": 1228088,
+    "name": "Pop-Up Shrub",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 257,
+      "gray": 260
+    },
+    "materials": {
+      "4382": 1,
+      "10560": 1,
+      "15994": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_plant_02",
+    "url": "https://www.wowhead.com/forever/spell=1228088",
+    "produces": {
+      "id": 237023,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 239222,
+      "recipeItemName": "Schematic: Pop-Up Shrub"
+    }
+  },
+  {
+    "id": 1230656,
+    "name": "Reagent Bot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 20,
+      "green": 22,
+      "gray": 25
+    },
+    "materials": {
+      "4359": 1,
+      "4361": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_enggizmos_13",
+    "url": "https://www.wowhead.com/forever/spell=1230656",
+    "produces": {
+      "id": 279950,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 1249634,
+    "name": "Sandpaper",
+    "quality": 2,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 130,
+      "green": 142,
+      "gray": 155
+    },
+    "materials": {
+      "2996": 1,
+      "249425": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_inscription_papyrus",
+    "url": "https://www.wowhead.com/forever/spell=1249634",
+    "produces": {
+      "id": 249432,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 1263034,
+    "name": "Repair Bot",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 142,
+      "gray": 145
+    },
+    "materials": {
+      "4234": 1,
+      "4371": 1,
+      "4375": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_robotpet",
+    "url": "https://www.wowhead.com/forever/spell=1263034",
+    "produces": {
+      "id": 279949,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273092,
+      "recipeItemName": "Blueprint: Repair Bot"
+    }
+  },
+  {
+    "id": 1263083,
+    "name": "Anarchist's Workbench",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 300,
+      "green": 300,
+      "gray": 300
+    },
+    "materials": {
+      "15994": 2,
+      "273129": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_10_specialization_professionbook_engineering_color1",
+    "url": "https://www.wowhead.com/forever/spell=1263083",
+    "produces": {
+      "id": 279989,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273117,
+      "recipeItemName": "Blueprint: Anarchist's Workbench"
+    }
+  },
+  {
+    "id": 1266893,
+    "name": "SAF-T Tabs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 25,
+      "green": 27,
+      "gray": 30
+    },
+    "materials": {
+      "2570": 1,
+      "249409": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_misc_punchcards_white",
+    "url": "https://www.wowhead.com/forever/spell=1266893",
+    "produces": {
+      "id": 260784,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264201,
+      "recipeItemName": "Schematic: SAF-T Tabs"
+    }
+  },
+  {
+    "id": 1266905,
+    "name": "SAF-T Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 25,
+      "green": 30,
+      "gray": 35
+    },
+    "materials": {
+      "2589": 1,
+      "4357": 2
+    },
+    "minSkill": 25,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=1266905",
+    "produces": {
+      "id": 260792,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264202,
+      "recipeItemName": "Schematic: SAF-T Dynamite"
+    }
+  },
+  {
+    "id": 1266906,
+    "name": "SAF-T Copper Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 55,
+      "yellow": 55,
+      "green": 60,
+      "gray": 65
+    },
+    "materials": {
+      "2570": 1,
+      "2840": 1,
+      "4357": 2,
+      "4359": 1,
+      "260784": 2
+    },
+    "minSkill": 55,
+    "icon": "inv_misc_bomb_09",
+    "url": "https://www.wowhead.com/forever/spell=1266906",
+    "produces": {
+      "id": 260793,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264203,
+      "recipeItemName": "Schematic: SAF-T Copper Bomb"
+    }
+  },
+  {
+    "id": 1266907,
+    "name": "EZ-Thro Wrap",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 100,
+      "green": 102,
+      "gray": 105
+    },
+    "materials": {
+      "2592": 1,
+      "249410": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_giftwrap_03",
+    "url": "https://www.wowhead.com/forever/spell=1266907",
+    "produces": {
+      "id": 260794,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264204,
+      "recipeItemName": "Schematic: EZ-Thro Wrap"
+    }
+  },
+  {
+    "id": 1266908,
+    "name": "EZ-Thro Copper Bomb XL",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 130,
+      "green": 155,
+      "gray": 180
+    },
+    "materials": {
+      "2840": 3,
+      "4364": 4,
+      "4404": 1,
+      "260794": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/forever/spell=1266908",
+    "produces": {
+      "id": 260795,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264205,
+      "recipeItemName": "Schematic: EZ-Thro Copper Bomb XL"
+    }
+  },
+  {
+    "id": 1266909,
+    "name": "No Slip SAF-T Padding",
+    "quality": 1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 145,
+      "green": 147,
+      "gray": 150
+    },
+    "materials": {
+      "4234": 1,
+      "249430": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_misc_leatherscrap_11",
+    "url": "https://www.wowhead.com/forever/spell=1266909",
+    "produces": {
+      "id": 260796,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264206,
+      "recipeItemName": "Schematic: No Slip SAF-T Padding"
+    }
+  },
+  {
+    "id": 1266910,
+    "name": "SAF-T Bronze Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 145,
+      "green": 170,
+      "gray": 195
+    },
+    "materials": {
+      "2592": 1,
+      "2841": 2,
+      "4364": 4,
+      "4404": 1,
+      "260796": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_misc_bomb_09",
+    "url": "https://www.wowhead.com/forever/spell=1266910",
+    "produces": {
+      "id": 260797,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264207,
+      "recipeItemName": "Schematic: SAF-T Bronze Bomb"
+    }
+  },
+  {
+    "id": 1266911,
+    "name": "SAF-T Jumbo Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 150,
+      "green": 160,
+      "gray": 170
+    },
+    "materials": {
+      "2592": 1,
+      "4377": 2,
+      "260796": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=1266911",
+    "produces": {
+      "id": 260798,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264208,
+      "recipeItemName": "Schematic: SAF-T Jumbo Dynamite"
+    }
+  },
+  {
+    "id": 1266912,
+    "name": "SAF-T Bell",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 177,
+      "gray": 180
+    },
+    "materials": {
+      "2841": 2,
+      "249432": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bell_01",
+    "url": "https://www.wowhead.com/forever/spell=1266912",
+    "produces": {
+      "id": 260799,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264209,
+      "recipeItemName": "Schematic: SAF-T Bell"
+    }
+  },
+  {
+    "id": 1266913,
+    "name": "Shafety Sheep",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 200,
+      "green": 212,
+      "gray": 225
+    },
+    "materials": {
+      "2592": 2,
+      "4375": 1,
+      "4377": 2,
+      "4382": 1,
+      "260799": 1
+    },
+    "minSkill": 175,
+    "icon": "ability_mage_improvedpolymorph",
+    "url": "https://www.wowhead.com/forever/spell=1266913",
+    "produces": {
+      "id": 260800,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264210,
+      "recipeItemName": "Schematic: Shafety Sheep"
+    }
+  },
+  {
+    "id": 1266914,
+    "name": "EZ-Thro Fireproof Fuse",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 192,
+      "gray": 195
+    },
+    "materials": {
+      "4404": 1,
+      "249428": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_jewelcrafting_delicatecopperwire",
+    "url": "https://www.wowhead.com/forever/spell=1266914",
+    "produces": {
+      "id": 260801,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264211,
+      "recipeItemName": "Schematic: EZ-Thro Fireproof Fuse"
+    }
+  },
+  {
+    "id": 1266915,
+    "name": "EZ-Thro Bronze Mortar",
+    "quality": 1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "2319": 4,
+      "4371": 4,
+      "4377": 4,
+      "4387": 1,
+      "260801": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_musket_01",
+    "url": "https://www.wowhead.com/forever/spell=1266915",
+    "produces": {
+      "id": 260802,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264212,
+      "recipeItemName": "Schematic: EZ-Thro Bronze Mortar"
+    }
+  },
+  {
+    "id": 1266916,
+    "name": "EZ-Thro Grenade",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "3575": 1,
+      "4306": 1,
+      "4377": 1,
+      "260801": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=1266916",
+    "produces": {
+      "id": 260803,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264213,
+      "recipeItemName": "Schematic: EZ-Thro Grenade"
+    }
+  },
+  {
+    "id": 1266917,
+    "name": "SAF-T Casing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 215,
+      "green": 217,
+      "gray": 220
+    },
+    "materials": {
+      "4234": 1,
+      "10561": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_gizmo_mithrilcasing_02",
+    "url": "https://www.wowhead.com/forever/spell=1266917",
+    "produces": {
+      "id": 260804,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264214,
+      "recipeItemName": "Schematic: SAF-T Casing"
+    }
+  },
+  {
+    "id": 1266918,
+    "name": "SAF-T Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 215,
+      "green": 230,
+      "gray": 245
+    },
+    "materials": {
+      "3575": 3,
+      "4377": 3,
+      "4404": 1,
+      "260804": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/forever/spell=1266918",
+    "produces": {
+      "id": 260805,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264215,
+      "recipeItemName": "Schematic: SAF-T Bomb"
+    }
+  },
+  {
+    "id": 1266919,
+    "name": "Emergency Field Cloak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 255,
+      "gray": 265
+    },
+    "materials": {
+      "4397": 1,
+      "260804": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_enggizmos_14",
+    "url": "https://www.wowhead.com/forever/spell=1266919",
+    "produces": {
+      "id": 260806,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264216,
+      "recipeItemName": "Schematic: Emergency Field Cloak"
+    }
+  },
+  {
+    "id": 1266920,
+    "name": "Compact Critter Carrier",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 230,
+      "green": 232,
+      "gray": 235
+    },
+    "materials": {
+      "4234": 10,
+      "10558": 1,
+      "10559": 10,
+      "11175": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_box_birdcage_01",
+    "url": "https://www.wowhead.com/forever/spell=1266920",
+    "produces": {
+      "id": 260807,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264217,
+      "recipeItemName": "Schematic: Compact Critter Carrier"
+    }
+  },
+  {
+    "id": 1266921,
+    "name": "EZ-Thro Tru-Trigger",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 240,
+      "green": 242,
+      "gray": 245
+    },
+    "materials": {
+      "6037": 1,
+      "249431": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_engineering_loosetrigger",
+    "url": "https://www.wowhead.com/forever/spell=1266921",
+    "produces": {
+      "id": 260808,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264218,
+      "recipeItemName": "Schematic: EZ-Thro Tru-Trigger"
+    }
+  },
+  {
+    "id": 1266922,
+    "name": "Tru-Trigger Frag Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "10505": 1,
+      "10560": 1,
+      "10561": 1,
+      "260808": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_bomb_02",
+    "url": "https://www.wowhead.com/forever/spell=1266922",
+    "produces": {
+      "id": 260809,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264219,
+      "recipeItemName": "Schematic: Tru-Trigger Frag Bomb"
+    }
+  },
+  {
+    "id": 1266923,
+    "name": "SAF-T Disposable Parachute",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 280,
+      "gray": 290
+    },
+    "materials": {
+      "10518": 1,
+      "260804": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_cape_11",
+    "url": "https://www.wowhead.com/forever/spell=1266923",
+    "produces": {
+      "id": 260810,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264220,
+      "recipeItemName": "Schematic: SAF-T Disposable Parachute"
+    }
+  },
+  {
+    "id": 1266924,
+    "name": "Gnomish Army Knife",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 252,
+      "gray": 255
+    },
+    "materials": {
+      "10558": 1,
+      "10561": 1,
+      "15994": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_enggizmos_swissarmy",
+    "url": "https://www.wowhead.com/forever/spell=1266924",
+    "produces": {
+      "id": 260811,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264221,
+      "recipeItemName": "Schematic: Gnomish Army Knife"
+    }
+  },
+  {
+    "id": 1266925,
+    "name": "Loot-A-Rang",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 277,
+      "gray": 280
+    },
+    "materials": {
+      "12359": 5,
+      "16203": 5
+    },
+    "minSkill": 275,
+    "icon": "inv_eng_mechanicalboomerang",
+    "url": "https://www.wowhead.com/forever/spell=1266925",
+    "produces": {
+      "id": 260812,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264222,
+      "recipeItemName": "Schematic: Loot-A-Rang"
+    }
+  },
+  {
+    "id": 1266926,
+    "name": "SAF-T Tube",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 277,
+      "gray": 280
+    },
+    "materials": {
+      "12359": 1,
+      "249726": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_gizmo_hardenedadamantitetube",
+    "url": "https://www.wowhead.com/forever/spell=1266926",
+    "produces": {
+      "id": 260813,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264223,
+      "recipeItemName": "Schematic: SAF-T Tube"
+    }
+  },
+  {
+    "id": 1266927,
+    "name": "SAF-T Clever Dynamite",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 285,
+      "gray": 295
+    },
+    "materials": {
+      "14047": 3,
+      "15992": 2,
+      "260813": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_bomb_06",
+    "url": "https://www.wowhead.com/forever/spell=1266927",
+    "produces": {
+      "id": 260814,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264224,
+      "recipeItemName": "Schematic: SAF-T Clever Dynamite"
+    }
+  },
+  {
+    "id": 1266928,
+    "name": "EZ-Thro Shell",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 285,
+      "green": 287,
+      "gray": 290
+    },
+    "materials": {
+      "12359": 2,
+      "249429": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_qiraj_carapaceoldgod",
+    "url": "https://www.wowhead.com/forever/spell=1266928",
+    "produces": {
+      "id": 260815,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264225,
+      "recipeItemName": "Schematic: EZ-Thro Shell"
+    }
+  },
+  {
+    "id": 1266929,
+    "name": "EZ-Thro Thorium Grenade",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 3,
+      "15992": 3,
+      "15994": 1,
+      "260815": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_bomb_08",
+    "url": "https://www.wowhead.com/forever/spell=1266929",
+    "produces": {
+      "id": 260816,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264226,
+      "recipeItemName": "Schematic: EZ-Thro Thorium Grenade"
+    }
+  },
+  {
+    "id": 1266930,
+    "name": "EZ-Thro Dark Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "11371": 1,
+      "14047": 3,
+      "15992": 3,
+      "15994": 2,
+      "260815": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_bomb_05",
+    "url": "https://www.wowhead.com/forever/spell=1266930",
+    "produces": {
+      "id": 260817,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264227,
+      "recipeItemName": "Schematic: EZ-Thro Dark Bomb"
+    }
+  },
+  {
+    "id": 1266931,
+    "name": "EZ-Thro Mana Bomb",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 3,
+      "14047": 1,
+      "16006": 1,
+      "260815": 1
+    },
+    "minSkill": 300,
+    "icon": "spell_shadow_mindbomb",
+    "url": "https://www.wowhead.com/forever/spell=1266931",
+    "produces": {
+      "id": 260818,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264228,
+      "recipeItemName": "Schematic: EZ-Thro Mana Bomb"
+    }
+  },
+  {
+    "id": 1266932,
+    "name": "EZ-Thro Field Transporter: Gadgetzan",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "18986": 1,
+      "260815": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_02",
+    "url": "https://www.wowhead.com/forever/spell=1266932",
+    "produces": {
+      "id": 260819,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264229,
+      "recipeItemName": "Schematic: EZ-Thro Field Transporter: Gadgetzan"
+    }
+  },
+  {
+    "id": 1266933,
+    "name": "SAF-T Emergency Ripper: Everlook",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "18984": 1,
+      "260813": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_01",
+    "url": "https://www.wowhead.com/forever/spell=1266933",
+    "produces": {
+      "id": 260820,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264230,
+      "recipeItemName": "Schematic: SAF-T Emergency Ripper: Everlook"
+    }
+  },
+  {
+    "id": 1266934,
+    "name": "EZ and SAF Field Transporter: Mt. Hyjal",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "260813": 1,
+      "260815": 1,
+      "260823": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_10",
+    "url": "https://www.wowhead.com/forever/spell=1266934",
+    "produces": {
+      "id": 260821,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264231,
+      "recipeItemName": "Schematic: EZ and SAF Field Transporter: Mt. Hyjal"
+    }
+  },
+  {
+    "id": 1266935,
+    "name": "Ultrasafe Rechargeable Battery",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "3860": 1,
+      "12359": 3,
+      "248822": 1,
+      "249410": 2,
+      "249426": 1,
+      "249431": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_gizmo_electrifiedether",
+    "url": "https://www.wowhead.com/forever/spell=1266935",
+    "produces": {
+      "id": 260822,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264232,
+      "recipeItemName": "Schematic: Ultrasafe Rechargeable Battery"
+    }
+  },
+  {
+    "id": 1266936,
+    "name": "Dimensional Transporter - Mt. Hyjal",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "3860": 10,
+      "7075": 4,
+      "7082": 4,
+      "18631": 1,
+      "251290": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_06",
+    "url": "https://www.wowhead.com/forever/spell=1266936",
+    "produces": {
+      "id": 260823,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264233,
+      "recipeItemName": "Schematic: Dimensional Transporter: Mt. Hyjal"
+    }
+  },
+  {
+    "id": 1266937,
+    "name": "Gnomish Poultryizer",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "14344": 2,
+      "16204": 10,
+      "249726": 2,
+      "251290": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_06",
+    "url": "https://www.wowhead.com/forever/spell=1266937",
+    "produces": {
+      "id": 260824,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264234,
+      "recipeItemName": "Schematic: Gnomish Poultryizer"
+    }
+  },
+  {
+    "id": 1266938,
+    "name": "Ultralight Goblin Glider",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "12359": 8,
+      "249429": 8,
+      "249431": 2,
+      "249726": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_clothscrap_01",
+    "url": "https://www.wowhead.com/forever/spell=1266938",
+    "produces": {
+      "id": 260825,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264235,
+      "recipeItemName": "Schematic: Ultralight Goblin Glider"
+    }
+  },
+  {
+    "id": 1266939,
+    "name": "Gnomish Weather Machine",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7076": 2,
+      "7078": 2,
+      "7080": 2,
+      "7082": 2,
+      "248822": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gizmo_07",
+    "url": "https://www.wowhead.com/forever/spell=1266939",
+    "produces": {
+      "id": 260826,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264236,
+      "recipeItemName": "Schematic: Gnomish Weather Machine"
+    }
+  },
+  {
+    "id": 1266940,
+    "name": "Stealthman 52",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "7082": 6,
+      "16204": 6,
+      "248820": 2,
+      "248823": 4,
+      "251290": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_04",
+    "url": "https://www.wowhead.com/forever/spell=1266940",
+    "produces": {
+      "id": 260827,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264237,
+      "recipeItemName": "Schematic: Stealthman 52"
+    }
+  },
+  {
+    "id": 1266941,
+    "name": "SAF-T Nitro Boosts",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "238787": 1,
+      "260813": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_gizmo_rocketbootextreme",
+    "url": "https://www.wowhead.com/forever/spell=1266941",
+    "produces": {
+      "id": 260828,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264238,
+      "recipeItemName": "Schematic: SAF-T Nitro Boosts"
+    }
+  },
+  {
+    "id": 1266942,
+    "name": "EZ-Thro Magnetic Displacer",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "238788": 1,
+      "260815": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_magnet",
+    "url": "https://www.wowhead.com/forever/spell=1266942",
+    "produces": {
+      "id": 260829,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264239,
+      "recipeItemName": "Schematic: EZ-Thro Magnetic Displacer"
+    }
+  },
+  {
+    "id": 1266943,
+    "name": "SAF-T Teleport",
+    "quality": 2,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 330,
+      "gray": 340
+    },
+    "materials": {
+      "238786": 1,
+      "260813": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_enggizmos_16",
+    "url": "https://www.wowhead.com/forever/spell=1266943",
+    "produces": {
+      "id": 260830,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 264240,
+      "recipeItemName": "Schematic: SAF-T Teleport"
+    }
+  },
+  {
+    "id": 1286792,
+    "name": "Centaur Banner Deployment Device",
+    "quality": 2,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 190,
+      "green": 197,
+      "gray": 205
+    },
+    "materials": {
+      "4234": 30,
+      "4387": 6,
+      "4389": 2,
+      "10558": 4
+    },
+    "minSkill": 190,
+    "icon": "achievement_bg_killflagcarriers_grabflag_capit",
+    "url": "https://www.wowhead.com/forever/spell=1286792",
+    "produces": {
+      "id": 269900,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 269901,
+      "recipeItemName": "Schematic: Centaur Banner Deployment Device"
+    }
+  },
+  {
+    "id": 1286796,
+    "name": "Hoof-Shaped Foot Pedal",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
+    },
+    "materials": {
+      "4234": 4,
+      "4382": 2,
+      "4387": 3,
+      "4389": 1,
+      "10558": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_blacksmith_leystonehoofplates_orange",
+    "url": "https://www.wowhead.com/forever/spell=1286796",
+    "produces": {
+      "id": 269902,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 269903,
+      "recipeItemName": "Schematic: Hoof-Shaped Foot Pedal"
+    }
+  },
+  {
+    "id": 1293088,
+    "name": "9-60 Battery Pack",
+    "quality": 2,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
+    },
+    "materials": {
+      "3575": 1,
+      "249391": 1,
+      "249409": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_battery_02",
+    "url": "https://www.wowhead.com/forever/spell=1293088",
+    "produces": {
+      "id": 274048,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274049,
+      "recipeItemName": "Schematic: 9-60 Battery Pack"
+    }
+  },
+  {
+    "id": 1293849,
+    "name": "Swiftfeather Arrow",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 315,
+      "gray": 320
+    },
+    "materials": {
+      "7069": 1,
+      "17056": 5,
+      "251291": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_ammo_arrow_06",
+    "url": "https://www.wowhead.com/forever/spell=1293849",
+    "produces": {
+      "id": 274387,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274389,
+      "recipeItemName": "Schematic: Swiftfeather Arrow"
+    }
+  },
+  {
+    "id": 1293850,
+    "name": "Swiftstrike Shot",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 315,
+      "gray": 320
+    },
+    "materials": {
+      "7067": 1,
+      "12365": 8,
+      "251291": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_ammo_bullet_06",
+    "url": "https://www.wowhead.com/forever/spell=1293850",
+    "produces": {
+      "id": 274388,
+      "name": "",
+      "quantity": 200
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274390,
+      "recipeItemName": "Schematic: Swiftstrike Shot"
+    }
+  },
+  {
+    "id": 1302161,
+    "name": "Harvester Override Signalcaster",
+    "quality": 2,
+    "difficulty": {
+      "orange": 65,
+      "yellow": 65,
+      "green": 72,
+      "gray": 80
+    },
+    "materials": {
+      "4363": 2,
+      "4405": 1,
+      "255007": 4
+    },
+    "minSkill": 65,
+    "icon": "inv_gizmo_goblingtonkcontroller",
+    "url": "https://www.wowhead.com/forever/spell=1302161",
+    "produces": {
+      "id": 277132,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 277470,
+      "recipeItemName": "Schematic: Harvester Override Signalcaster"
+    }
+  },
+  {
+    "id": 1306546,
+    "name": "SAF-T Ultra Precision Scope",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "251290": 1,
+      "251291": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_engineering_90_scope_blue",
+    "url": "https://www.wowhead.com/forever/spell=1306546",
+    "produces": {
+      "id": 279272,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279321,
+      "recipeItemName": "Schematic: SAF-T Ultra Precision Scope"
+    }
+  },
+  {
+    "id": 1306547,
+    "name": "Hyper Deluxe Sniper Rifle Mk XVII",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "12800": 1,
+      "251290": 2,
+      "251291": 10,
+      "274030": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_weapon_rifle_05",
+    "url": "https://www.wowhead.com/forever/spell=1306547",
+    "produces": {
+      "id": 279273,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279322,
+      "recipeItemName": "Schematic: Hyper Deluxe Sniper Rifle Mk XVII"
+    }
+  },
+  {
+    "id": 1308178,
+    "name": "Whimsical Waistwrap",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
+    },
+    "materials": {
+      "4305": 2,
+      "4375": 1,
+      "4382": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/forever/spell=1308178",
+    "produces": {
+      "id": 280306,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280321,
+      "recipeItemName": "Schematic: Whimsical Waistwrap"
+    }
+  },
+  {
+    "id": 1308179,
+    "name": "Gizmo Girdle",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 4,
+      "4375": 2,
+      "4382": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_belt_06",
+    "url": "https://www.wowhead.com/forever/spell=1308179",
+    "produces": {
+      "id": 280307,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280322,
+      "recipeItemName": "Schematic: Gizmo Girdle"
+    }
+  },
+  {
+    "id": 1308180,
+    "name": "Clanking Cord",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
+    },
+    "materials": {
+      "2319": 4,
+      "4363": 1,
+      "4371": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_belt_34",
+    "url": "https://www.wowhead.com/forever/spell=1308180",
+    "produces": {
+      "id": 280308,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280323,
+      "recipeItemName": "Schematic: Clanking Cord"
+    }
+  },
+  {
+    "id": 1308182,
+    "name": "Serrated Strap",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
+    },
+    "materials": {
+      "3575": 1,
+      "4363": 2,
+      "4371": 1
+    },
+    "minSkill": 175,
+    "icon": "temp",
+    "url": "https://www.wowhead.com/forever/spell=1308182",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 280324,
+      "recipeItemName": "Schematic: Serrated Strap"
+    }
+  },
+  {
+    "id": 1308183,
+    "name": "Floppy Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "4339": 4,
+      "4389": 1,
+      "5507": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=1308183",
+    "produces": {
+      "id": 280310,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280325,
+      "recipeItemName": "Schematic: Floppy Goggles"
+    }
+  },
+  {
+    "id": 1308184,
+    "name": "Bent Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "4234": 8,
+      "4389": 1,
+      "5507": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=1308184",
+    "produces": {
+      "id": 280311,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280326,
+      "recipeItemName": "Schematic: Bent Goggles"
+    }
+  },
+  {
+    "id": 1308185,
+    "name": "Stuckbutton Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "4234": 8,
+      "4389": 1,
+      "5507": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=1308185",
+    "produces": {
+      "id": 280312,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280327,
+      "recipeItemName": "Schematic: Stuckbutton Goggles"
+    }
+  },
+  {
+    "id": 1308186,
+    "name": "Dented Goggles",
+    "quality": 2,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 207,
+      "gray": 210
+    },
+    "materials": {
+      "3860": 2,
+      "4389": 1,
+      "5507": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_helmet_47",
+    "url": "https://www.wowhead.com/forever/spell=1308186",
+    "produces": {
+      "id": 280313,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 280328,
+      "recipeItemName": "Schematic: Dented Goggles"
+    }
+  },
+  {
+    "id": 1317270,
+    "name": "Unsanctified Grenade",
+    "quality": 1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "12655": 2,
+      "14047": 2,
+      "15992": 3,
+      "18631": 1
+    },
+    "minSkill": 260,
+    "icon": "inv_misc_bomb_01",
+    "url": "https://www.wowhead.com/forever/spell=1317270",
+    "produces": {
+      "id": 284869,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 284870,
+      "recipeItemName": "Schematic: Unsanctified Grenade"
+    }
+  },
+  {
+    "id": 1317958,
+    "name": "Satchel of Copper Bombs",
+    "quality": 2,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 90,
+      "green": 92,
+      "gray": 95
+    },
+    "materials": {
+      "2318": 6,
+      "4359": 4,
+      "4360": 20
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_bag_05",
+    "url": "https://www.wowhead.com/forever/spell=1317958",
+    "produces": {
+      "id": 285275,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 285285,
+      "recipeItemName": "Schematic: Satchel of Copper Bombs"
+    }
+  },
+  {
+    "id": 1317959,
+    "name": "Satchel of Bronze Bombs",
+    "quality": 2,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 170,
+      "green": 172,
+      "gray": 175
+    },
+    "materials": {
+      "2319": 6,
+      "4375": 1,
+      "4380": 20
+    },
+    "minSkill": 165,
+    "icon": "inv_misc_bag_09_black",
+    "url": "https://www.wowhead.com/forever/spell=1317959",
+    "produces": {
+      "id": 285276,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 285286,
+      "recipeItemName": "Schematic: Satchel of Bronze Bombs"
+    }
+  },
+  {
+    "id": 1317960,
+    "name": "Satchel of Iron Bombs",
+    "quality": 2,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 235,
+      "green": 237,
+      "gray": 240
+    },
+    "materials": {
+      "4304": 6,
+      "4389": 1,
+      "4394": 20
+    },
+    "minSkill": 230,
+    "icon": "inv_misc_bag_10_black",
+    "url": "https://www.wowhead.com/forever/spell=1317960",
+    "produces": {
+      "id": 285277,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 285287,
+      "recipeItemName": "Schematic: Satchel of Iron Bombs"
+    }
+  },
+  {
+    "id": 1317961,
+    "name": "Satchel of Dark Iron Bombs",
+    "quality": 2,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 290,
+      "green": 292,
+      "gray": 295
+    },
+    "materials": {
+      "8170": 6,
+      "10560": 1,
+      "16005": 20
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_bag_07_black",
+    "url": "https://www.wowhead.com/forever/spell=1317961",
+    "produces": {
+      "id": 285278,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 285288,
+      "recipeItemName": "Schematic: Satchel of Dark Iron Bombs"
+    }
+  },
+  {
+    "id": 1319154,
+    "name": "Small Purple Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_purple",
+    "url": "https://www.wowhead.com/forever/spell=1319154",
+    "produces": {
+      "id": 21560,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286076,
+      "recipeItemName": "Schematic: Small Purple Rocket"
+    }
+  },
+  {
+    "id": 1319155,
+    "name": "Small White Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_white",
+    "url": "https://www.wowhead.com/forever/spell=1319155",
+    "produces": {
+      "id": 21561,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286077,
+      "recipeItemName": "Schematic: Small White Rocket"
+    }
+  },
+  {
+    "id": 1319156,
+    "name": "Small Yellow Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 125,
+      "green": 137,
+      "gray": 150
+    },
+    "materials": {
+      "2319": 1,
+      "4364": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_missilesmall_yellow",
+    "url": "https://www.wowhead.com/forever/spell=1319156",
+    "produces": {
+      "id": 21562,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286078,
+      "recipeItemName": "Schematic: Small Yellow Rocket"
+    }
+  },
+  {
+    "id": 1319157,
+    "name": "Large Purple Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_purple",
+    "url": "https://www.wowhead.com/forever/spell=1319157",
+    "produces": {
+      "id": 21591,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286079,
+      "recipeItemName": "Schematic: Large Purple Rocket"
+    }
+  },
+  {
+    "id": 1319158,
+    "name": "Large White Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_white",
+    "url": "https://www.wowhead.com/forever/spell=1319158",
+    "produces": {
+      "id": 21593,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286080,
+      "recipeItemName": "Schematic: Large White Rocket"
+    }
+  },
+  {
+    "id": 1319159,
+    "name": "Large Yellow Rocket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 175,
+      "green": 187,
+      "gray": 200
+    },
+    "materials": {
+      "4234": 1,
+      "4377": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_missilelarge_yellow",
+    "url": "https://www.wowhead.com/forever/spell=1319159",
+    "produces": {
+      "id": 21595,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286081,
+      "recipeItemName": "Schematic: Large Yellow Rocket"
+    }
+  },
+  {
+    "id": 1319160,
+    "name": "Purple Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_purple",
+    "url": "https://www.wowhead.com/forever/spell=1319160",
+    "produces": {
+      "id": 21575,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286082,
+      "recipeItemName": "Schematic: Purple Rocket Cluster"
+    }
+  },
+  {
+    "id": 1319161,
+    "name": "White Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_white",
+    "url": "https://www.wowhead.com/forever/spell=1319161",
+    "produces": {
+      "id": 21577,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286083,
+      "recipeItemName": "Schematic: White Rocket Cluster"
+    }
+  },
+  {
+    "id": 1319162,
+    "name": "Yellow Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 237,
+      "gray": 250
+    },
+    "materials": {
+      "4304": 1,
+      "10505": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_missilesmallcluster_yellow",
+    "url": "https://www.wowhead.com/forever/spell=1319162",
+    "produces": {
+      "id": 21578,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286084,
+      "recipeItemName": "Schematic: Yellow Rocket Cluster"
+    }
+  },
+  {
+    "id": 1319163,
+    "name": "Large Purple Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_purple",
+    "url": "https://www.wowhead.com/forever/spell=1319163",
+    "produces": {
+      "id": 21717,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286085,
+      "recipeItemName": "Schematic: Large Purple Rocket Cluster"
+    }
+  },
+  {
+    "id": 1319164,
+    "name": "Large White Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_white",
+    "url": "https://www.wowhead.com/forever/spell=1319164",
+    "produces": {
+      "id": 21719,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286086,
+      "recipeItemName": "Schematic: Large White Rocket Cluster"
+    }
+  },
+  {
+    "id": 1319165,
+    "name": "Large Yellow Rocket Cluster",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 275,
+      "green": 280,
+      "gray": 285
+    },
+    "materials": {
+      "8170": 1,
+      "15992": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_missilelargecluster_yellow",
+    "url": "https://www.wowhead.com/forever/spell=1319165",
+    "produces": {
+      "id": 21720,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286087,
+      "recipeItemName": "Schematic: Large Yellow Rocket Cluster"
+    }
+  }
+]

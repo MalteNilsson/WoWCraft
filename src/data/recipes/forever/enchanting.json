@@ -1,0 +1,6611 @@
+[
+  {
+    "id": 7418,
+    "name": "Enchant Bracer - Inferior Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 20,
+      "green": 22,
+      "gray": 25
+    },
+    "materials": {
+      "247786": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7418",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7420,
+    "name": "Enchant Chest - Inferior Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 15,
+      "yellow": 70,
+      "green": 90,
+      "gray": 110
+    },
+    "materials": {
+      "10940": 1
+    },
+    "minSkill": 15,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7420",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 7421,
+    "name": "Runed Copper Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 5,
+      "green": 7,
+      "gray": 10
+    },
+    "materials": {
+      "6217": 1,
+      "247786": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_staff_goldfeathered_01",
+    "url": "https://www.wowhead.com/forever/spell=7421",
+    "produces": {
+      "id": 6218,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7426,
+    "name": "Enchant Chest - Minor Absorption",
+    "quality": -1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "10938": 1
+    },
+    "minSkill": 40,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7426",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 7428,
+    "name": "Enchant Bracer - Minor Deflect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7428",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 7443,
+    "name": "Enchant Chest - Minor Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "10938": 1
+    },
+    "minSkill": 20,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7443",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6342,
+      "recipeItemName": "Formula: Enchant Chest - Minor Intellect"
+    }
+  },
+  {
+    "id": 7454,
+    "name": "Enchant Cloak - Minor Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 45,
+      "yellow": 95,
+      "green": 115,
+      "gray": 135
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 1
+    },
+    "minSkill": 45,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7454",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 7457,
+    "name": "Enchant Bracer - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "10940": 2
+    },
+    "minSkill": 50,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7457",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 7745,
+    "name": "Enchant 2H Weapon - Minor Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 1,
+      "10978": 1
+    },
+    "minSkill": 100,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7745",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 7748,
+    "name": "Enchant Chest - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 1
+    },
+    "minSkill": 60,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7748",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 250
+    }
+  },
+  {
+    "id": 7766,
+    "name": "Enchant Bracer - Minor Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 105,
+      "green": 125,
+      "gray": 145
+    },
+    "materials": {
+      "10938": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7766",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6344,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Spirit"
+    }
+  },
+  {
+    "id": 7771,
+    "name": "Enchant Cloak - Minor Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "10940": 2
+    },
+    "minSkill": 70,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7771",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6345,
+      "recipeItemName": "Formula: Imbue Cloak - Protection"
+    }
+  },
+  {
+    "id": 7776,
+    "name": "Enchant Chest - Lesser Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10938": 2
+    },
+    "minSkill": 80,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7776",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6346,
+      "recipeItemName": "Formula: Enchant Chest - Lesser Intellect"
+    }
+  },
+  {
+    "id": 7779,
+    "name": "Enchant Bracer - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10938": 2,
+      "10940": 1
+    },
+    "minSkill": 80,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7779",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 400
+    }
+  },
+  {
+    "id": 7782,
+    "name": "Enchant Bracer - Minor Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "10940": 3
+    },
+    "minSkill": 80,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7782",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6347,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Strength"
+    }
+  },
+  {
+    "id": 7786,
+    "name": "Enchant Weapon - Minor Beastslayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10939": 1,
+      "10940": 2
+    },
+    "minSkill": 90,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7786",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6348,
+      "recipeItemName": "Formula: Enchant Weapon - Minor Beastslayer"
+    }
+  },
+  {
+    "id": 7788,
+    "name": "Enchant Weapon - Minor Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10938": 1,
+      "10940": 1,
+      "10978": 1
+    },
+    "minSkill": 90,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7788",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 500
+    }
+  },
+  {
+    "id": 7793,
+    "name": "Enchant 2H Weapon - Lesser Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10938": 4
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=7793",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6349,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Lesser Intellect"
+    }
+  },
+  {
+    "id": 7795,
+    "name": "Runed Silver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "1210": 1,
+      "6338": 1,
+      "10938": 4,
+      "10940": 3
+    },
+    "minSkill": 100,
+    "icon": "inv_staff_01",
+    "url": "https://www.wowhead.com/forever/spell=7795",
+    "produces": {
+      "id": 6339,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7857,
+    "name": "Enchant Chest - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10940": 2,
+      "10998": 1
+    },
+    "minSkill": 120,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7857",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1000
+    }
+  },
+  {
+    "id": 7859,
+    "name": "Enchant Bracer - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 145,
+      "green": 165,
+      "gray": 185
+    },
+    "materials": {
+      "10998": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7859",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6375,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Spirit"
+    }
+  },
+  {
+    "id": 7861,
+    "name": "Enchant Cloak - Lesser Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "6371": 1,
+      "10998": 1
+    },
+    "minSkill": 125,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=7861",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1250
+    }
+  },
+  {
+    "id": 7863,
+    "name": "Enchant Boots - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 4
+    },
+    "minSkill": 125,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7863",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6376,
+      "recipeItemName": "Formula: Enchant Boots - Minor Stamina"
+    }
+  },
+  {
+    "id": 7867,
+    "name": "Enchant Boots - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "10940": 3,
+      "10998": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=7867",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 6377,
+      "recipeItemName": "Formula: Enchant Boots - Minor Agility"
+    }
+  },
+  {
+    "id": 13378,
+    "name": "Enchant Shield - Minor Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 105,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "10940": 1,
+      "10998": 1
+    },
+    "minSkill": 105,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13378",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 600
+    }
+  },
+  {
+    "id": 13380,
+    "name": "Enchant 2H Weapon - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10940": 3,
+      "10998": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13380",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11038,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Lesser Spirit"
+    }
+  },
+  {
+    "id": 13419,
+    "name": "Enchant Cloak - Minor Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "10998": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13419",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11039,
+      "recipeItemName": "Formula: Enchant Cloak - Minor Agility"
+    }
+  },
+  {
+    "id": 13421,
+    "name": "Enchant Cloak - Lesser Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 3,
+      "10978": 1
+    },
+    "minSkill": 115,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13421",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 800
+    }
+  },
+  {
+    "id": 13464,
+    "name": "Enchant Shield - Lesser Protection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 115,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 1,
+      "10978": 1
+    },
+    "minSkill": 115,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13464",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11081,
+      "recipeItemName": "Formula: Enchant Shield - Lesser Protection"
+    }
+  },
+  {
+    "id": 13485,
+    "name": "Enchant Shield - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "10940": 2,
+      "10998": 1
+    },
+    "minSkill": 130,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13485",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 13501,
+    "name": "Enchant Bracer - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 155,
+      "green": 175,
+      "gray": 195
+    },
+    "materials": {
+      "11083": 1
+    },
+    "minSkill": 130,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13501",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 1500
+    }
+  },
+  {
+    "id": 13503,
+    "name": "Enchant Weapon - Lesser Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 1,
+      "11084": 1
+    },
+    "minSkill": 140,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13503",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2000
+    }
+  },
+  {
+    "id": 13522,
+    "name": "Enchant Cloak - Lesser Shadow Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 135,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "6048": 1,
+      "10998": 1
+    },
+    "minSkill": 135,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13522",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11098,
+      "recipeItemName": "Formula: Enchant Cloak - Lesser Shadow Resistance"
+    }
+  },
+  {
+    "id": 13529,
+    "name": "Enchant 2H Weapon - Lesser Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "11083": 1,
+      "11084": 1
+    },
+    "minSkill": 145,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13529",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 13536,
+    "name": "Enchant Bracer - Lesser Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11083": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13536",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11101,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Strength"
+    }
+  },
+  {
+    "id": 13538,
+    "name": "Enchant Chest - Lesser Absorption",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "10940": 1,
+      "10998": 1,
+      "11084": 1
+    },
+    "minSkill": 140,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13538",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13607,
+    "name": "Enchant Chest - Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "11082": 1
+    },
+    "minSkill": 145,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13607",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2400
+    }
+  },
+  {
+    "id": 13612,
+    "name": "Enchant Gloves - Mining",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "2772": 1,
+      "11083": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13612",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11150,
+      "recipeItemName": "Formula: Enchant Gloves - Mining"
+    }
+  },
+  {
+    "id": 13617,
+    "name": "Enchant Gloves - Herbalism",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "3356": 1,
+      "11083": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13617",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11151,
+      "recipeItemName": "Formula: Enchant Gloves - Herbalism"
+    }
+  },
+  {
+    "id": 13620,
+    "name": "Enchant Gloves - Fishing",
+    "quality": -1,
+    "difficulty": {
+      "orange": 145,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "6370": 1,
+      "11083": 1
+    },
+    "minSkill": 145,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13620",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11152,
+      "recipeItemName": "Formula: Enchant Gloves - Fishing"
+    }
+  },
+  {
+    "id": 13622,
+    "name": "Enchant Bracer - Lesser Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11082": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13622",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13626,
+    "name": "Enchant Chest - Minor Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "10998": 1,
+      "11083": 1,
+      "11084": 1
+    },
+    "minSkill": 150,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13626",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13628,
+    "name": "Runed Golden Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "5500": 1,
+      "11082": 1,
+      "11083": 1,
+      "11128": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_staff_10",
+    "url": "https://www.wowhead.com/forever/spell=13628",
+    "produces": {
+      "id": 11130,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2500
+    }
+  },
+  {
+    "id": 13631,
+    "name": "Enchant Shield - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11134": 1
+    },
+    "minSkill": 155,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13631",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 13635,
+    "name": "Enchant Cloak - Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11083": 1,
+      "11138": 1
+    },
+    "minSkill": 155,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13635",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 13637,
+    "name": "Enchant Boots - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 1
+    },
+    "minSkill": 160,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13637",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13640,
+    "name": "Enchant Chest - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 160,
+      "yellow": 180,
+      "green": 200,
+      "gray": 220
+    },
+    "materials": {
+      "11083": 2
+    },
+    "minSkill": 160,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13640",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2700
+    }
+  },
+  {
+    "id": 13642,
+    "name": "Enchant Bracer - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 165,
+      "yellow": 185,
+      "green": 205,
+      "gray": 225
+    },
+    "materials": {
+      "11134": 1
+    },
+    "minSkill": 165,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13642",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13644,
+    "name": "Enchant Boots - Lesser Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 2
+    },
+    "minSkill": 170,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13644",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13646,
+    "name": "Enchant Bracer - Lesser Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 1,
+      "11134": 1
+    },
+    "minSkill": 170,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13646",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11163,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Deflection"
+    }
+  },
+  {
+    "id": 13648,
+    "name": "Enchant Bracer - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 170,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "11083": 3
+    },
+    "minSkill": 170,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13648",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 2800
+    }
+  },
+  {
+    "id": 13653,
+    "name": "Enchant Weapon - Lesser Beastslayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "5637": 1,
+      "11138": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13653",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11164,
+      "recipeItemName": "Formula: Enchant Weapon - Lesser Beastslayer"
+    }
+  },
+  {
+    "id": 13655,
+    "name": "Enchant Weapon - Lesser Elemental Slayer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7067": 1,
+      "11138": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13655",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11165,
+      "recipeItemName": "Formula: Enchant Weapon - Lesser Elemental Slayer"
+    }
+  },
+  {
+    "id": 13657,
+    "name": "Enchant Cloak - Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "7068": 1,
+      "11134": 1
+    },
+    "minSkill": 175,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13657",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 13659,
+    "name": "Enchant Shield - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11134": 1,
+      "11137": 1
+    },
+    "minSkill": 180,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13659",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3200
+    }
+  },
+  {
+    "id": 13661,
+    "name": "Enchant Bracer - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 200,
+      "green": 220,
+      "gray": 240
+    },
+    "materials": {
+      "11137": 1
+    },
+    "minSkill": 180,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13661",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3600
+    }
+  },
+  {
+    "id": 13663,
+    "name": "Enchant Chest - Greater Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "11134": 1
+    },
+    "minSkill": 185,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13663",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 3800
+    }
+  },
+  {
+    "id": 13687,
+    "name": "Enchant Boots - Lesser Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "11134": 2
+    },
+    "minSkill": 190,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13687",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11167,
+      "recipeItemName": "Formula: Enchant Boots - Lesser Spirit"
+    }
+  },
+  {
+    "id": 13689,
+    "name": "Enchant Shield - Lesser Block",
+    "quality": -1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11139": 1
+    },
+    "minSkill": 195,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13689",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11168,
+      "recipeItemName": "Formula: Enchant Shield - Lesser Block"
+    }
+  },
+  {
+    "id": 13693,
+    "name": "Enchant Weapon - Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 195,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "11135": 1,
+      "11139": 1
+    },
+    "minSkill": 195,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13693",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13695,
+    "name": "Enchant 2H Weapon - Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11137": 2,
+      "11139": 1
+    },
+    "minSkill": 200,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13695",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13698,
+    "name": "Enchant Gloves - Skinning",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7392": 1,
+      "11137": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13698",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11166,
+      "recipeItemName": "Formula: Enchant Gloves - Skinning"
+    }
+  },
+  {
+    "id": 13700,
+    "name": "Enchant Chest - Lesser Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11139": 1
+    },
+    "minSkill": 200,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13700",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13702,
+    "name": "Runed Truesilver Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 240,
+      "gray": 260
+    },
+    "materials": {
+      "7971": 1,
+      "11135": 1,
+      "11137": 1,
+      "11144": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_staff_11",
+    "url": "https://www.wowhead.com/forever/spell=13702",
+    "produces": {
+      "id": 11145,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 13746,
+    "name": "Enchant Cloak - Greater Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11137": 1
+    },
+    "minSkill": 205,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13746",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4200
+    }
+  },
+  {
+    "id": 13794,
+    "name": "Enchant Cloak - Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11174": 1
+    },
+    "minSkill": 205,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13794",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4200
+    }
+  },
+  {
+    "id": 13815,
+    "name": "Enchant Gloves - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 1
+    },
+    "minSkill": 210,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13815",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4400
+    }
+  },
+  {
+    "id": 13817,
+    "name": "Enchant Shield - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 2
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13817",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11202,
+      "recipeItemName": "Formula: Enchant Shield - Stamina"
+    }
+  },
+  {
+    "id": 13822,
+    "name": "Enchant Bracer - Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11174": 1
+    },
+    "minSkill": 210,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13822",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4400
+    }
+  },
+  {
+    "id": 13836,
+    "name": "Enchant Boots - Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "11137": 2
+    },
+    "minSkill": 215,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13836",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4600
+    }
+  },
+  {
+    "id": 13841,
+    "name": "Enchant Gloves - Advanced Mining",
+    "quality": -1,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "6037": 1,
+      "11137": 2
+    },
+    "minSkill": 215,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13841",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11203,
+      "recipeItemName": "Formula: Enchant Gloves - Advanced Mining"
+    }
+  },
+  {
+    "id": 13846,
+    "name": "Enchant Bracer - Greater Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 1
+    },
+    "minSkill": 220,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13846",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11204,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Spirit"
+    }
+  },
+  {
+    "id": 13858,
+    "name": "Enchant Chest - Superior Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 3
+    },
+    "minSkill": 220,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13858",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 4800
+    }
+  },
+  {
+    "id": 13868,
+    "name": "Enchant Gloves - Advanced Herbalism",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "8838": 1,
+      "11137": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13868",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11205,
+      "recipeItemName": "Formula: Enchant Gloves - Advanced Herbalism"
+    }
+  },
+  {
+    "id": 13882,
+    "name": "Enchant Cloak - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11174": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13882",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11206,
+      "recipeItemName": "Formula: Enchant Cloak - Lesser Agility"
+    }
+  },
+  {
+    "id": 13887,
+    "name": "Enchant Gloves - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "11137": 2,
+      "11174": 1
+    },
+    "minSkill": 225,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13887",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 13890,
+    "name": "Enchant Boots - Minor Speed",
+    "quality": -1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 265,
+      "gray": 285
+    },
+    "materials": {
+      "7909": 1,
+      "11174": 1,
+      "11177": 1
+    },
+    "minSkill": 225,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13890",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5000
+    }
+  },
+  {
+    "id": 13898,
+    "name": "Enchant Weapon - Fiery Weapon",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11177": 2
+    },
+    "minSkill": 265,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13898",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11207,
+      "recipeItemName": "Formula: Enchant Weapon - Fiery Weapon"
+    }
+  },
+  {
+    "id": 13905,
+    "name": "Enchant Shield - Greater Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11174": 2,
+      "11176": 1
+    },
+    "minSkill": 230,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13905",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5400
+    }
+  },
+  {
+    "id": 13915,
+    "name": "Enchant Weapon - Demonslaying",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "9224": 1,
+      "11176": 1,
+      "11177": 1
+    },
+    "minSkill": 230,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13915",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11208,
+      "recipeItemName": "Formula: Enchant Weapon - Demonslaying"
+    }
+  },
+  {
+    "id": 13917,
+    "name": "Enchant Chest - Superior Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 230,
+      "yellow": 250,
+      "green": 270,
+      "gray": 290
+    },
+    "materials": {
+      "11175": 1
+    },
+    "minSkill": 230,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13917",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5400
+    }
+  },
+  {
+    "id": 13931,
+    "name": "Enchant Bracer - Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11174": 2,
+      "11176": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13931",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11223,
+      "recipeItemName": "Formula: Enchant Bracer - Deflection"
+    }
+  },
+  {
+    "id": 13933,
+    "name": "Enchant Shield - Frost Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "3829": 1,
+      "11178": 1
+    },
+    "minSkill": 235,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13933",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11224,
+      "recipeItemName": "Formula: Enchant Shield - Frost Resistance"
+    }
+  },
+  {
+    "id": 13935,
+    "name": "Enchant Boots - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 235,
+      "yellow": 255,
+      "green": 275,
+      "gray": 295
+    },
+    "materials": {
+      "11175": 1
+    },
+    "minSkill": 235,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13935",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 5800
+    }
+  },
+  {
+    "id": 13937,
+    "name": "Enchant 2H Weapon - Greater Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11176": 1,
+      "11178": 1
+    },
+    "minSkill": 240,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13937",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13939,
+    "name": "Enchant Bracer - Greater Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11174": 2,
+      "11176": 1
+    },
+    "minSkill": 240,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13939",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13941,
+    "name": "Enchant Chest - Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 1,
+      "11176": 1,
+      "11178": 1
+    },
+    "minSkill": 245,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13941",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13943,
+    "name": "Enchant Weapon - Greater Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11175": 1,
+      "11178": 1
+    },
+    "minSkill": 245,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13943",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6200
+    }
+  },
+  {
+    "id": 13945,
+    "name": "Enchant Bracer - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11176": 3
+    },
+    "minSkill": 245,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13945",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11225,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Stamina"
+    }
+  },
+  {
+    "id": 13947,
+    "name": "Enchant Gloves - Riding Skill",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "11176": 2,
+      "11178": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=13947",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 11226,
+      "recipeItemName": "Formula: Enchant Gloves - Riding Skill"
+    }
+  },
+  {
+    "id": 13948,
+    "name": "Enchant Gloves - Minor Haste",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "8153": 1,
+      "11178": 1
+    },
+    "minSkill": 250,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=13948",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 6500
+    }
+  },
+  {
+    "id": 14293,
+    "name": "Lesser Magic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 10,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "4470": 1,
+      "10938": 1
+    },
+    "minSkill": 10,
+    "icon": "inv_staff_02",
+    "url": "https://www.wowhead.com/forever/spell=14293",
+    "produces": {
+      "id": 11287,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 14807,
+    "name": "Greater Magic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "4470": 1,
+      "10938": 2
+    },
+    "minSkill": 70,
+    "icon": "inv_staff_07",
+    "url": "https://www.wowhead.com/forever/spell=14807",
+    "produces": {
+      "id": 11288,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 200
+    }
+  },
+  {
+    "id": 14809,
+    "name": "Lesser Mystic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 155,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "11134": 1,
+      "11291": 1
+    },
+    "minSkill": 155,
+    "icon": "inv_staff_02",
+    "url": "https://www.wowhead.com/forever/spell=14809",
+    "produces": {
+      "id": 11289,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2600
+    }
+  },
+  {
+    "id": 14810,
+    "name": "Greater Mystic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "11134": 1,
+      "11137": 1,
+      "11291": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_wand_07",
+    "url": "https://www.wowhead.com/forever/spell=14810",
+    "produces": {
+      "id": 217287,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 3000
+    }
+  },
+  {
+    "id": 15596,
+    "name": "Smoking Heart of the Mountain",
+    "quality": 3,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7078": 1,
+      "11382": 1,
+      "14343": 3
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_gem_bloodstone_01",
+    "url": "https://www.wowhead.com/forever/spell=15596",
+    "produces": {
+      "id": 11811,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 11813,
+      "recipeItemName": "Formula: Smoking Heart of the Mountain"
+    }
+  },
+  {
+    "id": 17180,
+    "name": "Enchanted Thorium",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "11176": 3,
+      "12359": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_ingot_eternium",
+    "url": "https://www.wowhead.com/forever/spell=17180",
+    "produces": {
+      "id": 12655,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 17181,
+    "name": "Enchanted Leather",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "8170": 1,
+      "16202": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_rune_05",
+    "url": "https://www.wowhead.com/forever/spell=17181",
+    "produces": {
+      "id": 12810,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 10000
+    }
+  },
+  {
+    "id": 20008,
+    "name": "Enchant Bracer - Greater Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 255,
+      "yellow": 275,
+      "green": 295,
+      "gray": 315
+    },
+    "materials": {
+      "16202": 2
+    },
+    "minSkill": 255,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20008",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16214,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Intellect"
+    }
+  },
+  {
+    "id": 20009,
+    "name": "Enchant Bracer - Superior Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "11176": 7,
+      "16202": 2
+    },
+    "minSkill": 270,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20009",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16218,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Spirit"
+    }
+  },
+  {
+    "id": 20010,
+    "name": "Enchant Bracer - Superior Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 6,
+      "16204": 6
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20010",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16246,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Strength"
+    }
+  },
+  {
+    "id": 20011,
+    "name": "Enchant Bracer - Superior Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16204": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20011",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16251,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Stamina"
+    }
+  },
+  {
+    "id": 20012,
+    "name": "Enchant Gloves - Greater Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 270,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "16202": 2,
+      "16204": 2
+    },
+    "minSkill": 270,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20012",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16219,
+      "recipeItemName": "Formula: Enchant Gloves - Greater Agility"
+    }
+  },
+  {
+    "id": 20013,
+    "name": "Enchant Gloves - Greater Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 4,
+      "16204": 4
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20013",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16244,
+      "recipeItemName": "Formula: Enchant Gloves - Greater Strength"
+    }
+  },
+  {
+    "id": 20014,
+    "name": "Enchant Cloak - Greater Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7075": 1,
+      "7077": 1,
+      "7079": 1,
+      "7081": 1,
+      "7972": 1,
+      "16202": 1
+    },
+    "minSkill": 265,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20014",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16216,
+      "recipeItemName": "Formula: Enchant Cloak - Greater Resistance"
+    }
+  },
+  {
+    "id": 20015,
+    "name": "Enchant Cloak - Superior Defense",
+    "quality": -1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "16204": 8
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=20015",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16224,
+      "recipeItemName": "Formula: Enchant Cloak - Superior Defense"
+    }
+  },
+  {
+    "id": 20016,
+    "name": "Enchant Shield - Superior Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 300,
+      "green": 320,
+      "gray": 340
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 4
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20016",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16222,
+      "recipeItemName": "Formula: Enchant Shield - Superior Spirit"
+    }
+  },
+  {
+    "id": 20017,
+    "name": "Enchant Shield - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 265,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "11176": 6
+    },
+    "minSkill": 265,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=20017",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16217,
+      "recipeItemName": "Formula: Enchant Shield - Greater Stamina"
+    }
+  },
+  {
+    "id": 20020,
+    "name": "Enchant Boots - Greater Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 260,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "11176": 6
+    },
+    "minSkill": 260,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20020",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16215,
+      "recipeItemName": "Formula: Enchant Boots - Greater Stamina"
+    }
+  },
+  {
+    "id": 20023,
+    "name": "Enchant Boots - Greater Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "16203": 8
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20023",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16245,
+      "recipeItemName": "Formula: Enchant Boots - Greater Agility"
+    }
+  },
+  {
+    "id": 20024,
+    "name": "Enchant Boots - Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "16202": 1,
+      "16203": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20024",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16220,
+      "recipeItemName": "Formula: Enchant Boots - Spirit"
+    }
+  },
+  {
+    "id": 20025,
+    "name": "Enchant Chest - Greater Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 4,
+      "16203": 10,
+      "16204": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20025",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16253,
+      "recipeItemName": "Formula: Enchant Chest - Greater Stats"
+    }
+  },
+  {
+    "id": 20026,
+    "name": "Enchant Chest - Major Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 295,
+      "green": 315,
+      "gray": 335
+    },
+    "materials": {
+      "14343": 1,
+      "16204": 6
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=20026",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16221,
+      "recipeItemName": "Formula: Enchant Chest - Major Stamina"
+    }
+  },
+  {
+    "id": 20028,
+    "name": "Enchant Chest - Major Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "14343": 1,
+      "16203": 3
+    },
+    "minSkill": 290,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20028",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16242,
+      "recipeItemName": "Formula: Enchant Chest - Major Intellect"
+    }
+  },
+  {
+    "id": 20029,
+    "name": "Enchant Weapon - Icy Chill",
+    "quality": -1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 305,
+      "green": 325,
+      "gray": 345
+    },
+    "materials": {
+      "7080": 1,
+      "7082": 1,
+      "13467": 1,
+      "14343": 4
+    },
+    "minSkill": 285,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20029",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16223,
+      "recipeItemName": "Formula: Enchant Weapon - Icy Chill"
+    }
+  },
+  {
+    "id": 20030,
+    "name": "Enchant 2H Weapon - Superior Impact",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "14344": 4,
+      "16204": 10
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20030",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16247,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Superior Impact"
+    }
+  },
+  {
+    "id": 20031,
+    "name": "Enchant Weapon - Superior Striking",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20031",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16250,
+      "recipeItemName": "Formula: Enchant Weapon - Superior Striking"
+    }
+  },
+  {
+    "id": 20032,
+    "name": "Enchant Weapon - Lifestealing",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "12808": 6,
+      "14344": 6
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=20032",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16254,
+      "recipeItemName": "Formula: Enchant Weapon - Lifestealing"
+    }
+  },
+  {
+    "id": 20033,
+    "name": "Enchant Weapon - Unholy Weapon",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "12808": 4,
+      "14344": 4
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20033",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16248,
+      "recipeItemName": "Formula: Enchant Weapon - Unholy Weapon"
+    }
+  },
+  {
+    "id": 20034,
+    "name": "Enchant Weapon - Crusader",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 2,
+      "14344": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20034",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16252,
+      "recipeItemName": "Formula: Enchant Weapon - Crusader"
+    }
+  },
+  {
+    "id": 20035,
+    "name": "Enchant 2H Weapon - Major Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20035",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16255,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Major Spirit"
+    }
+  },
+  {
+    "id": 20036,
+    "name": "Enchant 2H Weapon - Major Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=20036",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 16249,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Major Intellect"
+    }
+  },
+  {
+    "id": 20051,
+    "name": "Runed Arcanite Rod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "13926": 1,
+      "14343": 4,
+      "14344": 2,
+      "16203": 4,
+      "16204": 10,
+      "16206": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_wand_09",
+    "url": "https://www.wowhead.com/forever/spell=20051",
+    "produces": {
+      "id": 16207,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16243,
+      "recipeItemName": "Formula: Runed Arcanite Rod"
+    }
+  },
+  {
+    "id": 21931,
+    "name": "Enchant Weapon - Winter's Might",
+    "quality": -1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 210,
+      "green": 230,
+      "gray": 250
+    },
+    "materials": {
+      "3819": 1,
+      "11135": 1,
+      "11137": 1,
+      "11139": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=21931",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 17725,
+      "recipeItemName": "Formula: Enchant Weapon - Winter's Might"
+    }
+  },
+  {
+    "id": 22749,
+    "name": "Enchant Weapon - Spell Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "7080": 4,
+      "7082": 4,
+      "13926": 2,
+      "14344": 4,
+      "16203": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=22749",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 18259,
+      "recipeItemName": "Formula: Enchant Weapon - Spell Power"
+    }
+  },
+  {
+    "id": 22750,
+    "name": "Enchant Weapon - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 6,
+      "12803": 6,
+      "12811": 1,
+      "14344": 4,
+      "16203": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=22750",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 18260,
+      "recipeItemName": "Formula: Enchant Weapon - Healing Power"
+    }
+  },
+  {
+    "id": 23799,
+    "name": "Enchant Weapon - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7076": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23799",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19444,
+      "recipeItemName": "Formula: Enchant Weapon - Strength"
+    }
+  },
+  {
+    "id": 23800,
+    "name": "Enchant Weapon - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 2,
+      "14344": 6,
+      "16203": 6,
+      "16204": 4
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23800",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19445,
+      "recipeItemName": "Formula: Enchant Weapon - Agility"
+    }
+  },
+  {
+    "id": 23801,
+    "name": "Enchant Bracer - Mana Regeneration",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7080": 2,
+      "16203": 4,
+      "16204": 16
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23801",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19446,
+      "recipeItemName": "Formula: Enchant Bracer - Mana Regeneration"
+    }
+  },
+  {
+    "id": 23802,
+    "name": "Enchant Bracer - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 6,
+      "14344": 2,
+      "16203": 4,
+      "16204": 20
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23802",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19447,
+      "recipeItemName": "Formula: Enchant Bracer - Healing"
+    }
+  },
+  {
+    "id": 23803,
+    "name": "Enchant Weapon - Mighty Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 10,
+      "16203": 8,
+      "16204": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23803",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19448,
+      "recipeItemName": "Formula: Enchant Weapon - Mighty Spirit"
+    }
+  },
+  {
+    "id": 23804,
+    "name": "Enchant Weapon - Mighty Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 15,
+      "16203": 12,
+      "16204": 20
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=23804",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 19449,
+      "recipeItemName": "Formula: Enchant Weapon - Mighty Intellect"
+    }
+  },
+  {
+    "id": 25072,
+    "name": "Enchant Gloves - Threat",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 6,
+      "18512": 8,
+      "20725": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25072",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20726,
+      "recipeItemName": "Formula: Enchant Gloves - Threat"
+    }
+  },
+  {
+    "id": 25073,
+    "name": "Enchant Gloves - Shadow Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12808": 6,
+      "14344": 10,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25073",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20727,
+      "recipeItemName": "Formula: Enchant Gloves - Shadow Power"
+    }
+  },
+  {
+    "id": 25074,
+    "name": "Enchant Gloves - Frost Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 4,
+      "14344": 10,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25074",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20728,
+      "recipeItemName": "Formula: Enchant Gloves - Frost Power"
+    }
+  },
+  {
+    "id": 25078,
+    "name": "Enchant Gloves - Fire Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 10,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25078",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20729,
+      "recipeItemName": "Formula: Enchant Gloves - Fire Power"
+    }
+  },
+  {
+    "id": 25079,
+    "name": "Enchant Gloves - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12811": 1,
+      "14344": 8,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25079",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20730,
+      "recipeItemName": "Formula: Enchant Gloves - Healing Power"
+    }
+  },
+  {
+    "id": 25080,
+    "name": "Enchant Gloves - Superior Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 8,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25080",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20731,
+      "recipeItemName": "Formula: Enchant Gloves - Superior Agility"
+    }
+  },
+  {
+    "id": 25081,
+    "name": "Enchant Cloak - Greater Fire Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 4,
+      "14344": 8,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=25081",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20732,
+      "recipeItemName": "Formula: Enchant Cloak - Greater Fire Resistance"
+    }
+  },
+  {
+    "id": 25082,
+    "name": "Enchant Cloak - Greater Nature Resistance",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12803": 4,
+      "14344": 8,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=25082",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20733,
+      "recipeItemName": "Formula: Enchant Cloak - Greater Nature Resistance"
+    }
+  },
+  {
+    "id": 25083,
+    "name": "Enchant Cloak - Stealth",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "13468": 2,
+      "14344": 8,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25083",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20734,
+      "recipeItemName": "Formula: Enchant Cloak - Stealth"
+    }
+  },
+  {
+    "id": 25084,
+    "name": "Enchant Cloak - Subtlety",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11754": 2,
+      "14344": 6,
+      "20725": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25084",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20735,
+      "recipeItemName": "Formula: Enchant Cloak - Subtlety"
+    }
+  },
+  {
+    "id": 25086,
+    "name": "Enchant Cloak - Dodge",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12809": 8,
+      "14344": 8,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=25086",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 20736,
+      "recipeItemName": "Formula: Enchant Cloak - Dodge"
+    }
+  },
+  {
+    "id": 25124,
+    "name": "Minor Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 45,
+      "green": 47,
+      "gray": 65
+    },
+    "materials": {
+      "3371": 1,
+      "10940": 1,
+      "17034": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_poison_mindnumbing",
+    "url": "https://www.wowhead.com/forever/spell=25124",
+    "produces": {
+      "id": 20744,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20758,
+      "recipeItemName": "Formula: Minor Wizard Oil"
+    }
+  },
+  {
+    "id": 25125,
+    "name": "Minor Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 160,
+      "green": 170,
+      "gray": 180
+    },
+    "materials": {
+      "3372": 1,
+      "11083": 1,
+      "17034": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_potion_98",
+    "url": "https://www.wowhead.com/forever/spell=25125",
+    "produces": {
+      "id": 20745,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20752,
+      "recipeItemName": "Formula: Minor Mana Oil"
+    }
+  },
+  {
+    "id": 25126,
+    "name": "Lesser Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
+    },
+    "materials": {
+      "3372": 1,
+      "11137": 1,
+      "17035": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_potion_103",
+    "url": "https://www.wowhead.com/forever/spell=25126",
+    "produces": {
+      "id": 20746,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20753,
+      "recipeItemName": "Formula: Lesser Wizard Oil"
+    }
+  },
+  {
+    "id": 25127,
+    "name": "Lesser Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "8831": 1,
+      "8925": 1,
+      "11176": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_potion_99",
+    "url": "https://www.wowhead.com/forever/spell=25127",
+    "produces": {
+      "id": 20747,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20754,
+      "recipeItemName": "Formula: Lesser Mana Oil"
+    }
+  },
+  {
+    "id": 25128,
+    "name": "Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 2,
+      "8925": 1,
+      "16204": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_104",
+    "url": "https://www.wowhead.com/forever/spell=25128",
+    "produces": {
+      "id": 20750,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20755,
+      "recipeItemName": "Formula: Wizard Oil"
+    }
+  },
+  {
+    "id": 25129,
+    "name": "Brilliant Wizard Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "4625": 3,
+      "14344": 2,
+      "18256": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_105",
+    "url": "https://www.wowhead.com/forever/spell=25129",
+    "produces": {
+      "id": 20749,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20756,
+      "recipeItemName": "Formula: Brilliant Wizard Oil"
+    }
+  },
+  {
+    "id": 25130,
+    "name": "Brilliant Mana Oil",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8831": 3,
+      "14344": 2,
+      "18256": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_100",
+    "url": "https://www.wowhead.com/forever/spell=25130",
+    "produces": {
+      "id": 20748,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20757,
+      "recipeItemName": "Formula: Brilliant Mana Oil"
+    }
+  },
+  {
+    "id": 27837,
+    "name": "Enchant 2H Weapon - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 310,
+      "green": 330,
+      "gray": 350
+    },
+    "materials": {
+      "7082": 4,
+      "14344": 10,
+      "16203": 6,
+      "16204": 14
+    },
+    "minSkill": 290,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=27837",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 22392,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Agility"
+    }
+  },
+  {
+    "id": 430409,
+    "name": "Blackfathom Mana Oil",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 100,
+      "green": 110,
+      "gray": 120
+    },
+    "materials": {
+      "3372": 1,
+      "10939": 1,
+      "10940": 5
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=430409",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 435481,
+    "name": "Enchant Weapon - Dismantle",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 0,
+      "green": 225,
+      "gray": 235
+    },
+    "materials": {
+      "5637": 2,
+      "11174": 4,
+      "11177": 2
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=435481",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215129,
+      "recipeItemName": "Formula: Enchant Weapon - Dismantle"
+    }
+  },
+  {
+    "id": 435903,
+    "name": "Enchant Chest - Retricutioner",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 0,
+      "green": 225,
+      "gray": 240
+    },
+    "materials": {
+      "11176": 2,
+      "11177": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_note_01",
+    "url": "https://www.wowhead.com/forever/spell=435903",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 215138,
+      "recipeItemName": "Formula: Enchant Chest - Retricutioner"
+    }
+  },
+  {
+    "id": 439134,
+    "name": "Greater Mystic Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "11135": 1,
+      "11137": 1,
+      "11291": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_wand_07",
+    "url": "https://www.wowhead.com/forever/spell=439134",
+    "produces": {
+      "id": 217287,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 2666
+    }
+  },
+  {
+    "id": 439156,
+    "name": "Sigil of Innovation",
+    "quality": 2,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 225,
+      "green": 227,
+      "gray": 230
+    },
+    "materials": {
+      "11137": 5
+    },
+    "minSkill": 225,
+    "icon": "inv_sigil_mimiron",
+    "url": "https://www.wowhead.com/forever/spell=439156",
+    "produces": {
+      "id": 217308,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 215141,
+      "recipeItemName": "Enchanted Sigil: Innovation"
+    }
+  },
+  {
+    "id": 446243,
+    "name": "Sigil of Living Dreams",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
+    },
+    "materials": {
+      "11176": 5
+    },
+    "minSkill": 0,
+    "icon": "inv_sigil_freya",
+    "url": "https://www.wowhead.com/forever/spell=446243",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 448624,
+    "name": "Scroll of Spatial Mending",
+    "quality": 2,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "4470": 1,
+      "10940": 4
+    },
+    "minSkill": 120,
+    "icon": "inv_scroll_09",
+    "url": "https://www.wowhead.com/forever/spell=448624",
+    "produces": {
+      "id": 220792,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 223163,
+      "recipeItemName": "Formula: Scroll of Spatial Mending"
+    }
+  },
+  {
+    "id": 463866,
+    "name": "Sigil of Flowing Waters",
+    "quality": 3,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 305,
+      "green": 312,
+      "gray": 320
+    },
+    "materials": {
+      "16204": 1
+    },
+    "minSkill": 290,
+    "icon": "inv_sigil_hodir",
+    "url": "https://www.wowhead.com/forever/spell=463866",
+    "produces": {
+      "id": 228978,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 228979,
+      "recipeItemName": "Enchanted Sigil: Flowing Waters"
+    }
+  },
+  {
+    "id": 463869,
+    "name": "Conductive Shield Coating",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "4625": 1,
+      "8925": 1,
+      "16204": 2
+    },
+    "minSkill": 275,
+    "icon": "inv_potion_100",
+    "url": "https://www.wowhead.com/forever/spell=463869",
+    "produces": {
+      "id": 228980,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 228981,
+      "recipeItemName": "Formula: Conductive Shield Coating"
+    }
+  },
+  {
+    "id": 463871,
+    "name": "Enchant Shield - Law of Nature",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7076": 1,
+      "7078": 4,
+      "7080": 4,
+      "12811": 1,
+      "14344": 4,
+      "16203": 12
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=463871",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 228982,
+      "recipeItemName": "Formula: Enchant Shield - Law of Nature"
+    }
+  },
+  {
+    "id": 471400,
+    "name": "Magnificent Trollshine",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 320,
+      "gray": 330
+    },
+    "materials": {
+      "8151": 3,
+      "8152": 3,
+      "14344": 2,
+      "18256": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_potion_96",
+    "url": "https://www.wowhead.com/forever/spell=471400",
+    "produces": {
+      "id": 232611,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 232610,
+      "recipeItemName": "Formula: Magnificent Trollshine"
+    }
+  },
+  {
+    "id": 1213593,
+    "name": "Speedstone",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "2452": 20,
+      "20725": 6,
+      "234004": 6,
+      "234006": 10,
+      "234010": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_pet_scorchedstone",
+    "url": "https://www.wowhead.com/forever/spell=1213593",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213595,
+    "name": "Tear of the Dreamer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 4,
+      "234003": 10,
+      "234006": 10,
+      "234010": 10,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_elemental_crystal_life",
+    "url": "https://www.wowhead.com/forever/spell=1213595",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213598,
+    "name": "Lodestone of Retaliation",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 4,
+      "234003": 10,
+      "234007": 10,
+      "234010": 5,
+      "234011": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_stone_08",
+    "url": "https://www.wowhead.com/forever/spell=1213598",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213600,
+    "name": "Enchanted Stopwatch",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "2459": 3,
+      "14344": 4,
+      "234003": 3,
+      "234005": 6
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_pocketwatch_02",
+    "url": "https://www.wowhead.com/forever/spell=1213600",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213603,
+    "name": "Ruby-Encrusted Broach",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "20725": 6,
+      "234003": 10,
+      "234007": 10,
+      "234010": 5,
+      "234011": 10,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_jewelry_necklace_15",
+    "url": "https://www.wowhead.com/forever/spell=1213603",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213607,
+    "name": "Scroll: Wrath of the Swarm",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14047": 1,
+      "16203": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1213607",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 234271,
+      "recipeItemName": "Formula: Scroll: Wrath of the Swarm"
+    }
+  },
+  {
+    "id": 1213610,
+    "name": "Enchanted Repellent",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16204": 2,
+      "234011": 3,
+      "234012": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1213610",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 234272,
+      "recipeItemName": "Formula: Enchanted Repellent"
+    }
+  },
+  {
+    "id": 1213616,
+    "name": "Enchant Chest - Living Stats",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "13458": 10,
+      "16203": 5,
+      "16204": 8,
+      "20725": 2,
+      "234010": 2,
+      "234011": 2
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=1213616",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213622,
+    "name": "Enchant Gloves - Holy Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12735": 2,
+      "13180": 5,
+      "14344": 5,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1213622",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249536,
+      "recipeItemName": "Formula: Enchant Gloves - Holy Power"
+    }
+  },
+  {
+    "id": 1213626,
+    "name": "Enchant Gloves - Arcane Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12753": 2,
+      "14344": 5,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1213626",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249534,
+      "recipeItemName": "Formula: Enchant Gloves - Arcane Power"
+    }
+  },
+  {
+    "id": 1213628,
+    "name": "Enchanted Prayer Tome",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_libramoftruth",
+    "url": "https://www.wowhead.com/forever/spell=1213628",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213633,
+    "name": "Enchanted Totem",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_totemoflife",
+    "url": "https://www.wowhead.com/forever/spell=1213633",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1213635,
+    "name": "Enchanted Mushroom",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    },
+    "minSkill": 0,
+    "icon": "creature_sporemushroom",
+    "url": "https://www.wowhead.com/forever/spell=1213635",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216005,
+    "name": "Libram of Righteousness",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_libramofhope",
+    "url": "https://www.wowhead.com/forever/spell=1216005",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216007,
+    "name": "Libram of the Exorcist",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_libramoftruth",
+    "url": "https://www.wowhead.com/forever/spell=1216007",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216010,
+    "name": "Libram of Sanctity",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 4,
+      "20725": 3,
+      "234003": 2,
+      "234008": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_libramofgrace",
+    "url": "https://www.wowhead.com/forever/spell=1216010",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216014,
+    "name": "Totem of Pyroclastic Thunder",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_totemofrebirth",
+    "url": "https://www.wowhead.com/forever/spell=1216014",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216016,
+    "name": "Totem of Thunderous Strikes",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_totemofrage",
+    "url": "https://www.wowhead.com/forever/spell=1216016",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216018,
+    "name": "Totem of Flowing Magma",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 3,
+      "234003": 2,
+      "234012": 10
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_totemofrage",
+    "url": "https://www.wowhead.com/forever/spell=1216018",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216020,
+    "name": "Idol of Sidereal Wrath",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_idolofrejuvenation",
+    "url": "https://www.wowhead.com/forever/spell=1216020",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216022,
+    "name": "Idol of Feline Ferocity",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_idolofferocity",
+    "url": "https://www.wowhead.com/forever/spell=1216022",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1216024,
+    "name": "Idol of Ursin Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12810": 3,
+      "20725": 2,
+      "234010": 4,
+      "234011": 4,
+      "234012": 20
+    },
+    "minSkill": 0,
+    "icon": "inv_relics_idolofferocity",
+    "url": "https://www.wowhead.com/forever/spell=1216024",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1217189,
+    "name": "Enchant Bracer - Spell Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 2,
+      "7080": 2,
+      "7082": 2,
+      "14344": 2,
+      "16203": 4,
+      "16204": 20
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=1217189",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1217203,
+    "name": "Enchant Bracer - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 2,
+      "16203": 2,
+      "16204": 10,
+      "20725": 2
+    },
+    "minSkill": 0,
+    "icon": "spell_holy_greaterheal",
+    "url": "https://www.wowhead.com/forever/spell=1217203",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1219577,
+    "name": "Enchant Off-Hand - Superior Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7082": 2,
+      "16204": 18,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219577",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274391,
+      "recipeItemName": "Formula: Enchant Off Hand - Superior Intellect"
+    }
+  },
+  {
+    "id": 1219578,
+    "name": "Enchant Off-Hand - Excellent Spirit",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 2,
+      "16204": 18,
+      "20725": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219578",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274392,
+      "recipeItemName": "Formula: Enchant Off Hand - Excellent Spirit"
+    }
+  },
+  {
+    "id": 1219579,
+    "name": "Enchant Off-Hand - Wisdom",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7080": 1,
+      "7082": 1,
+      "14344": 6,
+      "16204": 18
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219579",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274393,
+      "recipeItemName": "Formula: Enchant Off Hand - Wisdom"
+    }
+  },
+  {
+    "id": 1219580,
+    "name": "Enchant 2H Weapon - Spellblasting",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "8831": 6,
+      "12938": 1,
+      "16204": 24,
+      "20725": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219580",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274394,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Spellblasting"
+    }
+  },
+  {
+    "id": 1219581,
+    "name": "Enchant Shield - Excellent Stamina",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7076": 2,
+      "14344": 6,
+      "16204": 18
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219581",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274395,
+      "recipeItemName": "Formula: Enchant Shield - Excellent Stamina"
+    }
+  },
+  {
+    "id": 1219587,
+    "name": "Enchant Cloak - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7078": 1,
+      "16203": 3,
+      "16204": 9
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1219587",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274399,
+      "recipeItemName": "Formula: Enchant Cloak - Agility"
+    }
+  },
+  {
+    "id": 1220623,
+    "name": "Enchant Shield - Critical Strike",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "12938": 1,
+      "14344": 5,
+      "16204": 15
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1220623",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274400,
+      "recipeItemName": "Formula: Enchant Shield - Critical Strike"
+    }
+  },
+  {
+    "id": 1220624,
+    "name": "Enchant Bracer - Greater Spellpower",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "8831": 2,
+      "12808": 12,
+      "16203": 3,
+      "16204": 9
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1220624",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274401,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Spellpower"
+    }
+  },
+  {
+    "id": 1230643,
+    "name": "Enchanted Lute",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 20,
+      "green": 22,
+      "gray": 25
+    },
+    "materials": {
+      "4470": 1,
+      "10940": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_10_enchanting2_magicswirl_bronze",
+    "url": "https://www.wowhead.com/forever/spell=1230643",
+    "produces": {
+      "id": 279976,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 1231128,
+    "name": "Enchant Weapon - Grand Crusader",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 2,
+      "12938": 1,
+      "14344": 5,
+      "20725": 2
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1231128",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 241191,
+      "recipeItemName": "Formula: Enchant Weapon - Grand Crusader"
+    }
+  },
+  {
+    "id": 1231139,
+    "name": "Enchant 2H Weapon - Grand Arcanist",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 4,
+      "12938": 1,
+      "14344": 10,
+      "20725": 4
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1231139",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 241195,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Grand Arcanist"
+    }
+  },
+  {
+    "id": 1231164,
+    "name": "Enchant Weapon - Grand Sorcerer",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 3,
+      "12938": 1,
+      "14344": 6,
+      "20725": 2
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1231164",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 241201,
+      "recipeItemName": "Formula: Enchant Weapon - Grand Sorcerer"
+    }
+  },
+  {
+    "id": 1232172,
+    "name": "Enchant 2H Weapon - Grand Inquisitor",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 305,
+      "green": 307,
+      "gray": 310
+    },
+    "materials": {
+      "12811": 6,
+      "12938": 1,
+      "14344": 10,
+      "20725": 4
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1232172",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 242361,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Grand Inquisitor"
+    }
+  },
+  {
+    "id": 1245320,
+    "name": "Dust to Motes",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 10,
+      "green": 12,
+      "gray": 15
+    },
+    "materials": {
+      "10940": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_elemental_mote_mana",
+    "url": "https://www.wowhead.com/forever/spell=1245320",
+    "produces": {
+      "id": 247786,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1245321,
+    "name": "Novice's Practice Wand",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 10,
+      "green": 12,
+      "gray": 15
+    },
+    "materials": {
+      "4470": 1,
+      "247786": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_weapon_shortblade_09",
+    "url": "https://www.wowhead.com/forever/spell=1245321",
+    "produces": {
+      "id": 247789,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1248458,
+    "name": "Enchant Bracer - Minor Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 70,
+      "yellow": 110,
+      "green": 130,
+      "gray": 150
+    },
+    "materials": {
+      "10938": 1
+    },
+    "minSkill": 70,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248458",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249474,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Intellect"
+    }
+  },
+  {
+    "id": 1248459,
+    "name": "Enchant Bracer - Minor Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "10938": 2
+    },
+    "minSkill": 90,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248459",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249475,
+      "recipeItemName": "Formula: Enchant Bracer - Minor Healing Power"
+    }
+  },
+  {
+    "id": 1248460,
+    "name": "Enchant Bracer - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "11134": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248460",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249486,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Agility"
+    }
+  },
+  {
+    "id": 1248461,
+    "name": "Twisted Nether Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 205,
+      "green": 225,
+      "gray": 245
+    },
+    "materials": {
+      "11174": 1,
+      "11176": 1,
+      "11291": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_wand_03",
+    "url": "https://www.wowhead.com/forever/spell=1248461",
+    "produces": {
+      "id": 249144,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249487,
+      "recipeItemName": "Formula: Twisted Nether Wand"
+    }
+  },
+  {
+    "id": 1248497,
+    "name": "Enchant Bracer - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 190,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11137": 1
+    },
+    "minSkill": 190,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248497",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249488,
+      "recipeItemName": "Formula: Enchant Bracer - Agility"
+    }
+  },
+  {
+    "id": 1248498,
+    "name": "Enchant Bracer - Lesser Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 205,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11134": 2
+    },
+    "minSkill": 205,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248498",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249489,
+      "recipeItemName": "Formula: Enchant Bracer - Lesser Healing Power"
+    }
+  },
+  {
+    "id": 1248500,
+    "name": "Enchant Bracer - Greater Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 260,
+      "green": 280,
+      "gray": 300
+    },
+    "materials": {
+      "11174": 1,
+      "11176": 3
+    },
+    "minSkill": 240,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248500",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249514,
+      "recipeItemName": "Formula: Enchant Bracer - Greater Agility"
+    }
+  },
+  {
+    "id": 1248505,
+    "name": "Lesser Eternal Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 245,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "11176": 1,
+      "11291": 1,
+      "16202": 1
+    },
+    "minSkill": 245,
+    "icon": "inv_wand_05",
+    "url": "https://www.wowhead.com/forever/spell=1248505",
+    "produces": {
+      "id": 249232,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249515,
+      "recipeItemName": "Formula: Lesser Eternal Wand"
+    }
+  },
+  {
+    "id": 1248509,
+    "name": "Dreambough Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 215,
+      "yellow": 235,
+      "green": 255,
+      "gray": 275
+    },
+    "materials": {
+      "11137": 1,
+      "11174": 2,
+      "11291": 1
+    },
+    "minSkill": 215,
+    "icon": "inv_wand_04",
+    "url": "https://www.wowhead.com/forever/spell=1248509",
+    "produces": {
+      "id": 249234,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249512,
+      "recipeItemName": "Formula: Dreambough Wand"
+    }
+  },
+  {
+    "id": 1248510,
+    "name": "Enchant 2H Weapon - Lesser Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 230,
+      "green": 250,
+      "gray": 270
+    },
+    "materials": {
+      "11137": 2,
+      "11139": 1,
+      "11174": 1
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248510",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249511,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Lesser Agility"
+    }
+  },
+  {
+    "id": 1248511,
+    "name": "Enchant 2H Weapon - Lesser Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "11137": 1,
+      "11139": 1,
+      "11174": 2
+    },
+    "minSkill": 220,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248511",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249513,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Lesser Strength"
+    }
+  },
+  {
+    "id": 1248515,
+    "name": "Greater Eternal Wand",
+    "quality": 2,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 295,
+      "gray": 305
+    },
+    "materials": {
+      "11291": 1,
+      "16203": 2,
+      "16204": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_wand_14",
+    "url": "https://www.wowhead.com/forever/spell=1248515",
+    "produces": {
+      "id": 249237,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249522,
+      "recipeItemName": "Formula: Greater Eternal Wand"
+    }
+  },
+  {
+    "id": 1248528,
+    "name": "Enchant Gloves - Advanced Skinning",
+    "quality": -1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 270,
+      "green": 290,
+      "gray": 310
+    },
+    "materials": {
+      "11176": 2,
+      "15407": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248528",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249516,
+      "recipeItemName": "Formula: Enchant Gloves - Advanced Skinning"
+    }
+  },
+  {
+    "id": 1248599,
+    "name": "Enchant Bracer - Superior Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "14344": 1,
+      "16203": 3,
+      "16204": 3
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248599",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249524,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Agility"
+    }
+  },
+  {
+    "id": 1248607,
+    "name": "Enchant 2H Weapon - Mighty Spell Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7076": 4,
+      "12808": 4,
+      "16203": 6,
+      "20725": 4,
+      "248819": 4,
+      "248820": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248607",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249525,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Mighty Spell Power"
+    }
+  },
+  {
+    "id": 1248636,
+    "name": "Enchant 2H Weapon - Mighty Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16203": 6,
+      "20725": 4,
+      "248819": 4,
+      "248820": 4,
+      "249274": 4,
+      "249726": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248636",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249526,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Mighty Healing Power"
+    }
+  },
+  {
+    "id": 1248640,
+    "name": "Enchant Gloves - Superior Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "7076": 4,
+      "16203": 8,
+      "20725": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulasuperior_01",
+    "url": "https://www.wowhead.com/forever/spell=1248640",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274398,
+      "recipeItemName": "Formula: Enchant Gloves - Superior Strength"
+    }
+  },
+  {
+    "id": 1248645,
+    "name": "Enchant Gloves - Natural Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 5,
+      "20725": 2,
+      "248822": 4
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248645",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249535,
+      "recipeItemName": "Formula: Enchant Gloves - Natural Power"
+    }
+  },
+  {
+    "id": 1248650,
+    "name": "Brilliant Wand",
+    "quality": 3,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11291": 1,
+      "14344": 2,
+      "16203": 1,
+      "16204": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_wand_07",
+    "url": "https://www.wowhead.com/forever/spell=1248650",
+    "produces": {
+      "id": 249385,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249537,
+      "recipeItemName": "Formula: Brilliant Wand"
+    }
+  },
+  {
+    "id": 1248661,
+    "name": "Enchant Bracer - Superior Intellect",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "16203": 10
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248661",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249538,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Intellect"
+    }
+  },
+  {
+    "id": 1248665,
+    "name": "Enchant Bracer - Superior Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "14344": 3
+    },
+    "minSkill": 300,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248665",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249539,
+      "recipeItemName": "Formula: Enchant Bracer - Superior Deflection"
+    }
+  },
+  {
+    "id": 1248668,
+    "name": "Enchant 2H Weapon - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 290,
+      "yellow": 295,
+      "green": 297,
+      "gray": 300
+    },
+    "materials": {
+      "12363": 4,
+      "14344": 8,
+      "16203": 10,
+      "16204": 8
+    },
+    "minSkill": 290,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248668",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249523,
+      "recipeItemName": "Formula: Enchant 2H Weapon - Strength"
+    }
+  },
+  {
+    "id": 1248703,
+    "name": "Glimmering Staff",
+    "quality": 3,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 5,
+      "10978": 2,
+      "11082": 1,
+      "11084": 4,
+      "11291": 4,
+      "249391": 3
+    },
+    "minSkill": 140,
+    "icon": "inv_staff_19",
+    "url": "https://www.wowhead.com/forever/spell=1248703",
+    "produces": {
+      "id": 249392,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249482,
+      "recipeItemName": "Formula: Glimmering Staff"
+    }
+  },
+  {
+    "id": 1248739,
+    "name": "Soulstaff",
+    "quality": 3,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "1210": 2,
+      "10978": 1,
+      "11082": 1,
+      "11083": 6,
+      "11084": 2,
+      "11291": 4
+    },
+    "minSkill": 140,
+    "icon": "inv_staff_31",
+    "url": "https://www.wowhead.com/forever/spell=1248739",
+    "produces": {
+      "id": 249393,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249483,
+      "recipeItemName": "Formula: Soulstaff"
+    }
+  },
+  {
+    "id": 1248745,
+    "name": "Orb of Mystic Insight",
+    "quality": 3,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 5,
+      "10978": 2,
+      "11082": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_misc_orb_blue",
+    "url": "https://www.wowhead.com/forever/spell=1248745",
+    "produces": {
+      "id": 249394,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249484,
+      "recipeItemName": "Formula: Orb of Mystic Insight"
+    }
+  },
+  {
+    "id": 1248748,
+    "name": "Orb of Souls",
+    "quality": 3,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10978": 2,
+      "11082": 2,
+      "11083": 2
+    },
+    "minSkill": 140,
+    "icon": "inv_misc_orb_04",
+    "url": "https://www.wowhead.com/forever/spell=1248748",
+    "produces": {
+      "id": 249395,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249485,
+      "recipeItemName": "Formula: Orb of Souls"
+    }
+  },
+  {
+    "id": 1248752,
+    "name": "Mystic Mushroom",
+    "quality": 3,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "4605": 1,
+      "10939": 2,
+      "10940": 5,
+      "10978": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_mushroom_11",
+    "url": "https://www.wowhead.com/forever/spell=1248752",
+    "produces": {
+      "id": 249396,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249476,
+      "recipeItemName": "Formula: Mystic Mushroom"
+    }
+  },
+  {
+    "id": 1248754,
+    "name": "Tenets of the Silver Hand",
+    "quality": 3,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "3013": 5,
+      "10939": 1,
+      "10940": 2,
+      "11084": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_misc_book_13",
+    "url": "https://www.wowhead.com/forever/spell=1248754",
+    "produces": {
+      "id": 249397,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249477,
+      "recipeItemName": "Formula: Tenets of the Silver Hand"
+    }
+  },
+  {
+    "id": 1248755,
+    "name": "Polished Driftwood Icon",
+    "quality": 3,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "4470": 1,
+      "10939": 2,
+      "10940": 3,
+      "11084": 1
+    },
+    "minSkill": 130,
+    "icon": "spell_shaman_totemrecall",
+    "url": "https://www.wowhead.com/forever/spell=1248755",
+    "produces": {
+      "id": 249398,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249478,
+      "recipeItemName": "Formula: Polished Driftwood Icon"
+    }
+  },
+  {
+    "id": 1248757,
+    "name": "Enchant Weapon - Insight",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "10940": 10,
+      "11082": 4,
+      "11084": 4,
+      "249391": 4,
+      "249399": 4
+    },
+    "minSkill": 140,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248757",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249479,
+      "recipeItemName": "Formula: Enchant Weapon - Insight"
+    }
+  },
+  {
+    "id": 1248760,
+    "name": "Enchant Weapon - Recovery",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "2775": 4,
+      "11082": 6,
+      "11083": 6,
+      "11084": 4,
+      "249391": 4
+    },
+    "minSkill": 140,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248760",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249480,
+      "recipeItemName": "Formula: Enchant Weapon - Recovery"
+    }
+  },
+  {
+    "id": 1248805,
+    "name": "Enchant Weapon - Revelation",
+    "quality": -1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "11082": 2,
+      "11083": 8,
+      "11084": 6,
+      "249409": 4,
+      "249410": 4
+    },
+    "minSkill": 140,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1248805",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249481,
+      "recipeItemName": "Formula: Enchant Weapon - Revelation"
+    }
+  },
+  {
+    "id": 1248974,
+    "name": "Talons of Wrath",
+    "quality": 3,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 4,
+      "11176": 6,
+      "11178": 2,
+      "11291": 1,
+      "249409": 1,
+      "249430": 2
+    },
+    "minSkill": 210,
+    "icon": "spell_nature_natureswrath",
+    "url": "https://www.wowhead.com/forever/spell=1248974",
+    "produces": {
+      "id": 249441,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249493,
+      "recipeItemName": "Formula: Talons of Wrath"
+    }
+  },
+  {
+    "id": 1249006,
+    "name": "Libram of Invocation",
+    "quality": 3,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "2289": 4,
+      "11175": 3,
+      "11176": 4,
+      "11178": 3,
+      "249409": 1,
+      "249430": 2
+    },
+    "minSkill": 210,
+    "icon": "inv_relics_libramofhope",
+    "url": "https://www.wowhead.com/forever/spell=1249006",
+    "produces": {
+      "id": 249442,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249494,
+      "recipeItemName": "Formula: Libram of Invocation"
+    }
+  },
+  {
+    "id": 1249015,
+    "name": "Totem of Ancestral Protection",
+    "quality": 3,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 2,
+      "11178": 4,
+      "11291": 2,
+      "249410": 2,
+      "249432": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_relics_totemofrage",
+    "url": "https://www.wowhead.com/forever/spell=1249015",
+    "produces": {
+      "id": 249443,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249495,
+      "recipeItemName": "Formula: Totem of Ancestral Protection"
+    }
+  },
+  {
+    "id": 1249019,
+    "name": "Enchant Necklace - Strength",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 4,
+      "11176": 10,
+      "11178": 4,
+      "249410": 4,
+      "249425": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249019",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249496,
+      "recipeItemName": "Formula: Enchant Necklace - Strength"
+    }
+  },
+  {
+    "id": 1249057,
+    "name": "Enchant Necklace - Spell Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 5,
+      "11176": 8,
+      "11178": 3,
+      "249409": 4,
+      "249430": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249057",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249502,
+      "recipeItemName": "Formula: Enchant Necklace - Spell Power"
+    }
+  },
+  {
+    "id": 1249058,
+    "name": "Enchant Necklace - Healing Power",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 3,
+      "11176": 4,
+      "11178": 5,
+      "249391": 4,
+      "249424": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249058",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249503,
+      "recipeItemName": "Formula: Enchant Necklace - Healing Power"
+    }
+  },
+  {
+    "id": 1249059,
+    "name": "Enchant Necklace - Agility",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 6,
+      "11178": 8,
+      "249410": 4,
+      "249430": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249059",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249504,
+      "recipeItemName": "Formula: Enchant Necklace - Agility"
+    }
+  },
+  {
+    "id": 1249060,
+    "name": "Enchant Necklace - Deflection",
+    "quality": -1,
+    "difficulty": {
+      "orange": 210,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 8,
+      "11176": 2,
+      "11178": 2,
+      "249409": 4,
+      "249430": 4
+    },
+    "minSkill": 210,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249060",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249505,
+      "recipeItemName": "Formula: Enchant Necklace - Deflection"
+    }
+  },
+  {
+    "id": 1249061,
+    "name": "Radiant Staff",
+    "quality": 3,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 4,
+      "11176": 6,
+      "11177": 2,
+      "11178": 6,
+      "11291": 4,
+      "249409": 2,
+      "249430": 4
+    },
+    "minSkill": 220,
+    "icon": "inv_staff_13",
+    "url": "https://www.wowhead.com/forever/spell=1249061",
+    "produces": {
+      "id": 249453,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249506,
+      "recipeItemName": "Formula: Radiant Staff"
+    }
+  },
+  {
+    "id": 1249064,
+    "name": "Dreamstaff",
+    "quality": 3,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 6,
+      "11176": 8,
+      "11177": 4,
+      "11178": 4,
+      "11291": 4,
+      "249409": 2,
+      "249430": 4
+    },
+    "minSkill": 220,
+    "icon": "inv_staff_14",
+    "url": "https://www.wowhead.com/forever/spell=1249064",
+    "produces": {
+      "id": 249454,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249507,
+      "recipeItemName": "Formula: Dreamstaff"
+    }
+  },
+  {
+    "id": 1249069,
+    "name": "Truesilver Conduit",
+    "quality": 3,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 3,
+      "11177": 1,
+      "11178": 3,
+      "11291": 2,
+      "249409": 1,
+      "249430": 2
+    },
+    "minSkill": 220,
+    "icon": "inv_rod_enchantedadamantite",
+    "url": "https://www.wowhead.com/forever/spell=1249069",
+    "produces": {
+      "id": 249455,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249508,
+      "recipeItemName": "Formula: Truesilver Conduit"
+    }
+  },
+  {
+    "id": 1249070,
+    "name": "Twisting Essence Jar",
+    "quality": 3,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "6037": 4,
+      "11135": 12,
+      "11175": 12,
+      "249409": 1,
+      "249430": 2
+    },
+    "minSkill": 220,
+    "icon": "inv_10_misc_dragonorb_color1",
+    "url": "https://www.wowhead.com/forever/spell=1249070",
+    "produces": {
+      "id": 249456,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249509,
+      "recipeItemName": "Formula: Twisting Essence Jar"
+    }
+  },
+  {
+    "id": 1249071,
+    "name": "Enchant Chest - Absorption",
+    "quality": -1,
+    "difficulty": {
+      "orange": 220,
+      "yellow": 225,
+      "green": 245,
+      "gray": 265
+    },
+    "materials": {
+      "11175": 4,
+      "11176": 10,
+      "11178": 2
+    },
+    "minSkill": 220,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1249071",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 249510,
+      "recipeItemName": "Formula: Enchant Chest - Absorption"
+    }
+  },
+  {
+    "id": 1249107,
+    "name": "Frozen Heart of the Mountain",
+    "quality": 3,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "11382": 1,
+      "12808": 1,
+      "14343": 3
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_gem_sapphire_01",
+    "url": "https://www.wowhead.com/forever/spell=1249107",
+    "produces": {
+      "id": 249469,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1249112,
+    "name": "Molten Heart of the Mountain",
+    "quality": 3,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7076": 1,
+      "11382": 1,
+      "14343": 3
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_gem_ruby_01",
+    "url": "https://www.wowhead.com/forever/spell=1249112",
+    "produces": {
+      "id": 249470,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1249114,
+    "name": "Dormant Heart of the Mountain",
+    "quality": 3,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 285,
+      "green": 305,
+      "gray": 325
+    },
+    "materials": {
+      "7080": 1,
+      "11382": 1,
+      "14343": 3
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_gem_diamond_01",
+    "url": "https://www.wowhead.com/forever/spell=1249114",
+    "produces": {
+      "id": 249473,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1249128,
+    "name": "Idol of the Dream",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11291": 4,
+      "14344": 2,
+      "16203": 4,
+      "16204": 6,
+      "249409": 2,
+      "249430": 4,
+      "249431": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_relics_idolofferocity",
+    "url": "https://www.wowhead.com/forever/spell=1249128",
+    "produces": {
+      "id": 220606,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249529,
+      "recipeItemName": "Formula: Idol of the Dream"
+    }
+  },
+  {
+    "id": 1249152,
+    "name": "Libram of Holy Alacrity",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "10308": 4,
+      "14344": 4,
+      "16203": 3,
+      "16204": 4,
+      "249409": 2,
+      "249430": 4,
+      "249431": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_relics_libramofhope",
+    "url": "https://www.wowhead.com/forever/spell=1249152",
+    "produces": {
+      "id": 228175,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249530,
+      "recipeItemName": "Formula: Libram of Holy Alacrity"
+    }
+  },
+  {
+    "id": 1249154,
+    "name": "Totem of Thunder",
+    "quality": 3,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 320,
+      "green": 340,
+      "gray": 360
+    },
+    "materials": {
+      "11291": 4,
+      "14344": 1,
+      "16203": 8,
+      "16204": 10,
+      "249409": 2,
+      "249430": 4,
+      "249431": 8
+    },
+    "minSkill": 300,
+    "icon": "inv_relics_totemofrebirth",
+    "url": "https://www.wowhead.com/forever/spell=1249154",
+    "produces": {
+      "id": 228176,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249532,
+      "recipeItemName": "Formula: Totem of Thunder"
+    }
+  },
+  {
+    "id": 1263056,
+    "name": "Arcane Salvager",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 140,
+      "green": 142,
+      "gray": 145
+    },
+    "materials": {
+      "11137": 2,
+      "11174": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_eng_bottledelements",
+    "url": "https://www.wowhead.com/forever/spell=1263056",
+    "produces": {
+      "id": 279985,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273103,
+      "recipeItemName": "Blueprint: Arcane Salvager"
+    }
+  },
+  {
+    "id": 1263082,
+    "name": "Arcane Forge",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 300,
+      "green": 300,
+      "gray": 300
+    },
+    "materials": {
+      "14344": 2,
+      "16203": 4,
+      "273128": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_enchanting_modifiedcraftingreagent_indigo",
+    "url": "https://www.wowhead.com/forever/spell=1263082",
+    "produces": {
+      "id": 279987,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273116,
+      "recipeItemName": "Blueprint: Arcane Forge"
+    }
+  },
+  {
+    "id": 1294054,
+    "name": "Enchant Gloves - Lotus Claw",
+    "quality": -1,
+    "difficulty": {
+      "orange": 295,
+      "yellow": 295,
+      "green": 297,
+      "gray": 300
+    },
+    "materials": {
+      "14343": 2,
+      "16202": 4,
+      "16204": 12,
+      "248822": 1
+    },
+    "minSkill": 295,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1294054",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 274424,
+      "recipeItemName": "Formula: Enchant Gloves - Lotus Claw"
+    }
+  },
+  {
+    "id": 1306520,
+    "name": "Torch of Light",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "14344": 6,
+      "16202": 5,
+      "20725": 1,
+      "274030": 2
+    },
+    "minSkill": 300,
+    "icon": "inv_torch_lit",
+    "url": "https://www.wowhead.com/forever/spell=1306520",
+    "produces": {
+      "id": 279246,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279295,
+      "recipeItemName": "Formula: Torch of Light"
+    }
+  },
+  {
+    "id": 1306521,
+    "name": "Steadfast Libram",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 12,
+      "20725": 1,
+      "274030": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_relics_libramofgrace",
+    "url": "https://www.wowhead.com/forever/spell=1306521",
+    "produces": {
+      "id": 279247,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279296,
+      "recipeItemName": "Formula: Steadfast Libram"
+    }
+  },
+  {
+    "id": 1306522,
+    "name": "Libram of Infusion",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 12,
+      "20725": 1,
+      "274030": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_book_13",
+    "url": "https://www.wowhead.com/forever/spell=1306522",
+    "produces": {
+      "id": 279248,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279297,
+      "recipeItemName": "Formula: Libram of Infusion"
+    }
+  },
+  {
+    "id": 1306523,
+    "name": "Totem of Urgency",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 12,
+      "20725": 1,
+      "274030": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_ability_totemicshaman_surgingtotem",
+    "url": "https://www.wowhead.com/forever/spell=1306523",
+    "produces": {
+      "id": 279249,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279298,
+      "recipeItemName": "Formula: Totem of Urgency"
+    }
+  },
+  {
+    "id": 1306524,
+    "name": "Idol of Swiftness",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 12,
+      "20725": 1,
+      "274030": 1
+    },
+    "minSkill": 300,
+    "icon": "ability_druid_nourish",
+    "url": "https://www.wowhead.com/forever/spell=1306524",
+    "produces": {
+      "id": 279250,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279299,
+      "recipeItemName": "Formula: Idol of Swiftness"
+    }
+  },
+  {
+    "id": 1306525,
+    "name": "Idol of the Ursine Twins",
+    "quality": 4,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 310,
+      "green": 317,
+      "gray": 325
+    },
+    "materials": {
+      "16203": 2,
+      "16204": 12,
+      "20725": 1,
+      "274030": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_idol_04",
+    "url": "https://www.wowhead.com/forever/spell=1306525",
+    "produces": {
+      "id": 279251,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 279300,
+      "recipeItemName": "Formula: Idol of the Ursine Twins"
+    }
+  }
+]

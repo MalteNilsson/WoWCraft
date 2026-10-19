@@ -1,0 +1,3667 @@
+[
+  {
+    "id": 818,
+    "name": "Basic Campfire",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 25,
+      "green": 50,
+      "gray": 75
+    },
+    "materials": {
+      "4470": 1
+    },
+    "minSkill": 0,
+    "icon": "spell_fire_fire",
+    "url": "https://www.wowhead.com/forever/spell=818",
+    "produces": null,
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 2538,
+    "name": "Charred Wolf Meat",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "2672": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_food_18",
+    "url": "https://www.wowhead.com/forever/spell=2538",
+    "produces": {
+      "id": 2679,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 2539,
+    "name": "Spiced Wolf Meat",
+    "quality": 1,
+    "difficulty": {
+      "orange": 10,
+      "yellow": 50,
+      "green": 70,
+      "gray": 90
+    },
+    "materials": {
+      "2672": 1,
+      "2678": 1
+    },
+    "minSkill": 10,
+    "icon": "inv_misc_food_65",
+    "url": "https://www.wowhead.com/forever/spell=2539",
+    "produces": {
+      "id": 2680,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 50
+    }
+  },
+  {
+    "id": 2540,
+    "name": "Roasted Boar Meat",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "769": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_food_18",
+    "url": "https://www.wowhead.com/forever/spell=2540",
+    "produces": {
+      "id": 2681,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 2541,
+    "name": "Coyote Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "2673": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_food_65",
+    "url": "https://www.wowhead.com/forever/spell=2541",
+    "produces": {
+      "id": 2684,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 2542,
+    "name": "Goretusk Liver Pie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "723": 1,
+      "2678": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_food_10",
+    "url": "https://www.wowhead.com/forever/spell=2542",
+    "produces": {
+      "id": 724,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2697,
+      "recipeItemName": "Recipe: Goretusk Liver Pie"
+    }
+  },
+  {
+    "id": 2543,
+    "name": "Westfall Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "729": 1,
+      "730": 1,
+      "731": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=2543",
+    "produces": {
+      "id": 733,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 728,
+      "recipeItemName": "Recipe: Westfall Stew"
+    }
+  },
+  {
+    "id": 2544,
+    "name": "Crab Cake",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 115,
+      "green": 135,
+      "gray": 155
+    },
+    "materials": {
+      "2674": 1,
+      "2678": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_food_08",
+    "url": "https://www.wowhead.com/forever/spell=2544",
+    "produces": {
+      "id": 2683,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 200
+    }
+  },
+  {
+    "id": 2545,
+    "name": "Cooked Crab Claw",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 125,
+      "green": 145,
+      "gray": 165
+    },
+    "materials": {
+      "2675": 1,
+      "2678": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_birdbeck_02",
+    "url": "https://www.wowhead.com/forever/spell=2545",
+    "produces": {
+      "id": 2682,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2698,
+      "recipeItemName": "Recipe: Cooked Crab Claw"
+    }
+  },
+  {
+    "id": 2546,
+    "name": "Dry Pork Ribs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "2677": 1,
+      "2678": 1
+    },
+    "minSkill": 80,
+    "icon": "inv_misc_food_48",
+    "url": "https://www.wowhead.com/forever/spell=2546",
+    "produces": {
+      "id": 2687,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 150
+    }
+  },
+  {
+    "id": 2547,
+    "name": "Redridge Goulash",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 135,
+      "green": 155,
+      "gray": 175
+    },
+    "materials": {
+      "1080": 1,
+      "1081": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=2547",
+    "produces": {
+      "id": 1082,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2699,
+      "recipeItemName": "Recipe: Redridge Goulash"
+    }
+  },
+  {
+    "id": 2548,
+    "name": "Succulent Pork Ribs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "2677": 2,
+      "2692": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_food_16",
+    "url": "https://www.wowhead.com/forever/spell=2548",
+    "produces": {
+      "id": 2685,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2700,
+      "recipeItemName": "Recipe: Succulent Pork Ribs"
+    }
+  },
+  {
+    "id": 2549,
+    "name": "Seasoned Wolf Kabob",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "1015": 2,
+      "2678": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_food_16",
+    "url": "https://www.wowhead.com/forever/spell=2549",
+    "produces": {
+      "id": 1017,
+      "name": "",
+      "quantity": 3
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2701,
+      "recipeItemName": "Recipe: Seasoned Wolf Kabob"
+    }
+  },
+  {
+    "id": 2795,
+    "name": "Beer Basted Boar Ribs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 60,
+      "green": 80,
+      "gray": 100
+    },
+    "materials": {
+      "2886": 1,
+      "2894": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_misc_food_48",
+    "url": "https://www.wowhead.com/forever/spell=2795",
+    "produces": {
+      "id": 2888,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 2889,
+      "recipeItemName": "Recipe: Beer Basted Boar Ribs"
+    }
+  },
+  {
+    "id": 3370,
+    "name": "Crocolisk Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "2678": 1,
+      "2924": 1
+    },
+    "minSkill": 80,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=3370",
+    "produces": {
+      "id": 3662,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3678,
+      "recipeItemName": "Recipe: Crocolisk Steak"
+    }
+  },
+  {
+    "id": 3371,
+    "name": "Blood Sausage",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "3172": 1,
+      "3173": 1,
+      "3174": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_misc_food_49",
+    "url": "https://www.wowhead.com/forever/spell=3371",
+    "produces": {
+      "id": 3220,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3679,
+      "recipeItemName": "Recipe: Blood Sausage"
+    }
+  },
+  {
+    "id": 3372,
+    "name": "Murloc Fin Soup",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "1468": 2,
+      "2692": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=3372",
+    "produces": {
+      "id": 3663,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3680,
+      "recipeItemName": "Recipe: Murloc Fin Soup"
+    }
+  },
+  {
+    "id": 3373,
+    "name": "Crocolisk Gumbo",
+    "quality": 1,
+    "difficulty": {
+      "orange": 120,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "2692": 1,
+      "3667": 1
+    },
+    "minSkill": 120,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=3373",
+    "produces": {
+      "id": 3664,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3681,
+      "recipeItemName": "Recipe: Crocolisk Gumbo"
+    }
+  },
+  {
+    "id": 3376,
+    "name": "Curiously Tasty Omelet",
+    "quality": 1,
+    "difficulty": {
+      "orange": 130,
+      "yellow": 170,
+      "green": 190,
+      "gray": 210
+    },
+    "materials": {
+      "2692": 1,
+      "3685": 1
+    },
+    "minSkill": 130,
+    "icon": "inv_egg_04",
+    "url": "https://www.wowhead.com/forever/spell=3376",
+    "produces": {
+      "id": 3665,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3682,
+      "recipeItemName": "Recipe: Curiously Tasty Omelet"
+    }
+  },
+  {
+    "id": 3377,
+    "name": "Gooey Spider Cake",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "2251": 2,
+      "2692": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_food_10",
+    "url": "https://www.wowhead.com/forever/spell=3377",
+    "produces": {
+      "id": 3666,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3683,
+      "recipeItemName": "Recipe: Gooey Spider Cake"
+    }
+  },
+  {
+    "id": 3397,
+    "name": "Big Bear Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "2692": 1,
+      "3730": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=3397",
+    "produces": {
+      "id": 3726,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3734,
+      "recipeItemName": "Recipe: Big Bear Steak"
+    }
+  },
+  {
+    "id": 3398,
+    "name": "Hot Lion Chops",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 175,
+      "green": 195,
+      "gray": 215
+    },
+    "materials": {
+      "2692": 1,
+      "3731": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_food_18",
+    "url": "https://www.wowhead.com/forever/spell=3398",
+    "produces": {
+      "id": 3727,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3735,
+      "recipeItemName": "Recipe: Hot Lion Chops"
+    }
+  },
+  {
+    "id": 3399,
+    "name": "Tasty Lion Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "3713": 1,
+      "3731": 2
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_food_14",
+    "url": "https://www.wowhead.com/forever/spell=3399",
+    "produces": {
+      "id": 3728,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3736,
+      "recipeItemName": "Recipe: Tasty Lion Steak"
+    }
+  },
+  {
+    "id": 3400,
+    "name": "Soothing Turtle Bisque",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "3712": 1,
+      "3713": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=3400",
+    "produces": {
+      "id": 3729,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 3737,
+      "recipeItemName": "Recipe: Soothing Turtle Bisque"
+    }
+  },
+  {
+    "id": 4094,
+    "name": "Barbecued Buzzard Wing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "3404": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_food_18",
+    "url": "https://www.wowhead.com/forever/spell=4094",
+    "produces": {
+      "id": 4457,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 4609,
+      "recipeItemName": "Recipe: Barbecued Buzzard Wing"
+    }
+  },
+  {
+    "id": 6412,
+    "name": "Kaldorei Spider Kabob",
+    "quality": 1,
+    "difficulty": {
+      "orange": 10,
+      "yellow": 50,
+      "green": 70,
+      "gray": 90
+    },
+    "materials": {
+      "5465": 1
+    },
+    "minSkill": 10,
+    "icon": "inv_misc_food_68",
+    "url": "https://www.wowhead.com/forever/spell=6412",
+    "produces": {
+      "id": 5472,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5482,
+      "recipeItemName": "Recipe: Kaldorei Spider Kabob"
+    }
+  },
+  {
+    "id": 6413,
+    "name": "Scorpid Surprise",
+    "quality": 1,
+    "difficulty": {
+      "orange": 20,
+      "yellow": 60,
+      "green": 80,
+      "gray": 100
+    },
+    "materials": {
+      "5466": 1
+    },
+    "minSkill": 20,
+    "icon": "inv_misc_food_10",
+    "url": "https://www.wowhead.com/forever/spell=6413",
+    "produces": {
+      "id": 5473,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5483,
+      "recipeItemName": "Recipe: Scorpid Surprise"
+    }
+  },
+  {
+    "id": 6414,
+    "name": "Roasted Kodo Meat",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "2678": 1,
+      "5467": 1
+    },
+    "minSkill": 35,
+    "icon": "inv_misc_food_60",
+    "url": "https://www.wowhead.com/forever/spell=6414",
+    "produces": {
+      "id": 5474,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5484,
+      "recipeItemName": "Recipe: Roasted Kodo Meat"
+    }
+  },
+  {
+    "id": 6415,
+    "name": "Fillet of Frenzy",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "2678": 1,
+      "5468": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_fish_05",
+    "url": "https://www.wowhead.com/forever/spell=6415",
+    "produces": {
+      "id": 5476,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5485,
+      "recipeItemName": "Recipe: Fillet of Frenzy"
+    }
+  },
+  {
+    "id": 6416,
+    "name": "Strider Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "4536": 1,
+      "5469": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=6416",
+    "produces": {
+      "id": 5477,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5486,
+      "recipeItemName": "Recipe: Strider Stew"
+    }
+  },
+  {
+    "id": 6417,
+    "name": "Dig Rat Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "5051": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=6417",
+    "produces": {
+      "id": 5478,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5487,
+      "recipeItemName": "Recipe: Dig Rat Stew"
+    }
+  },
+  {
+    "id": 6418,
+    "name": "Crispy Lizard Tail",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "2692": 1,
+      "5470": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_food_17",
+    "url": "https://www.wowhead.com/forever/spell=6418",
+    "produces": {
+      "id": 5479,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5488,
+      "recipeItemName": "Recipe: Crispy Lizard Tail"
+    }
+  },
+  {
+    "id": 6419,
+    "name": "Lean Venison",
+    "quality": 1,
+    "difficulty": {
+      "orange": 110,
+      "yellow": 150,
+      "green": 170,
+      "gray": 190
+    },
+    "materials": {
+      "2678": 4,
+      "5471": 1
+    },
+    "minSkill": 110,
+    "icon": "inv_misc_food_72",
+    "url": "https://www.wowhead.com/forever/spell=6419",
+    "produces": {
+      "id": 5480,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5489,
+      "recipeItemName": "Recipe: Lean Venison"
+    }
+  },
+  {
+    "id": 6499,
+    "name": "Boiled Clams",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "159": 1,
+      "5503": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_shell_02",
+    "url": "https://www.wowhead.com/forever/spell=6499",
+    "produces": {
+      "id": 5525,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 6500,
+    "name": "Goblin Deviled Clams",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "2692": 1,
+      "5504": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_shell_01",
+    "url": "https://www.wowhead.com/forever/spell=6500",
+    "produces": {
+      "id": 5527,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 300
+    }
+  },
+  {
+    "id": 6501,
+    "name": "Clam Chowder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 130,
+      "green": 150,
+      "gray": 170
+    },
+    "materials": {
+      "1179": 1,
+      "2678": 1,
+      "5503": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_potion_01",
+    "url": "https://www.wowhead.com/forever/spell=6501",
+    "produces": {
+      "id": 5526,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 5528,
+      "recipeItemName": "Recipe: Clam Chowder"
+    }
+  },
+  {
+    "id": 7213,
+    "name": "Giant Clam Scorcho",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "4655": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_ammo_firetar",
+    "url": "https://www.wowhead.com/forever/spell=7213",
+    "produces": {
+      "id": 6038,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6039,
+      "recipeItemName": "Recipe: Giant Clam Scorcho"
+    }
+  },
+  {
+    "id": 7751,
+    "name": "Brilliant Smallfish",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "6291": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_fish_07",
+    "url": "https://www.wowhead.com/forever/spell=7751",
+    "produces": {
+      "id": 6290,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6325,
+      "recipeItemName": "Recipe: Brilliant Smallfish"
+    }
+  },
+  {
+    "id": 7752,
+    "name": "Slitherskin Mackerel",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "6303": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_fish_24",
+    "url": "https://www.wowhead.com/forever/spell=7752",
+    "produces": {
+      "id": 787,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6326,
+      "recipeItemName": "Recipe: Slitherskin Mackerel"
+    }
+  },
+  {
+    "id": 7753,
+    "name": "Longjaw Mud Snapper",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "6289": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_fish_32",
+    "url": "https://www.wowhead.com/forever/spell=7753",
+    "produces": {
+      "id": 4592,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6328,
+      "recipeItemName": "Recipe: Longjaw Mud Snapper"
+    }
+  },
+  {
+    "id": 7754,
+    "name": "Loch Frenzy Delight",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "2678": 1,
+      "6317": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_potion_01",
+    "url": "https://www.wowhead.com/forever/spell=7754",
+    "produces": {
+      "id": 6316,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6329,
+      "recipeItemName": "Recipe: Loch Frenzy Delight"
+    }
+  },
+  {
+    "id": 7755,
+    "name": "Bristle Whisker Catfish",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 140,
+      "green": 160,
+      "gray": 180
+    },
+    "materials": {
+      "6308": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_misc_fish_30",
+    "url": "https://www.wowhead.com/forever/spell=7755",
+    "produces": {
+      "id": 4593,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6330,
+      "recipeItemName": "Recipe: Bristle Whisker Catfish"
+    }
+  },
+  {
+    "id": 7827,
+    "name": "Rainbow Fin Albacore",
+    "quality": 1,
+    "difficulty": {
+      "orange": 50,
+      "yellow": 90,
+      "green": 110,
+      "gray": 130
+    },
+    "materials": {
+      "6361": 1
+    },
+    "minSkill": 50,
+    "icon": "inv_misc_fish_27",
+    "url": "https://www.wowhead.com/forever/spell=7827",
+    "produces": {
+      "id": 5095,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6368,
+      "recipeItemName": "Recipe: Rainbow Fin Albacore"
+    }
+  },
+  {
+    "id": 7828,
+    "name": "Rockscale Cod",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 190,
+      "green": 210,
+      "gray": 230
+    },
+    "materials": {
+      "6362": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_fish_04",
+    "url": "https://www.wowhead.com/forever/spell=7828",
+    "produces": {
+      "id": 4594,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6369,
+      "recipeItemName": "Recipe: Rockscale Cod"
+    }
+  },
+  {
+    "id": 8238,
+    "name": "Savory Deviate Delight",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 125,
+      "green": 145,
+      "gray": 165
+    },
+    "materials": {
+      "2678": 1,
+      "6522": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_monsterhead_04",
+    "url": "https://www.wowhead.com/forever/spell=8238",
+    "produces": {
+      "id": 6657,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6661,
+      "recipeItemName": "Recipe: Savory Deviate Delight"
+    }
+  },
+  {
+    "id": 8604,
+    "name": "Herb Baked Egg",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "2678": 1,
+      "6889": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_egg_03",
+    "url": "https://www.wowhead.com/forever/spell=8604",
+    "produces": {
+      "id": 6888,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 8607,
+    "name": "Smoked Bear Meat",
+    "quality": 1,
+    "difficulty": {
+      "orange": 40,
+      "yellow": 80,
+      "green": 100,
+      "gray": 120
+    },
+    "materials": {
+      "3173": 1
+    },
+    "minSkill": 40,
+    "icon": "inv_misc_food_13",
+    "url": "https://www.wowhead.com/forever/spell=8607",
+    "produces": {
+      "id": 6890,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 6892,
+      "recipeItemName": "Recipe: Smoked Bear Meat"
+    }
+  },
+  {
+    "id": 9513,
+    "name": "Thistle Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 60,
+      "yellow": 100,
+      "green": 120,
+      "gray": 140
+    },
+    "materials": {
+      "159": 1,
+      "2452": 1
+    },
+    "minSkill": 60,
+    "icon": "inv_drink_milk_05",
+    "url": "https://www.wowhead.com/forever/spell=9513",
+    "produces": {
+      "id": 7676,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18160,
+      "recipeItemName": "Recipe: Thistle Tea"
+    }
+  },
+  {
+    "id": 13028,
+    "name": "Goldthorn Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "159": 1,
+      "3821": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=13028",
+    "produces": {
+      "id": 10841,
+      "name": "",
+      "quantity": 4
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 15853,
+    "name": "Lean Wolf Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 165,
+      "green": 185,
+      "gray": 205
+    },
+    "materials": {
+      "1015": 1,
+      "2678": 1
+    },
+    "minSkill": 125,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=15853",
+    "produces": {
+      "id": 12209,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12227,
+      "recipeItemName": "Recipe: Lean Wolf Steak"
+    }
+  },
+  {
+    "id": 15855,
+    "name": "Roast Raptor",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "12184": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_food_50",
+    "url": "https://www.wowhead.com/forever/spell=15855",
+    "produces": {
+      "id": 12210,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12228,
+      "recipeItemName": "Recipe: Roast Raptor"
+    }
+  },
+  {
+    "id": 15856,
+    "name": "Hot Wolf Ribs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "12203": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_food_48",
+    "url": "https://www.wowhead.com/forever/spell=15856",
+    "produces": {
+      "id": 13851,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12229,
+      "recipeItemName": "Recipe: Hot Wolf Ribs"
+    }
+  },
+  {
+    "id": 15861,
+    "name": "Jungle Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "159": 1,
+      "4536": 2,
+      "12202": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_drink_17",
+    "url": "https://www.wowhead.com/forever/spell=15861",
+    "produces": {
+      "id": 12212,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12231,
+      "recipeItemName": "Recipe: Jungle Stew"
+    }
+  },
+  {
+    "id": 15863,
+    "name": "Carrion Surprise",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "12037": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_food_49",
+    "url": "https://www.wowhead.com/forever/spell=15863",
+    "produces": {
+      "id": 12213,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12232,
+      "recipeItemName": "Recipe: Carrion Surprise"
+    }
+  },
+  {
+    "id": 15865,
+    "name": "Mystery Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2596": 1,
+      "12037": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_drink_19",
+    "url": "https://www.wowhead.com/forever/spell=15865",
+    "produces": {
+      "id": 12214,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12233,
+      "recipeItemName": "Recipe: Mystery Stew"
+    }
+  },
+  {
+    "id": 15906,
+    "name": "Dragonbreath Chili",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "2692": 1,
+      "4402": 1,
+      "12037": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_drink_17",
+    "url": "https://www.wowhead.com/forever/spell=15906",
+    "produces": {
+      "id": 12217,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12239,
+      "recipeItemName": "Recipe: Dragonbreath Chili"
+    }
+  },
+  {
+    "id": 15910,
+    "name": "Heavy Kodo Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "159": 1,
+      "3713": 1,
+      "12204": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_drink_19",
+    "url": "https://www.wowhead.com/forever/spell=15910",
+    "produces": {
+      "id": 12215,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12240,
+      "recipeItemName": "Recipe: Heavy Kodo Stew"
+    }
+  },
+  {
+    "id": 15915,
+    "name": "Spiced Chili Crab",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "2692": 2,
+      "12206": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_food_48",
+    "url": "https://www.wowhead.com/forever/spell=15915",
+    "produces": {
+      "id": 12216,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16111,
+      "recipeItemName": "Recipe: Spiced Chili Crab"
+    }
+  },
+  {
+    "id": 15933,
+    "name": "Monster Omelet",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "3713": 2,
+      "12207": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_food_06",
+    "url": "https://www.wowhead.com/forever/spell=15933",
+    "produces": {
+      "id": 12218,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16110,
+      "recipeItemName": "Recipe: Monster Omelet"
+    }
+  },
+  {
+    "id": 15935,
+    "name": "Crispy Bat Wing",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "2678": 1,
+      "12223": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_food_46",
+    "url": "https://www.wowhead.com/forever/spell=15935",
+    "produces": {
+      "id": 12224,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 12226,
+      "recipeItemName": "Recipe: Crispy Bat Wing"
+    }
+  },
+  {
+    "id": 18238,
+    "name": "Spotted Yellowtail",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "4603": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_fish_01",
+    "url": "https://www.wowhead.com/forever/spell=18238",
+    "produces": {
+      "id": 6887,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13939,
+      "recipeItemName": "Recipe: Spotted Yellowtail"
+    }
+  },
+  {
+    "id": 18239,
+    "name": "Cooked Glossy Mightfish",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "3713": 1,
+      "13754": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_monsterhead_03",
+    "url": "https://www.wowhead.com/forever/spell=18239",
+    "produces": {
+      "id": 13927,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13940,
+      "recipeItemName": "Recipe: Cooked Glossy Mightfish"
+    }
+  },
+  {
+    "id": 18240,
+    "name": "Grilled Squid",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "3713": 1,
+      "13755": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_fish_13",
+    "url": "https://www.wowhead.com/forever/spell=18240",
+    "produces": {
+      "id": 13928,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13942,
+      "recipeItemName": "Recipe: Grilled Squid"
+    }
+  },
+  {
+    "id": 18241,
+    "name": "Filet of Redgill",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "13758": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_fish_06",
+    "url": "https://www.wowhead.com/forever/spell=18241",
+    "produces": {
+      "id": 13930,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13941,
+      "recipeItemName": "Recipe: Filet of Redgill"
+    }
+  },
+  {
+    "id": 18242,
+    "name": "Hot Smoked Bass",
+    "quality": 1,
+    "difficulty": {
+      "orange": 240,
+      "yellow": 280,
+      "green": 300,
+      "gray": 320
+    },
+    "materials": {
+      "2692": 2,
+      "13756": 1
+    },
+    "minSkill": 240,
+    "icon": "inv_misc_fish_03",
+    "url": "https://www.wowhead.com/forever/spell=18242",
+    "produces": {
+      "id": 13929,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13943,
+      "recipeItemName": "Recipe: Hot Smoked Bass"
+    }
+  },
+  {
+    "id": 18243,
+    "name": "Nightfin Soup",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "159": 1,
+      "13759": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_drink_17",
+    "url": "https://www.wowhead.com/forever/spell=18243",
+    "produces": {
+      "id": 13931,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13945,
+      "recipeItemName": "Recipe: Nightfin Soup"
+    }
+  },
+  {
+    "id": 18244,
+    "name": "Poached Sunscale Salmon",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 290,
+      "green": 310,
+      "gray": 330
+    },
+    "materials": {
+      "13760": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_fish_19",
+    "url": "https://www.wowhead.com/forever/spell=18244",
+    "produces": {
+      "id": 13932,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13946,
+      "recipeItemName": "Recipe: Poached Sunscale Salmon"
+    }
+  },
+  {
+    "id": 18245,
+    "name": "Lobster Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "159": 1,
+      "13888": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_drink_17",
+    "url": "https://www.wowhead.com/forever/spell=18245",
+    "produces": {
+      "id": 13933,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13947,
+      "recipeItemName": "Recipe: Lobster Stew"
+    }
+  },
+  {
+    "id": 18246,
+    "name": "Mightfish Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "2692": 1,
+      "3713": 1,
+      "13893": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=18246",
+    "produces": {
+      "id": 13934,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13948,
+      "recipeItemName": "Recipe: Mightfish Steak"
+    }
+  },
+  {
+    "id": 18247,
+    "name": "Baked Salmon",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "3713": 1,
+      "13889": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_fish_20",
+    "url": "https://www.wowhead.com/forever/spell=18247",
+    "produces": {
+      "id": 13935,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 13949,
+      "recipeItemName": "Recipe: Baked Salmon"
+    }
+  },
+  {
+    "id": 20626,
+    "name": "Undermine Clam Chowder",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "1179": 1,
+      "2692": 1,
+      "7974": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_drink_17",
+    "url": "https://www.wowhead.com/forever/spell=20626",
+    "produces": {
+      "id": 16766,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 16767,
+      "recipeItemName": "Recipe: Undermine Clam Chowder"
+    }
+  },
+  {
+    "id": 20916,
+    "name": "Mithril Headed Trout",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "8365": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_fish_02",
+    "url": "https://www.wowhead.com/forever/spell=20916",
+    "produces": {
+      "id": 8364,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 17062,
+      "recipeItemName": "Recipe: Mithril Head Trout"
+    }
+  },
+  {
+    "id": 21143,
+    "name": "Gingerbread Cookie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 1,
+      "yellow": 45,
+      "green": 65,
+      "gray": 85
+    },
+    "materials": {
+      "6889": 1,
+      "17194": 1
+    },
+    "minSkill": 1,
+    "icon": "inv_misc_food_62",
+    "url": "https://www.wowhead.com/forever/spell=21143",
+    "produces": {
+      "id": 17197,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 17200,
+      "recipeItemName": "Recipe: Gingerbread Cookie"
+    }
+  },
+  {
+    "id": 21144,
+    "name": "Egg Nog",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 75,
+      "green": 95,
+      "gray": 115
+    },
+    "materials": {
+      "1179": 1,
+      "6889": 1,
+      "17194": 1,
+      "17196": 1
+    },
+    "minSkill": 35,
+    "icon": "inv_drink_04",
+    "url": "https://www.wowhead.com/forever/spell=21144",
+    "produces": {
+      "id": 17198,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 17201,
+      "recipeItemName": "Recipe: Egg Nog"
+    }
+  },
+  {
+    "id": 21175,
+    "name": "Spider Sausage",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 240,
+      "green": 260,
+      "gray": 280
+    },
+    "materials": {
+      "12205": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_food_66",
+    "url": "https://www.wowhead.com/forever/spell=21175",
+    "produces": {
+      "id": 17222,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 4000
+    }
+  },
+  {
+    "id": 22480,
+    "name": "Tender Wolf Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 265,
+      "green": 285,
+      "gray": 305
+    },
+    "materials": {
+      "3713": 1,
+      "12208": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=22480",
+    "produces": {
+      "id": 18045,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18046,
+      "recipeItemName": "Recipe: Tender Wolf Steak"
+    }
+  },
+  {
+    "id": 22761,
+    "name": "Runn Tum Tuber Surprise",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 315,
+      "green": 335,
+      "gray": 355
+    },
+    "materials": {
+      "3713": 1,
+      "18255": 1
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_63",
+    "url": "https://www.wowhead.com/forever/spell=22761",
+    "produces": {
+      "id": 18254,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 18267,
+      "recipeItemName": "Recipe: Runn Tum Tuber Surprise"
+    }
+  },
+  {
+    "id": 24418,
+    "name": "Heavy Crocolisk Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 150,
+      "yellow": 160,
+      "green": 180,
+      "gray": 200
+    },
+    "materials": {
+      "3667": 2,
+      "3713": 1
+    },
+    "minSkill": 150,
+    "icon": "inv_misc_food_64",
+    "url": "https://www.wowhead.com/forever/spell=24418",
+    "produces": {
+      "id": 20074,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 20075,
+      "recipeItemName": "Recipe: Heavy Crocolisk Stew"
+    }
+  },
+  {
+    "id": 24801,
+    "name": "Smoked Desert Dumplings",
+    "quality": 1,
+    "difficulty": {
+      "orange": 285,
+      "yellow": 325,
+      "green": 345,
+      "gray": 365
+    },
+    "materials": {
+      "3713": 1,
+      "20424": 1
+    },
+    "minSkill": 285,
+    "icon": "inv_misc_food_64",
+    "url": "https://www.wowhead.com/forever/spell=24801",
+    "produces": {
+      "id": 20452,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 25659,
+    "name": "Dirge's Kickin' Chimaerok Chops",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 325,
+      "green": 345,
+      "gray": 365
+    },
+    "materials": {
+      "2692": 1,
+      "8150": 1,
+      "9061": 1,
+      "21024": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_food_65",
+    "url": "https://www.wowhead.com/forever/spell=25659",
+    "produces": {
+      "id": 21023,
+      "name": "",
+      "quantity": 5
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21025,
+      "recipeItemName": "Recipe: Dirge's Kickin' Chimaerok Chops"
+    }
+  },
+  {
+    "id": 25704,
+    "name": "Smoked Sagefish",
+    "quality": 1,
+    "difficulty": {
+      "orange": 80,
+      "yellow": 120,
+      "green": 140,
+      "gray": 160
+    },
+    "materials": {
+      "2678": 1,
+      "21071": 1
+    },
+    "minSkill": 80,
+    "icon": "inv_misc_fish_20",
+    "url": "https://www.wowhead.com/forever/spell=25704",
+    "produces": {
+      "id": 21072,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21099,
+      "recipeItemName": "Recipe: Smoked Sagefish"
+    }
+  },
+  {
+    "id": 25954,
+    "name": "Sagefish Delight",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 215,
+      "green": 235,
+      "gray": 255
+    },
+    "materials": {
+      "2692": 1,
+      "21153": 1
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_fish_21",
+    "url": "https://www.wowhead.com/forever/spell=25954",
+    "produces": {
+      "id": 21217,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 21219,
+      "recipeItemName": "Recipe: Sagefish Delight"
+    }
+  },
+  {
+    "id": 470359,
+    "name": "Darkclaw Bisque",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 325,
+      "green": 345,
+      "gray": 365
+    },
+    "materials": {
+      "13888": 1,
+      "227813": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_food_117_heartysoup",
+    "url": "https://www.wowhead.com/forever/spell=470359",
+    "produces": {
+      "id": 232436,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 232437,
+      "recipeItemName": "Recipe: Darkclaw Bisque"
+    }
+  },
+  {
+    "id": 470370,
+    "name": "Smoked Redgill",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 325,
+      "green": 345,
+      "gray": 365
+    },
+    "materials": {
+      "13758": 1
+    },
+    "minSkill": 300,
+    "icon": "inv_misc_food_110_emperorsalmon",
+    "url": "https://www.wowhead.com/forever/spell=470370",
+    "produces": {
+      "id": 232438,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 232443,
+      "recipeItemName": "Recipe: Smoked Redgill"
+    }
+  },
+  {
+    "id": 1225758,
+    "name": "Prowler Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "12202": 2,
+      "239016": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_food_84_roastclefthoof",
+    "url": "https://www.wowhead.com/forever/spell=1225758",
+    "produces": {
+      "id": 238637,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238645,
+      "recipeItemName": "Recipe: Prowler Steak"
+    }
+  },
+  {
+    "id": 1225759,
+    "name": "Filet o' Flank",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "12203": 2,
+      "239016": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_food_88_ravagernuggets",
+    "url": "https://www.wowhead.com/forever/spell=1225759",
+    "produces": {
+      "id": 238638,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238646,
+      "recipeItemName": "Recipe: Filet o' Flank"
+    }
+  },
+  {
+    "id": 1225760,
+    "name": "Sunrise Omelette",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
+    },
+    "materials": {
+      "12207": 2,
+      "239016": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_misc_food_35",
+    "url": "https://www.wowhead.com/forever/spell=1225760",
+    "produces": {
+      "id": 238639,
+      "name": "",
+      "quantity": 2
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 238647,
+      "recipeItemName": "Recipe: Sunrise Omelette"
+    }
+  },
+  {
+    "id": 1225762,
+    "name": "Specklefin Feast",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "4603": 12,
+      "6362": 3,
+      "12184": 4,
+      "239017": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_misc_food_117_heartysoup",
+    "url": "https://www.wowhead.com/forever/spell=1225762",
+    "produces": {
+      "id": 238641,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 239021,
+      "recipeItemName": "Carrie's Cookbook"
+    }
+  },
+  {
+    "id": 1225763,
+    "name": "Grand Lobster Banquet",
+    "quality": 2,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 290,
+      "green": 300,
+      "gray": 310
+    },
+    "materials": {
+      "3404": 3,
+      "3712": 4,
+      "13888": 12,
+      "239017": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_misc_food_63",
+    "url": "https://www.wowhead.com/forever/spell=1225763",
+    "produces": {
+      "id": 238642,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 239021,
+      "recipeItemName": "Carrie's Cookbook"
+    }
+  },
+  {
+    "id": 1229737,
+    "name": "Basic Campfire",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 20
+    },
+    "materials": {
+      "4470": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_camelot_camping_welcomingcampfire",
+    "url": "https://www.wowhead.com/forever/spell=1229737",
+    "produces": {
+      "id": 279981,
+      "name": "",
+      "quantity": 0
+    },
+    "source": {
+      "type": "trainer",
+      "cost": 100
+    }
+  },
+  {
+    "id": 1247741,
+    "name": "Spinefin Halibut",
+    "quality": 1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 210,
+      "green": 215,
+      "gray": 220
+    },
+    "materials": {
+      "8959": 1
+    },
+    "minSkill": 0,
+    "icon": "inv_misc_fish_22",
+    "url": "https://www.wowhead.com/forever/spell=1247741",
+    "produces": {
+      "id": 8957,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1249957,
+    "name": "Peace Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 30,
+      "green": 37,
+      "gray": 45
+    },
+    "materials": {
+      "159": 1,
+      "2447": 2
+    },
+    "minSkill": 25,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249957",
+    "produces": {
+      "id": 249865,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249879,
+      "recipeItemName": "Recipe: Peace Tea"
+    }
+  },
+  {
+    "id": 1249958,
+    "name": "Royal Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 105,
+      "green": 115,
+      "gray": 125
+    },
+    "materials": {
+      "785": 2,
+      "1179": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249958",
+    "produces": {
+      "id": 249866,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249880,
+      "recipeItemName": "Recipe: Royal Tea"
+    }
+  },
+  {
+    "id": 1249959,
+    "name": "Root Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 155,
+      "green": 170,
+      "gray": 185
+    },
+    "materials": {
+      "1205": 1,
+      "3357": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249959",
+    "produces": {
+      "id": 249867,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249881,
+      "recipeItemName": "Recipe: Root Tea"
+    }
+  },
+  {
+    "id": 1249960,
+    "name": "Triage Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 195,
+      "green": 215,
+      "gray": 235
+    },
+    "materials": {
+      "1708": 1,
+      "3818": 2
+    },
+    "minSkill": 180,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249960",
+    "produces": {
+      "id": 249868,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249882,
+      "recipeItemName": "Recipe: Triage Tea"
+    }
+  },
+  {
+    "id": 1249961,
+    "name": "Sunny Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 235,
+      "gray": 250
+    },
+    "materials": {
+      "1645": 1,
+      "8838": 2
+    },
+    "minSkill": 200,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249961",
+    "produces": {
+      "id": 249869,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249883,
+      "recipeItemName": "Recipe: Sunny Tea"
+    }
+  },
+  {
+    "id": 1249962,
+    "name": "Sage's Tea",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 260,
+      "green": 275,
+      "gray": 290
+    },
+    "materials": {
+      "8766": 1,
+      "13465": 2
+    },
+    "minSkill": 250,
+    "icon": "inv_drink_15",
+    "url": "https://www.wowhead.com/forever/spell=1249962",
+    "produces": {
+      "id": 249870,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249884,
+      "recipeItemName": "Recipe: Sage's Tea"
+    }
+  },
+  {
+    "id": 1249963,
+    "name": "Venomous Smoothie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 30,
+      "green": 37,
+      "gray": 45
+    },
+    "materials": {
+      "159": 1,
+      "1475": 1,
+      "2678": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_drink_21",
+    "url": "https://www.wowhead.com/forever/spell=1249963",
+    "produces": {
+      "id": 249871,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249885,
+      "recipeItemName": "Recipe: Venomous Smoothie"
+    }
+  },
+  {
+    "id": 1249964,
+    "name": "Slimy Smoothie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 100,
+      "yellow": 105,
+      "green": 112,
+      "gray": 120
+    },
+    "materials": {
+      "1179": 1,
+      "2678": 2,
+      "3174": 1
+    },
+    "minSkill": 100,
+    "icon": "inv_drink_15_color03",
+    "url": "https://www.wowhead.com/forever/spell=1249964",
+    "produces": {
+      "id": 249872,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249886,
+      "recipeItemName": "Recipe: Slimy Smoothie"
+    }
+  },
+  {
+    "id": 1249965,
+    "name": "Mrrggl Smrrthle",
+    "quality": 1,
+    "difficulty": {
+      "orange": 125,
+      "yellow": 135,
+      "green": 140,
+      "gray": 145
+    },
+    "materials": {
+      "1205": 1,
+      "1468": 1,
+      "2692": 2
+    },
+    "minSkill": 125,
+    "icon": "inv_drink_21_color01",
+    "url": "https://www.wowhead.com/forever/spell=1249965",
+    "produces": {
+      "id": 249873,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249887,
+      "recipeItemName": "Recipe: Mrrggl Smrrthle"
+    }
+  },
+  {
+    "id": 1249966,
+    "name": "Calcified Smoothie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 185,
+      "green": 190,
+      "gray": 195
+    },
+    "materials": {
+      "1708": 1,
+      "2692": 3,
+      "5637": 1
+    },
+    "minSkill": 180,
+    "icon": "inv_drink_15_color01",
+    "url": "https://www.wowhead.com/forever/spell=1249966",
+    "produces": {
+      "id": 249874,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249888,
+      "recipeItemName": "Recipe: Calcified Smoothie"
+    }
+  },
+  {
+    "id": 1249967,
+    "name": "Spicy Smoothie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 215,
+      "green": 220,
+      "gray": 225
+    },
+    "materials": {
+      "1645": 1,
+      "3713": 3,
+      "4402": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_drink_21_color04",
+    "url": "https://www.wowhead.com/forever/spell=1249967",
+    "produces": {
+      "id": 249875,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249889,
+      "recipeItemName": "Recipe: Spicy Smoothie"
+    }
+  },
+  {
+    "id": 1249968,
+    "name": "Wicked Smoothie",
+    "quality": 1,
+    "difficulty": {
+      "orange": 250,
+      "yellow": 255,
+      "green": 262,
+      "gray": 270
+    },
+    "materials": {
+      "3713": 4,
+      "8146": 1,
+      "8766": 1
+    },
+    "minSkill": 250,
+    "icon": "inv_drink_15_color04",
+    "url": "https://www.wowhead.com/forever/spell=1249968",
+    "produces": {
+      "id": 249876,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 249890,
+      "recipeItemName": "Recipe: Wicked Smoothie"
+    }
+  },
+  {
+    "id": 1250142,
+    "name": "Savory Stag Sliders",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 230,
+      "green": 237,
+      "gray": 245
+    },
+    "materials": {
+      "2692": 3,
+      "5471": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_food_122_steak",
+    "url": "https://www.wowhead.com/forever/spell=1250142",
+    "produces": {
+      "id": 250065,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250173,
+      "recipeItemName": "Recipe: Savory Stag Sliders"
+    }
+  },
+  {
+    "id": 1250143,
+    "name": "Soaring Pamplona",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3404": 3,
+      "3713": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_meat_cooked_05",
+    "url": "https://www.wowhead.com/forever/spell=1250143",
+    "produces": {
+      "id": 250066,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250174,
+      "recipeItemName": "Recipe: Soaring Pamplona"
+    }
+  },
+  {
+    "id": 1250144,
+    "name": "Bat Hachee",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 2,
+      "12223": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_115_condorsoup",
+    "url": "https://www.wowhead.com/forever/spell=1250144",
+    "produces": {
+      "id": 250067,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250175,
+      "recipeItemName": "Recipe: Bat Hachee"
+    }
+  },
+  {
+    "id": 1250145,
+    "name": "Savory Turtle Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3712": 3,
+      "3713": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_cooked_braisedturtle",
+    "url": "https://www.wowhead.com/forever/spell=1250145",
+    "produces": {
+      "id": 250068,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250176,
+      "recipeItemName": "Recipe: Savory Turtle Stew"
+    }
+  },
+  {
+    "id": 1250146,
+    "name": "Flank au Poivre",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 285,
+      "green": 300,
+      "gray": 315
+    },
+    "materials": {
+      "3713": 3,
+      "12203": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_meat_cooked_06",
+    "url": "https://www.wowhead.com/forever/spell=1250146",
+    "produces": {
+      "id": 250069,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250177,
+      "recipeItemName": "Recipe: Flank au Poivre"
+    }
+  },
+  {
+    "id": 1250147,
+    "name": "Bear Bruscitti",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 3,
+      "3730": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_legion_fighterchow",
+    "url": "https://www.wowhead.com/forever/spell=1250147",
+    "produces": {
+      "id": 250070,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250178,
+      "recipeItemName": "Recipe: Bear Bruscitti"
+    }
+  },
+  {
+    "id": 1250148,
+    "name": "Steaming Stag Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 4,
+      "5471": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_meat_cooked_01",
+    "url": "https://www.wowhead.com/forever/spell=1250148",
+    "produces": {
+      "id": 250071,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250179,
+      "recipeItemName": "Recipe: Steaming Stag Steak"
+    }
+  },
+  {
+    "id": 1250149,
+    "name": "Swiftstrike Steak",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 2,
+      "12202": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_49",
+    "url": "https://www.wowhead.com/forever/spell=1250149",
+    "produces": {
+      "id": 250072,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250180,
+      "recipeItemName": "Recipe: Swiftstrike Steak"
+    }
+  },
+  {
+    "id": 1250150,
+    "name": "Raging Raptor Ribs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 180,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "2692": 3,
+      "12184": 2
+    },
+    "minSkill": 180,
+    "icon": "inv_misc_food_legion_spicedribroast",
+    "url": "https://www.wowhead.com/forever/spell=1250150",
+    "produces": {
+      "id": 250073,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250181,
+      "recipeItemName": "Recipe: Raging Raptor Ribs"
+    }
+  },
+  {
+    "id": 1250151,
+    "name": "Bear Brisket",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 200,
+      "green": 210,
+      "gray": 220
+    },
+    "materials": {
+      "2692": 3,
+      "3730": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_food_47",
+    "url": "https://www.wowhead.com/forever/spell=1250151",
+    "produces": {
+      "id": 250074,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250182,
+      "recipeItemName": "Recipe: Bear Brisket"
+    }
+  },
+  {
+    "id": 1250152,
+    "name": "Prehistoric Pulled Raptor",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 4,
+      "12184": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_food_124_skewer",
+    "url": "https://www.wowhead.com/forever/spell=1250152",
+    "produces": {
+      "id": 250075,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250183,
+      "recipeItemName": "Recipe: Prehistoric Pulled Raptor"
+    }
+  },
+  {
+    "id": 1250153,
+    "name": "Raptor Rouladen",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 230,
+      "green": 237,
+      "gray": 245
+    },
+    "materials": {
+      "2692": 4,
+      "12184": 2
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_food_meat_cooked_07",
+    "url": "https://www.wowhead.com/forever/spell=1250153",
+    "produces": {
+      "id": 250076,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250184,
+      "recipeItemName": "Recipe: Raptor Rouladen"
+    }
+  },
+  {
+    "id": 1250154,
+    "name": "Twice-Spiced Raptor Slice",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 115,
+      "green": 132,
+      "gray": 150
+    },
+    "materials": {
+      "2678": 2,
+      "12184": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_food_legion_saltpeppershank",
+    "url": "https://www.wowhead.com/forever/spell=1250154",
+    "produces": {
+      "id": 250077,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250185,
+      "recipeItemName": "Recipe: Twice-Spiced Raptor Slice"
+    }
+  },
+  {
+    "id": 1250155,
+    "name": "Giant Scrambled Eggs",
+    "quality": 1,
+    "difficulty": {
+      "orange": 175,
+      "yellow": 195,
+      "green": 207,
+      "gray": 220
+    },
+    "materials": {
+      "2692": 4,
+      "12207": 2
+    },
+    "minSkill": 175,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=1250155",
+    "produces": {
+      "id": 250078,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250186,
+      "recipeItemName": "Recipe: Giant Scrambled Eggs"
+    }
+  },
+  {
+    "id": 1250156,
+    "name": "Tasty Raptor Bites",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 35,
+      "green": 55,
+      "gray": 75
+    },
+    "materials": {
+      "2678": 4,
+      "3685": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_misc_food_68",
+    "url": "https://www.wowhead.com/forever/spell=1250156",
+    "produces": {
+      "id": 250079,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250187,
+      "recipeItemName": "Recipe: Tasty Raptor Bites"
+    }
+  },
+  {
+    "id": 1250157,
+    "name": "Breakfast Omelette",
+    "quality": 1,
+    "difficulty": {
+      "orange": 75,
+      "yellow": 80,
+      "green": 87,
+      "gray": 95
+    },
+    "materials": {
+      "2678": 4,
+      "6889": 1
+    },
+    "minSkill": 75,
+    "icon": "inv_misc_food_cooked_fishcake",
+    "url": "https://www.wowhead.com/forever/spell=1250157",
+    "produces": {
+      "id": 250080,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250188,
+      "recipeItemName": "Recipe: Breakfast Omelette"
+    }
+  },
+  {
+    "id": 1250158,
+    "name": "Clam Linguine",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 295,
+      "gray": 310
+    },
+    "materials": {
+      "3713": 4,
+      "7974": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=1250158",
+    "produces": {
+      "id": 250081,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 250189,
+      "recipeItemName": "Recipe: Clam Linguine"
+    }
+  },
+  {
+    "id": 1252566,
+    "name": "Savory Whimsyfin Delight",
+    "quality": 1,
+    "difficulty": {
+      "orange": 85,
+      "yellow": 125,
+      "green": 145,
+      "gray": 165
+    },
+    "materials": {
+      "2678": 1,
+      "251524": 1
+    },
+    "minSkill": 85,
+    "icon": "inv_misc_fish_69",
+    "url": "https://www.wowhead.com/forever/spell=1252566",
+    "produces": {
+      "id": 251525,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 251526,
+      "recipeItemName": "Recipe: Savory Whimsyfin Delight"
+    }
+  },
+  {
+    "id": 1262978,
+    "name": "Cookie's Feast",
+    "quality": 1,
+    "difficulty": {
+      "orange": 140,
+      "yellow": 145,
+      "green": 147,
+      "gray": 150
+    },
+    "materials": {
+      "3713": 1,
+      "12037": 2,
+      "12204": 1
+    },
+    "minSkill": 140,
+    "icon": "inv_cooking_80_majorfeast",
+    "url": "https://www.wowhead.com/forever/spell=1262978",
+    "produces": {
+      "id": 279957,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273102,
+      "recipeItemName": "Blueprint: Cookie's Feast"
+    }
+  },
+  {
+    "id": 1263067,
+    "name": "Iron Oven",
+    "quality": 1,
+    "difficulty": {
+      "orange": 300,
+      "yellow": 300,
+      "green": 300,
+      "gray": 300
+    },
+    "materials": {
+      "159": 5,
+      "3713": 4,
+      "10284": 10
+    },
+    "minSkill": 300,
+    "icon": "achievement_cooking_masteroftheoven",
+    "url": "https://www.wowhead.com/forever/spell=1263067",
+    "produces": {
+      "id": 279982,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273115,
+      "recipeItemName": "Blueprint: Iron Oven"
+    }
+  },
+  {
+    "id": 1270632,
+    "name": "Critter Cookie",
+    "quality": -1,
+    "difficulty": {
+      "orange": 0,
+      "yellow": 80,
+      "green": 82,
+      "gray": 85
+    },
+    "materials": {
+      "10284": 5
+    },
+    "minSkill": 0,
+    "icon": "spell_shadow_sealofkings",
+    "url": "https://www.wowhead.com/forever/spell=1270632",
+    "produces": null,
+    "source": {
+      "type": "free"
+    }
+  },
+  {
+    "id": 1270633,
+    "name": "Skywall Souffle",
+    "quality": 1,
+    "difficulty": {
+      "orange": 25,
+      "yellow": 30,
+      "green": 37,
+      "gray": 45
+    },
+    "materials": {
+      "6889": 2,
+      "10284": 1
+    },
+    "minSkill": 25,
+    "icon": "inv_misc_food_cooked_fishcake",
+    "url": "https://www.wowhead.com/forever/spell=1270633",
+    "produces": {
+      "id": 263509,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 263511,
+      "recipeItemName": "Recipe: Skywall Souffle"
+    }
+  },
+  {
+    "id": 1270635,
+    "name": "Pincer Bites",
+    "quality": 1,
+    "difficulty": {
+      "orange": 35,
+      "yellow": 40,
+      "green": 47,
+      "gray": 55
+    },
+    "materials": {
+      "2675": 1,
+      "10284": 1
+    },
+    "minSkill": 35,
+    "icon": "inv_misc_claw_deepcrab_purple",
+    "url": "https://www.wowhead.com/forever/spell=1270635",
+    "produces": {
+      "id": 263512,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 263513,
+      "recipeItemName": "Recipe: Pincer Bites"
+    }
+  },
+  {
+    "id": 1283400,
+    "name": "Journeyman Campfire",
+    "quality": 1,
+    "difficulty": {
+      "orange": 90,
+      "yellow": 95,
+      "green": 100,
+      "gray": 105
+    },
+    "materials": {
+      "11291": 1
+    },
+    "minSkill": 90,
+    "icon": "inv_camelot_camping_welcomingcampfire",
+    "url": "https://www.wowhead.com/forever/spell=1283400",
+    "produces": {
+      "id": 279961,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273087,
+      "recipeItemName": "Blueprint: Journeyman Campfire"
+    }
+  },
+  {
+    "id": 1291341,
+    "name": "Expert Campfire",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 205,
+      "green": 212,
+      "gray": 220
+    },
+    "materials": {
+      "272941": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_camelot_camping_welcomingcampfire",
+    "url": "https://www.wowhead.com/forever/spell=1291341",
+    "produces": {
+      "id": 279974,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 273101,
+      "recipeItemName": "Blueprint: Expert Campfire"
+    }
+  },
+  {
+    "id": 1294014,
+    "name": "Sweetpaw Jam",
+    "quality": 1,
+    "difficulty": {
+      "orange": 275,
+      "yellow": 280,
+      "green": 282,
+      "gray": 285
+    },
+    "materials": {
+      "3713": 1,
+      "249796": 3
+    },
+    "minSkill": 275,
+    "icon": "inv_misc_bowl_01",
+    "url": "https://www.wowhead.com/forever/spell=1294014",
+    "produces": {
+      "id": 267341,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274415,
+      "recipeItemName": "Recipe: Sweetpaw Jam"
+    }
+  },
+  {
+    "id": 1295805,
+    "name": "Briny Seafood Stew",
+    "quality": 1,
+    "difficulty": {
+      "orange": 200,
+      "yellow": 220,
+      "green": 230,
+      "gray": 240
+    },
+    "materials": {
+      "730": 2,
+      "2692": 1,
+      "12206": 1
+    },
+    "minSkill": 200,
+    "icon": "inv_misc_food_154_fish_77green",
+    "url": "https://www.wowhead.com/forever/spell=1295805",
+    "produces": {
+      "id": 274971,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274972,
+      "recipeItemName": "Recipe: Briny Seafood Stew"
+    }
+  },
+  {
+    "id": 1295834,
+    "name": "Plain Ol' Paletusk",
+    "quality": 1,
+    "difficulty": {
+      "orange": 185,
+      "yellow": 200,
+      "green": 215,
+      "gray": 230
+    },
+    "materials": {
+      "769": 2,
+      "2678": 1
+    },
+    "minSkill": 185,
+    "icon": "inv_misc_food_16",
+    "url": "https://www.wowhead.com/forever/spell=1295834",
+    "produces": {
+      "id": 274976,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 274977,
+      "recipeItemName": "Recipe: Plain Ol' Paletusk"
+    }
+  },
+  {
+    "id": 1319313,
+    "name": "Plated Armorfish",
+    "quality": 1,
+    "difficulty": {
+      "orange": 225,
+      "yellow": 245,
+      "green": 250,
+      "gray": 255
+    },
+    "materials": {
+      "3713": 1,
+      "13890": 1
+    },
+    "minSkill": 225,
+    "icon": "inv_misc_fish_04",
+    "url": "https://www.wowhead.com/forever/spell=1319313",
+    "produces": {
+      "id": 286152,
+      "name": "",
+      "quantity": 1
+    },
+    "source": {
+      "type": "item",
+      "recipeItemId": 286153,
+      "recipeItemName": "Recipe: Plated Armorfish"
+    }
+  }
+]

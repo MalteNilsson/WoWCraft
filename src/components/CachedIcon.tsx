@@ -16,17 +16,20 @@ interface CachedIconProps {
  */
 export function CachedIcon({ category, id, alt = '', className = '' }: CachedIconProps) {
   const [url, setUrl] = useState<string | null>(null);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
+    setFailed(false);
     getIconUrl(category, id).then((u) => {
       if (!cancelled) setUrl(u ?? getIconFallbackUrl(category, id));
     });
     return () => { cancelled = true; };
   }, [category, id]);
 
+  if (failed) return null;
   if (!url) {
     return <span className={`inline-block bg-neutral-800 animate-pulse ${className}`} aria-hidden />;
   }
-  return <img src={url} alt={alt} className={className} loading="lazy" />;
+  return <img src={url} alt={alt} className={className} loading="lazy" onError={() => setFailed(true)} />;
 }

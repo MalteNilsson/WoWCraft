@@ -5,10 +5,12 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// TSM API configuration
+// TSM API configuration. The keyed pricing API is what `all`, `regions`, and a
+// single realm still call. Anniversary realms use the public CSV files instead.
 const TSM_AUTH_URL = 'https://auth.tradeskillmaster.com/oauth2/token';
 const TSM_BASE_URL = 'https://pricing-api.tradeskillmaster.com/ah';
 const TSM_REGION_BASE_URL = 'https://pricing-api.tradeskillmaster.com/region';
+const TSM_PUBLIC_DATA = 'https://public-data.tradeskillmaster.com';
 const TSM_API_KEY = process.env.TSM_API_KEY; // Get API key from environment variable
 
 // TSM OAuth2 client configuration
@@ -18,11 +20,9 @@ const TSM_CLIENT_ID = 'c260f00d-1071-409a-992f-dda2e5498536';
 const REALM_LISTS = {
     'anniversary': [
         'Thunderstrike',
-        'Spineshatter', 
-        'Soulseeker',
+        'Spineshatter',
         'Dreamscythe',
-        'Nightslayer',
-        'Doomhowl'
+        'Nightslayer'
     ]
 };
 
@@ -437,7 +437,7 @@ function showHelp() {
     console.log('  node src/scripts/get_TSM_data.mjs [option] [realm] [faction]');
     console.log('');
     console.log('Options:');
-    console.log('  anniversary     - Fetch Thunderstrike, Spineshatter, Soulseeker');
+    console.log('  anniversary     - Fetch anniversary realm prices from the public CSV files');
     console.log('  all             - Fetch ALL realms (default)');
     console.log('  regions        - Fetch region-level data for North America and Europe');
     console.log('  help            - Show this help message');
@@ -459,6 +459,166 @@ function showHelp() {
     console.log('    Linux/Mac: export TSM_API_KEY=your_api_key_here');
 }
 
+// Anniversary realms are faction auction houses. Slugs match the TSM site.
+const ANNIVERSARY_MARKETS = [
+    { realm: 'Thunderstrike', faction: 'Alliance', region: 'eu-fresh' },
+    { realm: 'Thunderstrike', faction: 'Horde', region: 'eu-fresh' },
+    { realm: 'Spineshatter', faction: 'Alliance', region: 'eu-fresh' },
+    { realm: 'Spineshatter', faction: 'Horde', region: 'eu-fresh' },
+    { realm: 'Dreamscythe', faction: 'Alliance', region: 'us-fresh' },
+    { realm: 'Dreamscythe', faction: 'Horde', region: 'us-fresh' },
+    { realm: 'Nightslayer', faction: 'Alliance', region: 'us-fresh' },
+    { realm: 'Nightslayer', faction: 'Horde', region: 'us-fresh' },
+];
+
+function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let field = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        if (inQuotes) {
+            if (char === '"') {
+                if (text[i + 1] === '"') {
+                    field += '"';
+                    i++;
+                } else {
+                    inQuotes = false;
+                }
+            } else {
+                field += char;
+            }
+            continue;
+        }
+        if (char === '"') {
+            inQuotes = true;
+        } else if (char === ',') {
+            row.push(field);
+            field = '';
+        } else if (char === '\n' || char === '\r') {
+            if (char === '\r' && text[i + 1] === '\n') i++;
+            row.push(field);
+            field = '';
+            if (row.some((value) => value !== '')) rows.push(row);
+            row = [];
+        } else {
+            field += char;
+        }
+    }
+    if (field !== '' || row.length > 0) {
+        row.push(field);
+        if (row.some((value) => value !== '')) rows.push(row);
+    }
+    return rows;
+}
+
+function numberOrNull(value) {
+    if (value === undefined || value === '') return null;
+    const number = Number(value);
+    return Number.isFinite(number) ? number : null;
+}
+
+async function fetchPublicPriceCsv(url) {
+    const response = await fetch(url, { headers: { 'User-Agent': 'wowcraft-price-fetch' } });
+    if (response.status === 429 || response.status === 503) {
+        const retryAfter = response.headers.get('retry-after') ?? 'later';
+        throw new Error(`rate limited (${response.status}, retry after ${retryAfter})`);
+    }
+    const text = await response.text();
+    if (!response.ok || text.startsWith('<!')) {
+        throw new Error(`HTTP ${response.status}`);
+    }
+    return text;
+}
+
+// Public files: https://tradeskillmaster.com/public-data
+// No API key. Columns are itemId, name, marketValue, minBuyout, recent, historical, updatedAt.
+async function fetchAnniversaryPublicData() {
+    console.log('Fetching anniversary prices from TSM public data...\n');
+    const summaryPath = path.join(outputDir, 'fetch_summary_anniversary.json');
+    let previous = [];
+    if (fs.existsSync(summaryPath)) {
+        previous = JSON.parse(fs.readFileSync(summaryPath, 'utf8')).results ?? [];
+    }
+    const results = [];
+    let failed = 0;
+
+    for (const market of ANNIVERSARY_MARKETS) {
+        const slug = `${market.realm.toLowerCase()}-${market.faction.toLowerCase()}`;
+        const url = `${TSM_PUBLIC_DATA}/classic/${market.region}/realm/${slug}/items.csv`;
+        try {
+            console.log(`Fetching ${market.realm} (${market.faction})...`);
+            const table = parseCsv(await fetchPublicPriceCsv(url));
+            const header = table[0] ?? [];
+            const column = Object.fromEntries(header.map((name, index) => [name, index]));
+            if (column.itemId === undefined || column.minBuyout === undefined || column.marketValue === undefined) {
+                throw new Error(`unexpected columns: ${header.join(', ')}`);
+            }
+
+            let scannedAt = null;
+            const rows = [];
+            for (const record of table.slice(1)) {
+                const itemId = numberOrNull(record[column.itemId]);
+                const minBuyout = numberOrNull(record[column.minBuyout]);
+                const marketValue = numberOrNull(record[column.marketValue]);
+                if (itemId === null || (minBuyout === null && marketValue === null)) continue;
+                const historical = numberOrNull(record[column.historical]);
+                const row = {
+                    itemId,
+                    minBuyout: minBuyout ?? marketValue,
+                    marketValue: marketValue ?? minBuyout,
+                };
+                if (historical !== null) row.historical = historical;
+                rows.push(row);
+                if (!scannedAt && column.updatedAt !== undefined && record[column.updatedAt]) {
+                    scannedAt = record[column.updatedAt];
+                }
+            }
+            rows.sort((a, b) => a.itemId - b.itemId);
+            if (rows.length === 0) throw new Error('no priced rows');
+
+            const filename = `${market.realm}_${market.faction.toLowerCase()}.json`;
+            fs.writeFileSync(path.join(outputDir, filename), JSON.stringify(rows, null, 2));
+            console.log(`  ${rows.length} items, scanned ${scannedAt ?? 'unknown'} → ${filename}`);
+            results.push({
+                realm: market.realm,
+                faction: market.faction,
+                success: true,
+                timestamp: scannedAt ?? new Date().toISOString(),
+            });
+        } catch (error) {
+            failed += 1;
+            console.error(`  failed ${market.realm} (${market.faction}): ${error.message}`);
+            const kept = previous.find((result) =>
+                result.realm === market.realm && result.faction === market.faction && result.success
+            );
+            results.push(kept ?? {
+                realm: market.realm,
+                faction: market.faction,
+                success: false,
+                timestamp: new Date().toISOString(),
+                error: error.message,
+            });
+        }
+    }
+
+    fs.writeFileSync(summaryPath, JSON.stringify({
+        realmList: 'anniversary',
+        source: 'https://public-data.tradeskillmaster.com',
+        timestamp: new Date().toISOString(),
+        totalRequests: results.length,
+        successful: results.length - failed,
+        failed,
+        results,
+    }, null, 2));
+
+    console.log(`\nSuccessful: ${results.length - failed}`);
+    console.log(`Failed: ${failed}`);
+    if (failed > 0) process.exitCode = 1;
+}
+
 // Main execution
 async function main() {
     const args = process.argv.slice(2);
@@ -466,6 +626,11 @@ async function main() {
     // Show help if requested
     if (args.length === 0 || args[0] === 'help') {
         showHelp();
+        return;
+    }
+
+    if (args[0] === 'anniversary') {
+        await fetchAnniversaryPublicData();
         return;
     }
     

@@ -29,14 +29,21 @@ const PROFESSIONS = [
 ];
 
 // Game versions and their WoWhead URL paths
-const GAME_VERSIONS = ['Vanilla', 'The Burning Crusade'];
+const GAME_VERSIONS = ['Vanilla', 'The Burning Crusade', 'Forever'];
 const VERSION_BASE_URLS = {
   'Vanilla': 'https://www.wowhead.com/classic/spells/professions/',
   'The Burning Crusade': 'https://www.wowhead.com/tbc/spells/professions/',
+  'Forever': 'https://www.wowhead.com/forever/spells/professions/',
+};
+const VERSION_SECONDARY_URLS = {
+  'Vanilla': 'https://www.wowhead.com/classic/spells/secondary-skills/',
+  'The Burning Crusade': 'https://www.wowhead.com/tbc/spells/secondary-skills/',
+  'Forever': 'https://www.wowhead.com/forever/spells/secondary-skills/',
 };
 const VERSION_FILTERS = {
   'Vanilla': '?filter=20:21;1:5;0:11400',
   'The Burning Crusade': '?filter=20;1;0',
+  'Forever': '?filter=20;1;0',
 };
 
 // Jewelcrafting only exists in TBC
@@ -50,10 +57,7 @@ const TBC_ONLY_PROFESSIONS = ['jewelcrafting'];
 function getProfessionListUrl(version, profession) {
   const filterQuery = VERSION_FILTERS[version] || VERSION_FILTERS['Vanilla'];
   if (profession === 'cooking') {
-    const prefix =
-      version === 'Vanilla'
-        ? 'https://www.wowhead.com/classic/spells/secondary-skills/'
-        : 'https://www.wowhead.com/tbc/spells/secondary-skills/';
+    const prefix = VERSION_SECONDARY_URLS[version] || VERSION_SECONDARY_URLS['Vanilla'];
     return `${prefix}cooking${filterQuery}`;
   }
   const baseUrl = VERSION_BASE_URLS[version];
@@ -67,7 +71,7 @@ function getSpellBaseUrlForVersion(version) {
 }
 
 // Directory names for version-specific recipe storage
-const VERSION_TO_DIR = { 'Vanilla': 'vanilla', 'The Burning Crusade': 'tbc' };
+const VERSION_TO_DIR = { 'Vanilla': 'vanilla', 'The Burning Crusade': 'tbc', 'Forever': 'forever' };
 
 // Reusable page pool size for recipe detail scraping (avoids creating/destroying pages per batch)
 // Reduced from 25 to limit concurrent requests and avoid 403 blocks
@@ -88,7 +92,8 @@ const phases = {
   scrape: true,
   enrich: true,
   downloadIcons: true,
-  zip: true
+  zip: true,
+  recipeItems: false
 };
 
 let requestedProfession = null;
@@ -115,6 +120,7 @@ for (let i = 0; i < args.length; i++) {
         if (trimmed === 'enrich') phases.enrich = true;
         if (trimmed === 'icons' || trimmed === 'downloadIcons') phases.downloadIcons = true;
         if (trimmed === 'zip') phases.zip = true;
+        if (trimmed === 'recipe-items') phases.recipeItems = true;
       });
       i++; // Skip next arg as it's the phase value
     }
@@ -122,6 +128,7 @@ for (let i = 0; i < args.length; i++) {
     const ver = args[i + 1]?.toLowerCase();
     if (ver === 'vanilla') requestedVersion = 'Vanilla';
     else if (ver === 'tbc' || ver === 'the burning crusade') requestedVersion = 'The Burning Crusade';
+    else if (ver === 'forever' || ver === 'wow forever' || ver === 'wow: forever') requestedVersion = 'Forever';
     i++;
   } else if (arg === '--profession' || arg === '-prof') {
     requestedProfession = args[i + 1];
@@ -141,9 +148,9 @@ Usage: node scrape_all_professions.js [options]
 
 Options:
   --profession <name>  Scrape only specified profession (${PROFESSIONS.join(', ')})
-  --version <ver>      Scrape only specified version (vanilla, tbc). Default: both
+  --version <ver>      Scrape only specified version (vanilla, tbc, forever). Default: all
   --phase <phases>     Run only specified phases (comma-separated)
-                       Available phases: scrape, enrich, icons, zip
+                       Available phases: scrape, enrich, icons, zip, recipe-items
   --headed             Run browser visibly (helps avoid 403 blocks)
   --help, -h           Show this help message
 
@@ -158,7 +165,7 @@ Examples:
 const globalMaterialIds = new Set();
 const globalMaterialData = {};
 // Version-keyed materials for separate vanilla/tbc enrichment
-const globalMaterialDataByVersion = { vanilla: {}, tbc: {} };
+const globalMaterialDataByVersion = { vanilla: {}, tbc: {}, forever: {} };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -195,14 +202,124 @@ async function zipIcons() {
 
 
 
-/** Fetch listview data from HTML (avoids Puppeteer; browser-like headers reduce 403s) */
-const fetchListviewData = async (url) => {
-  const res = await fetch(url, {
-    headers: wowheadHtmlHeaders,
-    redirect: 'follow',
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.text();
+/** Cookie from one solved AWS WAF challenge, reused by later fetch calls. */
+let wowheadCookieHeader = '';
+let wowheadSessionPageUrl = null;
+let wowheadSolvePromise = null;
+
+class WowheadBlockedError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'WowheadBlockedError';
+  }
+}
+
+function withWowheadCookie(headers) {
+  if (!wowheadCookieHeader) return headers;
+  return { ...headers, Cookie: wowheadCookieHeader };
+}
+
+function looksLikeWafChallenge(status, body, wafAction) {
+  if (status === 202 || wafAction === 'challenge') return true;
+  return typeof body === 'string' && body.includes('gokuProps') && body.includes('awsWafCookieDomainList');
+}
+
+function looksLikeCloudFront403(status, body) {
+  return status === 403 || (
+    typeof body === 'string' &&
+    body.includes('403 ERROR') &&
+    body.toLowerCase().includes('cloudfront')
+  );
+}
+
+function challengePageUrl(fallbackUrl) {
+  if (wowheadSessionPageUrl) return wowheadSessionPageUrl;
+  if (fallbackUrl && !fallbackUrl.includes('&xml')) return fallbackUrl;
+  const version = requestedVersion || 'Vanilla';
+  return getProfessionListUrl(version, 'alchemy');
+}
+
+/** Let the real challenge script run once, then keep its cookie for fetch. */
+async function ensureWowheadSession(browser, fallbackUrl) {
+  if (wowheadSolvePromise) return wowheadSolvePromise;
+  wowheadSolvePromise = (async () => {
+    const url = challengePageUrl(fallbackUrl);
+    const page = await browser.newPage();
+    try {
+      console.log('Solving AWS WAF challenge in the browser...');
+      await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+      const deadline = Date.now() + 45000;
+      let solved = false;
+      while (Date.now() < deadline) {
+        try {
+          const blocked = await page.evaluate(() => (document.body?.innerText || '').includes('403 ERROR'));
+          if (blocked) {
+            throw new WowheadBlockedError('CloudFront 403 while solving the AWS WAF challenge. Switch to a new VPN server, then run the scraper again.');
+          }
+          const cookies = await page.cookies('https://www.wowhead.com');
+          const htmlLength = await page.evaluate(() => document.documentElement.innerHTML.length);
+          if (cookies.some((cookie) => cookie.name === 'aws-waf-token') && htmlLength > 20000) {
+            wowheadCookieHeader = cookies.map((cookie) => `${cookie.name}=${cookie.value}`).join('; ');
+            wowheadSessionPageUrl = url;
+            solved = true;
+            break;
+          }
+        } catch (err) {
+          if (err instanceof WowheadBlockedError) throw err;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+      if (!solved) throw new Error('AWS WAF challenge did not set a token');
+      console.log('AWS WAF token acquired. Later requests use fetch.');
+    } finally {
+      await page.close();
+    }
+  })();
+  try {
+    await wowheadSolvePromise;
+  } finally {
+    wowheadSolvePromise = null;
+  }
+}
+
+async function fetchWowheadText(url, headers, browser) {
+  const request = async () => {
+    const res = await fetch(url, {
+      headers: withWowheadCookie(headers),
+      redirect: 'follow',
+    });
+    const body = await res.text();
+    return { status: res.status, body, waf: res.headers.get('x-amzn-waf-action') };
+  };
+
+  let result = await request();
+  if (looksLikeCloudFront403(result.status, result.body)) {
+    throw new WowheadBlockedError('CloudFront 403. Switch to a new VPN server, then run the scraper again.');
+  }
+  if (looksLikeWafChallenge(result.status, result.body, result.waf)) {
+    if (!browser) throw new Error('AWS WAF challenge');
+    await ensureWowheadSession(browser, url);
+    result = await request();
+    if (looksLikeCloudFront403(result.status, result.body)) {
+      throw new WowheadBlockedError('CloudFront 403. Switch to a new VPN server, then run the scraper again.');
+    }
+    if (looksLikeWafChallenge(result.status, result.body, result.waf)) {
+      throw new Error('AWS WAF challenge was not accepted by fetch');
+    }
+  }
+  if (result.status < 200 || result.status >= 300) {
+    throw new Error(`HTTP ${result.status}`);
+  }
+  return result.body;
+}
+
+/** Fetch listview data from HTML. A browser solves the WAF challenge once; fetch reuses that cookie. */
+const fetchListviewData = async (url, browser) => {
+  const html = await fetchWowheadText(url, wowheadHtmlHeaders, browser);
+  if (!html.includes('var listviewspells = ')) {
+    throw new Error('Could not find listviewspells in HTML');
+  }
+  return html;
 };
 
 /** Extract balanced bracket/brace content (handles nested structures) */
@@ -234,25 +351,221 @@ const extractBalanced = (str, start, openCh, closeCh) => {
   return null;
 };
 
-/** Parse limited stock from item HTML - extracts sold-by Listview data (no scripts required) */
-function parseLimitedStockFromHtml(html) {
+/** Sold-by listview embedded in item HTML. No browser render required. */
+function parseSoldByFromHtml(html) {
+  const empty = { hasCurrencyPrice: false, limitedStock: false };
   const soldByIdx = html.search(/id:\s*['"]sold-by['"]/);
-  if (soldByIdx === -1) return false;
+  if (soldByIdx === -1) return empty;
 
   const dataIdx = html.indexOf('data:', soldByIdx);
-  if (dataIdx === -1) return false;
+  if (dataIdx === -1) return empty;
 
   const arrayStart = html.indexOf('[', dataIdx);
-  if (arrayStart === -1) return false;
+  if (arrayStart === -1) return empty;
 
   const dataStr = extractBalanced(html, arrayStart - 1, '[', ']');
-  if (!dataStr) return false;
+  if (!dataStr) return empty;
 
+  let vendors;
   try {
-    const data = new Function('return ' + dataStr)();
-    return Array.isArray(data) && data.some(v => typeof v?.stock === 'number' && v.stock > 0);
+    vendors = new Function('return ' + dataStr)();
   } catch {
-    return false;
+    return empty;
+  }
+  if (!Array.isArray(vendors)) return empty;
+
+  let hasCurrencyPrice = false;
+  let limitedStock = false;
+  for (const vendor of vendors) {
+    const costs = Array.isArray(vendor?.cost) ? vendor.cost : [];
+    for (const entry of costs) {
+      const parts = Array.isArray(entry) ? entry : [entry];
+      const copper = Number(parts[0]) || 0;
+      const itemId = parts.length > 1 ? Number(parts[1]) || 0 : 0;
+      if (copper > 0 && itemId <= 0) {
+        hasCurrencyPrice = true;
+        if (typeof vendor.stock === 'number' && vendor.stock >= 0) limitedStock = true;
+      }
+    }
+  }
+  return { hasCurrencyPrice, limitedStock };
+}
+
+/** Parse limited stock from item HTML - extracts sold-by Listview data (no scripts required) */
+function parseLimitedStockFromHtml(html) {
+  return parseSoldByFromHtml(html).limitedStock;
+}
+
+/** Tabs that are not a way to obtain the item. */
+const NON_SOURCE_LISTVIEWS = new Set([
+  'comments',
+  'screenshots',
+  'videos',
+  'videos-english',
+  'add-your-comment',
+  'submit-a-screenshot',
+  'suggest-a-video',
+  'submit-your-data',
+  'creates',
+  'guides',
+]);
+
+function itemListviewIds(html) {
+  return [...html.matchAll(/new Listview\(\{[^}]*id:\s*['"]([^'"]+)['"]/g)].map((match) => match[1]);
+}
+
+/** True when the item page lists a drop, vendor, quest, container, or similar source. */
+function itemHasAcquisitionSource(html) {
+  return itemListviewIds(html).some((id) => !NON_SOURCE_LISTVIEWS.has(id));
+}
+
+/** Bind-on-pickup item whose page lists a mob drop and no vendor or quest. */
+function itemIsBopMobDrop(html) {
+  const lists = new Set(itemListviewIds(html));
+  if (!lists.has('dropped-by')) return false;
+  if (lists.has('sold-by') || lists.has('reward-from') || lists.has('reward-from-q')) return false;
+  return true;
+}
+
+/** Ways to obtain an item that are not a token vendor. */
+const OTHER_ACQUISITION_LISTVIEWS = new Set([
+  'dropped-by',
+  'reward-from',
+  'reward-from-q',
+  'contained-in-object',
+  'contained-in-item',
+  'pickpocketed-from',
+  'skinned-from',
+  'mined-from',
+  'gathered-from',
+  'herbed-from',
+  'fished-in',
+  'disenchanting',
+  'created-by',
+  'objective-of',
+  'provided-for',
+]);
+
+/** Name of one item inside WH.Gatherer.addData, not the next name elsewhere on the page. */
+function gathererItemName(html, id) {
+  const needle = 'WH.Gatherer.addData(';
+  const key = String(id);
+  let from = 0;
+  while (from < html.length) {
+    const idx = html.indexOf(needle, from);
+    if (idx === -1) break;
+    const typeEnd = html.indexOf(',', idx + needle.length);
+    if (typeEnd === -1) break;
+    const typeId = Number(html.slice(idx + needle.length, typeEnd));
+    const objStart = html.indexOf('{', typeEnd);
+    if (objStart === -1) break;
+    const obj = extractBalanced(html, objStart, '{', '}');
+    if (!obj) break;
+    from = objStart + obj.length;
+    if (typeId !== 3 && typeId !== 17) continue;
+    try {
+      const row = new Function('return ' + obj)()?.[key];
+      const name = row?.name_enus || row?.name;
+      if (typeof name === 'string' && name.trim()) return name.trim();
+    } catch { /* keep scanning later gatherer blobs */ }
+  }
+  return '';
+}
+
+function pageItemName(html) {
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] || '';
+  return title.replace(/\s+[-–|].*$/, '').trim();
+}
+
+const currencyNameCache = new Map();
+
+/** Fill token names from the currency item's own page when the recipe page does not include them. */
+async function namedCurrencyCosts(html, wowheadPath, browser) {
+  const costs = parseCurrencyVendor(html);
+  for (const cost of costs) {
+    if (cost.name) continue;
+    const cacheKey = `${wowheadPath}:${cost.id}`;
+    if (!currencyNameCache.has(cacheKey)) {
+      const currencyHtml = await fetchWowheadText(
+        `https://www.wowhead.com/${wowheadPath}/item=${cost.id}`,
+        wowheadHtmlHeaders,
+        browser
+      );
+      currencyNameCache.set(cacheKey, gathererItemName(currencyHtml, cost.id) || pageItemName(currencyHtml));
+    }
+    cost.name = currencyNameCache.get(cacheKey);
+  }
+  return costs;
+}
+
+/** Token costs from sold-by. Empty when the item is also a quest, drop, container, or gold purchase. */
+function parseCurrencyVendor(html) {
+  const lists = new Set(itemListviewIds(html));
+  if ([...lists].some((id) => OTHER_ACQUISITION_LISTVIEWS.has(id))) return [];
+
+  const soldByIdx = html.search(/id:\s*['"]sold-by['"]/);
+  if (soldByIdx === -1) return [];
+  const dataIdx = html.indexOf('data:', soldByIdx);
+  if (dataIdx === -1) return [];
+  const arrayStart = html.indexOf('[', dataIdx);
+  if (arrayStart === -1) return [];
+  const dataStr = extractBalanced(html, arrayStart - 1, '[', ']');
+  if (!dataStr) return [];
+
+  let vendors;
+  try {
+    vendors = new Function('return ' + dataStr)();
+  } catch {
+    return [];
+  }
+  if (!Array.isArray(vendors)) return [];
+
+  let currencies = [];
+  let goldOnly = false;
+  for (const vendor of vendors) {
+    const costs = Array.isArray(vendor?.cost) ? vendor.cost : [];
+    for (const tuple of costs) {
+      if (!Array.isArray(tuple)) continue;
+      const copper = Number(tuple[0]) || 0;
+      const second = tuple[1];
+      const found = [];
+      if (Array.isArray(second)) {
+        for (const entry of second) {
+          if (!Array.isArray(entry)) continue;
+          const id = Number(entry[0]);
+          const quantity = Number(entry[1]);
+          if (id > 0 && quantity > 0) found.push({ id, quantity });
+        }
+      } else if (Number(second) > 0) {
+        const quantity = Number(tuple[2]) || 1;
+        found.push({ id: Number(second), quantity });
+      }
+      if (found.length) {
+        if (!currencies.length) currencies = found;
+      } else if (copper > 0) {
+        goldOnly = true;
+      }
+    }
+  }
+  if (goldOnly || !currencies.length) return [];
+  return currencies.map((entry) => ({
+    id: entry.id,
+    name: gathererItemName(html, entry.id),
+    quantity: entry.quantity,
+  }));
+}
+
+/** WH.Gatherer.addData(type, env, {...}). The env id differs by game (classic 5, forever 16). */
+function readGathererData(html, typeId) {
+  const needle = `WH.Gatherer.addData(${typeId},`;
+  const idx = html.indexOf(needle);
+  if (idx === -1) return {};
+  const obj = extractBalanced(html, idx + needle.length, '{', '}');
+  if (!obj) return {};
+  try {
+    return new Function('return ' + obj)();
+  } catch {
+    return {};
   }
 }
 
@@ -265,23 +578,8 @@ const parseListviewFromHtml = (html, spellBaseUrl) => {
   if (!spellsRaw) throw new Error('Could not extract listviewspells array');
   const spells = new Function('return ' + spellsRaw)();
 
-  const addData6Idx = html.indexOf('WH.Gatherer.addData(6, 5, ');
-  const spellIcons = addData6Idx >= 0 ? (() => {
-    const obj = extractBalanced(html, addData6Idx + 'WH.Gatherer.addData(6, 5, '.length, '{', '}');
-    if (!obj) return {};
-    try {
-      return new Function('return ' + obj)();
-    } catch { return {}; }
-  })() : {};
-
-  const addData3Idx = html.indexOf('WH.Gatherer.addData(3, 5, ');
-  const itemData = addData3Idx >= 0 ? (() => {
-    const obj = extractBalanced(html, addData3Idx + 'WH.Gatherer.addData(3, 5, '.length, '{', '}');
-    if (!obj) return {};
-    try {
-      return new Function('return ' + obj)();
-    } catch { return {}; }
-  })() : {};
+  const spellIcons = readGathererData(html, 6);
+  const itemData = readGathererData(html, 3);
 
   const recipes = spells.map((s) => {
     const materials = {};
@@ -305,13 +603,18 @@ const parseListviewFromHtml = (html, spellBaseUrl) => {
       produces = { id: s.creates[0], name: '', quantity: s.creates[1] ?? 1 };
     }
 
-    // WoWhead source: [6] = trainer, [1] = item (recipe item ID may follow), missing = free
+    // WoWhead source codes: [6] trainer, [5] recipe item, [1] drop (item id may follow).
+    // Forever lists a recipe item as [5] without the item id, so the item page has to supply it.
     let source = { type: 'free' };
     if (s.source && Array.isArray(s.source)) {
-      if (s.source[0] === 6 && s.trainingcost != null) {
+      const codes = s.source;
+      const listedItemId = (codes[0] === 1 || codes[0] === 5) && Number.isInteger(codes[1]) ? codes[1] : null;
+      if (codes.includes(6) && s.trainingcost != null && !codes.includes(5)) {
         source = { type: 'trainer', cost: s.trainingcost };
-      } else if (s.source[0] === 1 && s.source[1]) {
-        source = { type: 'item', recipeItemId: s.source[1], recipeItemName: '' };
+      } else if (listedItemId) {
+        source = { type: 'item', recipeItemId: listedItemId, recipeItemName: '' };
+      } else if (codes.includes(5) || codes[0] === 1) {
+        source = { type: 'item', recipeItemId: null, recipeItemName: '', _needsRecipeItem: true };
       }
     }
 
@@ -331,6 +634,187 @@ const parseListviewFromHtml = (html, spellBaseUrl) => {
 
   return { recipes, itemData };
 };
+
+const RECIPE_ITEM_FETCH_CONCURRENCY = 500;
+const scrapedRecipeItemDetails = new Map();
+
+function xmlNodeText(node) {
+  if (typeof node === 'string') return node.trim();
+  if (node && typeof node._ === 'string') return node._.trim();
+  return '';
+}
+
+/** Item level from Wowhead item XML: <level>, jsonEquip.itemlevel, or the tooltip ilvl marker. */
+function itemLevelFromXmlItem(item) {
+  const levelNode = item?.level?.[0];
+  const levelParsed = parseInt(xmlNodeText(levelNode) || (typeof levelNode === 'number' ? String(levelNode) : ''), 10);
+  if (Number.isFinite(levelParsed)) return levelParsed;
+  const jsonEquipStr = item?.jsonEquip?.[0];
+  if (typeof jsonEquipStr === 'string') {
+    try {
+      const json = JSON.parse(`{${jsonEquipStr}}`);
+      const fromEquip = parseInt(json.itemlevel, 10);
+      if (Number.isFinite(fromEquip)) return fromEquip;
+    } catch { /* jsonEquip is not always an object literal */ }
+  }
+  const tooltip = xmlNodeText(item?.htmlTooltip?.[0]) || (typeof item?.htmlTooltip?.[0] === 'string' ? item.htmlTooltip[0] : '');
+  const ilvlMatch = String(tooltip).match(/<!--ilvl-->(\d+)/);
+  if (ilvlMatch) return parseInt(ilvlMatch[1], 10);
+  return null;
+}
+
+function readListviewRows(html, listId) {
+  const marker = `id: '${listId}'`;
+  const at = html.indexOf(marker);
+  if (at === -1) return [];
+  const dataAt = html.indexOf('data:', at);
+  if (dataAt === -1 || dataAt - at > 500) return [];
+  const raw = extractBalanced(html, dataAt, '[', ']');
+  if (!raw) return [];
+  try {
+    const rows = new Function('return ' + raw)();
+    return Array.isArray(rows) ? rows : [];
+  } catch {
+    return [];
+  }
+}
+
+const FACTION_BY_QUEST_SIDE = { 1: 'Alliance', 2: 'Horde' };
+
+/** Drops and containers are available to both factions, so a quest does not lock the recipe. */
+const SHARED_ACQUISITION_LISTVIEWS = new Set([
+  'dropped-by',
+  'contained-in-object',
+  'contained-in-item',
+  'pickpocketed-from',
+  'skinned-from',
+  'mined-from',
+  'gathered-from',
+  'herbed-from',
+  'fished-in',
+  'disenchanting',
+  'created-by',
+]);
+
+/** Wowhead react is [Alliance, Horde]. Null means that faction cannot buy from the vendor. */
+function vendorFaction(vendor) {
+  const react = vendor?.react;
+  if (!Array.isArray(react)) return null;
+  const alliance = react[0] != null;
+  const horde = react[1] != null;
+  if (alliance && horde) return 'Both';
+  if (alliance) return 'Alliance';
+  if (horde) return 'Horde';
+  return null;
+}
+
+/**
+ * Recipe item rewarded by a quest that only one faction can do.
+ * A vendor for the other faction, or a drop, leaves the recipe available to both.
+ */
+function questFactionExclusive(html) {
+  const lists = new Set(itemListviewIds(html));
+  if (!lists.has('reward-from-q')) return null;
+  if ([...lists].some((id) => SHARED_ACQUISITION_LISTVIEWS.has(id))) return null;
+
+  const quests = readListviewRows(html, 'reward-from-q');
+  if (!quests.length || quests.some((quest) => !FACTION_BY_QUEST_SIDE[quest.side])) return null;
+  const sides = new Set(quests.map((quest) => FACTION_BY_QUEST_SIDE[quest.side]));
+  if (sides.size !== 1) return null;
+  const faction = [...sides][0];
+
+  if (lists.has('sold-by')) {
+    const vendors = readListviewRows(html, 'sold-by');
+    if (!vendors.length || vendors.some((vendor) => vendorFaction(vendor) !== faction)) return null;
+  }
+  return faction;
+}
+
+/** Spell-page enrichment. A class-9 "used by" / "taught by" row is the recipe item. */
+function parseSpellPageSource(html) {
+  for (const listId of ['taught-by-item', 'used-by-item']) {
+    const recipeItem = readListviewRows(html, listId).find((row) => row && row.classs === 9 && row.id && row.name);
+    if (recipeItem) {
+      return {
+        type: 'item',
+        recipeItemId: recipeItem.id,
+        recipeItemName: recipeItem.name,
+      };
+    }
+  }
+
+  const costMatch = html.match(/Training cost:\s*\[money=(\d+)\]/) || html.match(/"trainingcost":(\d+)/);
+  if (costMatch) {
+    return { type: 'trainer', cost: parseInt(costMatch[1], 10) };
+  }
+  if (html.includes("id: 'taught-by-npc'")) {
+    return { type: 'trainer', cost: 0 };
+  }
+  return { type: 'free' };
+}
+
+async function enrichRecipeSources(recipes, browser, version, profession) {
+  const checkpointPath = path.join(__dirname, '..', 'data', '.wowhead-cache', 'sources', `${VERSION_TO_DIR[version]}-${profession}.json`);
+  let saved = {};
+  try {
+    saved = JSON.parse(await fs.readFile(checkpointPath, 'utf8'));
+  } catch {
+    saved = {};
+  }
+
+  const pending = [];
+  for (const recipe of recipes) {
+    const previous = saved[recipe.id];
+    if (previous) recipe.source = previous;
+    else pending.push(recipe);
+  }
+  const already = recipes.length - pending.length;
+  console.log(`  Enriching ${pending.length} recipe pages${already ? ` (${already} already saved)` : ''}`);
+
+  let done = already;
+  const total = recipes.length;
+  let writeChain = Promise.resolve();
+  const persist = () => {
+    const snapshot = JSON.stringify(saved);
+    writeChain = writeChain.then(() => fs.mkdir(path.dirname(checkpointPath), { recursive: true }).then(() => fs.writeFile(checkpointPath, snapshot)));
+    return writeChain;
+  };
+
+  try {
+    await mapWithConcurrency(pending, RECIPE_ITEM_FETCH_CONCURRENCY, async (recipe) => {
+      const html = await fetchWowheadText(recipe.url, wowheadHtmlHeaders, browser);
+      recipe.source = parseSpellPageSource(html);
+      saved[recipe.id] = recipe.source;
+      done += 1;
+      if (done % 25 === 0 || done === total) {
+        await persist();
+        console.log(`  Enriched ${done}/${total} recipes`);
+      }
+    });
+  } finally {
+    if (Object.keys(saved).length > 0) await persist();
+  }
+
+  const counts = { item: 0, trainer: 0, free: 0 };
+  for (const recipe of recipes) counts[recipe.source?.type] = (counts[recipe.source?.type] || 0) + 1;
+  console.log(`  Sources: ${counts.item} recipe items, ${counts.trainer} trainers, ${counts.free} free`);
+}
+
+async function mapWithConcurrency(items, limit, fn) {
+  const results = new Array(items.length);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < items.length) {
+      const index = cursor;
+      cursor += 1;
+      results[index] = await fn(items[index], index);
+    }
+  };
+  const workers = [];
+  for (let i = 0; i < Math.min(limit, items.length); i++) workers.push(worker());
+  await Promise.all(workers);
+  return results;
+}
 
 /** Try multiple selectors; return the first that matches */
 const waitForAnySelector = async (page, selectors, opts = {}) => {
@@ -370,15 +854,18 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
   const listUrl = getProfessionListUrl(version, profession);
   const spellBaseUrl = getSpellBaseUrlForVersion(version);
 
-  console.log(`\n🔍 Scraping: ${profession} (${version})`);
+  console.log(`\nScraping: ${profession} (${version})`);
+  wowheadSessionPageUrl = listUrl;
 
   // Try fetch-based extraction first (no Puppeteer, less likely to be blocked)
   try {
     console.log(`  Fetching listview data from ${listUrl}...`);
-    const html = await fetchListviewData(listUrl);
+    const html = await fetchListviewData(listUrl, browser);
     const { recipes } = parseListviewFromHtml(html, spellBaseUrl);
+    scrapedRecipeItemDetails.clear();
+    await enrichRecipeSources(recipes, browser, version, profession);
     const allRecipes = recipes.map((r) => ({ ...r, _version: version }));
-    console.log(`  ✅ Fetched ${allRecipes.length} recipes from embedded HTML`);
+    console.log(`  Fetched ${allRecipes.length} recipes from embedded HTML`);
 
     const versionDir = VERSION_TO_DIR[version];
     for (const recipe of allRecipes) {
@@ -392,7 +879,8 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
     }
     return allRecipes;
   } catch (fetchErr) {
-    console.log(`  ⚠️ Fetch failed (${fetchErr.message}), falling back to Puppeteer...`);
+    if (fetchErr instanceof WowheadBlockedError) throw fetchErr;
+    console.log(`  Fetch failed (${fetchErr.message}), falling back to Puppeteer...`);
   }
 
   // Fallback: Puppeteer-based scraping
@@ -420,7 +908,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
         break;
       } catch (err) {
         if (attempt === maxLoadAttempts) throw err;
-        console.log(`  ⚠️ Load failed (${err.message}), retrying in 5s...`);
+        console.log(`  Load failed (${err.message}), retrying in 5s...`);
         await new Promise(r => setTimeout(r, 5000));
       }
     }
@@ -443,7 +931,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
     try {
     while (offset<number_of_recipes) {
         const paginatedUrl = `${listUrl}#${offset}`;
-        console.log(`📄 Scraping page ${pageCount} (${version}) → ${paginatedUrl}`);
+        console.log(`Scraping page ${pageCount} (${version}) → ${paginatedUrl}`);
         // Force full reload: hash-only changes often don't trigger reload, so we'd see same content.
         // Navigate away first to ensure each pagination gets a fresh load with correct hash.
         await page.goto('about:blank');
@@ -521,11 +1009,11 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
               icon,
               url: anchor.href
             };
-          }).filter(r => r && r.id && r.name); // 🚫 filter out nulls and incomplete recipes
+          }).filter(r => r && r.id && r.name); // filter out nulls and incomplete recipes
         }, listviewSelector);
 
 
-      console.log(`🔎 Found ${recipes.length} recipes on page ${pageCount}`);
+      console.log(`Found ${recipes.length} recipes on page ${pageCount}`);
 
       // Diagnostic when TBC/other version returns 0 recipes (different DOM structure)
       if (recipes.length === 0) {
@@ -543,7 +1031,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
             listviewClasses: lv?.className || null,
           };
         }, listviewSelector);
-        console.log(`⚠️ DOM diagnostic (${version}):`, JSON.stringify(diag, null, 2));
+        console.log(`DOM diagnostic (${version}):`, JSON.stringify(diag, null, 2));
       }
 
       // Process recipes in chunks using the shared page pool (reuse pages instead of create/destroy)
@@ -592,7 +1080,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
             }
 
             const { produces, source } = await page.evaluate(({recipeName, recipeId}) => {
-              console.log('🏁 Starting page evaluation');
+              console.log('Starting page evaluation');
               
               // First find the produced item information
               const producesAnchor = document.querySelector('#infobox-contents-0 a[href*="item="]');
@@ -626,7 +1114,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
 
               // Log the entire tab content first
               const taughtByItemTab = document.querySelector('#tab-taught-by-item');
-              console.log('📑 Taught by Item Tab Content:', taughtByItemTab ? {
+              console.log('Taught by Item Tab Content:', taughtByItemTab ? {
                 visible: window.getComputedStyle(taughtByItemTab).display !== 'none',
                 html: taughtByItemTab.innerHTML
               } : 'Tab not found');
@@ -709,7 +1197,7 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
                   
                   // Debug logging for recipe 3452 (Mana Potion) to see what's being parsed
                   if (recipeId === 3452) {
-                    console.log(`🔍 [${recipeId}] Training cost parsing:`, {
+                    console.log(`[${recipeId}] Training cost parsing:`, {
                       divHTML: trainingCostDiv.innerHTML,
                       divText: trainingCostDiv.textContent,
                       moneySpansFound: moneySpans.length,
@@ -720,10 +1208,10 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
                   
                   // Debug logging
                   if (moneySpans.length === 0) {
-                    console.log(`⚠️ [${recipeId}] Found "Training cost:" div but no money spans. Div HTML: "${trainingCostDiv.innerHTML}"`);
+                    console.log(`[${recipeId}] Found "Training cost:" div but no money spans. Div HTML: "${trainingCostDiv.innerHTML}"`);
                   }
                 } else {
-                  console.log(`⚠️ [${recipeId}] Could not find div containing "Training cost:" text`);
+                  console.log(`[${recipeId}] Could not find div containing "Training cost:" text`);
                 }
 
                 // Get all trainers
@@ -762,15 +1250,15 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
           
             if (produces) {
               recipe.produces = produces;
-              console.log(`🔧 [${recipe.id}] Produces item ${produces.id} (${produces.name})`);
+              console.log(`[${recipe.id}] Produces item ${produces.id} (${produces.name})`);
             }
 
             if (source) {
               recipe.source = source;
-              console.log(`📚 [${recipe.id}] Source: ${source.type}${source.type === 'trainer' ? ` (${source.cost}c)` : ''}${source.type === 'item' ? ` [Item: ${source.recipeItemId}]` : ''}`);
+              console.log(`[${recipe.id}] Source: ${source.type}${source.type === 'trainer' ? ` (${source.cost}c)` : ''}${source.type === 'item' ? ` [Item: ${source.recipeItemId}]` : ''}`);
             }
           } catch (err) {
-            console.error(`❌ [${recipe.id}] Error:`, err.message);
+            console.error(`[${recipe.id}] Error:`, err.message);
           }
         }));
       }
@@ -795,11 +1283,12 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
 
     return allRecipes;
     } finally {
-      console.log(`🧹 Closing ${detailPagePool.length} reusable detail pages...`);
+      console.log(`Closing ${detailPagePool.length} reusable detail pages...`);
       await Promise.all(detailPagePool.map(p => p.close()));
     }
   } catch (err) {
-    console.error(`❌ Error scraping ${profession} (${version}):`, err.message);
+    if (err instanceof WowheadBlockedError) throw err;
+    console.error(`Error scraping ${profession} (${version}):`, err.message);
     return [];
   } finally {
     await page.close();
@@ -809,6 +1298,10 @@ const scrapeProfessionForVersion = async (browser, profession, version) => {
 /** Strip _version and flatten for saving (no versioned structure) */
 const toFlatRecipe = (r) => {
   const { _version, ...flat } = r;
+  if (flat.source?._needsRecipeItem) {
+    const { _needsRecipeItem, ...source } = flat.source;
+    flat.source = source.recipeItemId ? source : { type: 'free' };
+  }
   return flat;
 };
 
@@ -818,7 +1311,7 @@ const scrapeProfession = async (browser, profession) => {
     ? [requestedVersion]
     : GAME_VERSIONS
   ).filter(v => {
-    if (TBC_ONLY_PROFESSIONS.includes(profession) && v === 'Vanilla') return false;
+    if (TBC_ONLY_PROFESSIONS.includes(profession) && v !== 'The Burning Crusade') return false;
     return true;
   });
 
@@ -832,13 +1325,72 @@ const scrapeProfession = async (browser, profession) => {
     await fs.mkdir(outputDir, { recursive: true });
     await fs.writeFile(outputPath, JSON.stringify(flatRecipes, null, 2));
 
-    console.log(`✅ Saved ${flatRecipes.length} recipes (${version}) → ${outputPath}`);
+    console.log(`Saved ${flatRecipes.length} recipes (${version}) → ${outputPath}`);
     await processRecipeItems(profession, flatRecipes, browser, versionDir);
+    const checkpointPath = path.join(__dirname, '..', 'data', '.wowhead-cache', 'sources', `${versionDir}-${profession}.json`);
+    await fs.unlink(checkpointPath).catch(() => {});
   }
 };
 
-const WOWHEAD_VERSION_PATH = { vanilla: 'classic', tbc: 'tbc' };
-const ENRICH_CONCURRENCY = 20; // Parallel XML fetches per batch
+const WOWHEAD_VERSION_PATH = { vanilla: 'classic', tbc: 'tbc', forever: 'forever' };
+const ENRICH_CONCURRENCY = 500; // Parallel XML fetches per batch
+
+/** Recipe items bought with a token, such as Merchant's Favor, are recorded during enrichment. */
+async function enrichRecipeCurrencyCosts(browser, versionDir) {
+  const wowheadPath = WOWHEAD_VERSION_PATH[versionDir] || 'classic';
+  const professionsToProcess = (requestedProfession ? [requestedProfession] : PROFESSIONS)
+    .filter((profession) => versionDir === 'tbc' || !TBC_ONLY_PROFESSIONS.includes(profession));
+  console.log(`[${versionDir}] Enriching recipe item currency costs...`);
+
+  for (const profession of professionsToProcess) {
+    const outputPath = path.join(__dirname, '..', 'data', 'recipes', versionDir, `${profession}_items.json`);
+    let recipeItems;
+    try {
+      recipeItems = JSON.parse(await fs.readFile(outputPath, 'utf8'));
+    } catch {
+      continue;
+    }
+    const itemIds = Object.keys(recipeItems);
+    if (!itemIds.length) continue;
+
+    const updates = await mapWithConcurrency(itemIds, RECIPE_ITEM_FETCH_CONCURRENCY, async (itemId) => {
+      const html = await fetchWowheadText(
+        `https://www.wowhead.com/${wowheadPath}/item=${itemId}`,
+        wowheadHtmlHeaders,
+        browser
+      );
+      return {
+        itemId,
+        currencyCost: await namedCurrencyCosts(html, wowheadPath, browser),
+        faction: questFactionExclusive(html),
+      };
+    });
+
+    let changed = 0;
+    for (const update of updates) {
+      const item = recipeItems[update.itemId];
+      let itemChanged = false;
+      const previous = JSON.stringify(item.currencyCost || []);
+      const next = JSON.stringify(update.currencyCost);
+      if (previous !== next) {
+        if (update.currencyCost.length) item.currencyCost = update.currencyCost;
+        else delete item.currencyCost;
+        itemChanged = true;
+      }
+      const nextFaction = update.faction || undefined;
+      if ((item.faction || undefined) !== nextFaction) {
+        if (nextFaction) item.faction = nextFaction;
+        else delete item.faction;
+        itemChanged = true;
+      }
+      if (itemChanged) changed += 1;
+    }
+    if (changed) await fs.writeFile(outputPath, JSON.stringify(recipeItems, null, 2) + '\n');
+    const alliance = Object.values(recipeItems).filter((item) => item.faction === 'Alliance').length;
+    const horde = Object.values(recipeItems).filter((item) => item.faction === 'Horde').length;
+    console.log(`[${versionDir}] ${profession}: ${changed} recipe items updated (${alliance} Alliance, ${horde} Horde quest recipes)`);
+  }
+}
 
 const enrichMaterialData = async (browser) => {
     const materialsBaseDir = path.join(__dirname, '..', 'data', 'materials');
@@ -846,8 +1398,8 @@ const enrichMaterialData = async (browser) => {
 
     const versionDirsToEnrich = requestedVersion
       ? [VERSION_TO_DIR[requestedVersion]]
-      : ['vanilla', 'tbc'];
-    console.log(`🔄 Enrichment: ${requestedVersion ? requestedVersion : 'both versions'}`);
+      : Object.values(VERSION_TO_DIR);
+    console.log(`Enrichment: ${requestedVersion ? requestedVersion : 'all versions'}`);
 
     for (const versionDir of versionDirsToEnrich) {
       const materialPath = path.join(materialsBaseDir, versionDir, 'materials.json');
@@ -857,7 +1409,7 @@ const enrichMaterialData = async (browser) => {
       try {
         const raw = await fs.readFile(materialPath, 'utf-8');
         materials = JSON.parse(raw);
-        console.log(`📦 [${versionDir}] Loaded ${Object.keys(materials).length} materials`);
+        console.log(`[${versionDir}] Loaded ${Object.keys(materials).length} materials`);
       } catch (err) {
         const versionRecipesDir = path.join(recipesDir, versionDir);
         try {
@@ -873,9 +1425,9 @@ const enrichMaterialData = async (browser) => {
           }
           await fs.mkdir(path.dirname(materialPath), { recursive: true });
           await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
-          console.log(`📦 [${versionDir}] Rebuilt ${Object.keys(materials).length} materials from recipes`);
+          console.log(`[${versionDir}] Rebuilt ${Object.keys(materials).length} materials from recipes`);
         } catch (rebuildErr) {
-          console.warn(`⚠️ [${versionDir}] No recipes, skipping enrichment`);
+          console.warn(`[${versionDir}] No recipes, skipping enrichment`);
           continue;
         }
       }
@@ -884,34 +1436,27 @@ const enrichMaterialData = async (browser) => {
         const mat = materials[id];
         return !mat.name || mat.name === '' || mat.name.trim() === '';
       });
-      console.log(`🔄 [${versionDir}] Enriching ${materialIds.length} materials (${wowheadPath} URL)...`);
+      console.log(`[${versionDir}] Enriching ${materialIds.length} materials (${wowheadPath} URL)...`);
 
       if (materialIds.length === 0) {
-        console.log(`✅ [${versionDir}] All enriched.`);
-        continue;
+        console.log(`[${versionDir}] Materials already enriched.`);
       }
-
-    // Create one reusable page for limited stock checks (avoids create/destroy per material)
-    let limitedStockPage = null;
-    if (browser && materialIds.length > 0) {
-      limitedStockPage = await browser.newPage();
-      await limitedStockPage.setViewport({ width: 1920, height: 1080 });
-    }
 
     try {
     // Fetch XML in parallel batches
     const fetchOneXml = async (id) => {
       const url = `https://www.wowhead.com/${wowheadPath}/item=${id}&xml`;
       try {
-        const response = await fetch(url, { headers: wowheadXmlHeaders, redirect: 'follow' });
-        const xml = await response.text();
+        const xml = await fetchWowheadText(url, wowheadXmlHeaders, browser);
         const parsed = await parseStringPromise(xml);
         const item = parsed?.wowhead?.item?.[0];
         const name = item?.name?.[0];
         const quality = parseInt(item?.quality?.[0]?.$?.id || 1);
         const itemClass = item?.class?.[0]?._?.trim() || '';
+        const classId = item?.class?.[0]?.$?.id ? String(item.class[0].$.id) : '';
         const subclass = item?.subclass?.[0]?._?.trim() || '';
         const slot = item?.inventorySlot?.[0]?._?.trim() || '';
+        const itemLevel = itemLevelFromXmlItem(item);
         const link = item?.link?.[0]?.trim() || '';
         let vendorPrice = null;
         const jsonEquipStr = item?.jsonEquip?.[0];
@@ -942,9 +1487,10 @@ const enrichMaterialData = async (browser) => {
             createdBy = { spellId, spellName, reagents, minCount, maxCount };
           }
         }
-        return { id, name, quality, itemClass, subclass, icon, slot, link, vendorPrice, createdBy };
+        return { id, name, quality, itemClass, classId, subclass, icon, slot, link, vendorPrice, createdBy, itemLevel };
       } catch (err) {
-        console.warn(`❌ Error fetching item ${id}: ${err.message}`);
+        if (err instanceof WowheadBlockedError) throw err;
+        console.warn(`Error fetching item ${id}: ${err.message}`);
         return { id, error: err.message };
       }
     };
@@ -955,75 +1501,120 @@ const enrichMaterialData = async (browser) => {
       const totalBatches = Math.ceil(materialIds.length / ENRICH_CONCURRENCY);
       console.log(`  [${versionDir}] Batch ${batchNum}/${totalBatches} (${batch.length} items)...`);
       const results = await Promise.all(batch.map(id => fetchOneXml(id)));
+      const vendorInfoById = new Map();
+      await Promise.all(results.map(async (r) => {
+        if (r.error || r.vendorPrice == null || !r.name || !r.name.trim()) return;
+        try {
+          const itemUrl = `https://www.wowhead.com/${wowheadPath}/item=${r.id}`;
+          const html = await fetchWowheadText(itemUrl, wowheadHtmlHeaders, browser);
+          vendorInfoById.set(r.id, parseSoldByFromHtml(html));
+        } catch (err) {
+          if (err instanceof WowheadBlockedError) throw err;
+          console.warn(`Limited stock check failed for ${r.id}: ${err.message}`);
+          vendorInfoById.set(r.id, { failed: true });
+        }
+      }));
       for (const r of results) {
         if (r.error) continue;
-        const { id, name, quality, itemClass, subclass, icon, slot, link, vendorPrice, createdBy } = r;
+        const { id, name, quality, itemClass, subclass, icon, slot, link, vendorPrice, createdBy, itemLevel } = r;
         if (!name || name.trim() === '') {
-          console.warn(`    ⚠️ No name found for item ${id}, skipping`);
+          console.warn(`    No name found for item ${id}, skipping`);
           continue;
         }
+        let price = vendorPrice;
         let limitedStock = false;
-        if (vendorPrice !== null && limitedStockPage) {
-          try {
-            const itemUrl = `https://www.wowhead.com/${wowheadPath}/item=${id}#sold-by`;
-            await limitedStockPage.goto(itemUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
-            try {
-              await limitedStockPage.waitForSelector('table.listview-mode-default tbody tr.listview-row', { timeout: 3000 });
-            } catch {}
-            const vendorInfo = await limitedStockPage.evaluate(() => {
-              const vendorTable = document.querySelector('table.listview-mode-default');
-              if (!vendorTable) return { limitedStock: false, hasCurrencyPrice: false };
-              const rows = vendorTable.querySelectorAll('tbody tr.listview-row');
-              if (rows.length === 0) return { limitedStock: false, hasCurrencyPrice: false };
-              let hasCurrencyPrice = false, limitedStock = false;
-              for (const row of rows) {
-                const cells = row.querySelectorAll('td');
-                if (cells.length >= 7) {
-                  const costCell = cells[6];
-                  if (costCell) {
-                    const hasCurrency = costCell.querySelector('.moneygold, .moneysilver, .moneycopper') !== null;
-                    const hasItemCurrency = costCell.querySelector('.moneyitem') !== null;
-                    if (hasCurrency && !hasItemCurrency) {
-                      hasCurrencyPrice = true;
-                      const stockCell = cells[4];
-                      if (stockCell) {
-                        const stockText = stockCell.textContent.trim();
-                        if (stockText !== '∞' && stockText !== '' && !isNaN(parseInt(stockText))) limitedStock = true;
-                      }
-                    }
-                  }
-                }
-              }
-              return { limitedStock, hasCurrencyPrice };
-            });
-            if (!vendorInfo.hasCurrencyPrice) {
-              materials[id] = { name, quality, class: itemClass, subclass, icon, slot, link, vendorPrice: null, ...(createdBy ? { createdBy } : {}) };
-            } else {
-              limitedStock = vendorInfo.limitedStock;
-              materials[id] = { name, quality, class: itemClass, subclass, icon, slot, link, vendorPrice, ...(limitedStock ? { limitedStock: true } : {}), ...(createdBy ? { createdBy } : {}) };
-            }
-          } catch (err) {
-            console.warn(`⚠️ Limited stock check failed for ${id}: ${err.message}`);
-            materials[id] = { name, quality, class: itemClass, subclass, icon, slot, link, vendorPrice, ...(createdBy ? { createdBy } : {}) };
-          }
-        } else {
-          materials[id] = { name, quality, class: itemClass, subclass, icon, slot, link, vendorPrice, ...(limitedStock ? { limitedStock: true } : {}), ...(createdBy ? { createdBy } : {}) };
+        const vendorInfo = vendorInfoById.get(id);
+        if (vendorInfo && !vendorInfo.failed) {
+          if (!vendorInfo.hasCurrencyPrice) price = null;
+          else limitedStock = vendorInfo.limitedStock;
         }
-        console.log(`    ✅ Enriched item ${id}: ${name}`);
+        materials[id] = {
+          name,
+          quality,
+          class: itemClass,
+          subclass,
+          icon,
+          slot,
+          link,
+          vendorPrice: price,
+          ...(limitedStock ? { limitedStock: true } : {}),
+          ...(createdBy ? { createdBy } : {}),
+          ...(itemLevel != null ? { itemLevel } : {}),
+        };
+        console.log(`    Enriched item ${id}: ${name}`);
       }
+      await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
       if (i + ENRICH_CONCURRENCY < materialIds.length) {
         await new Promise(r => setTimeout(r, 300)); // Brief pause between batches
       }
     }
-    console.log(`✅ Processed ${materialIds.length} materials`);
+    console.log(`Processed ${materialIds.length} materials`);
   
     await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
-    console.log(`✅ [${versionDir}] Enrichment complete → ${materialPath}`);
-      } finally {
-        if (limitedStockPage) {
-          await limitedStockPage.close();
-          console.log(`  🧹 [${versionDir}] Closed limited-stock page`);
+    console.log(`[${versionDir}] Enrichment complete → ${materialPath}`);
+
+    const producedIds = new Set();
+    const professionsForItemLevel = (requestedProfession ? [requestedProfession] : PROFESSIONS)
+      .filter((profession) => versionDir === 'tbc' || !TBC_ONLY_PROFESSIONS.includes(profession));
+    for (const profession of professionsForItemLevel) {
+      const recipePath = path.join(recipesDir, versionDir, `${profession}.json`);
+      let recipes;
+      try {
+        recipes = JSON.parse(await fs.readFile(recipePath, 'utf8'));
+      } catch {
+        continue;
+      }
+      for (const recipe of recipes) {
+        const producedId = recipe.produces?.id;
+        if (!producedId) continue;
+        const existingLevel = materials[String(producedId)]?.itemLevel;
+        if (typeof existingLevel === 'number' && !Number.isNaN(existingLevel)) continue;
+        producedIds.add(String(producedId));
+      }
+    }
+    const producedList = [...producedIds];
+    console.log(`[${versionDir}] Recording item level for ${producedList.length} crafted items...`);
+    let itemLevelsRecorded = 0;
+    for (let i = 0; i < producedList.length; i += ENRICH_CONCURRENCY) {
+      const batch = producedList.slice(i, i + ENRICH_CONCURRENCY);
+      const batchNum = Math.floor(i / ENRICH_CONCURRENCY) + 1;
+      const totalBatches = Math.ceil(producedList.length / ENRICH_CONCURRENCY);
+      console.log(`  [${versionDir}] Item level batch ${batchNum}/${totalBatches} (${batch.length} items)...`);
+      const results = await Promise.all(batch.map((id) => fetchOneXml(id)));
+      for (const result of results) {
+        if (result.error || result.itemLevel == null) {
+          if (!result.error) console.warn(`    No item level for item ${result.id}`);
+          continue;
         }
+        const existing = materials[result.id];
+        if (existing) {
+          existing.itemLevel = result.itemLevel;
+        } else if (result.name && result.name.trim()) {
+          materials[result.id] = {
+            name: result.name,
+            quality: result.quality,
+            class: result.classId || '',
+            subclass: result.subclass,
+            icon: result.icon,
+            slot: result.slot,
+            link: result.link,
+            vendorPrice: result.vendorPrice,
+            itemLevel: result.itemLevel,
+          };
+        } else {
+          console.warn(`    No name found for item ${result.id}, skipping`);
+          continue;
+        }
+        itemLevelsRecorded += 1;
+      }
+      await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
+    }
+    console.log(`[${versionDir}] Recorded item level on ${itemLevelsRecorded} crafted items`);
+
+    await enrichRecipeCurrencyCosts(browser, versionDir);
+      } catch (err) {
+        if (err instanceof WowheadBlockedError) throw err;
+        console.error(`[${versionDir}] Enrichment failed: ${err.message}`);
       }
     }
   };
@@ -1036,7 +1627,7 @@ const enrichMaterialData = async (browser) => {
     await fs.mkdir(iconDir, { recursive: true });
 
     const allMaterials = {};
-    for (const versionDir of ['vanilla', 'tbc']) {
+    for (const versionDir of Object.values(VERSION_TO_DIR)) {
       try {
         const raw = await fs.readFile(path.join(materialsBaseDir, versionDir, 'materials.json'), 'utf-8');
         Object.assign(allMaterials, JSON.parse(raw));
@@ -1051,18 +1642,21 @@ const enrichMaterialData = async (browser) => {
   
     for (const [id, material] of Object.entries(materials)) {
       if (!material.icon) continue;
-      
 
       const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${material.icon}.jpg`;
       const targetPath = path.join(iconDir, `${id}.jpg`);
+      try {
+        await fs.access(targetPath);
+        continue;
+      } catch { /* download missing files only */ }
   
       try {
         const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         await streamPipeline(response.body, createWriteStream(targetPath));
-        console.log(`🟢 Saved material icon ${id} → ${material.icon}.jpg`);
+        console.log(`Saved material icon ${id} → ${material.icon}.jpg`);
       } catch (err) {
-        console.warn(`❌ Failed to download icon for material ${id}: ${err.message}`);
+        console.warn(`Failed to download icon for material ${id}: ${err.message}`);
       }
     }
   };
@@ -1080,32 +1674,106 @@ const enrichMaterialData = async (browser) => {
   
     const recipes = JSON.parse(await fs.readFile(recipePath, 'utf-8'));
   
+    const pending = [];
     for (const recipe of recipes) {
-      const icon = recipe.icon; // you'd need to extract and save this during scraping
+      const icon = recipe.icon;
       const id = recipe.id;
       if (!icon) continue;
-  
-      const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`;
       const targetPath = path.join(iconDir, `${id}.jpg`);
-  
       try {
-        const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        await streamPipeline(response.body, createWriteStream(targetPath));
-        console.log(`🟢 Saved recipe icon ${id} → ${icon}.jpg`);
-      } catch (err) {
-        console.warn(`❌ Failed to download icon for recipe ${id}: ${err.message}`);
+        await fs.access(targetPath);
+      } catch {
+        pending.push({ id, icon, targetPath });
+      }
+    }
+
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < pending.length) {
+        const job = pending[cursor++];
+        const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${job.icon}.jpg`;
+        try {
+          const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          await streamPipeline(response.body, createWriteStream(job.targetPath));
+          console.log(`Saved recipe icon ${job.id} → ${job.icon}.jpg`);
+        } catch (err) {
+          console.warn(`Failed to download icon for recipe ${job.id}: ${err.message}`);
+        }
+      }
+    };
+    const workers = Math.min(12, pending.length);
+    if (workers > 0) {
+      console.log(`Downloading ${pending.length} missing ${profession} icons...`);
+      await Promise.all(Array.from({ length: workers }, () => worker()));
+    }
+  };
+
+  /** Forever list pages publish icons as addData(6, 16). Fill blank recipe and material icons from that data. */
+  const backfillMissingIcons = async (browser, versionDirs) => {
+    const professionsToProcess = requestedProfession ? [requestedProfession] : PROFESSIONS;
+    for (const versionDir of versionDirs) {
+      const version = Object.entries(VERSION_TO_DIR).find(([, dir]) => dir === versionDir)?.[0];
+      if (!version) continue;
+      const materialPath = path.join(__dirname, '..', 'data', 'materials', versionDir, 'materials.json');
+      let materials = null;
+      try {
+        materials = JSON.parse(await fs.readFile(materialPath, 'utf-8'));
+      } catch { /* no materials file for this version */ }
+      let materialsChanged = 0;
+
+      for (const profession of professionsToProcess) {
+        if (versionDir !== 'tbc' && TBC_ONLY_PROFESSIONS.includes(profession)) continue;
+        const recipePath = path.join(__dirname, '..', 'data', 'recipes', versionDir, `${profession}.json`);
+        let recipes;
+        try {
+          recipes = JSON.parse(await fs.readFile(recipePath, 'utf-8'));
+        } catch {
+          continue;
+        }
+        const needsRecipeIcon = recipes.some((recipe) => !recipe.icon);
+        const needsMaterialIcon = materials && Object.values(materials).some((material) => !material.icon);
+        if (!needsRecipeIcon && !needsMaterialIcon) continue;
+
+        const listUrl = getProfessionListUrl(version, profession);
+        console.log(`Reading icons from ${profession} (${version})...`);
+        const html = await fetchListviewData(listUrl, browser);
+        const spellIcons = readGathererData(html, 6);
+        let filled = 0;
+        for (const recipe of recipes) {
+          if (recipe.icon) continue;
+          const icon = spellIcons[String(recipe.id)]?.icon;
+          if (!icon) continue;
+          recipe.icon = icon;
+          filled++;
+        }
+        if (filled) await fs.writeFile(recipePath, JSON.stringify(recipes, null, 2));
+        console.log(`  ${profession}: filled ${filled} recipe icons`);
+
+        if (materials) {
+          const itemIcons = readGathererData(html, 3);
+          for (const [id, info] of Object.entries(itemIcons)) {
+            if (!info?.icon || !materials[id] || materials[id].icon) continue;
+            materials[id].icon = info.icon;
+            materialsChanged++;
+          }
+        }
+      }
+
+      if (materialsChanged && materials) {
+        await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
+        console.log(`Filled ${materialsChanged} material icons (${versionDir})`);
       }
     }
   };
 
 const processRecipeItems = async (profession, recipes, browser, versionDir) => {
-  console.log(`\n📦 Processing recipe items for ${profession} (${versionDir})...`);
+  console.log(`\nProcessing recipe items for ${profession} (${versionDir})...`);
   
   const recipeItems = {};
   
   // Use version-specific WoWhead path (TBC items may not exist on classic endpoint)
-  const wowheadPath = versionDir === 'tbc' ? 'tbc' : 'classic';
+  const wowheadPath = WOWHEAD_VERSION_PATH[versionDir] || 'classic';
   
   try {
     // Get all unique recipe item IDs (flat format)
@@ -1118,8 +1786,10 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
     console.log(`Found ${itemIds.length} unique recipe items to process`);
 
     // Process all items in parallel
-    console.log('🔄 Fetching XML data for all items...');
-    const results = await Promise.all(itemIds.map(async (itemId) => {
+    console.log('Fetching XML data for all items...');
+    const results = await mapWithConcurrency(itemIds, RECIPE_ITEM_FETCH_CONCURRENCY, async (itemId) => {
+      const cached = scrapedRecipeItemDetails.get(itemId);
+      if (cached) return { itemId, data: cached };
       try {
         // Fetch XML data (use version-specific URL - TBC items need tbc endpoint)
         const parseXml = async (xmlText) => {
@@ -1135,23 +1805,31 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
               const json = JSON.parse(`{${jsonEquipStr}}`);
               buyPrice = json.buyprice ?? null;
             } catch (e) {
-              console.warn(`⚠️ Failed to parse jsonEquip for item ${itemId}`);
+              console.warn(`Failed to parse jsonEquip for item ${itemId}`);
             }
           }
-          return { bop: isRecipeBoP, buyPrice };
+          const nameNode = item?.name?.[0];
+          const name = typeof nameNode === 'string' ? nameNode.trim() : (nameNode?._?.trim() || '');
+          const quality = parseInt(item?.quality?.[0]?.$?.id || 1);
+          let icon = '';
+          const iconNode = item?.icon?.[0];
+          if (typeof iconNode === 'string') icon = iconNode.trim();
+          else if (typeof iconNode === 'object' && iconNode._) icon = iconNode._.trim();
+          return { bop: isRecipeBoP, buyPrice, name, quality: Number.isNaN(quality) ? 1 : quality, icon };
         };
 
         let xmlData;
         try {
           const xmlUrl = `https://www.wowhead.com/${wowheadPath}/item=${itemId}&xml`;
-          const xmlText = await fetch(xmlUrl, { headers: wowheadXmlHeaders, redirect: 'follow' }).then((r) => r.text());
+          const xmlText = await fetchWowheadText(xmlUrl, wowheadXmlHeaders, browser);
           xmlData = await parseXml(xmlText);
         } catch (primaryErr) {
-          // Fallback: try other endpoint if version-specific parse fails (e.g. TBC item on classic)
-          const fallbackPath = wowheadPath === 'tbc' ? 'classic' : 'tbc';
+          // Classic and TBC share some recipe item ids. Forever stays on its own pages.
+          const fallbackPath = wowheadPath === 'classic' ? 'tbc' : wowheadPath === 'tbc' ? 'classic' : null;
+          if (!fallbackPath) throw primaryErr;
           try {
             const fallbackUrl = `https://www.wowhead.com/${fallbackPath}/item=${itemId}&xml`;
-            const xmlText = await fetch(fallbackUrl, { headers: wowheadXmlHeaders, redirect: 'follow' }).then((r) => r.text());
+            const xmlText = await fetchWowheadText(fallbackUrl, wowheadXmlHeaders, browser);
             xmlData = await parseXml(xmlText);
           } catch {
             throw primaryErr;
@@ -1160,14 +1838,18 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
 
         // Fetch HTML data for limited stock info (parses sold-by Listview, no scripts required)
         const htmlUrl = `https://www.wowhead.com/${wowheadPath}/item=${itemId}`;
-        const htmlData = await fetch(htmlUrl, { headers: wowheadHtmlHeaders, redirect: 'follow' })
-          .then(response => response.text())
-          .then(html => ({
-            limitedStock: parseLimitedStockFromHtml(html)
+        const htmlData = await fetchWowheadText(htmlUrl, wowheadHtmlHeaders, browser)
+          .then(async (html) => ({
+            limitedStock: parseLimitedStockFromHtml(html),
+            hasSource: itemHasAcquisitionSource(html),
+            mobDrop: xmlData.bop && !xmlData.buyPrice && itemIsBopMobDrop(html),
+            currencyCost: await namedCurrencyCosts(html, wowheadPath, browser),
+            faction: questFactionExclusive(html),
           }))
           .catch(err => {
-            console.error(`❌ HTML fetch error for item ${itemId}:`, err.message);
-            return { limitedStock: false };
+            if (err instanceof WowheadBlockedError) throw err;
+            console.error(`HTML fetch error for item ${itemId}:`, err.message);
+            return { limitedStock: false, hasSource: undefined };
           });
 
         return {
@@ -1176,15 +1858,23 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
             bop: xmlData.bop,
             limitedStock: htmlData.limitedStock,
             buyPrice: xmlData.buyPrice,
-            auctionhouse: !xmlData.bop && !htmlData.limitedStock && !xmlData.buyPrice
+            auctionhouse: !xmlData.bop && !htmlData.limitedStock && !xmlData.buyPrice,
+            name: xmlData.name || undefined,
+            quality: xmlData.quality,
+            icon: xmlData.icon || undefined,
+            ...(typeof htmlData.hasSource === 'boolean' ? { hasSource: htmlData.hasSource } : {}),
+            ...(typeof htmlData.mobDrop === 'boolean' ? { mobDrop: htmlData.mobDrop } : {}),
+            ...(htmlData.currencyCost?.length ? { currencyCost: htmlData.currencyCost } : {}),
+            ...(htmlData.faction ? { faction: htmlData.faction } : {}),
           }
         };
 
       } catch (err) {
-        console.error(`❌ Error processing item ${itemId}:`, err.message);
+        if (err instanceof WowheadBlockedError) throw err;
+        console.error(`Error processing item ${itemId}:`, err.message);
         return { itemId, data: null };
       }
-    }));
+    });
 
     // Record all results
     results.forEach(result => {
@@ -1200,22 +1890,60 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
     await fs.mkdir(outputDir, { recursive: true });
     await fs.writeFile(outputPath, JSON.stringify(recipeItems, null, 2));
     
-    console.log(`\n✅ Saved ${Object.keys(recipeItems).length} recipe items → ${outputPath}`);
+    console.log(`\nSaved ${Object.keys(recipeItems).length} recipe items → ${outputPath}`);
+    await downloadRecipeItemIcons(recipeItems);
     
   } catch (err) {
-    console.error('❌ Error processing recipe items:', err.message);
+    if (err instanceof WowheadBlockedError) throw err;
+    console.error('Error processing recipe items:', err.message);
   }
   
   return recipeItems;
 };
 
+/** Save recipe-item icons beside the other material icons, named by item id. */
+const downloadRecipeItemIcons = async (recipeItems) => {
+  const projectRoot = path.join(__dirname, '..', '..');
+  const iconDir = path.join(projectRoot, 'public', 'icons', 'materials');
+  await fs.mkdir(iconDir, { recursive: true });
+  const pending = [];
+  for (const [id, item] of Object.entries(recipeItems)) {
+    if (!item?.icon) continue;
+    const targetPath = path.join(iconDir, `${id}.jpg`);
+    try {
+      await fs.access(targetPath);
+    } catch {
+      pending.push({ id, icon: item.icon, targetPath });
+    }
+  }
+  if (pending.length === 0) return;
+  console.log(`Downloading ${pending.length} recipe item icons...`);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < pending.length) {
+      const job = pending[cursor++];
+      const iconUrl = `https://wow.zamimg.com/images/wow/icons/large/${job.icon}.jpg`;
+      try {
+        const response = await fetch(iconUrl, { headers: { 'User-Agent': WOWHEAD_USER_AGENT }, redirect: 'follow' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        await streamPipeline(response.body, createWriteStream(job.targetPath));
+      } catch (err) {
+        console.warn(`Failed to download icon for recipe item ${job.id}: ${err.message}`);
+      }
+    }
+  };
+  const workers = Math.min(32, pending.length);
+  await Promise.all(Array.from({ length: workers }, () => worker()));
+  console.log(`Recipe item icons saved to ${iconDir}`);
+};
+
 (async () => {
   // When only zip phase is requested, run it standalone (no browser or materials needed)
-  const onlyZip = phases.zip && !phases.scrape && !phases.enrich && !phases.downloadIcons;
+  const onlyZip = phases.zip && !phases.scrape && !phases.enrich && !phases.downloadIcons && !phases.recipeItems;
   if (onlyZip) {
     console.log('Running zip phase only...\n');
     await zipIcons();
-    console.log('\n✅ Zip phase complete!');
+    console.log('\nZip phase complete!');
     process.exit(0);
   }
 
@@ -1225,7 +1953,7 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
     // Load existing materials (version-specific or legacy single file)
     const versionDirsToProcess = requestedVersion
       ? [VERSION_TO_DIR[requestedVersion]]
-      : ['vanilla', 'tbc'];
+      : Object.values(VERSION_TO_DIR);
     let loadedFromLegacy = false;
     for (const versionDir of versionDirsToProcess) {
       const versionPath = path.join(outputDirMaterials, versionDir, 'materials.json');
@@ -1237,7 +1965,7 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
           globalMaterialIds.add(id);
           globalMaterialData[id] = parsed[id];
         }
-        console.log(`📦 Loaded ${Object.keys(parsed).length} materials from ${versionDir}/materials.json`);
+        console.log(`Loaded ${Object.keys(parsed).length} materials from ${versionDir}/materials.json`);
       } catch {
         if (!loadedFromLegacy) {
           try {
@@ -1250,10 +1978,10 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
               globalMaterialIds.add(id);
               globalMaterialData[id] = parsed[id];
             }
-            console.log(`📦 Loaded ${Object.keys(parsed).length} materials from legacy materials.json`);
+            console.log(`Loaded ${Object.keys(parsed).length} materials from legacy materials.json`);
             loadedFromLegacy = true;
           } catch {
-            console.log(`📁 No existing materials found, starting fresh.`);
+            console.log(`No existing materials found, starting fresh.`);
           }
         }
       }
@@ -1269,8 +1997,8 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
   if (phases.scrape) {
     if (requestedProfession) {
       if (!PROFESSIONS.includes(requestedProfession)) {
-        console.error(`❌ Invalid profession: ${requestedProfession}`);
-        console.log(`➡️ Valid options: ${PROFESSIONS.join(', ')}`);
+        console.error(`Invalid profession: ${requestedProfession}`);
+        console.log(`Valid options: ${PROFESSIONS.join(', ')}`);
         await browser.close();
         process.exit(1);
       }
@@ -1279,43 +2007,85 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
       for (const profession of PROFESSIONS) {
         await scrapeProfession(browser, profession);
       }
-      console.log(`\n🎉 All professions scraped successfully.`);
+      console.log(`\nAll professions scraped successfully.`);
     }
     
-    // ✅ Write materials.json per version (vanilla/tbc)
+    // Merge into the file on disk so parallel profession runs keep each other's new ids.
     await fs.mkdir(outputDirMaterials, { recursive: true });
     for (const versionDir of versionDirsToProcess) {
       const data = globalMaterialDataByVersion[versionDir] || {};
       const versionPath = path.join(outputDirMaterials, versionDir, 'materials.json');
       await fs.mkdir(path.dirname(versionPath), { recursive: true });
-      await fs.writeFile(versionPath, JSON.stringify(data, null, 2));
-      console.log(`✅ Saved ${Object.keys(data).length} materials (${versionDir}) → ${versionPath}`);
+      const lockPath = `${versionPath}.lock`;
+      let locked = false;
+      for (let attempt = 0; attempt < 40 && !locked; attempt++) {
+        try {
+          await fs.writeFile(lockPath, String(process.pid), { flag: 'wx' });
+          locked = true;
+        } catch {
+          await new Promise((resolve) => setTimeout(resolve, 50 + attempt * 25));
+        }
+      }
+      if (!locked) throw new Error(`Could not lock ${versionPath}`);
+      try {
+        let current = {};
+        try {
+          current = JSON.parse(await fs.readFile(versionPath, 'utf8'));
+        } catch {
+          current = {};
+        }
+        for (const [id, value] of Object.entries(data)) {
+          if (!current[id] || (!current[id].name && value?.name)) current[id] = value;
+        }
+        await fs.writeFile(versionPath, JSON.stringify(current, null, 2));
+        console.log(`Saved ${Object.keys(current).length} materials (${versionDir}) → ${versionPath}`);
+      } finally {
+        await fs.unlink(lockPath).catch(() => {});
+      }
     }
   } else {
-    console.log(`⏭️  Skipping scrape phase`);
+    console.log(`Skipping scrape phase`);
+  }
+
+  if (phases.recipeItems) {
+    const professionsToProcess = requestedProfession ? [requestedProfession] : PROFESSIONS;
+    for (const versionDir of versionDirsToProcess) {
+      for (const profession of professionsToProcess) {
+        if (versionDir !== 'tbc' && TBC_ONLY_PROFESSIONS.includes(profession)) continue;
+        const recipePath = path.join(__dirname, '..', 'data', 'recipes', versionDir, `${profession}.json`);
+        let recipes;
+        try {
+          recipes = JSON.parse(await fs.readFile(recipePath, 'utf8'));
+        } catch {
+          continue;
+        }
+        await processRecipeItems(profession, recipes, browser, versionDir);
+      }
+    }
   }
 
   // Phase 2: Enrich material data
   if (phases.enrich) {
-    console.log(`\n🔄 Starting material enrichment phase...`);
+    console.log(`\nStarting material enrichment phase...`);
     await enrichMaterialData(browser);
   } else {
-    console.log(`⏭️  Skipping enrichment phase`);
+    console.log(`Skipping enrichment phase`);
   }
 
   // Phase 3: Download icons
   if (phases.downloadIcons) {
+    await backfillMissingIcons(browser, versionDirsToProcess);
     await downloadMaterialIcons();
     
     const professionsToProcess = requestedProfession ? [requestedProfession] : PROFESSIONS;
     for (const versionDir of versionDirsToProcess) {
       for (const profession of professionsToProcess) {
-        if (versionDir === 'vanilla' && TBC_ONLY_PROFESSIONS.includes(profession)) continue;
+        if (versionDir !== 'tbc' && TBC_ONLY_PROFESSIONS.includes(profession)) continue;
         await downloadRecipeIcons(profession, versionDir);
       }
     }
   } else {
-    console.log(`⏭️  Skipping icon download phase`);
+    console.log(`Skipping icon download phase`);
   }
 
   await browser.close();
@@ -1325,8 +2095,15 @@ const processRecipeItems = async (profession, recipes, browser, versionDir) => {
     console.log(`\nZipping icon directories...`);
     await zipIcons();
   } else {
-    console.log(`⏭️  Skipping zip phase`);
+    console.log(`Skipping zip phase`);
   }
 
-  console.log(`\n✅ All selected phases complete!`);
-})();
+  console.log(`\nAll selected phases complete!`);
+})().catch(async (err) => {
+  if (err instanceof WowheadBlockedError) {
+    console.error(`\n${err.message}`);
+    process.exit(2);
+  }
+  console.error(err);
+  process.exit(1);
+});

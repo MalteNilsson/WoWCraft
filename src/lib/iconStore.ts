@@ -64,7 +64,7 @@ function openDB(): Promise<IDBDatabase> {
   });
 }
 
-async function getZipBlobFromDB(category: string): Promise<Blob | undefined> {
+async function getZipBlobFromDB(category: string): Promise<{ blob: Blob; filename?: string } | undefined> {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_ZIPS, 'readonly');
@@ -72,16 +72,17 @@ async function getZipBlobFromDB(category: string): Promise<Blob | undefined> {
     req.onerror = () => reject(req.error);
     req.onsuccess = () => {
       db.close();
-      resolve(req.result?.blob);
+      const row = req.result;
+      resolve(row?.blob ? { blob: row.blob, filename: row.filename } : undefined);
     };
   });
 }
 
-async function putZipBlobInDB(category: string, blob: Blob): Promise<void> {
+async function putZipBlobInDB(category: string, blob: Blob, filename: string): Promise<void> {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_ZIPS, 'readwrite');
-    tx.objectStore(STORE_ZIPS).put({ key: category, blob });
+    tx.objectStore(STORE_ZIPS).put({ key: category, blob, filename });
     tx.oncomplete = () => {
       db.close();
       resolve();
@@ -99,18 +100,18 @@ async function loadZip(category: string): Promise<JSZip> {
 
   const load = async (): Promise<JSZip> => {
     try {
-      // Try IndexedDB cache first (no network on repeat visits)
-      const cachedBlob = await getZipBlobFromDB(category);
+      const manifest = await getManifest();
+      const filename = getZipFilename(category, manifest);
+      const cached = await getZipBlobFromDB(category);
       let blob: Blob;
-      if (cachedBlob) {
-        blob = cachedBlob;
+      const manifestName = manifest[category];
+      if (cached?.blob && (!manifestName || cached.filename === manifestName)) {
+        blob = cached.blob;
       } else {
-        const manifest = await getManifest();
-        const filename = getZipFilename(category, manifest);
         const res = await fetch(`/icons/${filename}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         blob = await res.blob();
-        await putZipBlobInDB(category, blob);
+        await putZipBlobInDB(category, blob, filename);
       }
       const zip = await JSZip.loadAsync(blob);
       zipCache.set(category, zip);
