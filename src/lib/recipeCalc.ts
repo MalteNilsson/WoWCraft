@@ -352,6 +352,17 @@ const RECIPE_COST_MATERIAL_OVERRIDES: Record<number, { materialId: number; quant
   12700: { materialId: 12359, quantity: 20 }, // Plans: Imperial Plate Boots = 20 Thorium Bars
 };
 
+/** Vendor goods the planner should buy from an NPC even when the auction house is cheaper. */
+export const forceVendorItems = new Set<number>([
+  2880, // Weak Flux
+  3466, // Strong Flux
+  18567, // Elemental Flux
+  3371, // Empty Vial
+  3372, // Leaded Vial
+  8925, // Crystal Vial
+  18256, // Imbued Vial
+]);
+
 export const forceAhOnlyItems = new Set<number>([
   12360, // Arcanite Bar
   12808, // Essence of Undeath
@@ -380,7 +391,8 @@ export const forceAhOnlyItems = new Set<number>([
 
 /** Per-item vendor price. Only items an NPC actually sells have a buy price stored. */
 function unitVendorPrice(itemData: MaterialInfo | undefined): number {
-  const raw = itemData?.buyPrice;
+  if (!itemData) return Infinity;
+  const raw = itemData.buyPrice;
   if (typeof raw !== 'number' || raw <= 0) return Infinity;
   if (itemData.vendorStack && itemData.vendorStack > 1) return raw / itemData.vendorStack;
   return raw;
@@ -394,6 +406,7 @@ function cheapestBuyPrice(
   itemData: MaterialInfo | undefined
 ): number {
   if (forceAhOnlyItems.has(itemId)) return ahPrice;
+  if (forceVendorItems.has(itemId) && vendorPrice < Infinity) return vendorPrice;
   if (itemData?.limitedStock) return ahPrice < Infinity ? ahPrice : Infinity;
   return Math.min(ahPrice, vendorPrice);
 }
@@ -408,6 +421,7 @@ export function materialBuySourceFromPrices(
   itemData: MaterialInfo | undefined
 ): MaterialBuySource | null {
   if (!(cheapestBuyPrice(itemId, ahPrice, vendorPrice, itemData) < Infinity)) return null;
+  if (forceVendorItems.has(itemId) && vendorPrice < Infinity) return 'vendor';
   if (!forceAhOnlyItems.has(itemId) && !itemData?.limitedStock && vendorPrice < Infinity && vendorPrice <= ahPrice) {
     return 'vendor';
   }
@@ -581,6 +595,8 @@ export function buildMaterialTree(
 
   const buyCost = cheapestBuyPrice(itemId, ahPrice, vendorPrice, info);
   const buySource = materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, info);
+  const ahCost = isListed ? ahPrice * quantity : null;
+  const vendorCost = vendorPrice < Infinity ? vendorPrice * quantity : null;
 
   let craftCost = Infinity;
   let children: MaterialTreeNode[] = [];
@@ -599,6 +615,8 @@ export function buildMaterialTree(
       children: [],
       noAhPrice: usedCrafting,
       buySource,
+      ahCost,
+      vendorCost,
     };
   }
 
@@ -613,6 +631,8 @@ export function buildMaterialTree(
       children: [],
       noAhPrice: usedCrafting,
       buySource,
+      ahCost,
+      vendorCost,
     };
   }
 
@@ -659,5 +679,7 @@ export function buildMaterialTree(
     children,
     noAhPrice: usedCrafting,
     buySource,
+    ahCost,
+    vendorCost,
   };
 }

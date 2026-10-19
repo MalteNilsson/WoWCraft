@@ -113,5 +113,9 @@ export type MaterialTreeNode = {
   children: MaterialTreeNode[];
   /** Where the buy cost comes from. Null when the item has no vendor or auction price. */
   buySource?: 'vendor' | 'auction' | null;
+  /** Total auction-house cost for this quantity. Null when the item is not listed. */
+  ahCost?: number | null;
+  /** Total vendor cost for this quantity. Null when no NPC sells it. */
+  vendorCost?: number | null;
   noAhPrice?: boolean;
 };

@@ -1459,11 +1459,16 @@ const enrichMaterialData = async (browser) => {
         const itemLevel = itemLevelFromXmlItem(item);
         const link = item?.link?.[0]?.trim() || '';
         let vendorPrice = null;
+        let sellPrice = null;
         const jsonEquipStr = item?.jsonEquip?.[0];
         if (typeof jsonEquipStr === 'string') {
           try {
             const json = JSON.parse(`{${jsonEquipStr}}`);
             vendorPrice = json.buyprice ?? null;
+            if (json.sellprice != null && json.sellprice !== '') {
+              const parsedSell = Number(json.sellprice);
+              if (Number.isFinite(parsedSell)) sellPrice = parsedSell;
+            }
           } catch {}
         }
         let icon = '';
@@ -1487,7 +1492,7 @@ const enrichMaterialData = async (browser) => {
             createdBy = { spellId, spellName, reagents, minCount, maxCount };
           }
         }
-        return { id, name, quality, itemClass, classId, subclass, icon, slot, link, vendorPrice, createdBy, itemLevel };
+        return { id, name, quality, itemClass, classId, subclass, icon, slot, link, vendorPrice, sellPrice, createdBy, itemLevel };
       } catch (err) {
         if (err instanceof WowheadBlockedError) throw err;
         console.warn(`Error fetching item ${id}: ${err.message}`);
@@ -1516,7 +1521,7 @@ const enrichMaterialData = async (browser) => {
       }));
       for (const r of results) {
         if (r.error) continue;
-        const { id, name, quality, itemClass, subclass, icon, slot, link, vendorPrice, createdBy, itemLevel } = r;
+        const { id, name, quality, itemClass, subclass, icon, slot, link, vendorPrice, sellPrice, createdBy, itemLevel } = r;
         if (!name || name.trim() === '') {
           console.warn(`    No name found for item ${id}, skipping`);
           continue;
@@ -1537,6 +1542,7 @@ const enrichMaterialData = async (browser) => {
           slot,
           link,
           vendorPrice: price,
+          ...(typeof sellPrice === 'number' ? { sellPrice } : {}),
           ...(limitedStock ? { limitedStock: true } : {}),
           ...(createdBy ? { createdBy } : {}),
           ...(itemLevel != null ? { itemLevel } : {}),
@@ -1567,28 +1573,38 @@ const enrichMaterialData = async (browser) => {
       for (const recipe of recipes) {
         const producedId = recipe.produces?.id;
         if (!producedId) continue;
-        const existingLevel = materials[String(producedId)]?.itemLevel;
-        if (typeof existingLevel === 'number' && !Number.isNaN(existingLevel)) continue;
+        const existing = materials[String(producedId)];
+        const hasLevel = typeof existing?.itemLevel === 'number' && !Number.isNaN(existing.itemLevel);
+        const hasSell = typeof existing?.sellPrice === 'number';
+        if (hasLevel && hasSell) continue;
         producedIds.add(String(producedId));
       }
     }
     const producedList = [...producedIds];
-    console.log(`[${versionDir}] Recording item level for ${producedList.length} crafted items...`);
-    let itemLevelsRecorded = 0;
+    console.log(`[${versionDir}] Recording item level and vendor sell price for ${producedList.length} crafted items...`);
+    let craftedStatsRecorded = 0;
     for (let i = 0; i < producedList.length; i += ENRICH_CONCURRENCY) {
       const batch = producedList.slice(i, i + ENRICH_CONCURRENCY);
       const batchNum = Math.floor(i / ENRICH_CONCURRENCY) + 1;
       const totalBatches = Math.ceil(producedList.length / ENRICH_CONCURRENCY);
-      console.log(`  [${versionDir}] Item level batch ${batchNum}/${totalBatches} (${batch.length} items)...`);
+      console.log(`  [${versionDir}] Crafted item batch ${batchNum}/${totalBatches} (${batch.length} items)...`);
       const results = await Promise.all(batch.map((id) => fetchOneXml(id)));
       for (const result of results) {
-        if (result.error || result.itemLevel == null) {
-          if (!result.error) console.warn(`    No item level for item ${result.id}`);
-          continue;
-        }
+        if (result.error) continue;
+        const sellPrice = typeof result.sellPrice === 'number' ? result.sellPrice : 0;
         const existing = materials[result.id];
         if (existing) {
-          existing.itemLevel = result.itemLevel;
+          let wrote = false;
+          if (result.itemLevel != null && typeof existing.itemLevel !== 'number') {
+            existing.itemLevel = result.itemLevel;
+            wrote = true;
+          }
+          if (typeof existing.sellPrice !== 'number') {
+            existing.sellPrice = sellPrice;
+            wrote = true;
+          }
+          if (!wrote && result.itemLevel == null) console.warn(`    No item level for item ${result.id}`);
+          if (wrote) craftedStatsRecorded += 1;
         } else if (result.name && result.name.trim()) {
           materials[result.id] = {
             name: result.name,
@@ -1599,17 +1615,17 @@ const enrichMaterialData = async (browser) => {
             slot: result.slot,
             link: result.link,
             vendorPrice: result.vendorPrice,
-            itemLevel: result.itemLevel,
+            sellPrice,
+            ...(result.itemLevel != null ? { itemLevel: result.itemLevel } : {}),
           };
+          craftedStatsRecorded += 1;
         } else {
           console.warn(`    No name found for item ${result.id}, skipping`);
-          continue;
         }
-        itemLevelsRecorded += 1;
       }
       await fs.writeFile(materialPath, JSON.stringify(materials, null, 2));
     }
-    console.log(`[${versionDir}] Recorded item level on ${itemLevelsRecorded} crafted items`);
+    console.log(`[${versionDir}] Recorded item level or vendor sell price on ${craftedStatsRecorded} crafted items`);
 
     await enrichRecipeCurrencyCosts(browser, versionDir);
       } catch (err) {

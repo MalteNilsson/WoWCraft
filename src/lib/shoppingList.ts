@@ -2,20 +2,26 @@ export type ShoppingListItem = {
   itemId: number;
   name?: string;
   quantity?: number;
+  source?: 'vendor' | 'auction';
 };
 
 /** Empty Auctionator advanced-search fields, then the quantity. `"Name";;;;;;;;;;;;;84` */
 const AUCTIONATOR_QUANTITY_PADDING = ';;;;;;;;;;;;;';
 
-function shoppingQuantity(quantity: number | undefined): number {
+export function shoppingQuantity(quantity: number | undefined): number {
   if (quantity == null || !Number.isFinite(quantity) || quantity <= 0) return 1;
   const cleaned = Math.round(quantity * 1000) / 1000;
   return Math.max(1, Math.ceil(cleaned));
 }
 
+/** Name Auctionator stores for the imported list, including the selected skill span. */
+export function auctionatorListName(profession: string, skill: number, target: number): string {
+  return `WoWCraft ${profession} ${skill}-${target}`.replace(/[\r\n^]/g, ' ').trim();
+}
+
 /** Auctionator shopping-tab import. First field is the list name; each later field is an exact item search with a quantity. */
 export function auctionatorShoppingList(profession: string, skill: number, target: number, items: ShoppingListItem[]): string {
-  const listName = `WoWCraft ${profession} ${skill}-${target}`.replace(/[\r\n^]/g, ' ').trim();
+  const listName = auctionatorListName(profession, skill, target);
   const terms = items.flatMap((item) => {
     const name = (item.name || '').trim().replace(/["^]/g, '');
     if (!name) return [];

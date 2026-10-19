@@ -32,7 +32,7 @@ import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
 import { makeDynamicPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
-import { auctionatorShoppingList, copyText, tsmShoppingList } from '@/lib/shoppingList';
+import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
@@ -319,14 +319,53 @@ function MobDropCostHint() {
   );
 }
 
-function SignedCost({ copper }: { copper: number }) {
-  if (copper > 0) {
-    return <span className="text-red-400">−<FormatMoney copper={copper} /></span>;
+function CompactMoney({ copper }: { copper: number }) {
+  const rounded = Math.round(Math.abs(copper));
+  const gold = Math.floor(rounded / 10000);
+  const silver = Math.floor((rounded % 10000) / 100);
+  const copperCoins = rounded % 100;
+  if (gold === 0 && silver === 0) {
+    return <span className="text-orange-400">{copperCoins}c</span>;
   }
-  if (copper < 0) {
-    return <span className="text-green-400">+<FormatMoney copper={-copper} /></span>;
+  return (
+    <span className="inline-flex items-baseline gap-0.5">
+      {gold > 0 && <span className="text-yellow-400">{gold}g</span>}
+      <span className="text-gray-300">{gold > 0 ? String(silver).padStart(2, '0') : silver}s</span>
+      <span className="text-orange-400">{String(copperCoins).padStart(2, '0')}c</span>
+    </span>
+  );
+}
+
+function CostBox({ copper, className = '' }: { copper: number; className?: string }) {
+  if (!Number.isFinite(copper)) {
+    return (
+      <span className={`inline-flex items-center justify-center whitespace-nowrap rounded border border-red-400/25 bg-red-400/5 px-1.5 py-0.5 font-semibold text-red-300/80 ${className}`}>
+        —
+      </span>
+    );
   }
-  return <FormatMoney copper={0} />;
+  const gain = copper < 0;
+  const spend = copper > 0;
+  const tone = gain
+    ? 'border-emerald-400/25 bg-emerald-400/5'
+    : spend
+      ? 'border-red-400/25 bg-red-400/5'
+      : 'border-neutral-700 bg-neutral-800/60';
+  return (
+    <span className={`inline-flex items-center justify-center gap-1 whitespace-nowrap rounded border px-1.5 py-1 font-semibold leading-none ${tone} ${className}`}>
+      {gain && <span className="text-emerald-300/70">+</span>}
+      {spend && <span className="text-red-300/70">−</span>}
+      <CompactMoney copper={copper} />
+    </span>
+  );
+}
+
+function SkillBox({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return (
+    <span className={`inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded border border-neutral-700 bg-neutral-800/60 px-1.5 py-1 text-[12px] font-semibold leading-none desktop-layout:text-[15px] ${className}`}>
+      {children}
+    </span>
+  );
 }
 
 function MaterialSourceBadge({ source, className = '' }: { source?: 'vendor' | 'auction' | null; className?: string }) {
@@ -341,6 +380,170 @@ function MaterialSourceBadge({ source, className = '' }: { source?: 'vendor' | '
     >
       {vendor ? 'Vendor' : 'Auction House'}
     </span>
+  );
+}
+
+function ShoppingListImport({
+  profession,
+  skill,
+  target,
+  items,
+}: {
+  profession: string;
+  skill: number;
+  target: number;
+  items: ShoppingListItem[];
+}) {
+  const [copied, setCopied] = useState<'auctionator' | 'tsm' | 'weakaura' | 'weakaura-failed' | null>(null);
+  const [encoding, setEncoding] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
+  const timer = useRef<number | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [helpBox, setHelpBox] = useState<{ top: number; left: number; width: number } | null>(null);
+  const listName = auctionatorListName(profession, skill, target);
+  const empty = items.length === 0;
+
+  useEffect(() => () => {
+    if (timer.current != null) window.clearTimeout(timer.current);
+  }, []);
+
+  useEffect(() => {
+    if (!helpOpen) return;
+    const place = () => {
+      const rect = rootRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const width = Math.min(rect.width, window.innerWidth - 16);
+      const left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8));
+      setHelpBox({ top: rect.top - 8, left, width });
+    };
+    place();
+    window.addEventListener('resize', place);
+    window.addEventListener('scroll', place, true);
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setHelpOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('resize', place);
+      window.removeEventListener('scroll', place, true);
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [helpOpen]);
+
+  const markCopied = (kind: 'auctionator' | 'tsm' | 'weakaura' | 'weakaura-failed') => {
+    setCopied(kind);
+    if (timer.current != null) window.clearTimeout(timer.current);
+    timer.current = window.setTimeout(() => {
+      timer.current = null;
+      setCopied(null);
+    }, 2000);
+  };
+
+  const copy = async (kind: 'auctionator' | 'tsm' | 'weakaura') => {
+    if (kind === 'weakaura') {
+      setEncoding(true);
+      await new Promise((resolve) => window.setTimeout(resolve, 0));
+      try {
+        const { weakAuraShoppingList } = await import('@/lib/weakaura/encode');
+        const text = await weakAuraShoppingList(profession, skill, target, items);
+        if (!text || !(await copyText(text))) {
+          markCopied('weakaura-failed');
+          return;
+        }
+        markCopied('weakaura');
+      } catch {
+        markCopied('weakaura-failed');
+      } finally {
+        setEncoding(false);
+      }
+      return;
+    }
+    const text = kind === 'auctionator'
+      ? auctionatorShoppingList(profession, skill, target, items)
+      : tsmShoppingList(items);
+    if (!text || !(await copyText(text))) return;
+    markCopied(kind);
+  };
+
+  return (
+    <div ref={rootRef} className="flex-shrink-0 border-t border-neutral-800 pt-3">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <div className="min-w-0">
+          <div className="text-[11px] font-medium uppercase tracking-wide text-neutral-500">Shopping list</div>
+          <div className="truncate text-sm font-semibold text-neutral-100" title={listName}>{listName}</div>
+        </div>
+        <button
+          type="button"
+          aria-expanded={helpOpen}
+          aria-label="How to import this shopping list"
+          onClick={() => setHelpOpen((open) => !open)}
+          className="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-neutral-600 bg-neutral-800 text-sm font-semibold text-neutral-300 transition-colors hover:bg-neutral-700 hover:text-white"
+        >
+          ?
+        </button>
+      </div>
+      <div className="flex flex-col gap-2">
+        <button
+          type="button"
+          disabled={empty || encoding}
+          onClick={() => copy('weakaura')}
+          className="flex w-full items-center justify-center gap-1.5 rounded border border-[#6b3fa0] bg-[#2a1840] px-2 py-2 text-xs font-semibold text-[#d7b3ff] transition-colors hover:bg-[#3a2258] disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {encoding || copied === 'weakaura' || copied === 'weakaura-failed' ? null : (
+            <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 shrink-0 text-[#e3b056]" fill="currentColor" aria-hidden="true">
+              <path d="M10 1.6 12.4 6.5l5.4.8-3.9 3.8.9 5.4L10 14.1l-4.8 2.4.9-5.4L2.2 7.3l5.4-.8L10 1.6z" />
+            </svg>
+          )}
+          {encoding ? 'Copying' : copied === 'weakaura' ? 'Copied' : copied === 'weakaura-failed' ? 'Failed' : 'Recommended - WeakAura Shopping List'}
+        </button>
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            type="button"
+            disabled={empty}
+            onClick={() => copy('auctionator')}
+            className="rounded border border-[#8a6a2f] bg-[#3a2c12] px-2 py-2 text-xs font-semibold text-[#f6d98a] transition-colors hover:bg-[#4a3918] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {copied === 'auctionator' ? 'Copied' : 'Auctionator'}
+          </button>
+          <button
+            type="button"
+            disabled={empty}
+            onClick={() => copy('tsm')}
+            className="rounded border border-[#1f7a68] bg-[#102e2a] px-2 py-2 text-xs font-semibold text-[#9cf0e0] transition-colors hover:bg-[#164038] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {copied === 'tsm' ? 'Copied' : 'TSM'}
+          </button>
+        </div>
+      </div>
+      {helpOpen && helpBox && createPortal(
+        <div className="fixed inset-0 z-[80]" onMouseDown={() => setHelpOpen(false)}>
+          <div
+            role="dialog"
+            aria-label="How to import this shopping list"
+            className="fixed -translate-y-full rounded border border-neutral-700 bg-neutral-900 p-3 text-xs leading-relaxed text-neutral-300 shadow-lg"
+            style={{ top: helpBox.top, left: helpBox.left, width: helpBox.width }}
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <div className="mb-2 font-semibold text-neutral-100">How to import</div>
+            <div className="mb-1 font-semibold text-[#f6d98a]">Auctionator</div>
+            <p className="mb-2">
+              Open the auction house, go to the Shopping tab, and click Import. Paste the copied text.
+              The list is saved as {listName}. Search that list. The number at the end of each line is how many to buy.
+            </p>
+            <div className="mb-1 font-semibold text-[#9cf0e0]">TSM</div>
+            <p className="mb-2">
+              Open the auction house and paste the copied text into the TSM Shopping search box.
+              Each <span className="text-neutral-100">i:2447/x84</span> term is one item, and the number after /x is how many to buy before that item drops out of the results.
+            </p>
+            <div className="mb-1 font-semibold text-[#d7b3ff]">WeakAura</div>
+            <p>
+              Open WeakAuras and click Import. Paste the copied text. The aura is named {listName} and sits at the top left. Each row starts with the material, then Vendor in green or AH in blue. Red is how many you still need, yellow is how many you have bought and not yet picked up, and green is how many are in your bags. Yellow goes down as those items enter your bags, and it resets if you import this list again.
+            </p>
+          </div>
+        </div>,
+        document.body
+      )}
+    </div>
   );
 }
 
@@ -472,6 +675,47 @@ function RecipeDetailsSection({
   );
 }
 
+function MaterialPriceLines({
+  ahCost,
+  vendorCost,
+  recommended,
+}: {
+  ahCost?: number | null;
+  vendorCost?: number | null;
+  recommended?: 'vendor' | 'auction' | null;
+}) {
+  const lines = [
+    ahCost != null && Number.isFinite(ahCost) && ahCost > 0 ? { label: 'Auction House', value: ahCost, className: 'text-[#7dd3fc]', source: 'auction' as const } : null,
+    vendorCost != null && Number.isFinite(vendorCost) && vendorCost > 0 ? { label: 'Vendor', value: vendorCost, className: 'text-emerald-300', source: 'vendor' as const } : null,
+  ].filter((line): line is { label: string; value: number; className: string; source: 'vendor' | 'auction' } => line != null);
+  if (!lines.length) return null;
+  const marked = lines.length > 1 && recommended && lines.some((line) => line.source === recommended)
+    ? recommended
+    : null;
+  return (
+    <div className="grid grid-cols-[auto_auto_auto] items-baseline justify-end gap-x-2 gap-y-0.5">
+      {lines.map((line) => (
+        <span key={line.label} className="contents">
+          <span className="text-right">
+            {line.source === marked && (
+              <span className="inline-flex items-center gap-0.5 text-[10px] font-semibold text-[#e3b056] desktop-layout:text-xs">
+                <svg viewBox="0 0 20 20" className="h-3 w-3" fill="currentColor" aria-hidden="true">
+                  <path d="M10 1.6 12.4 6.5l5.4.8-3.9 3.8.9 5.4L10 14.1l-4.8 2.4.9-5.4L2.2 7.3l5.4-.8L10 1.6z" />
+                </svg>
+                Recommended
+              </span>
+            )}
+          </span>
+          <span className={`text-right text-[10px] font-semibold desktop-layout:text-xs ${line.className}`}>{line.label}</span>
+          <span className="text-right text-sm desktop-layout:text-base">
+            <SafeMoney value={line.value} />
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function MaterialCard({
   node,
   depth = 0,
@@ -541,7 +785,9 @@ function MaterialCard({
           </a>
         </div>
         <div className="flex flex-col items-end text-right">
-          {node.noAhPrice ? (
+          {(node.ahCost != null && Number.isFinite(node.ahCost)) || (node.vendorCost != null && Number.isFinite(node.vendorCost)) ? (
+            <MaterialPriceLines ahCost={node.ahCost} vendorCost={node.vendorCost} recommended={node.buySource} />
+          ) : node.noAhPrice ? (
             <div className="flex flex-col items-end text-right text-yellow-400 font-medium text-xs desktop-layout:text-sm">
               <div>⚠️ No auction listing — crafting cost used instead</div>
               <div><SafeMoney value={node.craftCost} /></div>
@@ -550,18 +796,7 @@ function MaterialCard({
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-end text-right">
-              <span className="text-yellow-300 text-sm desktop-layout:text-base font-normal">
-                <SafeMoney
-                  value={node.buyCost}
-                  fallback="⚠️ No price available"
-                />
-              </span>
-              <span className="text-[10px] desktop-layout:text-xs text-neutral-400 mt-0.5 desktop-layout:mt-1">
-                Per Craft: <SafeMoney value={node.buyCost / expCrafts} />
-              </span>
-              <MaterialSourceBadge source={node.buySource} className="mt-1" />
-            </div>
+            <span className="text-red-400 text-xs font-medium">⚠️ No price available</span>
           )}
 
           {Number.isFinite(node.buyCost) &&
@@ -1864,8 +2099,6 @@ const renderXTick = selected
   }, [selectedVersion, realms, selectedRealm]);
 
   const [showMaterials, setShowMaterials] = useState(false);
-  const [copiedShoppingList, setCopiedShoppingList] = useState<'auctionator' | 'tsm' | null>(null);
-  const copiedShoppingTimer = useRef<number | null>(null);
 
   // Desktop (landscape): smaller thumb hit area; mobile (portrait): larger for touch targets
   const [isDesktop, setIsDesktop] = useState(false);
@@ -1928,6 +2161,7 @@ const renderXTick = selected
   // instead of planner's batch-based craft counts
   const { displayedMaterialTotals, displayedTotalCost } = useMemo(() => {
     const materialTotals: Record<number, number> = {};
+    const materialOrder: number[] = [];
     let totalCost = 0;
     
     for (let i = 0; i < plan.steps.length; i++) {
@@ -1949,33 +2183,25 @@ const renderXTick = selected
           const numItemId = Number(itemId);
           if ((ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) ||
               (ENGINEERING_TOOL_SPELL_IDS.has(s.recipe.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(numItemId))) continue;
+          if (materialTotals[numItemId] == null) materialOrder.push(numItemId);
           materialTotals[numItemId] = (materialTotals[numItemId] || 0) + quantity * displayedCrafts;
         }
       }
     }
     
     return {
-      displayedMaterialTotals: Object.entries(materialTotals).map(([itemId, quantity]) => ({
-        itemId: Number(itemId),
-        quantity,
-        name: materialInfo[Number(itemId)]?.name
-      })).sort((a, b) => a.itemId - b.itemId),
+      displayedMaterialTotals: materialOrder.map((id) => {
+        const source = materialBuySource(id, prices, materialInfo, useMarketValue);
+        return {
+          itemId: id,
+          quantity: materialTotals[id],
+          name: materialInfo[id]?.name,
+          source: source ?? undefined,
+        };
+      }),
       displayedTotalCost: totalCost
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
-
-  const copyShoppingList = useCallback(async (kind: 'auctionator' | 'tsm') => {
-    const text = kind === 'auctionator'
-      ? auctionatorShoppingList(selectedProfession, committedSkill, committedTarget, displayedMaterialTotals)
-      : tsmShoppingList(displayedMaterialTotals);
-    if (!text || !(await copyText(text))) return;
-    setCopiedShoppingList(kind);
-    if (copiedShoppingTimer.current != null) window.clearTimeout(copiedShoppingTimer.current);
-    copiedShoppingTimer.current = window.setTimeout(() => {
-      copiedShoppingTimer.current = null;
-      setCopiedShoppingList(null);
-    }, 2000);
-  }, [displayedMaterialTotals, selectedProfession, committedSkill, committedTarget]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -2820,6 +3046,17 @@ const renderXTick = selected
               >
                 About Project
               </Link>
+              <a
+                href="https://discord.gg/fN7rVpFr6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center gap-1.5 rounded border border-[#3d4278] bg-[#2a2d52] px-3 py-2 text-sm font-medium text-[#c9cdf8] transition-colors hover:bg-[#343868] hover:text-white desktop-layout:text-base"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="currentColor" aria-hidden="true">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                </svg>
+                Discord
+              </a>
             </div>
             <div className="hidden desktop-layout:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
               {tabs.map((tab) => (
@@ -2844,8 +3081,8 @@ const renderXTick = selected
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
               <span className="flex-1 min-w-0">Recipe</span>
-              <span className="w-16 desktop-layout:w-28 text-right shrink-0">Cost</span>
-              <span className="w-16 desktop-layout:w-24 text-center shrink-0">Skill</span>
+              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0">Cost</span>
+              <span className="w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0">Skill</span>
             </div>
           </div>
 
@@ -2853,7 +3090,7 @@ const renderXTick = selected
           <div className="flex-1 flex flex-col min-h-0">
             <section 
               ref={scrollRef}
-              className="flex-1 overflow-y-scroll pb-8
+              className={`flex-1 overflow-y-scroll ${view === 'route' ? 'pb-[55px]' : 'pb-8'}
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
                 [&::-webkit-scrollbar-thumb]:bg-neutral-600/40
@@ -2866,7 +3103,7 @@ const renderXTick = selected
                 scrollbar-thin
                 scrollbar-thumb-neutral-600/40
                 hover:scrollbar-thumb-neutral-600/60
-                will-change-scroll-position"
+                will-change-scroll-position`}
               style={{
                 transform: 'translateZ(0)', // Force hardware acceleration
                 backfaceVisibility: 'hidden'
@@ -2986,12 +3223,12 @@ const renderXTick = selected
                                       <RecipeSourceMark recipe={best} materialInfo={materialInfo} />
                                     </span>
                                   </span>
-                                  <span className="text-[13px] desktop-layout:text-[16px]">
-                                    <SignedCost copper={displayedTotalCost} />
+                                  <span className="shrink-0">
+                                    <CostBox copper={displayedTotalCost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
                                   </span>
-                                  <span className={`flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'} bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap`}>
+                                  <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'}`}>
                                     {start} → {end}
-                                  </span>
+                                  </SkillBox>
                                 </div>
 
                                 {/* Alternative cards */}
@@ -3040,9 +3277,9 @@ const renderXTick = selected
                                         <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                           diffColor(committedSkill, alt.recipe.difficulty)
                                         }`} />
-                                        <span className="bg-neutral-700 rounded-full px-1 py-0.5 text-[13px] desktop-layout:text-[16px]">
+                                        <SkillBox className="text-neutral-300">
                                           or {alt.crafts}×
-                                        </span>
+                                        </SkillBox>
                                         <span className="flex min-w-0 flex-1 items-center gap-1 pl-1">
                                           <CachedIcon
                                             category={getRecipeProfession(alt.recipe.id, selectedProfession)}
@@ -3061,8 +3298,8 @@ const renderXTick = selected
                                             <RecipeSourceMark recipe={alt.recipe} materialInfo={materialInfo} />
                                           </span>
                                         </span>
-                                        <span className="text-[13px] desktop-layout:text-[16px]">
-                                          <SignedCost copper={alt.cost} />
+                                        <span className="shrink-0">
+                                          <CostBox copper={alt.cost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
                                         </span>
                                       </motion.div>
                                     ))}
@@ -3111,9 +3348,9 @@ const renderXTick = selected
                                 <RecipeSourceMark recipe={r} materialInfo={materialInfo} />
                               </span>
                             </div>
-                            <span className={`flex-shrink-0 w-16 desktop-layout:w-24 min-w-[4rem] text-center ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'} bg-neutral-800 text-[11px] desktop-layout:text-[16px] px-0 py-0 rounded-full whitespace-nowrap`}>
+                            <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'}`}>
                               {getEffectiveMinSkill(r)}
-                            </span>
+                            </SkillBox>
                           </div>
                         ))}
                       </div>
@@ -3137,20 +3374,18 @@ const renderXTick = selected
                       ease: "easeOut"
                     }}
                     className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
-                              border-t border-neutral-700 py-1 px-4 desktop-layout:py-1.5 desktop-layout:px-30"
+                              border-t border-neutral-700 py-2 px-4 desktop-layout:py-2.5 desktop-layout:px-10"
                   >
-                    <div className="text-sm desktop-layout:text-xl font-semibold flex items-center justify-between gap-2 min-w-0">
-                      <div className="flex items-center justify-start min-w-0 flex-1 overflow-hidden pl-[55px] desktop-layout:pl-0 pr-3">
-                        <span className="text-neutral-400 shrink-0">Total: </span>
-                        <span className="min-w-0 truncate">
-                          <SignedCost copper={displayedTotalCost} />
-                        </span>
+                    <div className="text-sm desktop-layout:text-xl font-semibold flex items-center justify-between gap-1 min-w-0">
+                      <div className="flex items-center justify-start gap-2 min-w-0 overflow-hidden pl-[55px] desktop-layout:pl-[75px]">
+                        <span className="text-neutral-400 shrink-0">Total</span>
+                        <CostBox copper={displayedTotalCost} className="min-w-0 text-[13px] desktop-layout:text-lg" />
                       </div>
                       <button
                         onClick={() => setShowMaterials(!showMaterials)}
-                        className="flex items-center gap-1 shrink-0 px-2 py-1 text-xs desktop-layout:text-sm desktop-layout:px-3 desktop-layout:py-1.5 text-neutral-200 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded font-semibold transition-colors border border-neutral-600"
+                        className="flex shrink-0 items-center gap-1 whitespace-nowrap px-1.5 py-1 text-xs desktop-layout:px-2 desktop-layout:py-1.5 desktop-layout:text-sm font-semibold transition-colors rounded border border-[#e3b056]/70 bg-[#e3b056]/15 text-[#e3b056] hover:bg-[#e3b056]/25 hover:text-[#f3d7a1]"
                       >
-                        <span>Materials</span>
+                        <span>Materials and Imports</span>
                         <svg
                           className={`w-3 h-3 desktop-layout:w-4 desktop-layout:h-4 transition-transform ${showMaterials ? 'rotate-180' : ''}`}
                           fill="none"
@@ -3213,24 +3448,12 @@ const renderXTick = selected
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-2 pt-3 flex-shrink-0">
-                  <button
-                    type="button"
-                    disabled={displayedMaterialTotals.length === 0}
-                    onClick={() => copyShoppingList('auctionator')}
-                    className="flex-1 rounded border border-neutral-600 bg-neutral-800 px-2 py-2 text-xs font-semibold text-neutral-100 transition-colors hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    {copiedShoppingList === 'auctionator' ? 'Copied' : 'Auctionator'}
-                  </button>
-                  <button
-                    type="button"
-                    disabled={displayedMaterialTotals.length === 0}
-                    onClick={() => copyShoppingList('tsm')}
-                    className="flex-1 rounded border border-neutral-600 bg-neutral-800 px-2 py-2 text-xs font-semibold text-neutral-100 transition-colors hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    {copiedShoppingList === 'tsm' ? 'Copied' : 'TSM'}
-                  </button>
-                </div>
+                <ShoppingListImport
+                  profession={selectedProfession}
+                  skill={committedSkill}
+                  target={committedTarget}
+                  items={displayedMaterialTotals}
+                />
               </div>
             </motion.div>
           )}
@@ -3574,7 +3797,7 @@ const renderXTick = selected
                     </div>
                     <div className="flex justify-between items-center">
                       <span>Total materials cost:</span>
-                      <span className="text-white rounded px-2 font-semibold"> <FormatMoney copper={(Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0))} /></span>
+                      <CostBox copper={Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0)} className="text-sm desktop-layout:text-base" />
                     </div>
                   </div>
                 </aside>
@@ -3586,9 +3809,7 @@ const renderXTick = selected
               <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] desktop-layout:text-[16px] min-w-0">
                 <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
                   <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Base Cost Per Attempt</span>
-                  <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                    <FormatMoney copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} />
-                  </span>
+                  <CostBox copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} className="text-sm desktop-layout:text-lg" />
                 </div>
                 {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
                   (() => {
@@ -3638,18 +3859,14 @@ const renderXTick = selected
                                   <span>⚠️ Limited Stock</span>
                                 </div>
                               )}
-                              <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                                <FormatMoney copper={recipeCostData.vendorPrice} />
-                              </span>
+                              <CostBox copper={recipeCostData.vendorPrice} className="text-sm desktop-layout:text-lg" />
                             </div>
                           </div>
                         )}
                         {recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0 && (
                           <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
                             <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">AH Recipe Cost</span>
-                            <span className="text-xs desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                              <FormatMoney copper={recipeCostData.ahPrice} />
-                            </span>
+                            <CostBox copper={recipeCostData.ahPrice} className="text-sm desktop-layout:text-lg" />
                           </div>
                         )}
                         {recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null && (
@@ -3664,25 +3881,20 @@ const renderXTick = selected
                 ) : (
                   <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
                     <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Recipe Cost</span>
-                    <span className="text-sm desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                      <FormatMoney copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} />
-                    </span>
+                    <CostBox copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} className="text-sm desktop-layout:text-lg" />
                   </div>
                 )}
                 <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
                   <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Average Cost Per Level</span>
-                  <span className="text-sm desktop-layout:text-xl font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                    <SafeMoney
-                      value={selected ? (() => {
-                        const totalMaterialCost = Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0);
-                        const recipeCost = includeRecipeCost && selected.source ?
-                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
-                        const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) * expCrafts;
-                        return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
-                      })() : 0}
-                      fallback="—"
-                    />
-                  </span>
+                  <CostBox
+                    copper={selected ? (() => {
+                      const recipeCost = includeRecipeCost && selected.source ?
+                        calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
+                      const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) * expCrafts;
+                      return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
+                    })() : 0}
+                    className="text-sm desktop-layout:text-lg"
+                  />
                 </div>
               </div>
 
