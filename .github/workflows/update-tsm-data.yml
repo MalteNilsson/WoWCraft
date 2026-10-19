@@ -1,17 +1,18 @@
-# Fetch TSM auction data periodically and push to Git so Vercel deploys with fresh data
-name: Update TSM Data
+# Fetch auction prices and push them so Vercel deploys with fresh data.
+# Anniversary realms come from TSM public CSVs. Forever realms come from AHledger.
+name: Update Auction Prices
 
 on:
   schedule:
-    # Run every hour at minute 0
+    # Every hour. GitHub runs this in UTC.
     - cron: '0 * * * *'
-  workflow_dispatch: # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
 
 jobs:
   update-prices:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Required for pushing commits
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,13 +29,23 @@ jobs:
         run: npm ci
 
       - name: Fetch TSM data
-        env:
-          TSM_API_KEY: ${{ secrets.TSM_API_KEY }}
+        id: tsm
+        continue-on-error: true
         run: node src/scripts/get_TSM_data.mjs anniversary
 
+      - name: Fetch AHledger data
+        id: ahledger
+        continue-on-error: true
+        run: node src/scripts/get_ahledger_data.mjs
+
       - name: Commit and push if changed
+        if: always() && !cancelled()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/prices/*.json
-          git diff --staged --quiet || (git commit -m "chore: update TSM price data [skip ci]" && git push)
+          git diff --staged --quiet || (git commit -m "chore: update auction prices [skip ci]" && git push)
+
+      - name: Fail if a price fetch failed
+        if: steps.tsm.outcome == 'failure' || steps.ahledger.outcome == 'failure'
+        run: exit 1
