@@ -1,9 +1,38 @@
-import fengariWeb from 'fengari-web';
-
-const { lauxlib, lua, lualib, to_jsstring, to_luastring } = fengariWeb;
+import * as fengariNamespace from 'fengari-web';
 import { auctionatorListName, shoppingQuantity, type ShoppingListItem } from '../shoppingList';
 import { libDeflateSource } from './vendor/LibDeflate.source';
 import { libSerializeSource } from './vendor/LibSerialize.source';
+
+type FengariApi = {
+  lua: {
+    LUA_OK: number;
+    lua_getglobal(state: unknown, name: Uint8Array): number;
+    lua_tolstring(state: unknown, index: number): Uint8Array;
+  };
+  lauxlib: {
+    luaL_newstate(): unknown;
+    luaL_dostring(state: unknown, code: Uint8Array): number;
+  };
+  lualib: {
+    luaL_openlibs(state: unknown): void;
+  };
+  to_luastring(value: string): Uint8Array;
+  to_jsstring(value: Uint8Array): string;
+};
+
+/**
+ * The published fengari-web bundle marks itself as an ES module without a default
+ * export. Webpack then resolves `import fengari from 'fengari-web'` to undefined.
+ * Turbopack still exposes the API as the default. Accept either shape.
+ */
+function fengariApi(namespace: object): FengariApi {
+  const record = namespace as FengariApi & { default?: FengariApi };
+  if (typeof record.lauxlib?.luaL_newstate === 'function') return record;
+  if (record.default && typeof record.default.lauxlib?.luaL_newstate === 'function') return record.default;
+  throw new Error('Fengari failed to load');
+}
+
+const { lauxlib, lua, lualib, to_jsstring, to_luastring } = fengariApi(fengariNamespace);
 
 /** Current WeakAuras data revision. Import modernizes anything older than the installed addon. */
 const INTERNAL_VERSION = 89;

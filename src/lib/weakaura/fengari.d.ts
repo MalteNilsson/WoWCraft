@@ -1,5 +1,5 @@
 declare module 'fengari-web' {
-  const fengariWeb: {
+  interface FengariWeb {
     lua: {
       LUA_OK: number;
       lua_getglobal(L: unknown, name: Uint8Array): number;
@@ -15,6 +15,12 @@ declare module 'fengari-web' {
     };
     to_luastring(value: string): Uint8Array;
     to_jsstring(value: Uint8Array): string;
-  };
+  }
+  const fengariWeb: FengariWeb;
   export default fengariWeb;
+  export const lua: FengariWeb['lua'];
+  export const lauxlib: FengariWeb['lauxlib'];
+  export const lualib: FengariWeb['lualib'];
+  export function to_luastring(value: string): Uint8Array;
+  export function to_jsstring(value: Uint8Array): string;
 }
