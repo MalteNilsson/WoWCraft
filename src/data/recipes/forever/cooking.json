@@ -1311,7 +1311,7 @@
     },
     "source": {
       "type": "item",
-      "recipeItemId": 18160,
+      "recipeItemId": 7678,
       "recipeItemName": "Recipe: Thistle Tea"
     }
   },
@@ -1320,7 +1320,7 @@
     "name": "Goldthorn Tea",
     "quality": 1,
     "difficulty": {
-      "orange": 175,
+      "orange": 0,
       "yellow": 215,
       "green": 235,
       "gray": 255
@@ -1329,7 +1329,7 @@
       "159": 1,
       "3821": 1
     },
-    "minSkill": 175,
+    "minSkill": 0,
     "icon": "inv_drink_15",
     "url": "https://www.wowhead.com/forever/spell=13028",
     "produces": {
@@ -2159,7 +2159,7 @@
     "name": "Smoked Desert Dumplings",
     "quality": 1,
     "difficulty": {
-      "orange": 285,
+      "orange": 0,
       "yellow": 325,
       "green": 345,
       "gray": 365
@@ -2168,7 +2168,7 @@
       "3713": 1,
       "20424": 1
     },
-    "minSkill": 285,
+    "minSkill": 0,
     "icon": "inv_misc_food_64",
     "url": "https://www.wowhead.com/forever/spell=24801",
     "produces": {

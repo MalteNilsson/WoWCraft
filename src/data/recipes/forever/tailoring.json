@@ -31,7 +31,7 @@
     "name": "Linen Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 65,
+      "orange": 40,
       "yellow": 65,
       "green": 82,
       "gray": 100
@@ -41,7 +41,7 @@
       "2320": 1,
       "2996": 3
     },
-    "minSkill": 65,
+    "minSkill": 40,
     "icon": "inv_boots_09",
     "url": "https://www.wowhead.com/forever/spell=2386",
     "produces": {
@@ -59,7 +59,7 @@
     "name": "Linen Cloak",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 35,
       "green": 47,
       "gray": 60
@@ -68,7 +68,7 @@
       "2320": 1,
       "2996": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_misc_cape_14",
     "url": "https://www.wowhead.com/forever/spell=2387",
     "produces": {
@@ -85,7 +85,7 @@
     "name": "Red Linen Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 40,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -95,7 +95,7 @@
       "2604": 2,
       "2996": 3
     },
-    "minSkill": 40,
+    "minSkill": 25,
     "icon": "inv_chest_cloth_18",
     "url": "https://www.wowhead.com/forever/spell=2389",
     "produces": {
@@ -114,7 +114,7 @@
     "name": "Red Linen Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 40,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -124,7 +124,7 @@
       "2604": 1,
       "2996": 2
     },
-    "minSkill": 40,
+    "minSkill": 25,
     "icon": "inv_shirt_red_01",
     "url": "https://www.wowhead.com/forever/spell=2392",
     "produces": {
@@ -170,7 +170,7 @@
     "name": "Blue Linen Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 40,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -180,7 +180,7 @@
       "2996": 2,
       "6260": 1
     },
-    "minSkill": 40,
+    "minSkill": 25,
     "icon": "inv_shirt_blue_01",
     "url": "https://www.wowhead.com/forever/spell=2394",
     "produces": {
@@ -198,8 +198,8 @@
     "name": "Barbaric Linen Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 70,
+      "orange": 40,
+      "yellow": 65,
       "green": 82,
       "gray": 100
     },
@@ -208,7 +208,7 @@
       "2321": 1,
       "2996": 4
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "inv_chest_fur",
     "url": "https://www.wowhead.com/forever/spell=2395",
     "produces": {
@@ -226,8 +226,8 @@
     "name": "Green Linen Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 70,
+      "orange": 40,
+      "yellow": 65,
       "green": 82,
       "gray": 100
     },
@@ -236,7 +236,7 @@
       "2605": 1,
       "2996": 3
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "inv_shirt_green_01",
     "url": "https://www.wowhead.com/forever/spell=2396",
     "produces": {
@@ -254,7 +254,7 @@
     "name": "Reinforced Linen Cape",
     "quality": 2,
     "difficulty": {
-      "orange": 60,
+      "orange": 35,
       "yellow": 60,
       "green": 77,
       "gray": 95
@@ -263,7 +263,7 @@
       "2320": 3,
       "2996": 2
     },
-    "minSkill": 60,
+    "minSkill": 35,
     "icon": "inv_misc_cape_07",
     "url": "https://www.wowhead.com/forever/spell=2397",
     "produces": {
@@ -281,7 +281,7 @@
     "name": "Green Woolen Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 85,
+      "orange": 60,
       "yellow": 85,
       "green": 102,
       "gray": 120
@@ -291,7 +291,7 @@
       "2605": 1,
       "2997": 2
     },
-    "minSkill": 85,
+    "minSkill": 60,
     "icon": "inv_chest_cloth_39",
     "url": "https://www.wowhead.com/forever/spell=2399",
     "produces": {
@@ -309,7 +309,7 @@
     "name": "Woolen Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 95,
+      "orange": 70,
       "yellow": 95,
       "green": 112,
       "gray": 130
@@ -319,7 +319,7 @@
       "2321": 2,
       "2997": 4
     },
-    "minSkill": 95,
+    "minSkill": 70,
     "icon": "inv_boots_09",
     "url": "https://www.wowhead.com/forever/spell=2401",
     "produces": {
@@ -337,7 +337,7 @@
     "name": "Woolen Cape",
     "quality": 2,
     "difficulty": {
-      "orange": 75,
+      "orange": 55,
       "yellow": 80,
       "green": 97,
       "gray": 115
@@ -346,7 +346,7 @@
       "2321": 1,
       "2997": 1
     },
-    "minSkill": 75,
+    "minSkill": 55,
     "icon": "inv_misc_cape_10",
     "url": "https://www.wowhead.com/forever/spell=2402",
     "produces": {
@@ -364,7 +364,7 @@
     "name": "Gray Woolen Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 105,
+      "orange": 80,
       "yellow": 105,
       "green": 122,
       "gray": 140
@@ -374,7 +374,7 @@
       "2997": 4,
       "4340": 1
     },
-    "minSkill": 105,
+    "minSkill": 80,
     "icon": "inv_chest_cloth_13",
     "url": "https://www.wowhead.com/forever/spell=2403",
     "produces": {
@@ -393,8 +393,8 @@
     "name": "Gray Woolen Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 100,
-      "yellow": 100,
+      "orange": 80,
+      "yellow": 90,
       "green": 100,
       "gray": 110
     },
@@ -403,7 +403,7 @@
       "2997": 2,
       "4340": 1
     },
-    "minSkill": 100,
+    "minSkill": 80,
     "icon": "inv_shirt_grey_01",
     "url": "https://www.wowhead.com/forever/spell=2406",
     "produces": {
@@ -421,7 +421,7 @@
     "name": "Bolt of Linen Cloth",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 25,
       "green": 37,
       "gray": 50
@@ -429,7 +429,7 @@
     "materials": {
       "2589": 2
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_fabric_linen_02",
     "url": "https://www.wowhead.com/forever/spell=2963",
     "produces": {
@@ -446,15 +446,15 @@
     "name": "Bolt of Woolen Cloth",
     "quality": 1,
     "difficulty": {
-      "orange": 75,
-      "yellow": 75,
+      "orange": 55,
+      "yellow": 70,
       "green": 77,
       "gray": 85
     },
     "materials": {
       "2592": 3
     },
-    "minSkill": 75,
+    "minSkill": 55,
     "icon": "inv_fabric_wool_03",
     "url": "https://www.wowhead.com/forever/spell=2964",
     "produces": {
@@ -472,8 +472,8 @@
     "name": "Linen Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 45,
-      "yellow": 45,
+      "orange": 5,
+      "yellow": 30,
       "green": 47,
       "gray": 65
     },
@@ -481,7 +481,7 @@
       "2320": 3,
       "2996": 3
     },
-    "minSkill": 45,
+    "minSkill": 5,
     "icon": "inv_misc_bag_01",
     "url": "https://www.wowhead.com/forever/spell=3755",
     "produces": {
@@ -499,8 +499,8 @@
     "name": "Woolen Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 80,
-      "yellow": 80,
+      "orange": 50,
+      "yellow": 75,
       "green": 92,
       "gray": 110
     },
@@ -508,7 +508,7 @@
       "2321": 1,
       "2997": 3
     },
-    "minSkill": 80,
+    "minSkill": 50,
     "icon": "inv_misc_bag_10",
     "url": "https://www.wowhead.com/forever/spell=3757",
     "produces": {
@@ -526,7 +526,7 @@
     "name": "Green Woolen Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 95,
+      "orange": 75,
       "yellow": 100,
       "green": 117,
       "gray": 135
@@ -536,7 +536,7 @@
       "2605": 1,
       "2997": 4
     },
-    "minSkill": 95,
+    "minSkill": 75,
     "icon": "inv_misc_bag_10_green",
     "url": "https://www.wowhead.com/forever/spell=3758",
     "produces": {
@@ -555,8 +555,8 @@
     "name": "Small Silk Pack",
     "quality": 1,
     "difficulty": {
-      "orange": 150,
-      "yellow": 150,
+      "orange": 125,
+      "yellow": 145,
       "green": 160,
       "gray": 175
     },
@@ -565,7 +565,7 @@
       "4234": 2,
       "4305": 3
     },
-    "minSkill": 150,
+    "minSkill": 125,
     "icon": "inv_misc_bag_07",
     "url": "https://www.wowhead.com/forever/spell=3813",
     "produces": {
@@ -583,15 +583,15 @@
     "name": "Bolt of Silk Cloth",
     "quality": 1,
     "difficulty": {
-      "orange": 125,
-      "yellow": 0,
-      "green": 0,
-      "gray": 125
+      "orange": 100,
+      "yellow": 110,
+      "green": 115,
+      "gray": 120
     },
     "materials": {
       "4306": 4
     },
-    "minSkill": 125,
+    "minSkill": 100,
     "icon": "inv_fabric_silk_03",
     "url": "https://www.wowhead.com/forever/spell=3839",
     "produces": {
@@ -609,7 +609,7 @@
     "name": "Heavy Linen Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 35,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -618,7 +618,7 @@
       "2320": 1,
       "2996": 2
     },
-    "minSkill": 35,
+    "minSkill": 25,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=3840",
     "produces": {
@@ -636,7 +636,7 @@
     "name": "Green Linen Bracers",
     "quality": 2,
     "difficulty": {
-      "orange": 60,
+      "orange": 35,
       "yellow": 60,
       "green": 77,
       "gray": 95
@@ -646,7 +646,7 @@
       "2605": 1,
       "2996": 3
     },
-    "minSkill": 60,
+    "minSkill": 35,
     "icon": "inv_bracer_12",
     "url": "https://www.wowhead.com/forever/spell=3841",
     "produces": {
@@ -664,7 +664,7 @@
     "name": "Handstitched Linen Britches",
     "quality": 2,
     "difficulty": {
-      "orange": 70,
+      "orange": 45,
       "yellow": 70,
       "green": 87,
       "gray": 105
@@ -673,7 +673,7 @@
       "2321": 2,
       "2996": 4
     },
-    "minSkill": 70,
+    "minSkill": 45,
     "icon": "inv_pants_07",
     "url": "https://www.wowhead.com/forever/spell=3842",
     "produces": {
@@ -691,7 +691,7 @@
     "name": "Heavy Woolen Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 85,
+      "orange": 60,
       "yellow": 85,
       "green": 102,
       "gray": 120
@@ -700,7 +700,7 @@
       "2321": 1,
       "2997": 3
     },
-    "minSkill": 85,
+    "minSkill": 60,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=3843",
     "produces": {
@@ -718,7 +718,7 @@
     "name": "Heavy Woolen Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 100,
+      "orange": 80,
       "yellow": 105,
       "green": 122,
       "gray": 140
@@ -728,7 +728,7 @@
       "2997": 3,
       "5498": 2
     },
-    "minSkill": 100,
+    "minSkill": 80,
     "icon": "inv_misc_cape_14",
     "url": "https://www.wowhead.com/forever/spell=3844",
     "produces": {
@@ -747,7 +747,7 @@
     "name": "Soft-soled Linen Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 80,
+      "orange": 55,
       "yellow": 80,
       "green": 97,
       "gray": 115
@@ -757,7 +757,7 @@
       "2321": 1,
       "2996": 5
     },
-    "minSkill": 80,
+    "minSkill": 55,
     "icon": "inv_boots_09",
     "url": "https://www.wowhead.com/forever/spell=3845",
     "produces": {
@@ -775,8 +775,8 @@
     "name": "Red Woolen Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 95,
-      "yellow": 95,
+      "orange": 75,
+      "yellow": 80,
       "green": 97,
       "gray": 115
     },
@@ -786,7 +786,7 @@
       "2604": 2,
       "2997": 4
     },
-    "minSkill": 95,
+    "minSkill": 75,
     "icon": "inv_boots_09",
     "url": "https://www.wowhead.com/forever/spell=3847",
     "produces": {
@@ -805,7 +805,7 @@
     "name": "Double-stitched Woolen Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 110,
       "green": 127,
       "gray": 145
@@ -814,7 +814,7 @@
       "2321": 2,
       "2997": 3
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_shoulder_06",
     "url": "https://www.wowhead.com/forever/spell=3848",
     "produces": {
@@ -832,7 +832,7 @@
     "name": "Reinforced Woolen Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 120,
+      "orange": 95,
       "yellow": 120,
       "green": 137,
       "gray": 155
@@ -842,7 +842,7 @@
       "2321": 2,
       "2997": 6
     },
-    "minSkill": 120,
+    "minSkill": 95,
     "icon": "inv_shoulder_09",
     "url": "https://www.wowhead.com/forever/spell=3849",
     "produces": {
@@ -861,7 +861,7 @@
     "name": "Heavy Woolen Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 110,
       "green": 127,
       "gray": 145
@@ -870,7 +870,7 @@
       "2321": 4,
       "2997": 5
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_pants_01",
     "url": "https://www.wowhead.com/forever/spell=3850",
     "produces": {
@@ -888,7 +888,7 @@
     "name": "Phoenix Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 125,
+      "orange": 100,
       "yellow": 125,
       "green": 142,
       "gray": 160
@@ -898,7 +898,7 @@
       "2997": 6,
       "5500": 1
     },
-    "minSkill": 125,
+    "minSkill": 100,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=3851",
     "produces": {
@@ -917,8 +917,8 @@
     "name": "Gloves of Meditation",
     "quality": 2,
     "difficulty": {
-      "orange": 130,
-      "yellow": 130,
+      "orange": 105,
+      "yellow": 125,
       "green": 140,
       "gray": 155
     },
@@ -927,7 +927,7 @@
       "2997": 4,
       "3383": 1
     },
-    "minSkill": 130,
+    "minSkill": 105,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=3852",
     "produces": {
@@ -945,8 +945,8 @@
     "name": "Azure Silk Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 145,
-      "yellow": 145,
+      "orange": 120,
+      "yellow": 140,
       "green": 155,
       "gray": 170
     },
@@ -956,7 +956,7 @@
       "4305": 3,
       "6260": 2
     },
-    "minSkill": 145,
+    "minSkill": 120,
     "icon": "inv_gauntlets_17",
     "url": "https://www.wowhead.com/forever/spell=3854",
     "produces": {
@@ -975,7 +975,7 @@
     "name": "Spidersilk Boots",
     "quality": 3,
     "difficulty": {
-      "orange": 125,
+      "orange": 100,
       "yellow": 125,
       "green": 142,
       "gray": 160
@@ -986,7 +986,7 @@
       "4305": 2,
       "5500": 1
     },
-    "minSkill": 125,
+    "minSkill": 100,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=3855",
     "produces": {
@@ -1004,8 +1004,8 @@
     "name": "Spider Silk Slippers",
     "quality": 2,
     "difficulty": {
-      "orange": 140,
-      "yellow": 140,
+      "orange": 115,
+      "yellow": 135,
       "green": 147,
       "gray": 160
     },
@@ -1014,7 +1014,7 @@
       "3182": 1,
       "4305": 3
     },
-    "minSkill": 140,
+    "minSkill": 115,
     "icon": "inv_boots_03",
     "url": "https://www.wowhead.com/forever/spell=3856",
     "produces": {
@@ -1033,8 +1033,8 @@
     "name": "Enchanter's Cowl",
     "quality": 2,
     "difficulty": {
-      "orange": 165,
-      "yellow": 165,
+      "orange": 130,
+      "yellow": 150,
       "green": 165,
       "gray": 180
     },
@@ -1043,7 +1043,7 @@
       "4305": 3,
       "4337": 2
     },
-    "minSkill": 165,
+    "minSkill": 130,
     "icon": "inv_helmet_31",
     "url": "https://www.wowhead.com/forever/spell=3857",
     "produces": {
@@ -1062,8 +1062,8 @@
     "name": "Shadow Hood",
     "quality": 2,
     "difficulty": {
-      "orange": 170,
-      "yellow": 170,
+      "orange": 135,
+      "yellow": 155,
       "green": 170,
       "gray": 185
     },
@@ -1072,7 +1072,7 @@
       "4291": 1,
       "4305": 4
     },
-    "minSkill": 170,
+    "minSkill": 135,
     "icon": "inv_helmet_27",
     "url": "https://www.wowhead.com/forever/spell=3858",
     "produces": {
@@ -1091,8 +1091,8 @@
     "name": "Azure Silk Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 150,
-      "yellow": 150,
+      "orange": 125,
+      "yellow": 145,
       "green": 160,
       "gray": 175
     },
@@ -1100,7 +1100,7 @@
       "4305": 5,
       "6260": 4
     },
-    "minSkill": 150,
+    "minSkill": 125,
     "icon": "inv_chest_cloth_37",
     "url": "https://www.wowhead.com/forever/spell=3859",
     "produces": {
@@ -1118,8 +1118,8 @@
     "name": "Boots of the Enchanter",
     "quality": 2,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
+      "orange": 140,
+      "yellow": 160,
       "green": 175,
       "gray": 190
     },
@@ -1128,7 +1128,7 @@
       "4305": 4,
       "4337": 2
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=3860",
     "produces": {
@@ -1147,8 +1147,8 @@
     "name": "Long Silken Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 185,
-      "yellow": 185,
+      "orange": 150,
+      "yellow": 170,
       "green": 185,
       "gray": 200
     },
@@ -1157,7 +1157,7 @@
       "4291": 1,
       "4305": 4
     },
-    "minSkill": 185,
+    "minSkill": 150,
     "icon": "inv_misc_cape_02",
     "url": "https://www.wowhead.com/forever/spell=3861",
     "produces": {
@@ -1175,8 +1175,8 @@
     "name": "Icy Cloak",
     "quality": 3,
     "difficulty": {
-      "orange": 200,
-      "yellow": 200,
+      "orange": 165,
+      "yellow": 185,
       "green": 200,
       "gray": 215
     },
@@ -1186,7 +1186,7 @@
       "4337": 2,
       "4339": 3
     },
-    "minSkill": 200,
+    "minSkill": 165,
     "icon": "inv_misc_cape_04",
     "url": "https://www.wowhead.com/forever/spell=3862",
     "produces": {
@@ -1205,8 +1205,8 @@
     "name": "Spider Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 180,
-      "yellow": 180,
+      "orange": 145,
+      "yellow": 165,
       "green": 180,
       "gray": 195
     },
@@ -1215,7 +1215,7 @@
       "4337": 2,
       "7071": 1
     },
-    "minSkill": 180,
+    "minSkill": 145,
     "icon": "inv_belt_25",
     "url": "https://www.wowhead.com/forever/spell=3863",
     "produces": {
@@ -1234,8 +1234,8 @@
     "name": "Star Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 200,
-      "yellow": 200,
+      "orange": 165,
+      "yellow": 185,
       "green": 200,
       "gray": 215
     },
@@ -1246,7 +1246,7 @@
       "4339": 4,
       "7071": 1
     },
-    "minSkill": 200,
+    "minSkill": 165,
     "icon": "inv_belt_06",
     "url": "https://www.wowhead.com/forever/spell=3864",
     "produces": {
@@ -1265,15 +1265,15 @@
     "name": "Bolt of Mageweave",
     "quality": 1,
     "difficulty": {
-      "orange": 175,
-      "yellow": 0,
-      "green": 0,
-      "gray": 175
+      "orange": 140,
+      "yellow": 145,
+      "green": 147,
+      "gray": 150
     },
     "materials": {
       "4338": 5
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_fabric_mageweave_03",
     "url": "https://www.wowhead.com/forever/spell=3865",
     "produces": {
@@ -1291,7 +1291,7 @@
     "name": "Stylish Red Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 110,
       "green": 127,
       "gray": 145
@@ -1301,7 +1301,7 @@
       "2604": 2,
       "2997": 3
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_shirt_red_01",
     "url": "https://www.wowhead.com/forever/spell=3866",
     "produces": {
@@ -1319,7 +1319,7 @@
     "name": "Phoenix Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 125,
+      "orange": 100,
       "yellow": 125,
       "green": 142,
       "gray": 160
@@ -1330,7 +1330,7 @@
       "2997": 4,
       "5500": 1
     },
-    "minSkill": 125,
+    "minSkill": 100,
     "icon": "inv_gauntlets_19",
     "url": "https://www.wowhead.com/forever/spell=3868",
     "produces": {
@@ -1349,17 +1349,17 @@
     "name": "Bright Yellow Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 135,
-      "yellow": 0,
-      "green": 0,
-      "gray": 135
+      "orange": 110,
+      "yellow": 120,
+      "green": 125,
+      "gray": 130
     },
     "materials": {
       "2321": 1,
       "4305": 1,
       "4341": 1
     },
-    "minSkill": 135,
+    "minSkill": 110,
     "icon": "inv_shirt_yellow_01",
     "url": "https://www.wowhead.com/forever/spell=3869",
     "produces": {
@@ -1378,17 +1378,17 @@
     "name": "Dark Silk Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 155,
-      "yellow": 0,
-      "green": 0,
-      "gray": 155
+      "orange": 120,
+      "yellow": 130,
+      "green": 135,
+      "gray": 140
     },
     "materials": {
       "2321": 1,
       "4305": 2,
       "4340": 2
     },
-    "minSkill": 155,
+    "minSkill": 120,
     "icon": "inv_shirt_black_01",
     "url": "https://www.wowhead.com/forever/spell=3870",
     "produces": {
@@ -1407,17 +1407,17 @@
     "name": "Formal White Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 170,
-      "yellow": 0,
-      "green": 0,
-      "gray": 170
+      "orange": 135,
+      "yellow": 145,
+      "green": 150,
+      "gray": 155
     },
     "materials": {
       "2321": 1,
       "2324": 2,
       "4305": 3
     },
-    "minSkill": 170,
+    "minSkill": 135,
     "icon": "inv_shirt_08",
     "url": "https://www.wowhead.com/forever/spell=3871",
     "produces": {
@@ -1435,17 +1435,17 @@
     "name": "Rich Purple Silk Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 185,
-      "yellow": 0,
-      "green": 0,
-      "gray": 185
+      "orange": 150,
+      "yellow": 160,
+      "green": 165,
+      "gray": 170
     },
     "materials": {
       "4291": 1,
       "4305": 4,
       "4342": 1
     },
-    "minSkill": 185,
+    "minSkill": 150,
     "icon": "inv_shirt_16",
     "url": "https://www.wowhead.com/forever/spell=3872",
     "produces": {
@@ -1464,17 +1464,17 @@
     "name": "Black Swashbuckler's Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 200,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 165,
+      "yellow": 175,
+      "green": 180,
+      "gray": 185
     },
     "materials": {
       "2325": 1,
       "4291": 1,
       "4305": 5
     },
-    "minSkill": 200,
+    "minSkill": 165,
     "icon": "inv_shirt_black_01",
     "url": "https://www.wowhead.com/forever/spell=3873",
     "produces": {
@@ -1493,7 +1493,7 @@
     "name": "Brown Linen Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 30,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -1502,7 +1502,7 @@
       "2320": 1,
       "2996": 2
     },
-    "minSkill": 30,
+    "minSkill": 25,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=3914",
     "produces": {
@@ -1520,7 +1520,7 @@
     "name": "Brown Linen Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 35,
       "green": 47,
       "gray": 60
@@ -1529,7 +1529,7 @@
       "2320": 1,
       "2996": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_shirt_02",
     "url": "https://www.wowhead.com/forever/spell=3915",
     "produces": {
@@ -1546,7 +1546,7 @@
     "name": "Pearl-clasped Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 90,
+      "orange": 70,
       "yellow": 95,
       "green": 112,
       "gray": 130
@@ -1556,7 +1556,7 @@
       "2997": 3,
       "5498": 1
     },
-    "minSkill": 90,
+    "minSkill": 70,
     "icon": "inv_misc_cape_11",
     "url": "https://www.wowhead.com/forever/spell=6521",
     "produces": {
@@ -1574,7 +1574,7 @@
     "name": "Red Linen Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 70,
+      "orange": 50,
       "yellow": 75,
       "green": 92,
       "gray": 110
@@ -1584,7 +1584,7 @@
       "2604": 1,
       "2996": 4
     },
-    "minSkill": 70,
+    "minSkill": 50,
     "icon": "inv_misc_bag_02",
     "url": "https://www.wowhead.com/forever/spell=6686",
     "produces": {
@@ -1603,7 +1603,7 @@
     "name": "Red Woolen Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 115,
+      "orange": 90,
       "yellow": 115,
       "green": 132,
       "gray": 150
@@ -1613,7 +1613,7 @@
       "2604": 1,
       "2997": 4
     },
-    "minSkill": 115,
+    "minSkill": 90,
     "icon": "inv_misc_bag_10_red",
     "url": "https://www.wowhead.com/forever/spell=6688",
     "produces": {
@@ -1632,8 +1632,8 @@
     "name": "Lesser Wizard's Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 135,
-      "yellow": 135,
+      "orange": 110,
+      "yellow": 130,
       "green": 145,
       "gray": 160
     },
@@ -1642,7 +1642,7 @@
       "3182": 2,
       "4305": 2
     },
-    "minSkill": 135,
+    "minSkill": 110,
     "icon": "inv_chest_cloth_17",
     "url": "https://www.wowhead.com/forever/spell=6690",
     "produces": {
@@ -1660,8 +1660,8 @@
     "name": "Robes of Arcana",
     "quality": 2,
     "difficulty": {
-      "orange": 150,
-      "yellow": 150,
+      "orange": 125,
+      "yellow": 145,
       "green": 160,
       "gray": 175
     },
@@ -1670,7 +1670,7 @@
       "3182": 2,
       "4305": 4
     },
-    "minSkill": 150,
+    "minSkill": 125,
     "icon": "inv_chest_cloth_29",
     "url": "https://www.wowhead.com/forever/spell=6692",
     "produces": {
@@ -1689,8 +1689,8 @@
     "name": "Green Silk Pack",
     "quality": 1,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
+      "orange": 140,
+      "yellow": 160,
       "green": 175,
       "gray": 190
     },
@@ -1700,7 +1700,7 @@
       "4234": 3,
       "4305": 4
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_misc_bag_07_green",
     "url": "https://www.wowhead.com/forever/spell=6693",
     "produces": {
@@ -1719,8 +1719,8 @@
     "name": "Black Silk Pack",
     "quality": 1,
     "difficulty": {
-      "orange": 185,
-      "yellow": 185,
+      "orange": 150,
+      "yellow": 170,
       "green": 185,
       "gray": 200
     },
@@ -1729,7 +1729,7 @@
       "2325": 1,
       "4305": 5
     },
-    "minSkill": 185,
+    "minSkill": 150,
     "icon": "inv_misc_bag_07_black",
     "url": "https://www.wowhead.com/forever/spell=6695",
     "produces": {
@@ -1748,7 +1748,7 @@
     "name": "Brown Linen Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 30,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -1757,7 +1757,7 @@
       "2320": 1,
       "2996": 3
     },
-    "minSkill": 30,
+    "minSkill": 25,
     "icon": "inv_chest_cloth_21",
     "url": "https://www.wowhead.com/forever/spell=7623",
     "produces": {
@@ -1775,7 +1775,7 @@
     "name": "White Linen Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 30,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -1785,7 +1785,7 @@
       "2324": 1,
       "2996": 3
     },
-    "minSkill": 30,
+    "minSkill": 25,
     "icon": "inv_chest_cloth_04",
     "url": "https://www.wowhead.com/forever/spell=7624",
     "produces": {
@@ -1803,7 +1803,7 @@
     "name": "Red Linen Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 55,
+      "orange": 35,
       "yellow": 60,
       "green": 77,
       "gray": 95
@@ -1813,7 +1813,7 @@
       "2604": 1,
       "2996": 3
     },
-    "minSkill": 55,
+    "minSkill": 35,
     "icon": "inv_chest_cloth_40",
     "url": "https://www.wowhead.com/forever/spell=7629",
     "produces": {
@@ -1832,7 +1832,7 @@
     "name": "Blue Linen Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 55,
+      "orange": 35,
       "yellow": 60,
       "green": 77,
       "gray": 95
@@ -1842,7 +1842,7 @@
       "2996": 3,
       "6260": 1
     },
-    "minSkill": 55,
+    "minSkill": 35,
     "icon": "inv_chest_cloth_37",
     "url": "https://www.wowhead.com/forever/spell=7630",
     "produces": {
@@ -1861,7 +1861,7 @@
     "name": "Blue Linen Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 70,
+      "orange": 45,
       "yellow": 70,
       "green": 87,
       "gray": 105
@@ -1871,7 +1871,7 @@
       "2996": 4,
       "6260": 2
     },
-    "minSkill": 70,
+    "minSkill": 45,
     "icon": "inv_chest_cloth_23",
     "url": "https://www.wowhead.com/forever/spell=7633",
     "produces": {
@@ -1890,7 +1890,7 @@
     "name": "Blue Overalls",
     "quality": 2,
     "difficulty": {
-      "orange": 100,
+      "orange": 75,
       "yellow": 100,
       "green": 117,
       "gray": 135
@@ -1900,7 +1900,7 @@
       "2997": 4,
       "6260": 2
     },
-    "minSkill": 100,
+    "minSkill": 75,
     "icon": "inv_shirt_13",
     "url": "https://www.wowhead.com/forever/spell=7639",
     "produces": {
@@ -1919,7 +1919,7 @@
     "name": "Greater Adept's Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 115,
+      "orange": 90,
       "yellow": 115,
       "green": 132,
       "gray": 150
@@ -1929,7 +1929,7 @@
       "2604": 3,
       "2997": 5
     },
-    "minSkill": 115,
+    "minSkill": 90,
     "icon": "inv_chest_cloth_24",
     "url": "https://www.wowhead.com/forever/spell=7643",
     "produces": {
@@ -1948,7 +1948,7 @@
     "name": "Stylish Blue Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 120,
+      "orange": 95,
       "yellow": 120,
       "green": 137,
       "gray": 155
@@ -1959,7 +1959,7 @@
       "4340": 1,
       "6260": 2
     },
-    "minSkill": 120,
+    "minSkill": 95,
     "icon": "inv_shirt_blue_01",
     "url": "https://www.wowhead.com/forever/spell=7892",
     "produces": {
@@ -1978,7 +1978,7 @@
     "name": "Stylish Green Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 120,
+      "orange": 95,
       "yellow": 120,
       "green": 137,
       "gray": 155
@@ -1989,7 +1989,7 @@
       "2997": 4,
       "4340": 1
     },
-    "minSkill": 120,
+    "minSkill": 95,
     "icon": "inv_shirt_green_01",
     "url": "https://www.wowhead.com/forever/spell=7893",
     "produces": {
@@ -2008,7 +2008,7 @@
     "name": "Simple Dress",
     "quality": 1,
     "difficulty": {
-      "orange": 40,
+      "orange": 25,
       "yellow": 50,
       "green": 67,
       "gray": 85
@@ -2019,7 +2019,7 @@
       "2996": 2,
       "6260": 1
     },
-    "minSkill": 40,
+    "minSkill": 25,
     "icon": "inv_shirt_12",
     "url": "https://www.wowhead.com/forever/spell=8465",
     "produces": {
@@ -2037,7 +2037,7 @@
     "name": "White Woolen Dress",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 110,
       "green": 127,
       "gray": 145
@@ -2047,7 +2047,7 @@
       "2324": 4,
       "2997": 3
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_shirt_12",
     "url": "https://www.wowhead.com/forever/spell=8467",
     "produces": {
@@ -2065,17 +2065,17 @@
     "name": "White Swashbuckler's Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 160,
-      "yellow": 0,
-      "green": 0,
-      "gray": 160
+      "orange": 125,
+      "yellow": 135,
+      "green": 140,
+      "gray": 145
     },
     "materials": {
       "2324": 2,
       "4291": 1,
       "4305": 3
     },
-    "minSkill": 160,
+    "minSkill": 125,
     "icon": "inv_shirt_white_01",
     "url": "https://www.wowhead.com/forever/spell=8483",
     "produces": {
@@ -2093,17 +2093,17 @@
     "name": "Red Swashbuckler's Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 175,
-      "yellow": 0,
-      "green": 0,
-      "gray": 175
+      "orange": 140,
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
     },
     "materials": {
       "2604": 2,
       "4291": 1,
       "4305": 3
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_shirt_red_01",
     "url": "https://www.wowhead.com/forever/spell=8489",
     "produces": {
@@ -2121,8 +2121,8 @@
     "name": "Azure Silk Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 140,
-      "yellow": 140,
+      "orange": 115,
+      "yellow": 135,
       "green": 150,
       "gray": 165
     },
@@ -2131,7 +2131,7 @@
       "4305": 4,
       "6260": 2
     },
-    "minSkill": 140,
+    "minSkill": 115,
     "icon": "inv_pants_08",
     "url": "https://www.wowhead.com/forever/spell=8758",
     "produces": {
@@ -2149,17 +2149,17 @@
     "name": "Azure Silk Hood",
     "quality": 2,
     "difficulty": {
-      "orange": 145,
-      "yellow": 0,
-      "green": 0,
-      "gray": 145
+      "orange": 120,
+      "yellow": 130,
+      "green": 135,
+      "gray": 140
     },
     "materials": {
       "2321": 1,
       "4305": 2,
       "6260": 2
     },
-    "minSkill": 145,
+    "minSkill": 120,
     "icon": "inv_helmet_29",
     "url": "https://www.wowhead.com/forever/spell=8760",
     "produces": {
@@ -2177,16 +2177,16 @@
     "name": "Silk Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 160,
-      "yellow": 0,
-      "green": 0,
-      "gray": 160
+      "orange": 125,
+      "yellow": 135,
+      "green": 140,
+      "gray": 145
     },
     "materials": {
       "2321": 2,
       "4305": 3
     },
-    "minSkill": 160,
+    "minSkill": 125,
     "icon": "inv_misc_bandana_01",
     "url": "https://www.wowhead.com/forever/spell=8762",
     "produces": {
@@ -2204,8 +2204,8 @@
     "name": "Earthen Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 170,
-      "yellow": 170,
+      "orange": 135,
+      "yellow": 155,
       "green": 170,
       "gray": 185
     },
@@ -2214,7 +2214,7 @@
       "4305": 3,
       "7067": 1
     },
-    "minSkill": 170,
+    "minSkill": 135,
     "icon": "inv_shirt_04",
     "url": "https://www.wowhead.com/forever/spell=8764",
     "produces": {
@@ -2232,8 +2232,8 @@
     "name": "Azure Silk Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
+      "orange": 140,
+      "yellow": 160,
       "green": 175,
       "gray": 190
     },
@@ -2244,7 +2244,7 @@
       "7070": 1,
       "7071": 1
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_belt_22",
     "url": "https://www.wowhead.com/forever/spell=8766",
     "produces": {
@@ -2262,8 +2262,8 @@
     "name": "Robe of Power",
     "quality": 3,
     "difficulty": {
-      "orange": 190,
-      "yellow": 190,
+      "orange": 155,
+      "yellow": 175,
       "green": 190,
       "gray": 205
     },
@@ -2275,7 +2275,7 @@
       "7069": 2,
       "7070": 2
     },
-    "minSkill": 190,
+    "minSkill": 155,
     "icon": "inv_chest_cloth_02",
     "url": "https://www.wowhead.com/forever/spell=8770",
     "produces": {
@@ -2293,8 +2293,8 @@
     "name": "Crimson Silk Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
+      "orange": 140,
+      "yellow": 160,
       "green": 175,
       "gray": 190
     },
@@ -2304,7 +2304,7 @@
       "4305": 4,
       "7071": 1
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_belt_04",
     "url": "https://www.wowhead.com/forever/spell=8772",
     "produces": {
@@ -2322,8 +2322,8 @@
     "name": "Green Silken Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 180,
-      "yellow": 180,
+      "orange": 145,
+      "yellow": 165,
       "green": 180,
       "gray": 195
     },
@@ -2331,7 +2331,7 @@
       "4291": 2,
       "4305": 5
     },
-    "minSkill": 180,
+    "minSkill": 145,
     "icon": "inv_shoulder_18",
     "url": "https://www.wowhead.com/forever/spell=8774",
     "produces": {
@@ -2376,8 +2376,8 @@
     "name": "Hands of Darkness",
     "quality": 2,
     "difficulty": {
-      "orange": 145,
-      "yellow": 145,
+      "orange": 120,
+      "yellow": 140,
       "green": 155,
       "gray": 170
     },
@@ -2387,7 +2387,7 @@
       "4305": 3,
       "6048": 2
     },
-    "minSkill": 145,
+    "minSkill": 120,
     "icon": "inv_gauntlets_22",
     "url": "https://www.wowhead.com/forever/spell=8780",
     "produces": {
@@ -2406,8 +2406,8 @@
     "name": "Truefaith Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 150,
-      "yellow": 150,
+      "orange": 125,
+      "yellow": 145,
       "green": 160,
       "gray": 175
     },
@@ -2417,7 +2417,7 @@
       "4234": 2,
       "4305": 3
     },
-    "minSkill": 150,
+    "minSkill": 125,
     "icon": "inv_gauntlets_16",
     "url": "https://www.wowhead.com/forever/spell=8782",
     "produces": {
@@ -2436,8 +2436,8 @@
     "name": "Green Silk Armor",
     "quality": 2,
     "difficulty": {
-      "orange": 165,
-      "yellow": 165,
+      "orange": 130,
+      "yellow": 150,
       "green": 165,
       "gray": 180
     },
@@ -2446,7 +2446,7 @@
       "4291": 1,
       "4305": 5
     },
-    "minSkill": 165,
+    "minSkill": 130,
     "icon": "inv_chest_cloth_06",
     "url": "https://www.wowhead.com/forever/spell=8784",
     "produces": {
@@ -2465,8 +2465,8 @@
     "name": "Azure Silk Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 175,
-      "yellow": 175,
+      "orange": 140,
+      "yellow": 160,
       "green": 175,
       "gray": 190
     },
@@ -2475,7 +2475,7 @@
       "4305": 3,
       "6260": 2
     },
-    "minSkill": 175,
+    "minSkill": 140,
     "icon": "inv_chest_cloth_14",
     "url": "https://www.wowhead.com/forever/spell=8786",
     "produces": {
@@ -2494,8 +2494,8 @@
     "name": "Crimson Silk Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 180,
-      "yellow": 180,
+      "orange": 145,
+      "yellow": 165,
       "green": 180,
       "gray": 195
     },
@@ -2505,7 +2505,7 @@
       "4305": 5,
       "6371": 2
     },
-    "minSkill": 180,
+    "minSkill": 145,
     "icon": "inv_chest_cloth_16",
     "url": "https://www.wowhead.com/forever/spell=8789",
     "produces": {
@@ -2524,9 +2524,9 @@
     "name": "Crimson Silk Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 185,
-      "yellow": 0,
-      "green": 185,
+      "orange": 150,
+      "yellow": 170,
+      "green": 180,
       "gray": 190
     },
     "materials": {
@@ -2534,7 +2534,7 @@
       "2604": 2,
       "4305": 4
     },
-    "minSkill": 185,
+    "minSkill": 150,
     "icon": "inv_shirt_04",
     "url": "https://www.wowhead.com/forever/spell=8791",
     "produces": {
@@ -2552,8 +2552,8 @@
     "name": "Crimson Silk Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
-      "yellow": 190,
+      "orange": 155,
+      "yellow": 175,
       "green": 190,
       "gray": 205
     },
@@ -2563,7 +2563,7 @@
       "4305": 5,
       "6371": 2
     },
-    "minSkill": 190,
+    "minSkill": 155,
     "icon": "inv_shoulder_23",
     "url": "https://www.wowhead.com/forever/spell=8793",
     "produces": {
@@ -2582,8 +2582,8 @@
     "name": "Azure Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
-      "yellow": 190,
+      "orange": 155,
+      "yellow": 175,
       "green": 190,
       "gray": 205
     },
@@ -2593,7 +2593,7 @@
       "6260": 2,
       "7072": 2
     },
-    "minSkill": 190,
+    "minSkill": 155,
     "icon": "inv_shoulder_27",
     "url": "https://www.wowhead.com/forever/spell=8795",
     "produces": {
@@ -2612,8 +2612,8 @@
     "name": "Earthen Silk Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 195,
-      "yellow": 195,
+      "orange": 160,
+      "yellow": 180,
       "green": 195,
       "gray": 210
     },
@@ -2624,7 +2624,7 @@
       "7067": 4,
       "7071": 1
     },
-    "minSkill": 195,
+    "minSkill": 160,
     "icon": "inv_belt_24",
     "url": "https://www.wowhead.com/forever/spell=8797",
     "produces": {
@@ -2643,9 +2643,9 @@
     "name": "Crimson Silk Pantaloons",
     "quality": 2,
     "difficulty": {
-      "orange": 195,
-      "yellow": 0,
-      "green": 195,
+      "orange": 160,
+      "yellow": 180,
+      "green": 190,
       "gray": 200
     },
     "materials": {
@@ -2653,7 +2653,7 @@
       "4291": 2,
       "4305": 4
     },
-    "minSkill": 195,
+    "minSkill": 160,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=8799",
     "produces": {
@@ -2671,9 +2671,9 @@
     "name": "Crimson Silk Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 205,
-      "yellow": 0,
-      "green": 205,
+      "orange": 170,
+      "yellow": 185,
+      "green": 200,
       "gray": 215
     },
     "materials": {
@@ -2683,7 +2683,7 @@
       "4305": 8,
       "7068": 4
     },
-    "minSkill": 205,
+    "minSkill": 170,
     "icon": "inv_chest_cloth_25",
     "url": "https://www.wowhead.com/forever/spell=8802",
     "produces": {
@@ -2702,9 +2702,9 @@
     "name": "Crimson Silk Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 210,
-      "yellow": 0,
-      "green": 210,
+      "orange": 175,
+      "yellow": 190,
+      "green": 205,
       "gray": 220
     },
     "materials": {
@@ -2715,7 +2715,7 @@
       "6371": 2,
       "7068": 2
     },
-    "minSkill": 210,
+    "minSkill": 175,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=8804",
     "produces": {
@@ -2733,7 +2733,7 @@
     "name": "Simple Linen Pants",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 40,
       "green": 50,
       "gray": 60
@@ -2742,7 +2742,7 @@
       "2320": 1,
       "2996": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_pants_11",
     "url": "https://www.wowhead.com/forever/spell=12044",
     "produces": {
@@ -2787,7 +2787,7 @@
     "name": "Simple Kilt",
     "quality": 2,
     "difficulty": {
-      "orange": 75,
+      "orange": 50,
       "yellow": 75,
       "green": 92,
       "gray": 110
@@ -2796,7 +2796,7 @@
       "2321": 1,
       "2996": 4
     },
-    "minSkill": 75,
+    "minSkill": 50,
     "icon": "inv_pants_11",
     "url": "https://www.wowhead.com/forever/spell=12046",
     "produces": {
@@ -2814,9 +2814,9 @@
     "name": "Colorful Kilt",
     "quality": 2,
     "difficulty": {
-      "orange": 120,
-      "yellow": 0,
-      "green": 120,
+      "orange": 70,
+      "yellow": 95,
+      "green": 112,
       "gray": 130
     },
     "materials": {
@@ -2824,7 +2824,7 @@
       "2604": 3,
       "2997": 5
     },
-    "minSkill": 120,
+    "minSkill": 70,
     "icon": "inv_pants_02",
     "url": "https://www.wowhead.com/forever/spell=12047",
     "produces": {
@@ -2843,16 +2843,16 @@
     "name": "Black Mageweave Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 205,
-      "yellow": 0,
-      "green": 205,
+      "orange": 170,
+      "yellow": 185,
+      "green": 200,
       "gray": 215
     },
     "materials": {
       "4291": 3,
       "4339": 2
     },
-    "minSkill": 205,
+    "minSkill": 170,
     "icon": "inv_chest_leather_03",
     "url": "https://www.wowhead.com/forever/spell=12048",
     "produces": {
@@ -2870,16 +2870,16 @@
     "name": "Black Mageweave Leggings",
     "quality": 2,
     "difficulty": {
-      "orange": 205,
-      "yellow": 0,
-      "green": 205,
+      "orange": 170,
+      "yellow": 185,
+      "green": 200,
       "gray": 215
     },
     "materials": {
       "4291": 3,
       "4339": 2
     },
-    "minSkill": 205,
+    "minSkill": 170,
     "icon": "inv_pants_09",
     "url": "https://www.wowhead.com/forever/spell=12049",
     "produces": {
@@ -2897,16 +2897,16 @@
     "name": "Black Mageweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 210,
-      "yellow": 0,
-      "green": 210,
+      "orange": 175,
+      "yellow": 190,
+      "green": 205,
       "gray": 220
     },
     "materials": {
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 210,
+    "minSkill": 175,
     "icon": "inv_chest_cloth_13",
     "url": "https://www.wowhead.com/forever/spell=12050",
     "produces": {
@@ -2924,9 +2924,9 @@
     "name": "Shadoweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 210,
-      "yellow": 0,
-      "green": 210,
+      "orange": 175,
+      "yellow": 190,
+      "green": 205,
       "gray": 220
     },
     "materials": {
@@ -2934,7 +2934,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 210,
+    "minSkill": 175,
     "icon": "inv_pants_11",
     "url": "https://www.wowhead.com/forever/spell=12052",
     "produces": {
@@ -2952,16 +2952,16 @@
     "name": "Black Mageweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 215,
+      "orange": 180,
+      "yellow": 195,
+      "green": 210,
       "gray": 225
     },
     "materials": {
       "4339": 2,
       "8343": 2
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=12053",
     "produces": {
@@ -2979,9 +2979,9 @@
     "name": "Shadoweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 215,
+      "orange": 180,
+      "yellow": 195,
+      "green": 210,
       "gray": 225
     },
     "materials": {
@@ -2989,7 +2989,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_chest_cloth_38",
     "url": "https://www.wowhead.com/forever/spell=12055",
     "produces": {
@@ -3007,9 +3007,9 @@
     "name": "Red Mageweave Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 215,
+      "orange": 180,
+      "yellow": 195,
+      "green": 210,
       "gray": 225
     },
     "materials": {
@@ -3017,7 +3017,7 @@
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_shirt_09",
     "url": "https://www.wowhead.com/forever/spell=12056",
     "produces": {
@@ -3036,17 +3036,17 @@
     "name": "White Bandit Mask",
     "quality": 2,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 0,
-      "gray": 215
+      "orange": 180,
+      "yellow": 185,
+      "green": 190,
+      "gray": 195
     },
     "materials": {
       "2324": 1,
       "4339": 1,
       "8343": 1
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_helmet_30",
     "url": "https://www.wowhead.com/forever/spell=12059",
     "produces": {
@@ -3065,9 +3065,9 @@
     "name": "Red Mageweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 215,
+      "orange": 180,
+      "yellow": 195,
+      "green": 210,
       "gray": 225
     },
     "materials": {
@@ -3075,7 +3075,7 @@
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=12060",
     "produces": {
@@ -3094,17 +3094,17 @@
     "name": "Orange Mageweave Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 215,
-      "yellow": 0,
-      "green": 0,
-      "gray": 215
+      "orange": 180,
+      "yellow": 185,
+      "green": 190,
+      "gray": 195
     },
     "materials": {
       "4339": 1,
       "6261": 1,
       "8343": 1
     },
-    "minSkill": 215,
+    "minSkill": 180,
     "icon": "inv_shirt_orange_01",
     "url": "https://www.wowhead.com/forever/spell=12061",
     "produces": {
@@ -3122,17 +3122,17 @@
     "name": "Orange Martial Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 220,
-      "yellow": 0,
-      "green": 0,
-      "gray": 220
+      "orange": 185,
+      "yellow": 190,
+      "green": 195,
+      "gray": 200
     },
     "materials": {
       "4339": 2,
       "6261": 2,
       "8343": 1
     },
-    "minSkill": 220,
+    "minSkill": 185,
     "icon": "inv_shirt_orange_01",
     "url": "https://www.wowhead.com/forever/spell=12064",
     "produces": {
@@ -3151,16 +3151,16 @@
     "name": "Mageweave Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
       "4291": 2,
       "4339": 4
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_misc_bag_10_black",
     "url": "https://www.wowhead.com/forever/spell=12065",
     "produces": {
@@ -3178,9 +3178,9 @@
     "name": "Red Mageweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3188,7 +3188,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_gauntlets_19",
     "url": "https://www.wowhead.com/forever/spell=12066",
     "produces": {
@@ -3207,9 +3207,9 @@
     "name": "Dreamweave Gloves",
     "quality": 3,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3218,7 +3218,7 @@
       "8343": 2,
       "10286": 2
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_gauntlets_18",
     "url": "https://www.wowhead.com/forever/spell=12067",
     "produces": {
@@ -3236,9 +3236,9 @@
     "name": "Cindercloth Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3246,7 +3246,7 @@
       "7077": 2,
       "8343": 2
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_chest_cloth_25",
     "url": "https://www.wowhead.com/forever/spell=12069",
     "produces": {
@@ -3264,9 +3264,9 @@
     "name": "Dreamweave Vest",
     "quality": 3,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3275,7 +3275,7 @@
       "8343": 2,
       "10286": 2
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_chest_cloth_42",
     "url": "https://www.wowhead.com/forever/spell=12070",
     "produces": {
@@ -3293,9 +3293,9 @@
     "name": "Shadoweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3303,7 +3303,7 @@
       "8343": 2,
       "10285": 5
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_gauntlets_09",
     "url": "https://www.wowhead.com/forever/spell=12071",
     "produces": {
@@ -3321,16 +3321,16 @@
     "name": "Black Mageweave Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 230,
-      "yellow": 0,
-      "green": 230,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 230,
+    "minSkill": 190,
     "icon": "inv_misc_bandana_01",
     "url": "https://www.wowhead.com/forever/spell=12072",
     "produces": {
@@ -3348,9 +3348,9 @@
     "name": "Black Mageweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 230,
-      "yellow": 0,
-      "green": 230,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -3358,7 +3358,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 230,
+    "minSkill": 190,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12073",
     "produces": {
@@ -3376,16 +3376,16 @@
     "name": "Black Mageweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 230,
-      "yellow": 0,
-      "green": 230,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 230,
+    "minSkill": 190,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12074",
     "produces": {
@@ -3403,17 +3403,17 @@
     "name": "Lavender Mageweave Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 230,
-      "yellow": 0,
-      "green": 0,
-      "gray": 230
+      "orange": 190,
+      "yellow": 195,
+      "green": 200,
+      "gray": 205
     },
     "materials": {
       "4339": 2,
       "4342": 2,
       "8343": 2
     },
-    "minSkill": 230,
+    "minSkill": 190,
     "icon": "inv_shirt_purple_01",
     "url": "https://www.wowhead.com/forever/spell=12075",
     "produces": {
@@ -3432,9 +3432,9 @@
     "name": "Shadoweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 235,
-      "yellow": 0,
-      "green": 235,
+      "orange": 195,
+      "yellow": 210,
+      "green": 225,
       "gray": 240
     },
     "materials": {
@@ -3442,7 +3442,7 @@
       "8343": 2,
       "10285": 4
     },
-    "minSkill": 235,
+    "minSkill": 195,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12076",
     "produces": {
@@ -3460,10 +3460,10 @@
     "name": "Simple Black Dress",
     "quality": 1,
     "difficulty": {
-      "orange": 235,
-      "yellow": 0,
-      "green": 0,
-      "gray": 235
+      "orange": 195,
+      "yellow": 200,
+      "green": 205,
+      "gray": 210
     },
     "materials": {
       "2324": 1,
@@ -3471,7 +3471,7 @@
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 235,
+    "minSkill": 195,
     "icon": "inv_chest_cloth_21",
     "url": "https://www.wowhead.com/forever/spell=12077",
     "produces": {
@@ -3489,9 +3489,9 @@
     "name": "Red Mageweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 235,
-      "yellow": 0,
-      "green": 235,
+      "orange": 195,
+      "yellow": 210,
+      "green": 225,
       "gray": 240
     },
     "materials": {
@@ -3499,7 +3499,7 @@
       "4339": 4,
       "8343": 3
     },
-    "minSkill": 235,
+    "minSkill": 195,
     "icon": "inv_shoulder_23",
     "url": "https://www.wowhead.com/forever/spell=12078",
     "produces": {
@@ -3518,9 +3518,9 @@
     "name": "Red Mageweave Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 235,
-      "yellow": 0,
-      "green": 235,
+      "orange": 195,
+      "yellow": 210,
+      "green": 225,
       "gray": 240
     },
     "materials": {
@@ -3528,7 +3528,7 @@
       "4339": 4,
       "8343": 2
     },
-    "minSkill": 235,
+    "minSkill": 195,
     "icon": "inv_misc_bag_10_red",
     "url": "https://www.wowhead.com/forever/spell=12079",
     "produces": {
@@ -3546,17 +3546,17 @@
     "name": "Pink Mageweave Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 235,
-      "yellow": 0,
-      "green": 0,
-      "gray": 235
+      "orange": 195,
+      "yellow": 200,
+      "green": 205,
+      "gray": 210
     },
     "materials": {
       "4339": 3,
       "8343": 1,
       "10290": 1
     },
-    "minSkill": 235,
+    "minSkill": 195,
     "icon": "inv_shirt_red_01",
     "url": "https://www.wowhead.com/forever/spell=12080",
     "produces": {
@@ -3604,9 +3604,9 @@
     "name": "Shadoweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 240,
-      "yellow": 0,
-      "green": 240,
+      "orange": 200,
+      "yellow": 215,
+      "green": 230,
       "gray": 245
     },
     "materials": {
@@ -3615,7 +3615,7 @@
       "8343": 3,
       "10285": 6
     },
-    "minSkill": 240,
+    "minSkill": 200,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12082",
     "produces": {
@@ -3633,9 +3633,9 @@
     "name": "Red Mageweave Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 240,
-      "yellow": 0,
-      "green": 240,
+      "orange": 200,
+      "yellow": 215,
+      "green": 230,
       "gray": 245
     },
     "materials": {
@@ -3643,7 +3643,7 @@
       "4339": 4,
       "8343": 2
     },
-    "minSkill": 240,
+    "minSkill": 200,
     "icon": "inv_misc_bandana_03",
     "url": "https://www.wowhead.com/forever/spell=12084",
     "produces": {
@@ -3662,16 +3662,16 @@
     "name": "Tuxedo Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 240,
-      "yellow": 0,
-      "green": 0,
-      "gray": 240
+      "orange": 200,
+      "yellow": 205,
+      "green": 210,
+      "gray": 215
     },
     "materials": {
       "4339": 4,
       "8343": 2
     },
-    "minSkill": 240,
+    "minSkill": 200,
     "icon": "inv_shirt_08",
     "url": "https://www.wowhead.com/forever/spell=12085",
     "produces": {
@@ -3719,9 +3719,9 @@
     "name": "Cindercloth Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 245,
-      "yellow": 0,
-      "green": 245,
+      "orange": 200,
+      "yellow": 215,
+      "green": 230,
       "gray": 245
     },
     "materials": {
@@ -3730,7 +3730,7 @@
       "7077": 1,
       "8343": 3
     },
-    "minSkill": 245,
+    "minSkill": 200,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12088",
     "produces": {
@@ -3748,16 +3748,16 @@
     "name": "Tuxedo Pants",
     "quality": 1,
     "difficulty": {
-      "orange": 245,
-      "yellow": 0,
-      "green": 0,
-      "gray": 245
+      "orange": 140,
+      "yellow": 205,
+      "green": 210,
+      "gray": 215
     },
     "materials": {
       "4339": 4,
       "8343": 3
     },
-    "minSkill": 245,
+    "minSkill": 140,
     "icon": "inv_pants_01",
     "url": "https://www.wowhead.com/forever/spell=12089",
     "produces": {
@@ -3776,17 +3776,17 @@
     "name": "White Wedding Dress",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
-      "yellow": 0,
-      "green": 0,
-      "gray": 250
+      "orange": 140,
+      "yellow": 145,
+      "green": 150,
+      "gray": 155
     },
     "materials": {
       "2324": 1,
       "4339": 5,
       "8343": 3
     },
-    "minSkill": 250,
+    "minSkill": 140,
     "icon": "inv_chest_cloth_04",
     "url": "https://www.wowhead.com/forever/spell=12091",
     "produces": {
@@ -3805,9 +3805,9 @@
     "name": "Dreamweave Circlet",
     "quality": 3,
     "difficulty": {
-      "orange": 250,
-      "yellow": 0,
-      "green": 250,
+      "orange": 205,
+      "yellow": 220,
+      "green": 235,
       "gray": 250
     },
     "materials": {
@@ -3818,7 +3818,7 @@
       "8343": 3,
       "10286": 2
     },
-    "minSkill": 250,
+    "minSkill": 205,
     "icon": "inv_crown_01",
     "url": "https://www.wowhead.com/forever/spell=12092",
     "produces": {
@@ -3836,16 +3836,16 @@
     "name": "Tuxedo Jacket",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
-      "yellow": 0,
-      "green": 0,
-      "gray": 250
+      "orange": 140,
+      "yellow": 155,
+      "green": 170,
+      "gray": 185
     },
     "materials": {
       "4339": 5,
       "8343": 3
     },
-    "minSkill": 250,
+    "minSkill": 140,
     "icon": "inv_shirt_black_01",
     "url": "https://www.wowhead.com/forever/spell=12093",
     "produces": {
@@ -3864,15 +3864,15 @@
     "name": "Bolt of Runecloth",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
-      "yellow": 0,
-      "green": 0,
-      "gray": 250
+      "orange": 205,
+      "yellow": 210,
+      "green": 212,
+      "gray": 215
     },
     "materials": {
       "14047": 5
     },
-    "minSkill": 250,
+    "minSkill": 205,
     "icon": "inv_fabric_purplefire_02",
     "url": "https://www.wowhead.com/forever/spell=18401",
     "produces": {
@@ -3890,16 +3890,16 @@
     "name": "Runecloth Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 255,
-      "yellow": 0,
-      "green": 255,
+      "orange": 210,
+      "yellow": 225,
+      "green": 240,
       "gray": 255
     },
     "materials": {
       "14048": 3,
       "14341": 1
     },
-    "minSkill": 255,
+    "minSkill": 210,
     "icon": "inv_belt_15",
     "url": "https://www.wowhead.com/forever/spell=18402",
     "produces": {
@@ -3917,9 +3917,9 @@
     "name": "Frostweave Tunic",
     "quality": 2,
     "difficulty": {
-      "orange": 255,
-      "yellow": 0,
-      "green": 255,
+      "orange": 210,
+      "yellow": 225,
+      "green": 240,
       "gray": 255
     },
     "materials": {
@@ -3927,7 +3927,7 @@
       "14048": 5,
       "14341": 1
     },
-    "minSkill": 255,
+    "minSkill": 210,
     "icon": "inv_chest_cloth_08",
     "url": "https://www.wowhead.com/forever/spell=18403",
     "produces": {
@@ -3946,9 +3946,9 @@
     "name": "Frostweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 255,
-      "yellow": 0,
-      "green": 255,
+      "orange": 210,
+      "yellow": 225,
+      "green": 240,
       "gray": 255
     },
     "materials": {
@@ -3956,7 +3956,7 @@
       "14048": 5,
       "14341": 1
     },
-    "minSkill": 255,
+    "minSkill": 210,
     "icon": "inv_chest_cloth_03",
     "url": "https://www.wowhead.com/forever/spell=18404",
     "produces": {
@@ -3975,9 +3975,9 @@
     "name": "Runecloth Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 260,
-      "yellow": 0,
-      "green": 260,
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
       "gray": 260
     },
     "materials": {
@@ -3987,7 +3987,7 @@
       "249409": 2,
       "249430": 4
     },
-    "minSkill": 260,
+    "minSkill": 215,
     "icon": "inv_misc_bag_19",
     "url": "https://www.wowhead.com/forever/spell=18405",
     "produces": {
@@ -4006,9 +4006,9 @@
     "name": "Runecloth Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 0,
-      "green": 260,
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
       "gray": 260
     },
     "materials": {
@@ -4016,7 +4016,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 260,
+    "minSkill": 215,
     "icon": "inv_chest_cloth_04",
     "url": "https://www.wowhead.com/forever/spell=18406",
     "produces": {
@@ -4035,9 +4035,9 @@
     "name": "Runecloth Tunic",
     "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 0,
-      "green": 260,
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
       "gray": 260
     },
     "materials": {
@@ -4045,7 +4045,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 260,
+    "minSkill": 215,
     "icon": "inv_chest_cloth_04",
     "url": "https://www.wowhead.com/forever/spell=18407",
     "produces": {
@@ -4064,9 +4064,9 @@
     "name": "Cindercloth Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 0,
-      "green": 260,
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
       "gray": 260
     },
     "materials": {
@@ -4074,7 +4074,7 @@
       "14048": 5,
       "14341": 1
     },
-    "minSkill": 260,
+    "minSkill": 215,
     "icon": "inv_chest_cloth_07",
     "url": "https://www.wowhead.com/forever/spell=18408",
     "produces": {
@@ -4093,9 +4093,9 @@
     "name": "Runecloth Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 265,
-      "yellow": 0,
-      "green": 265,
+      "orange": 220,
+      "yellow": 240,
+      "green": 255,
       "gray": 270
     },
     "materials": {
@@ -4103,7 +4103,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 265,
+    "minSkill": 220,
     "icon": "inv_misc_cape_10",
     "url": "https://www.wowhead.com/forever/spell=18409",
     "produces": {
@@ -4122,9 +4122,9 @@
     "name": "Ghostweave Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 265,
-      "yellow": 0,
-      "green": 265,
+      "orange": 220,
+      "yellow": 235,
+      "green": 250,
       "gray": 265
     },
     "materials": {
@@ -4133,7 +4133,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 265,
+    "minSkill": 220,
     "icon": "inv_belt_16",
     "url": "https://www.wowhead.com/forever/spell=18410",
     "produces": {
@@ -4152,17 +4152,17 @@
     "name": "Frostweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 265,
-      "yellow": 0,
-      "green": 0,
-      "gray": 265
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
+      "gray": 260
     },
     "materials": {
       "7080": 1,
       "14048": 3,
       "14341": 1
     },
-    "minSkill": 265,
+    "minSkill": 215,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=18411",
     "produces": {
@@ -4181,9 +4181,9 @@
     "name": "Cindercloth Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 270,
-      "yellow": 0,
-      "green": 270,
+      "orange": 225,
+      "yellow": 240,
+      "green": 255,
       "gray": 270
     },
     "materials": {
@@ -4191,7 +4191,7 @@
       "14048": 4,
       "14341": 1
     },
-    "minSkill": 270,
+    "minSkill": 225,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=18412",
     "produces": {
@@ -4210,9 +4210,9 @@
     "name": "Ghostweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 270,
-      "yellow": 0,
-      "green": 270,
+      "orange": 225,
+      "yellow": 240,
+      "green": 255,
       "gray": 270
     },
     "materials": {
@@ -4221,7 +4221,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 270,
+    "minSkill": 225,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=18413",
     "produces": {
@@ -4240,9 +4240,9 @@
     "name": "Brightcloth Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 270,
-      "yellow": 0,
-      "green": 270,
+      "orange": 225,
+      "yellow": 240,
+      "green": 255,
       "gray": 270
     },
     "materials": {
@@ -4250,7 +4250,7 @@
       "14048": 5,
       "14341": 1
     },
-    "minSkill": 270,
+    "minSkill": 225,
     "icon": "inv_chest_cloth_26",
     "url": "https://www.wowhead.com/forever/spell=18414",
     "produces": {
@@ -4269,9 +4269,9 @@
     "name": "Brightcloth Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 270,
-      "yellow": 0,
-      "green": 270,
+      "orange": 225,
+      "yellow": 240,
+      "green": 255,
       "gray": 270
     },
     "materials": {
@@ -4279,7 +4279,7 @@
       "14048": 4,
       "14341": 1
     },
-    "minSkill": 270,
+    "minSkill": 225,
     "icon": "inv_gauntlets_21",
     "url": "https://www.wowhead.com/forever/spell=18415",
     "produces": {
@@ -4298,10 +4298,10 @@
     "name": "Ghostweave Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 0,
-      "gray": 275
+      "orange": 225,
+      "yellow": 240,
+      "green": 255,
+      "gray": 270
     },
     "materials": {
       "9210": 4,
@@ -4309,7 +4309,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 225,
     "icon": "inv_shirt_08",
     "url": "https://www.wowhead.com/forever/spell=18416",
     "produces": {
@@ -4328,9 +4328,9 @@
     "name": "Runecloth Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -4338,7 +4338,7 @@
       "14048": 4,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_gauntlets_25",
     "url": "https://www.wowhead.com/forever/spell=18417",
     "produces": {
@@ -4357,9 +4357,9 @@
     "name": "Cindercloth Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -4367,7 +4367,7 @@
       "14048": 5,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_misc_cape_18",
     "url": "https://www.wowhead.com/forever/spell=18418",
     "produces": {
@@ -4386,9 +4386,9 @@
     "name": "Felcloth Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -4396,7 +4396,7 @@
       "14256": 4,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=18419",
     "produces": {
@@ -4415,9 +4415,9 @@
     "name": "Brightcloth Cloak",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -4425,7 +4425,7 @@
       "14048": 4,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_misc_cape_11",
     "url": "https://www.wowhead.com/forever/spell=18420",
     "produces": {
@@ -4444,9 +4444,9 @@
     "name": "Wizardweave Leggings",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -4454,7 +4454,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_pants_09",
     "url": "https://www.wowhead.com/forever/spell=18421",
     "produces": {
@@ -4504,9 +4504,9 @@
     "name": "Runecloth Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 280,
-      "yellow": 0,
-      "green": 280,
+      "orange": 235,
+      "yellow": 250,
+      "green": 265,
       "gray": 280
     },
     "materials": {
@@ -4515,7 +4515,7 @@
       "14227": 2,
       "14341": 1
     },
-    "minSkill": 280,
+    "minSkill": 235,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=18423",
     "produces": {
@@ -4534,9 +4534,9 @@
     "name": "Frostweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 280,
-      "yellow": 0,
-      "green": 280,
+      "orange": 235,
+      "yellow": 250,
+      "green": 265,
       "gray": 280
     },
     "materials": {
@@ -4544,7 +4544,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 280,
+    "minSkill": 235,
     "icon": "inv_pants_08",
     "url": "https://www.wowhead.com/forever/spell=18424",
     "produces": {
@@ -4563,9 +4563,9 @@
     "name": "Cindercloth Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 280,
-      "yellow": 0,
-      "green": 280,
+      "orange": 235,
+      "yellow": 250,
+      "green": 265,
       "gray": 280
     },
     "materials": {
@@ -4573,7 +4573,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 280,
+    "minSkill": 235,
     "icon": "inv_pants_06",
     "url": "https://www.wowhead.com/forever/spell=18434",
     "produces": {
@@ -4592,9 +4592,9 @@
     "name": "Robe of Winter Night",
     "quality": 3,
     "difficulty": {
-      "orange": 285,
-      "yellow": 0,
-      "green": 285,
+      "orange": 245,
+      "yellow": 260,
+      "green": 275,
       "gray": 290
     },
     "materials": {
@@ -4604,7 +4604,7 @@
       "14256": 12,
       "14341": 1
     },
-    "minSkill": 285,
+    "minSkill": 245,
     "icon": "inv_chest_cloth_49",
     "url": "https://www.wowhead.com/forever/spell=18436",
     "produces": {
@@ -4623,9 +4623,9 @@
     "name": "Felcloth Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 285,
-      "yellow": 0,
-      "green": 285,
+      "orange": 240,
+      "yellow": 255,
+      "green": 270,
       "gray": 285
     },
     "materials": {
@@ -4634,7 +4634,7 @@
       "14256": 4,
       "14341": 1
     },
-    "minSkill": 285,
+    "minSkill": 240,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=18437",
     "produces": {
@@ -4653,9 +4653,9 @@
     "name": "Runecloth Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 285,
-      "yellow": 0,
-      "green": 285,
+      "orange": 240,
+      "yellow": 255,
+      "green": 270,
       "gray": 285
     },
     "materials": {
@@ -4663,7 +4663,7 @@
       "14227": 2,
       "14341": 1
     },
-    "minSkill": 285,
+    "minSkill": 240,
     "icon": "inv_pants_09",
     "url": "https://www.wowhead.com/forever/spell=18438",
     "produces": {
@@ -4682,9 +4682,9 @@
     "name": "Brightcloth Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 290,
-      "yellow": 0,
-      "green": 290,
+      "orange": 245,
+      "yellow": 260,
+      "green": 275,
       "gray": 290
     },
     "materials": {
@@ -4693,7 +4693,7 @@
       "14227": 1,
       "14341": 1
     },
-    "minSkill": 290,
+    "minSkill": 245,
     "icon": "inv_pants_09",
     "url": "https://www.wowhead.com/forever/spell=18439",
     "produces": {
@@ -4712,9 +4712,9 @@
     "name": "Mooncloth Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 290,
-      "yellow": 0,
-      "green": 290,
+      "orange": 245,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -4722,7 +4722,7 @@
       "14341": 1,
       "14342": 4
     },
-    "minSkill": 290,
+    "minSkill": 245,
     "icon": "inv_pants_13",
     "url": "https://www.wowhead.com/forever/spell=18440",
     "produces": {
@@ -4741,9 +4741,9 @@
     "name": "Ghostweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 290,
-      "yellow": 0,
-      "green": 290,
+      "orange": 245,
+      "yellow": 260,
+      "green": 275,
       "gray": 290
     },
     "materials": {
@@ -4751,7 +4751,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 290,
+    "minSkill": 245,
     "icon": "inv_pants_01",
     "url": "https://www.wowhead.com/forever/spell=18441",
     "produces": {
@@ -4770,9 +4770,9 @@
     "name": "Felcloth Hood",
     "quality": 2,
     "difficulty": {
-      "orange": 290,
-      "yellow": 0,
-      "green": 290,
+      "orange": 245,
+      "yellow": 260,
+      "green": 275,
       "gray": 290
     },
     "materials": {
@@ -4780,7 +4780,7 @@
       "14256": 4,
       "14341": 1
     },
-    "minSkill": 290,
+    "minSkill": 245,
     "icon": "inv_helmet_34",
     "url": "https://www.wowhead.com/forever/spell=18442",
     "produces": {
@@ -4799,9 +4799,9 @@
     "name": "Runecloth Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 295,
-      "yellow": 0,
-      "green": 295,
+      "orange": 250,
+      "yellow": 265,
+      "green": 280,
       "gray": 295
     },
     "materials": {
@@ -4809,7 +4809,7 @@
       "14227": 2,
       "14341": 1
     },
-    "minSkill": 295,
+    "minSkill": 250,
     "icon": "inv_misc_bandana_03",
     "url": "https://www.wowhead.com/forever/spell=18444",
     "produces": {
@@ -4828,9 +4828,9 @@
     "name": "Mooncloth Bag",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 255,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -4841,7 +4841,7 @@
       "249430": 2,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 255,
     "icon": "inv_misc_bag_14",
     "url": "https://www.wowhead.com/forever/spell=18445",
     "produces": {
@@ -4860,9 +4860,9 @@
     "name": "Wizardweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 255,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -4870,7 +4870,7 @@
       "14048": 8,
       "14341": 1
     },
-    "minSkill": 300,
+    "minSkill": 255,
     "icon": "inv_chest_cloth_46",
     "url": "https://www.wowhead.com/forever/spell=18446",
     "produces": {
@@ -4889,8 +4889,8 @@
     "name": "Mooncloth Vest",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 270,
+      "yellow": 285,
       "green": 300,
       "gray": 315
     },
@@ -4899,7 +4899,7 @@
       "14341": 1,
       "14342": 4
     },
-    "minSkill": 300,
+    "minSkill": 270,
     "icon": "inv_chest_cloth_08",
     "url": "https://www.wowhead.com/forever/spell=18447",
     "produces": {
@@ -4918,8 +4918,8 @@
     "name": "Mooncloth Shoulders",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 275,
+      "yellow": 290,
       "green": 305,
       "gray": 320
     },
@@ -4928,7 +4928,7 @@
       "14341": 1,
       "14342": 5
     },
-    "minSkill": 300,
+    "minSkill": 275,
     "icon": "inv_shoulder_02",
     "url": "https://www.wowhead.com/forever/spell=18448",
     "produces": {
@@ -4947,9 +4947,9 @@
     "name": "Runecloth Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 260,
+      "yellow": 275,
+      "green": 290,
       "gray": 305
     },
     "materials": {
@@ -4958,7 +4958,7 @@
       "14227": 2,
       "14341": 1
     },
-    "minSkill": 300,
+    "minSkill": 260,
     "icon": "inv_shoulder_21",
     "url": "https://www.wowhead.com/forever/spell=18449",
     "produces": {
@@ -4977,9 +4977,9 @@
     "name": "Wizardweave Turban",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 260,
+      "yellow": 275,
+      "green": 290,
       "gray": 305
     },
     "materials": {
@@ -4988,7 +4988,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 300,
+    "minSkill": 260,
     "icon": "inv_helmet_63",
     "url": "https://www.wowhead.com/forever/spell=18450",
     "produces": {
@@ -5007,9 +5007,9 @@
     "name": "Felcloth Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 260,
+      "yellow": 275,
+      "green": 290,
       "gray": 305
     },
     "materials": {
@@ -5018,7 +5018,7 @@
       "14256": 8,
       "14341": 2
     },
-    "minSkill": 300,
+    "minSkill": 260,
     "icon": "inv_chest_cloth_09",
     "url": "https://www.wowhead.com/forever/spell=18451",
     "produces": {
@@ -5037,8 +5037,8 @@
     "name": "Mooncloth Circlet",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 280,
+      "yellow": 295,
       "green": 310,
       "gray": 325
     },
@@ -5049,7 +5049,7 @@
       "14341": 2,
       "14342": 6
     },
-    "minSkill": 300,
+    "minSkill": 280,
     "icon": "inv_misc_bandana_01",
     "url": "https://www.wowhead.com/forever/spell=18452",
     "produces": {
@@ -5068,9 +5068,9 @@
     "name": "Felcloth Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 265,
+      "yellow": 280,
+      "green": 295,
       "gray": 310
     },
     "materials": {
@@ -5080,7 +5080,7 @@
       "14256": 6,
       "14341": 2
     },
-    "minSkill": 300,
+    "minSkill": 265,
     "icon": "inv_shoulder_23",
     "url": "https://www.wowhead.com/forever/spell=18453",
     "produces": {
@@ -5099,7 +5099,7 @@
     "name": "Gloves of Spell Mastery",
     "quality": 4,
     "difficulty": {
-      "orange": 300,
+      "orange": 295,
       "yellow": 310,
       "green": 325,
       "gray": 340
@@ -5114,7 +5114,7 @@
       "14342": 8,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 295,
     "icon": "inv_gauntlets_06",
     "url": "https://www.wowhead.com/forever/spell=18454",
     "produces": {
@@ -5166,7 +5166,7 @@
     "name": "Truefaith Vestments",
     "quality": 4,
     "difficulty": {
-      "orange": 300,
+      "orange": 295,
       "yellow": 310,
       "green": 325,
       "gray": 340
@@ -5180,7 +5180,7 @@
       "14342": 8,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 295,
     "icon": "inv_chest_cloth_31",
     "url": "https://www.wowhead.com/forever/spell=18456",
     "produces": {
@@ -5199,7 +5199,7 @@
     "name": "Robe of the Archmage",
     "quality": 4,
     "difficulty": {
-      "orange": 300,
+      "orange": 295,
       "yellow": 310,
       "green": 325,
       "gray": 340
@@ -5213,7 +5213,7 @@
       "14341": 2,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 295,
     "icon": "inv_chest_cloth_38",
     "url": "https://www.wowhead.com/forever/spell=18457",
     "produces": {
@@ -5232,7 +5232,7 @@
     "name": "Robe of the Void",
     "quality": 4,
     "difficulty": {
-      "orange": 300,
+      "orange": 295,
       "yellow": 310,
       "green": 325,
       "gray": 340
@@ -5246,7 +5246,7 @@
       "14341": 2,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 295,
     "icon": "inv_chest_cloth_51",
     "url": "https://www.wowhead.com/forever/spell=18458",
     "produces": {
@@ -5265,7 +5265,7 @@
     "name": "Mooncloth",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
+      "orange": 230,
       "yellow": 270,
       "green": 285,
       "gray": 300
@@ -5273,7 +5273,7 @@
     "materials": {
       "14256": 2
     },
-    "minSkill": 250,
+    "minSkill": 230,
     "icon": "inv_fabric_moonrag_01",
     "url": "https://www.wowhead.com/forever/spell=18560",
     "produces": {
@@ -5292,8 +5292,8 @@
     "name": "Mooncloth Boots",
     "quality": 3,
     "difficulty": {
-      "orange": 290,
-      "yellow": 290,
+      "orange": 0,
+      "yellow": 285,
       "green": 300,
       "gray": 315
     },
@@ -5303,7 +5303,7 @@
       "14341": 1,
       "14342": 4
     },
-    "minSkill": 290,
+    "minSkill": 0,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=19435",
     "produces": {
@@ -5382,17 +5382,17 @@
     "name": "Green Holiday Shirt",
     "quality": 1,
     "difficulty": {
-      "orange": 190,
-      "yellow": 0,
-      "green": 0,
-      "gray": 190
+      "orange": 155,
+      "yellow": 165,
+      "green": 170,
+      "gray": 175
     },
     "materials": {
       "2605": 4,
       "4291": 1,
       "4305": 5
     },
-    "minSkill": 190,
+    "minSkill": 155,
     "icon": "inv_shirt_green_01",
     "url": "https://www.wowhead.com/forever/spell=21945",
     "produces": {
@@ -5470,7 +5470,7 @@
     "name": "Belt of the Archmage",
     "quality": 4,
     "difficulty": {
-      "orange": 300,
+      "orange": 295,
       "yellow": 310,
       "green": 325,
       "gray": 340
@@ -5485,7 +5485,7 @@
       "14344": 4,
       "249431": 10
     },
-    "minSkill": 300,
+    "minSkill": 295,
     "icon": "inv_belt_31",
     "url": "https://www.wowhead.com/forever/spell=22866",
     "produces": {
@@ -5504,8 +5504,8 @@
     "name": "Felcloth Gloves",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 280,
+      "yellow": 295,
       "green": 310,
       "gray": 325
     },
@@ -5516,7 +5516,7 @@
       "14256": 20,
       "14341": 2
     },
-    "minSkill": 300,
+    "minSkill": 280,
     "icon": "inv_gauntlets_19",
     "url": "https://www.wowhead.com/forever/spell=22867",
     "produces": {
@@ -5535,8 +5535,8 @@
     "name": "Inferno Gloves",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 280,
+      "yellow": 295,
       "green": 310,
       "gray": 325
     },
@@ -5546,7 +5546,7 @@
       "14048": 12,
       "14341": 2
     },
-    "minSkill": 300,
+    "minSkill": 280,
     "icon": "inv_gauntlets_19",
     "url": "https://www.wowhead.com/forever/spell=22868",
     "produces": {
@@ -5565,8 +5565,8 @@
     "name": "Mooncloth Gloves",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 280,
+      "yellow": 295,
       "green": 310,
       "gray": 325
     },
@@ -5576,7 +5576,7 @@
       "14341": 2,
       "14342": 6
     },
-    "minSkill": 300,
+    "minSkill": 280,
     "icon": "inv_gauntlets_17",
     "url": "https://www.wowhead.com/forever/spell=22869",
     "produces": {
@@ -5595,8 +5595,8 @@
     "name": "Cloak of Warding",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 280,
+      "yellow": 295,
       "green": 310,
       "gray": 325
     },
@@ -5606,7 +5606,7 @@
       "14048": 12,
       "14341": 2
     },
-    "minSkill": 300,
+    "minSkill": 280,
     "icon": "inv_misc_cape_06",
     "url": "https://www.wowhead.com/forever/spell=22870",
     "produces": {
@@ -5625,8 +5625,8 @@
     "name": "Mooncloth Robe",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
-      "yellow": 300,
+      "orange": 275,
+      "yellow": 290,
       "green": 305,
       "gray": 320
     },
@@ -5636,7 +5636,7 @@
       "14341": 2,
       "14342": 4
     },
-    "minSkill": 300,
+    "minSkill": 275,
     "icon": "inv_chest_cloth_04",
     "url": "https://www.wowhead.com/forever/spell=22902",
     "produces": {
@@ -5655,9 +5655,9 @@
     "name": "Wisdom of the Timbermaw",
     "quality": 3,
     "difficulty": {
-      "orange": 290,
-      "yellow": 0,
-      "green": 290,
+      "orange": 255,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -5666,7 +5666,7 @@
       "14048": 8,
       "14227": 2
     },
-    "minSkill": 290,
+    "minSkill": 255,
     "icon": "inv_belt_09",
     "url": "https://www.wowhead.com/forever/spell=23662",
     "produces": {
@@ -5685,7 +5685,7 @@
     "name": "Mantle of the Timbermaw",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
+      "orange": 290,
       "yellow": 305,
       "green": 319,
       "gray": 334
@@ -5696,7 +5696,7 @@
       "14227": 2,
       "14342": 5
     },
-    "minSkill": 300,
+    "minSkill": 290,
     "icon": "inv_shoulder_19",
     "url": "https://www.wowhead.com/forever/spell=23663",
     "produces": {
@@ -5715,7 +5715,7 @@
     "name": "Argent Boots",
     "quality": 3,
     "difficulty": {
-      "orange": 290,
+      "orange": 0,
       "yellow": 0,
       "green": 290,
       "gray": 300
@@ -5727,7 +5727,7 @@
       "14048": 6,
       "14227": 2
     },
-    "minSkill": 290,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_03",
     "url": "https://www.wowhead.com/forever/spell=23664",
     "produces": {
@@ -5930,7 +5930,7 @@
     "name": "Runed Stygian Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
+      "orange": 285,
       "yellow": 300,
       "green": 315,
       "gray": 330
@@ -5941,7 +5941,7 @@
       "14256": 6,
       "20520": 8
     },
-    "minSkill": 300,
+    "minSkill": 285,
     "icon": "inv_pants_cloth_05",
     "url": "https://www.wowhead.com/forever/spell=24901",
     "produces": {
@@ -5960,7 +5960,7 @@
     "name": "Runed Stygian Belt",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
+      "orange": 285,
       "yellow": 300,
       "green": 315,
       "gray": 330
@@ -5972,7 +5972,7 @@
       "14256": 2,
       "20520": 6
     },
-    "minSkill": 300,
+    "minSkill": 285,
     "icon": "inv_belt_14",
     "url": "https://www.wowhead.com/forever/spell=24902",
     "produces": {
@@ -5991,7 +5991,7 @@
     "name": "Runed Stygian Boots",
     "quality": 3,
     "difficulty": {
-      "orange": 300,
+      "orange": 285,
       "yellow": 300,
       "green": 315,
       "gray": 330
@@ -6003,7 +6003,7 @@
       "14256": 4,
       "20520": 6
     },
-    "minSkill": 300,
+    "minSkill": 285,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=24903",
     "produces": {
@@ -6022,9 +6022,9 @@
     "name": "Soul Pouch",
     "quality": 2,
     "difficulty": {
-      "orange": 260,
-      "yellow": 0,
-      "green": 260,
+      "orange": 215,
+      "yellow": 230,
+      "green": 245,
       "gray": 260
     },
     "materials": {
@@ -6033,7 +6033,7 @@
       "14048": 6,
       "14341": 1
     },
-    "minSkill": 260,
+    "minSkill": 215,
     "icon": "inv_misc_bag_soulbag",
     "url": "https://www.wowhead.com/forever/spell=26085",
     "produces": {
@@ -6171,9 +6171,9 @@
     "name": "Enchanted Mageweave Pouch",
     "quality": 2,
     "difficulty": {
-      "orange": 225,
-      "yellow": 0,
-      "green": 225,
+      "orange": 190,
+      "yellow": 205,
+      "green": 220,
       "gray": 235
     },
     "materials": {
@@ -6181,7 +6181,7 @@
       "8343": 2,
       "11137": 4
     },
-    "minSkill": 225,
+    "minSkill": 190,
     "icon": "inv_misc_bag_enchantedmageweave",
     "url": "https://www.wowhead.com/forever/spell=27658",
     "produces": {
@@ -6200,9 +6200,9 @@
     "name": "Enchanted Runecloth Bag",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -6210,7 +6210,7 @@
       "14341": 2,
       "16203": 2
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_misc_bag_enchantedrunecloth",
     "url": "https://www.wowhead.com/forever/spell=27659",
     "produces": {
@@ -6229,9 +6229,9 @@
     "name": "Big Bag of Enchantment",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 255,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -6240,7 +6240,7 @@
       "14227": 4,
       "14344": 4
     },
-    "minSkill": 300,
+    "minSkill": 255,
     "icon": "inv_misc_bag_bigbagofenchantments",
     "url": "https://www.wowhead.com/forever/spell=27660",
     "produces": {
@@ -6259,9 +6259,9 @@
     "name": "Cenarion Herb Bag",
     "quality": 2,
     "difficulty": {
-      "orange": 275,
-      "yellow": 0,
-      "green": 275,
+      "orange": 230,
+      "yellow": 245,
+      "green": 260,
       "gray": 275
     },
     "materials": {
@@ -6270,7 +6270,7 @@
       "14048": 5,
       "14341": 2
     },
-    "minSkill": 275,
+    "minSkill": 230,
     "icon": "inv_misc_bag_cenarionherbbag",
     "url": "https://www.wowhead.com/forever/spell=27724",
     "produces": {
@@ -6289,9 +6289,9 @@
     "name": "Satchel of Cenarius",
     "quality": 2,
     "difficulty": {
-      "orange": 300,
-      "yellow": 0,
-      "green": 300,
+      "orange": 255,
+      "yellow": 270,
+      "green": 285,
       "gray": 300
     },
     "materials": {
@@ -6300,7 +6300,7 @@
       "14227": 4,
       "14342": 2
     },
-    "minSkill": 300,
+    "minSkill": 255,
     "icon": "inv_misc_bag_satchelofcenarius",
     "url": "https://www.wowhead.com/forever/spell=27725",
     "produces": {
@@ -8052,7 +8052,7 @@
     "name": "Faction Banner",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 20,
       "yellow": 20,
       "green": 22,
       "gray": 25
@@ -8061,7 +8061,7 @@
       "2320": 1,
       "2996": 1
     },
-    "minSkill": 0,
+    "minSkill": 20,
     "icon": "inv_banner_03",
     "url": "https://www.wowhead.com/forever/spell=1229504",
     "produces": {
@@ -8136,7 +8136,7 @@
     "name": "Novice Arcanist's Sash",
     "quality": 3,
     "difficulty": {
-      "orange": 50,
+      "orange": 35,
       "yellow": 55,
       "green": 55,
       "gray": 55
@@ -8146,7 +8146,7 @@
       "2455": 2,
       "2996": 8
     },
-    "minSkill": 50,
+    "minSkill": 35,
     "icon": "inv_belt_43a",
     "url": "https://www.wowhead.com/forever/spell=1257368",
     "produces": {
@@ -8165,7 +8165,7 @@
     "name": "Novice Ardent's Sash",
     "quality": 3,
     "difficulty": {
-      "orange": 50,
+      "orange": 35,
       "yellow": 55,
       "green": 55,
       "gray": 55
@@ -8175,7 +8175,7 @@
       "2321": 2,
       "2996": 12
     },
-    "minSkill": 50,
+    "minSkill": 35,
     "icon": "inv_belt_43",
     "url": "https://www.wowhead.com/forever/spell=1257369",
     "produces": {
@@ -9909,10 +9909,10 @@
     "name": "Gilded Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "3577": 2,
@@ -9921,7 +9921,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_08",
     "url": "https://www.wowhead.com/forever/spell=1257426",
     "produces": {
@@ -9940,10 +9940,10 @@
     "name": "Frothing Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "4339": 8,
@@ -9952,7 +9952,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_03",
     "url": "https://www.wowhead.com/forever/spell=1257427",
     "produces": {
@@ -9971,10 +9971,10 @@
     "name": "Fiery Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "4339": 8,
@@ -9983,7 +9983,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_02",
     "url": "https://www.wowhead.com/forever/spell=1257428",
     "produces": {
@@ -10002,10 +10002,10 @@
     "name": "Black Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "4339": 8,
@@ -10014,7 +10014,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_21",
     "url": "https://www.wowhead.com/forever/spell=1257429",
     "produces": {
@@ -10033,10 +10033,10 @@
     "name": "Golden Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "4339": 8,
@@ -10045,7 +10045,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_06",
     "url": "https://www.wowhead.com/forever/spell=1257430",
     "produces": {
@@ -10064,10 +10064,10 @@
     "name": "Radiant Slippers",
     "quality": 3,
     "difficulty": {
-      "orange": 140,
-      "yellow": 145,
-      "green": 145,
-      "gray": 145
+      "orange": 0,
+      "yellow": 0,
+      "green": 0,
+      "gray": 150
     },
     "materials": {
       "4339": 8,
@@ -10076,7 +10076,7 @@
       "249409": 2,
       "249430": 2
     },
-    "minSkill": 140,
+    "minSkill": 0,
     "icon": "inv_boots_cloth_26",
     "url": "https://www.wowhead.com/forever/spell=1257431",
     "produces": {
@@ -12127,7 +12127,7 @@
     "name": "Faction Banner",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 20,
       "yellow": 20,
       "green": 22,
       "gray": 25
@@ -12136,7 +12136,7 @@
       "2320": 1,
       "2996": 1
     },
-    "minSkill": 0,
+    "minSkill": 20,
     "icon": "inv_banner_03",
     "url": "https://www.wowhead.com/forever/spell=1263425",
     "produces": {

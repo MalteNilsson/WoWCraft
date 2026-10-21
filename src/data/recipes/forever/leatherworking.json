@@ -111,9 +111,9 @@
     "quality": 2,
     "difficulty": {
       "orange": 85,
-      "yellow": 85,
-      "green": 85,
-      "gray": 100
+      "yellow": 105,
+      "green": 120,
+      "gray": 135
     },
     "materials": {
       "2318": 10,
@@ -277,9 +277,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 100,
-      "yellow": 0,
-      "green": 100,
-      "gray": 105
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
     },
     "materials": {
       "2319": 4,
@@ -1161,9 +1161,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 100,
-      "yellow": 0,
-      "green": 100,
-      "gray": 105
+      "yellow": 115,
+      "green": 122,
+      "gray": 130
     },
     "materials": {
       "4232": 1,
@@ -1188,9 +1188,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 150,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "yellow": 160,
+      "green": 165,
+      "gray": 170
     },
     "materials": {
       "4235": 1,
@@ -2526,8 +2526,8 @@
     "quality": 1,
     "difficulty": {
       "orange": 200,
-      "yellow": 0,
-      "green": 0,
+      "yellow": 200,
+      "green": 200,
       "gray": 200
     },
     "materials": {
@@ -3148,9 +3148,9 @@
     "quality": 2,
     "difficulty": {
       "orange": 240,
-      "yellow": 240,
-      "green": 240,
-      "gray": 250
+      "yellow": 260,
+      "green": 270,
+      "gray": 280
     },
     "materials": {
       "4304": 10,
@@ -3743,9 +3743,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 250,
-      "yellow": 0,
-      "green": 0,
-      "gray": 250
+      "yellow": 250,
+      "green": 255,
+      "gray": 260
     },
     "materials": {
       "8171": 1,
@@ -4002,9 +4002,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 250,
-      "yellow": 0,
-      "green": 0,
-      "gray": 250
+      "yellow": 250,
+      "green": 260,
+      "gray": 270
     },
     "materials": {
       "8170": 5
@@ -5337,9 +5337,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 100,
-      "yellow": 0,
-      "green": 0,
-      "gray": 100
+      "yellow": 100,
+      "green": 105,
+      "gray": 110
     },
     "materials": {
       "2318": 4
@@ -5363,9 +5363,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 150,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
     },
     "materials": {
       "2319": 5
@@ -5389,9 +5389,9 @@
     "quality": 1,
     "difficulty": {
       "orange": 200,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "yellow": 200,
+      "green": 202,
+      "gray": 205
     },
     "materials": {
       "4234": 6
@@ -5535,8 +5535,8 @@
     "quality": 1,
     "difficulty": {
       "orange": 250,
-      "yellow": 0,
-      "green": 0,
+      "yellow": 250,
+      "green": 250,
       "gray": 250
     },
     "materials": {
@@ -5561,9 +5561,9 @@
     "quality": 3,
     "difficulty": {
       "orange": 200,
-      "yellow": 0,
-      "green": 200,
-      "gray": 205
+      "yellow": 210,
+      "green": 220,
+      "gray": 230
     },
     "materials": {
       "1210": 4,
@@ -5836,10 +5836,10 @@
     "name": "Heavy Leather Ball",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "orange": 150,
+      "yellow": 150,
+      "green": 155,
+      "gray": 160
     },
     "materials": {
       "2321": 1,

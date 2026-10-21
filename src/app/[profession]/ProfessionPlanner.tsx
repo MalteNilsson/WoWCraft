@@ -1775,7 +1775,7 @@ const xTicks = selected
       selected.difficulty.yellow,
       selected.difficulty.green,
       selected.difficulty.gray
-    ].filter((v): v is number => typeof v === 'number')))
+    ].filter((v): v is number => typeof v === 'number' && v > 0)))
       .sort((a, b) => a - b)
   : [];
 

@@ -4,7 +4,7 @@
     "name": "Elixir of Minor Strength",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 15,
       "yellow": 55,
       "green": 75,
       "gray": 95
@@ -14,7 +14,7 @@
       "2449": 1,
       "3371": 1
     },
-    "minSkill": 1,
+    "minSkill": 15,
     "icon": "inv_potion_56",
     "url": "https://www.wowhead.com/forever/spell=2329",
     "produces": {
@@ -856,7 +856,7 @@
     "name": "Elixir of Minor Defense",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 55,
       "green": 75,
       "gray": 95
@@ -866,7 +866,7 @@
       "2447": 1,
       "3371": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_potion_63",
     "url": "https://www.wowhead.com/forever/spell=7183",
     "produces": {
@@ -1279,7 +1279,7 @@
     "name": "Restorative Potion",
     "quality": 1,
     "difficulty": {
-      "orange": 215,
+      "orange": 0,
       "yellow": 225,
       "green": 245,
       "gray": 265
@@ -1289,7 +1289,7 @@
       "7067": 1,
       "8925": 1
     },
-    "minSkill": 215,
+    "minSkill": 0,
     "icon": "inv_potion_01",
     "url": "https://www.wowhead.com/forever/spell=11452",
     "produces": {
@@ -3092,8 +3092,8 @@
     "produces": null,
     "source": {
       "type": "item",
-      "recipeItemId": 215434,
-      "recipeItemName": "UNUSED"
+      "recipeItemId": 215433,
+      "recipeItemName": "Recipe: Insulating Gniodine"
     }
   },
   {
@@ -3417,7 +3417,7 @@
     "name": "Mana Well",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 20,
       "yellow": 20,
       "green": 22,
       "gray": 25
@@ -3426,7 +3426,7 @@
       "2447": 1,
       "3371": 1
     },
-    "minSkill": 0,
+    "minSkill": 20,
     "icon": "spell_arcane_manatap",
     "url": "https://www.wowhead.com/forever/spell=1230564",
     "produces": {
@@ -3666,7 +3666,7 @@
     "name": "Cerulean Dye",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 40,
       "yellow": 50,
       "green": 70,
       "gray": 90
@@ -3675,7 +3675,7 @@
       "3371": 1,
       "249399": 2
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "inv_inscription_inkcerulean01",
     "url": "https://www.wowhead.com/forever/spell=1249630",
     "produces": {
@@ -3693,7 +3693,7 @@
     "name": "Magenta Dye",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 120,
       "yellow": 130,
       "green": 142,
       "gray": 155
@@ -3702,7 +3702,7 @@
       "3372": 1,
       "249424": 2
     },
-    "minSkill": 0,
+    "minSkill": 120,
     "icon": "inv_inscription_inkpurple02",
     "url": "https://www.wowhead.com/forever/spell=1249631",
     "produces": {
@@ -3720,7 +3720,7 @@
     "name": "Viridian Dye",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 215,
       "yellow": 230,
       "green": 250,
       "gray": 270
@@ -3729,7 +3729,7 @@
       "8925": 1,
       "249274": 2
     },
-    "minSkill": 0,
+    "minSkill": 215,
     "icon": "inv_inscription_inkgreen01",
     "url": "https://www.wowhead.com/forever/spell=1249632",
     "produces": {
@@ -3747,7 +3747,7 @@
     "name": "Sulfuric Acid",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 40,
       "yellow": 50,
       "green": 70,
       "gray": 90
@@ -3756,7 +3756,7 @@
       "3371": 1,
       "249391": 2
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "trade_alchemy",
     "url": "https://www.wowhead.com/forever/spell=1249633",
     "produces": {

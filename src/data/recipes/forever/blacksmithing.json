@@ -4,7 +4,7 @@
     "name": "Rough Sharpening Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 15,
       "green": 35,
       "gray": 55
@@ -12,7 +12,7 @@
     "materials": {
       "2835": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_stone_sharpeningstone_01",
     "url": "https://www.wowhead.com/forever/spell=2660",
     "produces": {
@@ -29,7 +29,7 @@
     "name": "Copper Chain Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 35,
+      "orange": 30,
       "yellow": 70,
       "green": 90,
       "gray": 110
@@ -37,7 +37,7 @@
     "materials": {
       "2840": 6
     },
-    "minSkill": 35,
+    "minSkill": 30,
     "icon": "inv_belt_02",
     "url": "https://www.wowhead.com/forever/spell=2661",
     "produces": {
@@ -55,7 +55,7 @@
     "name": "Copper Chain Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 1,
+      "orange": 15,
       "yellow": 50,
       "green": 70,
       "gray": 90
@@ -63,7 +63,7 @@
     "materials": {
       "2840": 4
     },
-    "minSkill": 1,
+    "minSkill": 15,
     "icon": "inv_pants_03",
     "url": "https://www.wowhead.com/forever/spell=2662",
     "produces": {
@@ -81,7 +81,7 @@
     "name": "Copper Bracers",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 20,
       "green": 40,
       "gray": 60
@@ -89,7 +89,7 @@
     "materials": {
       "2840": 2
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_bracer_03",
     "url": "https://www.wowhead.com/forever/spell=2663",
     "produces": {
@@ -106,7 +106,7 @@
     "name": "Runed Copper Bracers",
     "quality": 2,
     "difficulty": {
-      "orange": 90,
+      "orange": 65,
       "yellow": 90,
       "green": 102,
       "gray": 115
@@ -115,7 +115,7 @@
       "2840": 10,
       "3470": 3
     },
-    "minSkill": 90,
+    "minSkill": 65,
     "icon": "inv_bracer_03",
     "url": "https://www.wowhead.com/forever/spell=2664",
     "produces": {
@@ -133,15 +133,15 @@
     "name": "Coarse Sharpening Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 65
+      "orange": 40,
+      "yellow": 40,
+      "green": 47,
+      "gray": 55
     },
     "materials": {
       "2836": 1
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "inv_stone_sharpeningstone_02",
     "url": "https://www.wowhead.com/forever/spell=2665",
     "produces": {
@@ -159,7 +159,7 @@
     "name": "Runed Copper Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 70,
+      "orange": 45,
       "yellow": 85,
       "green": 105,
       "gray": 125
@@ -167,7 +167,7 @@
     "materials": {
       "2840": 10
     },
-    "minSkill": 70,
+    "minSkill": 45,
     "icon": "inv_belt_03",
     "url": "https://www.wowhead.com/forever/spell=2666",
     "produces": {
@@ -214,7 +214,7 @@
     "name": "Rough Bronze Leggings",
     "quality": 2,
     "difficulty": {
-      "orange": 105,
+      "orange": 80,
       "yellow": 120,
       "green": 135,
       "gray": 150
@@ -222,7 +222,7 @@
     "materials": {
       "2841": 6
     },
-    "minSkill": 105,
+    "minSkill": 80,
     "icon": "inv_pants_03",
     "url": "https://www.wowhead.com/forever/spell=2668",
     "produces": {
@@ -240,7 +240,7 @@
     "name": "Rough Bronze Cuirass",
     "quality": 2,
     "difficulty": {
-      "orange": 105,
+      "orange": 80,
       "yellow": 120,
       "green": 135,
       "gray": 150
@@ -248,7 +248,7 @@
     "materials": {
       "2841": 7
     },
-    "minSkill": 105,
+    "minSkill": 80,
     "icon": "inv_chest_chain_08",
     "url": "https://www.wowhead.com/forever/spell=2670",
     "produces": {
@@ -266,7 +266,7 @@
     "name": "Patterned Bronze Bracers",
     "quality": 2,
     "difficulty": {
-      "orange": 120,
+      "orange": 95,
       "yellow": 125,
       "green": 140,
       "gray": 155
@@ -275,7 +275,7 @@
       "2841": 5,
       "3478": 2
     },
-    "minSkill": 120,
+    "minSkill": 95,
     "icon": "inv_bracer_07",
     "url": "https://www.wowhead.com/forever/spell=2672",
     "produces": {
@@ -323,15 +323,15 @@
     "name": "Heavy Sharpening Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 125
+      "orange": 100,
+      "yellow": 100,
+      "green": 107,
+      "gray": 115
     },
     "materials": {
       "2838": 1
     },
-    "minSkill": 0,
+    "minSkill": 100,
     "icon": "inv_stone_sharpeningstone_03",
     "url": "https://www.wowhead.com/forever/spell=2674",
     "produces": {
@@ -349,7 +349,7 @@
     "name": "Shining Silver Breastplate",
     "quality": 3,
     "difficulty": {
-      "orange": 145,
+      "orange": 120,
       "yellow": 150,
       "green": 165,
       "gray": 180
@@ -361,7 +361,7 @@
       "2842": 4,
       "5500": 2
     },
-    "minSkill": 145,
+    "minSkill": 120,
     "icon": "inv_chest_plate15",
     "url": "https://www.wowhead.com/forever/spell=2675",
     "produces": {
@@ -463,7 +463,7 @@
     "name": "Bronze Mace",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 115,
       "green": 130,
       "gray": 145
@@ -473,7 +473,7 @@
       "2841": 6,
       "2880": 4
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_mace_08",
     "url": "https://www.wowhead.com/forever/spell=2740",
     "produces": {
@@ -491,7 +491,7 @@
     "name": "Bronze Axe",
     "quality": 2,
     "difficulty": {
-      "orange": 115,
+      "orange": 90,
       "yellow": 120,
       "green": 135,
       "gray": 150
@@ -501,7 +501,7 @@
       "2841": 7,
       "2880": 4
     },
-    "minSkill": 115,
+    "minSkill": 90,
     "icon": "inv_axe_17",
     "url": "https://www.wowhead.com/forever/spell=2741",
     "produces": {
@@ -519,7 +519,7 @@
     "name": "Bronze Shortsword",
     "quality": 2,
     "difficulty": {
-      "orange": 120,
+      "orange": 95,
       "yellow": 125,
       "green": 140,
       "gray": 155
@@ -529,7 +529,7 @@
       "2841": 5,
       "2880": 4
     },
-    "minSkill": 120,
+    "minSkill": 95,
     "icon": "inv_sword_04",
     "url": "https://www.wowhead.com/forever/spell=2742",
     "produces": {
@@ -547,7 +547,7 @@
     "name": "Rough Weightstone",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 15,
       "green": 35,
       "gray": 55
@@ -555,7 +555,7 @@
     "materials": {
       "2835": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_stone_weightstone_01",
     "url": "https://www.wowhead.com/forever/spell=3115",
     "produces": {
@@ -572,15 +572,15 @@
     "name": "Coarse Weightstone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 65
+      "orange": 40,
+      "yellow": 40,
+      "green": 47,
+      "gray": 55
     },
     "materials": {
       "2836": 1
     },
-    "minSkill": 0,
+    "minSkill": 40,
     "icon": "inv_stone_weightstone_02",
     "url": "https://www.wowhead.com/forever/spell=3116",
     "produces": {
@@ -598,15 +598,15 @@
     "name": "Heavy Weightstone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 125
+      "orange": 100,
+      "yellow": 100,
+      "green": 107,
+      "gray": 115
     },
     "materials": {
       "2838": 1
     },
-    "minSkill": 0,
+    "minSkill": 100,
     "icon": "inv_stone_weightstone_03",
     "url": "https://www.wowhead.com/forever/spell=3117",
     "produces": {
@@ -624,7 +624,7 @@
     "name": "Heavy Copper Broadsword",
     "quality": 2,
     "difficulty": {
-      "orange": 95,
+      "orange": 70,
       "yellow": 110,
       "green": 130,
       "gray": 150
@@ -635,7 +635,7 @@
       "2840": 14,
       "2880": 2
     },
-    "minSkill": 95,
+    "minSkill": 70,
     "icon": "inv_sword_14",
     "url": "https://www.wowhead.com/forever/spell=3292",
     "produces": {
@@ -653,7 +653,7 @@
     "name": "Copper Battle Axe",
     "quality": 2,
     "difficulty": {
-      "orange": 35,
+      "orange": 30,
       "yellow": 70,
       "green": 90,
       "gray": 110
@@ -665,7 +665,7 @@
       "2880": 2,
       "3470": 2
     },
-    "minSkill": 35,
+    "minSkill": 30,
     "icon": "inv_throwingaxe_02",
     "url": "https://www.wowhead.com/forever/spell=3293",
     "produces": {
@@ -683,7 +683,7 @@
     "name": "Thick War Axe",
     "quality": 2,
     "difficulty": {
-      "orange": 70,
+      "orange": 45,
       "yellow": 85,
       "green": 105,
       "gray": 125
@@ -695,7 +695,7 @@
       "2880": 2,
       "3470": 2
     },
-    "minSkill": 70,
+    "minSkill": 45,
     "icon": "inv_throwingaxe_01",
     "url": "https://www.wowhead.com/forever/spell=3294",
     "produces": {
@@ -745,7 +745,7 @@
     "name": "Heavy Bronze Mace",
     "quality": 2,
     "difficulty": {
-      "orange": 130,
+      "orange": 105,
       "yellow": 135,
       "green": 150,
       "gray": 165
@@ -758,7 +758,7 @@
       "3466": 1,
       "3478": 2
     },
-    "minSkill": 130,
+    "minSkill": 105,
     "icon": "inv_mace_08",
     "url": "https://www.wowhead.com/forever/spell=3296",
     "produces": {
@@ -860,7 +860,7 @@
     "name": "Copper Chain Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 35,
+      "orange": 30,
       "yellow": 70,
       "green": 90,
       "gray": 110
@@ -870,7 +870,7 @@
       "2840": 8,
       "3470": 2
     },
-    "minSkill": 35,
+    "minSkill": 30,
     "icon": "inv_chest_chain",
     "url": "https://www.wowhead.com/forever/spell=3321",
     "produces": {
@@ -889,7 +889,7 @@
     "name": "Runed Copper Gauntlets",
     "quality": 2,
     "difficulty": {
-      "orange": 40,
+      "orange": 35,
       "yellow": 75,
       "green": 95,
       "gray": 115
@@ -898,7 +898,7 @@
       "2840": 8,
       "3470": 2
     },
-    "minSkill": 40,
+    "minSkill": 35,
     "icon": "inv_gauntlets_04",
     "url": "https://www.wowhead.com/forever/spell=3323",
     "produces": {
@@ -916,7 +916,7 @@
     "name": "Runed Copper Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 45,
+      "orange": 35,
       "yellow": 75,
       "green": 95,
       "gray": 115
@@ -926,7 +926,7 @@
       "2840": 8,
       "3470": 3
     },
-    "minSkill": 45,
+    "minSkill": 35,
     "icon": "inv_pants_03",
     "url": "https://www.wowhead.com/forever/spell=3324",
     "produces": {
@@ -944,7 +944,7 @@
     "name": "Gemmed Copper Gauntlets",
     "quality": 2,
     "difficulty": {
-      "orange": 60,
+      "orange": 35,
       "yellow": 75,
       "green": 95,
       "gray": 115
@@ -954,7 +954,7 @@
       "818": 1,
       "2840": 8
     },
-    "minSkill": 60,
+    "minSkill": 35,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=3325",
     "produces": {
@@ -973,15 +973,15 @@
     "name": "Coarse Grinding Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 75,
+      "orange": 50,
+      "yellow": 50,
+      "green": 62,
       "gray": 75
     },
     "materials": {
       "2836": 2
     },
-    "minSkill": 0,
+    "minSkill": 50,
     "icon": "inv_stone_grindingstone_02",
     "url": "https://www.wowhead.com/forever/spell=3326",
     "produces": {
@@ -999,7 +999,7 @@
     "name": "Rough Bronze Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 115,
       "green": 130,
       "gray": 145
@@ -1009,7 +1009,7 @@
       "2841": 5,
       "3478": 1
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_shoulder_05",
     "url": "https://www.wowhead.com/forever/spell=3328",
     "produces": {
@@ -1056,7 +1056,7 @@
     "name": "Silvered Bronze Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 130,
+      "orange": 105,
       "yellow": 135,
       "green": 150,
       "gray": 165
@@ -1066,7 +1066,7 @@
       "2842": 1,
       "3478": 2
     },
-    "minSkill": 130,
+    "minSkill": 105,
     "icon": "inv_boots_01",
     "url": "https://www.wowhead.com/forever/spell=3331",
     "produces": {
@@ -1084,7 +1084,7 @@
     "name": "Silvered Bronze Gauntlets",
     "quality": 2,
     "difficulty": {
-      "orange": 135,
+      "orange": 110,
       "yellow": 140,
       "green": 155,
       "gray": 170
@@ -1094,7 +1094,7 @@
       "2842": 1,
       "3478": 2
     },
-    "minSkill": 135,
+    "minSkill": 110,
     "icon": "inv_gauntlets_05",
     "url": "https://www.wowhead.com/forever/spell=3333",
     "produces": {
@@ -1172,15 +1172,15 @@
     "name": "Heavy Grinding Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 125,
+      "orange": 100,
+      "yellow": 100,
+      "green": 112,
       "gray": 125
     },
     "materials": {
       "2838": 3
     },
-    "minSkill": 0,
+    "minSkill": 100,
     "icon": "inv_stone_grindingstone_03",
     "url": "https://www.wowhead.com/forever/spell=3337",
     "produces": {
@@ -1198,7 +1198,7 @@
     "name": "Big Bronze Knife",
     "quality": 2,
     "difficulty": {
-      "orange": 105,
+      "orange": 80,
       "yellow": 110,
       "green": 125,
       "gray": 140
@@ -1210,7 +1210,7 @@
       "2880": 4,
       "3470": 2
     },
-    "minSkill": 105,
+    "minSkill": 80,
     "icon": "inv_weapon_shortblade_04",
     "url": "https://www.wowhead.com/forever/spell=3491",
     "produces": {
@@ -1479,7 +1479,7 @@
     "name": "Green Iron Bracers",
     "quality": 2,
     "difficulty": {
-      "orange": 165,
+      "orange": 140,
       "yellow": 165,
       "green": 177,
       "gray": 190
@@ -1488,7 +1488,7 @@
       "2605": 1,
       "3575": 6
     },
-    "minSkill": 165,
+    "minSkill": 140,
     "icon": "inv_bracer_06",
     "url": "https://www.wowhead.com/forever/spell=3501",
     "produces": {
@@ -1506,7 +1506,7 @@
     "name": "Green Iron Helm",
     "quality": 2,
     "difficulty": {
-      "orange": 170,
+      "orange": 145,
       "yellow": 170,
       "green": 182,
       "gray": 195
@@ -1516,7 +1516,7 @@
       "3575": 12,
       "3864": 1
     },
-    "minSkill": 170,
+    "minSkill": 145,
     "icon": "inv_helmet_03",
     "url": "https://www.wowhead.com/forever/spell=3502",
     "produces": {
@@ -1621,7 +1621,7 @@
     "name": "Green Iron Leggings",
     "quality": 2,
     "difficulty": {
-      "orange": 155,
+      "orange": 130,
       "yellow": 155,
       "green": 167,
       "gray": 180
@@ -1631,7 +1631,7 @@
       "3486": 1,
       "3575": 8
     },
-    "minSkill": 155,
+    "minSkill": 130,
     "icon": "inv_pants_05",
     "url": "https://www.wowhead.com/forever/spell=3506",
     "produces": {
@@ -1678,7 +1678,7 @@
     "name": "Green Iron Hauberk",
     "quality": 3,
     "difficulty": {
-      "orange": 180,
+      "orange": 155,
       "yellow": 180,
       "green": 192,
       "gray": 205
@@ -1690,7 +1690,7 @@
       "3575": 20,
       "4255": 1
     },
-    "minSkill": 180,
+    "minSkill": 155,
     "icon": "inv_chest_chain",
     "url": "https://www.wowhead.com/forever/spell=3508",
     "produces": {
@@ -1798,7 +1798,7 @@
     "name": "Pearl-handled Dagger",
     "quality": 2,
     "difficulty": {
-      "orange": 110,
+      "orange": 85,
       "yellow": 115,
       "green": 130,
       "gray": 145
@@ -1809,7 +1809,7 @@
       "3478": 2,
       "5498": 2
     },
-    "minSkill": 110,
+    "minSkill": 85,
     "icon": "inv_weapon_shortblade_05",
     "url": "https://www.wowhead.com/forever/spell=6517",
     "produces": {
@@ -1915,7 +1915,7 @@
     "name": "Golden Scale Bracers",
     "quality": 2,
     "difficulty": {
-      "orange": 185,
+      "orange": 160,
       "yellow": 185,
       "green": 197,
       "gray": 210
@@ -1924,7 +1924,7 @@
       "3486": 2,
       "3859": 5
     },
-    "minSkill": 185,
+    "minSkill": 160,
     "icon": "inv_bracer_10",
     "url": "https://www.wowhead.com/forever/spell=7223",
     "produces": {
@@ -1971,7 +1971,7 @@
     "name": "Heavy Copper Maul",
     "quality": 2,
     "difficulty": {
-      "orange": 65,
+      "orange": 40,
       "yellow": 80,
       "green": 100,
       "gray": 120
@@ -1981,7 +1981,7 @@
       "2840": 12,
       "2880": 2
     },
-    "minSkill": 65,
+    "minSkill": 40,
     "icon": "inv_hammer_18",
     "url": "https://www.wowhead.com/forever/spell=7408",
     "produces": {
@@ -1999,7 +1999,7 @@
     "name": "Rough Bronze Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 95,
+      "orange": 70,
       "yellow": 100,
       "green": 115,
       "gray": 130
@@ -2008,7 +2008,7 @@
       "2841": 6,
       "3470": 6
     },
-    "minSkill": 95,
+    "minSkill": 70,
     "icon": "inv_boots_01",
     "url": "https://www.wowhead.com/forever/spell=7817",
     "produces": {
@@ -2026,16 +2026,16 @@
     "name": "Silver Rod",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 100
+      "orange": 75,
+      "yellow": 80,
+      "green": 82,
+      "gray": 85
     },
     "materials": {
       "2842": 1,
       "3470": 2
     },
-    "minSkill": 0,
+    "minSkill": 75,
     "icon": "inv_staff_01",
     "url": "https://www.wowhead.com/forever/spell=7818",
     "produces": {
@@ -2082,15 +2082,15 @@
     "name": "Iron Buckle",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "orange": 125,
+      "yellow": 125,
+      "green": 127,
+      "gray": 130
     },
     "materials": {
       "3575": 1
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_misc_armorkit_12",
     "url": "https://www.wowhead.com/forever/spell=8768",
     "produces": {
@@ -2108,7 +2108,7 @@
     "name": "Copper Dagger",
     "quality": 2,
     "difficulty": {
-      "orange": 30,
+      "orange": 25,
       "yellow": 65,
       "green": 85,
       "gray": 105
@@ -2119,7 +2119,7 @@
       "2880": 1,
       "3470": 1
     },
-    "minSkill": 30,
+    "minSkill": 25,
     "icon": "inv_weapon_shortblade_14",
     "url": "https://www.wowhead.com/forever/spell=8880",
     "produces": {
@@ -2283,7 +2283,7 @@
     "name": "Steel Breastplate",
     "quality": 2,
     "difficulty": {
-      "orange": 200,
+      "orange": 175,
       "yellow": 200,
       "green": 212,
       "gray": 225
@@ -2292,7 +2292,7 @@
       "3486": 3,
       "3859": 16
     },
-    "minSkill": 200,
+    "minSkill": 175,
     "icon": "inv_chest_plate05",
     "url": "https://www.wowhead.com/forever/spell=9916",
     "produces": {
@@ -2310,15 +2310,15 @@
     "name": "Solid Sharpening Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 175,
+      "yellow": 175,
+      "green": 180,
+      "gray": 185
     },
     "materials": {
       "7912": 1
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_stone_sharpeningstone_04",
     "url": "https://www.wowhead.com/forever/spell=9918",
     "produces": {
@@ -2336,15 +2336,15 @@
     "name": "Solid Grinding Stone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 175,
+      "yellow": 175,
+      "green": 180,
+      "gray": 185
     },
     "materials": {
       "7912": 4
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_stone_grindingstone_04",
     "url": "https://www.wowhead.com/forever/spell=9920",
     "produces": {
@@ -2362,15 +2362,15 @@
     "name": "Solid Weightstone",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 175,
+      "yellow": 175,
+      "green": 180,
+      "gray": 185
     },
     "materials": {
       "7912": 1
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_stone_weightstone_04",
     "url": "https://www.wowhead.com/forever/spell=9921",
     "produces": {
@@ -2388,8 +2388,8 @@
     "name": "Heavy Mithril Shoulder",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 205,
+      "orange": 180,
+      "yellow": 200,
       "green": 210,
       "gray": 220
     },
@@ -2397,7 +2397,7 @@
       "3860": 8,
       "4234": 6
     },
-    "minSkill": 0,
+    "minSkill": 180,
     "icon": "inv_shoulder_22",
     "url": "https://www.wowhead.com/forever/spell=9926",
     "produces": {
@@ -2415,8 +2415,8 @@
     "name": "Heavy Mithril Gauntlet",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 205,
+      "orange": 180,
+      "yellow": 200,
       "green": 210,
       "gray": 220
     },
@@ -2424,7 +2424,7 @@
       "3860": 6,
       "4338": 4
     },
-    "minSkill": 0,
+    "minSkill": 180,
     "icon": "inv_gauntlets_27",
     "url": "https://www.wowhead.com/forever/spell=9928",
     "produces": {
@@ -2442,15 +2442,15 @@
     "name": "Mithril Plate Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 210,
+      "orange": 185,
+      "yellow": 205,
       "green": 215,
       "gray": 225
     },
     "materials": {
       "3860": 12
     },
-    "minSkill": 0,
+    "minSkill": 185,
     "icon": "inv_pants_04",
     "url": "https://www.wowhead.com/forever/spell=9931",
     "produces": {
@@ -2496,8 +2496,8 @@
     "name": "Steel Plate Helm",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 215,
+      "orange": 190,
+      "yellow": 210,
       "green": 220,
       "gray": 230
     },
@@ -2505,7 +2505,7 @@
       "3859": 14,
       "7966": 1
     },
-    "minSkill": 0,
+    "minSkill": 190,
     "icon": "inv_helmet_03",
     "url": "https://www.wowhead.com/forever/spell=9935",
     "produces": {
@@ -2580,8 +2580,8 @@
     "name": "Ornate Mithril Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 220,
-      "yellow": 220,
+      "orange": 195,
+      "yellow": 215,
       "green": 225,
       "gray": 235
     },
@@ -2591,7 +2591,7 @@
       "7909": 1,
       "7966": 1
     },
-    "minSkill": 220,
+    "minSkill": 195,
     "icon": "inv_pants_04",
     "url": "https://www.wowhead.com/forever/spell=9945",
     "produces": {
@@ -2669,8 +2669,8 @@
     "name": "Truesilver Gauntlets",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
-      "yellow": 225,
+      "orange": 200,
+      "yellow": 220,
       "green": 230,
       "gray": 240
     },
@@ -2682,7 +2682,7 @@
       "7909": 3,
       "7966": 2
     },
-    "minSkill": 0,
+    "minSkill": 200,
     "icon": "inv_gauntlets_29",
     "url": "https://www.wowhead.com/forever/spell=9954",
     "produces": {
@@ -2692,7 +2692,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 9000
+      "cost": 10000
     }
   },
   {
@@ -2919,8 +2919,8 @@
     "name": "Truesilver Breastplate",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
-      "yellow": 245,
+      "orange": 220,
+      "yellow": 240,
       "green": 250,
       "gray": 260
     },
@@ -2931,7 +2931,7 @@
       "7966": 2,
       "7971": 4
     },
-    "minSkill": 0,
+    "minSkill": 220,
     "icon": "inv_chest_plate04",
     "url": "https://www.wowhead.com/forever/spell=9974",
     "produces": {
@@ -2941,7 +2941,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 9000
+      "cost": 10000
     }
   },
   {
@@ -3006,7 +3006,7 @@
     "name": "Copper Claymore",
     "quality": 2,
     "difficulty": {
-      "orange": 30,
+      "orange": 25,
       "yellow": 65,
       "green": 85,
       "gray": 105
@@ -3017,7 +3017,7 @@
       "2880": 2,
       "3470": 1
     },
-    "minSkill": 30,
+    "minSkill": 25,
     "icon": "inv_sword_21",
     "url": "https://www.wowhead.com/forever/spell=9983",
     "produces": {
@@ -3035,7 +3035,7 @@
     "name": "Bronze Warhammer",
     "quality": 2,
     "difficulty": {
-      "orange": 125,
+      "orange": 100,
       "yellow": 155,
       "green": 170,
       "gray": 185
@@ -3045,7 +3045,7 @@
       "2841": 8,
       "3466": 1
     },
-    "minSkill": 125,
+    "minSkill": 100,
     "icon": "inv_hammer_18",
     "url": "https://www.wowhead.com/forever/spell=9985",
     "produces": {
@@ -3063,7 +3063,7 @@
     "name": "Bronze Greatsword",
     "quality": 2,
     "difficulty": {
-      "orange": 130,
+      "orange": 105,
       "yellow": 135,
       "green": 150,
       "gray": 165
@@ -3073,7 +3073,7 @@
       "2841": 12,
       "3466": 2
     },
-    "minSkill": 130,
+    "minSkill": 105,
     "icon": "inv_sword_20",
     "url": "https://www.wowhead.com/forever/spell=9986",
     "produces": {
@@ -3091,7 +3091,7 @@
     "name": "Bronze Battle Axe",
     "quality": 2,
     "difficulty": {
-      "orange": 135,
+      "orange": 110,
       "yellow": 140,
       "green": 155,
       "gray": 170
@@ -3101,7 +3101,7 @@
       "2841": 14,
       "3466": 1
     },
-    "minSkill": 135,
+    "minSkill": 110,
     "icon": "inv_axe_21",
     "url": "https://www.wowhead.com/forever/spell=9987",
     "produces": {
@@ -3119,7 +3119,7 @@
     "name": "Heavy Mithril Axe",
     "quality": 2,
     "difficulty": {
-      "orange": 210,
+      "orange": 185,
       "yellow": 210,
       "green": 222,
       "gray": 235
@@ -3130,7 +3130,7 @@
       "4234": 4,
       "7966": 1
     },
-    "minSkill": 210,
+    "minSkill": 185,
     "icon": "inv_axe_14",
     "url": "https://www.wowhead.com/forever/spell=9993",
     "produces": {
@@ -3208,7 +3208,7 @@
     "name": "Big Black Mace",
     "quality": 2,
     "difficulty": {
-      "orange": 230,
+      "orange": 205,
       "yellow": 230,
       "green": 242,
       "gray": 255
@@ -3220,7 +3220,7 @@
       "7966": 1,
       "7971": 1
     },
-    "minSkill": 230,
+    "minSkill": 205,
     "icon": "inv_mace_15",
     "url": "https://www.wowhead.com/forever/spell=10001",
     "produces": {
@@ -3544,7 +3544,7 @@
     "name": "Rough Copper Vest",
     "quality": 2,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 15,
       "green": 35,
       "gray": 55
@@ -3552,7 +3552,7 @@
     "materials": {
       "2840": 4
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_chest_chain",
     "url": "https://www.wowhead.com/forever/spell=12260",
     "produces": {
@@ -3569,16 +3569,16 @@
     "name": "Golden Rod",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "orange": 125,
+      "yellow": 130,
+      "green": 132,
+      "gray": 135
     },
     "materials": {
       "3478": 2,
       "3577": 1
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_staff_10",
     "url": "https://www.wowhead.com/forever/spell=14379",
     "produces": {
@@ -3596,16 +3596,16 @@
     "name": "Truesilver Rod",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 175,
+      "yellow": 180,
+      "green": 182,
+      "gray": 185
     },
     "materials": {
       "3486": 1,
       "6037": 1
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_staff_11",
     "url": "https://www.wowhead.com/forever/spell=14380",
     "produces": {
@@ -3763,7 +3763,7 @@
     "name": "Glinting Steel Dagger",
     "quality": 2,
     "difficulty": {
-      "orange": 180,
+      "orange": 155,
       "yellow": 180,
       "green": 192,
       "gray": 205
@@ -3775,7 +3775,7 @@
       "4234": 1,
       "7067": 1
     },
-    "minSkill": 180,
+    "minSkill": 155,
     "icon": "inv_weapon_shortblade_05",
     "url": "https://www.wowhead.com/forever/spell=15972",
     "produces": {
@@ -5360,16 +5360,16 @@
     "name": "Silver Skeleton Key",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 100
+      "orange": 75,
+      "yellow": 75,
+      "green": 85,
+      "gray": 95
     },
     "materials": {
       "2842": 1,
       "3470": 1
     },
-    "minSkill": 0,
+    "minSkill": 75,
     "icon": "inv_misc_key_03",
     "url": "https://www.wowhead.com/forever/spell=19666",
     "produces": {
@@ -5387,16 +5387,16 @@
     "name": "Golden Skeleton Key",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 150
+      "orange": 125,
+      "yellow": 125,
+      "green": 135,
+      "gray": 145
     },
     "materials": {
       "3486": 1,
       "3577": 1
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_misc_key_13",
     "url": "https://www.wowhead.com/forever/spell=19667",
     "produces": {
@@ -5414,16 +5414,16 @@
     "name": "Truesilver Skeleton Key",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 0,
-      "gray": 200
+      "orange": 175,
+      "yellow": 175,
+      "green": 185,
+      "gray": 195
     },
     "materials": {
       "6037": 1,
       "7966": 1
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_misc_key_11",
     "url": "https://www.wowhead.com/forever/spell=19668",
     "produces": {
