@@ -584,14 +584,14 @@ ${stepLines.join('\n')}
       sharedGuide = nil
       WoWCraftShoppingHooks.guides[guideProfession] = nil
     end
-    if sharedGuide and sharedGuide.layoutRevision == 4 then
+    if sharedGuide and sharedGuide.layoutRevision == 7 then
       if slot.guide and slot.guide ~= sharedGuide then
         slot.guide.wowcraftKept = nil
         retireFrame(slot.guide)
       end
       slot.guide = sharedGuide
     end
-    if slot.guide and slot.guide.layoutRevision ~= 4 then
+    if slot.guide and slot.guide.layoutRevision ~= 7 then
       if slot.guide.skipWarn then slot.guide.skipWarn:Hide() end
       slot.guide.wowcraftKept = nil
       retireFrame(slot.guide)
@@ -603,7 +603,7 @@ ${stepLines.join('\n')}
     local guide = slot.guide
     if not guide then
       guide = CreateFrame("Frame", nil, UIParent)
-      guide.layoutRevision = 4
+      guide.layoutRevision = 7
       guide:SetFrameStrata("HIGH")
       guide.bg = guide:CreateTexture(nil, "BACKGROUND")
       guide.bg:SetTexture("Interface\\\\Buttons\\\\WHITE8X8")
@@ -751,6 +751,21 @@ ${stepLines.join('\n')}
       end
       guide.tradeIndex = tradeIndex
       guide.castCraft = castCraft
+      local function paintCraftButton(button, hovered)
+        if hovered then
+          button.bg:SetVertexColor(0.18, 0.17, 0.15, 1)
+          button.edgeTop:SetVertexColor(0.62, 0.56, 0.46, 1)
+          button.edgeLeft:SetVertexColor(0.48, 0.43, 0.35, 1)
+          button.label:SetTextColor(1, 0.86, 0.55)
+        else
+          button.bg:SetVertexColor(0.12, 0.11, 0.10, 1)
+          button.edgeTop:SetVertexColor(0.48, 0.43, 0.34, 1)
+          button.edgeLeft:SetVertexColor(0.36, 0.32, 0.26, 1)
+          button.label:SetTextColor(0.890, 0.690, 0.337)
+        end
+        button.edgeBottom:SetVertexColor(0.04, 0.04, 0.04, 1)
+        button.edgeRight:SetVertexColor(0.05, 0.05, 0.05, 1)
+      end
       local function makeCraftButton(label, buttonWidth)
         local button = CreateFrame("Button", nil, guide)
         button:SetSize(buttonWidth, 22)
@@ -758,22 +773,45 @@ ${stepLines.join('\n')}
         button:EnableMouse(true)
         button.bg = button:CreateTexture(nil, "BACKGROUND")
         button.bg:SetTexture("Interface\\\\Buttons\\\\WHITE8X8")
-        button.bg:SetAllPoints()
-        button.bg:SetVertexColor(0.16, 0.16, 0.16, 1)
+        button.bg:SetPoint("TOPLEFT", 1, -1)
+        button.bg:SetPoint("BOTTOMRIGHT", -1, 1)
+        button.edges = {}
+        for edgeIndex = 1, 4 do
+          local edge = button:CreateTexture(nil, "BORDER")
+          edge:SetTexture("Interface\\\\Buttons\\\\WHITE8X8")
+          button.edges[edgeIndex] = edge
+        end
+        local edgeTop, edgeRight, edgeBottom, edgeLeft = button.edges[1], button.edges[2], button.edges[3], button.edges[4]
+        edgeTop:SetPoint("TOPLEFT")
+        edgeTop:SetPoint("TOPRIGHT")
+        edgeTop:SetHeight(1)
+        edgeBottom:SetPoint("BOTTOMLEFT")
+        edgeBottom:SetPoint("BOTTOMRIGHT")
+        edgeBottom:SetHeight(1)
+        edgeLeft:SetPoint("TOPLEFT")
+        edgeLeft:SetPoint("BOTTOMLEFT")
+        edgeLeft:SetWidth(1)
+        edgeRight:SetPoint("TOPRIGHT")
+        edgeRight:SetPoint("BOTTOMRIGHT")
+        edgeRight:SetWidth(1)
+        button.edgeTop = edgeTop
+        button.edgeRight = edgeRight
+        button.edgeBottom = edgeBottom
+        button.edgeLeft = edgeLeft
         button.label = button:CreateFontString(nil, "OVERLAY")
         applyFont(button.label, 13)
         button.label:SetAllPoints()
         button.label:SetJustifyH("CENTER")
         button.label:SetJustifyV("MIDDLE")
         button.label:SetText(label)
-        button.label:SetTextColor(0.890, 0.690, 0.337)
-        button.label:SetShadowColor(0, 0, 0, 0.85)
+        button.label:SetShadowColor(0, 0, 0, 0.9)
         button.label:SetShadowOffset(1, -1)
+        paintCraftButton(button, false)
         button:SetScript("OnEnter", function(self)
-          self.bg:SetVertexColor(0.26, 0.26, 0.26, 1)
+          paintCraftButton(self, true)
         end)
         button:SetScript("OnLeave", function(self)
-          self.bg:SetVertexColor(0.16, 0.16, 0.16, 1)
+          paintCraftButton(self, false)
         end)
         return button
       end
