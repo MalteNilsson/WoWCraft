@@ -545,7 +545,7 @@ function ShoppingListImport({
               <path d="M10 1.6 12.4 6.5l5.4.8-3.9 3.8.9 5.4L10 14.1l-4.8 2.4.9-5.4L2.2 7.3l5.4-.8L10 1.6z" />
             </svg>
           )}
-          {encoding ? 'Copying' : copied === 'weakaura' ? 'Copied' : copied === 'weakaura-failed' ? 'Failed' : 'Recommended - Weakaura Profession Helper'}
+          {encoding ? 'Copying' : copied === 'weakaura' ? 'Copied' : copied === 'weakaura-failed' ? 'Failed - Manual Import Required' : 'Recommended - Weakaura Profession Helper'}
         </button>
         <div className="grid grid-cols-2 gap-2">
           <button
@@ -586,7 +586,7 @@ function ShoppingListImport({
               value={manualCopy.text}
               aria-label="Import string"
               onFocus={(event) => event.currentTarget.select()}
-              className="h-24 w-full resize-none rounded border border-neutral-700 bg-neutral-900 p-2 font-mono text-[10px] leading-snug text-neutral-100 outline-none"
+              className="h-24 w-full resize-none rounded border border-neutral-700 bg-neutral-900 p-2 font-mono text-[10px] leading-snug text-neutral-100 outline-none [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60"
             />
           </div>
         )}

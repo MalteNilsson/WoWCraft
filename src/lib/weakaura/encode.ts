@@ -2082,7 +2082,8 @@ function customTextSource(title: string, rows: ShoppingRow[], profession: string
   local items = {
 ${itemLines}
   }
-  WoWCraftShoppingHooks = WoWCraftShoppingHooks or { auras = {} }
+  WoWCraftShoppingHooks = WoWCraftShoppingHooks or {}
+  WoWCraftShoppingHooks.auras = WoWCraftShoppingHooks.auras or {}
   local slot = WoWCraftShoppingHooks.auras[aura_env.id]
   if not slot then
     slot = { pending = {} }
@@ -3121,6 +3122,7 @@ local aura = {
     init = {
       do_custom = true,
       custom = ${luaString(`WoWCraftShoppingHooks = WoWCraftShoppingHooks or {}
+WoWCraftShoppingHooks.auras = WoWCraftShoppingHooks.auras or {}
 if not WoWCraftShoppingHooks.bootId then
   WoWCraftShoppingHooks.bootId = {}
 end
