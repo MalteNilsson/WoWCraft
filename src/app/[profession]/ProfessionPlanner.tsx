@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { useState, useMemo, useEffect, useRef, useCallback, type ReactNode } from 'react';
 import { AdSlot, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 import { createPortal } from 'react-dom';
 // Vanilla recipes
@@ -32,11 +32,11 @@ import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
 import { makeDynamicPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
-import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type ShoppingListItem } from '@/lib/shoppingList';
+import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, recipePurchase } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -86,7 +86,9 @@ const qualityColors: Record<number,string> = {
   2: '#1eff00', // uncommon (green)
   3: '#0070dd', // rare (blue)
   4: '#a335ee', // epic (purple)
-  5: '#ff8000'  // legendary (orange)
+  5: '#ff8000', // legendary (orange)
+  6: '#e6cc80', // artifact
+  7: '#00ccff', // heirloom
   };
 
 const professions = [
@@ -360,6 +362,14 @@ function CostBox({ copper, className = '' }: { copper: number; className?: strin
   );
 }
 
+function skillPointClass(recipe: Recipe, skill: number) {
+  const chance = expectedSkillUps(recipe, skill);
+  if (chance >= 1) return 'text-orange-400';
+  if (chance <= 0) return 'text-neutral-100';
+  if (typeof recipe.difficulty.green === 'number' && skill >= recipe.difficulty.green) return 'text-green-400';
+  return 'text-yellow-300';
+}
+
 function SkillBox({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <span className={`inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded border border-neutral-700 bg-neutral-800/60 px-1.5 py-1 text-[12px] font-semibold leading-none desktop-layout:text-[15px] ${className}`}>
@@ -388,11 +398,17 @@ function ShoppingListImport({
   skill,
   target,
   items,
+  steps,
+  realm,
+  faction,
 }: {
   profession: string;
   skill: number;
   target: number;
   items: ShoppingListItem[];
+  steps: GuideStep[];
+  realm: string;
+  faction: string;
 }) {
   const [copied, setCopied] = useState<'auctionator' | 'tsm' | 'weakaura' | 'weakaura-failed' | null>(null);
   const [encoding, setEncoding] = useState(false);
@@ -445,7 +461,7 @@ function ShoppingListImport({
       await new Promise((resolve) => window.setTimeout(resolve, 0));
       try {
         const { weakAuraShoppingList } = await import('@/lib/weakaura/encode');
-        const text = await weakAuraShoppingList(profession, skill, target, items);
+        const text = await weakAuraShoppingList(profession, skill, target, items, profession === 'Enchanting' ? [] : steps, realm, faction);
         if (!text || !(await copyText(text))) {
           markCopied('weakaura-failed');
           return;
@@ -494,7 +510,7 @@ function ShoppingListImport({
               <path d="M10 1.6 12.4 6.5l5.4.8-3.9 3.8.9 5.4L10 14.1l-4.8 2.4.9-5.4L2.2 7.3l5.4-.8L10 1.6z" />
             </svg>
           )}
-          {encoding ? 'Copying' : copied === 'weakaura' ? 'Copied' : copied === 'weakaura-failed' ? 'Failed' : 'Recommended - WeakAura Shopping List'}
+          {encoding ? 'Copying' : copied === 'weakaura' ? 'Copied' : copied === 'weakaura-failed' ? 'Failed' : 'Recommended - Weakaura Profession Helper'}
         </button>
         <div className="grid grid-cols-2 gap-2">
           <button
@@ -537,7 +553,7 @@ function ShoppingListImport({
             </p>
             <div className="mb-1 font-semibold text-[#d7b3ff]">WeakAura</div>
             <p>
-              Open WeakAuras and click Import. Paste the copied text. The aura is named {listName} and sits at the top left. Each row starts with the material, then Vendor in green or AH in blue. Red is how many you still need, yellow is how many you have bought and not yet picked up, and green is how many are in your bags. Yellow goes down as those items enter your bags, and it resets if you import this list again.
+              Open WeakAuras and click Import. Paste the copied text. The aura is named {listName} and sits at the top left. Each row starts with the material, then Vendor in green or AH in blue. Red is how many you still need, yellow is how many you have bought and not yet picked up, and green is how many are in your bags. Yellow goes down as those items enter your bags, and it resets if you import this list again. Opening the professions window also shows a separate guide frame. The current craft sits at the top with its icon and the reagents it still needs. Each reagent shows how many are in your bags against how many that craft needs, green when you have enough and red when you do not. Craft makes one of the current recipe and Craft All makes the rest of that step, after selecting it in the professions window. If you have not learned the recipe, those buttons are replaced by its source. It uses your profession skill, so a 1 to 225 guide opened at skill 50 starts on the step that covers 50. The warning in the middle of the screen appears each time you import it. If your skill is already above the guide's starting skill, it explains the skip. If the guide starts above your skill, it warns that the crafts are too high for you. Accept skip drops those steps and removes their materials from the shopping list. Keep the full guide to leave every step and every material in place. The later crafts are listed underneath, each with an icon. The guide hides when the professions window closes. Import again after you change the guide.
             </p>
           </div>
         </div>,
@@ -580,6 +596,62 @@ function RecipeSourceMark({ recipe, materialInfo }: { recipe: Recipe; materialIn
     >
       {name}
     </span>
+  );
+}
+
+function SelectedCraftSource({
+  recipe,
+  materialInfo,
+  wowheadBase,
+}: {
+  recipe: Recipe;
+  materialInfo: Record<number, MaterialInfo>;
+  wowheadBase: string;
+}) {
+  const source = recipe.source;
+  if (!source) return null;
+
+  const row = (detail: ReactNode) => (
+    <div className="mt-1 flex min-w-0 items-center gap-2 text-sm desktop-layout:text-base">
+      <span className="shrink-0 text-neutral-400">Source</span>
+      {detail}
+    </div>
+  );
+
+  if (source.type === 'free') {
+    return row(<span className="font-semibold text-[#e3b056]">Free</span>);
+  }
+  if (source.type === 'trainer') {
+    const trainers = (source.trainers ?? []).map((trainer) => trainer.name).filter(Boolean);
+    return row(
+      <span className="font-semibold text-neutral-100">
+        {trainers.length ? `Trainer: ${trainers.join(', ')}` : 'Trainer'}
+      </span>
+    );
+  }
+  const recipeItem = source.recipeItemId ? materialInfo[source.recipeItemId] : undefined;
+  const recipeItemName = source.recipeItemName || recipeItem?.name || (source.recipeItemId ? `Item ${source.recipeItemId}` : 'Recipe item');
+  const name = (
+    <span className="truncate font-semibold" style={{ color: qualityColors[recipeItem?.quality ?? 1] }}>
+      {recipeItemName}
+    </span>
+  );
+  if (!source.recipeItemId) return row(name);
+  return row(
+    <a
+      href={`https://www.wowhead.com/${wowheadBase}/item=${source.recipeItemId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex min-w-0 items-center gap-2 hover:underline"
+    >
+      <CachedIcon
+        category="materials"
+        id={source.recipeItemId}
+        alt={recipeItemName}
+        className="h-5 w-5 desktop-layout:h-6 desktop-layout:w-6 rounded border border-neutral-700 object-cover flex-shrink-0"
+      />
+      {name}
+    </a>
   );
 }
 
@@ -2162,7 +2234,13 @@ const renderXTick = selected
   const { displayedMaterialTotals, displayedTotalCost } = useMemo(() => {
     const materialTotals: Record<number, number> = {};
     const materialOrder: number[] = [];
+    const purchasedRecipes = new Set<number>();
     let totalCost = 0;
+    const addMaterial = (itemId: number, quantity: number) => {
+      if (!Number.isFinite(itemId) || itemId <= 0 || !Number.isFinite(quantity) || quantity <= 0) return;
+      if (materialTotals[itemId] == null) materialOrder.push(itemId);
+      materialTotals[itemId] = (materialTotals[itemId] || 0) + quantity;
+    };
     
     for (let i = 0; i < plan.steps.length; i++) {
       const s = plan.steps[i];
@@ -2183,8 +2261,13 @@ const renderXTick = selected
           const numItemId = Number(itemId);
           if ((ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) ||
               (ENGINEERING_TOOL_SPELL_IDS.has(s.recipe.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(numItemId))) continue;
-          if (materialTotals[numItemId] == null) materialOrder.push(numItemId);
-          materialTotals[numItemId] = (materialTotals[numItemId] || 0) + quantity * displayedCrafts;
+          addMaterial(numItemId, quantity * displayedCrafts);
+        }
+        const recipeItemId = s.recipe.source?.type === 'item' ? s.recipe.source.recipeItemId : undefined;
+        if (recipeItemId && !purchasedRecipes.has(recipeItemId)) {
+          purchasedRecipes.add(recipeItemId);
+          const purchase = recipePurchase(s.recipe);
+          if (purchase) addMaterial(purchase.itemId, purchase.quantity);
         }
       }
     }
@@ -2195,13 +2278,164 @@ const renderXTick = selected
         return {
           itemId: id,
           quantity: materialTotals[id],
-          name: materialInfo[id]?.name,
+          name: materialInfo[id]?.name || `Item ${id}`,
+          icon: materialInfo[id]?.icon,
+          quality: materialInfo[id]?.quality ?? 1,
           source: source ?? undefined,
+          copper: materialUnitCost(id, prices, materialInfo, useMarketValue),
         };
       }),
       displayedTotalCost: totalCost
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
+
+  const guideSteps = useMemo(() => {
+    const money = (value: number) => Number.isFinite(value) ? Math.max(0, Math.round(value)) : 0;
+    const guideMaterials = (recipe: Recipe) => {
+      const materials: GuideStep['materials'] = [];
+      for (const [itemId, quantity] of Object.entries(recipe.materials)) {
+        const id = Number(itemId);
+        if (!Number.isFinite(id) || !Number.isFinite(quantity) || quantity <= 0) continue;
+        if ((ENCHANTING_ROD_SPELL_IDS.has(recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(id)) ||
+            (ENGINEERING_TOOL_SPELL_IDS.has(recipe.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(id))) continue;
+        materials.push({
+          id,
+          name: materialInfo[id]?.name || `Item ${id}`,
+          icon: materialInfo[id]?.icon || '',
+          each: quantity,
+        });
+      }
+      return materials;
+    };
+    const outputPrice = (itemId: number) => {
+      const priceData = prices[itemId];
+      return useMarketValue
+        ? (priceData?.marketValue ?? priceData?.minBuyout ?? 0)
+        : (priceData?.minBuyout ?? priceData?.marketValue ?? 0);
+    };
+    const guideReturns = (recipe: Recipe): GuideStep['returns'] => {
+      const outputId = recipe.produces?.id;
+      if (!outputId) return undefined;
+      const outputQty = recipe.produces?.quantity ?? 1;
+      const sellEach = (materialInfo[outputId]?.sellPrice ?? 0) * outputQty;
+      if (priceSourcing === 'cost-vendor') {
+        if (selectedProfession === 'Enchanting' || sellEach <= 0) return undefined;
+        return { kind: 'vendor', copper: money(sellEach) };
+      }
+      if (priceSourcing === 'auction-house') {
+        const total = outputPrice(outputId) * outputQty;
+        if (total <= 0) return undefined;
+        return { kind: 'auction', copper: money(total) };
+      }
+      if (priceSourcing !== 'disenchant' || selectedProfession === 'Enchanting') return undefined;
+      const disenchantItem = resolveDisenchantItem(outputId, materialInfo);
+      const quality = recipe.quality ?? materialInfo[outputId]?.quality ?? 1;
+      const outcomes = getDisenchantOutcomes(
+        disenchantItem.itemLevel,
+        quality,
+        disenchantItem.itemClass === '2',
+        disenchantItem.itemClass,
+        disenchantItem.slot,
+        outputId,
+      );
+      if (outcomes.length === 0) {
+        if (sellEach <= 0) return undefined;
+        return { kind: 'vendor', copper: money(sellEach) };
+      }
+      const items = outcomes.flatMap((outcome) => {
+        const expected = outcome.chance * ((outcome.minQty + outcome.maxQty) / 2) * outputQty;
+        if (!Number.isFinite(expected) || expected <= 0) return [];
+        const unit = outputPrice(outcome.itemId);
+        return [{
+          id: outcome.itemId,
+          name: materialInfo[outcome.itemId]?.name || `Item ${outcome.itemId}`,
+          icon: materialInfo[outcome.itemId]?.icon || '',
+          quality: materialInfo[outcome.itemId]?.quality ?? 1,
+          each: Math.round(expected * 100) / 100,
+          copper: money(expected * unit),
+        }];
+      });
+      if (items.length === 0) return undefined;
+      return { kind: 'disenchant', copper: items.reduce((sum, item) => sum + item.copper, 0), items };
+    };
+    const guideOption = (recipe: Recipe, start: number, end: number) => {
+      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty);
+      const eachCost = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
+      const eachSpend = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession);
+      const recipeCost = includeRecipeCost && recipe.source
+        ? calculateCraftCost(recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)
+        : 0;
+      const source = recipe.source;
+      let sourceKind = '';
+      let sourceName = '';
+      let sourceIcon = '';
+      let sourceQuality = 1;
+      if (source?.type === 'free') {
+        sourceKind = 'free';
+        sourceName = 'Free';
+        sourceIcon = 'inv_misc_note_01';
+      } else if (source?.type === 'trainer') {
+        sourceKind = 'trainer';
+        const trainer = source.trainers?.find((entry) => entry.name)?.name;
+        sourceName = trainer ? `Trainer: ${trainer}` : 'Trainer';
+        sourceIcon = 'inv_misc_book_09';
+      } else if (source?.type === 'item') {
+        sourceKind = 'item';
+        const recipeItem = source.recipeItemId ? materialInfo[source.recipeItemId] : undefined;
+        sourceName = source.recipeItemName || recipeItem?.name || 'Recipe';
+        sourceIcon = recipeItem?.icon || 'inv_scroll_03';
+        sourceQuality = typeof recipeItem?.quality === 'number' ? recipeItem.quality : 1;
+      }
+      return {
+        name: recipe.name,
+        icon: recipe.icon || '',
+        crafts: Number.isFinite(optionCrafts) ? optionCrafts : 0,
+        yellow: recipe.difficulty.yellow ?? 0,
+        gray: recipe.difficulty.gray ?? end,
+        green: recipe.difficulty.green ?? 0,
+        quality: typeof recipe.quality === 'number' ? recipe.quality : 1,
+        spell: recipe.id,
+        eachCost: money(eachCost),
+        eachSpend: Number.isFinite(eachSpend) ? Math.max(0, Math.round(eachSpend)) : 0,
+        recipeCost: money(recipeCost),
+        bop: isBopMobDropRecipe(recipe, materialInfo),
+        source: sourceKind,
+        sourceName,
+        sourceIcon,
+        sourceQuality,
+        returns: guideReturns(recipe),
+        materials: guideMaterials(recipe),
+      };
+    };
+    const steps: GuideStep[] = [];
+    for (let i = 0; i < plan.steps.length; i++) {
+      const step = plan.steps[i];
+      if (!('recipe' in step)) continue;
+      const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
+      const end = step.endSkill;
+      const option = guideOption(step.recipe, start, end);
+      const purchase = recipePurchase(step.recipe);
+      const recipeItemInfo = purchase ? materialInfo[purchase.itemId] : undefined;
+      const recipeItemName = recipeItemInfo?.name
+        || (purchase && step.recipe.source?.type === 'item' && purchase.itemId === step.recipe.source.recipeItemId
+          ? step.recipe.source.recipeItemName
+          : '');
+      const alts = (stepCandidates[i]?.candidates ?? [])
+        .filter((alt) => alt.recipe.id !== step.recipe.id)
+        .slice(0, 2)
+        .map((alt) => guideOption(alt.recipe, start, end));
+      steps.push({
+        ...option,
+        from: start,
+        to: end,
+        alts,
+        recipeItem: purchase && recipeItemName
+          ? { id: purchase.itemId, name: recipeItemName, icon: recipeItemInfo?.icon || '', quantity: purchase.quantity }
+          : undefined,
+      });
+    }
+    return steps;
+  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -3226,8 +3460,12 @@ const renderXTick = selected
                                   <span className="shrink-0">
                                     <CostBox copper={displayedTotalCost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
                                   </span>
-                                  <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'}`}>
-                                    {start} → {end}
+                                  <SkillBox className="min-w-[4.75rem] desktop-layout:min-w-[5.75rem]">
+                                    <span>
+                                      <span className={skillPointClass(best, committedSkill)}>{start}</span>
+                                      <span className="text-neutral-100"> → </span>
+                                      <span className={skillPointClass(best, committedSkill)}>{end}</span>
+                                    </span>
                                   </SkillBox>
                                 </div>
 
@@ -3439,7 +3677,15 @@ const renderXTick = selected
                   {displayedMaterialTotals.map((material: MaterialRequirement) => (
                     <div key={material.itemId} className="flex justify-between items-center gap-2 text-neutral-200">
                       <span className="flex min-w-0 flex-1 items-center gap-2">
-                        <span className="truncate">{material.name || `Item ${material.itemId}`}</span>
+                        <CachedIcon
+                          category="materials"
+                          id={material.itemId}
+                          alt={material.name || 'Item'}
+                          className="w-6 h-6 rounded object-cover border border-neutral-700 flex-shrink-0"
+                        />
+                        <span className="truncate" style={{ color: qualityColors[material.quality ?? 1] }}>
+                          {material.name || `Item ${material.itemId}`}
+                        </span>
                         <MaterialSourceBadge source={materialBuySource(material.itemId, prices, materialInfo, useMarketValue)} />
                       </span>
                       <span className={`${selectedVersion === 'Forever' ? 'text-[#64cbfb]' : 'text-yellow-300'} font-medium`}>
@@ -3453,6 +3699,9 @@ const renderXTick = selected
                   skill={committedSkill}
                   target={committedTarget}
                   items={displayedMaterialTotals}
+                  steps={guideSteps}
+                  realm={selectedRealm}
+                  faction={selectedFaction}
                 />
               </div>
             </motion.div>
@@ -3470,24 +3719,29 @@ const renderXTick = selected
         ) : (
           <div className="flex-1 w-full max-w-4xl pt-14 pb-6 desktop-layout:py-12 mx-auto px-4 sm:px-6 desktop-layout:max-[1919px]:max-w-5xl desktop-layout:max-[1919px]:px-8 min-[1920px]:grid min-[1920px]:w-max min-[1920px]:max-w-full min-[1920px]:flex-none min-[1920px]:self-center min-[1920px]:grid-cols-[160px_56rem_160px] min-[1920px]:justify-center min-[1920px]:items-start min-[1920px]:gap-6 min-[1920px]:px-6">
             <div className="flex-none items-center min-[1920px]:col-start-2">
-              <div className="flex pb-1 desktop-layout:pb-2 text-xl desktop-layout:text-[36px] items-center">
+              <div className="flex items-start pb-1 desktop-layout:pb-2">
                 <CachedIcon
                   category={getRecipeProfession(selected.id, selectedProfession)}
                   id={selected.id}
                   alt={`${selected.name} icon`}
                   className="w-10 h-10 desktop-layout:w-16 desktop-layout:h-16 rounded mr-2 flex-shrink-0"
                 />
-                <a
-                  href={selected.url || `https://www.wowhead.com/${getWowheadBase(selectedVersion)}/spell=${selected.id}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:underline font-semibold"
-                  style={{ color: qualityColors[selected.quality ?? 1] }}
-                >
-                  {selected.name}
-                </a>
-              </div>
-              <div className="flex-none">
+                <div className="min-w-0">
+                  <a
+                    href={selected.url || `https://www.wowhead.com/${getWowheadBase(selectedVersion)}/spell=${selected.id}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xl desktop-layout:text-[36px] hover:underline font-semibold"
+                    style={{ color: qualityColors[selected.quality ?? 1] }}
+                  >
+                    {selected.name}
+                  </a>
+                  <SelectedCraftSource
+                    recipe={selected}
+                    materialInfo={materialInfo}
+                    wowheadBase={getWowheadBase(selectedVersion)}
+                  />
+                </div>
               </div>
             </div>
             <AdSlot

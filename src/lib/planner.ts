@@ -1161,6 +1161,8 @@ export type MaterialRequirement = {
     itemId: number;
     quantity: number;
     name?: string;  // Optional name for display purposes
+    icon?: string;
+    quality?: number;
 };
 
 export function calculateTotalMaterials(

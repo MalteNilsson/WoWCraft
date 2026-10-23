@@ -174,6 +174,18 @@ export function getRecipeCost(
   };
 }
 
+/** The item and count to obtain in order to learn this recipe. Trainer and free recipes return nothing. */
+export function recipePurchase(recipe: Recipe): { itemId: number; quantity: number } | null {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return null;
+  const recipeItemId = recipe.source.recipeItemId;
+  const override = RECIPE_COST_MATERIAL_OVERRIDES[recipeItemId];
+  if (override) {
+    if (!(override.quantity > 0)) return null;
+    return { itemId: override.materialId, quantity: override.quantity };
+  }
+  return { itemId: recipeItemId, quantity: 1 };
+}
+
 export type PriceSourcing = 'cost' | 'cost-vendor' | 'disenchant' | 'auction-house';
 
 /** Total copper cost to craft the recipe once */
@@ -426,6 +438,26 @@ export function materialBuySourceFromPrices(
     return 'vendor';
   }
   return ahPrice < Infinity ? 'auction' : 'vendor';
+}
+
+/** Copper to buy one of the item from the source `materialBuySource` would pick. */
+export function materialUnitCost(
+  itemId: number,
+  prices: PriceMap,
+  materialInfo: Record<number, MaterialInfo>,
+  useMarketValue = false
+): number {
+  const itemData = materialInfo[itemId];
+  const vendorPrice = unitVendorPrice(itemData);
+  const ahEntry = prices[itemId];
+  const ahRaw = useMarketValue
+    ? (ahEntry?.marketValue ?? ahEntry?.minBuyout)
+    : (ahEntry?.minBuyout ?? ahEntry?.marketValue);
+  const ahPrice = ahRaw && ahRaw > 0 ? ahRaw : Infinity;
+  const source = materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, itemData);
+  const chosen = source === 'vendor' ? vendorPrice : source === 'auction' ? ahPrice : Infinity;
+  if (!(chosen < Infinity)) return 0;
+  return Math.max(0, Math.round(chosen));
 }
 
 export function materialBuySource(
