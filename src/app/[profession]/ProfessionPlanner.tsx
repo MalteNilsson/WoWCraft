@@ -393,6 +393,9 @@ function MaterialSourceBadge({ source, className = '' }: { source?: 'vendor' | '
   );
 }
 
+/** Temporary. The manual-copy menu is shown whenever a string exists, so the fallback can be checked before it is limited to clipboard failures. */
+const ALWAYS_SHOW_MANUAL_COPY = true;
+
 function ShoppingListImport({
   profession,
   skill,
@@ -413,6 +416,8 @@ function ShoppingListImport({
   const [copied, setCopied] = useState<'auctionator' | 'tsm' | 'weakaura' | 'weakaura-failed' | null>(null);
   const [encoding, setEncoding] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [manualCopy, setManualCopy] = useState<{ kind: 'auctionator' | 'tsm' | 'weakaura'; text: string } | null>(null);
+  const manualCopyRef = useRef<HTMLTextAreaElement>(null);
   const timer = useRef<number | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
   const [helpBox, setHelpBox] = useState<{ top: number; left: number; width: number } | null>(null);
@@ -422,6 +427,20 @@ function ShoppingListImport({
   useEffect(() => () => {
     if (timer.current != null) window.clearTimeout(timer.current);
   }, []);
+
+  useEffect(() => {
+    if (!manualCopy) return;
+    const area = manualCopyRef.current;
+    if (area) {
+      area.focus();
+      area.select();
+    }
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setManualCopy(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [manualCopy]);
 
   useEffect(() => {
     if (!helpOpen) return;
@@ -455,30 +474,46 @@ function ShoppingListImport({
     }, 2000);
   };
 
+  const offerManualCopy = (kind: 'auctionator' | 'tsm' | 'weakaura', text: string, copiedOk: boolean) => {
+    if (copiedOk && !ALWAYS_SHOW_MANUAL_COPY) {
+      setManualCopy(null);
+      return;
+    }
+    setManualCopy({ kind, text });
+  };
+
   const copy = async (kind: 'auctionator' | 'tsm' | 'weakaura') => {
     if (kind === 'weakaura') {
       setEncoding(true);
+      setManualCopy(null);
       await new Promise((resolve) => window.setTimeout(resolve, 0));
+      let text = '';
       try {
         const { weakAuraShoppingList } = await import('@/lib/weakaura/encode');
-        const text = await weakAuraShoppingList(profession, skill, target, items, profession === 'Enchanting' ? [] : steps, realm, faction);
-        if (!text || !(await copyText(text))) {
-          markCopied('weakaura-failed');
-          return;
-        }
-        markCopied('weakaura');
+        text = await weakAuraShoppingList(profession, skill, target, items, profession === 'Enchanting' ? [] : steps, realm, faction);
       } catch {
         markCopied('weakaura-failed');
-      } finally {
         setEncoding(false);
+        return;
       }
+      if (!text) {
+        markCopied('weakaura-failed');
+        setEncoding(false);
+        return;
+      }
+      const copiedOk = await copyText(text);
+      markCopied(copiedOk ? 'weakaura' : 'weakaura-failed');
+      offerManualCopy('weakaura', text, copiedOk);
+      setEncoding(false);
       return;
     }
     const text = kind === 'auctionator'
       ? auctionatorShoppingList(profession, skill, target, items)
       : tsmShoppingList(items);
-    if (!text || !(await copyText(text))) return;
-    markCopied(kind);
+    if (!text) return;
+    const copiedOk = await copyText(text);
+    if (copiedOk) markCopied(kind);
+    offerManualCopy(kind, text, copiedOk);
   };
 
   return (
@@ -530,6 +565,31 @@ function ShoppingListImport({
             {copied === 'tsm' ? 'Copied' : 'TSM'}
           </button>
         </div>
+        {manualCopy && (
+          <div className="rounded border border-neutral-700 bg-neutral-950 p-2 shadow-lg">
+            <div className="mb-1 flex items-center justify-between gap-2">
+              <span className="text-[11px] font-medium text-neutral-300">
+                {manualCopy.kind === 'weakaura' ? 'Copy the WeakAura string' : manualCopy.kind === 'auctionator' ? 'Copy the Auctionator string' : 'Copy the TSM string'}
+              </span>
+              <button
+                type="button"
+                aria-label="Close manual copy"
+                onClick={() => setManualCopy(null)}
+                className="text-neutral-400 transition-colors hover:text-neutral-200"
+              >
+                ✕
+              </button>
+            </div>
+            <textarea
+              ref={manualCopyRef}
+              readOnly
+              value={manualCopy.text}
+              aria-label="Import string"
+              onFocus={(event) => event.currentTarget.select()}
+              className="h-24 w-full resize-none rounded border border-neutral-700 bg-neutral-900 p-2 font-mono text-[10px] leading-snug text-neutral-100 outline-none"
+            />
+          </div>
+        )}
       </div>
       {helpOpen && helpBox && createPortal(
         <div className="fixed inset-0 z-[80]" onMouseDown={() => setHelpOpen(false)}>
