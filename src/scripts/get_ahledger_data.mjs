@@ -1,3 +1,9 @@
+/**
+ * @deprecated Forever prices no longer come from this provider.
+ * The site is waiting for TradeSkillMaster API data. This script stays in the
+ * repo so the old fetch can be restored later. Do not add it back to the
+ * hourly price workflow.
+ */
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

@@ -9,13 +9,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <ArticleLayout>
-      <h1 className="text-3xl font-bold text-white">About WoWCraft</h1>
-      <div className="mt-6 max-w-3xl space-y-6 text-base leading-relaxed text-neutral-300">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e3b056]">The project</p>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">About WoWCraft</h1>
+      <div className="mt-6 max-w-3xl space-y-6 text-base leading-relaxed text-neutral-400">
         <p>
           Hi and welcome to WoWCraft. I&apos;m <strong className="text-white">Malte &quot;StabShot&quot; Nilsson</strong>, and I built this as a free tool for the WoW Classic community. WoWCraft plans profession leveling routes from your current skill to a goal, prices the materials, and builds one shopping list for the stretch.
         </p>
         <p>
-          The planner covers The Burning Crusade through skill 375 and Forever through skill 225. Auction prices for Thunderstrike, Spineshatter, Dreamscythe, and Nightslayer come from TradeSkillMaster. Forever prices come from AHledger. Those figures are listings, not confirmed sales.
+          The planner covers The Burning Crusade through skill 375 and Forever through skill 300. Auction prices for Thunderstrike, Spineshatter, Dreamscythe, and Nightslayer come from TradeSkillMaster. Forever is in simulated mode while we wait for actual API data from TradeSkillMaster. Those routes are not a confirmed plan.
         </p>
         <p>
           The project is open source on{' '}

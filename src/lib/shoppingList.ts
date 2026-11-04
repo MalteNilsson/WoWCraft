@@ -78,20 +78,22 @@ export function shoppingQuantity(quantity: number | undefined): number {
 }
 
 /** Name Auctionator stores for the imported list, including the selected skill span. */
-export function auctionatorListName(profession: string, skill: number, target: number): string {
-  return `WoWCraft ${profession} ${skill}-${target}`.replace(/[\r\n^]/g, ' ').trim();
+export function auctionatorListName(profession: string, skill: number, target: number, realm = ''): string {
+  const simulated = realm.startsWith('Forever') ? ' Simulated' : '';
+  return `WoWCraft ${profession} ${skill}-${target}${simulated}`.replace(/[\r\n^]/g, ' ').trim();
 }
 
 /** Title shown on the in-game shopping list. Forever Normal is the PvE realm. */
 export function shoppingListTitle(profession: string, skill: number, target: number, realm: string, faction: string): string {
   const ruleset = realm === 'Forever PvP' ? 'PvP' : realm === 'Forever Normal' ? 'PvE' : realm;
   const side = faction === 'Horde' || faction === 'Alliance' ? faction : faction || 'Alliance';
-  return `WoWCraft.io ${profession} ${skill}-${target} ${ruleset} ${side} Shopping List`.replace(/[\r\n^]/g, ' ').replace(/\s+/g, ' ').trim();
+  const simulated = realm.startsWith('Forever') ? ' Simulated' : '';
+  return `WoWCraft.io ${profession} ${skill}-${target} ${ruleset} ${side}${simulated} Shopping List`.replace(/[\r\n^]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 /** Auctionator shopping-tab import. First field is the list name; each later field is an exact item search with a quantity. */
-export function auctionatorShoppingList(profession: string, skill: number, target: number, items: ShoppingListItem[]): string {
-  const listName = auctionatorListName(profession, skill, target);
+export function auctionatorShoppingList(profession: string, skill: number, target: number, items: ShoppingListItem[], realm = ''): string {
+  const listName = auctionatorListName(profession, skill, target, realm);
   const terms = items.flatMap((item) => {
     const name = (item.name || '').trim().replace(/["^]/g, '');
     if (!name) return [];

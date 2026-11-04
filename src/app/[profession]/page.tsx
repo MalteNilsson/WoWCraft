@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProfessionGuide, professionGuides } from '@/lib/professionGuides';
-import { ForeverAnnouncement } from '@/components/ForeverAnnouncement';
 import ProfessionPlanner from './ProfessionPlanner';
 
 type ProfessionPageProps = {
@@ -42,7 +41,6 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
 
   return (
     <div className="flex h-dvh min-h-0 flex-col overflow-hidden bg-neutral-950">
-      <ForeverAnnouncement />
       <Suspense fallback={<PlannerFallback />}>
         <ProfessionPlanner />
       </Suspense>

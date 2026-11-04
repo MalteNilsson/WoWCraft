@@ -50,6 +50,7 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { CachedIcon } from '@/components/CachedIcon';
 import { PriceAgeNotice } from '@/components/PriceAgeNotice';
+import { SimulatedValuesWarning } from '@/components/SimulatedValuesWarning';
 import { FactionIcon, factionRingClass, factionTextClass } from '@/components/FactionMark';
 import { RealmName, foreverRealmKind, realmRingClass } from '@/components/RealmName';
 import { preloadIconZips } from '@/lib/iconStore';
@@ -105,7 +106,7 @@ const professions = [
 // Max skill level per version
 const MAX_SKILL_VANILLA = 300;
 const MAX_SKILL_TBC = 375;
-const MAX_SKILL_FOREVER = 225;
+const MAX_SKILL_FOREVER = 300;
 
 function getMaxSkill(version: string): number {
   if (version === 'The Burning Crusade') return MAX_SKILL_TBC;
@@ -421,7 +422,7 @@ function ShoppingListImport({
   const timer = useRef<number | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
   const [helpBox, setHelpBox] = useState<{ top: number; left: number; width: number } | null>(null);
-  const listName = auctionatorListName(profession, skill, target);
+  const listName = auctionatorListName(profession, skill, target, realm);
   const empty = items.length === 0;
 
   useEffect(() => () => {
@@ -508,7 +509,7 @@ function ShoppingListImport({
       return;
     }
     const text = kind === 'auctionator'
-      ? auctionatorShoppingList(profession, skill, target, items)
+      ? auctionatorShoppingList(profession, skill, target, items, realm)
       : tsmShoppingList(items);
     if (!text) return;
     const copiedOk = await copyText(text);
@@ -613,7 +614,7 @@ function ShoppingListImport({
             </p>
             <div className="mb-1 font-semibold text-[#d7b3ff]">WeakAura</div>
             <p>
-              Open WeakAuras and click Import. Paste the copied text. The aura is named {listName} and sits at the top left. Each row starts with the material, then Vendor in green or AH in blue. Red is how many you still need, yellow is how many you have bought and not yet picked up, and green is how many are in your bags. Yellow goes down as those items enter your bags, and it resets if you import this list again. Opening the professions window also shows a separate guide frame. The current craft sits at the top with its icon and the reagents it still needs. Each reagent shows how many are in your bags against how many that craft needs, green when you have enough and red when you do not. Craft makes one of the current recipe and Craft All makes the rest of that step, after selecting it in the professions window. If you have not learned the recipe, those buttons are replaced by its source. It uses your profession skill, so a 1 to 225 guide opened at skill 50 starts on the step that covers 50. The warning in the middle of the screen appears each time you import it. If your skill is already above the guide&apos;s starting skill, it explains the skip. If the guide starts above your skill, it warns that the crafts are too high for you. Accept skip drops those steps and removes their materials from the shopping list. Keep the full guide to leave every step and every material in place. The later crafts are listed underneath, each with an icon. The guide hides when the professions window closes. Import again after you change the guide.
+              Open WeakAuras and click Import. Paste the copied text. The aura is named {listName} and sits at the top left. Each row starts with the material, then Vendor in green or AH in blue. Red is how many you still need, yellow is how many you have bought and not yet picked up, and green is how many are in your bags. Yellow goes down as those items enter your bags, and it resets if you import this list again. Opening the professions window also shows a separate guide frame. The current craft sits at the top with its icon and the reagents it still needs. Each reagent shows how many are in your bags against how many that craft needs, green when you have enough and red when you do not. Craft makes one of the current recipe and Craft All makes the rest of that step, after selecting it in the professions window. If you have not learned the recipe, those buttons are replaced by its source. It uses your profession skill, so a 1 to 300 guide opened at skill 50 starts on the step that covers 50. The warning in the middle of the screen appears each time you import it. If your skill is already above the guide&apos;s starting skill, it explains the skip. If the guide starts above your skill, it warns that the crafts are too high for you. Accept skip drops those steps and removes their materials from the shopping list. Keep the full guide to leave every step and every material in place. The later crafts are listed underneath, each with an icon. The guide hides when the professions window closes. Import again after you change the guide.
             </p>
           </div>
         </div>,
@@ -1104,6 +1105,22 @@ export default function ProfessionPlanner() {
     setPriceSourcing('auction-house');
   }, []);
 
+  const [showSimulatedWarning, setShowSimulatedWarning] = useState(false);
+
+  useEffect(() => {
+    if (selectedVersion !== 'Forever') {
+      setShowSimulatedWarning(false);
+      return;
+    }
+    const acknowledged = sessionStorage.getItem('wowcraft-forever-simulated-ack-v2') === '1';
+    setShowSimulatedWarning(!acknowledged);
+  }, [selectedVersion]);
+
+  const acknowledgeSimulatedWarning = useCallback(() => {
+    sessionStorage.setItem('wowcraft-forever-simulated-ack-v2', '1');
+    setShowSimulatedWarning(false);
+  }, []);
+
   // Add isSliding state to track active slider interaction
   const [isSliding, setIsSliding] = useState(false);
   const [isReleased, setIsReleased] = useState(false);
@@ -1431,7 +1448,9 @@ export default function ProfessionPlanner() {
     }
   };
 
-  const handleSliderEnd = () => {
+  const handleSliderEnd = (low = skillRef.current, high = targetRef.current) => {
+    const nextSkill = Math.max(1, Math.min(low, maxSkillRef.current - 1));
+    const nextTarget = Math.max(nextSkill + 1, Math.min(high, maxSkillRef.current));
     setIsReleased(true);
     setIsSliding(false);
     // Remove the delay: fade out blur immediately in parallel with content
@@ -1440,13 +1459,14 @@ export default function ProfessionPlanner() {
     }
     setShouldBlur(false);
     blurTimeoutRef.current = null;
-    // Immediately commit the current skill value when sliding ends
-    setCommittedSkill(skill);
-    setCommittedTarget(target);
-    lastSkillValue.current = skill;
+    setSkill(nextSkill);
+    setTarget(nextTarget);
+    setCommittedSkill(nextSkill);
+    setCommittedTarget(nextTarget);
+    lastSkillValue.current = nextSkill;
     setIsBlurComplete(true);
     recentUserChangeTimestampRef.current = Date.now();
-    updateUrl();
+    updateUrl({ skill: nextSkill, target: nextTarget });
   };
 
   const handleSliderChange = (value: number) => {
@@ -1470,16 +1490,16 @@ export default function ProfessionPlanner() {
     setCommittedSkill(boundedValue);
     lastSkillValue.current = boundedValue;
     setIsBlurComplete(true);
-    
-    // Ensure target is at least skill + 1
-    if (target <= boundedValue) {
-      const newTarget = Math.min(maxSkill, boundedValue + 1);
-      setTarget(newTarget);
-      setCommittedTarget(newTarget);
+
+    let nextTarget = targetRef.current;
+    if (nextTarget <= boundedValue) {
+      nextTarget = Math.min(maxSkillRef.current, boundedValue + 1);
+      setTarget(nextTarget);
+      setCommittedTarget(nextTarget);
     }
-    
+
     recentUserChangeTimestampRef.current = Date.now();
-    updateUrl();
+    updateUrl({ skill: boundedValue, target: nextTarget });
   };
 
   // Reset direct change flag after a delay
@@ -2045,7 +2065,7 @@ const renderXTick = selected
     // Skip if there's a pending profession change (it will handle selection)
     if (pendingProfessionRef.current) return;
     
-    if (selectedRecipeId === null && plan.steps.length > 0) {
+    if (selectedRecipeId === null && plan.steps.length > 0 && plan.finalSkill >= committedTarget && Number.isFinite(plan.totalCost)) {
       const firstRecipeStep = plan.steps.find((s): s is Extract<typeof s, { recipe: Recipe }> => 'recipe' in s);
       const firstRecipe = firstRecipeStep?.recipe;
       if (firstRecipe) {
@@ -2055,7 +2075,7 @@ const renderXTick = selected
         preservedRecipeProfessionRef.current = selectedProfession;
       }
     }
-  }, [selectedRecipeId, plan.steps, selectedProfession]);
+  }, [selectedRecipeId, plan.steps, plan.finalSkill, plan.totalCost, committedTarget, selectedProfession]);
 
   // New selectors state and options
   const versions = ["Forever", "The Burning Crusade"];
@@ -2349,6 +2369,16 @@ const renderXTick = selected
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
+  const pricesReady = !isLoadingPrices && Object.keys(prices).length > 0;
+  const routeIsFinite = !pricesReady || (plan.finalSkill >= committedTarget && Number.isFinite(displayedTotalCost));
+
+  useEffect(() => {
+    if (view === 'route' && pricesReady && !routeIsFinite) {
+      setSelectedRecipeId(null);
+      setSelectedCardKey(null);
+    }
+  }, [view, pricesReady, routeIsFinite]);
+
   const guideSteps = useMemo(() => {
     const money = (value: number) => Number.isFinite(value) ? Math.max(0, Math.round(value)) : 0;
     const guideMaterials = (recipe: Recipe) => {
@@ -2626,6 +2656,7 @@ const renderXTick = selected
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-neutral-950 text-neutral-100">
+      <SimulatedValuesWarning open={showSimulatedWarning} onAcknowledge={acknowledgeSimulatedWarning} />
 
       {/* Auction House Disclaimer Modal - first-time only */}
       <AnimatePresence>
@@ -2858,6 +2889,11 @@ const renderXTick = selected
               <div className="flex justify-between items-center mb-1">
                 <label className="text-xs">
                   Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
+                  {selectedVersion === 'Forever' && (
+                    <span className="ml-2 inline-flex rounded-full border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200 align-middle">
+                      Simulated
+                    </span>
+                  )}
                 </label>
                 <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
@@ -3069,8 +3105,7 @@ const renderXTick = selected
                     setTarget(high);
                   }}
                   onFinalChange={([low, high]) => {
-                    // Commit both values when slider is released
-                    handleSliderEnd();
+                    handleSliderEnd(low, high);
                   }}
                   renderTrack={({ props, children }) => {
                     const { key, style, ...rest } = props as any;
@@ -3371,13 +3406,15 @@ const renderXTick = selected
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] desktop-layout:text-[14px]">
+            {!(view === 'route' && !routeIsFinite) && <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] desktop-layout:text-[14px]">
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
               <span className="flex-1 min-w-0">Recipe</span>
-              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0">Cost</span>
+              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0" title={selectedVersion === 'Forever' ? 'Simulated until TradeSkillMaster publishes Forever API data' : undefined}>
+                {selectedVersion === 'Forever' ? 'Simulated' : 'Cost'}
+              </span>
               <span className="w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0">Skill</span>
-            </div>
+            </div>}
           </div>
 
           {/* Scrollable content area */}
@@ -3437,7 +3474,14 @@ const renderXTick = selected
                 >
                   {/* Content */}
                   <div className="relative z-0">
-                    {view === 'route' ? (
+                    {view === 'route' && !routeIsFinite ? (
+                      <div className="m-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-4 text-sm leading-relaxed text-amber-100">
+                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-300">No finite route</p>
+                        <p className="mt-2">
+                          <RealmName realm={selectedRealm} /> {selectedFaction} does not have auction prices for a complete {selectedProfession} route from {committedSkill} to {committedTarget}. The leveling guide stays hidden until this combination can be priced.
+                        </p>
+                      </div>
+                    ) : view === 'route' ? (
                       <div className="flex flex-col">
                         {plan.steps.map((s, i) => {
                           if ('upgradeName' in s) {
@@ -3661,7 +3705,7 @@ const renderXTick = selected
             {/* Footer */}
             <div className="relative">
               <AnimatePresence mode="wait">
-                {view === 'route' && (
+                {view === 'route' && routeIsFinite && (
                   <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -3703,7 +3747,7 @@ const renderXTick = selected
 
         {/* Materials Panel (now sibling to aside, not inside it) */}
         <AnimatePresence>
-          {showMaterials && view === 'route' && (
+          {showMaterials && view === 'route' && routeIsFinite && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

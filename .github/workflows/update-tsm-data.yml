@@ -1,5 +1,5 @@
 # Fetch auction prices and push them so Vercel deploys with fresh data.
-# Anniversary realms come from TSM public CSVs. Forever realms come from AHledger.
+# Anniversary realms come from TSM public CSVs.
 name: Update Auction Prices
 
 on:
@@ -33,12 +33,7 @@ jobs:
         continue-on-error: true
         run: node src/scripts/get_TSM_data.mjs anniversary
 
-      - name: Fetch AHledger data
-        id: ahledger
-        continue-on-error: true
-        run: node src/scripts/get_ahledger_data.mjs
-
-      - name: Commit and push if changed
+      - name: Commit and push auction prices
         if: always() && !cancelled()
         run: |
           git config user.name "github-actions[bot]"
@@ -46,6 +41,20 @@ jobs:
           git add src/data/prices/*.json
           git diff --staged --quiet || (git commit -m "chore: update auction prices [skip ci]" && git push)
 
-      - name: Fail if a price fetch failed
-        if: steps.tsm.outcome == 'failure' || steps.ahledger.outcome == 'failure'
+      - name: Record Forever profession costs
+        id: costs
+        if: always() && !cancelled()
+        continue-on-error: true
+        run: npx tsx src/scripts/record_forever_profession_costs.ts
+
+      - name: Commit and push profession cost history
+        if: always() && !cancelled()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/profession-costs/forever.json
+          git diff --staged --quiet || (git commit -m "chore: record forever profession leveling costs [skip ci]" && git push)
+
+      - name: Fail if a price fetch or cost record failed
+        if: steps.tsm.outcome == 'failure' || steps.costs.outcome == 'failure'
         run: exit 1

@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between The Burning Crusade and Forever?',
-    a: 'The Burning Crusade routes run to skill 375 and include Jewelcrafting. Forever runs to 225, includes Cooking, and does not include Jewelcrafting. Each version uses its own recipes and its own auction prices.',
+    a: 'The Burning Crusade routes run to skill 375 and include Jewelcrafting. Forever runs to 300, includes Cooking, and does not include Jewelcrafting. Each version uses its own recipes. Forever stays in simulated mode while we wait for actual API data from TradeSkillMaster. The Burning Crusade already uses that API.',
   },
   {
     q: 'How does Cost mode work?',
@@ -47,22 +47,23 @@ const faqs = [
   },
   {
     q: 'Does the site use cookies?',
-    a: 'Advertising pages use Google AdSense, which sets cookies. Closing the Forever announcement on a profession page also stores a cookie so that notice stays dismissed. The privacy policy explains both, along with Vercel Analytics and the auction-house notice saved in your browser.',
+    a: 'Advertising pages use Google AdSense, which sets cookies. Acknowledging the Forever simulation warning on a profession page stores that choice in session storage for the current visit. The privacy policy explains both, along with Vercel Analytics and the auction-house notice saved in your browser.',
   },
 ];
 
 export default function FAQPage() {
   return (
     <ArticleLayout>
-      <h1 className="text-3xl font-bold text-white">FAQ</h1>
-      <p className="mt-3 max-w-3xl text-base text-neutral-400">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e3b056]">Questions</p>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">FAQ</h1>
+      <p className="mt-4 max-w-xl text-base leading-relaxed text-neutral-400">
         How the planner prices a route, and what the auction numbers mean.
       </p>
-      <div className="mt-8 max-w-3xl space-y-8">
+      <div className="mt-10 max-w-3xl divide-y divide-white/10">
         {faqs.map((faq) => (
-          <section key={faq.q} className="border-b border-neutral-800 pb-8 last:border-0">
-            <h2 className="text-lg font-semibold text-white">{faq.q}</h2>
-            <p className="mt-2 text-base leading-relaxed text-neutral-300">{faq.a}</p>
+          <section key={faq.q} className="py-6 first:pt-0">
+            <h2 className="text-lg font-medium tracking-tight text-white">{faq.q}</h2>
+            <p className="mt-2 text-base leading-relaxed text-neutral-400">{faq.a}</p>
           </section>
         ))}
       </div>

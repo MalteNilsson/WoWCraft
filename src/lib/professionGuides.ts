@@ -32,7 +32,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'alchemy',
     name: 'Alchemy',
     expansions: 'Vanilla and The Burning Crusade',
-    card: 'Potions, elixirs, and flasks, with cooldown transmutes left out of the route.',
+    card: 'Potions, elixirs, and flasks.',
     metaDescription:
       'Plan a cost-effective Alchemy leveling route for WoW Classic and The Burning Crusade. Compare herb costs, vendor prices, and auction listings without cooldown transmutes.',
     lead:
@@ -89,7 +89,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'enchanting',
     name: 'Enchanting',
     expansions: 'Vanilla and The Burning Crusade',
-    card: 'Formulas plus the runed rods each tier requires, from copper through eternium.',
+    card: 'Weapon and armor enchants, plus the rods you need along the way.',
     metaDescription:
       'Level Enchanting in WoW Classic and The Burning Crusade with runed rods included in the route. Compare dust and essence costs; scrolls are not vendored or disenchanted.',
     lead:
@@ -108,7 +108,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'engineering',
     name: 'Engineering',
     expansions: 'Vanilla and The Burning Crusade',
-    card: 'Gadgets, goggles, and ammo, with the Arclight Spanner and Gyromatic Micro-Adjustor included.',
+    card: 'Gadgets, goggles, explosives, and ammunition.',
     metaDescription:
       'Plan an Engineering leveling route for WoW Classic and The Burning Crusade, including required tools and excluding transporters, mortars, and dead-end schematics.',
     lead:
@@ -127,7 +127,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'jewelcrafting',
     name: 'Jewelcrafting',
     expansions: 'The Burning Crusade only',
-    card: 'Gem cuts and jewelry from skill 1 to 375. Not available in Vanilla.',
+    card: 'Cut gems and finished jewelry.',
     metaDescription:
       'Plan Jewelcrafting from 1 to 375 in The Burning Crusade. Compare gem cuts and jewelry by material cost and auction listings. Jewelcrafting is not in Vanilla.',
     lead:
@@ -146,7 +146,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'leatherworking',
     name: 'Leatherworking',
     expansions: 'Vanilla and The Burning Crusade',
-    card: 'Armor, cloaks, and kits, with hides priced as buy or craft.',
+    card: 'Armor, cloaks, and kits made from hides.',
     metaDescription:
       'Build a Leatherworking leveling route for WoW Classic and The Burning Crusade. Compare hide prices, cured leather, armor kits, and auction listings.',
     lead:
@@ -165,7 +165,7 @@ export const professionGuides: ProfessionGuide[] = [
     slug: 'tailoring',
     name: 'Tailoring',
     expansions: 'Vanilla and The Burning Crusade',
-    card: 'Bags and cloth armor, with bolts crafted as materials. Mooncloth is excluded.',
+    card: 'Bags and cloth armor.',
     metaDescription:
       'Plan Tailoring for WoW Classic and The Burning Crusade. Bolts of cloth are crafted into the shopping list, and Mooncloth is excluded as a cooldown.',
     lead:

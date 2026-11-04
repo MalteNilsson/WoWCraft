@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { AdSlot, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 
 const links = [
   { href: '/', label: 'Home' },
@@ -10,38 +9,38 @@ const links = [
 
 export function ArticleLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-dvh justify-center gap-0 bg-neutral-950 px-4 text-neutral-100 desktop-layout:px-8 min-[1920px]:gap-6 min-[1920px]:px-6">
-      <AdSlot
-        slot={AD_SLOT_SKYSCRAPER}
-        width={160}
-        height={600}
-        className="sticky top-4 z-10 hidden h-[600px] w-[160px] shrink-0 items-center justify-center self-start min-[1920px]:flex"
-      />
-      <div className="flex h-full min-w-0 w-full max-w-5xl flex-col overflow-y-auto border-x border-neutral-800 bg-neutral-925">
-        <header className="flex flex-none flex-wrap items-center justify-between gap-4 border-b border-neutral-800 px-6 py-4">
-          <Link href="/" className="text-lg font-bold text-white">
+    <div className="relative flex h-dvh justify-center overflow-hidden bg-neutral-950 text-neutral-100">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute left-1/2 top-[-18rem] h-[34rem] w-[56rem] -translate-x-1/2 rounded-full bg-[#e3b056]/[0.09] blur-3xl" />
+        <div className="absolute right-[-6rem] top-24 h-80 w-80 rounded-full bg-[#1fb5f7]/10 blur-3xl" />
+      </div>
+      <div className="relative flex h-full w-full max-w-6xl flex-col overflow-y-auto px-5 sm:px-8 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 scrollbar-thin scrollbar-thumb-neutral-600/40">
+        <header className="flex flex-none items-center justify-between gap-4 py-5">
+          <Link href="/" className="text-lg font-semibold tracking-tight text-white">
             <span className="text-[#e3b056]">WoW</span>Craft
           </Link>
-          <nav className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-neutral-400">
+          <nav className="flex items-center gap-5 text-sm text-neutral-400">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-white">
+              <Link
+                key={link.href}
+                href={link.href}
+                className={link.href === '/'
+                  ? 'rounded-full border border-[#e3b056]/40 bg-[#e3b056]/10 px-3 py-1 font-medium text-[#e3b056] transition-colors hover:border-[#e3b056]/70 hover:bg-[#e3b056]/20 hover:text-white'
+                  : 'transition-colors hover:text-white'}
+              >
                 {link.label}
               </Link>
             ))}
           </nav>
         </header>
-        <main className="flex-1 px-6 py-10 desktop-layout:px-10">{children}</main>
-        <footer className="border-t border-neutral-800 px-6 py-4 text-xs leading-relaxed text-neutral-500">
-          WoWCraft is not affiliated with Blizzard Entertainment. World of Warcraft is a
-          registered trademark of Blizzard Entertainment.
+        <main className="flex-1 pb-10">{children}</main>
+        <footer className="border-t border-white/10 py-5">
+          <p className="text-xs leading-relaxed text-neutral-600">
+            WoWCraft is not affiliated with Blizzard Entertainment. World of Warcraft is a
+            registered trademark of Blizzard Entertainment.
+          </p>
         </footer>
       </div>
-      <AdSlot
-        slot={AD_SLOT_SKYSCRAPER}
-        width={160}
-        height={600}
-        className="sticky top-4 z-10 hidden h-[600px] w-[160px] shrink-0 items-center justify-center self-start min-[1920px]:flex"
-      />
     </div>
   );
 }

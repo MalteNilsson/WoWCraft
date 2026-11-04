@@ -33,8 +33,6 @@ export function PriceAgeNotice({ realm, faction, variant }: PriceAgeNoticeProps)
     minute: '2-digit',
   });
 
-  const credit = realm.startsWith('Forever') ? <AhledgerCredit /> : null;
-
   if (variant === 'banner') {
     if (!stale) return null;
     return (
@@ -43,7 +41,6 @@ export function PriceAgeNotice({ realm, faction, variant }: PriceAgeNoticeProps)
         title={`Prices observed ${exact}`}
       >
         Auction prices for <RealmName realm={realm} /> (<FactionLabel faction={faction} />) were updated {age} and may be unreliable.
-        {credit}
       </div>
     );
   }
@@ -56,24 +53,6 @@ export function PriceAgeNotice({ realm, faction, variant }: PriceAgeNoticeProps)
       {stale
         ? `Auction prices were updated ${age} and may be unreliable.`
         : `Auction prices updated ${age}.`}
-      {credit}
     </p>
-  );
-}
-
-function AhledgerCredit() {
-  return (
-    <>
-      {' '}
-      <a
-        href="https://ahledger.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline underline-offset-2 hover:text-white"
-      >
-        Prices from AHledger
-      </a>
-      {'.'}
-    </>
   );
 }

@@ -10,12 +10,13 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <ArticleLayout>
-      <h1 className="text-3xl font-bold text-white">Privacy policy</h1>
-      <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-neutral-300">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e3b056]">Your data</p>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">Privacy policy</h1>
+      <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-neutral-400">
         <p>
           WoWCraft is operated by Malte Nilsson. The site does not ask you to create an account, and it does not sell personal information.
         </p>
-        <h2 className="pt-4 text-lg font-semibold text-white">Advertising</h2>
+        <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Advertising</h2>
         <p>
           Some pages show ads from Google AdSense. Google uses cookies to serve and measure those ads, including ads based on your visits to this site and others. You can read how Google uses data in{' '}
           <a
@@ -37,15 +38,15 @@ export default function PrivacyPage() {
           </a>
           . Visitors in the EEA, the UK, and Switzerland are asked for consent before personalized ads are used.
         </p>
-        <h2 className="pt-4 text-lg font-semibold text-white">Analytics</h2>
+        <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Analytics</h2>
         <p>
           The site uses Vercel Analytics to count page views. That measurement is aggregated and is not used to build an advertising profile.
         </p>
-        <h2 className="pt-4 text-lg font-semibold text-white">Saved on your device</h2>
+        <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Saved on your device</h2>
         <p>
-          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device. Closing the Forever announcement on a profession page stores a cookie named wowcraft-forever-announced for one year so that notice is not shown again.
+          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device. Acknowledging the Forever simulation warning stores that choice in session storage for the current visit, so the warning stays dismissed until the browser session ends.
         </p>
-        <h2 className="pt-4 text-lg font-semibold text-white">Contact</h2>
+        <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Contact</h2>
         <p>
           Questions about this policy can go to{' '}
           <a href="mailto:malte.o.nilsson@gmail.com" className="text-[#e3b056] underline underline-offset-2 hover:text-white">
