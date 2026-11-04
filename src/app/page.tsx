@@ -122,7 +122,7 @@ export default async function HomePage({
                       <img src={`/icons/${guide.slug}.webp`} alt="" className="h-10 w-10" />
                     </span>
                     <span className="min-w-0">
-                      <span className={`block text-[15px] font-medium tracking-tight ${available ? 'text-white' : 'text-neutral-500'}`}>
+                      <span className={`block text-xl font-medium tracking-tight ${available ? 'text-white' : 'text-neutral-500'}`}>
                         {guide.name}
                       </span>
                       <span className={`mt-1 block text-sm leading-snug line-clamp-2 ${available ? 'text-neutral-400' : 'text-neutral-600'}`}>
