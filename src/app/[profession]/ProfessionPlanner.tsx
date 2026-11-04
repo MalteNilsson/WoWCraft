@@ -754,10 +754,10 @@ function RecipeDetailsSection({
 
   return (
     <>
-      <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:px-6">
-        <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Recipe</h3>
+      <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-4 py-4 desktop-layout:py-5 sm:px-6">
+        <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Recipe</h3>
       </div>
-      <div className="flex items-center gap-3 px-4 py-4 desktop-layout:px-6 desktop-layout:py-5 bg-neutral-800 text-sm desktop-layout:text-base">
+      <div className="flex items-center gap-3 px-4 py-4 text-sm desktop-layout:px-6 desktop-layout:py-5 desktop-layout:text-base">
         <span
           className={`inline-flex shrink-0 items-center rounded px-2 py-1 text-xs desktop-layout:text-sm font-semibold leading-none ${
             source.type === 'free'
@@ -865,10 +865,10 @@ function MaterialCard({
   wowheadBase: string;
 }) {
   const roundedClass = {
-    only: 'rounded-xl',
-    top: 'rounded-t-xl',
-    middle: 'rounded-none',
-    bottom: 'rounded-b-xl',
+    only: 'rounded-lg',
+    top: 'rounded-lg',
+    middle: 'rounded-lg',
+    bottom: 'rounded-lg',
   }[position];
   const [expanded, setExpanded] = useState(true);
   const indent = depth * 64;
@@ -886,8 +886,8 @@ function MaterialCard({
     <div style={{ marginLeft: `${indent}px` }}>
       <div
         onClick={() => displayChildren && setExpanded(prev => !prev)}
-        className={`flex justify-between items-center bg-neutral-900 p-2 desktop-layout:p-4 shadow border border-neutral-700 mb-px transition-all duration-200 ${
-          displayChildren ? 'hover:bg-neutral-700 active:scale-[0.98] cursor-pointer' : ''
+        className={`mb-2 flex items-center justify-between rounded-lg border border-white/[0.06] bg-white/[0.03] px-3 py-2 transition-colors duration-150 desktop-layout:px-4 desktop-layout:py-3 ${
+          displayChildren ? 'cursor-pointer hover:bg-white/[0.06]' : ''
         } ${roundedClass}`}
       >
         <div className="flex items-center gap-2 desktop-layout:gap-3">
@@ -904,7 +904,7 @@ function MaterialCard({
                 category="materials"
                 id={node.id}
                 alt={info?.name ?? 'Item'}
-                className="w-6 h-6 desktop-layout:w-8 desktop-layout:h-8 rounded object-cover border border-neutral-700 flex-shrink-0"
+                className="h-6 w-6 flex-shrink-0 rounded-md object-cover ring-1 ring-white/15 desktop-layout:h-8 desktop-layout:w-8"
               />
             )}
             <div className="flex flex-col min-w-0">
@@ -2655,7 +2655,7 @@ const renderXTick = selected
   }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-neutral-950 text-neutral-100">
+    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-transparent text-neutral-100">
       <SimulatedValuesWarning open={showSimulatedWarning} onAcknowledge={acknowledgeSimulatedWarning} />
 
       {/* Auction House Disclaimer Modal - first-time only */}
@@ -2739,7 +2739,7 @@ const renderXTick = selected
 
         {/* Aside - full-screen on mobile, sidebar on desktop */}
         <aside
-          className={`absolute desktop-layout:static inset-0 z-50 desktop-layout:z-auto w-full desktop-layout:w-150 flex flex-col bg-neutral-950 text-[16px] desktop-layout:transform-none desktop-layout:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
+          className={`absolute desktop-layout:static inset-0 z-50 desktop-layout:z-auto w-full desktop-layout:w-150 flex flex-col border-r border-white/[0.06] bg-neutral-950/95 text-[16px] shadow-[8px_0_40px_rgba(0,0,0,0.35)] backdrop-blur-sm desktop-layout:transform-none desktop-layout:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
           style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
         >
           {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
@@ -2757,20 +2757,19 @@ const renderXTick = selected
             {...drawerRightEdgePointerHandlers}
           />
           {/* Slider + Tabs */}
-          <div className="flex-none bg-neutral-900 px-3 pt-4 pb-2 desktop-layout:pt-6">
-            {/* Logo and name 
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/icons/WoWCraft.png" alt="WoWCraft Logo" className="w-16 h-16 mb-2 ml-2" />
-              <span className="text-[32px] font-bold text-white"><span className="text-[#e3b056]">WoW</span>Craft.io</span>
-            </div>
-            */}
-            {/* End logo and name */}
+          <div className="flex-none border-b border-[#e3b056]/15 bg-neutral-900/80 px-3 pt-4 pb-2 desktop-layout:pt-5">
+            <Link href="/" className="mb-3 flex items-baseline justify-between gap-3">
+              <span className="text-lg font-semibold tracking-tight text-white">
+                <span className="text-[#e3b056]">WoW</span>Craft
+              </span>
+              <span className="truncate text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">{selectedProfession}</span>
+            </Link>
             <div className="flex flex-row gap-1.5 desktop-layout:gap-2 mb-2 desktop-layout:mb-4">
               {/* Version Selector */}
               <Listbox value={selectedVersion} onChange={handleVersionChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${versionRingClass(selectedVersion)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${versionRingClass(selectedVersion)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
                       <span className={`font-semibold truncate ${versionTextClass(selectedVersion)}`}>{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
                       <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
@@ -2790,7 +2789,7 @@ const renderXTick = selected
               <Listbox value={selectedRealm} onChange={handleRealmChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${realmRingClass(selectedRealm)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 text-white px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${realmRingClass(selectedRealm)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
                       <span className="font-semibold truncate"><RealmName realm={selectedRealm} /></span>
                       <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
@@ -2810,7 +2809,7 @@ const renderXTick = selected
               <Listbox value={selectedFaction} onChange={handleFactionChange}>
                 {({ open }) => (
                   <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full bg-neutral-800 rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${factionRingClass(selectedFaction)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${factionRingClass(selectedFaction)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
                       <span className={`flex items-center gap-1 min-w-0 font-semibold ${factionTextClass(selectedFaction)}`}>
                         <FactionIcon faction={selectedFaction} className="h-5 w-5 shrink-0" />
                         <span className="truncate">{selectedFaction}</span>
@@ -2833,13 +2832,12 @@ const renderXTick = selected
                 )}
               </Listbox>
             </div>
-            <PriceAgeNotice realm={selectedRealm} faction={selectedFaction} variant="inline" />
             <div className="w-full mb-3 desktop-layout:mb-5 flex gap-2">
               <div className="flex-1">
                 <Listbox value={selectedProfession} onChange={handleProfessionChange}>
                   {({ open }) => (
                     <div className="relative w-full">
-                      <Listbox.Button className={`w-full bg-neutral-800 text-white rounded px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-base desktop-layout:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/50'}`}>
+                      <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 text-white px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-base desktop-layout:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:border-[#e3b056]/35 hover:bg-neutral-700/70'}`}>
                         <div className="flex items-center gap-2 min-w-0">
                           <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-8 h-8 desktop-layout:w-10 desktop-layout:h-10 flex-shrink-0" />
                           <span className="font-semibold truncate">{selectedProfession}</span>
@@ -3387,7 +3385,7 @@ const renderXTick = selected
                 Discord
               </a>
             </div>
-            <div className="hidden desktop-layout:flex relative space-x-6 border-b border-neutral-700 font-semibold text-neutral-400 mb-2 justify-center">
+            <div className="hidden desktop-layout:flex relative space-x-8 border-b border-white/[0.06] font-medium tracking-wide text-neutral-400 mb-2 justify-center">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -3406,7 +3404,7 @@ const renderXTick = selected
                 </button>
               ))}
             </div>
-            {!(view === 'route' && !routeIsFinite) && <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 bg-neutral-900 border-b border-neutral-800 font-semibold text-[11px] desktop-layout:text-[14px]">
+            {!(view === 'route' && !routeIsFinite) && <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 border-b border-white/[0.06] font-medium text-[12px] desktop-layout:text-sm">
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
               <span className="flex-1 min-w-0">Recipe</span>
@@ -3538,10 +3536,11 @@ const renderXTick = selected
                                 <div
                                   id={`craft-${best.id}-${end}`}
                                   onClick={() => handleCardClick(best.name, end, start, end, false, best.id)}
-                                  className={`relative flex items-center gap-1 px-2 py-1 w-full min-h-[43px] desktop-layout:min-h-[60px] cursor-pointer
-                                    transition-all duration-100 ease-out will-change-transform
-                                    hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
-                                    ${isSelected(best.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
+                                  className={`relative flex items-center gap-1 border-b border-white/[0.04] px-2 py-1 w-full min-h-[43px] desktop-layout:min-h-[60px] cursor-pointer
+                                    transition-colors duration-100 ease-out will-change-transform active:scale-[0.99]
+                                    ${isSelected(best.name, end)
+                                      ? 'bg-neutral-600 hover:bg-neutral-600 active:bg-neutral-500'
+                                      : 'bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600'}`}
                                 >
                                   <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                     diffColor(committedSkill, best.difficulty)
@@ -3550,7 +3549,7 @@ const renderXTick = selected
                                     {displayedCrafts}×
                                   </span>
                                   <span className="flex min-w-0 flex-1 items-center gap-1">
-                                    <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover" />
+                                    <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded-md object-cover ring-1 ring-white/15" />
                                     <span className="flex min-w-0 flex-1 flex-col justify-center">
                                       <span
                                         className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
@@ -3611,10 +3610,11 @@ const renderXTick = selected
                                           ease: "easeOut"
                                         }}
                                         onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
-                                        className={`relative flex items-center gap-1 rounded-none pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer min-h-[43px] desktop-layout:min-h-[60px] 
-                                          transition-all duration-100 ease-out will-change-transform
-                                          hover:bg-neutral-700 active:bg-neutral-700 active:scale-[0.99]
-                                          ${isSelected(alt.recipe.name, end) ? 'bg-neutral-600' : 'bg-neutral-900'}`}
+                                        className={`relative flex items-center gap-1 rounded-none border-b border-white/[0.04] pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer min-h-[43px] desktop-layout:min-h-[60px] 
+                                          transition-colors duration-100 ease-out will-change-transform active:scale-[0.99]
+                                          ${isSelected(alt.recipe.name, end)
+                                            ? 'bg-neutral-600 hover:bg-neutral-600 active:bg-neutral-500'
+                                            : 'bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600'}`}
                                       >
                                         <span className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
                                           diffColor(committedSkill, alt.recipe.difficulty)
@@ -3666,8 +3666,10 @@ const renderXTick = selected
                               setSidebarOpen(false);
                             }}
                             id={`recipe-${r.id}`}
-                            className={`relative flex items-center gap-1 px-2 py-1 cursor-pointer transition-colors duration-250 ease-in-out hover:bg-neutral-700 min-h-[43px] desktop-layout:min-h-[60px]
-                              ${selectedRecipeId === r.id ? 'bg-neutral-700':'bg-neutral-900'}`}
+                            className={`relative flex items-center gap-1 border-b border-white/[0.04] px-2 py-1 cursor-pointer transition-colors duration-100 ease-in-out active:scale-[0.99] min-h-[43px] desktop-layout:min-h-[60px]
+                              ${selectedRecipeId === r.id
+                                ? 'bg-neutral-600 hover:bg-neutral-600 active:bg-neutral-500'
+                                : 'bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600'}`}
                           >
                             <span
                               className={`absolute left-0 top-0 bottom-0 w-1 rounded-none ${
@@ -3715,8 +3717,8 @@ const renderXTick = selected
                       opacity: { duration: 0.2 },
                       ease: "easeOut"
                     }}
-                    className="absolute inset-x-0 bottom-0 bg-neutral-900/95 backdrop-blur-sm 
-                              border-t border-neutral-700 py-2 px-4 desktop-layout:py-2.5 desktop-layout:px-10"
+                    className="absolute inset-x-0 bottom-0 bg-neutral-950/90 backdrop-blur-md 
+                              border-t border-[#e3b056]/30 py-2 px-4 desktop-layout:py-2.5 desktop-layout:px-10"
                   >
                     <div className="text-sm desktop-layout:text-xl font-semibold flex items-center justify-between gap-1 min-w-0">
                       <div className="flex items-center justify-start gap-2 min-w-0 overflow-hidden pl-[55px] desktop-layout:pl-[75px]">
@@ -3813,13 +3815,17 @@ const renderXTick = selected
         </AnimatePresence>
 
         {/* Main panel - z-0 so left-edge drag zone (z-45) stays interactable; sliders use z-20 within their containers */}
-        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none desktop-layout:order-last bg-neutral-950 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
+        <main className="relative z-0 flex flex-col flex-1 h-full overflow-y-auto focus:outline-none desktop-layout:order-last bg-transparent [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-neutral-600/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:transition-colors [&::-webkit-scrollbar-thumb]:duration-300 hover:[&::-webkit-scrollbar-thumb]:bg-neutral-600/60 motion-safe:transition-[scrollbar-color] motion-safe:duration-300 scrollbar-thin scrollbar-thumb-neutral-600/40 hover:scrollbar-thumb-neutral-600/60">
         <PriceAgeNotice realm={selectedRealm} faction={selectedFaction} variant="banner" />
         {!selected ? (
-          <p className="text-neutral-400 px-4 py-8">
-            <span className="desktop-layout:hidden">Tap the menu to view the leveling guide or recipe list.</span>
-            <span className="hidden desktop-layout:inline">Click a recipe to view details.</span>
-          </p>
+          <div className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e3b056]">Recipe details</p>
+            <p className="mt-3 text-xl font-semibold tracking-tight text-white">Choose a craft from the guide</p>
+            <p className="mt-2 max-w-sm text-sm leading-relaxed text-neutral-400">
+              <span className="desktop-layout:hidden">Tap the menu to open the leveling guide, then pick a recipe. </span>
+              Costs, skill-up chances, and materials show up here.
+            </p>
+          </div>
         ) : (
           <div className="flex-1 w-full max-w-4xl pt-14 pb-6 desktop-layout:py-12 mx-auto px-4 sm:px-6 desktop-layout:max-[1919px]:max-w-5xl desktop-layout:max-[1919px]:px-8 min-[1920px]:grid min-[1920px]:w-max min-[1920px]:max-w-full min-[1920px]:flex-none min-[1920px]:self-center min-[1920px]:grid-cols-[160px_56rem_160px] min-[1920px]:justify-center min-[1920px]:items-start min-[1920px]:gap-6 min-[1920px]:px-6">
             <div className="flex-none items-center min-[1920px]:col-start-2">
@@ -3828,7 +3834,7 @@ const renderXTick = selected
                   category={getRecipeProfession(selected.id, selectedProfession)}
                   id={selected.id}
                   alt={`${selected.name} icon`}
-                  className="w-10 h-10 desktop-layout:w-16 desktop-layout:h-16 rounded mr-2 flex-shrink-0"
+                  className="mr-3 h-10 w-10 flex-shrink-0 rounded-lg object-cover ring-1 ring-[#e3b056]/40 shadow-lg shadow-black/40 desktop-layout:h-16 desktop-layout:w-16"
                 />
                 <div className="min-w-0">
                   <a
@@ -3854,12 +3860,12 @@ const renderXTick = selected
               height={600}
               className="sticky top-4 z-10 hidden h-[600px] w-[160px] items-center justify-center self-start min-[1920px]:col-start-1 min-[1920px]:row-start-2 min-[1920px]:flex"
             />
-            <div className="sm:border border-gray-900 bg-neutral-800 rounded-lg shadow-lg mt-1 desktop-layout:mt-2 pb-12 min-[1920px]:col-start-2 min-[1920px]:row-start-2 min-[1920px]:min-w-0">
-              <div className="flex items-center justify-between px-4 py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-base font-medium leading-6 text-white desktop-layout:text-lg">Level-up Calculator</h3>
+            <div className="mt-1 rounded-xl border border-[#e3b056]/20 bg-neutral-900/75 pb-12 shadow-2xl shadow-black/40 backdrop-blur-sm desktop-layout:mt-2 min-[1920px]:col-start-2 min-[1920px]:row-start-2 min-[1920px]:min-w-0">
+              <div className="flex items-center justify-between border-b border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-4 py-5 sm:rounded-t-xl sm:px-6">
+                <h3 className="text-base font-medium leading-6 tracking-tight text-white desktop-layout:text-lg">Level-up Calculator</h3>
               </div>
               <div className="flex flex-col desktop-layout:flex-row w-full h-full">
-                <div className="w-full desktop-layout:w-3/5 relative px-4 pt-4 pb-0 desktop-layout:px-8 desktop-layout:pt-8 desktop-layout:pb-0 h-[min(calc(75vw-1rem),284px)] desktop-layout:h-[318px]">
+                <div className="relative h-[min(calc(75vw-1rem),284px)] w-full pb-4 pl-4 pr-4 pt-4 desktop-layout:h-[318px] desktop-layout:w-3/5 desktop-layout:pb-0 desktop-layout:pl-8 desktop-layout:pr-8 desktop-layout:pt-8">
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={probData} margin={{ top: 2, right: 0, bottom: 0, left: -22 }}>
                       <CartesianGrid
@@ -4055,13 +4061,13 @@ const renderXTick = selected
                   </div>
                 </div> {/* end chart container */} 
 
-                <aside className="flex-none w-full desktop-layout:w-2/5 bg-neutral-800 rounded-lg relative desktop-layout:h-full" style={{ minHeight: 200 }}>
-                  <div className="flex w-full">
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-none desktop-layout:rounded-b border-0 desktop-layout:border desktop-layout:border-neutral-700 desktop-layout:border-t-0 desktop-layout:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
-                    <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">FROM</span>
-                    <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
+                <aside className="relative flex w-full flex-none flex-col border-t border-white/[0.06] bg-white/[0.03] p-3 desktop-layout:w-2/5 desktop-layout:border-l desktop-layout:border-t-0 desktop-layout:p-4" style={{ minHeight: 200 }}>
+                  <div className="flex w-full gap-3">
+                  <div className="flex min-w-0 flex-1 flex-col items-center">
+                    <span className="mb-2 text-[11px] font-medium tracking-wide text-neutral-400">From</span>
+                    <div className="flex w-full items-center justify-between rounded-lg border border-white/10 bg-black/25">
                       <button
-                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        className="h-10 w-10 rounded-l-lg text-lg text-neutral-300 transition hover:bg-white/10 hover:text-white"
                         onClick={() => setRngLow(Math.max(sliderMin, rngLow - 1))}
                       >−</button>
                       <input
@@ -4088,21 +4094,21 @@ const renderXTick = selected
                             e.currentTarget.blur();
                           }
                         }}
-                        className="text-lg text-center w-12 bg-transparent outline-none appearance-none
+                        className="w-12 bg-transparent text-center text-lg text-white outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
                                   [&::-webkit-outer-spin-button]:appearance-none"
                       />
                       <button
-                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        className="h-10 w-10 rounded-r-lg text-lg text-neutral-300 transition hover:bg-white/10 hover:text-white"
                         onClick={() => setRngLow(Math.min(rngHigh - 1, rngLow + 1))}
                       >+</button>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center bg-neutral-900 rounded-none desktop-layout:rounded-b border-0 desktop-layout:border desktop-layout:border-neutral-700 desktop-layout:border-t-0 desktop-layout:border-l-0 desktop-layout:border-r-0 flex-1 min-w-0 p-3 -mt-0.5">
-                    <span className="text-xs text-neutral-400 bg-neutral-900 mb-1 p-2">TO</span>
-                    <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
+                  <div className="flex min-w-0 flex-1 flex-col items-center">
+                    <span className="mb-2 text-[11px] font-medium tracking-wide text-neutral-400">To</span>
+                    <div className="flex w-full items-center justify-between rounded-lg border border-white/10 bg-black/25">
                       <button
-                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        className="h-10 w-10 rounded-l-lg text-lg text-neutral-300 transition hover:bg-white/10 hover:text-white"
                         onClick={() => setRngHigh(Math.max(rngLow + 1, rngHigh - 1))}
                       >−</button>
                       <input
@@ -4129,18 +4135,18 @@ const renderXTick = selected
                             e.currentTarget.blur();
                           }
                         }}
-                        className="text-lg text-center w-12 bg-transparent outline-none appearance-none
+                        className="w-12 bg-transparent text-center text-lg text-white outline-none appearance-none
                                   [&::-webkit-inner-spin-button]:appearance-none 
                                   [&::-webkit-outer-spin-button]:appearance-none"
                       />
                       <button
-                        className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-10 h-10"
+                        className="h-10 w-10 rounded-r-lg text-lg text-neutral-300 transition hover:bg-white/10 hover:text-white"
                         onClick={() => setRngHigh(Math.min(sliderMax, rngHigh + 1))}
                       >+</button>
                     </div>
                   </div>
                 </div>
-                  <div className="space-y-6 text-[16px] text-neutral-200 p-3 bg-neutral-800 -mb-0.5">
+                  <div className="mt-4 space-y-3 border-t border-white/[0.06] pt-4 text-sm text-neutral-300 desktop-layout:text-base">
                     <div className="flex justify-between items-center">
                       <span>Total Level-ups</span>
                       <span className="font-semibold">{totalLevelUps}</span>
@@ -4161,13 +4167,13 @@ const renderXTick = selected
                 </aside>
               </div>
 
-              <div className="flex items-center justify-between px-4 py-4 desktop-layout:py-6 bg-neutral-900 border-t border-b border-gray-700 sm:border-t-0 sm:py-6 sm:rounded-t-lg sm:px-6">
-                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Cost Calculations</h3>
+              <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-4 py-4 desktop-layout:py-5 sm:px-6">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Cost Calculations</h3>
               </div>
-              <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] desktop-layout:text-[16px] min-w-0">
+              <div className="flex min-w-0 items-stretch justify-between divide-x divide-white/10 overflow-hidden text-[10px] text-neutral-100 desktop-layout:text-[16px]">
                 <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
                   <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Base Cost Per Attempt</span>
-                  <CostBox copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)} className="text-sm desktop-layout:text-lg" />
+                  <CostBox copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession)} className="text-sm desktop-layout:text-lg" />
                 </div>
                 {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
                   (() => {
@@ -4248,7 +4254,7 @@ const renderXTick = selected
                     copper={selected ? (() => {
                       const recipeCost = includeRecipeCost && selected.source ?
                         calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
-                      const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) * expCrafts;
+                      const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession) * expCrafts;
                       return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
                     })() : 0}
                     className="text-sm desktop-layout:text-lg"
@@ -4264,17 +4270,17 @@ const renderXTick = selected
                 useMarketValue={useMarketValue}
               />
 
-              <div className="flex items-center justify-between px-2 py-3 desktop-layout:px-6 desktop-layout:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
-                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Material Calculations</h3>
+              <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-2 py-3 desktop-layout:px-6 desktop-layout:py-5">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Material Calculations</h3>
               </div>
-              <div className="px-2 py-2 desktop-layout:px-6 desktop-layout:py-6">
+              <div className="px-3 py-4 desktop-layout:px-6 desktop-layout:py-5">
                 <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} wowheadBase={getWowheadBase(selectedVersion)} />
               </div>
 
-              <div className="flex items-center justify-between px-2 py-3 desktop-layout:px-6 desktop-layout:py-6 bg-neutral-900 sm:border-t-0 sm:rounded-t-lg">
-                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 text-white">Auction House Profit Calculation</h3>
+              <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-2 py-3 desktop-layout:px-6 desktop-layout:py-5">
+                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Auction House Profit Calculation</h3>
               </div>
-              <div className="flex flex-col divide-y divide-neutral-700">
+              <div className="flex flex-col divide-y divide-white/10">
                 {selected?.produces ? (() => {
                   const outputItemId = selected.produces.id;
                   const outputQty = selected.produces.quantity ?? 1;
@@ -4291,7 +4297,7 @@ const renderXTick = selected
                   const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
                   return (
                     <>
-                      <div className="flex justify-between items-stretch bg-neutral-800 divide-x divide-neutral-700 overflow-hidden text-neutral-100 text-[10px] desktop-layout:text-[16px] min-h-[3rem] desktop-layout:min-h-[4rem]">
+                      <div className="flex min-h-[3rem] items-stretch justify-between divide-x divide-white/10 overflow-hidden text-[10px] text-neutral-100 desktop-layout:min-h-[4rem] desktop-layout:text-[16px]">
                         <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
                           <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">Vendor Price Return</span>
                           <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
@@ -4312,7 +4318,7 @@ const renderXTick = selected
                         </div>
                       </div>
                       {outcomes.length > 0 && (
-                        <div className="flex flex-col items-stretch bg-neutral-800/80 p-2 desktop-layout:p-4">
+                        <div className="flex flex-col items-stretch border-t border-white/10 p-3 desktop-layout:p-4">
                           <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-sm font-medium">Expected Disenchant Materials</span>
                           <ul className="space-y-1.5 desktop-layout:space-y-2 text-xs desktop-layout:text-sm">
                             {outcomes.map((o, idx) => {

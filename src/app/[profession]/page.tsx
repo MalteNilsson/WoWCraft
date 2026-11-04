@@ -40,7 +40,11 @@ export default async function ProfessionPage({ params }: ProfessionPageProps) {
   }
 
   return (
-    <div className="flex h-dvh min-h-0 flex-col overflow-hidden bg-neutral-950">
+    <div className="relative flex h-dvh min-h-0 flex-col overflow-hidden bg-neutral-950">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute left-[18%] top-[-14rem] h-[28rem] w-[42rem] rounded-full bg-[#e3b056]/[0.08] blur-3xl" />
+        <div className="absolute right-[-6rem] top-24 h-80 w-80 rounded-full bg-[#1fb5f7]/10 blur-3xl" />
+      </div>
       <Suspense fallback={<PlannerFallback />}>
         <ProfessionPlanner />
       </Suspense>
