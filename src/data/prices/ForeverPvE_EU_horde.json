@@ -2,13 +2,13 @@
   {
     "itemId": 35,
     "minBuyout": 900,
-    "marketValue": 911,
+    "marketValue": 905,
     "historical": 3000
   },
   {
     "itemId": 36,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 200,
+    "marketValue": 366,
     "historical": 0
   },
   {
@@ -19,7 +19,7 @@
   },
   {
     "itemId": 53,
-    "minBuyout": 0,
+    "minBuyout": 300,
     "marketValue": 300,
     "historical": 0
   },
@@ -31,14 +31,26 @@
   },
   {
     "itemId": 118,
-    "minBuyout": 10,
-    "marketValue": 10,
+    "minBuyout": 14,
+    "marketValue": 12,
     "historical": 18
+  },
+  {
+    "itemId": 127,
+    "minBuyout": 0,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
+    "itemId": 140,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
   },
   {
     "itemId": 159,
     "minBuyout": 3,
-    "marketValue": 4,
+    "marketValue": 3,
     "historical": 14
   },
   {
@@ -49,14 +61,14 @@
   },
   {
     "itemId": 414,
-    "minBuyout": 98,
-    "marketValue": 152,
+    "minBuyout": 97,
+    "marketValue": 110,
     "historical": 0
   },
   {
     "itemId": 422,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 99,
+    "marketValue": 99,
     "historical": 0
   },
   {
@@ -67,14 +79,14 @@
   },
   {
     "itemId": 730,
-    "minBuyout": 350,
-    "marketValue": 383,
+    "minBuyout": 249,
+    "marketValue": 349,
     "historical": 1500
   },
   {
     "itemId": 732,
-    "minBuyout": 78,
-    "marketValue": 79,
+    "minBuyout": 50,
+    "marketValue": 78,
     "historical": 100
   },
   {
@@ -86,7 +98,7 @@
   {
     "itemId": 766,
     "minBuyout": 100,
-    "marketValue": 153,
+    "marketValue": 126,
     "historical": 400
   },
   {
@@ -103,19 +115,19 @@
   },
   {
     "itemId": 769,
-    "minBuyout": 66,
-    "marketValue": 65,
+    "minBuyout": 70,
+    "marketValue": 67,
     "historical": 52
   },
   {
     "itemId": 771,
-    "minBuyout": 90,
-    "marketValue": 97,
+    "minBuyout": 87,
+    "marketValue": 93,
     "historical": 100
   },
   {
     "itemId": 774,
-    "minBuyout": 16,
+    "minBuyout": 14,
     "marketValue": 15,
     "historical": 16
   },
@@ -127,63 +139,75 @@
   },
   {
     "itemId": 783,
-    "minBuyout": 416,
-    "marketValue": 453,
+    "minBuyout": 369,
+    "marketValue": 431,
     "historical": 803
   },
   {
     "itemId": 785,
-    "minBuyout": 53,
-    "marketValue": 66,
+    "minBuyout": 63,
+    "marketValue": 62,
     "historical": 229
   },
   {
     "itemId": 787,
-    "minBuyout": 5,
+    "minBuyout": 7,
     "marketValue": 6,
     "historical": 51
   },
   {
     "itemId": 789,
-    "minBuyout": 5500,
-    "marketValue": 4666,
+    "minBuyout": 3900,
+    "marketValue": 4512,
     "historical": 0
   },
   {
     "itemId": 790,
-    "minBuyout": 3100,
-    "marketValue": 3100,
+    "minBuyout": 2500,
+    "marketValue": 2950,
     "historical": 0
   },
   {
     "itemId": 804,
-    "minBuyout": 18000,
+    "minBuyout": 0,
     "marketValue": 18000,
     "historical": 0
   },
   {
     "itemId": 805,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 371,
     "historical": 400
   },
   {
     "itemId": 814,
-    "minBuyout": 99,
-    "marketValue": 98,
+    "minBuyout": 75,
+    "marketValue": 94,
     "historical": 100
+  },
+  {
+    "itemId": 816,
+    "minBuyout": 0,
+    "marketValue": 1000,
+    "historical": 0
   },
   {
     "itemId": 818,
     "minBuyout": 100,
-    "marketValue": 112,
+    "marketValue": 114,
     "historical": 111
   },
   {
     "itemId": 828,
-    "minBuyout": 400,
+    "minBuyout": 300,
     "marketValue": 400,
     "historical": 400
+  },
+  {
+    "itemId": 832,
+    "minBuyout": 0,
+    "marketValue": 1000,
+    "historical": 0
   },
   {
     "itemId": 838,
@@ -193,7 +217,7 @@
   },
   {
     "itemId": 852,
-    "minBuyout": 400,
+    "minBuyout": 0,
     "marketValue": 800,
     "historical": 0
   },
@@ -204,51 +228,63 @@
     "historical": 0
   },
   {
+    "itemId": 854,
+    "minBuyout": 0,
+    "marketValue": 1000,
+    "historical": 0
+  },
+  {
     "itemId": 856,
     "minBuyout": 2300,
-    "marketValue": 2433,
+    "marketValue": 2366,
     "historical": 10000
   },
   {
     "itemId": 858,
-    "minBuyout": 129,
-    "marketValue": 156,
+    "minBuyout": 110,
+    "marketValue": 136,
     "historical": 900
   },
   {
     "itemId": 929,
-    "minBuyout": 600,
-    "marketValue": 533,
+    "minBuyout": 550,
+    "marketValue": 513,
     "historical": 377
   },
   {
+    "itemId": 933,
+    "minBuyout": 0,
+    "marketValue": 14900,
+    "historical": 0
+  },
+  {
     "itemId": 935,
-    "minBuyout": 27500,
-    "marketValue": 27500,
+    "minBuyout": 21000,
+    "marketValue": 25416,
     "historical": 0
   },
   {
     "itemId": 954,
-    "minBuyout": 128,
-    "marketValue": 134,
+    "minBuyout": 100,
+    "marketValue": 130,
     "historical": 299
   },
   {
     "itemId": 955,
-    "minBuyout": 94,
-    "marketValue": 95,
+    "minBuyout": 80,
+    "marketValue": 92,
     "historical": 98
   },
   {
     "itemId": 1015,
-    "minBuyout": 900,
-    "marketValue": 966,
+    "minBuyout": 698,
+    "marketValue": 832,
     "historical": 0
   },
   {
     "itemId": 1081,
-    "minBuyout": 140,
-    "marketValue": 162,
+    "minBuyout": 109,
+    "marketValue": 127,
     "historical": 0
   },
   {
@@ -259,14 +295,14 @@
   },
   {
     "itemId": 1179,
-    "minBuyout": 58,
-    "marketValue": 58,
+    "minBuyout": 57,
+    "marketValue": 57,
     "historical": 99
   },
   {
     "itemId": 1180,
     "minBuyout": 98,
-    "marketValue": 99,
+    "marketValue": 98,
     "historical": 100
   },
   {
@@ -278,7 +314,7 @@
   {
     "itemId": 1205,
     "minBuyout": 0,
-    "marketValue": 234,
+    "marketValue": 167,
     "historical": 0
   },
   {
@@ -290,7 +326,7 @@
   {
     "itemId": 1210,
     "minBuyout": 260,
-    "marketValue": 264,
+    "marketValue": 265,
     "historical": 250
   },
   {
@@ -301,8 +337,8 @@
   },
   {
     "itemId": 1274,
-    "minBuyout": 50,
-    "marketValue": 75,
+    "minBuyout": 39,
+    "marketValue": 61,
     "historical": 100
   },
   {
@@ -313,25 +349,25 @@
   },
   {
     "itemId": 1297,
-    "minBuyout": 4000,
-    "marketValue": 4746,
+    "minBuyout": 3800,
+    "marketValue": 4202,
     "historical": 0
   },
   {
     "itemId": 1318,
-    "minBuyout": 40000,
-    "marketValue": 40000,
+    "minBuyout": 494800,
+    "marketValue": 267400,
     "historical": 0
   },
   {
     "itemId": 1355,
-    "minBuyout": 1200,
-    "marketValue": 1200,
+    "minBuyout": 800,
+    "marketValue": 1133,
     "historical": 0
   },
   {
     "itemId": 1366,
-    "minBuyout": 100,
+    "minBuyout": 10000,
     "marketValue": 100,
     "historical": 100
   },
@@ -385,13 +421,13 @@
   },
   {
     "itemId": 1380,
-    "minBuyout": 7700,
-    "marketValue": 7700,
+    "minBuyout": 1100,
+    "marketValue": 5500,
     "historical": 0
   },
   {
     "itemId": 1384,
-    "minBuyout": 200,
+    "minBuyout": 0,
     "marketValue": 200,
     "historical": 0
   },
@@ -517,32 +553,44 @@
   },
   {
     "itemId": 1438,
-    "minBuyout": 0,
-    "marketValue": 200,
+    "minBuyout": 300,
+    "marketValue": 275,
+    "historical": 0
+  },
+  {
+    "itemId": 1465,
+    "minBuyout": 30000,
+    "marketValue": 30000,
     "historical": 0
   },
   {
     "itemId": 1468,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 200,
+    "marketValue": 300,
     "historical": 0
   },
   {
     "itemId": 1475,
-    "minBuyout": 83,
-    "marketValue": 83,
+    "minBuyout": 82,
+    "marketValue": 82,
     "historical": 132
   },
   {
     "itemId": 1476,
-    "minBuyout": 98,
-    "marketValue": 99,
+    "minBuyout": 90,
+    "marketValue": 97,
     "historical": 100
   },
   {
     "itemId": 1478,
     "minBuyout": 0,
     "marketValue": 500,
+    "historical": 0
+  },
+  {
+    "itemId": 1482,
+    "minBuyout": 254400,
+    "marketValue": 254400,
     "historical": 0
   },
   {
@@ -553,8 +601,8 @@
   },
   {
     "itemId": 1484,
-    "minBuyout": 100000,
-    "marketValue": 100000,
+    "minBuyout": 80000,
+    "marketValue": 90000,
     "historical": 0
   },
   {
@@ -577,14 +625,14 @@
   },
   {
     "itemId": 1499,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 283,
     "historical": 0
   },
   {
     "itemId": 1501,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 266,
     "historical": 500
   },
   {
@@ -596,7 +644,7 @@
   {
     "itemId": 1503,
     "minBuyout": 500,
-    "marketValue": 622,
+    "marketValue": 550,
     "historical": 0
   },
   {
@@ -607,8 +655,8 @@
   },
   {
     "itemId": 1505,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 200,
+    "marketValue": 433,
     "historical": 1000
   },
   {
@@ -625,8 +673,8 @@
   },
   {
     "itemId": 1509,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 483,
     "historical": 0
   },
   {
@@ -644,19 +692,19 @@
   {
     "itemId": 1512,
     "minBuyout": 200,
-    "marketValue": 300,
+    "marketValue": 233,
     "historical": 400
   },
   {
     "itemId": 1513,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 360,
     "historical": 500
   },
   {
     "itemId": 1514,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 350,
     "historical": 0
   },
   {
@@ -673,32 +721,32 @@
   },
   {
     "itemId": 1529,
-    "minBuyout": 700,
-    "marketValue": 766,
+    "minBuyout": 693,
+    "marketValue": 733,
     "historical": 4999
   },
   {
     "itemId": 1539,
-    "minBuyout": 4400,
-    "marketValue": 4400,
+    "minBuyout": 2000,
+    "marketValue": 3920,
     "historical": 0
   },
   {
     "itemId": 1705,
-    "minBuyout": 600,
-    "marketValue": 656,
+    "minBuyout": 598,
+    "marketValue": 628,
     "historical": 1500
   },
   {
     "itemId": 1710,
-    "minBuyout": 1000,
-    "marketValue": 932,
+    "minBuyout": 900,
+    "marketValue": 933,
     "historical": 0
   },
   {
     "itemId": 1711,
-    "minBuyout": 1200,
-    "marketValue": 1300,
+    "minBuyout": 1000,
+    "marketValue": 1100,
     "historical": 0
   },
   {
@@ -720,9 +768,15 @@
     "historical": 0
   },
   {
+    "itemId": 1732,
+    "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
     "itemId": 1733,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 200,
+    "marketValue": 166,
     "historical": 0
   },
   {
@@ -739,8 +793,8 @@
   },
   {
     "itemId": 1737,
-    "minBuyout": 1400,
-    "marketValue": 1445,
+    "minBuyout": 1100,
+    "marketValue": 1302,
     "historical": 0
   },
   {
@@ -751,7 +805,13 @@
   },
   {
     "itemId": 1741,
-    "minBuyout": 200,
+    "minBuyout": 0,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 1742,
+    "minBuyout": 0,
     "marketValue": 200,
     "historical": 0
   },
@@ -763,20 +823,26 @@
   },
   {
     "itemId": 1744,
-    "minBuyout": 3400,
-    "marketValue": 3480,
+    "minBuyout": 3200,
+    "marketValue": 3423,
     "historical": 0
   },
   {
     "itemId": 1745,
     "minBuyout": 400,
-    "marketValue": 600,
+    "marketValue": 483,
     "historical": 0
   },
   {
     "itemId": 1752,
     "minBuyout": 4500,
-    "marketValue": 4833,
+    "marketValue": 4666,
+    "historical": 0
+  },
+  {
+    "itemId": 1764,
+    "minBuyout": 1100,
+    "marketValue": 1100,
     "historical": 0
   },
   {
@@ -793,20 +859,32 @@
   },
   {
     "itemId": 1769,
-    "minBuyout": 3000,
-    "marketValue": 2916,
+    "minBuyout": 2500,
+    "marketValue": 2941,
     "historical": 0
   },
   {
     "itemId": 1770,
-    "minBuyout": 1200,
-    "marketValue": 2400,
+    "minBuyout": 800,
+    "marketValue": 1708,
     "historical": 0
   },
   {
     "itemId": 1777,
     "minBuyout": 4000,
-    "marketValue": 4666,
+    "marketValue": 4333,
+    "historical": 0
+  },
+  {
+    "itemId": 1787,
+    "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 1788,
+    "minBuyout": 2000,
+    "marketValue": 2000,
     "historical": 0
   },
   {
@@ -816,9 +894,21 @@
     "historical": 0
   },
   {
+    "itemId": 1790,
+    "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 1791,
+    "minBuyout": 5000,
+    "marketValue": 5000,
+    "historical": 0
+  },
+  {
     "itemId": 1793,
-    "minBuyout": 4900,
-    "marketValue": 4155,
+    "minBuyout": 4800,
+    "marketValue": 4253,
     "historical": 0
   },
   {
@@ -870,6 +960,12 @@
     "historical": 0
   },
   {
+    "itemId": 1831,
+    "minBuyout": 2500,
+    "marketValue": 2500,
+    "historical": 0
+  },
+  {
     "itemId": 1843,
     "minBuyout": 500,
     "marketValue": 500,
@@ -877,26 +973,38 @@
   },
   {
     "itemId": 1845,
-    "minBuyout": 300,
+    "minBuyout": 0,
     "marketValue": 300,
     "historical": 0
   },
   {
     "itemId": 1929,
-    "minBuyout": 35000,
+    "minBuyout": 0,
     "marketValue": 40266,
     "historical": 0
   },
   {
+    "itemId": 1930,
+    "minBuyout": 0,
+    "marketValue": 1000,
+    "historical": 0
+  },
+  {
     "itemId": 1935,
-    "minBuyout": 64400,
-    "marketValue": 64400,
+    "minBuyout": 114400,
+    "marketValue": 89400,
     "historical": 0
   },
   {
     "itemId": 1951,
-    "minBuyout": 0,
-    "marketValue": 20000,
+    "minBuyout": 19000,
+    "marketValue": 22916,
+    "historical": 0
+  },
+  {
+    "itemId": 2011,
+    "minBuyout": 50000,
+    "marketValue": 50000,
     "historical": 0
   },
   {
@@ -907,8 +1015,14 @@
   },
   {
     "itemId": 2030,
-    "minBuyout": 5000,
-    "marketValue": 5000,
+    "minBuyout": 0,
+    "marketValue": 4500,
+    "historical": 0
+  },
+  {
+    "itemId": 2034,
+    "minBuyout": 23900,
+    "marketValue": 24450,
     "historical": 0
   },
   {
@@ -919,15 +1033,21 @@
   },
   {
     "itemId": 2059,
-    "minBuyout": 0,
-    "marketValue": 10000,
+    "minBuyout": 20000,
+    "marketValue": 15000,
     "historical": 0
   },
   {
     "itemId": 2070,
-    "minBuyout": 2,
-    "marketValue": 3,
+    "minBuyout": 1,
+    "marketValue": 2,
     "historical": 19
+  },
+  {
+    "itemId": 2072,
+    "minBuyout": 14500,
+    "marketValue": 14500,
+    "historical": 0
   },
   {
     "itemId": 2073,
@@ -938,25 +1058,37 @@
   {
     "itemId": 2075,
     "minBuyout": 400,
-    "marketValue": 500,
+    "marketValue": 498,
     "historical": 746
   },
   {
     "itemId": 2078,
     "minBuyout": 1300,
-    "marketValue": 1377,
+    "marketValue": 1338,
     "historical": 5000
   },
   {
     "itemId": 2079,
-    "minBuyout": 1200,
-    "marketValue": 1369,
+    "minBuyout": 1000,
+    "marketValue": 1298,
     "historical": 2400
   },
   {
-    "itemId": 2092,
+    "itemId": 2091,
     "minBuyout": 10000,
     "marketValue": 10000,
+    "historical": 0
+  },
+  {
+    "itemId": 2092,
+    "minBuyout": 5000,
+    "marketValue": 8611,
+    "historical": 0
+  },
+  {
+    "itemId": 2098,
+    "minBuyout": 50000,
+    "marketValue": 65000,
     "historical": 0
   },
   {
@@ -967,8 +1099,8 @@
   },
   {
     "itemId": 2102,
-    "minBuyout": 100,
-    "marketValue": 150,
+    "minBuyout": 0,
+    "marketValue": 100,
     "historical": 0
   },
   {
@@ -991,8 +1123,14 @@
   },
   {
     "itemId": 2194,
-    "minBuyout": 50000,
-    "marketValue": 50000,
+    "minBuyout": 49000,
+    "marketValue": 49400,
+    "historical": 0
+  },
+  {
+    "itemId": 2210,
+    "minBuyout": 100,
+    "marketValue": 100,
     "historical": 0
   },
   {
@@ -1010,31 +1148,31 @@
   {
     "itemId": 2213,
     "minBuyout": 100,
-    "marketValue": 266,
+    "marketValue": 233,
     "historical": 0
   },
   {
     "itemId": 2214,
     "minBuyout": 400,
-    "marketValue": 433,
+    "marketValue": 400,
     "historical": 0
   },
   {
     "itemId": 2215,
     "minBuyout": 300,
-    "marketValue": 500,
+    "marketValue": 400,
     "historical": 0
   },
   {
     "itemId": 2216,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 600,
+    "marketValue": 866,
     "historical": 0
   },
   {
     "itemId": 2217,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 700,
+    "marketValue": 850,
     "historical": 0
   },
   {
@@ -1046,13 +1184,25 @@
   {
     "itemId": 2251,
     "minBuyout": 300,
-    "marketValue": 500,
+    "marketValue": 400,
+    "historical": 0
+  },
+  {
+    "itemId": 2256,
+    "minBuyout": 35900,
+    "marketValue": 49233,
+    "historical": 0
+  },
+  {
+    "itemId": 2271,
+    "minBuyout": 96200,
+    "marketValue": 96200,
     "historical": 0
   },
   {
     "itemId": 2287,
-    "minBuyout": 10,
-    "marketValue": 70,
+    "minBuyout": 28,
+    "marketValue": 51,
     "historical": 90
   },
   {
@@ -1064,7 +1214,7 @@
   {
     "itemId": 2300,
     "minBuyout": 200,
-    "marketValue": 218,
+    "marketValue": 209,
     "historical": 400
   },
   {
@@ -1088,13 +1238,13 @@
   {
     "itemId": 2307,
     "minBuyout": 600,
-    "marketValue": 625,
+    "marketValue": 606,
     "historical": 1700
   },
   {
     "itemId": 2308,
-    "minBuyout": 500,
-    "marketValue": 700,
+    "minBuyout": 400,
+    "marketValue": 600,
     "historical": 0
   },
   {
@@ -1117,68 +1267,74 @@
   },
   {
     "itemId": 2312,
-    "minBuyout": 2000,
-    "marketValue": 2206,
+    "minBuyout": 800,
+    "marketValue": 1696,
     "historical": 0
   },
   {
     "itemId": 2313,
-    "minBuyout": 698,
-    "marketValue": 698,
+    "minBuyout": 675,
+    "marketValue": 696,
+    "historical": 0
+  },
+  {
+    "itemId": 2314,
+    "minBuyout": 5900,
+    "marketValue": 5900,
     "historical": 0
   },
   {
     "itemId": 2315,
-    "minBuyout": 800,
-    "marketValue": 833,
+    "minBuyout": 500,
+    "marketValue": 750,
     "historical": 0
   },
   {
     "itemId": 2316,
-    "minBuyout": 1600,
-    "marketValue": 1911,
+    "minBuyout": 1200,
+    "marketValue": 1689,
     "historical": 0
   },
   {
     "itemId": 2317,
-    "minBuyout": 2900,
-    "marketValue": 3625,
+    "minBuyout": 2600,
+    "marketValue": 3320,
     "historical": 0
   },
   {
     "itemId": 2318,
-    "minBuyout": 20,
+    "minBuyout": 22,
     "marketValue": 23,
     "historical": 24
   },
   {
     "itemId": 2319,
-    "minBuyout": 120,
-    "marketValue": 187,
+    "minBuyout": 146,
+    "marketValue": 170,
     "historical": 499
   },
   {
     "itemId": 2320,
-    "minBuyout": 19,
+    "minBuyout": 17,
     "marketValue": 18,
     "historical": 20
   },
   {
     "itemId": 2321,
-    "minBuyout": 145,
-    "marketValue": 143,
+    "minBuyout": 189,
+    "marketValue": 174,
     "historical": 149
   },
   {
     "itemId": 2324,
-    "minBuyout": 97,
-    "marketValue": 97,
+    "minBuyout": 100,
+    "marketValue": 98,
     "historical": 0
   },
   {
     "itemId": 2325,
     "minBuyout": 400,
-    "marketValue": 550,
+    "marketValue": 400,
     "historical": 700
   },
   {
@@ -1188,9 +1344,39 @@
     "historical": 0
   },
   {
+    "itemId": 2367,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 2369,
     "minBuyout": 0,
     "marketValue": 100,
+    "historical": 0
+  },
+  {
+    "itemId": 2370,
+    "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 2371,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
+    "itemId": 2372,
+    "minBuyout": 400,
+    "marketValue": 400,
+    "historical": 0
+  },
+  {
+    "itemId": 2373,
+    "minBuyout": 200,
+    "marketValue": 200,
     "historical": 0
   },
   {
@@ -1207,18 +1393,30 @@
   },
   {
     "itemId": 2376,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 500,
+    "marketValue": 1872,
     "historical": 0
   },
   {
     "itemId": 2387,
+    "minBuyout": 0,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
+    "itemId": 2389,
     "minBuyout": 100,
     "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 2398,
+    "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 2400,
     "minBuyout": 200,
     "marketValue": 200,
     "historical": 0
@@ -1255,32 +1453,32 @@
   },
   {
     "itemId": 2447,
-    "minBuyout": 12,
+    "minBuyout": 13,
     "marketValue": 13,
     "historical": 12
   },
   {
     "itemId": 2449,
-    "minBuyout": 20,
+    "minBuyout": 22,
     "marketValue": 20,
     "historical": 21
   },
   {
     "itemId": 2450,
-    "minBuyout": 84,
-    "marketValue": 97,
+    "minBuyout": 100,
+    "marketValue": 98,
     "historical": 899
   },
   {
     "itemId": 2452,
-    "minBuyout": 100,
-    "marketValue": 113,
+    "minBuyout": 130,
+    "marketValue": 116,
     "historical": 400
   },
   {
     "itemId": 2453,
-    "minBuyout": 176,
-    "marketValue": 199,
+    "minBuyout": 109,
+    "marketValue": 168,
     "historical": 1000
   },
   {
@@ -1291,37 +1489,37 @@
   },
   {
     "itemId": 2455,
-    "minBuyout": 99,
-    "marketValue": 129,
+    "minBuyout": 98,
+    "marketValue": 122,
     "historical": 680
   },
   {
     "itemId": 2456,
-    "minBuyout": 97,
-    "marketValue": 117,
+    "minBuyout": 70,
+    "marketValue": 105,
     "historical": 800
   },
   {
     "itemId": 2457,
-    "minBuyout": 143,
-    "marketValue": 176,
+    "minBuyout": 139,
+    "marketValue": 160,
     "historical": 1000
   },
   {
     "itemId": 2458,
-    "minBuyout": 31,
-    "marketValue": 38,
+    "minBuyout": 24,
+    "marketValue": 33,
     "historical": 100
   },
   {
     "itemId": 2459,
-    "minBuyout": 150,
-    "marketValue": 199,
+    "minBuyout": 194,
+    "marketValue": 196,
     "historical": 1000
   },
   {
     "itemId": 2488,
-    "minBuyout": 200,
+    "minBuyout": 0,
     "marketValue": 200,
     "historical": 0
   },
@@ -1332,15 +1530,21 @@
     "historical": 0
   },
   {
+    "itemId": 2490,
+    "minBuyout": 500,
+    "marketValue": 500,
+    "historical": 0
+  },
+  {
     "itemId": 2492,
-    "minBuyout": 100,
+    "minBuyout": 0,
     "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 2493,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 466,
     "historical": 0
   },
   {
@@ -1351,9 +1555,15 @@
   },
   {
     "itemId": 2506,
-    "minBuyout": 300,
+    "minBuyout": 400,
     "marketValue": 366,
     "historical": 400
+  },
+  {
+    "itemId": 2507,
+    "minBuyout": 0,
+    "marketValue": 1200,
+    "historical": 0
   },
   {
     "itemId": 2508,
@@ -1364,7 +1574,7 @@
   {
     "itemId": 2509,
     "minBuyout": 400,
-    "marketValue": 450,
+    "marketValue": 400,
     "historical": 500
   },
   {
@@ -1435,38 +1645,38 @@
   },
   {
     "itemId": 2572,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 366,
     "historical": 600
   },
   {
     "itemId": 2575,
-    "minBuyout": 700,
-    "marketValue": 575,
+    "minBuyout": 200,
+    "marketValue": 596,
     "historical": 200
   },
   {
     "itemId": 2576,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 283,
     "historical": 0
   },
   {
     "itemId": 2577,
     "minBuyout": 500,
-    "marketValue": 425,
+    "marketValue": 457,
     "historical": 200
   },
   {
     "itemId": 2578,
-    "minBuyout": 400,
+    "minBuyout": 300,
     "marketValue": 400,
     "historical": 833
   },
   {
     "itemId": 2579,
     "minBuyout": 300,
-    "marketValue": 351,
+    "marketValue": 311,
     "historical": 0
   },
   {
@@ -1478,43 +1688,49 @@
   {
     "itemId": 2581,
     "minBuyout": 20,
-    "marketValue": 22,
+    "marketValue": 21,
     "historical": 79
   },
   {
     "itemId": 2582,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 2000,
+    "marketValue": 2273,
     "historical": 0
   },
   {
     "itemId": 2583,
-    "minBuyout": 4800,
-    "marketValue": 4833,
+    "minBuyout": 3800,
+    "marketValue": 4518,
     "historical": 0
   },
   {
     "itemId": 2584,
-    "minBuyout": 500,
-    "marketValue": 566,
+    "minBuyout": 400,
+    "marketValue": 510,
+    "historical": 0
+  },
+  {
+    "itemId": 2585,
+    "minBuyout": 5700,
+    "marketValue": 5700,
     "historical": 0
   },
   {
     "itemId": 2589,
-    "minBuyout": 20,
+    "minBuyout": 24,
     "marketValue": 24,
     "historical": 29
   },
   {
     "itemId": 2590,
     "minBuyout": 200,
-    "marketValue": 425,
+    "marketValue": 312,
     "historical": 2000
   },
   {
     "itemId": 2592,
-    "minBuyout": 195,
-    "marketValue": 197,
+    "minBuyout": 190,
+    "marketValue": 195,
     "historical": 414
   },
   {
@@ -1531,19 +1747,19 @@
   },
   {
     "itemId": 2604,
-    "minBuyout": 348,
-    "marketValue": 483,
+    "minBuyout": 345,
+    "marketValue": 414,
     "historical": 0
   },
   {
     "itemId": 2605,
-    "minBuyout": 900,
-    "marketValue": 900,
+    "minBuyout": 404,
+    "marketValue": 676,
     "historical": 0
   },
   {
     "itemId": 2632,
-    "minBuyout": 600,
+    "minBuyout": 700,
     "marketValue": 700,
     "historical": 1400
   },
@@ -1633,13 +1849,13 @@
   },
   {
     "itemId": 2657,
-    "minBuyout": 2400,
-    "marketValue": 2400,
+    "minBuyout": 2200,
+    "marketValue": 2382,
     "historical": 0
   },
   {
     "itemId": 2672,
-    "minBuyout": 24,
+    "minBuyout": 36,
     "marketValue": 34,
     "historical": 31
   },
@@ -1650,14 +1866,26 @@
     "historical": 0
   },
   {
+    "itemId": 2674,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 2675,
-    "minBuyout": 19,
-    "marketValue": 28,
+    "minBuyout": 15,
+    "marketValue": 23,
     "historical": 247
   },
   {
+    "itemId": 2677,
+    "minBuyout": 0,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 2678,
-    "minBuyout": 14,
+    "minBuyout": 16,
     "marketValue": 14,
     "historical": 17
   },
@@ -1669,19 +1897,19 @@
   },
   {
     "itemId": 2680,
-    "minBuyout": 14,
+    "minBuyout": 15,
     "marketValue": 14,
     "historical": 70
   },
   {
     "itemId": 2681,
-    "minBuyout": 10,
-    "marketValue": 21,
+    "minBuyout": 20,
+    "marketValue": 20,
     "historical": 59
   },
   {
     "itemId": 2692,
-    "minBuyout": 98,
+    "minBuyout": 100,
     "marketValue": 99,
     "historical": 200
   },
@@ -1693,8 +1921,8 @@
   },
   {
     "itemId": 2723,
-    "minBuyout": 225,
-    "marketValue": 225,
+    "minBuyout": 165,
+    "marketValue": 195,
     "historical": 0
   },
   {
@@ -1710,21 +1938,27 @@
     "historical": 0
   },
   {
+    "itemId": 2764,
+    "minBuyout": 700,
+    "marketValue": 700,
+    "historical": 0
+  },
+  {
     "itemId": 2770,
-    "minBuyout": 17,
+    "minBuyout": 20,
     "marketValue": 18,
     "historical": 18
   },
   {
     "itemId": 2771,
-    "minBuyout": 340,
-    "marketValue": 368,
+    "minBuyout": 343,
+    "marketValue": 359,
     "historical": 700
   },
   {
     "itemId": 2772,
-    "minBuyout": 10000,
-    "marketValue": 15000,
+    "minBuyout": 2000,
+    "marketValue": 12199,
     "historical": 0
   },
   {
@@ -1742,25 +1976,31 @@
   {
     "itemId": 2775,
     "minBuyout": 520,
-    "marketValue": 523,
+    "marketValue": 507,
     "historical": 1999
   },
   {
     "itemId": 2777,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 279,
     "historical": 300
   },
   {
     "itemId": 2778,
     "minBuyout": 200,
-    "marketValue": 266,
+    "marketValue": 233,
     "historical": 500
   },
   {
     "itemId": 2781,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 400,
+    "marketValue": 400,
+    "historical": 0
+  },
+  {
+    "itemId": 2783,
+    "minBuyout": 900,
+    "marketValue": 900,
     "historical": 0
   },
   {
@@ -1771,32 +2011,38 @@
   },
   {
     "itemId": 2836,
-    "minBuyout": 125,
-    "marketValue": 141,
+    "minBuyout": 90,
+    "marketValue": 127,
     "historical": 420
   },
   {
+    "itemId": 2838,
+    "minBuyout": 1500,
+    "marketValue": 1500,
+    "historical": 0
+  },
+  {
     "itemId": 2840,
-    "minBuyout": 21,
-    "marketValue": 20,
+    "minBuyout": 24,
+    "marketValue": 21,
     "historical": 20
   },
   {
     "itemId": 2841,
-    "minBuyout": 270,
-    "marketValue": 197,
+    "minBuyout": 200,
+    "marketValue": 185,
     "historical": 229
   },
   {
     "itemId": 2842,
-    "minBuyout": 134,
-    "marketValue": 189,
+    "minBuyout": 168,
+    "marketValue": 192,
     "historical": 197
   },
   {
     "itemId": 2844,
     "minBuyout": 200,
-    "marketValue": 300,
+    "marketValue": 220,
     "historical": 0
   },
   {
@@ -1808,31 +2054,31 @@
   {
     "itemId": 2847,
     "minBuyout": 300,
-    "marketValue": 300,
+    "marketValue": 309,
     "historical": 900
   },
   {
     "itemId": 2848,
-    "minBuyout": 6300,
-    "marketValue": 6750,
+    "minBuyout": 3900,
+    "marketValue": 5741,
     "historical": 0
   },
   {
     "itemId": 2849,
-    "minBuyout": 2500,
-    "marketValue": 2566,
+    "minBuyout": 9500,
+    "marketValue": 4358,
     "historical": 0
   },
   {
     "itemId": 2850,
     "minBuyout": 3000,
-    "marketValue": 2666,
+    "marketValue": 2833,
     "historical": 0
   },
   {
     "itemId": 2851,
     "minBuyout": 100,
-    "marketValue": 200,
+    "marketValue": 164,
     "historical": 200
   },
   {
@@ -1850,7 +2096,7 @@
   {
     "itemId": 2854,
     "minBuyout": 300,
-    "marketValue": 400,
+    "marketValue": 350,
     "historical": 800
   },
   {
@@ -1861,44 +2107,44 @@
   },
   {
     "itemId": 2862,
-    "minBuyout": 6,
-    "marketValue": 7,
+    "minBuyout": 5,
+    "marketValue": 6,
     "historical": 10
   },
   {
     "itemId": 2863,
-    "minBuyout": 460,
-    "marketValue": 475,
+    "minBuyout": 240,
+    "marketValue": 422,
     "historical": 10100
   },
   {
     "itemId": 2864,
     "minBuyout": 1000,
-    "marketValue": 1000,
+    "marketValue": 991,
     "historical": 2140
   },
   {
     "itemId": 2865,
-    "minBuyout": 600,
-    "marketValue": 800,
+    "minBuyout": 700,
+    "marketValue": 761,
     "historical": 0
   },
   {
     "itemId": 2866,
-    "minBuyout": 1200,
-    "marketValue": 1200,
+    "minBuyout": 1000,
+    "marketValue": 1133,
     "historical": 3700
   },
   {
     "itemId": 2868,
-    "minBuyout": 1500,
-    "marketValue": 1600,
+    "minBuyout": 1100,
+    "marketValue": 1476,
     "historical": 0
   },
   {
     "itemId": 2869,
-    "minBuyout": 0,
-    "marketValue": 9500,
+    "minBuyout": 8000,
+    "marketValue": 8875,
     "historical": 0
   },
   {
@@ -1909,8 +2155,8 @@
   },
   {
     "itemId": 2880,
-    "minBuyout": 199,
-    "marketValue": 232,
+    "minBuyout": 197,
+    "marketValue": 183,
     "historical": 0
   },
   {
@@ -1921,14 +2167,14 @@
   },
   {
     "itemId": 2882,
-    "minBuyout": 1300,
-    "marketValue": 1318,
+    "minBuyout": 900,
+    "marketValue": 1216,
     "historical": 5000
   },
   {
     "itemId": 2883,
     "minBuyout": 400,
-    "marketValue": 421,
+    "marketValue": 410,
     "historical": 900
   },
   {
@@ -1939,7 +2185,7 @@
   },
   {
     "itemId": 2911,
-    "minBuyout": 10000,
+    "minBuyout": 50000,
     "marketValue": 10000,
     "historical": 0
   },
@@ -1951,13 +2197,13 @@
   },
   {
     "itemId": 2928,
-    "minBuyout": 100,
+    "minBuyout": 500,
     "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 2934,
-    "minBuyout": 7,
+    "minBuyout": 6,
     "marketValue": 7,
     "historical": 7
   },
@@ -1970,13 +2216,13 @@
   {
     "itemId": 2946,
     "minBuyout": 3000,
-    "marketValue": 2450,
+    "marketValue": 2685,
     "historical": 800
   },
   {
     "itemId": 2957,
     "minBuyout": 200,
-    "marketValue": 233,
+    "marketValue": 216,
     "historical": 400
   },
   {
@@ -2011,8 +2257,8 @@
   },
   {
     "itemId": 2963,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 200,
+    "marketValue": 353,
     "historical": 0
   },
   {
@@ -2030,7 +2276,7 @@
   {
     "itemId": 2966,
     "minBuyout": 200,
-    "marketValue": 238,
+    "marketValue": 209,
     "historical": 300
   },
   {
@@ -2047,50 +2293,50 @@
   },
   {
     "itemId": 2969,
-    "minBuyout": 1700,
-    "marketValue": 1973,
+    "minBuyout": 1600,
+    "marketValue": 1842,
     "historical": 0
   },
   {
     "itemId": 2970,
     "minBuyout": 400,
-    "marketValue": 536,
+    "marketValue": 468,
     "historical": 4500
   },
   {
     "itemId": 2971,
-    "minBuyout": 6900,
-    "marketValue": 6900,
+    "minBuyout": 4700,
+    "marketValue": 6200,
     "historical": 0
   },
   {
     "itemId": 2972,
-    "minBuyout": 200,
-    "marketValue": 200,
-    "historical": 0
-  },
-  {
-    "itemId": 2973,
-    "minBuyout": 2000,
-    "marketValue": 2714,
-    "historical": 0
-  },
-  {
-    "itemId": 2974,
-    "minBuyout": 700,
+    "minBuyout": 1000,
     "marketValue": 800,
     "historical": 0
   },
   {
+    "itemId": 2973,
+    "minBuyout": 1900,
+    "marketValue": 2228,
+    "historical": 0
+  },
+  {
+    "itemId": 2974,
+    "minBuyout": 500,
+    "marketValue": 775,
+    "historical": 0
+  },
+  {
     "itemId": 2975,
-    "minBuyout": 700,
-    "marketValue": 783,
+    "minBuyout": 400,
+    "marketValue": 691,
     "historical": 0
   },
   {
     "itemId": 2976,
     "minBuyout": 800,
-    "marketValue": 944,
+    "marketValue": 894,
     "historical": 1400
   },
   {
@@ -2102,7 +2348,7 @@
   {
     "itemId": 2978,
     "minBuyout": 600,
-    "marketValue": 700,
+    "marketValue": 650,
     "historical": 0
   },
   {
@@ -2113,26 +2359,26 @@
   },
   {
     "itemId": 2980,
-    "minBuyout": 700,
-    "marketValue": 866,
+    "minBuyout": 800,
+    "marketValue": 833,
     "historical": 0
   },
   {
     "itemId": 2982,
-    "minBuyout": 1100,
-    "marketValue": 1166,
+    "minBuyout": 1000,
+    "marketValue": 1083,
     "historical": 0
   },
   {
     "itemId": 2983,
-    "minBuyout": 1200,
-    "marketValue": 1683,
+    "minBuyout": 1100,
+    "marketValue": 1417,
     "historical": 0
   },
   {
     "itemId": 2984,
-    "minBuyout": 800,
-    "marketValue": 977,
+    "minBuyout": 600,
+    "marketValue": 822,
     "historical": 0
   },
   {
@@ -2149,44 +2395,50 @@
   },
   {
     "itemId": 2987,
-    "minBuyout": 1400,
-    "marketValue": 1927,
+    "minBuyout": 900,
+    "marketValue": 1457,
     "historical": 0
   },
   {
     "itemId": 2988,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 1400,
+    "marketValue": 1533,
     "historical": 0
   },
   {
     "itemId": 2989,
-    "minBuyout": 8000,
-    "marketValue": 8000,
+    "minBuyout": 2000,
+    "marketValue": 6000,
+    "historical": 0
+  },
+  {
+    "itemId": 2991,
+    "minBuyout": 0,
+    "marketValue": 1000,
     "historical": 0
   },
   {
     "itemId": 2992,
     "minBuyout": 4500,
-    "marketValue": 4966,
+    "marketValue": 5016,
     "historical": 0
   },
   {
     "itemId": 2996,
-    "minBuyout": 58,
+    "minBuyout": 55,
     "marketValue": 56,
     "historical": 89
   },
   {
     "itemId": 2997,
-    "minBuyout": 600,
-    "marketValue": 634,
+    "minBuyout": 655,
+    "marketValue": 650,
     "historical": 4000
   },
   {
     "itemId": 3012,
-    "minBuyout": 156,
-    "marketValue": 136,
+    "minBuyout": 150,
+    "marketValue": 143,
     "historical": 100
   },
   {
@@ -2196,27 +2448,45 @@
     "historical": 33
   },
   {
+    "itemId": 3021,
+    "minBuyout": 143700,
+    "marketValue": 143700,
+    "historical": 0
+  },
+  {
     "itemId": 3027,
-    "minBuyout": 15000,
+    "minBuyout": 0,
     "marketValue": 15000,
     "historical": 0
   },
   {
     "itemId": 3036,
-    "minBuyout": 800,
-    "marketValue": 935,
+    "minBuyout": 900,
+    "marketValue": 901,
     "historical": 2300
   },
   {
-    "itemId": 3039,
+    "itemId": 3037,
     "minBuyout": 10000,
-    "marketValue": 7500,
+    "marketValue": 10000,
+    "historical": 0
+  },
+  {
+    "itemId": 3039,
+    "minBuyout": 0,
+    "marketValue": 8125,
     "historical": 0
   },
   {
     "itemId": 3040,
-    "minBuyout": 1500,
-    "marketValue": 1607,
+    "minBuyout": 1200,
+    "marketValue": 1438,
+    "historical": 0
+  },
+  {
+    "itemId": 3045,
+    "minBuyout": 0,
+    "marketValue": 2400,
     "historical": 0
   },
   {
@@ -2227,8 +2497,8 @@
   },
   {
     "itemId": 3066,
-    "minBuyout": 0,
-    "marketValue": 1400,
+    "minBuyout": 1500,
+    "marketValue": 1466,
     "historical": 0
   },
   {
@@ -2257,14 +2527,14 @@
   },
   {
     "itemId": 3171,
-    "minBuyout": 98,
-    "marketValue": 98,
+    "minBuyout": 88,
+    "marketValue": 95,
     "historical": 100
   },
   {
     "itemId": 3173,
-    "minBuyout": 15,
-    "marketValue": 26,
+    "minBuyout": 16,
+    "marketValue": 21,
     "historical": 98
   },
   {
@@ -2281,20 +2551,26 @@
   },
   {
     "itemId": 3182,
-    "minBuyout": 2000,
-    "marketValue": 2968,
+    "minBuyout": 1300,
+    "marketValue": 1970,
     "historical": 0
   },
   {
     "itemId": 3184,
-    "minBuyout": 1500,
-    "marketValue": 1744,
+    "minBuyout": 1900,
+    "marketValue": 1863,
     "historical": 2500
+  },
+  {
+    "itemId": 3186,
+    "minBuyout": 9000,
+    "marketValue": 9000,
+    "historical": 0
   },
   {
     "itemId": 3189,
     "minBuyout": 100,
-    "marketValue": 175,
+    "marketValue": 142,
     "historical": 200
   },
   {
@@ -2311,38 +2587,50 @@
   },
   {
     "itemId": 3193,
-    "minBuyout": 7500,
-    "marketValue": 7500,
+    "minBuyout": 6800,
+    "marketValue": 7410,
+    "historical": 0
+  },
+  {
+    "itemId": 3194,
+    "minBuyout": 48000,
+    "marketValue": 48000,
     "historical": 0
   },
   {
     "itemId": 3195,
-    "minBuyout": 1500,
-    "marketValue": 1860,
+    "minBuyout": 1600,
+    "marketValue": 1867,
     "historical": 2900
   },
   {
     "itemId": 3196,
-    "minBuyout": 1500,
-    "marketValue": 1651,
+    "minBuyout": 1400,
+    "marketValue": 1553,
     "historical": 5000
   },
   {
     "itemId": 3198,
-    "minBuyout": 12000,
-    "marketValue": 12000,
+    "minBuyout": 10000,
+    "marketValue": 11333,
     "historical": 0
   },
   {
     "itemId": 3199,
-    "minBuyout": 3400,
-    "marketValue": 4733,
+    "minBuyout": 5400,
+    "marketValue": 4816,
+    "historical": 0
+  },
+  {
+    "itemId": 3200,
+    "minBuyout": 100,
+    "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 3201,
-    "minBuyout": 6700,
-    "marketValue": 6766,
+    "minBuyout": 6600,
+    "marketValue": 6683,
     "historical": 0
   },
   {
@@ -2353,14 +2641,20 @@
   },
   {
     "itemId": 3205,
-    "minBuyout": 1100,
-    "marketValue": 1188,
+    "minBuyout": 800,
+    "marketValue": 928,
+    "historical": 0
+  },
+  {
+    "itemId": 3207,
+    "minBuyout": 200,
+    "marketValue": 200,
     "historical": 0
   },
   {
     "itemId": 3211,
-    "minBuyout": 900,
-    "marketValue": 988,
+    "minBuyout": 1000,
+    "marketValue": 994,
     "historical": 0
   },
   {
@@ -2377,20 +2671,26 @@
   },
   {
     "itemId": 3239,
-    "minBuyout": 5,
-    "marketValue": 5,
+    "minBuyout": 30,
+    "marketValue": 6,
     "historical": 12
   },
   {
     "itemId": 3240,
-    "minBuyout": 400,
-    "marketValue": 444,
+    "minBuyout": 220,
+    "marketValue": 372,
     "historical": 0
   },
   {
     "itemId": 3260,
     "minBuyout": 1500,
-    "marketValue": 1611,
+    "marketValue": 1500,
+    "historical": 0
+  },
+  {
+    "itemId": 3261,
+    "minBuyout": 500,
+    "marketValue": 500,
     "historical": 0
   },
   {
@@ -2425,7 +2725,7 @@
   },
   {
     "itemId": 3283,
-    "minBuyout": 300,
+    "minBuyout": 400,
     "marketValue": 400,
     "historical": 1500
   },
@@ -2473,7 +2773,7 @@
   },
   {
     "itemId": 3291,
-    "minBuyout": 300,
+    "minBuyout": 200,
     "marketValue": 300,
     "historical": 400
   },
@@ -2485,20 +2785,20 @@
   },
   {
     "itemId": 3293,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 50000,
+    "marketValue": 25050,
     "historical": 0
   },
   {
     "itemId": 3299,
     "minBuyout": 87,
-    "marketValue": 93,
+    "marketValue": 88,
     "historical": 100
   },
   {
     "itemId": 3300,
     "minBuyout": 23,
-    "marketValue": 27,
+    "marketValue": 25,
     "historical": 40
   },
   {
@@ -2510,7 +2810,7 @@
   {
     "itemId": 3302,
     "minBuyout": 400,
-    "marketValue": 500,
+    "marketValue": 450,
     "historical": 900
   },
   {
@@ -2528,25 +2828,25 @@
   {
     "itemId": 3305,
     "minBuyout": 600,
-    "marketValue": 800,
+    "marketValue": 720,
     "historical": 1000
   },
   {
     "itemId": 3306,
-    "minBuyout": 1400,
-    "marketValue": 1609,
+    "minBuyout": 1100,
+    "marketValue": 1449,
     "historical": 0
   },
   {
     "itemId": 3307,
-    "minBuyout": 600,
+    "minBuyout": 500,
     "marketValue": 600,
     "historical": 2900
   },
   {
     "itemId": 3308,
     "minBuyout": 300,
-    "marketValue": 400,
+    "marketValue": 350,
     "historical": 1000
   },
   {
@@ -2557,8 +2857,8 @@
   },
   {
     "itemId": 3310,
-    "minBuyout": 1700,
-    "marketValue": 1959,
+    "minBuyout": 1100,
+    "marketValue": 1658,
     "historical": 0
   },
   {
@@ -2575,20 +2875,20 @@
   },
   {
     "itemId": 3313,
-    "minBuyout": 3200,
-    "marketValue": 3283,
+    "minBuyout": 1900,
+    "marketValue": 3125,
     "historical": 0
   },
   {
     "itemId": 3314,
-    "minBuyout": 900,
-    "marketValue": 1011,
+    "minBuyout": 600,
+    "marketValue": 929,
     "historical": 2500
   },
   {
     "itemId": 3315,
     "minBuyout": 600,
-    "marketValue": 766,
+    "marketValue": 684,
     "historical": 0
   },
   {
@@ -2629,20 +2929,20 @@
   },
   {
     "itemId": 3328,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 100,
+    "marketValue": 219,
     "historical": 500
   },
   {
     "itemId": 3329,
-    "minBuyout": 300,
+    "minBuyout": 0,
     "marketValue": 300,
     "historical": 0
   },
   {
     "itemId": 3330,
     "minBuyout": 1000,
-    "marketValue": 1320,
+    "marketValue": 1160,
     "historical": 1500
   },
   {
@@ -2653,14 +2953,14 @@
   },
   {
     "itemId": 3332,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 371,
     "historical": 400
   },
   {
     "itemId": 3334,
-    "minBuyout": 600,
-    "marketValue": 692,
+    "minBuyout": 500,
+    "marketValue": 662,
     "historical": 1100
   },
   {
@@ -2671,14 +2971,14 @@
   },
   {
     "itemId": 3355,
-    "minBuyout": 850,
-    "marketValue": 981,
+    "minBuyout": 807,
+    "marketValue": 836,
     "historical": 0
   },
   {
     "itemId": 3356,
-    "minBuyout": 700,
-    "marketValue": 898,
+    "minBuyout": 579,
+    "marketValue": 750,
     "historical": 0
   },
   {
@@ -2694,9 +2994,21 @@
     "historical": 100
   },
   {
+    "itemId": 3365,
+    "minBuyout": 300,
+    "marketValue": 300,
+    "historical": 0
+  },
+  {
+    "itemId": 3369,
+    "minBuyout": 10100,
+    "marketValue": 10100,
+    "historical": 0
+  },
+  {
     "itemId": 3370,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 100,
+    "marketValue": 185,
     "historical": 200
   },
   {
@@ -2720,7 +3032,7 @@
   {
     "itemId": 3374,
     "minBuyout": 200,
-    "marketValue": 266,
+    "marketValue": 233,
     "historical": 0
   },
   {
@@ -2743,68 +3055,104 @@
   },
   {
     "itemId": 3383,
-    "minBuyout": 199,
-    "marketValue": 260,
+    "minBuyout": 127,
+    "marketValue": 170,
     "historical": 0
   },
   {
     "itemId": 3385,
-    "minBuyout": 375,
-    "marketValue": 307,
+    "minBuyout": 310,
+    "marketValue": 320,
     "historical": 647
   },
   {
     "itemId": 3388,
     "minBuyout": 550,
-    "marketValue": 550,
+    "marketValue": 547,
     "historical": 0
   },
   {
     "itemId": 3389,
-    "minBuyout": 0,
-    "marketValue": 1000,
+    "minBuyout": 6000,
+    "marketValue": 4500,
+    "historical": 0
+  },
+  {
+    "itemId": 3390,
+    "minBuyout": 2500,
+    "marketValue": 2750,
+    "historical": 0
+  },
+  {
+    "itemId": 3391,
+    "minBuyout": 2500,
+    "marketValue": 2500,
     "historical": 0
   },
   {
     "itemId": 3393,
     "minBuyout": 500,
-    "marketValue": 547,
+    "marketValue": 523,
     "historical": 2000
   },
   {
     "itemId": 3396,
-    "minBuyout": 2500,
-    "marketValue": 2375,
+    "minBuyout": 1000,
+    "marketValue": 2119,
     "historical": 3000
   },
   {
+    "itemId": 3404,
+    "minBuyout": 4500,
+    "marketValue": 4500,
+    "historical": 0
+  },
+  {
+    "itemId": 3416,
+    "minBuyout": 150000,
+    "marketValue": 150000,
+    "historical": 0
+  },
+  {
+    "itemId": 3417,
+    "minBuyout": 0,
+    "marketValue": 15000,
+    "historical": 0
+  },
+  {
+    "itemId": 3429,
+    "minBuyout": 6900,
+    "marketValue": 6900,
+    "historical": 0
+  },
+  {
     "itemId": 3448,
-    "minBuyout": 10,
-    "marketValue": 13,
+    "minBuyout": 7,
+    "marketValue": 11,
     "historical": 140
   },
   {
     "itemId": 3464,
-    "minBuyout": 14,
-    "marketValue": 16,
-    "historical": 100
-  },
-  {
-    "itemId": 3465,
-    "minBuyout": 12,
+    "minBuyout": 11,
     "marketValue": 15,
     "historical": 100
   },
   {
+    "itemId": 3465,
+    "minBuyout": 9,
+    "marketValue": 13,
+    "historical": 100
+  },
+  {
     "itemId": 3469,
-    "minBuyout": 200,
+    "minBuyout": 100,
     "marketValue": 200,
     "historical": 300
   },
   {
     "itemId": 3470,
     "minBuyout": 19,
-    "marketValue": 23,
+    "marketValue": 21,
     "historical": 78
   },
   {
@@ -2821,86 +3169,98 @@
   },
   {
     "itemId": 3473,
-    "minBuyout": 300,
-    "marketValue": 350,
+    "minBuyout": 400,
+    "marketValue": 375,
     "historical": 700
   },
   {
     "itemId": 3474,
-    "minBuyout": 700,
-    "marketValue": 751,
+    "minBuyout": 600,
+    "marketValue": 703,
     "historical": 0
   },
   {
     "itemId": 3478,
-    "minBuyout": 400,
-    "marketValue": 752,
+    "minBuyout": 379,
+    "marketValue": 529,
     "historical": 1000
   },
   {
     "itemId": 3480,
-    "minBuyout": 1000,
-    "marketValue": 1087,
+    "minBuyout": 900,
+    "marketValue": 1043,
     "historical": 2900
   },
   {
     "itemId": 3481,
-    "minBuyout": 9900,
-    "marketValue": 9900,
+    "minBuyout": 7000,
+    "marketValue": 9183,
     "historical": 0
   },
   {
     "itemId": 3482,
-    "minBuyout": 0,
-    "marketValue": 2500,
+    "minBuyout": 2800,
+    "marketValue": 4041,
     "historical": 0
   },
   {
     "itemId": 3483,
-    "minBuyout": 9900,
-    "marketValue": 7633,
+    "minBuyout": 3100,
+    "marketValue": 6927,
     "historical": 0
   },
   {
     "itemId": 3487,
     "minBuyout": 1600,
-    "marketValue": 1842,
+    "marketValue": 1735,
     "historical": 0
   },
   {
     "itemId": 3488,
     "minBuyout": 900,
-    "marketValue": 979,
+    "marketValue": 972,
     "historical": 1500
   },
   {
     "itemId": 3489,
-    "minBuyout": 1300,
-    "marketValue": 1600,
+    "minBuyout": 1600,
+    "marketValue": 1588,
     "historical": 3800
   },
   {
     "itemId": 3490,
-    "minBuyout": 0,
-    "marketValue": 7900,
+    "minBuyout": 6000,
+    "marketValue": 6950,
     "historical": 0
   },
   {
     "itemId": 3530,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 99,
+    "marketValue": 99,
+    "historical": 0
+  },
+  {
+    "itemId": 3575,
+    "minBuyout": 2500,
+    "marketValue": 2500,
     "historical": 0
   },
   {
     "itemId": 3576,
-    "minBuyout": 498,
-    "marketValue": 538,
+    "minBuyout": 350,
+    "marketValue": 509,
     "historical": 1450
   },
   {
     "itemId": 3577,
-    "minBuyout": 2442,
-    "marketValue": 2577,
+    "minBuyout": 1480,
+    "marketValue": 2152,
+    "historical": 0
+  },
+  {
+    "itemId": 3603,
+    "minBuyout": 100,
+    "marketValue": 100,
     "historical": 0
   },
   {
@@ -2923,14 +3283,14 @@
   },
   {
     "itemId": 3611,
-    "minBuyout": 4900,
-    "marketValue": 4966,
+    "minBuyout": 4800,
+    "marketValue": 4900,
     "historical": 0
   },
   {
     "itemId": 3612,
-    "minBuyout": 0,
-    "marketValue": 2000,
+    "minBuyout": 10000,
+    "marketValue": 8000,
     "historical": 0
   },
   {
@@ -2947,44 +3307,50 @@
   },
   {
     "itemId": 3644,
-    "minBuyout": 500,
-    "marketValue": 600,
+    "minBuyout": 300,
+    "marketValue": 503,
     "historical": 1000
   },
   {
     "itemId": 3645,
-    "minBuyout": 700,
-    "marketValue": 883,
+    "minBuyout": 600,
+    "marketValue": 757,
+    "historical": 0
+  },
+  {
+    "itemId": 3647,
+    "minBuyout": 3200,
+    "marketValue": 3200,
     "historical": 0
   },
   {
     "itemId": 3649,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 366,
     "historical": 0
   },
   {
     "itemId": 3651,
-    "minBuyout": 1100,
-    "marketValue": 1114,
+    "minBuyout": 1000,
+    "marketValue": 1089,
     "historical": 2400
   },
   {
     "itemId": 3652,
-    "minBuyout": 600,
-    "marketValue": 726,
+    "minBuyout": 500,
+    "marketValue": 668,
     "historical": 2500
   },
   {
     "itemId": 3653,
     "minBuyout": 500,
-    "marketValue": 704,
+    "marketValue": 666,
     "historical": 1200
   },
   {
     "itemId": 3654,
-    "minBuyout": 600,
-    "marketValue": 649,
+    "minBuyout": 500,
+    "marketValue": 624,
     "historical": 1300
   },
   {
@@ -3007,8 +3373,8 @@
   },
   {
     "itemId": 3676,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 190,
+    "marketValue": 195,
     "historical": 0
   },
   {
@@ -3019,7 +3385,7 @@
   },
   {
     "itemId": 3719,
-    "minBuyout": 4900,
+    "minBuyout": 0,
     "marketValue": 4900,
     "historical": 0
   },
@@ -3030,15 +3396,27 @@
     "historical": 0
   },
   {
-    "itemId": 3730,
+    "itemId": 3727,
     "minBuyout": 200,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 3730,
+    "minBuyout": 498,
     "marketValue": 499,
     "historical": 0
   },
   {
     "itemId": 3731,
-    "minBuyout": 80,
-    "marketValue": 99,
+    "minBuyout": 70,
+    "marketValue": 89,
+    "historical": 0
+  },
+  {
+    "itemId": 3740,
+    "minBuyout": 4000,
+    "marketValue": 4000,
     "historical": 0
   },
   {
@@ -3049,14 +3427,26 @@
   },
   {
     "itemId": 3820,
-    "minBuyout": 152,
-    "marketValue": 166,
+    "minBuyout": 150,
+    "marketValue": 155,
     "historical": 200
   },
   {
     "itemId": 3827,
-    "minBuyout": 1000,
-    "marketValue": 916,
+    "minBuyout": 845,
+    "marketValue": 879,
+    "historical": 0
+  },
+  {
+    "itemId": 3830,
+    "minBuyout": 0,
+    "marketValue": 1500,
+    "historical": 0
+  },
+  {
+    "itemId": 3832,
+    "minBuyout": 0,
+    "marketValue": 900,
     "historical": 0
   },
   {
@@ -3072,15 +3462,27 @@
     "historical": 0
   },
   {
+    "itemId": 3864,
+    "minBuyout": 2500,
+    "marketValue": 2500,
+    "historical": 0
+  },
+  {
     "itemId": 3867,
     "minBuyout": 51500,
     "marketValue": 51500,
     "historical": 0
   },
   {
+    "itemId": 3872,
+    "minBuyout": 1300,
+    "marketValue": 1300,
+    "historical": 0
+  },
+  {
     "itemId": 3928,
-    "minBuyout": 0,
-    "marketValue": 1000,
+    "minBuyout": 3999,
+    "marketValue": 2799,
     "historical": 0
   },
   {
@@ -3091,32 +3493,32 @@
   },
   {
     "itemId": 4231,
-    "minBuyout": 599,
-    "marketValue": 731,
+    "minBuyout": 600,
+    "marketValue": 689,
     "historical": 3000
   },
   {
     "itemId": 4232,
-    "minBuyout": 1000,
-    "marketValue": 1266,
+    "minBuyout": 1200,
+    "marketValue": 1291,
     "historical": 0
   },
   {
     "itemId": 4233,
-    "minBuyout": 2000,
-    "marketValue": 2053,
+    "minBuyout": 1800,
+    "marketValue": 1990,
     "historical": 0
   },
   {
     "itemId": 4234,
-    "minBuyout": 319,
-    "marketValue": 319,
+    "minBuyout": 315,
+    "marketValue": 316,
     "historical": 350
   },
   {
     "itemId": 4235,
-    "minBuyout": 60400,
-    "marketValue": 60400,
+    "minBuyout": 10000,
+    "marketValue": 10000,
     "historical": 0
   },
   {
@@ -3140,25 +3542,31 @@
   {
     "itemId": 4240,
     "minBuyout": 2100,
-    "marketValue": 2166,
+    "marketValue": 2143,
     "historical": 5000
+  },
+  {
+    "itemId": 4241,
+    "minBuyout": 5400,
+    "marketValue": 5483,
+    "historical": 0
   },
   {
     "itemId": 4242,
     "minBuyout": 500,
-    "marketValue": 678,
+    "marketValue": 616,
     "historical": 0
   },
   {
     "itemId": 4243,
-    "minBuyout": 2100,
-    "marketValue": 2945,
+    "minBuyout": 1700,
+    "marketValue": 2207,
     "historical": 0
   },
   {
     "itemId": 4244,
-    "minBuyout": 3000,
-    "marketValue": 3350,
+    "minBuyout": 3700,
+    "marketValue": 3560,
     "historical": 0
   },
   {
@@ -3175,14 +3583,14 @@
   },
   {
     "itemId": 4247,
-    "minBuyout": 8000,
-    "marketValue": 8000,
+    "minBuyout": 6000,
+    "marketValue": 7333,
     "historical": 0
   },
   {
     "itemId": 4249,
-    "minBuyout": 4000,
-    "marketValue": 5133,
+    "minBuyout": 2400,
+    "marketValue": 3592,
     "historical": 0
   },
   {
@@ -3193,32 +3601,50 @@
   },
   {
     "itemId": 4251,
-    "minBuyout": 3400,
-    "marketValue": 4016,
+    "minBuyout": 3000,
+    "marketValue": 3392,
+    "historical": 0
+  },
+  {
+    "itemId": 4252,
+    "minBuyout": 9900,
+    "marketValue": 9900,
     "historical": 0
   },
   {
     "itemId": 4261,
     "minBuyout": 200,
-    "marketValue": 242,
+    "marketValue": 221,
     "historical": 600
   },
   {
     "itemId": 4263,
     "minBuyout": 600,
-    "marketValue": 633,
+    "marketValue": 616,
     "historical": 800
+  },
+  {
+    "itemId": 4265,
+    "minBuyout": 2500,
+    "marketValue": 2516,
+    "historical": 0
   },
   {
     "itemId": 4289,
     "minBuyout": 190,
-    "marketValue": 204,
+    "marketValue": 192,
+    "historical": 0
+  },
+  {
+    "itemId": 4291,
+    "minBuyout": 500,
+    "marketValue": 500,
     "historical": 0
   },
   {
     "itemId": 4292,
     "minBuyout": 200,
-    "marketValue": 220,
+    "marketValue": 210,
     "historical": 400
   },
   {
@@ -3229,20 +3655,20 @@
   },
   {
     "itemId": 4294,
-    "minBuyout": 900,
-    "marketValue": 900,
+    "minBuyout": 600,
+    "marketValue": 794,
     "historical": 0
   },
   {
     "itemId": 4296,
-    "minBuyout": 3900,
-    "marketValue": 3900,
+    "minBuyout": 2500,
+    "marketValue": 3405,
     "historical": 0
   },
   {
     "itemId": 4297,
-    "minBuyout": 3300,
-    "marketValue": 4244,
+    "minBuyout": 2000,
+    "marketValue": 3369,
     "historical": 0
   },
   {
@@ -3254,31 +3680,31 @@
   {
     "itemId": 4302,
     "minBuyout": 500,
-    "marketValue": 514,
+    "marketValue": 507,
     "historical": 800
   },
   {
     "itemId": 4303,
-    "minBuyout": 1000,
-    "marketValue": 1280,
+    "minBuyout": 1200,
+    "marketValue": 1256,
     "historical": 2175
   },
   {
     "itemId": 4304,
-    "minBuyout": 1066,
-    "marketValue": 1177,
+    "minBuyout": 1000,
+    "marketValue": 1092,
     "historical": 0
   },
   {
     "itemId": 4305,
-    "minBuyout": 1099,
-    "marketValue": 1174,
+    "minBuyout": 1090,
+    "marketValue": 1114,
     "historical": 1200
   },
   {
     "itemId": 4306,
-    "minBuyout": 650,
-    "marketValue": 841,
+    "minBuyout": 500,
+    "marketValue": 685,
     "historical": 0
   },
   {
@@ -3296,66 +3722,90 @@
   {
     "itemId": 4309,
     "minBuyout": 300,
-    "marketValue": 372,
+    "marketValue": 336,
     "historical": 800
   },
   {
     "itemId": 4310,
     "minBuyout": 2300,
-    "marketValue": 2300,
+    "marketValue": 2263,
+    "historical": 0
+  },
+  {
+    "itemId": 4311,
+    "minBuyout": 4500,
+    "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 4312,
-    "minBuyout": 800,
-    "marketValue": 939,
+    "minBuyout": 700,
+    "marketValue": 832,
+    "historical": 0
+  },
+  {
+    "itemId": 4313,
+    "minBuyout": 3400,
+    "marketValue": 3900,
     "historical": 0
   },
   {
     "itemId": 4314,
-    "minBuyout": 3500,
-    "marketValue": 3789,
+    "minBuyout": 2200,
+    "marketValue": 3214,
     "historical": 0
   },
   {
     "itemId": 4316,
-    "minBuyout": 6900,
-    "marketValue": 8400,
+    "minBuyout": 6500,
+    "marketValue": 6800,
     "historical": 0
   },
   {
     "itemId": 4318,
-    "minBuyout": 6000,
-    "marketValue": 6000,
+    "minBuyout": 5500,
+    "marketValue": 5833,
+    "historical": 0
+  },
+  {
+    "itemId": 4324,
+    "minBuyout": 9900,
+    "marketValue": 9900,
     "historical": 0
   },
   {
     "itemId": 4337,
-    "minBuyout": 2000,
+    "minBuyout": 1800,
     "marketValue": 2000,
     "historical": 0
   },
   {
     "itemId": 4339,
-    "minBuyout": 4599,
-    "marketValue": 6199,
+    "minBuyout": 4199,
+    "marketValue": 5258,
     "historical": 0
   },
   {
     "itemId": 4340,
-    "minBuyout": 800,
-    "marketValue": 700,
+    "minBuyout": 600,
+    "marketValue": 716,
     "historical": 0
   },
   {
     "itemId": 4341,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 500,
+    "marketValue": 300,
+    "historical": 0
+  },
+  {
+    "itemId": 4342,
+    "minBuyout": 1000,
+    "marketValue": 1000,
     "historical": 0
   },
   {
     "itemId": 4343,
-    "minBuyout": 100,
+    "minBuyout": 200,
     "marketValue": 200,
     "historical": 354
   },
@@ -3379,56 +3829,56 @@
   },
   {
     "itemId": 4347,
-    "minBuyout": 400,
-    "marketValue": 500,
+    "minBuyout": 300,
+    "marketValue": 407,
     "historical": 900
   },
   {
     "itemId": 4348,
-    "minBuyout": 600,
-    "marketValue": 905,
+    "minBuyout": 400,
+    "marketValue": 709,
     "historical": 10000
   },
   {
     "itemId": 4349,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 500,
+    "marketValue": 575,
     "historical": 1500
   },
   {
     "itemId": 4350,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 900,
+    "marketValue": 988,
     "historical": 0
   },
   {
     "itemId": 4357,
-    "minBuyout": 19,
-    "marketValue": 19,
+    "minBuyout": 15,
+    "marketValue": 18,
     "historical": 33
   },
   {
     "itemId": 4358,
     "minBuyout": 30,
-    "marketValue": 34,
+    "marketValue": 32,
     "historical": 90
   },
   {
     "itemId": 4359,
-    "minBuyout": 129,
-    "marketValue": 110,
+    "minBuyout": 101,
+    "marketValue": 93,
     "historical": 43
   },
   {
     "itemId": 4360,
-    "minBuyout": 130,
-    "marketValue": 174,
+    "minBuyout": 99,
+    "marketValue": 145,
     "historical": 290
   },
   {
     "itemId": 4361,
-    "minBuyout": 240,
-    "marketValue": 244,
+    "minBuyout": 230,
+    "marketValue": 241,
     "historical": 300
   },
   {
@@ -3439,14 +3889,14 @@
   },
   {
     "itemId": 4363,
-    "minBuyout": 440,
-    "marketValue": 481,
+    "minBuyout": 400,
+    "marketValue": 458,
     "historical": 880
   },
   {
     "itemId": 4364,
-    "minBuyout": 140,
-    "marketValue": 148,
+    "minBuyout": 99,
+    "marketValue": 137,
     "historical": 200
   },
   {
@@ -3456,57 +3906,75 @@
     "historical": 0
   },
   {
+    "itemId": 4366,
+    "minBuyout": 1900,
+    "marketValue": 1966,
+    "historical": 0
+  },
+  {
     "itemId": 4368,
     "minBuyout": 1200,
-    "marketValue": 1311,
+    "marketValue": 1220,
     "historical": 0
   },
   {
     "itemId": 4369,
-    "minBuyout": 5900,
-    "marketValue": 6190,
+    "minBuyout": 4500,
+    "marketValue": 5578,
     "historical": 0
   },
   {
     "itemId": 4371,
-    "minBuyout": 2500,
-    "marketValue": 3293,
+    "minBuyout": 2498,
+    "marketValue": 2896,
+    "historical": 0
+  },
+  {
+    "itemId": 4375,
+    "minBuyout": 2499,
+    "marketValue": 2499,
     "historical": 0
   },
   {
     "itemId": 4377,
-    "minBuyout": 14800,
-    "marketValue": 14800,
+    "minBuyout": 10000,
+    "marketValue": 12816,
+    "historical": 0
+  },
+  {
+    "itemId": 4379,
+    "minBuyout": 15000,
+    "marketValue": 15000,
     "historical": 0
   },
   {
     "itemId": 4382,
-    "minBuyout": 6600,
-    "marketValue": 7533,
+    "minBuyout": 6500,
+    "marketValue": 7059,
     "historical": 0
   },
   {
     "itemId": 4401,
-    "minBuyout": 3500,
-    "marketValue": 3500,
+    "minBuyout": 2000,
+    "marketValue": 3000,
     "historical": 0
   },
   {
     "itemId": 4404,
-    "minBuyout": 122,
-    "marketValue": 127,
+    "minBuyout": 121,
+    "marketValue": 124,
     "historical": 0
   },
   {
     "itemId": 4405,
-    "minBuyout": 199,
-    "marketValue": 199,
+    "minBuyout": 150,
+    "marketValue": 180,
     "historical": 450
   },
   {
     "itemId": 4406,
-    "minBuyout": 3500,
-    "marketValue": 3500,
+    "minBuyout": 3000,
+    "marketValue": 3100,
     "historical": 0
   },
   {
@@ -3524,25 +3992,31 @@
   {
     "itemId": 4410,
     "minBuyout": 400,
-    "marketValue": 532,
+    "marketValue": 466,
     "historical": 1000
   },
   {
     "itemId": 4412,
-    "minBuyout": 1500,
-    "marketValue": 1633,
+    "minBuyout": 1400,
+    "marketValue": 1466,
+    "historical": 0
+  },
+  {
+    "itemId": 4414,
+    "minBuyout": 9000,
+    "marketValue": 9000,
     "historical": 0
   },
   {
     "itemId": 4416,
-    "minBuyout": 9900,
+    "minBuyout": 0,
     "marketValue": 9900,
     "historical": 0
   },
   {
     "itemId": 4437,
-    "minBuyout": 9900,
-    "marketValue": 9900,
+    "minBuyout": 7500,
+    "marketValue": 9300,
     "historical": 0
   },
   {
@@ -3553,8 +4027,8 @@
   },
   {
     "itemId": 4470,
-    "minBuyout": 50,
-    "marketValue": 68,
+    "minBuyout": 30,
+    "marketValue": 58,
     "historical": 299
   },
   {
@@ -3565,55 +4039,55 @@
   },
   {
     "itemId": 4496,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 385,
     "historical": 400
   },
   {
     "itemId": 4498,
-    "minBuyout": 4900,
-    "marketValue": 4933,
+    "minBuyout": 4000,
+    "marketValue": 4616,
     "historical": 0
   },
   {
     "itemId": 4536,
-    "minBuyout": 18,
-    "marketValue": 19,
+    "minBuyout": 17,
+    "marketValue": 17,
     "historical": 20
   },
   {
     "itemId": 4537,
-    "minBuyout": 60,
-    "marketValue": 96,
+    "minBuyout": 59,
+    "marketValue": 78,
     "historical": 0
   },
   {
     "itemId": 4540,
-    "minBuyout": 3,
+    "minBuyout": 2,
     "marketValue": 3,
     "historical": 30
   },
   {
     "itemId": 4541,
-    "minBuyout": 98,
-    "marketValue": 98,
+    "minBuyout": 95,
+    "marketValue": 96,
     "historical": 0
   },
   {
     "itemId": 4555,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 285,
+    "marketValue": 298,
     "historical": 0
   },
   {
     "itemId": 4560,
     "minBuyout": 100,
-    "marketValue": 138,
+    "marketValue": 109,
     "historical": 200
   },
   {
     "itemId": 4561,
-    "minBuyout": 300,
+    "minBuyout": 400,
     "marketValue": 400,
     "historical": 400
   },
@@ -3631,7 +4105,7 @@
   },
   {
     "itemId": 4564,
-    "minBuyout": 700,
+    "minBuyout": 600,
     "marketValue": 700,
     "historical": 1000
   },
@@ -3643,8 +4117,8 @@
   },
   {
     "itemId": 4566,
-    "minBuyout": 700,
-    "marketValue": 1328,
+    "minBuyout": 800,
+    "marketValue": 1252,
     "historical": 1392
   },
   {
@@ -3655,8 +4129,8 @@
   },
   {
     "itemId": 4568,
-    "minBuyout": 5000,
-    "marketValue": 4200,
+    "minBuyout": 2500,
+    "marketValue": 3858,
     "historical": 2600
   },
   {
@@ -3667,26 +4141,26 @@
   },
   {
     "itemId": 4570,
-    "minBuyout": 1000,
-    "marketValue": 1067,
+    "minBuyout": 900,
+    "marketValue": 1033,
     "historical": 1900
   },
   {
     "itemId": 4571,
-    "minBuyout": 1200,
-    "marketValue": 1268,
+    "minBuyout": 1000,
+    "marketValue": 1229,
     "historical": 2500
   },
   {
     "itemId": 4575,
-    "minBuyout": 2200,
-    "marketValue": 2717,
+    "minBuyout": 2000,
+    "marketValue": 2679,
     "historical": 2000
   },
   {
     "itemId": 4576,
-    "minBuyout": 7000,
-    "marketValue": 10288,
+    "minBuyout": 4000,
+    "marketValue": 8327,
     "historical": 0
   },
   {
@@ -3697,32 +4171,38 @@
   },
   {
     "itemId": 4592,
-    "minBuyout": 5,
-    "marketValue": 5,
+    "minBuyout": 6,
+    "marketValue": 6,
     "historical": 28
   },
   {
     "itemId": 4593,
-    "minBuyout": 60,
-    "marketValue": 76,
+    "minBuyout": 45,
+    "marketValue": 60,
     "historical": 0
   },
   {
     "itemId": 4596,
-    "minBuyout": 97,
-    "marketValue": 99,
+    "minBuyout": 96,
+    "marketValue": 98,
     "historical": 199
   },
   {
+    "itemId": 4603,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 4604,
-    "minBuyout": 2,
-    "marketValue": 2,
+    "minBuyout": 1,
+    "marketValue": 1,
     "historical": 15
   },
   {
     "itemId": 4605,
-    "minBuyout": 37,
-    "marketValue": 39,
+    "minBuyout": 36,
+    "marketValue": 37,
     "historical": 0
   },
   {
@@ -3750,6 +4230,12 @@
     "historical": 0
   },
   {
+    "itemId": 4661,
+    "minBuyout": 10200,
+    "marketValue": 10200,
+    "historical": 0
+  },
+  {
     "itemId": 4662,
     "minBuyout": 100,
     "marketValue": 100,
@@ -3763,8 +4249,8 @@
   },
   {
     "itemId": 4665,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 294,
     "historical": 0
   },
   {
@@ -3794,7 +4280,7 @@
   {
     "itemId": 4672,
     "minBuyout": 100,
-    "marketValue": 133,
+    "marketValue": 100,
     "historical": 0
   },
   {
@@ -3811,8 +4297,8 @@
   },
   {
     "itemId": 4677,
-    "minBuyout": 400,
-    "marketValue": 575,
+    "minBuyout": 300,
+    "marketValue": 280,
     "historical": 100
   },
   {
@@ -3823,8 +4309,8 @@
   },
   {
     "itemId": 4681,
-    "minBuyout": 500,
-    "marketValue": 600,
+    "minBuyout": 300,
+    "marketValue": 538,
     "historical": 600
   },
   {
@@ -3877,87 +4363,99 @@
   },
   {
     "itemId": 4695,
-    "minBuyout": 900,
-    "marketValue": 1222,
+    "minBuyout": 800,
+    "marketValue": 1004,
     "historical": 0
   },
   {
     "itemId": 4697,
     "minBuyout": 3000,
-    "marketValue": 3000,
+    "marketValue": 2900,
+    "historical": 0
+  },
+  {
+    "itemId": 4698,
+    "minBuyout": 3500,
+    "marketValue": 3500,
     "historical": 0
   },
   {
     "itemId": 4699,
-    "minBuyout": 1200,
-    "marketValue": 1733,
+    "minBuyout": 1000,
+    "marketValue": 1369,
     "historical": 0
   },
   {
     "itemId": 4701,
     "minBuyout": 600,
-    "marketValue": 838,
+    "marketValue": 724,
     "historical": 0
   },
   {
     "itemId": 4708,
-    "minBuyout": 7000,
-    "marketValue": 7000,
+    "minBuyout": 6800,
+    "marketValue": 6900,
     "historical": 0
   },
   {
     "itemId": 4710,
-    "minBuyout": 2500,
+    "minBuyout": 0,
     "marketValue": 2500,
     "historical": 0
   },
   {
     "itemId": 4713,
-    "minBuyout": 3400,
+    "minBuyout": 0,
     "marketValue": 3400,
     "historical": 0
   },
   {
     "itemId": 4715,
-    "minBuyout": 3000,
-    "marketValue": 4333,
+    "minBuyout": 0,
+    "marketValue": 3800,
     "historical": 0
   },
   {
     "itemId": 4757,
     "minBuyout": 98,
-    "marketValue": 99,
+    "marketValue": 98,
     "historical": 0
   },
   {
     "itemId": 4765,
-    "minBuyout": 9900,
-    "marketValue": 9900,
+    "minBuyout": 5000,
+    "marketValue": 7450,
     "historical": 0
   },
   {
     "itemId": 4766,
-    "minBuyout": 3800,
-    "marketValue": 3666,
+    "minBuyout": 3600,
+    "marketValue": 3600,
     "historical": 3500
   },
   {
     "itemId": 4771,
-    "minBuyout": 1000,
-    "marketValue": 1400,
+    "minBuyout": 900,
+    "marketValue": 1200,
     "historical": 0
   },
   {
     "itemId": 4775,
     "minBuyout": 37,
-    "marketValue": 42,
+    "marketValue": 39,
     "historical": 100
   },
   {
     "itemId": 4776,
-    "minBuyout": 70,
-    "marketValue": 77,
+    "minBuyout": 64,
+    "marketValue": 72,
     "historical": 100
+  },
+  {
+    "itemId": 4777,
+    "minBuyout": 9000,
+    "marketValue": 9000,
+    "historical": 0
   },
   {
     "itemId": 4778,
@@ -3968,13 +4466,13 @@
   {
     "itemId": 4781,
     "minBuyout": 4500,
-    "marketValue": 4000,
+    "marketValue": 4300,
     "historical": 3500
   },
   {
     "itemId": 4782,
     "minBuyout": 3000,
-    "marketValue": 3000,
+    "marketValue": 2833,
     "historical": 0
   },
   {
@@ -3985,26 +4483,26 @@
   },
   {
     "itemId": 4785,
-    "minBuyout": 0,
-    "marketValue": 800,
+    "minBuyout": 4000,
+    "marketValue": 2933,
     "historical": 0
   },
   {
     "itemId": 4786,
-    "minBuyout": 2400,
-    "marketValue": 3055,
+    "minBuyout": 2000,
+    "marketValue": 2524,
     "historical": 5000
   },
   {
     "itemId": 4788,
-    "minBuyout": 3000,
-    "marketValue": 3000,
+    "minBuyout": 2200,
+    "marketValue": 2978,
     "historical": 7700
   },
   {
     "itemId": 4789,
     "minBuyout": 3500,
-    "marketValue": 4000,
+    "marketValue": 3400,
     "historical": 0
   },
   {
@@ -4015,32 +4513,44 @@
   },
   {
     "itemId": 4793,
-    "minBuyout": 3500,
-    "marketValue": 4250,
+    "minBuyout": 0,
+    "marketValue": 4000,
     "historical": 0
   },
   {
     "itemId": 4794,
-    "minBuyout": 8000,
-    "marketValue": 8000,
+    "minBuyout": 5400,
+    "marketValue": 6716,
+    "historical": 0
+  },
+  {
+    "itemId": 4799,
+    "minBuyout": 4900,
+    "marketValue": 4950,
+    "historical": 0
+  },
+  {
+    "itemId": 4800,
+    "minBuyout": 10000,
+    "marketValue": 10000,
     "historical": 0
   },
   {
     "itemId": 4813,
     "minBuyout": 95,
-    "marketValue": 98,
+    "marketValue": 96,
     "historical": 100
   },
   {
     "itemId": 4814,
-    "minBuyout": 65,
-    "marketValue": 71,
+    "minBuyout": 62,
+    "marketValue": 67,
     "historical": 99
   },
   {
     "itemId": 4818,
     "minBuyout": 20000,
-    "marketValue": 14766,
+    "marketValue": 17383,
     "historical": 0
   },
   {
@@ -4056,6 +4566,24 @@
     "historical": 0
   },
   {
+    "itemId": 4831,
+    "minBuyout": 12400,
+    "marketValue": 12400,
+    "historical": 0
+  },
+  {
+    "itemId": 4833,
+    "minBuyout": 6600,
+    "marketValue": 6600,
+    "historical": 0
+  },
+  {
+    "itemId": 4835,
+    "minBuyout": 35000,
+    "marketValue": 35000,
+    "historical": 0
+  },
+  {
     "itemId": 4861,
     "minBuyout": 400,
     "marketValue": 400,
@@ -4063,26 +4591,26 @@
   },
   {
     "itemId": 4865,
-    "minBuyout": 48,
-    "marketValue": 48,
+    "minBuyout": 45,
+    "marketValue": 46,
     "historical": 50
   },
   {
     "itemId": 4867,
-    "minBuyout": 88,
-    "marketValue": 90,
+    "minBuyout": 84,
+    "marketValue": 86,
     "historical": 0
   },
   {
     "itemId": 4872,
-    "minBuyout": 159,
-    "marketValue": 171,
+    "minBuyout": 148,
+    "marketValue": 163,
     "historical": 200
   },
   {
     "itemId": 4873,
-    "minBuyout": 88,
-    "marketValue": 72,
+    "minBuyout": 85,
+    "marketValue": 79,
     "historical": 25
   },
   {
@@ -4094,7 +4622,7 @@
   {
     "itemId": 4875,
     "minBuyout": 85,
-    "marketValue": 90,
+    "marketValue": 85,
     "historical": 0
   },
   {
@@ -4105,8 +4633,8 @@
   },
   {
     "itemId": 4877,
-    "minBuyout": 60,
-    "marketValue": 65,
+    "minBuyout": 50,
+    "marketValue": 61,
     "historical": 100
   },
   {
@@ -4117,26 +4645,26 @@
   },
   {
     "itemId": 4879,
-    "minBuyout": 55,
-    "marketValue": 58,
+    "minBuyout": 50,
+    "marketValue": 55,
     "historical": 100
   },
   {
     "itemId": 4880,
     "minBuyout": 100,
-    "marketValue": 138,
+    "marketValue": 119,
     "historical": 200
   },
   {
     "itemId": 4882,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 100,
+    "marketValue": 183,
     "historical": 6000
   },
   {
     "itemId": 4951,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 500,
+    "marketValue": 750,
     "historical": 0
   },
   {
@@ -4144,6 +4672,18 @@
     "minBuyout": 12,
     "marketValue": 12,
     "historical": 36
+  },
+  {
+    "itemId": 4999,
+    "minBuyout": 14900,
+    "marketValue": 14900,
+    "historical": 0
+  },
+  {
+    "itemId": 5001,
+    "minBuyout": 0,
+    "marketValue": 10000,
+    "historical": 0
   },
   {
     "itemId": 5003,
@@ -4177,98 +4717,110 @@
   },
   {
     "itemId": 5071,
-    "minBuyout": 500,
+    "minBuyout": 600,
     "marketValue": 600,
     "historical": 1099
   },
   {
     "itemId": 5075,
-    "minBuyout": 24,
-    "marketValue": 27,
+    "minBuyout": 25,
+    "marketValue": 26,
     "historical": 100
   },
   {
     "itemId": 5081,
     "minBuyout": 900,
-    "marketValue": 900,
+    "marketValue": 894,
     "historical": 2500
   },
   {
     "itemId": 5082,
-    "minBuyout": 197,
-    "marketValue": 205,
+    "minBuyout": 150,
+    "marketValue": 185,
     "historical": 248
   },
   {
     "itemId": 5083,
     "minBuyout": 800,
-    "marketValue": 816,
+    "marketValue": 808,
     "historical": 1500
   },
   {
     "itemId": 5095,
-    "minBuyout": 29,
-    "marketValue": 35,
+    "minBuyout": 15,
+    "marketValue": 31,
     "historical": 0
   },
   {
     "itemId": 5107,
-    "minBuyout": 400,
-    "marketValue": 500,
+    "minBuyout": 300,
+    "marketValue": 438,
     "historical": 500
   },
   {
     "itemId": 5110,
-    "minBuyout": 600,
-    "marketValue": 666,
+    "minBuyout": 500,
+    "marketValue": 553,
     "historical": 0
   },
   {
     "itemId": 5111,
-    "minBuyout": 1000,
-    "marketValue": 1311,
+    "minBuyout": 900,
+    "marketValue": 979,
     "historical": 0
   },
   {
     "itemId": 5112,
     "minBuyout": 2800,
-    "marketValue": 2880,
+    "marketValue": 2893,
     "historical": 0
   },
   {
     "itemId": 5114,
-    "minBuyout": 140,
-    "marketValue": 172,
+    "minBuyout": 100,
+    "marketValue": 149,
     "historical": 200
   },
   {
     "itemId": 5115,
-    "minBuyout": 200,
+    "minBuyout": 190,
     "marketValue": 200,
     "historical": 0
   },
   {
+    "itemId": 5116,
+    "minBuyout": 0,
+    "marketValue": 500,
+    "historical": 0
+  },
+  {
     "itemId": 5118,
-    "minBuyout": 170,
-    "marketValue": 191,
+    "minBuyout": 165,
+    "marketValue": 174,
     "historical": 0
   },
   {
     "itemId": 5119,
     "minBuyout": 120,
-    "marketValue": 177,
+    "marketValue": 180,
+    "historical": 0
+  },
+  {
+    "itemId": 5122,
+    "minBuyout": 500,
+    "marketValue": 500,
     "historical": 0
   },
   {
     "itemId": 5123,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 190,
+    "marketValue": 199,
     "historical": 0
   },
   {
     "itemId": 5124,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 180,
+    "marketValue": 197,
     "historical": 0
   },
   {
@@ -4285,32 +4837,32 @@
   },
   {
     "itemId": 5165,
-    "minBuyout": 8,
-    "marketValue": 32,
+    "minBuyout": 1,
+    "marketValue": 21,
     "historical": 1500
   },
   {
     "itemId": 5182,
-    "minBuyout": 3300,
-    "marketValue": 3460,
+    "minBuyout": 3000,
+    "marketValue": 3266,
     "historical": 0
   },
   {
     "itemId": 5207,
     "minBuyout": 1500,
-    "marketValue": 1980,
+    "marketValue": 1857,
     "historical": 0
   },
   {
     "itemId": 5212,
-    "minBuyout": 700,
-    "marketValue": 800,
+    "minBuyout": 800,
+    "marketValue": 794,
     "historical": 800
   },
   {
     "itemId": 5342,
-    "minBuyout": 149,
-    "marketValue": 172,
+    "minBuyout": 100,
+    "marketValue": 148,
     "historical": 0
   },
   {
@@ -4320,15 +4872,27 @@
     "historical": 0
   },
   {
+    "itemId": 5422,
+    "minBuyout": 6800,
+    "marketValue": 6800,
+    "historical": 0
+  },
+  {
+    "itemId": 5423,
+    "minBuyout": 100000,
+    "marketValue": 100000,
+    "historical": 0
+  },
+  {
     "itemId": 5439,
-    "minBuyout": 500,
+    "minBuyout": 0,
     "marketValue": 500,
     "historical": 0
   },
   {
     "itemId": 5441,
-    "minBuyout": 4000,
-    "marketValue": 4000,
+    "minBuyout": 3900,
+    "marketValue": 3966,
     "historical": 0
   },
   {
@@ -4345,26 +4909,32 @@
   },
   {
     "itemId": 5467,
-    "minBuyout": 23,
-    "marketValue": 33,
+    "minBuyout": 20,
+    "marketValue": 28,
     "historical": 399
   },
   {
+    "itemId": 5468,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 5469,
-    "minBuyout": 19,
-    "marketValue": 23,
+    "minBuyout": 17,
+    "marketValue": 20,
     "historical": 61
   },
   {
     "itemId": 5470,
-    "minBuyout": 399,
-    "marketValue": 437,
+    "minBuyout": 300,
+    "marketValue": 381,
     "historical": 0
   },
   {
     "itemId": 5471,
-    "minBuyout": 900,
-    "marketValue": 933,
+    "minBuyout": 800,
+    "marketValue": 848,
     "historical": 0
   },
   {
@@ -4375,110 +4945,116 @@
   },
   {
     "itemId": 5474,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 99,
+    "marketValue": 99,
     "historical": 0
   },
   {
     "itemId": 5477,
-    "minBuyout": 69,
-    "marketValue": 79,
+    "minBuyout": 66,
+    "marketValue": 70,
     "historical": 0
   },
   {
     "itemId": 5483,
-    "minBuyout": 900,
-    "marketValue": 966,
+    "minBuyout": 800,
+    "marketValue": 925,
     "historical": 0
   },
   {
     "itemId": 5484,
-    "minBuyout": 2800,
-    "marketValue": 2800,
+    "minBuyout": 1800,
+    "marketValue": 2555,
     "historical": 0
   },
   {
     "itemId": 5486,
     "minBuyout": 2400,
-    "marketValue": 2233,
+    "marketValue": 2304,
     "historical": 1500
   },
   {
     "itemId": 5488,
-    "minBuyout": 1500,
-    "marketValue": 1500,
+    "minBuyout": 1400,
+    "marketValue": 1458,
     "historical": 1600
   },
   {
     "itemId": 5498,
-    "minBuyout": 245,
-    "marketValue": 260,
+    "minBuyout": 229,
+    "marketValue": 252,
     "historical": 372
   },
   {
     "itemId": 5500,
-    "minBuyout": 15000,
-    "marketValue": 15000,
+    "minBuyout": 13000,
+    "marketValue": 14633,
     "historical": 0
   },
   {
     "itemId": 5503,
-    "minBuyout": 70,
-    "marketValue": 67,
+    "minBuyout": 92,
+    "marketValue": 79,
     "historical": 74
   },
   {
     "itemId": 5504,
-    "minBuyout": 800,
-    "marketValue": 1233,
+    "minBuyout": 500,
+    "marketValue": 866,
+    "historical": 0
+  },
+  {
+    "itemId": 5507,
+    "minBuyout": 5000,
+    "marketValue": 5000,
     "historical": 0
   },
   {
     "itemId": 5525,
-    "minBuyout": 90,
-    "marketValue": 91,
+    "minBuyout": 80,
+    "marketValue": 89,
     "historical": 0
   },
   {
     "itemId": 5540,
-    "minBuyout": 8700,
-    "marketValue": 8800,
+    "minBuyout": 8000,
+    "marketValue": 8611,
     "historical": 0
   },
   {
     "itemId": 5542,
-    "minBuyout": 4500,
-    "marketValue": 4000,
+    "minBuyout": 2500,
+    "marketValue": 3250,
     "historical": 0
   },
   {
     "itemId": 5543,
-    "minBuyout": 3000,
-    "marketValue": 3000,
+    "minBuyout": 2000,
+    "marketValue": 2500,
     "historical": 200700
   },
   {
     "itemId": 5571,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 394,
     "historical": 400
   },
   {
     "itemId": 5572,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 300,
+    "marketValue": 380,
     "historical": 400
   },
   {
     "itemId": 5573,
-    "minBuyout": 2500,
-    "marketValue": 2833,
+    "minBuyout": 2300,
+    "marketValue": 2583,
     "historical": 0
   },
   {
     "itemId": 5574,
     "minBuyout": 2300,
-    "marketValue": 2116,
+    "marketValue": 2195,
     "historical": 1400
   },
   {
@@ -4488,33 +5064,51 @@
     "historical": 0
   },
   {
+    "itemId": 5576,
+    "minBuyout": 0,
+    "marketValue": 15000,
+    "historical": 0
+  },
+  {
     "itemId": 5578,
-    "minBuyout": 900,
-    "marketValue": 1000,
+    "minBuyout": 600,
+    "marketValue": 880,
     "historical": 6500
   },
   {
     "itemId": 5631,
-    "minBuyout": 1499,
-    "marketValue": 1754,
+    "minBuyout": 894,
+    "marketValue": 1324,
+    "historical": 0
+  },
+  {
+    "itemId": 5634,
+    "minBuyout": 2000,
+    "marketValue": 2000,
     "historical": 0
   },
   {
     "itemId": 5635,
     "minBuyout": 45,
-    "marketValue": 47,
+    "marketValue": 46,
     "historical": 100
   },
   {
+    "itemId": 5637,
+    "minBuyout": 500,
+    "marketValue": 500,
+    "historical": 0
+  },
+  {
     "itemId": 5640,
-    "minBuyout": 800,
-    "marketValue": 800,
+    "minBuyout": 700,
+    "marketValue": 783,
     "historical": 2000
   },
   {
     "itemId": 5642,
     "minBuyout": 4500,
-    "marketValue": 3975,
+    "marketValue": 4164,
     "historical": 2000
   },
   {
@@ -4531,26 +5125,32 @@
   },
   {
     "itemId": 5763,
-    "minBuyout": 2700,
+    "minBuyout": 0,
     "marketValue": 2633,
     "historical": 0
   },
   {
+    "itemId": 5766,
+    "minBuyout": 9900,
+    "marketValue": 9900,
+    "historical": 0
+  },
+  {
     "itemId": 5771,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 500,
+    "marketValue": 594,
     "historical": 1370
   },
   {
     "itemId": 5772,
     "minBuyout": 1100,
-    "marketValue": 1188,
+    "marketValue": 1127,
     "historical": 2500
   },
   {
     "itemId": 5784,
-    "minBuyout": 999,
-    "marketValue": 1692,
+    "minBuyout": 1490,
+    "marketValue": 1528,
     "historical": 0
   },
   {
@@ -4573,20 +5173,20 @@
   },
   {
     "itemId": 5961,
-    "minBuyout": 2500,
-    "marketValue": 3642,
+    "minBuyout": 2400,
+    "marketValue": 2797,
     "historical": 0
   },
   {
     "itemId": 5969,
-    "minBuyout": 1100,
-    "marketValue": 1150,
+    "minBuyout": 1200,
+    "marketValue": 1160,
     "historical": 0
   },
   {
     "itemId": 5972,
     "minBuyout": 400,
-    "marketValue": 475,
+    "marketValue": 442,
     "historical": 500
   },
   {
@@ -4597,8 +5197,8 @@
   },
   {
     "itemId": 5996,
-    "minBuyout": 650,
-    "marketValue": 726,
+    "minBuyout": 649,
+    "marketValue": 692,
     "historical": 1500
   },
   {
@@ -4609,38 +5209,44 @@
   },
   {
     "itemId": 6044,
-    "minBuyout": 0,
-    "marketValue": 5000,
+    "minBuyout": 10700,
+    "marketValue": 7850,
     "historical": 0
   },
   {
     "itemId": 6096,
-    "minBuyout": 100,
+    "minBuyout": 0,
     "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 6138,
-    "minBuyout": 100,
+    "minBuyout": 0,
     "marketValue": 100,
     "historical": 0
   },
   {
+    "itemId": 6149,
+    "minBuyout": 3999,
+    "marketValue": 3999,
+    "historical": 0
+  },
+  {
     "itemId": 6150,
-    "minBuyout": 100000,
-    "marketValue": 100000,
+    "minBuyout": 90000,
+    "marketValue": 99523,
     "historical": 100000
   },
   {
     "itemId": 6211,
-    "minBuyout": 10700,
-    "marketValue": 10700,
+    "minBuyout": 6000,
+    "marketValue": 10480,
     "historical": 0
   },
   {
     "itemId": 6214,
-    "minBuyout": 800,
-    "marketValue": 880,
+    "minBuyout": 900,
+    "marketValue": 873,
     "historical": 1200
   },
   {
@@ -4663,38 +5269,44 @@
   },
   {
     "itemId": 6239,
-    "minBuyout": 400,
+    "minBuyout": 300,
     "marketValue": 400,
     "historical": 700
   },
   {
     "itemId": 6240,
     "minBuyout": 300,
-    "marketValue": 317,
+    "marketValue": 308,
     "historical": 900
   },
   {
     "itemId": 6241,
-    "minBuyout": 200,
+    "minBuyout": 100,
     "marketValue": 200,
     "historical": 1100
   },
   {
     "itemId": 6242,
-    "minBuyout": 800,
-    "marketValue": 800,
+    "minBuyout": 600,
+    "marketValue": 744,
     "historical": 1300
   },
   {
     "itemId": 6256,
     "minBuyout": 100,
-    "marketValue": 166,
+    "marketValue": 133,
     "historical": 857
   },
   {
     "itemId": 6260,
-    "minBuyout": 499,
-    "marketValue": 496,
+    "minBuyout": 249,
+    "marketValue": 483,
+    "historical": 0
+  },
+  {
+    "itemId": 6261,
+    "minBuyout": 2500,
+    "marketValue": 2500,
     "historical": 0
   },
   {
@@ -4712,19 +5324,19 @@
   {
     "itemId": 6268,
     "minBuyout": 300,
-    "marketValue": 400,
+    "marketValue": 358,
     "historical": 1350
   },
   {
     "itemId": 6269,
     "minBuyout": 200,
-    "marketValue": 300,
+    "marketValue": 294,
     "historical": 700
   },
   {
     "itemId": 6270,
     "minBuyout": 700,
-    "marketValue": 662,
+    "marketValue": 678,
     "historical": 500
   },
   {
@@ -4736,7 +5348,7 @@
   {
     "itemId": 6272,
     "minBuyout": 900,
-    "marketValue": 1255,
+    "marketValue": 1077,
     "historical": 0
   },
   {
@@ -4753,19 +5365,19 @@
   },
   {
     "itemId": 6289,
-    "minBuyout": 6,
-    "marketValue": 5,
+    "minBuyout": 10,
+    "marketValue": 6,
     "historical": 8
   },
   {
     "itemId": 6290,
-    "minBuyout": 6,
-    "marketValue": 6,
+    "minBuyout": 5,
+    "marketValue": 5,
     "historical": 21
   },
   {
     "itemId": 6291,
-    "minBuyout": 21,
+    "minBuyout": 19,
     "marketValue": 21,
     "historical": 28
   },
@@ -4784,43 +5396,49 @@
   {
     "itemId": 6294,
     "minBuyout": 1200,
-    "marketValue": 1231,
+    "marketValue": 1215,
     "historical": 6900
   },
   {
     "itemId": 6295,
-    "minBuyout": 2100,
-    "marketValue": 2100,
+    "minBuyout": 1900,
+    "marketValue": 2091,
     "historical": 0
   },
   {
     "itemId": 6296,
-    "minBuyout": 100,
-    "marketValue": 100,
+    "minBuyout": 90,
+    "marketValue": 99,
     "historical": 100
   },
   {
     "itemId": 6297,
-    "minBuyout": 90,
-    "marketValue": 97,
+    "minBuyout": 68,
+    "marketValue": 79,
     "historical": 0
   },
   {
     "itemId": 6299,
-    "minBuyout": 13,
-    "marketValue": 15,
+    "minBuyout": 3,
+    "marketValue": 12,
     "historical": 88
   },
   {
+    "itemId": 6301,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 6303,
-    "minBuyout": 16,
-    "marketValue": 15,
+    "minBuyout": 19,
+    "marketValue": 20,
     "historical": 50
   },
   {
     "itemId": 6308,
-    "minBuyout": 69,
-    "marketValue": 54,
+    "minBuyout": 31,
+    "marketValue": 37,
     "historical": 15
   },
   {
@@ -4831,8 +5449,8 @@
   },
   {
     "itemId": 6310,
-    "minBuyout": 2200,
-    "marketValue": 2349,
+    "minBuyout": 2000,
+    "marketValue": 2192,
     "historical": 0
   },
   {
@@ -4849,14 +5467,14 @@
   },
   {
     "itemId": 6328,
-    "minBuyout": 700,
+    "minBuyout": 800,
     "marketValue": 800,
     "historical": 1000
   },
   {
     "itemId": 6330,
     "minBuyout": 2400,
-    "marketValue": 2577,
+    "marketValue": 2266,
     "historical": 0
   },
   {
@@ -4886,19 +5504,19 @@
   {
     "itemId": 6344,
     "minBuyout": 100,
-    "marketValue": 152,
+    "marketValue": 126,
     "historical": 300
   },
   {
     "itemId": 6346,
-    "minBuyout": 20000,
+    "minBuyout": 0,
     "marketValue": 20000,
     "historical": 0
   },
   {
     "itemId": 6347,
     "minBuyout": 100,
-    "marketValue": 121,
+    "marketValue": 110,
     "historical": 600
   },
   {
@@ -4909,8 +5527,8 @@
   },
   {
     "itemId": 6349,
-    "minBuyout": 1900,
-    "marketValue": 1866,
+    "minBuyout": 2000,
+    "marketValue": 1880,
     "historical": 0
   },
   {
@@ -4921,21 +5539,27 @@
   },
   {
     "itemId": 6358,
-    "minBuyout": 43,
-    "marketValue": 49,
+    "minBuyout": 48,
+    "marketValue": 48,
     "historical": 98
   },
   {
     "itemId": 6359,
-    "minBuyout": 180,
-    "marketValue": 187,
+    "minBuyout": 3985,
+    "marketValue": 186,
     "historical": 0
   },
   {
     "itemId": 6361,
-    "minBuyout": 45,
-    "marketValue": 47,
+    "minBuyout": 56,
+    "marketValue": 50,
     "historical": 100
+  },
+  {
+    "itemId": 6362,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
   },
   {
     "itemId": 6365,
@@ -4946,19 +5570,19 @@
   {
     "itemId": 6368,
     "minBuyout": 700,
-    "marketValue": 787,
+    "marketValue": 749,
     "historical": 1800
   },
   {
     "itemId": 6369,
-    "minBuyout": 5500,
-    "marketValue": 5500,
+    "minBuyout": 5300,
+    "marketValue": 5466,
     "historical": 0
   },
   {
     "itemId": 6370,
-    "minBuyout": 350,
-    "marketValue": 411,
+    "minBuyout": 249,
+    "marketValue": 337,
     "historical": 500
   },
   {
@@ -4970,7 +5594,7 @@
   {
     "itemId": 6372,
     "minBuyout": 300,
-    "marketValue": 460,
+    "marketValue": 300,
     "historical": 0
   },
   {
@@ -4981,50 +5605,62 @@
   },
   {
     "itemId": 6377,
-    "minBuyout": 2900,
-    "marketValue": 3155,
+    "minBuyout": 2200,
+    "marketValue": 2768,
     "historical": 10000
   },
   {
     "itemId": 6378,
-    "minBuyout": 900,
-    "marketValue": 1316,
+    "minBuyout": 800,
+    "marketValue": 1111,
     "historical": 2000
   },
   {
     "itemId": 6379,
-    "minBuyout": 700,
-    "marketValue": 800,
+    "minBuyout": 600,
+    "marketValue": 700,
     "historical": 0
   },
   {
     "itemId": 6380,
-    "minBuyout": 1800,
-    "marketValue": 1933,
+    "minBuyout": 1600,
+    "marketValue": 1818,
     "historical": 0
   },
   {
     "itemId": 6381,
     "minBuyout": 2500,
-    "marketValue": 2500,
+    "marketValue": 2366,
+    "historical": 0
+  },
+  {
+    "itemId": 6382,
+    "minBuyout": 4900,
+    "marketValue": 4900,
     "historical": 0
   },
   {
     "itemId": 6390,
-    "minBuyout": 900,
-    "marketValue": 1120,
+    "minBuyout": 700,
+    "marketValue": 997,
     "historical": 90000
   },
   {
     "itemId": 6391,
-    "minBuyout": 800,
-    "marketValue": 912,
+    "minBuyout": 600,
+    "marketValue": 795,
     "historical": 2500
   },
   {
     "itemId": 6393,
     "minBuyout": 5500,
     "marketValue": 5500,
+    "historical": 0
+  },
+  {
+    "itemId": 6397,
+    "minBuyout": 7000,
+    "marketValue": 7000,
     "historical": 0
   },
   {
@@ -5035,8 +5671,8 @@
   },
   {
     "itemId": 6454,
-    "minBuyout": 10300,
-    "marketValue": 10333,
+    "minBuyout": 9000,
+    "marketValue": 10027,
     "historical": 0
   },
   {
@@ -5053,38 +5689,38 @@
   },
   {
     "itemId": 6468,
-    "minBuyout": 27800,
-    "marketValue": 29611,
+    "minBuyout": 22000,
+    "marketValue": 26627,
     "historical": 0
   },
   {
     "itemId": 6470,
-    "minBuyout": 129,
-    "marketValue": 168,
+    "minBuyout": 84,
+    "marketValue": 124,
     "historical": 0
   },
   {
     "itemId": 6471,
     "minBuyout": 1099,
-    "marketValue": 1092,
+    "marketValue": 1095,
     "historical": 0
   },
   {
     "itemId": 6474,
-    "minBuyout": 900,
-    "marketValue": 983,
+    "minBuyout": 1000,
+    "marketValue": 991,
     "historical": 0
   },
   {
     "itemId": 6475,
     "minBuyout": 2700,
-    "marketValue": 2783,
+    "marketValue": 2741,
     "historical": 0
   },
   {
     "itemId": 6476,
-    "minBuyout": 3200,
-    "marketValue": 4833,
+    "minBuyout": 2000,
+    "marketValue": 3695,
     "historical": 0
   },
   {
@@ -5101,20 +5737,20 @@
   },
   {
     "itemId": 6508,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 100,
+    "marketValue": 150,
     "historical": 0
   },
   {
     "itemId": 6509,
-    "minBuyout": 200,
+    "minBuyout": 100,
     "marketValue": 200,
     "historical": 500
   },
   {
     "itemId": 6510,
-    "minBuyout": 900,
-    "marketValue": 900,
+    "minBuyout": 500,
+    "marketValue": 789,
     "historical": 0
   },
   {
@@ -5179,26 +5815,26 @@
   },
   {
     "itemId": 6522,
-    "minBuyout": 160,
-    "marketValue": 168,
+    "minBuyout": 84,
+    "marketValue": 144,
     "historical": 300
   },
   {
     "itemId": 6527,
     "minBuyout": 300,
-    "marketValue": 337,
+    "marketValue": 318,
     "historical": 740
   },
   {
     "itemId": 6528,
-    "minBuyout": 1500,
-    "marketValue": 1533,
+    "minBuyout": 1200,
+    "marketValue": 1427,
     "historical": 0
   },
   {
     "itemId": 6529,
-    "minBuyout": 123,
-    "marketValue": 127,
+    "minBuyout": 77,
+    "marketValue": 117,
     "historical": 783
   },
   {
@@ -5209,20 +5845,20 @@
   },
   {
     "itemId": 6531,
-    "minBuyout": 1500,
-    "marketValue": 1641,
+    "minBuyout": 1400,
+    "marketValue": 1546,
     "historical": 1200
   },
   {
     "itemId": 6532,
-    "minBuyout": 3000,
-    "marketValue": 3300,
+    "minBuyout": 350,
+    "marketValue": 1938,
     "historical": 0
   },
   {
     "itemId": 6533,
-    "minBuyout": 675,
-    "marketValue": 762,
+    "minBuyout": 674,
+    "marketValue": 718,
     "historical": 4900
   },
   {
@@ -5233,68 +5869,68 @@
   },
   {
     "itemId": 6537,
-    "minBuyout": 800,
-    "marketValue": 852,
+    "minBuyout": 600,
+    "marketValue": 804,
     "historical": 1000
   },
   {
     "itemId": 6538,
-    "minBuyout": 1000,
-    "marketValue": 1166,
+    "minBuyout": 600,
+    "marketValue": 985,
     "historical": 0
   },
   {
     "itemId": 6539,
     "minBuyout": 600,
-    "marketValue": 620,
+    "marketValue": 608,
     "historical": 1200
   },
   {
     "itemId": 6540,
-    "minBuyout": 800,
-    "marketValue": 878,
+    "minBuyout": 600,
+    "marketValue": 815,
     "historical": 0
   },
   {
     "itemId": 6541,
-    "minBuyout": 600,
-    "marketValue": 772,
+    "minBuyout": 400,
+    "marketValue": 653,
     "historical": 0
   },
   {
     "itemId": 6542,
     "minBuyout": 600,
-    "marketValue": 652,
+    "marketValue": 611,
     "historical": 0
   },
   {
     "itemId": 6543,
-    "minBuyout": 500,
-    "marketValue": 708,
+    "minBuyout": 400,
+    "marketValue": 550,
     "historical": 1000
   },
   {
     "itemId": 6545,
     "minBuyout": 1000,
-    "marketValue": 1600,
+    "marketValue": 1304,
     "historical": 5000
   },
   {
     "itemId": 6546,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 800,
+    "marketValue": 956,
     "historical": 0
   },
   {
     "itemId": 6547,
-    "minBuyout": 900,
-    "marketValue": 980,
+    "minBuyout": 800,
+    "marketValue": 945,
     "historical": 0
   },
   {
     "itemId": 6548,
-    "minBuyout": 500,
-    "marketValue": 577,
+    "minBuyout": 400,
+    "marketValue": 536,
     "historical": 1000
   },
   {
@@ -5305,32 +5941,32 @@
   },
   {
     "itemId": 6550,
-    "minBuyout": 700,
-    "marketValue": 760,
+    "minBuyout": 400,
+    "marketValue": 679,
     "historical": 0
   },
   {
     "itemId": 6551,
     "minBuyout": 700,
-    "marketValue": 887,
+    "marketValue": 793,
     "historical": 0
   },
   {
     "itemId": 6552,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 1900,
+    "marketValue": 1960,
     "historical": 0
   },
   {
     "itemId": 6553,
     "minBuyout": 900,
-    "marketValue": 950,
+    "marketValue": 925,
     "historical": 1500
   },
   {
     "itemId": 6554,
-    "minBuyout": 1400,
-    "marketValue": 1666,
+    "minBuyout": 800,
+    "marketValue": 1228,
     "historical": 1500
   },
   {
@@ -5347,68 +5983,68 @@
   },
   {
     "itemId": 6557,
-    "minBuyout": 500,
-    "marketValue": 748,
+    "minBuyout": 600,
+    "marketValue": 721,
     "historical": 0
   },
   {
     "itemId": 6558,
     "minBuyout": 400,
-    "marketValue": 554,
+    "marketValue": 501,
     "historical": 1000
   },
   {
     "itemId": 6559,
-    "minBuyout": 1400,
-    "marketValue": 1300,
+    "minBuyout": 1300,
+    "marketValue": 1333,
     "historical": 5000
   },
   {
     "itemId": 6560,
-    "minBuyout": 1500,
-    "marketValue": 1683,
+    "minBuyout": 1400,
+    "marketValue": 1454,
     "historical": 0
   },
   {
     "itemId": 6562,
-    "minBuyout": 3900,
-    "marketValue": 3900,
+    "minBuyout": 2000,
+    "marketValue": 3606,
     "historical": 0
   },
   {
     "itemId": 6563,
-    "minBuyout": 1500,
-    "marketValue": 1693,
+    "minBuyout": 600,
+    "marketValue": 1460,
     "historical": 1500
   },
   {
     "itemId": 6564,
-    "minBuyout": 10800,
-    "marketValue": 10800,
+    "minBuyout": 2300,
+    "marketValue": 9100,
     "historical": 0
   },
   {
     "itemId": 6565,
     "minBuyout": 3300,
-    "marketValue": 7766,
+    "marketValue": 5533,
     "historical": 0
   },
   {
     "itemId": 6566,
-    "minBuyout": 5000,
-    "marketValue": 5000,
+    "minBuyout": 2500,
+    "marketValue": 4375,
     "historical": 0
   },
   {
     "itemId": 6567,
-    "minBuyout": 16000,
-    "marketValue": 16000,
+    "minBuyout": 12500,
+    "marketValue": 14600,
     "historical": 0
   },
   {
     "itemId": 6568,
-    "minBuyout": 8900,
-    "marketValue": 6750,
+    "minBuyout": 2000,
+    "marketValue": 4533,
     "historical": 0
   },
   {
@@ -5418,27 +6054,39 @@
     "historical": 0
   },
   {
+    "itemId": 6570,
+    "minBuyout": 1200,
+    "marketValue": 1200,
+    "historical": 0
+  },
+  {
     "itemId": 6573,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 9000,
+    "marketValue": 9625,
     "historical": 0
   },
   {
     "itemId": 6574,
     "minBuyout": 1000,
-    "marketValue": 1750,
+    "marketValue": 1000,
     "historical": 0
   },
   {
     "itemId": 6575,
-    "minBuyout": 2000,
-    "marketValue": 1800,
+    "minBuyout": 1500,
+    "marketValue": 1650,
     "historical": 0
   },
   {
     "itemId": 6576,
-    "minBuyout": 900,
-    "marketValue": 1300,
+    "minBuyout": 7700,
+    "marketValue": 3860,
+    "historical": 0
+  },
+  {
+    "itemId": 6577,
+    "minBuyout": 2000,
+    "marketValue": 1900,
     "historical": 0
   },
   {
@@ -5450,25 +6098,31 @@
   {
     "itemId": 6579,
     "minBuyout": 1400,
-    "marketValue": 1766,
+    "marketValue": 1500,
     "historical": 0
   },
   {
     "itemId": 6580,
     "minBuyout": 4000,
-    "marketValue": 4266,
+    "marketValue": 4133,
     "historical": 0
   },
   {
     "itemId": 6581,
     "minBuyout": 0,
-    "marketValue": 3000,
+    "marketValue": 1966,
     "historical": 0
   },
   {
     "itemId": 6582,
-    "minBuyout": 30000,
-    "marketValue": 30000,
+    "minBuyout": 7500,
+    "marketValue": 22500,
+    "historical": 0
+  },
+  {
+    "itemId": 6583,
+    "minBuyout": 1500,
+    "marketValue": 1500,
     "historical": 0
   },
   {
@@ -5479,20 +6133,26 @@
   },
   {
     "itemId": 6585,
-    "minBuyout": 1700,
-    "marketValue": 1700,
+    "minBuyout": 1200,
+    "marketValue": 1511,
     "historical": 0
   },
   {
     "itemId": 6587,
     "minBuyout": 3500,
-    "marketValue": 3333,
+    "marketValue": 3352,
     "historical": 0
   },
   {
     "itemId": 6591,
     "minBuyout": 0,
-    "marketValue": 2500,
+    "marketValue": 1900,
+    "historical": 0
+  },
+  {
+    "itemId": 6592,
+    "minBuyout": 3700,
+    "marketValue": 3700,
     "historical": 0
   },
   {
@@ -5503,20 +6163,50 @@
   },
   {
     "itemId": 6594,
-    "minBuyout": 4500,
+    "minBuyout": 0,
     "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 6595,
-    "minBuyout": 4900,
-    "marketValue": 4900,
+    "minBuyout": 3800,
+    "marketValue": 4250,
+    "historical": 0
+  },
+  {
+    "itemId": 6597,
+    "minBuyout": 30000,
+    "marketValue": 30000,
+    "historical": 0
+  },
+  {
+    "itemId": 6600,
+    "minBuyout": 10000,
+    "marketValue": 15700,
+    "historical": 0
+  },
+  {
+    "itemId": 6602,
+    "minBuyout": 0,
+    "marketValue": 3300,
     "historical": 0
   },
   {
     "itemId": 6604,
     "minBuyout": 20000,
-    "marketValue": 10000,
+    "marketValue": 15000,
+    "historical": 0
+  },
+  {
+    "itemId": 6605,
+    "minBuyout": 10000,
+    "marketValue": 10833,
+    "historical": 0
+  },
+  {
+    "itemId": 6608,
+    "minBuyout": 0,
+    "marketValue": 2000,
     "historical": 0
   },
   {
@@ -5532,27 +6222,39 @@
     "historical": 0
   },
   {
+    "itemId": 6614,
+    "minBuyout": 10000,
+    "marketValue": 10000,
+    "historical": 0
+  },
+  {
+    "itemId": 6615,
+    "minBuyout": 7500,
+    "marketValue": 7500,
+    "historical": 0
+  },
+  {
     "itemId": 6628,
-    "minBuyout": 6000,
-    "marketValue": 6333,
+    "minBuyout": 5900,
+    "marketValue": 5960,
     "historical": 0
   },
   {
     "itemId": 6657,
-    "minBuyout": 334,
-    "marketValue": 372,
+    "minBuyout": 224,
+    "marketValue": 283,
     "historical": 0
   },
   {
     "itemId": 6661,
-    "minBuyout": 1000,
-    "marketValue": 1162,
+    "minBuyout": 1600,
+    "marketValue": 1393,
     "historical": 3233
   },
   {
     "itemId": 6662,
-    "minBuyout": 650,
-    "marketValue": 689,
+    "minBuyout": 198,
+    "marketValue": 577,
     "historical": 0
   },
   {
@@ -5575,32 +6277,38 @@
   },
   {
     "itemId": 6786,
-    "minBuyout": 2500,
-    "marketValue": 3150,
+    "minBuyout": 1900,
+    "marketValue": 2722,
     "historical": 100
   },
   {
     "itemId": 6888,
-    "minBuyout": 54,
-    "marketValue": 58,
+    "minBuyout": 48,
+    "marketValue": 54,
     "historical": 150
   },
   {
     "itemId": 6889,
     "minBuyout": 70,
-    "marketValue": 73,
+    "marketValue": 68,
     "historical": 90
   },
   {
     "itemId": 6890,
     "minBuyout": 88,
-    "marketValue": 90,
+    "marketValue": 88,
     "historical": 0
   },
   {
     "itemId": 6892,
-    "minBuyout": 900,
-    "marketValue": 980,
+    "minBuyout": 600,
+    "marketValue": 825,
+    "historical": 0
+  },
+  {
+    "itemId": 6947,
+    "minBuyout": 0,
+    "marketValue": 300,
     "historical": 0
   },
   {
@@ -5617,8 +6325,8 @@
   },
   {
     "itemId": 7048,
-    "minBuyout": 0,
-    "marketValue": 6000,
+    "minBuyout": 5500,
+    "marketValue": 5666,
     "historical": 0
   },
   {
@@ -5631,6 +6339,18 @@
     "itemId": 7069,
     "minBuyout": 5000,
     "marketValue": 5000,
+    "historical": 0
+  },
+  {
+    "itemId": 7070,
+    "minBuyout": 3000,
+    "marketValue": 3000,
+    "historical": 0
+  },
+  {
+    "itemId": 7071,
+    "minBuyout": 2000,
+    "marketValue": 2000,
     "historical": 0
   },
   {
@@ -5648,13 +6368,13 @@
   {
     "itemId": 7091,
     "minBuyout": 2000,
-    "marketValue": 2166,
+    "marketValue": 2000,
     "historical": 0
   },
   {
     "itemId": 7092,
     "minBuyout": 400,
-    "marketValue": 566,
+    "marketValue": 400,
     "historical": 0
   },
   {
@@ -5665,13 +6385,13 @@
   },
   {
     "itemId": 7097,
-    "minBuyout": 36,
-    "marketValue": 38,
+    "minBuyout": 30,
+    "marketValue": 36,
     "historical": 50
   },
   {
     "itemId": 7098,
-    "minBuyout": 100,
+    "minBuyout": 99,
     "marketValue": 100,
     "historical": 0
   },
@@ -5701,8 +6421,8 @@
   },
   {
     "itemId": 7166,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 500,
+    "marketValue": 593,
     "historical": 1000
   },
   {
@@ -5732,25 +6452,25 @@
   {
     "itemId": 7280,
     "minBuyout": 300,
-    "marketValue": 320,
+    "marketValue": 310,
     "historical": 500
   },
   {
     "itemId": 7281,
-    "minBuyout": 200,
-    "marketValue": 233,
+    "minBuyout": 300,
+    "marketValue": 266,
     "historical": 900
   },
   {
     "itemId": 7282,
-    "minBuyout": 1200,
-    "marketValue": 1233,
+    "minBuyout": 600,
+    "marketValue": 1069,
     "historical": 3000
   },
   {
     "itemId": 7285,
-    "minBuyout": 1500,
-    "marketValue": 2112,
+    "minBuyout": 1000,
+    "marketValue": 1430,
     "historical": 0
   },
   {
@@ -5772,9 +6492,15 @@
     "historical": 0
   },
   {
+    "itemId": 7360,
+    "minBuyout": 2000,
+    "marketValue": 3000,
+    "historical": 0
+  },
+  {
     "itemId": 7363,
-    "minBuyout": 3700,
-    "marketValue": 3850,
+    "minBuyout": 3000,
+    "marketValue": 3723,
     "historical": 0
   },
   {
@@ -5785,7 +6511,7 @@
   },
   {
     "itemId": 7371,
-    "minBuyout": 4500,
+    "minBuyout": 0,
     "marketValue": 4500,
     "historical": 0
   },
@@ -5803,8 +6529,14 @@
   },
   {
     "itemId": 7441,
-    "minBuyout": 15300,
-    "marketValue": 15300,
+    "minBuyout": 12900,
+    "marketValue": 14900,
+    "historical": 0
+  },
+  {
+    "itemId": 7453,
+    "minBuyout": 3000,
+    "marketValue": 26500,
     "historical": 0
   },
   {
@@ -5815,32 +6547,32 @@
   },
   {
     "itemId": 7559,
-    "minBuyout": 1400,
-    "marketValue": 1450,
+    "minBuyout": 1000,
+    "marketValue": 1191,
     "historical": 0
   },
   {
     "itemId": 7608,
-    "minBuyout": 1700,
-    "marketValue": 1700,
+    "minBuyout": 0,
+    "marketValue": 3900,
     "historical": 0
   },
   {
     "itemId": 7676,
     "minBuyout": 988,
-    "marketValue": 995,
+    "marketValue": 990,
     "historical": 0
   },
   {
     "itemId": 7955,
     "minBuyout": 400,
-    "marketValue": 480,
+    "marketValue": 450,
     "historical": 800
   },
   {
     "itemId": 7956,
-    "minBuyout": 8900,
-    "marketValue": 8566,
+    "minBuyout": 8000,
+    "marketValue": 7473,
     "historical": 0
   },
   {
@@ -5852,7 +6584,13 @@
   {
     "itemId": 7958,
     "minBuyout": 13700,
-    "marketValue": 13166,
+    "marketValue": 13433,
+    "historical": 0
+  },
+  {
+    "itemId": 7971,
+    "minBuyout": 51600,
+    "marketValue": 51600,
     "historical": 0
   },
   {
@@ -5875,8 +6613,8 @@
   },
   {
     "itemId": 8178,
-    "minBuyout": 300,
-    "marketValue": 390,
+    "minBuyout": 400,
+    "marketValue": 394,
     "historical": 400
   },
   {
@@ -5894,7 +6632,7 @@
   {
     "itemId": 8181,
     "minBuyout": 100,
-    "marketValue": 200,
+    "marketValue": 150,
     "historical": 300
   },
   {
@@ -5904,21 +6642,27 @@
     "historical": 300
   },
   {
+    "itemId": 8183,
+    "minBuyout": 0,
+    "marketValue": 8700,
+    "historical": 0
+  },
+  {
     "itemId": 8186,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 0,
+    "marketValue": 12250,
     "historical": 0
   },
   {
     "itemId": 8350,
-    "minBuyout": 14900,
-    "marketValue": 11633,
+    "minBuyout": 9900,
+    "marketValue": 10475,
     "historical": 490000
   },
   {
     "itemId": 8365,
-    "minBuyout": 500,
-    "marketValue": 666,
+    "minBuyout": 1000,
+    "marketValue": 833,
     "historical": 0
   },
   {
@@ -5928,9 +6672,27 @@
     "historical": 0
   },
   {
+    "itemId": 8491,
+    "minBuyout": 82300,
+    "marketValue": 92300,
+    "historical": 0
+  },
+  {
+    "itemId": 8492,
+    "minBuyout": 51600,
+    "marketValue": 51600,
+    "historical": 0
+  },
+  {
     "itemId": 8923,
-    "minBuyout": 2500,
+    "minBuyout": 0,
     "marketValue": 2500,
+    "historical": 0
+  },
+  {
+    "itemId": 8925,
+    "minBuyout": 200,
+    "marketValue": 200,
     "historical": 0
   },
   {
@@ -5964,6 +6726,12 @@
     "historical": 100
   },
   {
+    "itemId": 9746,
+    "minBuyout": 300,
+    "marketValue": 300,
+    "historical": 0
+  },
+  {
     "itemId": 9747,
     "minBuyout": 400,
     "marketValue": 400,
@@ -5972,13 +6740,13 @@
   {
     "itemId": 9748,
     "minBuyout": 500,
-    "marketValue": 568,
+    "marketValue": 534,
     "historical": 3200
   },
   {
     "itemId": 9749,
-    "minBuyout": 700,
-    "marketValue": 700,
+    "minBuyout": 500,
+    "marketValue": 666,
     "historical": 2500
   },
   {
@@ -6001,14 +6769,14 @@
   },
   {
     "itemId": 9753,
-    "minBuyout": 500,
+    "minBuyout": 400,
     "marketValue": 500,
     "historical": 1030
   },
   {
     "itemId": 9754,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 100,
+    "marketValue": 166,
     "historical": 0
   },
   {
@@ -6025,8 +6793,8 @@
   },
   {
     "itemId": 9757,
-    "minBuyout": 800,
-    "marketValue": 826,
+    "minBuyout": 500,
+    "marketValue": 810,
     "historical": 2500
   },
   {
@@ -6043,8 +6811,8 @@
   },
   {
     "itemId": 9760,
-    "minBuyout": 700,
-    "marketValue": 766,
+    "minBuyout": 500,
+    "marketValue": 677,
     "historical": 0
   },
   {
@@ -6061,32 +6829,32 @@
   },
   {
     "itemId": 9763,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 492,
     "historical": 866
   },
   {
     "itemId": 9764,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 500,
+    "marketValue": 575,
     "historical": 1100
   },
   {
     "itemId": 9765,
-    "minBuyout": 800,
-    "marketValue": 849,
+    "minBuyout": 700,
+    "marketValue": 818,
     "historical": 9500
   },
   {
     "itemId": 9766,
-    "minBuyout": 1900,
-    "marketValue": 1900,
+    "minBuyout": 1000,
+    "marketValue": 1641,
     "historical": 0
   },
   {
     "itemId": 9767,
     "minBuyout": 3000,
-    "marketValue": 1800,
+    "marketValue": 1975,
     "historical": 0
   },
   {
@@ -6097,56 +6865,56 @@
   },
   {
     "itemId": 9769,
-    "minBuyout": 0,
-    "marketValue": 3300,
+    "minBuyout": 2500,
+    "marketValue": 2900,
     "historical": 0
   },
   {
     "itemId": 9770,
-    "minBuyout": 1100,
-    "marketValue": 1713,
+    "minBuyout": 800,
+    "marketValue": 1309,
     "historical": 0
   },
   {
     "itemId": 9771,
-    "minBuyout": 6900,
-    "marketValue": 6900,
+    "minBuyout": 2300,
+    "marketValue": 5039,
     "historical": 0
   },
   {
     "itemId": 9772,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 3900,
+    "marketValue": 8093,
     "historical": 0
   },
   {
     "itemId": 9773,
-    "minBuyout": 6600,
-    "marketValue": 9350,
+    "minBuyout": 5900,
+    "marketValue": 6162,
     "historical": 0
   },
   {
     "itemId": 9774,
-    "minBuyout": 0,
-    "marketValue": 3450,
+    "minBuyout": 10000,
+    "marketValue": 7380,
     "historical": 0
   },
   {
     "itemId": 9775,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 1500,
+    "marketValue": 2150,
     "historical": 0
   },
   {
     "itemId": 9776,
-    "minBuyout": 1600,
-    "marketValue": 1633,
+    "minBuyout": 1200,
+    "marketValue": 1483,
     "historical": 0
   },
   {
     "itemId": 9777,
-    "minBuyout": 3000,
-    "marketValue": 2333,
+    "minBuyout": 1000,
+    "marketValue": 2319,
     "historical": 0
   },
   {
@@ -6157,14 +6925,14 @@
   },
   {
     "itemId": 9779,
-    "minBuyout": 1000,
-    "marketValue": 1111,
+    "minBuyout": 900,
+    "marketValue": 960,
     "historical": 0
   },
   {
     "itemId": 9780,
-    "minBuyout": 5000,
-    "marketValue": 5950,
+    "minBuyout": 1900,
+    "marketValue": 4286,
     "historical": 0
   },
   {
@@ -6175,50 +6943,50 @@
   },
   {
     "itemId": 9782,
-    "minBuyout": 0,
-    "marketValue": 1700,
+    "minBuyout": 4500,
+    "marketValue": 2633,
     "historical": 0
   },
   {
     "itemId": 9783,
-    "minBuyout": 3300,
-    "marketValue": 3577,
+    "minBuyout": 2500,
+    "marketValue": 3000,
     "historical": 0
   },
   {
     "itemId": 9784,
-    "minBuyout": 900,
-    "marketValue": 988,
+    "minBuyout": 1300,
+    "marketValue": 1210,
     "historical": 0
   },
   {
     "itemId": 9785,
     "minBuyout": 600,
-    "marketValue": 1268,
+    "marketValue": 758,
     "historical": 0
   },
   {
     "itemId": 9786,
-    "minBuyout": 800,
-    "marketValue": 853,
+    "minBuyout": 500,
+    "marketValue": 815,
     "historical": 2200
   },
   {
     "itemId": 9787,
-    "minBuyout": 1500,
-    "marketValue": 2200,
+    "minBuyout": 2900,
+    "marketValue": 2300,
     "historical": 0
   },
   {
     "itemId": 9788,
-    "minBuyout": 400,
-    "marketValue": 453,
+    "minBuyout": 500,
+    "marketValue": 476,
     "historical": 0
   },
   {
     "itemId": 9789,
-    "minBuyout": 1800,
-    "marketValue": 1800,
+    "minBuyout": 1100,
+    "marketValue": 1633,
     "historical": 2300
   },
   {
@@ -6229,44 +6997,56 @@
   },
   {
     "itemId": 9792,
-    "minBuyout": 5500,
-    "marketValue": 5500,
+    "minBuyout": 5000,
+    "marketValue": 5300,
     "historical": 0
   },
   {
     "itemId": 9793,
-    "minBuyout": 6000,
-    "marketValue": 6000,
+    "minBuyout": 3500,
+    "marketValue": 4083,
     "historical": 0
   },
   {
     "itemId": 9794,
-    "minBuyout": 0,
-    "marketValue": 3000,
+    "minBuyout": 8900,
+    "marketValue": 7425,
     "historical": 0
   },
   {
     "itemId": 9795,
-    "minBuyout": 220000,
-    "marketValue": 220000,
+    "minBuyout": 10000,
+    "marketValue": 16666,
     "historical": 0
   },
   {
     "itemId": 9796,
-    "minBuyout": 9900,
-    "marketValue": 9900,
+    "minBuyout": 7000,
+    "marketValue": 8450,
     "historical": 0
   },
   {
     "itemId": 9799,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 3900,
+    "marketValue": 6950,
     "historical": 0
   },
   {
     "itemId": 9801,
     "minBuyout": 2500,
-    "marketValue": 2500,
+    "marketValue": 2150,
+    "historical": 0
+  },
+  {
+    "itemId": 9802,
+    "minBuyout": 9000,
+    "marketValue": 9000,
+    "historical": 0
+  },
+  {
+    "itemId": 9803,
+    "minBuyout": 6600,
+    "marketValue": 6600,
     "historical": 0
   },
   {
@@ -6277,14 +7057,20 @@
   },
   {
     "itemId": 9805,
-    "minBuyout": 8000,
-    "marketValue": 9666,
+    "minBuyout": 5000,
+    "marketValue": 8250,
     "historical": 0
   },
   {
     "itemId": 9806,
     "minBuyout": 5000,
     "marketValue": 5000,
+    "historical": 0
+  },
+  {
+    "itemId": 9807,
+    "minBuyout": 0,
+    "marketValue": 6000,
     "historical": 0
   },
   {
@@ -6296,7 +7082,7 @@
   {
     "itemId": 9810,
     "minBuyout": 4900,
-    "marketValue": 3900,
+    "marketValue": 4400,
     "historical": 0
   },
   {
@@ -6313,20 +7099,26 @@
   },
   {
     "itemId": 9814,
-    "minBuyout": 0,
-    "marketValue": 1100,
+    "minBuyout": 3400,
+    "marketValue": 2633,
     "historical": 0
   },
   {
     "itemId": 9815,
-    "minBuyout": 9900,
-    "marketValue": 11633,
+    "minBuyout": 3000,
+    "marketValue": 7316,
     "historical": 0
   },
   {
     "itemId": 9817,
-    "minBuyout": 3500,
-    "marketValue": 9300,
+    "minBuyout": 4700,
+    "marketValue": 7000,
+    "historical": 0
+  },
+  {
+    "itemId": 9818,
+    "minBuyout": 7900,
+    "marketValue": 7900,
     "historical": 0
   },
   {
@@ -6349,7 +7141,7 @@
   },
   {
     "itemId": 9853,
-    "minBuyout": 6900,
+    "minBuyout": 9900,
     "marketValue": 6900,
     "historical": 0
   },
@@ -6367,7 +7159,7 @@
   },
   {
     "itemId": 9895,
-    "minBuyout": 19900,
+    "minBuyout": 0,
     "marketValue": 19900,
     "historical": 0
   },
@@ -6386,24 +7178,30 @@
   {
     "itemId": 10047,
     "minBuyout": 200,
-    "marketValue": 287,
+    "marketValue": 252,
     "historical": 700
   },
   {
     "itemId": 10285,
-    "minBuyout": 1999,
-    "marketValue": 2713,
+    "minBuyout": 1699,
+    "marketValue": 2300,
     "historical": 0
   },
   {
     "itemId": 10287,
-    "minBuyout": 8800,
-    "marketValue": 8800,
+    "minBuyout": 5500,
+    "marketValue": 7700,
+    "historical": 0
+  },
+  {
+    "itemId": 10288,
+    "minBuyout": 0,
+    "marketValue": 8500,
     "historical": 0
   },
   {
     "itemId": 10316,
-    "minBuyout": 600,
+    "minBuyout": 500,
     "marketValue": 600,
     "historical": 1500
   },
@@ -6415,14 +7213,14 @@
   },
   {
     "itemId": 10407,
-    "minBuyout": 3500,
-    "marketValue": 3966,
+    "minBuyout": 4900,
+    "marketValue": 4200,
     "historical": 0
   },
   {
     "itemId": 10413,
-    "minBuyout": 12000,
-    "marketValue": 18022,
+    "minBuyout": 10000,
+    "marketValue": 14316,
     "historical": 0
   },
   {
@@ -6433,8 +7231,8 @@
   },
   {
     "itemId": 10424,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 4000,
+    "marketValue": 3750,
     "historical": 0
   },
   {
@@ -6444,39 +7242,45 @@
     "historical": 0
   },
   {
+    "itemId": 10648,
+    "minBuyout": 280,
+    "marketValue": 280,
+    "historical": 0
+  },
+  {
     "itemId": 10938,
-    "minBuyout": 192,
-    "marketValue": 214,
+    "minBuyout": 150,
+    "marketValue": 196,
     "historical": 399
   },
   {
     "itemId": 10939,
-    "minBuyout": 450,
-    "marketValue": 584,
+    "minBuyout": 399,
+    "marketValue": 503,
     "historical": 1880
   },
   {
     "itemId": 10940,
-    "minBuyout": 75,
-    "marketValue": 79,
+    "minBuyout": 71,
+    "marketValue": 75,
     "historical": 95
   },
   {
     "itemId": 10978,
-    "minBuyout": 488,
-    "marketValue": 447,
+    "minBuyout": 484,
+    "marketValue": 465,
     "historical": 1500
   },
   {
     "itemId": 10998,
-    "minBuyout": 2900,
-    "marketValue": 2932,
+    "minBuyout": 2449,
+    "marketValue": 2699,
     "historical": 0
   },
   {
     "itemId": 11038,
-    "minBuyout": 500,
-    "marketValue": 660,
+    "minBuyout": 400,
+    "marketValue": 546,
     "historical": 1000
   },
   {
@@ -6487,74 +7291,92 @@
   },
   {
     "itemId": 11082,
-    "minBuyout": 8999,
-    "marketValue": 8999,
+    "minBuyout": 6498,
+    "marketValue": 6665,
     "historical": 0
   },
   {
     "itemId": 11083,
-    "minBuyout": 3800,
-    "marketValue": 3963,
+    "minBuyout": 2999,
+    "marketValue": 3620,
     "historical": 0
   },
   {
     "itemId": 11084,
-    "minBuyout": 20000,
-    "marketValue": 20000,
+    "minBuyout": 40100,
+    "marketValue": 26533,
     "historical": 0
   },
   {
     "itemId": 11098,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 1500,
+    "marketValue": 1833,
     "historical": 0
   },
   {
     "itemId": 11101,
     "minBuyout": 7800,
-    "marketValue": 9166,
+    "marketValue": 7800,
     "historical": 0
   },
   {
     "itemId": 11128,
     "minBuyout": 6500,
-    "marketValue": 12861,
+    "marketValue": 8046,
     "historical": 0
   },
   {
     "itemId": 11134,
-    "minBuyout": 0,
-    "marketValue": 5000,
+    "minBuyout": 3500,
+    "marketValue": 3999,
+    "historical": 0
+  },
+  {
+    "itemId": 11135,
+    "minBuyout": 6999,
+    "marketValue": 6999,
+    "historical": 0
+  },
+  {
+    "itemId": 11138,
+    "minBuyout": 19900,
+    "marketValue": 19900,
     "historical": 0
   },
   {
     "itemId": 11165,
-    "minBuyout": 31200,
-    "marketValue": 31200,
+    "minBuyout": 25000,
+    "marketValue": 27480,
     "historical": 0
   },
   {
     "itemId": 11287,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 293,
     "historical": 400
   },
   {
     "itemId": 11288,
-    "minBuyout": 600,
-    "marketValue": 633,
+    "minBuyout": 400,
+    "marketValue": 561,
     "historical": 1253
   },
   {
+    "itemId": 11291,
+    "minBuyout": 3000,
+    "marketValue": 3000,
+    "historical": 0
+  },
+  {
     "itemId": 11303,
-    "minBuyout": 5400,
-    "marketValue": 5422,
+    "minBuyout": 5100,
+    "marketValue": 5348,
     "historical": 7500
   },
   {
     "itemId": 11304,
-    "minBuyout": 9000,
-    "marketValue": 10391,
+    "minBuyout": 10000,
+    "marketValue": 9918,
     "historical": 20000
   },
   {
@@ -6577,38 +7399,56 @@
   },
   {
     "itemId": 11584,
-    "minBuyout": 16,
-    "marketValue": 18,
+    "minBuyout": 14,
+    "marketValue": 16,
     "historical": 67
   },
   {
     "itemId": 11965,
-    "minBuyout": 9900,
-    "marketValue": 8616,
+    "minBuyout": 8000,
+    "marketValue": 8308,
     "historical": 0
   },
   {
     "itemId": 11967,
     "minBuyout": 10000,
-    "marketValue": 22566,
+    "marketValue": 10000,
+    "historical": 0
+  },
+  {
+    "itemId": 11968,
+    "minBuyout": 10000,
+    "marketValue": 10000,
     "historical": 0
   },
   {
     "itemId": 11981,
+    "minBuyout": 5000,
+    "marketValue": 9444,
+    "historical": 0
+  },
+  {
+    "itemId": 11982,
+    "minBuyout": 0,
+    "marketValue": 6900,
+    "historical": 0
+  },
+  {
+    "itemId": 11983,
     "minBuyout": 10000,
     "marketValue": 10000,
     "historical": 0
   },
   {
     "itemId": 11993,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 8500,
+    "marketValue": 9625,
     "historical": 0
   },
   {
     "itemId": 11994,
-    "minBuyout": 10000,
-    "marketValue": 12666,
+    "minBuyout": 8000,
+    "marketValue": 11666,
     "historical": 0
   },
   {
@@ -6626,7 +7466,7 @@
   {
     "itemId": 12052,
     "minBuyout": 9900,
-    "marketValue": 10666,
+    "marketValue": 9900,
     "historical": 0
   },
   {
@@ -6637,8 +7477,8 @@
   },
   {
     "itemId": 12054,
-    "minBuyout": 30000,
-    "marketValue": 30433,
+    "minBuyout": 13200,
+    "marketValue": 21816,
     "historical": 0
   },
   {
@@ -6649,14 +7489,14 @@
   },
   {
     "itemId": 12223,
-    "minBuyout": 13,
-    "marketValue": 14,
+    "minBuyout": 11,
+    "marketValue": 12,
     "historical": 19
   },
   {
     "itemId": 12224,
-    "minBuyout": 33,
-    "marketValue": 34,
+    "minBuyout": 25,
+    "marketValue": 32,
     "historical": 82
   },
   {
@@ -6673,110 +7513,164 @@
   },
   {
     "itemId": 12975,
-    "minBuyout": 19600,
-    "marketValue": 20433,
+    "minBuyout": 17900,
+    "marketValue": 19198,
     "historical": 0
   },
   {
     "itemId": 12976,
-    "minBuyout": 25000,
-    "marketValue": 23333,
+    "minBuyout": 20000,
+    "marketValue": 21666,
     "historical": 0
   },
   {
     "itemId": 12977,
-    "minBuyout": 25000,
-    "marketValue": 25000,
+    "minBuyout": 24000,
+    "marketValue": 24944,
     "historical": 0
   },
   {
     "itemId": 12978,
-    "minBuyout": 24900,
-    "marketValue": 35266,
+    "minBuyout": 22000,
+    "marketValue": 29583,
     "historical": 0
   },
   {
     "itemId": 12979,
     "minBuyout": 10000,
-    "marketValue": 10000,
+    "marketValue": 8833,
     "historical": 0
   },
   {
     "itemId": 12982,
-    "minBuyout": 19900,
-    "marketValue": 20833,
+    "minBuyout": 16900,
+    "marketValue": 19866,
+    "historical": 0
+  },
+  {
+    "itemId": 12983,
+    "minBuyout": 53600,
+    "marketValue": 53600,
     "historical": 0
   },
   {
     "itemId": 12984,
-    "minBuyout": 150000,
-    "marketValue": 184800,
+    "minBuyout": 50000,
+    "marketValue": 117400,
     "historical": 0
   },
   {
     "itemId": 12985,
-    "minBuyout": 5000,
-    "marketValue": 5000,
+    "minBuyout": 10000,
+    "marketValue": 7500,
     "historical": 0
   },
   {
     "itemId": 12987,
-    "minBuyout": 50000,
-    "marketValue": 50000,
+    "minBuyout": 19000,
+    "marketValue": 34800,
     "historical": 0
   },
   {
     "itemId": 12988,
-    "minBuyout": 31800,
-    "marketValue": 31800,
+    "minBuyout": 9000,
+    "marketValue": 28622,
     "historical": 0
   },
   {
     "itemId": 12989,
-    "minBuyout": 13300,
-    "marketValue": 13300,
+    "minBuyout": 12500,
+    "marketValue": 13141,
     "historical": 0
   },
   {
     "itemId": 12990,
-    "minBuyout": 53900,
-    "marketValue": 53900,
+    "minBuyout": 39900,
+    "marketValue": 47500,
     "historical": 0
   },
   {
     "itemId": 12992,
-    "minBuyout": 20000,
-    "marketValue": 30000,
+    "minBuyout": 19000,
+    "marketValue": 19625,
+    "historical": 0
+  },
+  {
+    "itemId": 12994,
+    "minBuyout": 39900,
+    "marketValue": 79900,
     "historical": 0
   },
   {
     "itemId": 12996,
     "minBuyout": 32000,
-    "marketValue": 36000,
+    "marketValue": 32000,
     "historical": 0
   },
   {
     "itemId": 12997,
-    "minBuyout": 20000,
+    "minBuyout": 32900,
     "marketValue": 20000,
     "historical": 0
   },
   {
     "itemId": 12998,
     "minBuyout": 37700,
-    "marketValue": 39425,
+    "marketValue": 38850,
+    "historical": 0
+  },
+  {
+    "itemId": 12999,
+    "minBuyout": 20000,
+    "marketValue": 20000,
     "historical": 0
   },
   {
     "itemId": 13010,
-    "minBuyout": 23400,
+    "minBuyout": 0,
     "marketValue": 23400,
     "historical": 0
   },
   {
-    "itemId": 13136,
-    "minBuyout": 0,
+    "itemId": 13016,
+    "minBuyout": 40000,
     "marketValue": 40000,
+    "historical": 0
+  },
+  {
+    "itemId": 13032,
+    "minBuyout": 199900,
+    "marketValue": 199900,
+    "historical": 0
+  },
+  {
+    "itemId": 13041,
+    "minBuyout": 36000,
+    "marketValue": 36266,
+    "historical": 0
+  },
+  {
+    "itemId": 13097,
+    "minBuyout": 93300,
+    "marketValue": 93300,
+    "historical": 0
+  },
+  {
+    "itemId": 13106,
+    "minBuyout": 21900,
+    "marketValue": 21900,
+    "historical": 0
+  },
+  {
+    "itemId": 13136,
+    "minBuyout": 79900,
+    "marketValue": 63940,
+    "historical": 0
+  },
+  {
+    "itemId": 13422,
+    "minBuyout": 100,
+    "marketValue": 100,
     "historical": 0
   },
   {
@@ -6787,9 +7681,15 @@
   },
   {
     "itemId": 14025,
-    "minBuyout": 400,
-    "marketValue": 526,
+    "minBuyout": 300,
+    "marketValue": 456,
     "historical": 1100
+  },
+  {
+    "itemId": 14048,
+    "minBuyout": 33100,
+    "marketValue": 33100,
+    "historical": 0
   },
   {
     "itemId": 14086,
@@ -6824,7 +7724,7 @@
   {
     "itemId": 14091,
     "minBuyout": 200,
-    "marketValue": 237,
+    "marketValue": 218,
     "historical": 400
   },
   {
@@ -6836,7 +7736,7 @@
   {
     "itemId": 14094,
     "minBuyout": 200,
-    "marketValue": 288,
+    "marketValue": 262,
     "historical": 400
   },
   {
@@ -6847,8 +7747,8 @@
   },
   {
     "itemId": 14096,
-    "minBuyout": 900,
-    "marketValue": 981,
+    "minBuyout": 500,
+    "marketValue": 935,
     "historical": 0
   },
   {
@@ -6865,43 +7765,43 @@
   },
   {
     "itemId": 14099,
-    "minBuyout": 0,
-    "marketValue": 100,
+    "minBuyout": 300,
+    "marketValue": 250,
     "historical": 0
   },
   {
     "itemId": 14102,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 300,
+    "marketValue": 486,
     "historical": 0
   },
   {
     "itemId": 14109,
-    "minBuyout": 500,
-    "marketValue": 660,
+    "minBuyout": 400,
+    "marketValue": 577,
     "historical": 0
   },
   {
     "itemId": 14110,
     "minBuyout": 200,
-    "marketValue": 233,
+    "marketValue": 200,
     "historical": 0
   },
   {
     "itemId": 14113,
-    "minBuyout": 600,
-    "marketValue": 705,
+    "minBuyout": 400,
+    "marketValue": 676,
     "historical": 2500
   },
   {
     "itemId": 14114,
-    "minBuyout": 600,
-    "marketValue": 699,
+    "minBuyout": 500,
+    "marketValue": 655,
     "historical": 1500
   },
   {
     "itemId": 14115,
-    "minBuyout": 0,
+    "minBuyout": 200,
     "marketValue": 200,
     "historical": 0
   },
@@ -6914,61 +7814,73 @@
   {
     "itemId": 14117,
     "minBuyout": 500,
-    "marketValue": 621,
+    "marketValue": 560,
     "historical": 1000
   },
   {
     "itemId": 14119,
-    "minBuyout": 600,
-    "marketValue": 714,
+    "minBuyout": 500,
+    "marketValue": 658,
     "historical": 700
   },
   {
     "itemId": 14120,
-    "minBuyout": 2500,
-    "marketValue": 3333,
+    "minBuyout": 2200,
+    "marketValue": 2464,
     "historical": 0
   },
   {
     "itemId": 14121,
     "minBuyout": 1800,
-    "marketValue": 1966,
+    "marketValue": 1800,
     "historical": 0
   },
   {
     "itemId": 14122,
     "minBuyout": 600,
-    "marketValue": 680,
+    "marketValue": 647,
     "historical": 0
   },
   {
     "itemId": 14123,
     "minBuyout": 600,
-    "marketValue": 783,
+    "marketValue": 630,
     "historical": 0
   },
   {
     "itemId": 14124,
     "minBuyout": 2200,
-    "marketValue": 2477,
+    "marketValue": 2266,
     "historical": 0
   },
   {
     "itemId": 14125,
-    "minBuyout": 2400,
-    "marketValue": 2466,
+    "minBuyout": 2300,
+    "marketValue": 2408,
+    "historical": 0
+  },
+  {
+    "itemId": 14126,
+    "minBuyout": 2000,
+    "marketValue": 2000,
     "historical": 0
   },
   {
     "itemId": 14129,
-    "minBuyout": 1700,
-    "marketValue": 1788,
+    "minBuyout": 1900,
+    "marketValue": 1811,
     "historical": 0
   },
   {
     "itemId": 14131,
-    "minBuyout": 1200,
-    "marketValue": 1986,
+    "minBuyout": 900,
+    "marketValue": 1593,
+    "historical": 0
+  },
+  {
+    "itemId": 14157,
+    "minBuyout": 1300,
+    "marketValue": 1400,
     "historical": 0
   },
   {
@@ -6980,55 +7892,61 @@
   {
     "itemId": 14159,
     "minBuyout": 2000,
-    "marketValue": 2000,
+    "marketValue": 1944,
     "historical": 0
   },
   {
     "itemId": 14160,
-    "minBuyout": 1000,
-    "marketValue": 1111,
+    "minBuyout": 900,
+    "marketValue": 981,
     "historical": 0
   },
   {
     "itemId": 14161,
-    "minBuyout": 1500,
-    "marketValue": 1613,
+    "minBuyout": 900,
+    "marketValue": 1494,
+    "historical": 0
+  },
+  {
+    "itemId": 14162,
+    "minBuyout": 4200,
+    "marketValue": 4300,
     "historical": 0
   },
   {
     "itemId": 14164,
-    "minBuyout": 2200,
-    "marketValue": 1600,
+    "minBuyout": 1000,
+    "marketValue": 1640,
     "historical": 0
   },
   {
     "itemId": 14165,
-    "minBuyout": 5500,
-    "marketValue": 5500,
+    "minBuyout": 3900,
+    "marketValue": 4966,
     "historical": 0
   },
   {
     "itemId": 14166,
-    "minBuyout": 1000,
-    "marketValue": 1166,
+    "minBuyout": 900,
+    "marketValue": 987,
     "historical": 0
   },
   {
     "itemId": 14167,
-    "minBuyout": 1400,
-    "marketValue": 1500,
+    "minBuyout": 1300,
+    "marketValue": 1451,
     "historical": 0
   },
   {
     "itemId": 14168,
-    "minBuyout": 2000,
-    "marketValue": 2544,
+    "minBuyout": 1000,
+    "marketValue": 2134,
     "historical": 0
   },
   {
     "itemId": 14169,
     "minBuyout": 3900,
-    "marketValue": 3266,
+    "marketValue": 3583,
     "historical": 0
   },
   {
@@ -7045,50 +7963,68 @@
   },
   {
     "itemId": 14173,
-    "minBuyout": 2200,
-    "marketValue": 3305,
+    "minBuyout": 1800,
+    "marketValue": 2256,
     "historical": 0
   },
   {
     "itemId": 14174,
-    "minBuyout": 1100,
-    "marketValue": 1100,
+    "minBuyout": 1000,
+    "marketValue": 1086,
     "historical": 0
   },
   {
     "itemId": 14182,
-    "minBuyout": 21800,
-    "marketValue": 21800,
+    "minBuyout": 0,
+    "marketValue": 19080,
+    "historical": 0
+  },
+  {
+    "itemId": 14185,
+    "minBuyout": 20000,
+    "marketValue": 20000,
+    "historical": 0
+  },
+  {
+    "itemId": 14188,
+    "minBuyout": 5000,
+    "marketValue": 5533,
+    "historical": 0
+  },
+  {
+    "itemId": 14194,
+    "minBuyout": 7500,
+    "marketValue": 7500,
     "historical": 0
   },
   {
     "itemId": 14227,
-    "minBuyout": 5000,
-    "marketValue": 5000,
+    "minBuyout": 4000,
+    "marketValue": 4978,
     "historical": 0
   },
   {
     "itemId": 14364,
-    "minBuyout": 1000,
-    "marketValue": 1433,
+    "minBuyout": 800,
+    "marketValue": 1055,
     "historical": 0
   },
   {
     "itemId": 14365,
     "minBuyout": 400,
-    "marketValue": 466,
+    "marketValue": 433,
     "historical": 0
   },
   {
     "itemId": 14366,
-    "minBuyout": 900,
-    "marketValue": 980,
+    "minBuyout": 700,
+    "marketValue": 873,
     "historical": 0
   },
   {
     "itemId": 14367,
-    "minBuyout": 1300,
-    "marketValue": 1590,
+    "minBuyout": 1100,
+    "marketValue": 1361,
     "historical": 0
   },
   {
@@ -7105,8 +8041,8 @@
   },
   {
     "itemId": 14370,
-    "minBuyout": 800,
-    "marketValue": 800,
+    "minBuyout": 500,
+    "marketValue": 689,
     "historical": 0
   },
   {
@@ -7128,105 +8064,123 @@
     "historical": 0
   },
   {
+    "itemId": 14377,
+    "minBuyout": 4500,
+    "marketValue": 4500,
+    "historical": 0
+  },
+  {
     "itemId": 14559,
-    "minBuyout": 900,
-    "marketValue": 933,
+    "minBuyout": 800,
+    "marketValue": 916,
     "historical": 4500
   },
   {
     "itemId": 14560,
-    "minBuyout": 1400,
-    "marketValue": 1614,
+    "minBuyout": 1000,
+    "marketValue": 1277,
     "historical": 0
   },
   {
     "itemId": 14561,
-    "minBuyout": 900,
-    "marketValue": 1371,
+    "minBuyout": 800,
+    "marketValue": 1213,
+    "historical": 0
+  },
+  {
+    "itemId": 14562,
+    "minBuyout": 0,
+    "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 14563,
-    "minBuyout": 900,
-    "marketValue": 987,
+    "minBuyout": 800,
+    "marketValue": 912,
     "historical": 0
   },
   {
     "itemId": 14564,
-    "minBuyout": 5000,
-    "marketValue": 3150,
+    "minBuyout": 3000,
+    "marketValue": 3480,
     "historical": 0
   },
   {
     "itemId": 14565,
-    "minBuyout": 4400,
-    "marketValue": 4733,
+    "minBuyout": 2800,
+    "marketValue": 3808,
     "historical": 0
   },
   {
     "itemId": 14567,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 7500,
+    "marketValue": 6700,
     "historical": 0
   },
   {
     "itemId": 14568,
     "minBuyout": 11200,
-    "marketValue": 11200,
+    "marketValue": 10540,
+    "historical": 0
+  },
+  {
+    "itemId": 14569,
+    "minBuyout": 22900,
+    "marketValue": 22900,
     "historical": 0
   },
   {
     "itemId": 14571,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 3300,
+    "marketValue": 2866,
     "historical": 0
   },
   {
     "itemId": 14572,
-    "minBuyout": 0,
+    "minBuyout": 5500,
     "marketValue": 5500,
     "historical": 0
   },
   {
     "itemId": 14722,
-    "minBuyout": 600,
-    "marketValue": 642,
+    "minBuyout": 500,
+    "marketValue": 615,
     "historical": 5000
   },
   {
     "itemId": 14723,
-    "minBuyout": 700,
-    "marketValue": 941,
+    "minBuyout": 600,
+    "marketValue": 806,
     "historical": 6000
   },
   {
     "itemId": 14724,
-    "minBuyout": 800,
-    "marketValue": 948,
+    "minBuyout": 700,
+    "marketValue": 809,
     "historical": 0
   },
   {
     "itemId": 14725,
-    "minBuyout": 500,
+    "minBuyout": 400,
     "marketValue": 500,
     "historical": 1000
   },
   {
     "itemId": 14726,
-    "minBuyout": 2100,
-    "marketValue": 2373,
+    "minBuyout": 2000,
+    "marketValue": 2209,
     "historical": 0
   },
   {
     "itemId": 14727,
     "minBuyout": 1900,
-    "marketValue": 1983,
+    "marketValue": 1865,
     "historical": 0
   },
   {
     "itemId": 14728,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 3500,
+    "marketValue": 2075,
     "historical": 0
   },
   {
@@ -7236,33 +8190,45 @@
     "historical": 0
   },
   {
+    "itemId": 14730,
+    "minBuyout": 0,
+    "marketValue": 9900,
+    "historical": 0
+  },
+  {
     "itemId": 14742,
     "minBuyout": 10000,
-    "marketValue": 10000,
+    "marketValue": 9500,
     "historical": 0
   },
   {
     "itemId": 14743,
     "minBuyout": 2200,
-    "marketValue": 1550,
+    "marketValue": 1940,
     "historical": 0
   },
   {
     "itemId": 14745,
-    "minBuyout": 2500,
-    "marketValue": 2233,
+    "minBuyout": 2200,
+    "marketValue": 2316,
     "historical": 0
   },
   {
     "itemId": 14746,
-    "minBuyout": 5000,
-    "marketValue": 5000,
+    "minBuyout": 4800,
+    "marketValue": 4966,
+    "historical": 0
+  },
+  {
+    "itemId": 14747,
+    "minBuyout": 9900,
+    "marketValue": 9900,
     "historical": 0
   },
   {
     "itemId": 14748,
-    "minBuyout": 0,
-    "marketValue": 5000,
+    "minBuyout": 18800,
+    "marketValue": 11900,
     "historical": 0
   },
   {
@@ -7272,14 +8238,20 @@
     "historical": 0
   },
   {
+    "itemId": 14752,
+    "minBuyout": 7700,
+    "marketValue": 7700,
+    "historical": 0
+  },
+  {
     "itemId": 15003,
     "minBuyout": 200,
-    "marketValue": 333,
+    "marketValue": 266,
     "historical": 0
   },
   {
     "itemId": 15004,
-    "minBuyout": 200,
+    "minBuyout": 100,
     "marketValue": 200,
     "historical": 0
   },
@@ -7316,19 +8288,19 @@
   {
     "itemId": 15010,
     "minBuyout": 200,
-    "marketValue": 289,
+    "marketValue": 294,
     "historical": 300
   },
   {
     "itemId": 15011,
     "minBuyout": 400,
-    "marketValue": 400,
+    "marketValue": 410,
     "historical": 400
   },
   {
     "itemId": 15012,
-    "minBuyout": 700,
-    "marketValue": 884,
+    "minBuyout": 500,
+    "marketValue": 793,
     "historical": 3000
   },
   {
@@ -7339,8 +8311,8 @@
   },
   {
     "itemId": 15014,
-    "minBuyout": 1500,
-    "marketValue": 1488,
+    "minBuyout": 1000,
+    "marketValue": 1398,
     "historical": 5000
   },
   {
@@ -7351,68 +8323,68 @@
   },
   {
     "itemId": 15016,
-    "minBuyout": 700,
-    "marketValue": 700,
+    "minBuyout": 500,
+    "marketValue": 588,
     "historical": 0
   },
   {
     "itemId": 15017,
-    "minBuyout": 1000,
-    "marketValue": 1411,
+    "minBuyout": 900,
+    "marketValue": 1205,
     "historical": 0
   },
   {
     "itemId": 15018,
-    "minBuyout": 0,
-    "marketValue": 8900,
+    "minBuyout": 4500,
+    "marketValue": 2866,
     "historical": 0
   },
   {
     "itemId": 15110,
-    "minBuyout": 3500,
-    "marketValue": 3500,
+    "minBuyout": 3000,
+    "marketValue": 3404,
     "historical": 0
   },
   {
     "itemId": 15111,
-    "minBuyout": 1500,
-    "marketValue": 1400,
+    "minBuyout": 1000,
+    "marketValue": 1340,
     "historical": 0
   },
   {
     "itemId": 15112,
-    "minBuyout": 2500,
-    "marketValue": 2166,
+    "minBuyout": 900,
+    "marketValue": 1533,
     "historical": 0
   },
   {
     "itemId": 15113,
     "minBuyout": 9900,
-    "marketValue": 9900,
+    "marketValue": 8733,
     "historical": 0
   },
   {
     "itemId": 15114,
-    "minBuyout": 1100,
-    "marketValue": 1383,
+    "minBuyout": 800,
+    "marketValue": 1202,
     "historical": 0
   },
   {
     "itemId": 15115,
-    "minBuyout": 1500,
+    "minBuyout": 0,
     "marketValue": 1500,
     "historical": 0
   },
   {
     "itemId": 15117,
     "minBuyout": 5500,
-    "marketValue": 5400,
+    "marketValue": 5450,
     "historical": 0
   },
   {
     "itemId": 15118,
-    "minBuyout": 0,
-    "marketValue": 3300,
+    "minBuyout": 5500,
+    "marketValue": 4400,
     "historical": 0
   },
   {
@@ -7424,49 +8396,55 @@
   {
     "itemId": 15210,
     "minBuyout": 900,
-    "marketValue": 956,
+    "marketValue": 928,
     "historical": 2400
   },
   {
     "itemId": 15211,
-    "minBuyout": 3300,
-    "marketValue": 3100,
+    "minBuyout": 3500,
+    "marketValue": 3262,
     "historical": 0
   },
   {
     "itemId": 15222,
     "minBuyout": 1700,
-    "marketValue": 2480,
+    "marketValue": 2252,
     "historical": 0
   },
   {
     "itemId": 15223,
-    "minBuyout": 4000,
-    "marketValue": 3950,
+    "minBuyout": 3200,
+    "marketValue": 3780,
     "historical": 0
   },
   {
     "itemId": 15224,
     "minBuyout": 5500,
-    "marketValue": 6333,
+    "marketValue": 6750,
+    "historical": 0
+  },
+  {
+    "itemId": 15230,
+    "minBuyout": 7700,
+    "marketValue": 5850,
     "historical": 0
   },
   {
     "itemId": 15241,
-    "minBuyout": 0,
-    "marketValue": 7000,
+    "minBuyout": 9900,
+    "marketValue": 5800,
     "historical": 0
   },
   {
     "itemId": 15248,
-    "minBuyout": 2300,
-    "marketValue": 2571,
+    "minBuyout": 2100,
+    "marketValue": 2344,
     "historical": 0
   },
   {
     "itemId": 15249,
-    "minBuyout": 12200,
-    "marketValue": 7733,
+    "minBuyout": 8800,
+    "marketValue": 8925,
     "historical": 0
   },
   {
@@ -7483,26 +8461,32 @@
   },
   {
     "itemId": 15269,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 5000,
+    "marketValue": 8000,
+    "historical": 0
+  },
+  {
+    "itemId": 15284,
+    "minBuyout": 0,
+    "marketValue": 6600,
     "historical": 0
   },
   {
     "itemId": 15297,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 492,
     "historical": 0
   },
   {
     "itemId": 15298,
-    "minBuyout": 600,
-    "marketValue": 600,
+    "minBuyout": 400,
+    "marketValue": 574,
     "historical": 1000
   },
   {
     "itemId": 15299,
     "minBuyout": 200,
-    "marketValue": 255,
+    "marketValue": 213,
     "historical": 0
   },
   {
@@ -7514,7 +8498,7 @@
   {
     "itemId": 15301,
     "minBuyout": 600,
-    "marketValue": 754,
+    "marketValue": 632,
     "historical": 0
   },
   {
@@ -7526,25 +8510,25 @@
   {
     "itemId": 15303,
     "minBuyout": 300,
-    "marketValue": 386,
+    "marketValue": 379,
     "historical": 800
   },
   {
     "itemId": 15304,
-    "minBuyout": 1000,
-    "marketValue": 875,
+    "minBuyout": 800,
+    "marketValue": 889,
     "historical": 700
   },
   {
     "itemId": 15305,
-    "minBuyout": 1000,
-    "marketValue": 1105,
+    "minBuyout": 800,
+    "marketValue": 976,
     "historical": 0
   },
   {
     "itemId": 15306,
     "minBuyout": 500,
-    "marketValue": 729,
+    "marketValue": 677,
     "historical": 500
   },
   {
@@ -7555,26 +8539,32 @@
   },
   {
     "itemId": 15309,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 497,
     "historical": 3000
   },
   {
     "itemId": 15310,
-    "minBuyout": 2000,
-    "marketValue": 1975,
+    "minBuyout": 1000,
+    "marketValue": 1616,
     "historical": 2900
   },
   {
     "itemId": 15312,
-    "minBuyout": 1500,
+    "minBuyout": 1400,
     "marketValue": 1477,
     "historical": 0
   },
   {
     "itemId": 15313,
-    "minBuyout": 0,
-    "marketValue": 5000,
+    "minBuyout": 11800,
+    "marketValue": 8400,
+    "historical": 0
+  },
+  {
+    "itemId": 15329,
+    "minBuyout": 4500,
+    "marketValue": 4500,
     "historical": 0
   },
   {
@@ -7585,14 +8575,38 @@
   },
   {
     "itemId": 15333,
-    "minBuyout": 1500,
-    "marketValue": 1500,
+    "minBuyout": 2000,
+    "marketValue": 1833,
+    "historical": 0
+  },
+  {
+    "itemId": 15334,
+    "minBuyout": 5500,
+    "marketValue": 5500,
+    "historical": 0
+  },
+  {
+    "itemId": 15336,
+    "minBuyout": 4000,
+    "marketValue": 4000,
+    "historical": 0
+  },
+  {
+    "itemId": 15338,
+    "minBuyout": 10000,
+    "marketValue": 10000,
     "historical": 0
   },
   {
     "itemId": 15339,
-    "minBuyout": 12200,
+    "minBuyout": 0,
     "marketValue": 12200,
+    "historical": 0
+  },
+  {
+    "itemId": 15347,
+    "minBuyout": 6900,
+    "marketValue": 6900,
     "historical": 0
   },
   {
@@ -7621,8 +8635,8 @@
   },
   {
     "itemId": 15476,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 293,
     "historical": 600
   },
   {
@@ -7646,13 +8660,13 @@
   {
     "itemId": 15480,
     "minBuyout": 300,
-    "marketValue": 1111,
+    "marketValue": 705,
     "historical": 9900
   },
   {
     "itemId": 15481,
-    "minBuyout": 400,
-    "marketValue": 422,
+    "minBuyout": 200,
+    "marketValue": 381,
     "historical": 0
   },
   {
@@ -7681,26 +8695,26 @@
   },
   {
     "itemId": 15486,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 400,
+    "marketValue": 493,
     "historical": 800
   },
   {
     "itemId": 15487,
-    "minBuyout": 800,
-    "marketValue": 800,
+    "minBuyout": 600,
+    "marketValue": 783,
     "historical": 0
   },
   {
     "itemId": 15488,
-    "minBuyout": 0,
-    "marketValue": 1500,
+    "minBuyout": 2500,
+    "marketValue": 2000,
     "historical": 0
   },
   {
     "itemId": 15489,
-    "minBuyout": 600,
-    "marketValue": 626,
+    "minBuyout": 400,
+    "marketValue": 588,
     "historical": 2000
   },
   {
@@ -7712,85 +8726,85 @@
   {
     "itemId": 15491,
     "minBuyout": 500,
-    "marketValue": 591,
+    "marketValue": 570,
     "historical": 1500
   },
   {
     "itemId": 15492,
-    "minBuyout": 500,
-    "marketValue": 510,
+    "minBuyout": 400,
+    "marketValue": 488,
     "historical": 1500
   },
   {
     "itemId": 15493,
-    "minBuyout": 1300,
-    "marketValue": 1275,
+    "minBuyout": 800,
+    "marketValue": 1192,
     "historical": 1200
   },
   {
     "itemId": 15494,
-    "minBuyout": 1500,
-    "marketValue": 2061,
+    "minBuyout": 1600,
+    "marketValue": 1973,
     "historical": 0
   },
   {
     "itemId": 15495,
     "minBuyout": 400,
-    "marketValue": 607,
+    "marketValue": 562,
     "historical": 3200
   },
   {
     "itemId": 15496,
-    "minBuyout": 3000,
-    "marketValue": 3866,
+    "minBuyout": 3700,
+    "marketValue": 3653,
     "historical": 0
   },
   {
     "itemId": 15497,
-    "minBuyout": 1100,
-    "marketValue": 1100,
+    "minBuyout": 800,
+    "marketValue": 1027,
     "historical": 0
   },
   {
     "itemId": 15498,
-    "minBuyout": 1500,
-    "marketValue": 1366,
+    "minBuyout": 1000,
+    "marketValue": 1275,
     "historical": 0
   },
   {
     "itemId": 15499,
-    "minBuyout": 900,
-    "marketValue": 914,
+    "minBuyout": 600,
+    "marketValue": 875,
     "historical": 2000
   },
   {
     "itemId": 15500,
-    "minBuyout": 1500,
+    "minBuyout": 0,
     "marketValue": 1500,
     "historical": 0
   },
   {
     "itemId": 15501,
-    "minBuyout": 900,
-    "marketValue": 888,
+    "minBuyout": 700,
+    "marketValue": 869,
     "historical": 0
   },
   {
     "itemId": 15502,
     "minBuyout": 2000,
-    "marketValue": 2000,
+    "marketValue": 1916,
     "historical": 0
   },
   {
     "itemId": 15503,
-    "minBuyout": 3900,
-    "marketValue": 4266,
+    "minBuyout": 4800,
+    "marketValue": 4583,
     "historical": 0
   },
   {
     "itemId": 15504,
-    "minBuyout": 10000,
-    "marketValue": 10000,
+    "minBuyout": 8700,
+    "marketValue": 8950,
     "historical": 0
   },
   {
@@ -7801,38 +8815,56 @@
   },
   {
     "itemId": 15506,
-    "minBuyout": 1400,
-    "marketValue": 1400,
+    "minBuyout": 5000,
+    "marketValue": 3200,
     "historical": 0
   },
   {
     "itemId": 15507,
     "minBuyout": 600,
-    "marketValue": 942,
+    "marketValue": 809,
     "historical": 0
   },
   {
     "itemId": 15508,
-    "minBuyout": 1300,
-    "marketValue": 1622,
+    "minBuyout": 900,
+    "marketValue": 1190,
     "historical": 0
   },
   {
     "itemId": 15509,
     "minBuyout": 2500,
-    "marketValue": 2300,
+    "marketValue": 2400,
     "historical": 0
   },
   {
     "itemId": 15510,
-    "minBuyout": 1500,
-    "marketValue": 2750,
+    "minBuyout": 500,
+    "marketValue": 1928,
     "historical": 2500
   },
   {
+    "itemId": 15511,
+    "minBuyout": 0,
+    "marketValue": 4500,
+    "historical": 0
+  },
+  {
+    "itemId": 15512,
+    "minBuyout": 10000,
+    "marketValue": 10000,
+    "historical": 0
+  },
+  {
     "itemId": 15513,
-    "minBuyout": 8800,
-    "marketValue": 8800,
+    "minBuyout": 3300,
+    "marketValue": 7437,
+    "historical": 0
+  },
+  {
+    "itemId": 15515,
+    "minBuyout": 2500,
+    "marketValue": 2500,
     "historical": 0
   },
   {
@@ -7842,8 +8874,20 @@
     "historical": 0
   },
   {
+    "itemId": 15517,
+    "minBuyout": 1900,
+    "marketValue": 1900,
+    "historical": 0
+  },
+  {
+    "itemId": 15519,
+    "minBuyout": 5000,
+    "marketValue": 5000,
+    "historical": 0
+  },
+  {
     "itemId": 15520,
-    "minBuyout": 11400,
+    "minBuyout": 0,
     "marketValue": 11400,
     "historical": 0
   },
@@ -7855,8 +8899,20 @@
   },
   {
     "itemId": 15526,
-    "minBuyout": 3000,
+    "minBuyout": 0,
     "marketValue": 3833,
+    "historical": 0
+  },
+  {
+    "itemId": 15532,
+    "minBuyout": 5500,
+    "marketValue": 5500,
+    "historical": 0
+  },
+  {
+    "itemId": 15537,
+    "minBuyout": 25000,
+    "marketValue": 25000,
     "historical": 0
   },
   {
@@ -7868,13 +8924,13 @@
   {
     "itemId": 15893,
     "minBuyout": 3900,
-    "marketValue": 3988,
+    "marketValue": 3838,
     "historical": 0
   },
   {
     "itemId": 15895,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 600,
+    "marketValue": 933,
     "historical": 0
   },
   {
@@ -7885,8 +8941,8 @@
   },
   {
     "itemId": 15926,
-    "minBuyout": 1000,
-    "marketValue": 1350,
+    "minBuyout": 1400,
+    "marketValue": 1351,
     "historical": 0
   },
   {
@@ -7897,7 +8953,7 @@
   },
   {
     "itemId": 15932,
-    "minBuyout": 600,
+    "minBuyout": 500,
     "marketValue": 600,
     "historical": 600
   },
@@ -7933,8 +8989,14 @@
   },
   {
     "itemId": 15971,
-    "minBuyout": 2000,
-    "marketValue": 2166,
+    "minBuyout": 1900,
+    "marketValue": 1950,
+    "historical": 0
+  },
+  {
+    "itemId": 15972,
+    "minBuyout": 5000,
+    "marketValue": 5000,
     "historical": 0
   },
   {
@@ -7951,19 +9013,31 @@
   },
   {
     "itemId": 16083,
-    "minBuyout": 12500,
-    "marketValue": 12500,
+    "minBuyout": 15000,
+    "marketValue": 12625,
     "historical": 0
   },
   {
     "itemId": 16084,
     "minBuyout": 12000,
-    "marketValue": 12333,
+    "marketValue": 12166,
+    "historical": 0
+  },
+  {
+    "itemId": 16112,
+    "minBuyout": 7500,
+    "marketValue": 7500,
+    "historical": 0
+  },
+  {
+    "itemId": 16113,
+    "minBuyout": 6900,
+    "marketValue": 6900,
     "historical": 0
   },
   {
     "itemId": 16645,
-    "minBuyout": 3500,
+    "minBuyout": 3000,
     "marketValue": 3000,
     "historical": 0
   },
@@ -7975,56 +9049,56 @@
   },
   {
     "itemId": 16647,
-    "minBuyout": 5000,
-    "marketValue": 2666,
+    "minBuyout": 3500,
+    "marketValue": 2700,
     "historical": 0
   },
   {
     "itemId": 16648,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 2200,
+    "marketValue": 2420,
     "historical": 0
   },
   {
     "itemId": 16649,
-    "minBuyout": 8000,
-    "marketValue": 3500,
+    "minBuyout": 1000,
+    "marketValue": 4583,
     "historical": 0
   },
   {
     "itemId": 16650,
-    "minBuyout": 3500,
-    "marketValue": 3388,
+    "minBuyout": 1700,
+    "marketValue": 3233,
     "historical": 0
   },
   {
     "itemId": 16651,
-    "minBuyout": 3500,
+    "minBuyout": 2500,
     "marketValue": 3166,
     "historical": 0
   },
   {
     "itemId": 16652,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 1500,
+    "marketValue": 2100,
     "historical": 0
   },
   {
     "itemId": 16653,
-    "minBuyout": 0,
-    "marketValue": 2500,
+    "minBuyout": 6700,
+    "marketValue": 5300,
     "historical": 0
   },
   {
     "itemId": 16654,
-    "minBuyout": 3500,
-    "marketValue": 3166,
+    "minBuyout": 2500,
+    "marketValue": 3233,
     "historical": 0
   },
   {
     "itemId": 16655,
-    "minBuyout": 2500,
-    "marketValue": 2500,
+    "minBuyout": 1500,
+    "marketValue": 2166,
     "historical": 0
   },
   {
@@ -8041,44 +9115,56 @@
   },
   {
     "itemId": 17031,
-    "minBuyout": 999,
+    "minBuyout": 2000,
     "marketValue": 999,
     "historical": 999
   },
   {
     "itemId": 17034,
     "minBuyout": 475,
-    "marketValue": 472,
+    "marketValue": 473,
     "historical": 0
   },
   {
     "itemId": 17056,
-    "minBuyout": 7,
+    "minBuyout": 8,
     "marketValue": 7,
     "historical": 25
   },
   {
     "itemId": 17057,
-    "minBuyout": 0,
-    "marketValue": 100,
+    "minBuyout": 900,
+    "marketValue": 525,
+    "historical": 0
+  },
+  {
+    "itemId": 17058,
+    "minBuyout": 1500,
+    "marketValue": 1500,
     "historical": 0
   },
   {
     "itemId": 17062,
-    "minBuyout": 900,
+    "minBuyout": 0,
     "marketValue": 900,
+    "historical": 0
+  },
+  {
+    "itemId": 17187,
+    "minBuyout": 500,
+    "marketValue": 500,
     "historical": 0
   },
   {
     "itemId": 17922,
     "minBuyout": 500,
-    "marketValue": 512,
+    "marketValue": 506,
     "historical": 800
   },
   {
     "itemId": 20709,
-    "minBuyout": 139,
-    "marketValue": 172,
+    "minBuyout": 120,
+    "marketValue": 149,
     "historical": 1100
   },
   {
@@ -8088,45 +9174,57 @@
     "historical": 500
   },
   {
+    "itemId": 20752,
+    "minBuyout": 6000,
+    "marketValue": 6000,
+    "historical": 0
+  },
+  {
+    "itemId": 20753,
+    "minBuyout": 8000,
+    "marketValue": 8000,
+    "historical": 0
+  },
+  {
     "itemId": 20758,
-    "minBuyout": 1500,
-    "marketValue": 1500,
+    "minBuyout": 1200,
+    "marketValue": 1350,
     "historical": 2400
   },
   {
     "itemId": 21071,
-    "minBuyout": 290,
-    "marketValue": 245,
+    "minBuyout": 200,
+    "marketValue": 242,
     "historical": 100
   },
   {
     "itemId": 21072,
-    "minBuyout": 170,
-    "marketValue": 152,
+    "minBuyout": 100,
+    "marketValue": 158,
     "historical": 100
   },
   {
     "itemId": 21099,
-    "minBuyout": 1000,
-    "marketValue": 1038,
+    "minBuyout": 900,
+    "marketValue": 986,
     "historical": 1400
   },
   {
     "itemId": 21114,
-    "minBuyout": 2398,
-    "marketValue": 2432,
+    "minBuyout": 2300,
+    "marketValue": 2344,
     "historical": 0
   },
   {
     "itemId": 21151,
     "minBuyout": 800,
-    "marketValue": 900,
+    "marketValue": 838,
     "historical": 0
   },
   {
     "itemId": 21153,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 1499,
+    "marketValue": 1799,
     "historical": 0
   },
   {
@@ -8137,9 +9235,15 @@
   },
   {
     "itemId": 22250,
-    "minBuyout": 1700,
-    "marketValue": 1889,
+    "minBuyout": 1500,
+    "marketValue": 1722,
     "historical": 2000
+  },
+  {
+    "itemId": 22307,
+    "minBuyout": 6000,
+    "marketValue": 6000,
+    "historical": 0
   },
   {
     "itemId": 211780,
@@ -8150,7 +9254,7 @@
   {
     "itemId": 211784,
     "minBuyout": 200,
-    "marketValue": 175,
+    "marketValue": 185,
     "historical": 100
   },
   {
@@ -8173,14 +9277,14 @@
   },
   {
     "itemId": 211853,
-    "minBuyout": 200,
-    "marketValue": 366,
+    "minBuyout": 100,
+    "marketValue": 277,
     "historical": 900
   },
   {
     "itemId": 211854,
     "minBuyout": 100,
-    "marketValue": 140,
+    "marketValue": 110,
     "historical": 100
   },
   {
@@ -8191,38 +9295,44 @@
   },
   {
     "itemId": 213564,
-    "minBuyout": 44,
-    "marketValue": 55,
+    "minBuyout": 37,
+    "marketValue": 48,
     "historical": 195
   },
   {
     "itemId": 217495,
-    "minBuyout": 708,
-    "marketValue": 844,
+    "minBuyout": 699,
+    "marketValue": 738,
     "historical": 0
   },
   {
     "itemId": 247239,
-    "minBuyout": 500,
+    "minBuyout": 0,
     "marketValue": 500,
     "historical": 0
   },
   {
+    "itemId": 247240,
+    "minBuyout": 1500,
+    "marketValue": 1500,
+    "historical": 0
+  },
+  {
     "itemId": 247754,
-    "minBuyout": 25,
+    "minBuyout": 24,
     "marketValue": 25,
     "historical": 25
   },
   {
     "itemId": 247755,
-    "minBuyout": 25,
+    "minBuyout": 24,
     "marketValue": 25,
     "historical": 25
   },
   {
     "itemId": 247786,
-    "minBuyout": 21,
-    "marketValue": 21,
+    "minBuyout": 19,
+    "marketValue": 20,
     "historical": 68
   },
   {
@@ -8233,32 +9343,32 @@
   },
   {
     "itemId": 247884,
-    "minBuyout": 50,
-    "marketValue": 56,
+    "minBuyout": 47,
+    "marketValue": 52,
     "historical": 200
   },
   {
     "itemId": 248682,
-    "minBuyout": 1290,
-    "marketValue": 1709,
+    "minBuyout": 1215,
+    "marketValue": 1580,
     "historical": 4649
   },
   {
     "itemId": 248683,
-    "minBuyout": 1000,
-    "marketValue": 1809,
+    "minBuyout": 1100,
+    "marketValue": 1490,
     "historical": 5000
   },
   {
     "itemId": 248684,
-    "minBuyout": 1849,
-    "marketValue": 2799,
+    "minBuyout": 2500,
+    "marketValue": 2516,
     "historical": 10100
   },
   {
     "itemId": 248685,
-    "minBuyout": 700,
-    "marketValue": 1094,
+    "minBuyout": 599,
+    "marketValue": 891,
     "historical": 4900
   },
   {
@@ -8269,128 +9379,146 @@
   },
   {
     "itemId": 248687,
-    "minBuyout": 8000,
-    "marketValue": 9433,
+    "minBuyout": 7999,
+    "marketValue": 8716,
     "historical": 0
   },
   {
     "itemId": 248688,
-    "minBuyout": 20000,
-    "marketValue": 23333,
+    "minBuyout": 14000,
+    "marketValue": 17766,
     "historical": 0
   },
   {
     "itemId": 248689,
     "minBuyout": 2000,
-    "marketValue": 2666,
+    "marketValue": 2333,
     "historical": 0
   },
   {
     "itemId": 248690,
-    "minBuyout": 10100,
-    "marketValue": 10100,
+    "minBuyout": 2000,
+    "marketValue": 6050,
     "historical": 0
   },
   {
     "itemId": 248691,
-    "minBuyout": 10100,
-    "marketValue": 10100,
+    "minBuyout": 2000,
+    "marketValue": 6050,
     "historical": 0
   },
   {
     "itemId": 248693,
-    "minBuyout": 10100,
-    "marketValue": 10100,
+    "minBuyout": 0,
+    "marketValue": 7400,
     "historical": 0
   },
   {
     "itemId": 248694,
-    "minBuyout": 10100,
-    "marketValue": 10100,
+    "minBuyout": 2000,
+    "marketValue": 6050,
     "historical": 0
   },
   {
     "itemId": 248702,
-    "minBuyout": 3985,
-    "marketValue": 3991,
+    "minBuyout": 2960,
+    "marketValue": 3543,
     "historical": 8399
   },
   {
     "itemId": 248703,
-    "minBuyout": 2896,
-    "marketValue": 2954,
+    "minBuyout": 2200,
+    "marketValue": 2899,
     "historical": 10100
   },
   {
     "itemId": 248704,
-    "minBuyout": 2068,
-    "marketValue": 2377,
+    "minBuyout": 1080,
+    "marketValue": 1962,
     "historical": 10101
   },
   {
+    "itemId": 248706,
+    "minBuyout": 10000,
+    "marketValue": 16666,
+    "historical": 0
+  },
+  {
     "itemId": 248707,
-    "minBuyout": 20000,
-    "marketValue": 20000,
+    "minBuyout": 15500,
+    "marketValue": 17750,
     "historical": 0
   },
   {
     "itemId": 248709,
-    "minBuyout": 10100,
+    "minBuyout": 0,
     "marketValue": 10100,
     "historical": 0
   },
   {
     "itemId": 248710,
-    "minBuyout": 10100,
-    "marketValue": 10100,
+    "minBuyout": 2000,
+    "marketValue": 6050,
     "historical": 0
   },
   {
     "itemId": 249391,
-    "minBuyout": 100,
-    "marketValue": 102,
+    "minBuyout": 103,
+    "marketValue": 101,
     "historical": 108
   },
   {
     "itemId": 249399,
-    "minBuyout": 235,
-    "marketValue": 256,
+    "minBuyout": 330,
+    "marketValue": 289,
     "historical": 382
   },
   {
     "itemId": 249409,
-    "minBuyout": 500,
-    "marketValue": 553,
+    "minBuyout": 930,
+    "marketValue": 744,
     "historical": 1499
   },
   {
     "itemId": 249410,
-    "minBuyout": 317,
-    "marketValue": 326,
+    "minBuyout": 310,
+    "marketValue": 321,
     "historical": 600
   },
   {
     "itemId": 249427,
-    "minBuyout": 205,
-    "marketValue": 213,
+    "minBuyout": 206,
+    "marketValue": 210,
     "historical": 627
+  },
+  {
+    "itemId": 249428,
+    "minBuyout": 5500,
+    "marketValue": 5500,
+    "historical": 0
   },
   {
     "itemId": 249865,
     "minBuyout": 140,
-    "marketValue": 181,
+    "marketValue": 168,
     "historical": 469
   },
   {
     "itemId": 250339,
-    "minBuyout": 75,
-    "marketValue": 81,
+    "minBuyout": 60,
+    "marketValue": 77,
     "historical": 130
   },
   {
+    "itemId": 250340,
+    "minBuyout": 2500,
+    "marketValue": 2500,
+    "historical": 0
+  },
+  {
     "itemId": 250344,
-    "minBuyout": 393,
-    "marketValue": 393,
+    "minBuyout": 392,
+    "marketValue": 392,
     "historical": 400
   },
   {
@@ -8401,8 +9529,8 @@
   },
   {
     "itemId": 250375,
-    "minBuyout": 400,
-    "marketValue": 400,
+    "minBuyout": 700,
+    "marketValue": 551,
     "historical": 757
   },
   {
@@ -8412,21 +9540,33 @@
     "historical": 200
   },
   {
+    "itemId": 250382,
+    "minBuyout": 40000,
+    "marketValue": 40000,
+    "historical": 0
+  },
+  {
+    "itemId": 250389,
+    "minBuyout": 990000,
+    "marketValue": 990000,
+    "historical": 0
+  },
+  {
     "itemId": 250932,
-    "minBuyout": 80,
-    "marketValue": 80,
+    "minBuyout": 70,
+    "marketValue": 76,
     "historical": 100
   },
   {
     "itemId": 250933,
-    "minBuyout": 500,
-    "marketValue": 500,
+    "minBuyout": 389,
+    "marketValue": 461,
     "historical": 0
   },
   {
     "itemId": 250938,
-    "minBuyout": 169,
-    "marketValue": 169,
+    "minBuyout": 100,
+    "marketValue": 157,
     "historical": 1000
   },
   {
@@ -8437,8 +9577,8 @@
   },
   {
     "itemId": 250977,
-    "minBuyout": 400,
-    "marketValue": 454,
+    "minBuyout": 300,
+    "marketValue": 405,
     "historical": 0
   },
   {
@@ -8449,8 +9589,8 @@
   },
   {
     "itemId": 250983,
-    "minBuyout": 8000,
-    "marketValue": 8816,
+    "minBuyout": 3500,
+    "marketValue": 6908,
     "historical": 0
   },
   {
@@ -8461,20 +9601,20 @@
   },
   {
     "itemId": 250989,
-    "minBuyout": 1500,
-    "marketValue": 3350,
+    "minBuyout": 1200,
+    "marketValue": 2356,
     "historical": 0
   },
   {
     "itemId": 251932,
-    "minBuyout": 9900,
-    "marketValue": 9900,
+    "minBuyout": 2500,
+    "marketValue": 7814,
     "historical": 10100
   },
   {
     "itemId": 252022,
-    "minBuyout": 40,
-    "marketValue": 41,
+    "minBuyout": 11,
+    "marketValue": 39,
     "historical": 100
   },
   {
@@ -8485,39 +9625,45 @@
   },
   {
     "itemId": 252028,
-    "minBuyout": 35,
-    "marketValue": 42,
+    "minBuyout": 19,
+    "marketValue": 37,
     "historical": 400
   },
   {
     "itemId": 252030,
-    "minBuyout": 8,
-    "marketValue": 11,
+    "minBuyout": 7,
+    "marketValue": 9,
     "historical": 95
   },
   {
     "itemId": 252031,
-    "minBuyout": 7,
+    "minBuyout": 6,
     "marketValue": 7,
     "historical": 95
   },
   {
     "itemId": 252032,
     "minBuyout": 30,
-    "marketValue": 31,
+    "marketValue": 30,
     "historical": 85
   },
   {
     "itemId": 252436,
-    "minBuyout": 2000,
-    "marketValue": 2000,
+    "minBuyout": 1899,
+    "marketValue": 1983,
     "historical": 0
   },
   {
     "itemId": 252437,
-    "minBuyout": 1944,
-    "marketValue": 1962,
+    "minBuyout": 1450,
+    "marketValue": 1794,
     "historical": 3000
+  },
+  {
+    "itemId": 252449,
+    "minBuyout": 7900,
+    "marketValue": 7900,
+    "historical": 0
   },
   {
     "itemId": 252671,
@@ -8527,26 +9673,26 @@
   },
   {
     "itemId": 252771,
-    "minBuyout": 24900,
-    "marketValue": 26277,
+    "minBuyout": 15000,
+    "marketValue": 21461,
     "historical": 0
   },
   {
     "itemId": 252772,
-    "minBuyout": 6000,
-    "marketValue": 8680,
+    "minBuyout": 5900,
+    "marketValue": 7967,
     "historical": 0
   },
   {
     "itemId": 252773,
-    "minBuyout": 25000,
-    "marketValue": 26500,
+    "minBuyout": 7000,
+    "marketValue": 19845,
     "historical": 0
   },
   {
     "itemId": 252774,
-    "minBuyout": 4400,
-    "marketValue": 3675,
+    "minBuyout": 2500,
+    "marketValue": 2780,
     "historical": 3000
   },
   {
@@ -8557,20 +9703,26 @@
   },
   {
     "itemId": 252776,
-    "minBuyout": 1900,
-    "marketValue": 3623,
+    "minBuyout": 1600,
+    "marketValue": 2758,
     "historical": 7500
   },
   {
     "itemId": 252783,
     "minBuyout": 2000,
-    "marketValue": 2166,
+    "marketValue": 2000,
+    "historical": 0
+  },
+  {
+    "itemId": 252784,
+    "minBuyout": 3500,
+    "marketValue": 3500,
     "historical": 0
   },
   {
     "itemId": 252793,
-    "minBuyout": 600000,
-    "marketValue": 600000,
+    "minBuyout": 300000,
+    "marketValue": 525000,
     "historical": 0
   },
   {
@@ -8582,7 +9734,7 @@
   {
     "itemId": 252796,
     "minBuyout": 9900,
-    "marketValue": 16566,
+    "marketValue": 13233,
     "historical": 0
   },
   {
@@ -8599,7 +9751,7 @@
   },
   {
     "itemId": 253664,
-    "minBuyout": 500,
+    "minBuyout": 600,
     "marketValue": 600,
     "historical": 756
   },
@@ -8611,86 +9763,92 @@
   },
   {
     "itemId": 253667,
-    "minBuyout": 4500,
-    "marketValue": 5116,
+    "minBuyout": 4300,
+    "marketValue": 4546,
     "historical": 0
   },
   {
     "itemId": 253668,
-    "minBuyout": 800,
-    "marketValue": 933,
+    "minBuyout": 500,
+    "marketValue": 875,
     "historical": 2500
   },
   {
     "itemId": 253902,
-    "minBuyout": 2400,
-    "marketValue": 2400,
+    "minBuyout": 2000,
+    "marketValue": 2369,
     "historical": 0
   },
   {
     "itemId": 253904,
-    "minBuyout": 2000,
-    "marketValue": 2333,
+    "minBuyout": 1500,
+    "marketValue": 2003,
     "historical": 8900
   },
   {
     "itemId": 253906,
-    "minBuyout": 1500,
-    "marketValue": 1925,
+    "minBuyout": 1400,
+    "marketValue": 1666,
     "historical": 2200
   },
   {
     "itemId": 253908,
-    "minBuyout": 4500,
-    "marketValue": 4433,
+    "minBuyout": 3600,
+    "marketValue": 4194,
     "historical": 0
   },
   {
     "itemId": 253910,
-    "minBuyout": 1900,
-    "marketValue": 1766,
+    "minBuyout": 1700,
+    "marketValue": 1755,
     "historical": 5900
   },
   {
     "itemId": 253912,
-    "minBuyout": 1900,
-    "marketValue": 2555,
+    "minBuyout": 1000,
+    "marketValue": 1929,
     "historical": 6500
   },
   {
     "itemId": 253938,
-    "minBuyout": 4900,
-    "marketValue": 7450,
+    "minBuyout": 4000,
+    "marketValue": 4675,
     "historical": 0
   },
   {
     "itemId": 253940,
-    "minBuyout": 12900,
-    "marketValue": 9566,
+    "minBuyout": 8700,
+    "marketValue": 9847,
     "historical": 0
   },
   {
     "itemId": 253942,
-    "minBuyout": 3000,
-    "marketValue": 3000,
+    "minBuyout": 1500,
+    "marketValue": 2437,
+    "historical": 0
+  },
+  {
+    "itemId": 253944,
+    "minBuyout": 10200,
+    "marketValue": 10250,
     "historical": 0
   },
   {
     "itemId": 253946,
-    "minBuyout": 5000,
-    "marketValue": 5666,
+    "minBuyout": 3300,
+    "marketValue": 3980,
     "historical": 0
   },
   {
     "itemId": 253948,
-    "minBuyout": 8900,
-    "marketValue": 8900,
+    "minBuyout": 5000,
+    "marketValue": 8250,
     "historical": 0
   },
   {
     "itemId": 255007,
-    "minBuyout": 75,
-    "marketValue": 78,
+    "minBuyout": 70,
+    "marketValue": 76,
     "historical": 100
   },
   {
@@ -8701,8 +9859,8 @@
   },
   {
     "itemId": 255663,
-    "minBuyout": 12,
-    "marketValue": 13,
+    "minBuyout": 11,
+    "marketValue": 12,
     "historical": 96
   },
   {
@@ -8725,8 +9883,8 @@
   },
   {
     "itemId": 260793,
-    "minBuyout": 1400,
-    "marketValue": 1400,
+    "minBuyout": 1399,
+    "marketValue": 1399,
     "historical": 0
   },
   {
@@ -8737,26 +9895,26 @@
   },
   {
     "itemId": 262888,
-    "minBuyout": 8000,
-    "marketValue": 9333,
+    "minBuyout": 7000,
+    "marketValue": 8345,
     "historical": 0
   },
   {
     "itemId": 263015,
     "minBuyout": 900,
-    "marketValue": 933,
+    "marketValue": 900,
     "historical": 0
   },
   {
     "itemId": 263016,
     "minBuyout": 2500,
-    "marketValue": 2916,
+    "marketValue": 2750,
     "historical": 0
   },
   {
     "itemId": 263017,
-    "minBuyout": 1200,
-    "marketValue": 1200,
+    "minBuyout": 1000,
+    "marketValue": 1133,
     "historical": 1700
   },
   {
@@ -8791,68 +9949,134 @@
   },
   {
     "itemId": 263937,
-    "minBuyout": 6000,
+    "minBuyout": 10000,
     "marketValue": 6000,
     "historical": 0
   },
   {
     "itemId": 264015,
-    "minBuyout": 70000,
-    "marketValue": 70000,
+    "minBuyout": 63000,
+    "marketValue": 68250,
+    "historical": 0
+  },
+  {
+    "itemId": 264019,
+    "minBuyout": 30000,
+    "marketValue": 30000,
+    "historical": 0
+  },
+  {
+    "itemId": 264021,
+    "minBuyout": 500100,
+    "marketValue": 500100,
+    "historical": 0
+  },
+  {
+    "itemId": 264027,
+    "minBuyout": 5000,
+    "marketValue": 5000,
+    "historical": 0
+  },
+  {
+    "itemId": 264032,
+    "minBuyout": 25000,
+    "marketValue": 25000,
+    "historical": 0
+  },
+  {
+    "itemId": 264034,
+    "minBuyout": 50000,
+    "marketValue": 50000,
+    "historical": 0
+  },
+  {
+    "itemId": 264037,
+    "minBuyout": 30000,
+    "marketValue": 30000,
+    "historical": 0
+  },
+  {
+    "itemId": 264039,
+    "minBuyout": 10100,
+    "marketValue": 20100,
+    "historical": 0
+  },
+  {
+    "itemId": 264044,
+    "minBuyout": 10100,
+    "marketValue": 10100,
     "historical": 0
   },
   {
     "itemId": 267474,
-    "minBuyout": 85,
-    "marketValue": 93,
+    "minBuyout": 30,
+    "marketValue": 82,
     "historical": 100
   },
   {
     "itemId": 268109,
-    "minBuyout": 1800,
-    "marketValue": 2397,
+    "minBuyout": 1200,
+    "marketValue": 2143,
     "historical": 5000
   },
   {
     "itemId": 268415,
-    "minBuyout": 27,
-    "marketValue": 38,
+    "minBuyout": 15,
+    "marketValue": 29,
     "historical": 109
   },
   {
     "itemId": 268416,
-    "minBuyout": 488,
-    "marketValue": 496,
+    "minBuyout": 340,
+    "marketValue": 471,
     "historical": 499
   },
   {
     "itemId": 271663,
     "minBuyout": 9900,
-    "marketValue": 9966,
+    "marketValue": 9940,
+    "historical": 0
+  },
+  {
+    "itemId": 271665,
+    "minBuyout": 300,
+    "marketValue": 300,
     "historical": 0
   },
   {
     "itemId": 271668,
-    "minBuyout": 9900,
-    "marketValue": 9966,
+    "minBuyout": 8000,
+    "marketValue": 9527,
+    "historical": 0
+  },
+  {
+    "itemId": 271669,
+    "minBuyout": 1000,
+    "marketValue": 1000,
     "historical": 0
   },
   {
     "itemId": 273085,
-    "minBuyout": 1800,
-    "marketValue": 1900,
+    "minBuyout": 900,
+    "marketValue": 1495,
     "historical": 0
   },
   {
     "itemId": 273087,
-    "minBuyout": 30000,
-    "marketValue": 26633,
+    "minBuyout": 9900,
+    "marketValue": 18300,
+    "historical": 0
+  },
+  {
+    "itemId": 273092,
+    "minBuyout": 2500,
+    "marketValue": 2500,
     "historical": 0
   },
   {
     "itemId": 273098,
-    "minBuyout": 1800,
-    "marketValue": 1800,
+    "minBuyout": 21000,
+    "marketValue": 13900,
     "historical": 0
   },
   {
@@ -8863,14 +10087,14 @@
   },
   {
     "itemId": 273636,
-    "minBuyout": 30000,
-    "marketValue": 30000,
+    "minBuyout": 2200,
+    "marketValue": 14840,
     "historical": 0
   },
   {
     "itemId": 273815,
-    "minBuyout": 300,
-    "marketValue": 300,
+    "minBuyout": 200,
+    "marketValue": 271,
     "historical": 300
   },
   {
@@ -8888,48 +10112,54 @@
   {
     "itemId": 275069,
     "minBuyout": 75,
-    "marketValue": 76,
+    "marketValue": 75,
     "historical": 378
   },
   {
     "itemId": 275682,
     "minBuyout": 1000,
-    "marketValue": 2424,
+    "marketValue": 2026,
     "historical": 18000
   },
   {
     "itemId": 275724,
-    "minBuyout": 300,
-    "marketValue": 423,
+    "minBuyout": 200,
+    "marketValue": 337,
     "historical": 1500
   },
   {
+    "itemId": 275895,
+    "minBuyout": 100,
+    "marketValue": 100,
+    "historical": 0
+  },
+  {
     "itemId": 276992,
-    "minBuyout": 4500,
+    "minBuyout": 0,
     "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 276993,
-    "minBuyout": 4500,
+    "minBuyout": 0,
     "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 276995,
-    "minBuyout": 1100,
+    "minBuyout": 0,
     "marketValue": 1100,
     "historical": 0
   },
   {
     "itemId": 276996,
-    "minBuyout": 4500,
+    "minBuyout": 0,
     "marketValue": 4500,
     "historical": 0
   },
   {
     "itemId": 276997,
-    "minBuyout": 1400,
+    "minBuyout": 0,
     "marketValue": 1400,
     "historical": 0
   },
@@ -8952,8 +10182,14 @@
     "historical": 0
   },
   {
+    "itemId": 277003,
+    "minBuyout": 0,
+    "marketValue": 900,
+    "historical": 0
+  },
+  {
     "itemId": 277011,
-    "minBuyout": 500,
+    "minBuyout": 0,
     "marketValue": 500,
     "historical": 0
   },
@@ -8964,6 +10200,12 @@
     "historical": 500
   },
   {
+    "itemId": 277056,
+    "minBuyout": 3000,
+    "marketValue": 3000,
+    "historical": 0
+  },
+  {
     "itemId": 277059,
     "minBuyout": 0,
     "marketValue": 500,
@@ -8971,8 +10213,8 @@
   },
   {
     "itemId": 277060,
-    "minBuyout": 500,
-    "marketValue": 366,
+    "minBuyout": 2500,
+    "marketValue": 1433,
     "historical": 0
   },
   {
@@ -8983,7 +10225,7 @@
   },
   {
     "itemId": 277066,
-    "minBuyout": 7700,
+    "minBuyout": 0,
     "marketValue": 7700,
     "historical": 0
   },
@@ -9006,153 +10248,159 @@
     "historical": 1200
   },
   {
+    "itemId": 277077,
+    "minBuyout": 0,
+    "marketValue": 1000,
+    "historical": 0
+  },
+  {
     "itemId": 277078,
-    "minBuyout": 2500,
+    "minBuyout": 0,
     "marketValue": 2500,
     "historical": 0
   },
   {
     "itemId": 277483,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 199,
+    "marketValue": 199,
     "historical": 0
   },
   {
     "itemId": 277485,
-    "minBuyout": 2498,
-    "marketValue": 3328,
+    "minBuyout": 1000,
+    "marketValue": 1859,
     "historical": 0
   },
   {
     "itemId": 277486,
-    "minBuyout": 499,
+    "minBuyout": 500,
     "marketValue": 499,
     "historical": 0
   },
   {
     "itemId": 277487,
-    "minBuyout": 200,
-    "marketValue": 200,
+    "minBuyout": 199,
+    "marketValue": 199,
     "historical": 0
   },
   {
     "itemId": 277488,
-    "minBuyout": 899,
-    "marketValue": 899,
+    "minBuyout": 500,
+    "marketValue": 896,
     "historical": 0
   },
   {
     "itemId": 277489,
     "minBuyout": 178,
-    "marketValue": 194,
+    "marketValue": 186,
     "historical": 0
   },
   {
     "itemId": 277508,
-    "minBuyout": 10000,
-    "marketValue": 10733,
+    "minBuyout": 7500,
+    "marketValue": 9000,
     "historical": 0
   },
   {
     "itemId": 277672,
-    "minBuyout": 200,
+    "minBuyout": 300,
     "marketValue": 200,
     "historical": 0
   },
   {
     "itemId": 277715,
-    "minBuyout": 1100,
-    "marketValue": 1133,
+    "minBuyout": 700,
+    "marketValue": 1037,
     "historical": 2500
   },
   {
     "itemId": 278029,
-    "minBuyout": 100,
+    "minBuyout": 0,
     "marketValue": 100,
     "historical": 0
   },
   {
     "itemId": 278265,
-    "minBuyout": 49,
-    "marketValue": 68,
+    "minBuyout": 48,
+    "marketValue": 53,
     "historical": 100
   },
   {
     "itemId": 279944,
     "minBuyout": 49,
-    "marketValue": 94,
+    "marketValue": 71,
     "historical": 208
   },
   {
     "itemId": 279950,
-    "minBuyout": 1000,
-    "marketValue": 1000,
+    "minBuyout": 900,
+    "marketValue": 950,
     "historical": 0
   },
   {
     "itemId": 279956,
-    "minBuyout": 38,
-    "marketValue": 52,
+    "minBuyout": 30,
+    "marketValue": 44,
     "historical": 275
   },
   {
     "itemId": 279960,
-    "minBuyout": 4,
-    "marketValue": 9,
+    "minBuyout": 3,
+    "marketValue": 6,
     "historical": 46
   },
   {
     "itemId": 279961,
-    "minBuyout": 0,
-    "marketValue": 15000,
+    "minBuyout": 18000,
+    "marketValue": 17250,
     "historical": 0
   },
   {
     "itemId": 279962,
-    "minBuyout": 33,
-    "marketValue": 38,
+    "minBuyout": 27,
+    "marketValue": 34,
     "historical": 200
   },
   {
     "itemId": 279967,
-    "minBuyout": 20,
-    "marketValue": 22,
+    "minBuyout": 19,
+    "marketValue": 21,
     "historical": 198
   },
   {
     "itemId": 279968,
-    "minBuyout": 13,
-    "marketValue": 15,
+    "minBuyout": 10,
+    "marketValue": 13,
     "historical": 99
   },
   {
     "itemId": 279972,
     "minBuyout": 80,
-    "marketValue": 99,
+    "marketValue": 93,
     "historical": 350
   },
   {
     "itemId": 279976,
     "minBuyout": 220,
-    "marketValue": 226,
+    "marketValue": 212,
     "historical": 0
   },
   {
     "itemId": 279978,
-    "minBuyout": 88,
-    "marketValue": 92,
+    "minBuyout": 85,
+    "marketValue": 89,
     "historical": 280
   },
   {
     "itemId": 279979,
-    "minBuyout": 110,
-    "marketValue": 142,
+    "minBuyout": 117,
+    "marketValue": 129,
     "historical": 298
   },
   {
     "itemId": 279981,
-    "minBuyout": 80,
-    "marketValue": 86,
+    "minBuyout": 60,
+    "marketValue": 80,
     "historical": 140
   },
   {
@@ -9162,15 +10410,21 @@
     "historical": 0
   },
   {
+    "itemId": 282721,
+    "minBuyout": 0,
+    "marketValue": 20000,
+    "historical": 0
+  },
+  {
     "itemId": 283259,
     "minBuyout": 1000,
-    "marketValue": 1000,
+    "marketValue": 983,
     "historical": 0
   },
   {
     "itemId": 283361,
     "minBuyout": 1300,
-    "marketValue": 1366,
+    "marketValue": 1300,
     "historical": 0
   },
   {
@@ -9182,13 +10436,13 @@
   {
     "itemId": 283462,
     "minBuyout": 900,
-    "marketValue": 900,
+    "marketValue": 883,
     "historical": 1200
   },
   {
     "itemId": 283471,
-    "minBuyout": 500,
-    "marketValue": 516,
+    "minBuyout": 600,
+    "marketValue": 558,
     "historical": 900
   },
   {
@@ -9205,25 +10459,25 @@
   },
   {
     "itemId": 284320,
-    "minBuyout": 1300,
-    "marketValue": 1225,
+    "minBuyout": 1000,
+    "marketValue": 1097,
     "historical": 1100
   },
   {
     "itemId": 284321,
     "minBuyout": 1000,
-    "marketValue": 1225,
+    "marketValue": 1003,
     "historical": 1400
   },
   {
     "itemId": 284322,
-    "minBuyout": 700,
-    "marketValue": 700,
+    "minBuyout": 400,
+    "marketValue": 600,
     "historical": 1000
   },
   {
     "itemId": 284323,
-    "minBuyout": 300,
+    "minBuyout": 400,
     "marketValue": 400,
     "historical": 1000
   },
@@ -9241,38 +10495,50 @@
   },
   {
     "itemId": 285253,
-    "minBuyout": 50000,
-    "marketValue": 50000,
+    "minBuyout": 49800,
+    "marketValue": 40420,
+    "historical": 0
+  },
+  {
+    "itemId": 285254,
+    "minBuyout": 0,
+    "marketValue": 200,
+    "historical": 0
+  },
+  {
+    "itemId": 285255,
+    "minBuyout": 4000,
+    "marketValue": 1600,
     "historical": 0
   },
   {
     "itemId": 285264,
-    "minBuyout": 1100,
-    "marketValue": 1033,
+    "minBuyout": 1000,
+    "marketValue": 1041,
     "historical": 0
   },
   {
     "itemId": 285268,
     "minBuyout": 2500,
-    "marketValue": 1966,
+    "marketValue": 2233,
     "historical": 0
   },
   {
     "itemId": 285269,
-    "minBuyout": 700,
-    "marketValue": 800,
+    "minBuyout": 600,
+    "marketValue": 740,
     "historical": 2000
   },
   {
     "itemId": 285272,
     "minBuyout": 0,
-    "marketValue": 1500,
+    "marketValue": 1250,
     "historical": 1500
   },
   {
     "itemId": 285273,
-    "minBuyout": 19900,
-    "marketValue": 19933,
+    "minBuyout": 9900,
+    "marketValue": 18250,
     "historical": 0
   },
   {
@@ -9283,56 +10549,62 @@
   },
   {
     "itemId": 285282,
-    "minBuyout": 1500,
-    "marketValue": 2083,
+    "minBuyout": 4000,
+    "marketValue": 2062,
     "historical": 0
   },
   {
     "itemId": 285351,
-    "minBuyout": 4400,
-    "marketValue": 4466,
+    "minBuyout": 4300,
+    "marketValue": 4391,
     "historical": 0
   },
   {
     "itemId": 286533,
-    "minBuyout": 3400,
-    "marketValue": 3050,
+    "minBuyout": 1500,
+    "marketValue": 2910,
     "historical": 0
   },
   {
     "itemId": 286534,
-    "minBuyout": 14000,
-    "marketValue": 20666,
+    "minBuyout": 11900,
+    "marketValue": 16916,
     "historical": 0
   },
   {
     "itemId": 286535,
-    "minBuyout": 8000,
-    "marketValue": 9668,
+    "minBuyout": 9800,
+    "marketValue": 9741,
     "historical": 0
   },
   {
     "itemId": 286536,
-    "minBuyout": 3800,
-    "marketValue": 3863,
+    "minBuyout": 2600,
+    "marketValue": 3492,
     "historical": 0
   },
   {
     "itemId": 286537,
-    "minBuyout": 9800,
-    "marketValue": 11966,
+    "minBuyout": 9900,
+    "marketValue": 10958,
     "historical": 0
   },
   {
     "itemId": 286540,
-    "minBuyout": 27900,
-    "marketValue": 37900,
+    "minBuyout": 52000,
+    "marketValue": 47561,
+    "historical": 0
+  },
+  {
+    "itemId": 286541,
+    "minBuyout": 4000,
+    "marketValue": 4000,
     "historical": 0
   },
   {
     "itemId": 286745,
-    "minBuyout": 2400,
-    "marketValue": 2594,
+    "minBuyout": 1900,
+    "marketValue": 2711,
     "historical": 1000
   },
   {
@@ -9344,61 +10616,61 @@
   {
     "itemId": 286752,
     "minBuyout": 400,
-    "marketValue": 500,
+    "marketValue": 460,
     "historical": 800
   },
   {
     "itemId": 286753,
     "minBuyout": 700,
-    "marketValue": 735,
+    "marketValue": 717,
     "historical": 2000
   },
   {
     "itemId": 286754,
-    "minBuyout": 2400,
-    "marketValue": 2266,
+    "minBuyout": 1900,
+    "marketValue": 2060,
     "historical": 0
   },
   {
     "itemId": 286755,
-    "minBuyout": 1300,
-    "marketValue": 1422,
+    "minBuyout": 1000,
+    "marketValue": 1356,
     "historical": 2400
   },
   {
     "itemId": 286977,
-    "minBuyout": 3600,
-    "marketValue": 3965,
+    "minBuyout": 3500,
+    "marketValue": 3764,
     "historical": 24600
   },
   {
     "itemId": 286978,
-    "minBuyout": 3900,
-    "marketValue": 4779,
+    "minBuyout": 3700,
+    "marketValue": 4121,
     "historical": 0
   },
   {
     "itemId": 286979,
-    "minBuyout": 2500,
-    "marketValue": 3536,
+    "minBuyout": 2100,
+    "marketValue": 2683,
     "historical": 0
   },
   {
     "itemId": 286980,
-    "minBuyout": 2200,
-    "marketValue": 2837,
+    "minBuyout": 1800,
+    "marketValue": 2476,
     "historical": 0
   },
   {
     "itemId": 286981,
-    "minBuyout": 1500,
-    "marketValue": 2133,
+    "minBuyout": 1100,
+    "marketValue": 1737,
     "historical": 0
   },
   {
     "itemId": 287063,
-    "minBuyout": 6000,
-    "marketValue": 6466,
+    "minBuyout": 4500,
+    "marketValue": 5983,
     "historical": 0
   }
 ]
