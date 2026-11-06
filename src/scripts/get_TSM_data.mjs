@@ -438,12 +438,14 @@ function showHelp() {
     console.log('');
     console.log('Options:');
     console.log('  anniversary     - Fetch anniversary realm prices from the public CSV files');
+    console.log('  forever         - Fetch WoW Forever prices from the public CSV files');
     console.log('  all             - Fetch ALL realms (default)');
     console.log('  regions        - Fetch region-level data for North America and Europe');
     console.log('  help            - Show this help message');
     console.log('');
     console.log('Examples:');
     console.log('  node src/scripts/get_TSM_data.mjs anniversary');
+    console.log('  node src/scripts/get_TSM_data.mjs forever');
     console.log('  node src/scripts/get_TSM_data.mjs regions');
     console.log('  node src/scripts/get_TSM_data.mjs "Thunderstrike" "Alliance"');
     console.log('  node src/scripts/get_TSM_data.mjs all');
@@ -469,6 +471,18 @@ const ANNIVERSARY_MARKETS = [
     { realm: 'Dreamscythe', faction: 'Horde', region: 'us-fresh' },
     { realm: 'Nightslayer', faction: 'Alliance', region: 'us-fresh' },
     { realm: 'Nightslayer', faction: 'Horde', region: 'us-fresh' },
+];
+
+// Forever catalogs are one file per region, ruleset, and faction. An empty PvP file copies that region's PvE file.
+const FOREVER_MARKETS = [
+    { realm: 'Forever PvE US', faction: 'Horde', region: 'us', slug: 'normal-horde', file: 'ForeverNormal_horde.json', ageKey: 'Forever PvE US_Horde' },
+    { realm: 'Forever PvE US', faction: 'Alliance', region: 'us', slug: 'normal-alliance', file: 'ForeverNormal_alliance.json', ageKey: 'Forever PvE US_Alliance' },
+    { realm: 'Forever PvP US', faction: 'Horde', region: 'us', slug: 'pvp-horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP US_Horde' },
+    { realm: 'Forever PvP US', faction: 'Alliance', region: 'us', slug: 'pvp-alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP US_Alliance' },
+    { realm: 'Forever PvE EU', faction: 'Horde', region: 'eu', slug: 'normal-horde', file: 'ForeverPvE_EU_horde.json', ageKey: 'Forever PvE EU_Horde' },
+    { realm: 'Forever PvE EU', faction: 'Alliance', region: 'eu', slug: 'normal-alliance', file: 'ForeverPvE_EU_alliance.json', ageKey: 'Forever PvE EU_Alliance' },
+    { realm: 'Forever PvP EU', faction: 'Horde', region: 'eu', slug: 'pvp-horde', file: 'ForeverPvP_EU_horde.json', ageKey: 'Forever PvP EU_Horde' },
+    { realm: 'Forever PvP EU', faction: 'Alliance', region: 'eu', slug: 'pvp-alliance', file: 'ForeverPvP_EU_alliance.json', ageKey: 'Forever PvP EU_Alliance' },
 ];
 
 function parseCsv(text) {
@@ -533,6 +547,37 @@ async function fetchPublicPriceCsv(url) {
     return text;
 }
 
+function rowsFromPublicItemCsv(text) {
+    const table = parseCsv(text);
+    const header = table[0] ?? [];
+    const column = Object.fromEntries(header.map((name, index) => [name, index]));
+    if (column.itemId === undefined || column.minBuyout === undefined || column.marketValue === undefined) {
+        throw new Error(`unexpected columns: ${header.join(', ')}`);
+    }
+
+    let scannedAt = null;
+    const rows = [];
+    for (const record of table.slice(1)) {
+        const itemId = numberOrNull(record[column.itemId]);
+        const minBuyout = numberOrNull(record[column.minBuyout]);
+        const marketValue = numberOrNull(record[column.marketValue]);
+        if (itemId === null || (minBuyout === null && marketValue === null)) continue;
+        const historical = numberOrNull(record[column.historical]);
+        const row = {
+            itemId,
+            minBuyout: minBuyout ?? marketValue,
+            marketValue: marketValue ?? minBuyout,
+        };
+        if (historical !== null) row.historical = historical;
+        rows.push(row);
+        if (!scannedAt && column.updatedAt !== undefined && record[column.updatedAt]) {
+            scannedAt = record[column.updatedAt];
+        }
+    }
+    rows.sort((a, b) => a.itemId - b.itemId);
+    return { rows, scannedAt };
+}
+
 // Public files: https://tradeskillmaster.com/public-data
 // No API key. Columns are itemId, name, marketValue, minBuyout, recent, historical, updatedAt.
 async function fetchAnniversaryPublicData() {
@@ -550,33 +595,7 @@ async function fetchAnniversaryPublicData() {
         const url = `${TSM_PUBLIC_DATA}/classic/${market.region}/realm/${slug}/items.csv`;
         try {
             console.log(`Fetching ${market.realm} (${market.faction})...`);
-            const table = parseCsv(await fetchPublicPriceCsv(url));
-            const header = table[0] ?? [];
-            const column = Object.fromEntries(header.map((name, index) => [name, index]));
-            if (column.itemId === undefined || column.minBuyout === undefined || column.marketValue === undefined) {
-                throw new Error(`unexpected columns: ${header.join(', ')}`);
-            }
-
-            let scannedAt = null;
-            const rows = [];
-            for (const record of table.slice(1)) {
-                const itemId = numberOrNull(record[column.itemId]);
-                const minBuyout = numberOrNull(record[column.minBuyout]);
-                const marketValue = numberOrNull(record[column.marketValue]);
-                if (itemId === null || (minBuyout === null && marketValue === null)) continue;
-                const historical = numberOrNull(record[column.historical]);
-                const row = {
-                    itemId,
-                    minBuyout: minBuyout ?? marketValue,
-                    marketValue: marketValue ?? minBuyout,
-                };
-                if (historical !== null) row.historical = historical;
-                rows.push(row);
-                if (!scannedAt && column.updatedAt !== undefined && record[column.updatedAt]) {
-                    scannedAt = record[column.updatedAt];
-                }
-            }
-            rows.sort((a, b) => a.itemId - b.itemId);
+            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPublicPriceCsv(url));
             if (rows.length === 0) throw new Error('no priced rows');
 
             const filename = `${market.realm}_${market.faction.toLowerCase()}.json`;
@@ -619,6 +638,49 @@ async function fetchAnniversaryPublicData() {
     if (failed > 0) process.exitCode = 1;
 }
 
+async function fetchForeverPublicData() {
+    console.log('Fetching Forever prices from TSM public data...\n');
+    const agePath = path.join(outputDir, 'forever_price_age.json');
+    const age = fs.existsSync(agePath) ? JSON.parse(fs.readFileSync(agePath, 'utf8')) : {};
+    let failed = 0;
+
+    for (const market of FOREVER_MARKETS) {
+        const url = `${TSM_PUBLIC_DATA}/forever/${market.region}/realm/${market.slug}/items.csv`;
+        try {
+            console.log(`Fetching ${market.realm} (${market.faction})...`);
+            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPublicPriceCsv(url));
+            const filePath = path.join(outputDir, market.file);
+            if (rows.length > 0 && scannedAt) {
+                fs.writeFileSync(filePath, JSON.stringify(rows, null, 2));
+                age[market.ageKey] = scannedAt;
+                console.log(`  ${rows.length} items, scanned ${scannedAt} → ${market.file}`);
+            } else if (market.realm.includes('PvP')) {
+                const source = FOREVER_MARKETS.find((candidate) => candidate.region === market.region && candidate.realm.includes('PvE') && candidate.faction === market.faction);
+                const sourcePath = source ? path.join(outputDir, source.file) : '';
+                if (source && age[source.ageKey] && fs.existsSync(sourcePath)) {
+                    fs.copyFileSync(sourcePath, filePath);
+                    age[market.ageKey] = age[source.ageKey];
+                    console.log(`  no PvP listings yet, using ${source.realm} (${source.faction}) → ${market.file}`);
+                } else {
+                    fs.writeFileSync(filePath, '[]\n');
+                    delete age[market.ageKey];
+                    console.log(`  no listings yet → ${market.file}`);
+                }
+            } else {
+                fs.writeFileSync(filePath, '[]\n');
+                delete age[market.ageKey];
+                console.log(`  no listings yet → ${market.file}`);
+            }
+        } catch (error) {
+            failed += 1;
+            console.error(`  failed ${market.realm} (${market.faction}): ${error.message}`);
+        }
+    }
+
+    fs.writeFileSync(agePath, `${JSON.stringify(age, null, 2)}\n`);
+    if (failed > 0) process.exitCode = 1;
+}
+
 // Main execution
 async function main() {
     const args = process.argv.slice(2);
@@ -631,6 +693,11 @@ async function main() {
 
     if (args[0] === 'anniversary') {
         await fetchAnniversaryPublicData();
+        return;
+    }
+
+    if (args[0] === 'forever') {
+        await fetchForeverPublicData();
         return;
     }
     

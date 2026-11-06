@@ -51,6 +51,7 @@ function buildRealmToRegionMap(): Map<string, number> {
 
 /** Get TSM pricing API regionId (1=NA, 2=EU) for a realm from realms.json. Returns 1 if unknown. */
 export function getRegionIdForRealm(realm: string): number {
+  if (realm.endsWith(' EU')) return 2;
   return buildRealmToRegionMap().get(realm) ?? 1;
 }
 

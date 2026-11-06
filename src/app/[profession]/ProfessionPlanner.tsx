@@ -50,9 +50,8 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { CachedIcon } from '@/components/CachedIcon';
 import { PriceAgeNotice } from '@/components/PriceAgeNotice';
-import { SimulatedValuesWarning } from '@/components/SimulatedValuesWarning';
 import { FactionIcon, factionRingClass, factionTextClass } from '@/components/FactionMark';
-import { RealmName, foreverRealmKind, realmRingClass } from '@/components/RealmName';
+import { FOREVER_REALMS, RealmName, canonicalForeverRealm, foreverRealmKind, realmRingClass } from '@/components/RealmName';
 import { preloadIconZips } from '@/lib/iconStore';
 
 /** Wowhead base path for links (classic, tbc, or forever) */
@@ -70,14 +69,22 @@ function parsePlannerVersion(value: string | null): string | null {
 }
 
 const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
-const FOREVER_REALMS = ['Forever Normal', 'Forever PvP'];
 
 function realmsForVersion(version: string): string[] {
-  return version === 'Forever' ? FOREVER_REALMS : ANNIVERSARY_REALMS;
+  return version === 'Forever' ? [...FOREVER_REALMS] : ANNIVERSARY_REALMS;
 }
 
 function defaultRealmForVersion(version: string): string {
-  return version === 'Forever' ? 'Forever PvP' : 'Thunderstrike';
+  return version === 'Forever' ? 'Forever PvE US' : 'Thunderstrike';
+}
+
+function realmFromUrl(version: string, urlRealm: string): string | null {
+  const available = realmsForVersion(version);
+  if (version === 'Forever') {
+    const forever = canonicalForeverRealm(urlRealm);
+    if (forever && available.includes(forever)) return forever;
+  }
+  return available.find((realm) => realm.toLowerCase() === urlRealm.toLowerCase()) ?? null;
 }
 
 // map WoW quality IDs to standard hex colors
@@ -182,10 +189,14 @@ const rawDataMap: Record<string, Record<string, any[]>> = {
 
 // Function to dynamically load price data
 const FOREVER_PRICE_FILES: Record<string, string> = {
-  'Forever Normal_horde': 'ForeverNormal_horde.json',
-  'Forever Normal_alliance': 'ForeverNormal_alliance.json',
-  'Forever PvP_horde': 'ForeverPvP_horde.json',
-  'Forever PvP_alliance': 'ForeverPvP_alliance.json',
+  'Forever PvE US_horde': 'ForeverNormal_horde.json',
+  'Forever PvE US_alliance': 'ForeverNormal_alliance.json',
+  'Forever PvP US_horde': 'ForeverPvP_horde.json',
+  'Forever PvP US_alliance': 'ForeverPvP_alliance.json',
+  'Forever PvE EU_horde': 'ForeverPvE_EU_horde.json',
+  'Forever PvE EU_alliance': 'ForeverPvE_EU_alliance.json',
+  'Forever PvP EU_horde': 'ForeverPvP_EU_horde.json',
+  'Forever PvP EU_alliance': 'ForeverPvP_EU_alliance.json',
 };
 
 async function loadPriceData(realm: string, faction: string): Promise<any[]> {
@@ -1059,7 +1070,7 @@ export default function ProfessionPlanner() {
     const version = parsePlannerVersion(urlVersion) ?? 'Forever';
     const available = realmsForVersion(version);
     if (urlRealm) {
-      const normalizedRealm = available.find(r => r.toLowerCase() === urlRealm.toLowerCase());
+      const normalizedRealm = realmFromUrl(version, urlRealm);
       if (normalizedRealm) return normalizedRealm;
     }
     return defaultRealmForVersion(version);
@@ -1105,22 +1116,6 @@ export default function ProfessionPlanner() {
     setPriceSourcing('auction-house');
   }, []);
 
-  const [showSimulatedWarning, setShowSimulatedWarning] = useState(false);
-
-  useEffect(() => {
-    if (selectedVersion !== 'Forever') {
-      setShowSimulatedWarning(false);
-      return;
-    }
-    const acknowledged = sessionStorage.getItem('wowcraft-forever-simulated-ack-v2') === '1';
-    setShowSimulatedWarning(!acknowledged);
-  }, [selectedVersion]);
-
-  const acknowledgeSimulatedWarning = useCallback(() => {
-    sessionStorage.setItem('wowcraft-forever-simulated-ack-v2', '1');
-    setShowSimulatedWarning(false);
-  }, []);
-
   // Add isSliding state to track active slider interaction
   const [isSliding, setIsSliding] = useState(false);
   const [isReleased, setIsReleased] = useState(false);
@@ -1136,6 +1131,7 @@ export default function ProfessionPlanner() {
   // Add state for prices
   const [prices, setPrices] = useState<any>({});
   const [isLoadingPrices, setIsLoadingPrices] = useState(true);
+  const [pricesSettled, setPricesSettled] = useState(false);
   // Region data for soldPerDay sanity-check in auction-house mode
   const [regionSoldPerDay, setRegionSoldPerDay] = useState<Map<number, number> | null>(null);
   // Track the current price loading request to ignore outdated ones
@@ -2084,7 +2080,7 @@ const renderXTick = selected
   // Handle URL realm parameter
   useEffect(() => {
     if (urlRealm) {
-      const normalizedRealm = realms.find(r => r.toLowerCase() === urlRealm.toLowerCase());
+      const normalizedRealm = realmFromUrl(selectedVersion, urlRealm);
       if (normalizedRealm && normalizedRealm !== selectedRealm) {
         // Only update if there hasn't been a recent user-initiated change
         const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
@@ -2095,7 +2091,7 @@ const renderXTick = selected
         }
       }
     }
-  }, [urlRealm, selectedRealm, realms]);
+  }, [urlRealm, selectedRealm, selectedVersion]);
 
   // Handle URL faction parameter
   useEffect(() => {
@@ -2119,6 +2115,7 @@ const renderXTick = selected
       // Increment request ID for this new request
       const requestId = ++priceLoadRequestIdRef.current;
       setIsLoadingPrices(true);
+      setPricesSettled(false);
       console.log(`Loading prices for ${selectedRealm} ${selectedFaction}...`);
       try {
         const priceRows = await loadPriceData(selectedRealm, selectedFaction);
@@ -2151,6 +2148,7 @@ const renderXTick = selected
         // Only update loading state if this is still the latest request
         if (requestId === priceLoadRequestIdRef.current) {
           setIsLoadingPrices(false);
+          setPricesSettled(true);
         }
       }
     }
@@ -2369,8 +2367,68 @@ const renderXTick = selected
     };
   }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
 
-  const pricesReady = !isLoadingPrices && Object.keys(prices).length > 0;
-  const routeIsFinite = !pricesReady || (plan.finalSkill >= committedTarget && Number.isFinite(displayedTotalCost));
+  const pricesReady = !isLoadingPrices && pricesSettled;
+  const [guideSkillLimit, setGuideSkillLimit] = useState<number | null>(null);
+  const [guideLimitTip, setGuideLimitTip] = useState<{ top: number; left: number; center: boolean } | null>(null);
+
+  // Highest target the priced recipes can actually reach from the current skill.
+  useEffect(() => {
+    if (!pricesReady || Object.keys(prices).length === 0 || recipes.length === 0) {
+      setGuideSkillLimit(null);
+      return;
+    }
+    let cancelled = false;
+    const start = committedSkill;
+    const cap = maxSkill;
+    const activeProfession = selectedProfession;
+
+    const reaches = (target: number) => {
+      const planned = makeDynamicPlan(
+        start,
+        target,
+        recipes,
+        prices,
+        materialInfo,
+        activeProfession,
+        includeRecipeCost,
+        skipLimitedStock,
+        useMarketValue,
+        recalculateForEachLevel,
+        optimizeSubCrafting,
+        currentProfessionRecipeIds,
+        priceSourcing,
+        priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+        includeCurrencyRecipes,
+        selectedFaction
+      );
+      return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
+    };
+
+    const search = async () => {
+      let low = start;
+      let high = cap;
+      while (low < high) {
+        if (cancelled) return;
+        const mid = Math.ceil((low + high) / 2);
+        if (reaches(mid)) low = mid;
+        else high = mid - 1;
+        await new Promise((resolve) => window.setTimeout(resolve, 0));
+      }
+      if (!cancelled) setGuideSkillLimit(low);
+    };
+
+    setGuideSkillLimit(null);
+    void search();
+    return () => {
+      cancelled = true;
+    };
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay]);
+
+  const routeIsFinite = !pricesReady || (
+    plan.steps.some((step) => 'recipe' in step) &&
+    plan.finalSkill >= committedTarget &&
+    Number.isFinite(displayedTotalCost)
+  );
 
   useEffect(() => {
     if (view === 'route' && pricesReady && !routeIsFinite) {
@@ -2656,7 +2714,6 @@ const renderXTick = selected
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-transparent text-neutral-100">
-      <SimulatedValuesWarning open={showSimulatedWarning} onAcknowledge={acknowledgeSimulatedWarning} />
 
       {/* Auction House Disclaimer Modal - first-time only */}
       <AnimatePresence>
@@ -2887,11 +2944,6 @@ const renderXTick = selected
               <div className="flex justify-between items-center mb-1">
                 <label className="text-xs">
                   Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
-                  {selectedVersion === 'Forever' && (
-                    <span className="ml-2 inline-flex rounded-full border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200 align-middle">
-                      Simulated
-                    </span>
-                  )}
                 </label>
                 <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
@@ -3128,6 +3180,29 @@ const renderXTick = selected
                         onMouseDown={handleSliderStart}
                         onTouchStart={handleSliderStart}
                       >
+                        {guideSkillLimit != null && guideSkillLimit < maxSkill && (
+                          <div
+                            className="absolute bottom-[-14px] top-[-14px] z-[1] cursor-help"
+                            style={{ left: `${((guideSkillLimit - 1) / (maxSkill - 1)) * 100}%`, right: 0 }}
+                            onMouseEnter={(event) => {
+                              const rect = event.currentTarget.getBoundingClientRect();
+                              const width = 224;
+                              const gap = 12;
+                              const fitsRight = rect.right + gap + width < window.innerWidth;
+                              setGuideLimitTip(fitsRight
+                                ? { top: rect.top + rect.height / 2, left: rect.right + gap, center: true }
+                                : { top: rect.bottom + gap, left: Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)), center: false });
+                            }}
+                            onMouseLeave={() => setGuideLimitTip(null)}
+                          >
+                            <div
+                              className="pointer-events-none absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2 rounded-r"
+                              style={{
+                                backgroundImage: 'repeating-linear-gradient(135deg, rgba(0,0,0,0.72) 0 5px, rgba(255,255,255,0.14) 5px 8px)',
+                              }}
+                            />
+                          </div>
+                        )}
                         {children}
                       </div>
                     );
@@ -3151,7 +3226,8 @@ const renderXTick = selected
                           justifyContent: 'center',
                           width: thumbSize,
                           height: thumbSize,
-                          pointerEvents: 'auto'
+                          pointerEvents: 'auto',
+                          zIndex: 2
                         }}
                         className="touch-manipulation"
                       >
@@ -3169,6 +3245,18 @@ const renderXTick = selected
                     );
                   }}
                 />
+                {guideLimitTip && typeof document !== 'undefined' && createPortal(
+                  <div
+                    role="tooltip"
+                    className={`pointer-events-none fixed z-[100] w-56 rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-left text-xs font-normal leading-relaxed text-neutral-200 shadow-lg ${guideLimitTip.center ? '-translate-y-1/2' : ''}`}
+                    style={{ top: guideLimitTip.top, left: guideLimitTip.left }}
+                  >
+                    {selectedVersion === 'Forever'
+                      ? `Not recommended past skill ${guideSkillLimit}. Most players are still below level 30, so higher-level materials are not on the auction house yet and a route through this stretch cannot be priced.`
+                      : `Not recommended past skill ${guideSkillLimit}. The auction prices do not cover a complete route through this stretch.`}
+                  </div>,
+                  document.body
+                )}
               </div>
 
               {/* Skill inputs */}
@@ -3408,9 +3496,7 @@ const renderXTick = selected
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
               <span className="flex-1 min-w-0">Recipe</span>
-              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0" title={selectedVersion === 'Forever' ? 'Simulated until TradeSkillMaster publishes Forever API data' : undefined}>
-                {selectedVersion === 'Forever' ? 'Simulated' : 'Cost'}
-              </span>
+              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0">Cost</span>
               <span className="w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0">Skill</span>
             </div>}
           </div>

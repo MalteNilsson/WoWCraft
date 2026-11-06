@@ -1,3 +1,5 @@
+import { canonicalForeverRealm } from '@/components/RealmName';
+
 export type ShoppingListItem = {
   itemId: number;
   name?: string;
@@ -79,16 +81,15 @@ export function shoppingQuantity(quantity: number | undefined): number {
 
 /** Name Auctionator stores for the imported list, including the selected skill span. */
 export function auctionatorListName(profession: string, skill: number, target: number, realm = ''): string {
-  const simulated = realm.startsWith('Forever') ? ' Simulated' : '';
-  return `WoWCraft ${profession} ${skill}-${target}${simulated}`.replace(/[\r\n^]/g, ' ').trim();
+  return `WoWCraft ${profession} ${skill}-${target}`.replace(/[\r\n^]/g, ' ').trim();
 }
 
-/** Title shown on the in-game shopping list. Forever Normal is the PvE realm. */
+/** Title shown on the in-game shopping list. Forever markets are PvE or PvP on US or EU. */
 export function shoppingListTitle(profession: string, skill: number, target: number, realm: string, faction: string): string {
-  const ruleset = realm === 'Forever PvP' ? 'PvP' : realm === 'Forever Normal' ? 'PvE' : realm;
+  const forever = canonicalForeverRealm(realm);
+  const ruleset = forever ? forever.replace('Forever ', '') : realm;
   const side = faction === 'Horde' || faction === 'Alliance' ? faction : faction || 'Alliance';
-  const simulated = realm.startsWith('Forever') ? ' Simulated' : '';
-  return `WoWCraft.io ${profession} ${skill}-${target} ${ruleset} ${side}${simulated} Shopping List`.replace(/[\r\n^]/g, ' ').replace(/\s+/g, ' ').trim();
+  return `WoWCraft.io ${profession} ${skill}-${target} ${ruleset} ${side} Shopping List`.replace(/[\r\n^]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 /** Auctionator shopping-tab import. First field is the list name; each later field is an exact item search with a quantity. */

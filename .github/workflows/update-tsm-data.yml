@@ -1,5 +1,5 @@
 # Fetch auction prices and push them so Vercel deploys with fresh data.
-# Anniversary realms come from TSM public CSVs.
+# Anniversary realms and WoW Forever come from TSM public CSVs.
 name: Update Auction Prices
 
 on:
@@ -31,7 +31,14 @@ jobs:
       - name: Fetch TSM data
         id: tsm
         continue-on-error: true
-        run: node src/scripts/get_TSM_data.mjs anniversary
+        run: |
+          node src/scripts/get_TSM_data.mjs anniversary
+          anniversary_status=$?
+          node src/scripts/get_TSM_data.mjs forever
+          forever_status=$?
+          if [ "$anniversary_status" -ne 0 ] || [ "$forever_status" -ne 0 ]; then
+            exit 1
+          fi
 
       - name: Commit and push auction prices
         if: always() && !cancelled()

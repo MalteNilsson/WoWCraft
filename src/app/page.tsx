@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { ForeverDataNotice } from '@/components/ForeverDataNotice';
-import { auctionDataUpdatedLabel, auctionRealms, professionGuides } from '@/lib/professionGuides';
+import { professionGuides } from '@/lib/professionGuides';
 
 export const metadata: Metadata = {
   title: 'WoWCraft — Classic Profession Leveling Planner',
@@ -76,9 +75,6 @@ export default async function HomePage({
           <p className="mt-4 max-w-xl text-base leading-relaxed text-neutral-400">
             Tell us where your skill is and where you want it to go. We will lay out the crafts, what they cost on your realm, and what to buy before you start.
           </p>
-          {version === 'forever' && (
-            <ForeverDataNotice className="mt-6 max-w-2xl" />
-          )}
 
           <div className="mt-10 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -176,8 +172,7 @@ export default async function HomePage({
               </li>
             </ul>
             <p className="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-500">
-              Auction prices are ready for {auctionRealms.join(', ')}, updated {auctionDataUpdatedLabel}.
-              Forever runs to 300 in simulated mode. The Burning Crusade runs to 375.
+              Auction prices come from TradeSkillMaster for Forever PvE and PvP on US and EU. Forever runs to 300. The Burning Crusade runs to 375.
             </p>
           </section>
         </main>

@@ -1,6 +1,6 @@
 /**
- * Records the 1–300 raw-material cost of every Forever profession for the four
- * realm and faction pairs: PvE and PvP, Alliance and Horde.
+ * Records the 1–300 raw-material cost of every Forever profession for PvE and PvP
+ * on US and EU, for Alliance and Horde.
  *
  * Run this after auction prices have been written into src/data/prices.
  * Each price snapshot is stored once, keyed by when those prices were observed,
@@ -46,10 +46,14 @@ const PROFESSIONS: { name: string; recipes: Recipe[] }[] = [
 ];
 
 const CONFIGS: { realm: string; realmType: 'PvE' | 'PvP'; faction: 'Alliance' | 'Horde'; file: string; ageKey: string }[] = [
-  { realm: 'Forever Normal', realmType: 'PvE', faction: 'Alliance', file: 'ForeverNormal_alliance.json', ageKey: 'Forever Normal_Alliance' },
-  { realm: 'Forever Normal', realmType: 'PvE', faction: 'Horde', file: 'ForeverNormal_horde.json', ageKey: 'Forever Normal_Horde' },
-  { realm: 'Forever PvP', realmType: 'PvP', faction: 'Alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP_Alliance' },
-  { realm: 'Forever PvP', realmType: 'PvP', faction: 'Horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP_Horde' },
+  { realm: 'Forever PvE US', realmType: 'PvE', faction: 'Alliance', file: 'ForeverNormal_alliance.json', ageKey: 'Forever PvE US_Alliance' },
+  { realm: 'Forever PvE US', realmType: 'PvE', faction: 'Horde', file: 'ForeverNormal_horde.json', ageKey: 'Forever PvE US_Horde' },
+  { realm: 'Forever PvP US', realmType: 'PvP', faction: 'Alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP US_Alliance' },
+  { realm: 'Forever PvP US', realmType: 'PvP', faction: 'Horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP US_Horde' },
+  { realm: 'Forever PvE EU', realmType: 'PvE', faction: 'Alliance', file: 'ForeverPvE_EU_alliance.json', ageKey: 'Forever PvE EU_Alliance' },
+  { realm: 'Forever PvE EU', realmType: 'PvE', faction: 'Horde', file: 'ForeverPvE_EU_horde.json', ageKey: 'Forever PvE EU_Horde' },
+  { realm: 'Forever PvP EU', realmType: 'PvP', faction: 'Alliance', file: 'ForeverPvP_EU_alliance.json', ageKey: 'Forever PvP EU_Alliance' },
+  { realm: 'Forever PvP EU', realmType: 'PvP', faction: 'Horde', file: 'ForeverPvP_EU_horde.json', ageKey: 'Forever PvP EU_Horde' },
 ];
 
 type CostEntry = {
@@ -145,8 +149,7 @@ function main() {
   for (const config of CONFIGS) {
     const pricesObservedAt = age[config.ageKey];
     if (!pricesObservedAt) {
-      failed += 1;
-      console.error(`No price age for ${config.realm} ${config.faction}`);
+      console.log(`No TradeSkillMaster prices yet for ${config.realm} ${config.faction}`);
       continue;
     }
     const prices = loadPrices(config.file, materialInfo);
@@ -178,7 +181,8 @@ function main() {
           config.faction
         );
         const total = displayedRouteCost(plan.steps, SKILL, prices, materialInfo, recipeIds, profession.name);
-        const reachedTarget = plan.finalSkill >= TARGET && Number.isFinite(total);
+        const hasSteps = plan.steps.some((step) => 'recipe' in step);
+        const reachedTarget = hasSteps && plan.finalSkill >= TARGET && Number.isFinite(total);
         const entry: CostEntry = {
           ...identity,
           realmType: config.realmType,
@@ -186,13 +190,13 @@ function main() {
           recordedAt,
           skill: SKILL,
           target: TARGET,
-          totalCopper: Number.isFinite(total) ? Math.round(total) : null,
+          totalCopper: hasSteps && Number.isFinite(total) ? Math.round(total) : null,
           finalSkill: plan.finalSkill,
           reachedTarget,
         };
         added.push(entry);
         const gold = entry.totalCopper == null ? 'unavailable' : `${(entry.totalCopper / 10000).toFixed(2)}g`;
-        console.log(`${profession.name} ${config.realmType} ${config.faction}: ${gold} through ${plan.finalSkill}${reachedTarget ? '' : ' (short of 300)'}`);
+        console.log(`${profession.name} ${config.realm} ${config.faction}: ${gold} through ${plan.finalSkill}${reachedTarget ? '' : ' (short of 300)'}`);
       } catch (error) {
         failed += 1;
         console.error(`failed ${profession.name} ${config.realmType} ${config.faction}: ${error instanceof Error ? error.message : error}`);

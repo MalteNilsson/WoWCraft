@@ -1150,6 +1150,10 @@ export function makeDynamicPlan(
         return sum;
     }, 0);
 
+    if (mergedSteps.length === 0) {
+        return { steps: [], totalCost: 0, finalSkill: startSkill };
+    }
+
     return {
         steps: mergedSteps,
         totalCost,

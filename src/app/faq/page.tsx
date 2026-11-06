@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between The Burning Crusade and Forever?',
-    a: 'The Burning Crusade routes run to skill 375 and include Jewelcrafting. Forever runs to 300, includes Cooking, and does not include Jewelcrafting. Each version uses its own recipes. Forever stays in simulated mode while we wait for actual API data from TradeSkillMaster. The Burning Crusade already uses that API.',
+    a: 'The Burning Crusade routes run to skill 375 and include Jewelcrafting. Forever runs to 300, includes Cooking, and does not include Jewelcrafting. Each version uses its own recipes. Forever PvE and PvP on US and EU, and The Burning Crusade, use TradeSkillMaster auction prices.',
   },
   {
     q: 'How does Cost mode work?',
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: 'Does the site use cookies?',
-    a: 'Advertising pages use Google AdSense, which sets cookies. Acknowledging the Forever simulation warning on a profession page stores that choice in session storage for the current visit. The privacy policy explains both, along with Vercel Analytics and the auction-house notice saved in your browser.',
+    a: 'Advertising pages use Google AdSense, which sets cookies. The privacy policy explains that, along with Vercel Analytics and the auction-house notice saved in your browser.',
   },
 ];
 

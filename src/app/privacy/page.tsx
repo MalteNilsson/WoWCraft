@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         </p>
         <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Saved on your device</h2>
         <p>
-          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device. Acknowledging the Forever simulation warning stores that choice in session storage for the current visit, so the warning stays dismissed until the browser session ends.
+          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device.
         </p>
         <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Contact</h2>
         <p>
