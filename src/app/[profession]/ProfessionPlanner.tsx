@@ -1027,6 +1027,10 @@ export default function ProfessionPlanner() {
   // Initialize target based on version (default to TBC max)
   const [target, setTarget] = useState(() => getMaxSkill(parsePlannerVersion(urlVersion) ?? 'Forever'));
   const [committedTarget, setCommittedTarget] = useState(() => getMaxSkill(parsePlannerVersion(urlVersion) ?? 'Forever'));
+  // Profession to snap to 1 → the furthest priced skill. Null once the visitor chooses a span.
+  const fitGuideRangeRef = useRef<string | null>(null);
+  const guideSearchGenRef = useRef(0);
+  const guideLimitGenRef = useRef(0);
   const [view, setView] = useState<'route'|'all'>('route');
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
   const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
@@ -1172,6 +1176,13 @@ export default function ProfessionPlanner() {
     preloadIconZips(['materials', selectedProfession.toLowerCase()]);
   }, [selectedProfession]);
 
+  // A profession page with no skill span opens at the longest priced range.
+  useEffect(() => {
+    if (!urlSkill && !urlTarget) fitGuideRangeRef.current = selectedProfession;
+    // Only the first visit. Later query changes are the visitor's own span.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Handle URL profession parameter changes (when URL changes after initial load)
   useEffect(() => {
     if (urlProfession) {
@@ -1180,6 +1191,11 @@ export default function ProfessionPlanner() {
         // Only update if it's different from current to prevent unnecessary updates
         if (normalizedProfession !== selectedProfession) {
           setSelectedProfession(normalizedProfession);
+          setSkill(1);
+          setCommittedSkill(1);
+          lastSkillValue.current = 1;
+          fitGuideRangeRef.current = normalizedProfession;
+          recentUserChangeTimestampRef.current = Date.now();
         }
       } else {
         // Invalid profession in URL or not available for current version, redirect to default
@@ -1383,8 +1399,13 @@ export default function ProfessionPlanner() {
     // This prevents re-render - we'll update state once all data is ready
     pendingProfessionRef.current = newProfession;
     
-    // Update URL immediately for navigation
-    const newUrl = buildUrlWithParams(newProfession, committedSkill, committedTarget, selectedVersion, selectedRealm, selectedFaction);
+    // A new profession opens at its own longest priced range, not the span left on the previous one.
+    setSkill(1);
+    setCommittedSkill(1);
+    lastSkillValue.current = 1;
+    fitGuideRangeRef.current = newProfession;
+    recentUserChangeTimestampRef.current = Date.now();
+    const newUrl = buildUrlWithParams(newProfession, 1, getMaxSkill(selectedVersion), selectedVersion, selectedRealm, selectedFaction);
     router.push(newUrl, { scroll: false }); // Prevent scroll jump during navigation
     
     // Increment counter to trigger useMemo recalculation (but selectedProfession stays unchanged)
@@ -1432,6 +1453,7 @@ export default function ProfessionPlanner() {
   }, [debouncedSkill, isReleased, isSliding, skill]);
 
   const handleSliderStart = () => {
+    fitGuideRangeRef.current = null;
     setIsDirectChange(false);
     setIsSliding(true);
     setIsReleased(false);
@@ -1471,6 +1493,7 @@ export default function ProfessionPlanner() {
   };
 
   const handleDirectSkillChange = (newValue: number) => {
+    fitGuideRangeRef.current = null;
     const maxCurrent = Math.max(1, target - 1);
     const boundedValue = Math.min(maxCurrent, Math.max(1, newValue));
     setIsDirectChange(true);
@@ -2404,6 +2427,7 @@ const renderXTick = selected
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
 
+    const generation = ++guideSearchGenRef.current;
     const search = async () => {
       let low = start;
       let high = cap;
@@ -2414,7 +2438,10 @@ const renderXTick = selected
         else high = mid - 1;
         await new Promise((resolve) => window.setTimeout(resolve, 0));
       }
-      if (!cancelled) setGuideSkillLimit(low);
+      if (!cancelled) {
+        guideLimitGenRef.current = generation;
+        setGuideSkillLimit(low);
+      }
     };
 
     setGuideSkillLimit(null);
@@ -2423,6 +2450,23 @@ const renderXTick = selected
       cancelled = true;
     };
   }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay]);
+
+  // Open a profession at 1 → the furthest skill that still has a priced guide.
+  useEffect(() => {
+    if (guideSkillLimit == null || guideSkillLimit <= 1) return;
+    if (fitGuideRangeRef.current !== selectedProfession) return;
+    if (guideLimitGenRef.current !== guideSearchGenRef.current) return;
+    if (committedSkill !== 1) return;
+    fitGuideRangeRef.current = null;
+    if (committedTarget === guideSkillLimit) return;
+    recentUserChangeTimestampRef.current = Date.now();
+    setTarget(guideSkillLimit);
+    setCommittedTarget(guideSkillLimit);
+    router.push(
+      buildUrlWithParams(selectedProfession, 1, guideSkillLimit, selectedVersion, selectedRealm, selectedFaction),
+      { scroll: false }
+    );
+  }, [guideSkillLimit, selectedProfession, committedSkill, committedTarget, selectedVersion, selectedRealm, selectedFaction, router]);
 
   const routeIsFinite = !pricesReady || (
     plan.steps.some((step) => 'recipe' in step) &&
@@ -3315,6 +3359,7 @@ const renderXTick = selected
                     <button
                       className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
+                        fitGuideRangeRef.current = null;
                         const newTarget = Math.max(skill + 1, target - 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
@@ -3331,6 +3376,7 @@ const renderXTick = selected
                       onChange={(e) => {
                         const val = parseInt(e.target.value, 10);
                         if (!isNaN(val)) {
+                          fitGuideRangeRef.current = null;
                           setTarget(val);
                           clearTargetDebounce();
                           targetDebounceRef.current = setTimeout(() => {
@@ -3365,6 +3411,7 @@ const renderXTick = selected
                     <button
                       className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
+                        fitGuideRangeRef.current = null;
                         const newTarget = Math.min(maxSkill, target + 1);
                         setTarget(newTarget);
                         setCommittedTarget(newTarget);
