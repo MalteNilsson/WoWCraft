@@ -1,7 +1,7 @@
 import { Recipe, PriceMap } from "./types";
 import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, isRecipeObtainable, isCurrencyRecipe, isWrongFactionRecipe, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
-import type { RegionSoldPerDayMap } from "./regionDataLoader";
+import type { RegionSaleRateMap } from "./regionDataLoader";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from "./rodConstants";
 
 export { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS };
@@ -15,10 +15,11 @@ const MIN_NUM_AUCTIONS_AH_MODE = 4;
 /** In auction-house mode, reject recipes with profit margin above this (likely outlier data). 5 = 500% */
 const MAX_PROFIT_MARGIN_AH_MODE = 5;
 
-/** In auction-house mode, reject recipes whose output has soldPerDay below this (illiquid, unreliable prices).
- * Region data uses fractional values (e.g. 0.007 = <1 sale/day). We only reject essentially dead items (soldPerDay ≈ 0). */
-export function getMinSoldPerDayForProfession(_profession: string): number {
-  return 0.001;
+/** In auction-house mode, reject crafts whose TSM sale rate is below this. 0.1 is a 10% chance a posted auction sells. */
+export const MIN_SALE_RATE_AH_MODE = 0.1;
+
+export function isBelowMinSaleRate(saleRate: number | undefined, minimum = MIN_SALE_RATE_AH_MODE): boolean {
+  return saleRate !== undefined && saleRate < minimum;
 }
 
 /** Campfires share a cooldown, so they cannot be repeated to gain skill. */
@@ -121,6 +122,8 @@ const materialCraftItems = new Set([
 ]);
 
 
+export type SkillGapReason = 'sale-rate' | 'unpriced' | 'no-recipe';
+
 export type PlanStep =
     | {
         recipe: Recipe;
@@ -135,7 +138,22 @@ export type PlanStep =
         endSkill:   number;
 
         note?:      string;
+    }
+    | {
+        gap: SkillGapReason;
+        endSkill: number;
+        note: string;
     };
+
+export function gapExplanation(reason: SkillGapReason, start: number, end: number, minSaleRatePercent: number): string {
+    if (reason === 'sale-rate') {
+        return `No craft from ${start} to ${end} meets the ${minSaleRatePercent}% sale rate.`;
+    }
+    if (reason === 'unpriced') {
+        return `No craft from ${start} to ${end} can be priced. The auction data does not cover a route through this stretch.`;
+    }
+    return `No recipe raises skill from ${start} to ${end}.`;
+}
 
 // Types for our DP solution
 type DPStep = {
@@ -199,9 +217,10 @@ export function makeDynamicPlan(
     optimizeSubCrafting: boolean = true,
     currentProfessionRecipeIds?: Set<number>,
     priceSourcing: PriceSourcing = 'cost',
-    regionSoldPerDay?: RegionSoldPerDayMap,
+    regionSaleRate?: RegionSaleRateMap,
     includeCurrencyRecipes: boolean = false,
-    faction: string = 'Alliance'
+    faction: string = 'Alliance',
+    minSaleRate: number = MIN_SALE_RATE_AH_MODE
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
@@ -365,12 +384,8 @@ export function makeDynamicPlan(
                 const numAuctions = prices[r.produces.id]?.numAuctions;
                 if (typeof numAuctions === 'number' && numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
-                // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
-                // Only reject when we have data; items not in region map are allowed (no liquidity data)
-                if (regionSoldPerDay) {
-                    const soldPerDay = regionSoldPerDay.get(r.produces.id);
-                    if (soldPerDay !== undefined && soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
-                }
+                // Skip outputs TSM says rarely sell. Items missing from the region file stay eligible.
+                if (regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate)) return false;
 
                 // Exclude recipes with > 500% profit margin (likely outlier data)
                 const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
@@ -644,12 +659,8 @@ export function makeDynamicPlan(
                     const numAuctions = prices[r.produces.id]?.numAuctions;
                     if (typeof numAuctions === 'number' && numAuctions < MIN_NUM_AUCTIONS_AH_MODE) return false;
 
-                    // Exclude recipes whose output has very low soldPerDay (illiquid, unreliable region data)
-                    // Only reject when we have data; items not in region map are allowed (no liquidity data)
-                    if (regionSoldPerDay) {
-                        const soldPerDay = regionSoldPerDay.get(r.produces.id);
-                        if (soldPerDay !== undefined && soldPerDay < getMinSoldPerDayForProfession(profession)) return false;
-                    }
+                    // Skip outputs TSM says rarely sell. Items missing from the region file stay eligible.
+                    if (regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate)) return false;
 
                     // Exclude recipes with > 500% profit margin (likely outlier data)
                     const materialCost = craftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
@@ -1159,6 +1170,131 @@ export function makeDynamicPlan(
         totalCost,
         finalSkill: bestState.startSkill === startSkill ? target : bestState.startSkill
     };
+}
+
+type PlanArgs = {
+    recipes: Recipe[];
+    prices: PriceMap;
+    materialInfo: Record<number, MaterialInfo>;
+    profession: string;
+    includeRecipeCost: boolean;
+    skipLimitedStock: boolean;
+    useMarketValue: boolean;
+    recalculateForEachLevel: boolean;
+    optimizeSubCrafting: boolean;
+    currentProfessionRecipeIds?: Set<number>;
+    priceSourcing: PriceSourcing;
+    regionSaleRate?: RegionSaleRateMap;
+    includeCurrencyRecipes: boolean;
+    faction: string;
+    minSaleRate: number;
+};
+
+/** Why no craft can raise this skill, or null when at least one craft can. */
+function skillGapAt(skill: number, args: PlanArgs): SkillGapReason | null {
+    let inWindow = false;
+    let belowSaleRate = false;
+    let aboveSaleRate = false;
+    for (const recipe of args.recipes) {
+        if (ENCHANTING_ROD_SPELL_IDS.has(recipe.id) || ENGINEERING_TOOL_SPELL_IDS.has(recipe.id)) continue;
+        const chance = expectedSkillUps(recipe, skill);
+        if (getEffectiveMinSkill(recipe) > skill ||
+            chance <= 0 ||
+            blacklistedSpellIds.has(recipe.id) ||
+            isSkillCooldownRecipe(recipe) ||
+            isSeasonalRecipe(recipe) ||
+            !isRecipeObtainable(recipe, args.materialInfo) ||
+            (!args.includeCurrencyRecipes && isCurrencyRecipe(recipe, args.materialInfo)) ||
+            isWrongFactionRecipe(recipe, args.materialInfo, args.faction)) {
+            continue;
+        }
+        if (args.priceSourcing !== 'cost' && chance < MIN_SKILL_UP_CHANCE_PROFIT_MODE) continue;
+        inWindow = true;
+        if (args.priceSourcing === 'auction-house' && recipe.produces?.id) {
+            const numAuctions = args.prices[recipe.produces.id]?.numAuctions;
+            if (typeof numAuctions === 'number' && numAuctions < MIN_NUM_AUCTIONS_AH_MODE) continue;
+            if (args.regionSaleRate && isBelowMinSaleRate(args.regionSaleRate.get(recipe.produces.id), args.minSaleRate)) {
+                belowSaleRate = true;
+                continue;
+            }
+            aboveSaleRate = true;
+        }
+        if (recipe.source) {
+            const recipeCost = getRecipeCost(recipe, args.prices, args.materialInfo, args.useMarketValue);
+            if (recipeCost.vendorPrice === null && recipeCost.ahPrice === null) continue;
+        }
+        if (args.skipLimitedStock && recipe.source?.type === 'item' && recipe.source.recipeItemId) {
+            const info = args.materialInfo[recipe.source.recipeItemId];
+            if (info?.limitedStock && info?.bop) continue;
+        }
+        return null;
+    }
+    if (!inWindow) return 'no-recipe';
+    if (belowSaleRate && !aboveSaleRate) return 'sale-rate';
+    return 'unpriced';
+}
+
+/** Plan each stretch that has crafts, and leave a gap card where none do. */
+export function makeSegmentedPlan(
+    skill: number,
+    target: number,
+    recipes: Recipe[],
+    prices: PriceMap,
+    materialInfo: Record<number, MaterialInfo>,
+    profession: string,
+    includeRecipeCost: boolean = false,
+    skipLimitedStock: boolean = true,
+    useMarketValue: boolean = false,
+    recalculateForEachLevel: boolean = false,
+    optimizeSubCrafting: boolean = true,
+    currentProfessionRecipeIds?: Set<number>,
+    priceSourcing: PriceSourcing = 'cost',
+    regionSaleRate?: RegionSaleRateMap,
+    includeCurrencyRecipes: boolean = false,
+    faction: string = 'Alliance',
+    minSaleRate: number = MIN_SALE_RATE_AH_MODE
+): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
+    const args: PlanArgs = {
+        recipes, prices, materialInfo, profession, includeRecipeCost, skipLimitedStock,
+        useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds,
+        priceSourcing, regionSaleRate, includeCurrencyRecipes, faction, minSaleRate,
+    };
+    const runs: { start: number; end: number; reason: SkillGapReason | null }[] = [];
+    let cursor = skill;
+    while (cursor < target) {
+        const reason = skillGapAt(cursor, args);
+        let end = cursor + 1;
+        while (end < target && skillGapAt(end, args) === reason) end += 1;
+        const previous = runs[runs.length - 1];
+        if (previous && previous.reason === reason) previous.end = end;
+        else runs.push({ start: cursor, end, reason });
+        cursor = end;
+    }
+
+    const steps: PlanStep[] = [];
+    let totalCost = 0;
+    const percent = Math.round(minSaleRate * 100);
+    for (const run of runs) {
+        if (run.reason) {
+            steps.push({ gap: run.reason, endSkill: run.end, note: gapExplanation(run.reason, run.start, run.end, percent) });
+            continue;
+        }
+        const planned = makeDynamicPlan(
+            run.start, run.end, recipes, prices, materialInfo, profession,
+            includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel,
+            optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate,
+            includeCurrencyRecipes, faction, minSaleRate
+        );
+        const connected = planned.finalSkill >= run.end && planned.steps.some((step) => 'recipe' in step);
+        if (connected) {
+            steps.push(...planned.steps);
+            totalCost += planned.totalCost;
+        } else {
+            steps.push({ gap: 'unpriced', endSkill: run.end, note: gapExplanation('unpriced', run.start, run.end, percent) });
+        }
+    }
+
+    return { steps, totalCost, finalSkill: target };
 }
 
 export type MaterialRequirement = {

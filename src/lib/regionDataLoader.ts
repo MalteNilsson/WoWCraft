@@ -1,6 +1,6 @@
 /**
- * Region data from TSM pricing API (GET /region/{regionId}).
- * Used for soldPerDay sanity-checking in auction-house price sourcing.
+ * Region sale rates from TSM public region CSVs.
+ * Auction-house mode uses them to skip crafts that rarely sell.
  */
 
 import realmsData from '@/data/prices/realms.json';
@@ -17,8 +17,8 @@ export type RegionItemStat = {
   historical: number;
 };
 
-/** Map itemId -> soldPerDay for quick lookup during AH candidate filtering */
-export type RegionSoldPerDayMap = Map<number, number>;
+/** Map itemId -> sale rate (0–1) for auction-house candidate filtering. */
+export type RegionSaleRateMap = Map<number, number>;
 
 type RealmEntry = { name: string; regionId: number };
 type RegionEntry = { regionId: number; name: string; regionPrefix?: string; realms: RealmEntry[] };
@@ -55,13 +55,13 @@ export function getRegionIdForRealm(realm: string): number {
   return buildRealmToRegionMap().get(realm) ?? 1;
 }
 
-/** Build itemId -> soldPerDay map from region JSON array */
-export function buildRegionSoldPerDayMap(regionData: RegionItemStat[]): RegionSoldPerDayMap {
+/** Build itemId -> sale rate from a region file. Pets are ignored. */
+export function buildRegionSaleRateMap(regionData: { itemId: number; saleRate?: number; petSpeciesId?: number | null }[]): RegionSaleRateMap {
   const map = new Map<number, number>();
   for (const row of regionData) {
-    if (row.itemId != null && row.petSpeciesId == null) {
-      map.set(row.itemId, row.soldPerDay ?? 0);
-    }
+    if (row.itemId == null || row.petSpeciesId != null) continue;
+    if (typeof row.saleRate !== 'number' || !Number.isFinite(row.saleRate)) continue;
+    map.set(row.itemId, row.saleRate);
   }
   return map;
 }

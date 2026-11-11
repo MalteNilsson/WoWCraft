@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         </p>
         <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Saved on your device</h2>
         <p>
-          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. That value stays on your device.
+          If you accept the auction-house disclaimer in the planner, the browser stores that choice in local storage so the notice is not shown again. The minimum sale rate you choose is stored in a cookie named wowcraft-min-sale-rate so it stays the next time you visit. Both values stay on your device.
         </p>
         <h2 className="pt-6 text-lg font-medium tracking-tight text-white">Contact</h2>
         <p>

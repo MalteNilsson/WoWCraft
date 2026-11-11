@@ -547,6 +547,40 @@ async function fetchPublicPriceCsv(url) {
     return text;
 }
 
+function rowsFromPublicRegionCsv(text) {
+    const table = parseCsv(text);
+    const header = table[0] ?? [];
+    const column = Object.fromEntries(header.map((name, index) => [name, index]));
+    if (column.itemId === undefined || column.saleRate === undefined) {
+        throw new Error(`unexpected region columns: ${header.join(', ')}`);
+    }
+    const rows = [];
+    for (const record of table.slice(1)) {
+        const itemId = numberOrNull(record[column.itemId]);
+        const saleRate = numberOrNull(record[column.saleRate]);
+        if (itemId === null || saleRate === null) continue;
+        rows.push({ itemId, saleRate });
+    }
+    rows.sort((a, b) => a.itemId - b.itemId);
+    return rows;
+}
+
+async function fetchPublicRegionSaleRates(game) {
+    for (const region of ['us', 'eu']) {
+        const filename = `region_${game}_${region}.json`;
+        const url = `${TSM_PUBLIC_DATA}/${game}/${region}/region/items.csv`;
+        try {
+            console.log(`Fetching ${game} ${region.toUpperCase()} sale rates...`);
+            const rows = rowsFromPublicRegionCsv(await fetchPublicPriceCsv(url));
+            if (rows.length === 0) throw new Error('no sale-rate rows');
+            fs.writeFileSync(path.join(outputDir, filename), `${JSON.stringify(rows, null, 2)}\n`);
+            console.log(`  ${rows.length} items → ${filename}`);
+        } catch (error) {
+            console.error(`  failed ${game} ${region} sale rates: ${error.message}`);
+        }
+    }
+}
+
 function rowsFromPublicItemCsv(text) {
     const table = parseCsv(text);
     const header = table[0] ?? [];
@@ -635,6 +669,7 @@ async function fetchAnniversaryPublicData() {
 
     console.log(`\nSuccessful: ${results.length - failed}`);
     console.log(`Failed: ${failed}`);
+    await fetchPublicRegionSaleRates('classic');
     if (failed > 0) process.exitCode = 1;
 }
 
@@ -678,6 +713,7 @@ async function fetchForeverPublicData() {
     }
 
     fs.writeFileSync(agePath, `${JSON.stringify(age, null, 2)}\n`);
+    await fetchPublicRegionSaleRates('forever');
     if (failed > 0) process.exitCode = 1;
 }
 

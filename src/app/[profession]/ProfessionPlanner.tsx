@@ -31,10 +31,10 @@ import foreverTailoring from '@/data/recipes/forever/tailoring.json';
 import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, getMinSoldPerDayForProfession } from '@/lib/planner';
+import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, type SkillGapReason } from '@/lib/planner';
 import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
-import { getRegionIdForRealm, buildRegionSoldPerDayMap, type RegionItemStat } from '@/lib/regionDataLoader';
+import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, recipePurchase } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
@@ -69,6 +69,54 @@ function parsePlannerVersion(value: string | null): string | null {
 }
 
 const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
+const MIN_SALE_RATE_COOKIE = 'wowcraft-min-sale-rate';
+const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
+
+function readMinSaleRatePercent(): number {
+  if (typeof document === 'undefined') return DEFAULT_MIN_SALE_RATE_PERCENT;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${MIN_SALE_RATE_COOKIE}=([^;]*)`));
+  const value = match ? Number(match[1]) : DEFAULT_MIN_SALE_RATE_PERCENT;
+  if (!Number.isInteger(value) || value < 0 || value > 100) return DEFAULT_MIN_SALE_RATE_PERCENT;
+  return value;
+}
+
+function writeMinSaleRatePercent(percent: number) {
+  document.cookie = `${MIN_SALE_RATE_COOKIE}=${percent}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function MinimumSaleRateSlider({
+  percent,
+  onChange,
+  accent,
+}: {
+  percent: number;
+  onChange: (percent: number) => void;
+  accent: string;
+}) {
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between gap-2">
+        <span className="text-xs text-neutral-400">Minimum Sale Rate</span>
+        <span className="text-xs tabular-nums text-neutral-200">{percent}%</span>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={100}
+        step={1}
+        value={percent}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="h-1.5 w-full cursor-pointer"
+        style={{ accentColor: accent }}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percent}
+        aria-label="Minimum sale rate"
+      />
+      <p className="mt-1 text-[10px] leading-snug text-neutral-500">Auction House mode skips crafts below this chance of selling.</p>
+    </div>
+  );
+}
 
 function realmsForVersion(version: string): string[] {
   return version === 'Forever' ? [...FOREVER_REALMS] : ANNIVERSARY_REALMS;
@@ -218,14 +266,14 @@ async function loadPriceData(realm: string, faction: string): Promise<any[]> {
   }
 }
 
-// Function to load region data for soldPerDay sanity-check in auction-house mode
-async function loadRegionData(regionId: number): Promise<Map<number, number>> {
-  const regionNames: Record<number, string> = { 1: 'North_America', 2: 'Europe' };
-  const name = regionNames[regionId] ?? 'North_America';
+// Sale rates from the TSM region file for the selected game and region.
+async function loadRegionData(version: string, realm: string): Promise<Map<number, number>> {
+  const region = getRegionIdForRealm(realm) === 2 ? 'eu' : 'us';
+  const game = version === 'Forever' ? 'forever' : 'classic';
   try {
-    const data = await import(`@/data/prices/region_${regionId}_${name}.json`);
-    const rows = (data.default ?? data) as RegionItemStat[];
-    return buildRegionSoldPerDayMap(Array.isArray(rows) ? rows : []);
+    const data = await import(`@/data/prices/region_${game}_${region}.json`);
+    const rows = (data.default ?? data) as { itemId: number; saleRate?: number }[];
+    return buildRegionSaleRateMap(Array.isArray(rows) ? rows : []);
   } catch {
     return new Map();
   }
@@ -1128,6 +1176,19 @@ export default function ProfessionPlanner() {
   const [includeCurrencyRecipes, setIncludeCurrencyRecipes] = useState(false);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
+  const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
+  const minSaleRate = minSaleRatePercent / 100;
+  const saleRateAccent = selectedVersion === 'Forever' ? '#1fb5f7' : '#eab308';
+
+  useEffect(() => {
+    setMinSaleRatePercent(readMinSaleRatePercent());
+  }, []);
+
+  const updateMinSaleRate = useCallback((percent: number) => {
+    const next = Math.min(100, Math.max(0, Math.round(percent)));
+    setMinSaleRatePercent(next);
+    writeMinSaleRatePercent(next);
+  }, []);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
   const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -1136,8 +1197,8 @@ export default function ProfessionPlanner() {
   const [prices, setPrices] = useState<any>({});
   const [isLoadingPrices, setIsLoadingPrices] = useState(true);
   const [pricesSettled, setPricesSettled] = useState(false);
-  // Region data for soldPerDay sanity-check in auction-house mode
-  const [regionSoldPerDay, setRegionSoldPerDay] = useState<Map<number, number> | null>(null);
+  // TSM region sale rates used to skip slow sellers in auction-house mode
+  const [regionSaleRate, setRegionSaleRate] = useState<Map<number, number> | null>(null);
   // Track the current price loading request to ignore outdated ones
   const priceLoadRequestIdRef = useRef(0);
   const advancedSettingsAnchorRef = useRef<HTMLDivElement>(null);
@@ -1634,7 +1695,7 @@ export default function ProfessionPlanner() {
       };
     }
     
-    const newPlan = makeDynamicPlan(
+    const newPlan = makeSegmentedPlan(
       committedSkill,
         committedTarget,
         recipes,
@@ -1648,16 +1709,17 @@ export default function ProfessionPlanner() {
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
-      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+      priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
       includeCurrencyRecipes,
-      selectedFaction
+      selectedFaction,
+      minSaleRate
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -2009,7 +2071,7 @@ const renderXTick = selected
     
     // Calculate plan for pending profession BEFORE updating state
     // This ensures we have the recipe selected before the re-render
-    const pendingPlan = makeDynamicPlan(
+    const pendingPlan = makeSegmentedPlan(
       committedSkill,
       committedTarget,
       pendingRecipes,
@@ -2023,9 +2085,10 @@ const renderXTick = selected
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
-      priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+      priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
       includeCurrencyRecipes,
-      selectedFaction
+      selectedFaction,
+      minSaleRate
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -2062,7 +2125,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -2179,14 +2242,9 @@ const renderXTick = selected
     loadPrices();
   }, [selectedRealm, selectedFaction, selectedVersion]);
 
-  // Load region data for soldPerDay sanity-check when realm changes
+  // Load TSM sale rates when the realm or game version changes
   useEffect(() => {
-    if (selectedVersion === 'Forever') {
-      setRegionSoldPerDay(new Map());
-      return;
-    }
-    const regionId = getRegionIdForRealm(selectedRealm);
-    loadRegionData(regionId).then(setRegionSoldPerDay);
+    loadRegionData(selectedVersion, selectedRealm).then(setRegionSaleRate);
   }, [selectedRealm, selectedVersion]);
 
   // Reset skill and target when version changes to ensure they're within valid range
@@ -2285,7 +2343,7 @@ const renderXTick = selected
   // Optimize step candidates calculation to reduce expensive recalculations during sliding
   const stepCandidates = useMemo(() => {
     return plan.steps.map((s, i) => {
-      if ('upgradeName' in s) return null;
+      if ('upgradeName' in s || 'gap' in s) return null;
       
       const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
       const end = s.endSkill;
@@ -2308,8 +2366,8 @@ const renderXTick = selected
             materialInfo[r.source.recipeItemId]?.limitedStock &&
             materialInfo[r.source.recipeItemId]?.bop
           )) &&
-          // In auction-house mode: exclude low soldPerDay (illiquid) from alternatives too; only when we have region data for the item
-          !(priceSourcing === 'auction-house' && r.produces?.id && regionSoldPerDay && (() => { const spd = regionSoldPerDay.get(r.produces!.id); return spd !== undefined && spd < getMinSoldPerDayForProfession(selectedProfession); })())
+          // In auction-house mode, hide alternatives TSM says rarely sell
+          !(priceSourcing === 'auction-house' && r.produces?.id && regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate))
         )
         .map(r => {
           const crafts = expectedCraftsBetween(start, end, r.difficulty);
@@ -2328,7 +2386,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSoldPerDay]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -2392,7 +2450,7 @@ const renderXTick = selected
 
   const pricesReady = !isLoadingPrices && pricesSettled;
   const [guideSkillLimit, setGuideSkillLimit] = useState<number | null>(null);
-  const [guideLimitTip, setGuideLimitTip] = useState<{ top: number; left: number; center: boolean } | null>(null);
+  const [guideLimitTip, setGuideLimitTip] = useState<{ top: number; left: number; center: boolean; kind: 'materials' | SkillGapReason; skill: number } | null>(null);
 
   // Highest target the priced recipes can actually reach from the current skill.
   useEffect(() => {
@@ -2420,9 +2478,10 @@ const renderXTick = selected
         optimizeSubCrafting,
         currentProfessionRecipeIds,
         priceSourcing,
-        priceSourcing === 'auction-house' ? (regionSoldPerDay ?? undefined) : undefined,
+        priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
         includeCurrencyRecipes,
-        selectedFaction
+        selectedFaction,
+        minSaleRate
       );
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
@@ -2449,7 +2508,7 @@ const renderXTick = selected
     return () => {
       cancelled = true;
     };
-  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSoldPerDay]);
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
 
   // Open a profession at 1 → the furthest skill that still has a priced guide.
   useEffect(() => {
@@ -2468,11 +2527,7 @@ const renderXTick = selected
     );
   }, [guideSkillLimit, selectedProfession, committedSkill, committedTarget, selectedVersion, selectedRealm, selectedFaction, router]);
 
-  const routeIsFinite = !pricesReady || (
-    plan.steps.some((step) => 'recipe' in step) &&
-    plan.finalSkill >= committedTarget &&
-    Number.isFinite(displayedTotalCost)
-  );
+  const routeIsFinite = !pricesReady || plan.steps.length > 0;
 
   useEffect(() => {
     if (view === 'route' && pricesReady && !routeIsFinite) {
@@ -3090,6 +3145,7 @@ const renderXTick = selected
                               />
                             </button>
                           </div>
+                          <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                         </div>
                       </motion.div>
                         {/* Desktop: portal to body so it's always on top */}
@@ -3174,8 +3230,9 @@ const renderXTick = selected
                                         includeCurrencyRecipes ? 'translate-x-5' : 'translate-x-1'
                                       }`}
                                     />
-                                  </button>
+                                    </button>
                                 </div>
+                                <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                               </div>
                             </motion.div>
                           ),
@@ -3225,29 +3282,48 @@ const renderXTick = selected
                         onMouseDown={handleSliderStart}
                         onTouchStart={handleSliderStart}
                       >
-                        {guideSkillLimit != null && guideSkillLimit < maxSkill && (
-                          <div
-                            className="absolute bottom-[-14px] top-[-14px] z-[1] cursor-help"
-                            style={{ left: `${((guideSkillLimit - 1) / (maxSkill - 1)) * 100}%`, right: 0 }}
-                            onMouseEnter={(event) => {
-                              const rect = event.currentTarget.getBoundingClientRect();
-                              const width = 224;
-                              const gap = 12;
-                              const fitsRight = rect.right + gap + width < window.innerWidth;
-                              setGuideLimitTip(fitsRight
-                                ? { top: rect.top + rect.height / 2, left: rect.right + gap, center: true }
-                                : { top: rect.bottom + gap, left: Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)), center: false });
-                            }}
-                            onMouseLeave={() => setGuideLimitTip(null)}
-                          >
+                        {(() => {
+                          const segments: { from: number; to: number; kind: 'materials' | SkillGapReason }[] = [];
+                          let cursor = committedSkill;
+                          for (const step of plan.steps) {
+                            if ('gap' in step && step.endSkill > cursor) {
+                              segments.push({ from: cursor, to: step.endSkill, kind: step.gap });
+                            }
+                            cursor = step.endSkill;
+                          }
+                          if (guideSkillLimit != null && guideSkillLimit >= committedTarget && guideSkillLimit < maxSkill) {
+                            segments.push({ from: guideSkillLimit, to: maxSkill, kind: 'materials' });
+                          }
+                          if (segments.length === 0) return null;
+                          const span = maxSkill - 1;
+                          return segments.map((segment) => (
                             <div
-                              className="pointer-events-none absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2 rounded-r"
+                              key={`${segment.kind}-${segment.from}`}
+                              className="absolute bottom-[-14px] top-[-14px] z-[1] cursor-help"
                               style={{
-                                backgroundImage: 'repeating-linear-gradient(135deg, rgba(0,0,0,0.72) 0 5px, rgba(255,255,255,0.14) 5px 8px)',
+                                left: `${((segment.from - 1) / span) * 100}%`,
+                                width: `${((segment.to - segment.from) / span) * 100}%`,
                               }}
-                            />
-                          </div>
-                        )}
+                              onMouseEnter={(event) => {
+                                const rect = event.currentTarget.getBoundingClientRect();
+                                const width = 224;
+                                const gap = 12;
+                                const fitsRight = rect.right + gap + width < window.innerWidth;
+                                setGuideLimitTip(fitsRight
+                                  ? { top: rect.top + rect.height / 2, left: rect.right + gap, center: true, kind: segment.kind, skill: segment.from }
+                                  : { top: rect.bottom + gap, left: Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)), center: false, kind: segment.kind, skill: segment.from });
+                              }}
+                              onMouseLeave={() => setGuideLimitTip(null)}
+                            >
+                              <div
+                                className="pointer-events-none absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2"
+                                style={{
+                                  backgroundImage: 'repeating-linear-gradient(135deg, rgba(0,0,0,0.72) 0 5px, rgba(255,255,255,0.14) 5px 8px)',
+                                }}
+                              />
+                            </div>
+                          ));
+                        })()}
                         {children}
                       </div>
                     );
@@ -3296,9 +3372,15 @@ const renderXTick = selected
                     className={`pointer-events-none fixed z-[100] w-56 rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-left text-xs font-normal leading-relaxed text-neutral-200 shadow-lg ${guideLimitTip.center ? '-translate-y-1/2' : ''}`}
                     style={{ top: guideLimitTip.top, left: guideLimitTip.left }}
                   >
-                    {selectedVersion === 'Forever'
-                      ? `Not recommended past skill ${guideSkillLimit}. Most players are still below level 30, so higher-level materials are not on the auction house yet and a route through this stretch cannot be priced.`
-                      : `Not recommended past skill ${guideSkillLimit}. The auction prices do not cover a complete route through this stretch.`}
+                    {guideLimitTip.kind === 'sale-rate'
+                      ? `Skill ${guideLimitTip.skill} through here has no craft at a ${minSaleRatePercent}% sale rate. Everything that raises skill in this stretch sells less often than that.`
+                      : guideLimitTip.kind === 'no-recipe'
+                      ? `No recipe raises skill through this stretch, starting at ${guideLimitTip.skill}.`
+                      : guideLimitTip.kind === 'unpriced'
+                      ? `No priced craft continues from skill ${guideLimitTip.skill}. The auction data does not cover this stretch.`
+                      : selectedVersion === 'Forever'
+                      ? `Not recommended past skill ${guideLimitTip.skill}. Most players are still below level 30, so higher-level materials are not on the auction house yet and a route through this stretch cannot be priced.`
+                      : `Not recommended past skill ${guideLimitTip.skill}. The auction prices do not cover a complete route through this stretch.`}
                   </div>,
                   document.body
                 )}
@@ -3485,12 +3567,12 @@ const renderXTick = selected
                       ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
                       : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-600'
                   }`}
-                  title="Sell crafted items"
+                  title={`Skips items below a ${minSaleRatePercent}% sale rate`}
                 >
                   <span className="font-medium">Auction House</span>
                   {/* Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-neutral-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                    Sell crafted items
+                    {`Skips items below a ${minSaleRatePercent}% sale rate`}
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-900"></div>
                   </div>
                 </button>
@@ -3616,6 +3698,24 @@ const renderXTick = selected
                     ) : view === 'route' ? (
                       <div className="flex flex-col">
                         {plan.steps.map((s, i) => {
+                          if ('gap' in s) {
+                            const gapStart = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
+                            return (
+                              <div
+                                key={`gap-${s.gap}-${s.endSkill}-${committedSkill}`}
+                                className="relative flex items-center gap-2 border-b border-amber-500/30 bg-amber-500/10 px-2 py-2 w-full min-h-[43px] desktop-layout:min-h-[60px]"
+                              >
+                                <span className="absolute left-0 top-0 bottom-0 w-1 bg-amber-400" />
+                                <span className="flex min-w-0 flex-1 flex-col justify-center pl-2">
+                                  <span className="text-[13px] desktop-layout:text-[16px] font-medium text-amber-100">No crafts in this stretch</span>
+                                  <span className="text-[11px] desktop-layout:text-[13px] leading-snug text-amber-100/80">{s.note}</span>
+                                </span>
+                                <SkillBox className="min-w-[4.75rem] desktop-layout:min-w-[5.75rem] text-amber-100">
+                                  <span>{gapStart} → {s.endSkill}</span>
+                                </SkillBox>
+                              </div>
+                            );
+                          }
                           if ('upgradeName' in s) {
                             return (
                               <motion.div
