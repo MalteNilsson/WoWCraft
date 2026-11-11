@@ -1,35 +1,67 @@
 # Fetch auction prices and push them so Vercel deploys with fresh data.
 # Anniversary realms and WoW Forever come from TSM public CSVs.
+# The cron below asks for an hourly start, but GitHub often delays or drops
+# scheduled runs for hours. Each run therefore queues the next one itself.
 name: Update Auction Prices
 
 on:
   schedule:
-    # Every hour. GitHub runs this in UTC.
+    # Backup start in case the self-queued chain stops. GitHub runs this in UTC.
     - cron: '0 * * * *'
   workflow_dispatch:
+
+concurrency:
+  group: update-auction-prices
+  cancel-in-progress: false
 
 jobs:
   update-prices:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     permissions:
       contents: write
+      actions: write
     steps:
+      - name: Note start time
+        run: echo "START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
+      - name: Skip if another fetch is already queued
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          count=$(curl -fsSL \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update-tsm-data.yml/runs?per_page=20" \
+            | jq --argjson id "${{ github.run_id }}" '[.workflow_runs[] | select(.id != $id) | select(.status == "in_progress" or .status == "queued" or .status == "waiting" or .status == "pending")] | length')
+          if [ "$count" != "0" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Another price update is already queued or running."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout repository
+        if: steps.gate.outputs.skip != 'true'
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
+        if: steps.gate.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
+        if: steps.gate.outputs.skip != 'true'
         run: npm ci
 
       - name: Fetch TSM data
         id: tsm
+        if: steps.gate.outputs.skip != 'true'
         continue-on-error: true
         run: |
           node src/scripts/get_TSM_data.mjs anniversary
@@ -41,7 +73,7 @@ jobs:
           fi
 
       - name: Commit and push auction prices
-        if: always() && !cancelled()
+        if: always() && !cancelled() && steps.gate.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -50,17 +82,44 @@ jobs:
 
       - name: Record Forever profession costs
         id: costs
-        if: always() && !cancelled()
+        if: always() && !cancelled() && steps.gate.outputs.skip != 'true'
         continue-on-error: true
         run: npx tsx src/scripts/record_forever_profession_costs.ts
 
       - name: Commit and push profession cost history
-        if: always() && !cancelled()
+        if: always() && !cancelled() && steps.gate.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/profession-costs/forever.json
           git diff --staged --quiet || (git commit -m "chore: record forever profession leveling costs [skip ci]" && git push)
+
+      - name: Queue the next fetch in one hour
+        if: always() && !cancelled() && steps.gate.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          elapsed=$(( $(date +%s) - START_EPOCH ))
+          remain=$(( 3600 - elapsed ))
+          if [ "$remain" -gt 0 ]; then
+            echo "Waiting ${remain}s before the next fetch."
+            sleep "$remain"
+          fi
+          queued=$(curl -fsSL \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update-tsm-data.yml/runs?per_page=20" \
+            | jq --argjson id "${{ github.run_id }}" '[.workflow_runs[] | select(.id != $id) | select(.status == "queued" or .status == "waiting" or .status == "pending" or .status == "in_progress")] | length')
+          if [ "$queued" != "0" ]; then
+            echo "A fetch is already queued, so this run will not start another."
+            exit 0
+          fi
+          curl -fsSL -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update-tsm-data.yml/dispatches" \
+            -d "{\"ref\":\"${{ github.ref_name }}\"}"
+          echo "Queued the next fetch."
 
       - name: Fail if a price fetch or cost record failed
         if: steps.tsm.outcome == 'failure' || steps.costs.outcome == 'failure'
