@@ -813,17 +813,6 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "210709": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 100,
-    "auctionhouse": false,
-    "name": "Recipe: Elixir of Coalesced Regret",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
   "215163": {
     "bop": true,
     "limitedStock": false,
@@ -843,17 +832,6 @@
     "name": "Recipe: Insulating Gniodine",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217399": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 20000,
-    "auctionhouse": false,
-    "name": "Recipe: Lesser Arcane Elixir",
-    "quality": 2,
-    "icon": "inv_scroll_06",
     "hasSource": true,
     "mobDrop": false
   },
@@ -1628,8 +1606,8 @@
   "273085": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Fermenter",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
@@ -1653,7 +1631,7 @@
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Recipe: Flask of Natural Accuracy",
-    "quality": 4,
+    "quality": 3,
     "icon": "inv_scroll_04",
     "hasSource": true,
     "mobDrop": false
@@ -1664,7 +1642,7 @@
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Recipe: Flask of Natural Aggression",
-    "quality": 4,
+    "quality": 3,
     "icon": "inv_scroll_04",
     "hasSource": true,
     "mobDrop": false
@@ -1675,7 +1653,7 @@
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Recipe: Flask of Natural Precision",
-    "quality": 4,
+    "quality": 3,
     "icon": "inv_scroll_04",
     "hasSource": true,
     "mobDrop": false
@@ -1686,7 +1664,7 @@
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Recipe: Flask of Natural Swiftness",
-    "quality": 4,
+    "quality": 3,
     "icon": "inv_scroll_04",
     "hasSource": true,
     "mobDrop": false

@@ -99,6 +99,7 @@ const phases = {
 let requestedProfession = null;
 let requestedVersion = null; // null = both versions
 let runHeaded = false; // --headed = visible browser (harder for sites to detect)
+let refreshSellPricesOnly = false;
 
 // Parse arguments
 for (let i = 0; i < args.length; i++) {
@@ -121,6 +122,10 @@ for (let i = 0; i < args.length; i++) {
         if (trimmed === 'icons' || trimmed === 'downloadIcons') phases.downloadIcons = true;
         if (trimmed === 'zip') phases.zip = true;
         if (trimmed === 'recipe-items') phases.recipeItems = true;
+        if (trimmed === 'sell-prices') {
+          phases.enrich = true;
+          refreshSellPricesOnly = true;
+        }
       });
       i++; // Skip next arg as it's the phase value
     }
@@ -150,7 +155,7 @@ Options:
   --profession <name>  Scrape only specified profession (${PROFESSIONS.join(', ')})
   --version <ver>      Scrape only specified version (vanilla, tbc, forever). Default: all
   --phase <phases>     Run only specified phases (comma-separated)
-                       Available phases: scrape, enrich, icons, zip, recipe-items
+                       Available phases: scrape, enrich, icons, zip, recipe-items, sell-prices
   --headed             Run browser visibly (helps avoid 403 blocks)
   --help, -h           Show this help message
 
@@ -1432,7 +1437,7 @@ const enrichMaterialData = async (browser) => {
         }
       }
 
-      const materialIds = Object.keys(materials).filter(id => {
+      const materialIds = refreshSellPricesOnly ? [] : Object.keys(materials).filter(id => {
         const mat = materials[id];
         return !mat.name || mat.name === '' || mat.name.trim() === '';
       });
@@ -1461,6 +1466,12 @@ const enrichMaterialData = async (browser) => {
         let vendorPrice = null;
         let sellPrice = null;
         const jsonEquipStr = item?.jsonEquip?.[0];
+        if (String(id) === '4390') {
+          const tooltip = String(item?.htmlTooltip?.[0] || '');
+          const sell = tooltip.match(/Sell Price:[\s\S]{0,240}/);
+          console.log(`    Iron Grenade jsonEquip: ${jsonEquipStr}`);
+          console.log(`    Iron Grenade tooltip: ${sell ? sell[0].replace(/\s+/g, ' ') : 'no sell line'}`);
+        }
         if (typeof jsonEquipStr === 'string') {
           try {
             const json = JSON.parse(`{${jsonEquipStr}}`);
@@ -1575,7 +1586,7 @@ const enrichMaterialData = async (browser) => {
         if (!producedId) continue;
         const existing = materials[String(producedId)];
         const hasLevel = typeof existing?.itemLevel === 'number' && !Number.isNaN(existing.itemLevel);
-        const hasSell = typeof existing?.sellPrice === 'number';
+        const hasSell = !refreshSellPricesOnly && typeof existing?.sellPrice === 'number';
         if (hasLevel && hasSell) continue;
         producedIds.add(String(producedId));
       }
@@ -1599,7 +1610,15 @@ const enrichMaterialData = async (browser) => {
             existing.itemLevel = result.itemLevel;
             wrote = true;
           }
-          if (typeof existing.sellPrice !== 'number') {
+          if (refreshSellPricesOnly) {
+            if (typeof result.sellPrice === 'number' && existing.sellPrice !== result.sellPrice) {
+              console.log(`    ${existing.name || result.id}: ${existing.sellPrice ?? 'none'} -> ${result.sellPrice}`);
+              existing.sellPrice = result.sellPrice;
+              wrote = true;
+            } else if (typeof result.sellPrice !== 'number') {
+              console.warn(`    No vendor sell price for item ${result.id}`);
+            }
+          } else if (typeof existing.sellPrice !== 'number') {
             existing.sellPrice = sellPrice;
             wrote = true;
           }
@@ -1627,7 +1646,7 @@ const enrichMaterialData = async (browser) => {
     }
     console.log(`[${versionDir}] Recorded item level or vendor sell price on ${craftedStatsRecorded} crafted items`);
 
-    await enrichRecipeCurrencyCosts(browser, versionDir);
+    if (!refreshSellPricesOnly) await enrichRecipeCurrencyCosts(browser, versionDir);
       } catch (err) {
         if (err instanceof WowheadBlockedError) throw err;
         console.error(`[${versionDir}] Enrichment failed: ${err.message}`);

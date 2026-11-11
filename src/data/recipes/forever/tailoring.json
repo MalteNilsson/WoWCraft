@@ -1167,7 +1167,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 900
+      "cost": 1000
     }
   },
   {
@@ -1427,7 +1427,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 450
+      "cost": 500
     }
   },
   {
@@ -2254,7 +2254,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 900
+      "cost": 1000
     }
   },
   {
@@ -2285,7 +2285,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 900
+      "cost": 1000
     }
   },
   {
@@ -2314,7 +2314,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 900
+      "cost": 1000
     }
   },
   {
@@ -2544,7 +2544,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 2250
+      "cost": 2500
     }
   },
   {
@@ -2862,7 +2862,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 3600
+      "cost": 4000
     }
   },
   {
@@ -2924,7 +2924,7 @@
     "name": "Shadoweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 175,
+      "orange": 0,
       "yellow": 190,
       "green": 205,
       "gray": 220
@@ -2934,7 +2934,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 175,
+    "minSkill": 0,
     "icon": "inv_pants_11",
     "url": "https://www.wowhead.com/forever/spell=12052",
     "produces": {
@@ -2979,7 +2979,7 @@
     "name": "Shadoweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 180,
+      "orange": 0,
       "yellow": 195,
       "green": 210,
       "gray": 225
@@ -2989,7 +2989,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 180,
+    "minSkill": 0,
     "icon": "inv_chest_cloth_38",
     "url": "https://www.wowhead.com/forever/spell=12055",
     "produces": {
@@ -3114,7 +3114,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 2250
+      "cost": 2500
     }
   },
   {
@@ -3228,7 +3228,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 4500
+      "cost": 5000
     }
   },
   {
@@ -3285,7 +3285,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 4500
+      "cost": 5000
     }
   },
   {
@@ -3293,7 +3293,7 @@
     "name": "Shadoweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
+      "orange": 0,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3303,7 +3303,7 @@
       "8343": 2,
       "10285": 5
     },
-    "minSkill": 190,
+    "minSkill": 0,
     "icon": "inv_gauntlets_09",
     "url": "https://www.wowhead.com/forever/spell=12071",
     "produces": {
@@ -3321,7 +3321,7 @@
     "name": "Black Mageweave Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
+      "orange": 0,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3330,7 +3330,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 190,
+    "minSkill": 0,
     "icon": "inv_misc_bandana_01",
     "url": "https://www.wowhead.com/forever/spell=12072",
     "produces": {
@@ -3348,7 +3348,7 @@
     "name": "Black Mageweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
+      "orange": 0,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3358,7 +3358,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 190,
+    "minSkill": 0,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12073",
     "produces": {
@@ -3376,7 +3376,7 @@
     "name": "Black Mageweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 190,
+      "orange": 0,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3385,7 +3385,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 190,
+    "minSkill": 0,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12074",
     "produces": {
@@ -3432,7 +3432,7 @@
     "name": "Shadoweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 195,
+      "orange": 0,
       "yellow": 210,
       "green": 225,
       "gray": 240
@@ -3442,7 +3442,7 @@
       "8343": 2,
       "10285": 4
     },
-    "minSkill": 195,
+    "minSkill": 0,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12076",
     "produces": {
@@ -3460,7 +3460,7 @@
     "name": "Simple Black Dress",
     "quality": 1,
     "difficulty": {
-      "orange": 195,
+      "orange": 0,
       "yellow": 200,
       "green": 205,
       "gray": 210
@@ -3471,7 +3471,7 @@
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 195,
+    "minSkill": 0,
     "icon": "inv_chest_cloth_21",
     "url": "https://www.wowhead.com/forever/spell=12077",
     "produces": {
@@ -3518,7 +3518,7 @@
     "name": "Red Mageweave Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 195,
+      "orange": 0,
       "yellow": 210,
       "green": 225,
       "gray": 240
@@ -3528,7 +3528,7 @@
       "4339": 4,
       "8343": 2
     },
-    "minSkill": 195,
+    "minSkill": 0,
     "icon": "inv_misc_bag_10_red",
     "url": "https://www.wowhead.com/forever/spell=12079",
     "produces": {
@@ -3604,7 +3604,7 @@
     "name": "Shadoweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 200,
+      "orange": 0,
       "yellow": 215,
       "green": 230,
       "gray": 245
@@ -3615,7 +3615,7 @@
       "8343": 3,
       "10285": 6
     },
-    "minSkill": 200,
+    "minSkill": 0,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12082",
     "produces": {
@@ -3719,7 +3719,7 @@
     "name": "Cindercloth Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 200,
+      "orange": 0,
       "yellow": 215,
       "green": 230,
       "gray": 245
@@ -3730,7 +3730,7 @@
       "7077": 1,
       "8343": 3
     },
-    "minSkill": 200,
+    "minSkill": 0,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12088",
     "produces": {
@@ -3805,7 +3805,7 @@
     "name": "Dreamweave Circlet",
     "quality": 3,
     "difficulty": {
-      "orange": 205,
+      "orange": 0,
       "yellow": 220,
       "green": 235,
       "gray": 250
@@ -3818,7 +3818,7 @@
       "8343": 3,
       "10286": 2
     },
-    "minSkill": 205,
+    "minSkill": 0,
     "icon": "inv_crown_01",
     "url": "https://www.wowhead.com/forever/spell=12092",
     "produces": {
@@ -3864,7 +3864,7 @@
     "name": "Bolt of Runecloth",
     "quality": 1,
     "difficulty": {
-      "orange": 205,
+      "orange": 0,
       "yellow": 210,
       "green": 212,
       "gray": 215
@@ -3872,7 +3872,7 @@
     "materials": {
       "14047": 5
     },
-    "minSkill": 205,
+    "minSkill": 0,
     "icon": "inv_fabric_purplefire_02",
     "url": "https://www.wowhead.com/forever/spell=18401",
     "produces": {
@@ -3890,7 +3890,7 @@
     "name": "Runecloth Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 210,
+      "orange": 0,
       "yellow": 225,
       "green": 240,
       "gray": 255
@@ -3899,7 +3899,7 @@
       "14048": 3,
       "14341": 1
     },
-    "minSkill": 210,
+    "minSkill": 0,
     "icon": "inv_belt_15",
     "url": "https://www.wowhead.com/forever/spell=18402",
     "produces": {
@@ -6606,57 +6606,6 @@
     }
   },
   {
-    "id": 428424,
-    "name": "Phoenix Bindings",
-    "quality": 3,
-    "difficulty": {
-      "orange": 125,
-      "yellow": 125,
-      "green": 137,
-      "gray": 150
-    },
-    "materials": {
-      "814": 2,
-      "2321": 2,
-      "2997": 6
-    },
-    "minSkill": 125,
-    "icon": "inv_bracer_25a",
-    "url": "https://www.wowhead.com/forever/spell=428424",
-    "produces": {
-      "id": 210781,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 211247,
-      "recipeItemName": "Pattern: Phoenix Bindings"
-    }
-  },
-  {
-    "id": 429351,
-    "name": "Extraplanar Spidersilk Boots",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 150,
-      "green": 167,
-      "gray": 185
-    },
-    "materials": {
-      "4320": 1,
-      "211422": 1
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=429351",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
     "id": 435610,
     "name": "Gneuro-Linked Arcano-Filament Monocle",
     "quality": -1,
@@ -6710,315 +6659,6 @@
       "type": "item",
       "recipeItemId": 215368,
       "recipeItemName": "Pattern: Hyperconductive Arcano-Filament"
-    }
-  },
-  {
-    "id": 435841,
-    "name": "Invoker's Cord",
-    "quality": 2,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 170,
-      "green": 185,
-      "gray": 200
-    },
-    "materials": {
-      "1210": 1,
-      "2321": 1,
-      "4305": 3,
-      "4340": 1
-    },
-    "minSkill": 150,
-    "icon": "inv_belt_03",
-    "url": "https://www.wowhead.com/forever/spell=435841",
-    "produces": {
-      "id": 215366,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 215369,
-      "recipeItemName": "Pattern: Invoker's Cord"
-    }
-  },
-  {
-    "id": 435848,
-    "name": "Invoker's Mantle",
-    "quality": 2,
-    "difficulty": {
-      "orange": 150,
-      "yellow": 170,
-      "green": 185,
-      "gray": 200
-    },
-    "materials": {
-      "2321": 1,
-      "4305": 4,
-      "4340": 4,
-      "6260": 4
-    },
-    "minSkill": 150,
-    "icon": "inv_shoulder_02",
-    "url": "https://www.wowhead.com/forever/spell=435848",
-    "produces": {
-      "id": 215365,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 215370,
-      "recipeItemName": "Pattern: Invoker's Mantle"
-    }
-  },
-  {
-    "id": 439085,
-    "name": "Crimson Silk Robe",
-    "quality": -1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 220,
-      "green": 235,
-      "gray": 250
-    },
-    "materials": {
-      "2604": 4,
-      "3827": 2,
-      "4291": 1,
-      "4305": 8,
-      "7068": 4
-    },
-    "minSkill": 205,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439085",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217244,
-      "recipeItemName": "Pattern: Crimson Silk Robe"
-    }
-  },
-  {
-    "id": 439086,
-    "name": "Black Mageweave Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 220,
-      "green": 235,
-      "gray": 250
-    },
-    "materials": {
-      "4291": 3,
-      "4339": 2
-    },
-    "minSkill": 205,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439086",
-    "produces": null,
-    "source": {
-      "type": "trainer",
-      "cost": 4000
-    }
-  },
-  {
-    "id": 439088,
-    "name": "Black Mageweave Leggings",
-    "quality": -1,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 220,
-      "green": 235,
-      "gray": 250
-    },
-    "materials": {
-      "4291": 3,
-      "4339": 2
-    },
-    "minSkill": 205,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439088",
-    "produces": null,
-    "source": {
-      "type": "trainer",
-      "cost": 4000
-    }
-  },
-  {
-    "id": 439091,
-    "name": "Earthen Silk Belt",
-    "quality": -1,
-    "difficulty": {
-      "orange": 195,
-      "yellow": 215,
-      "green": 230,
-      "gray": 245
-    },
-    "materials": {
-      "4234": 4,
-      "4291": 2,
-      "4305": 5,
-      "7067": 4,
-      "7071": 1
-    },
-    "minSkill": 195,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439091",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217249,
-      "recipeItemName": "Pattern: Earthen Silk Belt"
-    }
-  },
-  {
-    "id": 439093,
-    "name": "Crimson Silk Shoulders",
-    "quality": -1,
-    "difficulty": {
-      "orange": 190,
-      "yellow": 210,
-      "green": 225,
-      "gray": 240
-    },
-    "materials": {
-      "2604": 2,
-      "4291": 2,
-      "4305": 5,
-      "6371": 2
-    },
-    "minSkill": 190,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439093",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217251,
-      "recipeItemName": "Pattern: Crimson Silk Shoulders"
-    }
-  },
-  {
-    "id": 439094,
-    "name": "Long Silken Cloak",
-    "quality": -1,
-    "difficulty": {
-      "orange": 185,
-      "yellow": 205,
-      "green": 220,
-      "gray": 235
-    },
-    "materials": {
-      "3827": 1,
-      "4291": 1,
-      "4305": 4
-    },
-    "minSkill": 185,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439094",
-    "produces": null,
-    "source": {
-      "type": "trainer",
-      "cost": 1000
-    }
-  },
-  {
-    "id": 439097,
-    "name": "Boots of the Enchanter",
-    "quality": -1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 195,
-      "green": 210,
-      "gray": 225
-    },
-    "materials": {
-      "4291": 1,
-      "4305": 4,
-      "4337": 2
-    },
-    "minSkill": 175,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439097",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217254,
-      "recipeItemName": "Pattern: Boots of the Enchanter"
-    }
-  },
-  {
-    "id": 439098,
-    "name": "Crimson Silk Belt",
-    "quality": -1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 195,
-      "green": 210,
-      "gray": 225
-    },
-    "materials": {
-      "2604": 2,
-      "4291": 1,
-      "4305": 4,
-      "7071": 1
-    },
-    "minSkill": 175,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439098",
-    "produces": null,
-    "source": {
-      "type": "trainer",
-      "cost": 1000
-    }
-  },
-  {
-    "id": 439100,
-    "name": "Earthen Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 170,
-      "yellow": 190,
-      "green": 205,
-      "gray": 220
-    },
-    "materials": {
-      "2321": 2,
-      "4305": 3,
-      "7067": 1
-    },
-    "minSkill": 170,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439100",
-    "produces": null,
-    "source": {
-      "type": "trainer",
-      "cost": 900
-    }
-  },
-  {
-    "id": 439102,
-    "name": "Enchanter's Cowl",
-    "quality": -1,
-    "difficulty": {
-      "orange": 165,
-      "yellow": 185,
-      "green": 200,
-      "gray": 215
-    },
-    "materials": {
-      "2321": 2,
-      "4305": 3,
-      "4337": 2
-    },
-    "minSkill": 165,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=439102",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217258,
-      "recipeItemName": "Pattern: Enchanter's Cowl"
     }
   },
   {
@@ -7095,753 +6735,6 @@
     }
   },
   {
-    "id": 461692,
-    "name": "Synthetic Gordok Ogre Suit",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 285,
-      "green": 290,
-      "gray": 295
-    },
-    "materials": {
-      "8170": 4,
-      "14048": 2,
-      "14341": 1,
-      "18240": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=461692",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 461708,
-    "name": "Incandescent Mooncloth Robe",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "13926": 2,
-      "14048": 6,
-      "14341": 2,
-      "14342": 4
-    },
-    "minSkill": 300,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=461708",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228303,
-      "recipeItemName": "Pattern: Incandescent Mooncloth Robe"
-    }
-  },
-  {
-    "id": 461727,
-    "name": "Leather-Reinforced Runecloth Bag",
-    "quality": 3,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "8170": 2,
-      "14048": 5,
-      "14341": 1,
-      "15407": 1
-    },
-    "minSkill": 300,
-    "icon": "inv_misc_bag_26_spellfire",
-    "url": "https://www.wowhead.com/forever/spell=461727",
-    "produces": {
-      "id": 227844,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 228121,
-      "recipeItemName": "Pattern: Leather-Reinforced Runecloth Bag"
-    }
-  },
-  {
-    "id": 461747,
-    "name": "Incandescent Mooncloth Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "14048": 6,
-      "14341": 1,
-      "14342": 4
-    },
-    "minSkill": 300,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=461747",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228316,
-      "recipeItemName": "Pattern: Incandescent Mooncloth Vest"
-    }
-  },
-  {
-    "id": 461750,
-    "name": "Incandescent Mooncloth Circlet",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12800": 1,
-      "12810": 2,
-      "14048": 4,
-      "14341": 2,
-      "14342": 6
-    },
-    "minSkill": 300,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=461750",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228317,
-      "recipeItemName": "Pattern: Incandescent Mooncloth Circlet"
-    }
-  },
-  {
-    "id": 461752,
-    "name": "Incandescent Mooncloth Leggings",
-    "quality": -1,
-    "difficulty": {
-      "orange": 290,
-      "yellow": 305,
-      "green": 320,
-      "gray": 335
-    },
-    "materials": {
-      "14048": 6,
-      "14341": 1,
-      "14342": 4
-    },
-    "minSkill": 290,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=461752",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228318,
-      "recipeItemName": "Pattern: Incandescent Mooncloth Leggings"
-    }
-  },
-  {
-    "id": 462282,
-    "name": "Embroidered Belt of the Archmage",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7078": 12,
-      "7080": 12,
-      "9210": 10,
-      "14048": 16,
-      "14341": 6,
-      "14342": 10,
-      "14344": 6
-    },
-    "minSkill": 300,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=462282",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228477,
-      "recipeItemName": "Pattern: Embroidered Belt of the Archmage"
-    }
-  },
-  {
-    "id": 463972,
-    "name": "Bottomless Bag",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "14048": 8,
-      "14341": 2,
-      "14342": 12,
-      "14344": 2,
-      "17012": 2
-    },
-    "minSkill": 300,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=463972",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228993,
-      "recipeItemName": "Pattern: Bottomless Bag"
-    }
-  },
-  {
-    "id": 1213527,
-    "name": "Vampiric Cowl",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "14342": 8,
-      "234009": 15
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213527",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213530,
-    "name": "Vampiric Shawl",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "14342": 8,
-      "234009": 15
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213530",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213532,
-    "name": "Vampiric Robe",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12810": 12,
-      "14341": 1,
-      "14342": 12,
-      "234009": 25
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213532",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213534,
-    "name": "Qiraji Silk Scarf",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "15407": 4,
-      "234007": 8,
-      "234009": 9
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213534",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213536,
-    "name": "Qiraji Silk Cape",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "15407": 4,
-      "234007": 8,
-      "234009": 9
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213536",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213538,
-    "name": "Qiraji Silk Cloak",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "15407": 4,
-      "234007": 8,
-      "234009": 9
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213538",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213540,
-    "name": "Qiraji Silk Drape",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 8,
-      "14341": 1,
-      "15407": 4,
-      "234007": 8,
-      "234009": 9
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213540",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213740,
-    "name": "Sylvan Shoulders",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12803": 4,
-      "14048": 4,
-      "14227": 4,
-      "19726": 3
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213740",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213742,
-    "name": "Sylvan Crown",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12803": 3,
-      "14048": 4,
-      "14227": 3,
-      "14342": 4,
-      "19726": 4
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213742",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213744,
-    "name": "Sylvan Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "12803": 2,
-      "14048": 4,
-      "14227": 3,
-      "14342": 4,
-      "19726": 3
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1213744",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214173,
-    "name": "Bolt of Qiraji Silk",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "234008": 5
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1214173",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214306,
-    "name": "Dreamscale Bracers",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12803": 4,
-      "14048": 30,
-      "14227": 6,
-      "14342": 4,
-      "20381": 4
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1214306",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214307,
-    "name": "Dreamscale Mitts",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12803": 4,
-      "14048": 30,
-      "14227": 6,
-      "14342": 4,
-      "20381": 5
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1214307",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223760,
-    "name": "Glacial Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 6,
-      "14048": 8,
-      "14227": 8,
-      "236656": 7
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223760",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223762,
-    "name": "Glacial Cloak",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 2,
-      "14048": 4,
-      "14227": 4,
-      "236656": 5
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223762",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223764,
-    "name": "Glacial Gloves",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 4,
-      "14048": 4,
-      "14227": 4,
-      "236656": 5
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223764",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223766,
-    "name": "Glacial Wrists",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 2,
-      "14048": 2,
-      "14227": 4,
-      "236656": 4
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223766",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223768,
-    "name": "Frosty Vest",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 6,
-      "14048": 8,
-      "14227": 8,
-      "236656": 7
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223768",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223770,
-    "name": "Frosty Gloves",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 4,
-      "14048": 4,
-      "14227": 4,
-      "236656": 5
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223770",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223772,
-    "name": "Frosty Wrists",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 330,
-      "gray": 345
-    },
-    "materials": {
-      "7080": 2,
-      "14048": 2,
-      "14227": 4,
-      "236656": 4
-    },
-    "minSkill": 0,
-    "icon": "ability_ensnare",
-    "url": "https://www.wowhead.com/forever/spell=1223772",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1224607,
-    "name": "Scarlet Augur's Hood",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 2,
-      "12938": 1,
-      "14048": 12
-    },
-    "minSkill": 280,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224607",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238298,
-      "recipeItemName": "Pattern: Scarlet Augur's Hood"
-    }
-  },
-  {
-    "id": 1224608,
-    "name": "Scarlet Augur's Mantle",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 1,
-      "14048": 10
-    },
-    "minSkill": 280,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224608",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238299,
-      "recipeItemName": "Pattern: Scarlet Augur's Mantle"
-    }
-  },
-  {
     "id": 1224609,
     "name": "Scarlet Augur's Vestments",
     "quality": -1,
@@ -7864,126 +6757,6 @@
       "type": "item",
       "recipeItemId": 238300,
       "recipeItemName": "Pattern: Scarlet Augur's Vestments"
-    }
-  },
-  {
-    "id": 1224610,
-    "name": "Scarlet Augur's Cuffs",
-    "quality": -1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 260,
-      "green": 282,
-      "gray": 305
-    },
-    "materials": {
-      "14048": 8
-    },
-    "minSkill": 250,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224610",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238301,
-      "recipeItemName": "Pattern: Scarlet Augur's Cuffs"
-    }
-  },
-  {
-    "id": 1224611,
-    "name": "Scarlet Augur's Mitts",
-    "quality": -1,
-    "difficulty": {
-      "orange": 260,
-      "yellow": 270,
-      "green": 287,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 1,
-      "14048": 10
-    },
-    "minSkill": 260,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224611",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238302,
-      "recipeItemName": "Pattern: Scarlet Augur's Mitts"
-    }
-  },
-  {
-    "id": 1224612,
-    "name": "Scarlet Augur's Strap",
-    "quality": -1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 260,
-      "green": 282,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 1,
-      "14048": 10
-    },
-    "minSkill": 250,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224612",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238303,
-      "recipeItemName": "Pattern: Scarlet Augur's Strap"
-    }
-  },
-  {
-    "id": 1224613,
-    "name": "Scarlet Augur's Leggings",
-    "quality": -1,
-    "difficulty": {
-      "orange": 270,
-      "yellow": 280,
-      "green": 292,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 1,
-      "12938": 1,
-      "14048": 12
-    },
-    "minSkill": 270,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224613",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238304,
-      "recipeItemName": "Pattern: Scarlet Augur's Leggings"
-    }
-  },
-  {
-    "id": 1224614,
-    "name": "Scarlet Augur's Soles",
-    "quality": -1,
-    "difficulty": {
-      "orange": 260,
-      "yellow": 270,
-      "green": 287,
-      "gray": 305
-    },
-    "materials": {
-      "12811": 1,
-      "14048": 10
-    },
-    "minSkill": 260,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224614",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238305,
-      "recipeItemName": "Pattern: Scarlet Augur's Soles"
     }
   },
   {
@@ -8071,7 +6844,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
+      "cost": 105
     }
   },
   {
@@ -12146,7 +10919,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
+      "cost": 105
     }
   },
   {

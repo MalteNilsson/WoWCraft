@@ -14,27 +14,9 @@
       "2449": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
-    "icon": "",
+    "icon": "inv_potion_56",
     "url": "https://www.wowhead.com/classic/spell=2329",
-    "spellLink": "https://www.wowhead.com/classic/spell=2329",
     "produces": {
       "id": 2454,
       "name": "",
@@ -59,27 +41,9 @@
       "2447": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2447,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
-    "icon": "",
+    "icon": "inv_potion_49",
     "url": "https://www.wowhead.com/classic/spell=2330",
-    "spellLink": "https://www.wowhead.com/classic/spell=2330",
     "produces": {
       "id": 118,
       "name": "",
@@ -104,27 +68,9 @@
       "785": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 25,
-    "icon": "",
+    "icon": "inv_potion_70",
     "url": "https://www.wowhead.com/classic/spell=2331",
-    "spellLink": "https://www.wowhead.com/classic/spell=2331",
     "produces": {
       "id": 2455,
       "name": "",
@@ -150,27 +96,9 @@
       "2447": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 2447,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 40,
-    "icon": "",
+    "icon": "inv_potion_02",
     "url": "https://www.wowhead.com/classic/spell=2332",
-    "spellLink": "https://www.wowhead.com/classic/spell=2332",
     "produces": {
       "id": 2456,
       "name": "",
@@ -196,27 +124,9 @@
       "3355": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2452,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 140,
-    "icon": "",
+    "icon": "inv_potion_92",
     "url": "https://www.wowhead.com/classic/spell=2333",
-    "spellLink": "https://www.wowhead.com/classic/spell=2333",
     "produces": {
       "id": 3390,
       "name": "",
@@ -243,27 +153,9 @@
       "2449": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 2447,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
-    "icon": "",
+    "icon": "inv_potion_42",
     "url": "https://www.wowhead.com/classic/spell=2334",
-    "spellLink": "https://www.wowhead.com/classic/spell=2334",
     "produces": {
       "id": 2458,
       "name": "",
@@ -289,27 +181,9 @@
       "2452": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 60,
-    "icon": "",
+    "icon": "inv_potion_95",
     "url": "https://www.wowhead.com/classic/spell=2335",
-    "spellLink": "https://www.wowhead.com/classic/spell=2335",
     "produces": {
       "id": 2459,
       "name": "",
@@ -335,22 +209,9 @@
       "118": 1,
       "2450": 1
     },
-    "inputItems": [
-      {
-        "id": 118,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 55,
-    "icon": "",
+    "icon": "inv_potion_50",
     "url": "https://www.wowhead.com/classic/spell=2337",
-    "spellLink": "https://www.wowhead.com/classic/spell=2337",
     "produces": {
       "id": 858,
       "name": "",
@@ -376,27 +237,9 @@
       "2449": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2447,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2449,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 15,
-    "icon": "",
+    "icon": "inv_potion_77",
     "url": "https://www.wowhead.com/classic/spell=3170",
-    "spellLink": "https://www.wowhead.com/classic/spell=3170",
     "produces": {
       "id": 3382,
       "name": "",
@@ -422,27 +265,9 @@
       "2450": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
-    "icon": "",
+    "icon": "inv_potion_06",
     "url": "https://www.wowhead.com/classic/spell=3171",
-    "spellLink": "https://www.wowhead.com/classic/spell=3171",
     "produces": {
       "id": 3383,
       "name": "",
@@ -468,27 +293,9 @@
       "3355": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 3355,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 110,
-    "icon": "",
+    "icon": "inv_potion_08",
     "url": "https://www.wowhead.com/classic/spell=3172",
-    "spellLink": "https://www.wowhead.com/classic/spell=3172",
     "produces": {
       "id": 3384,
       "name": "",
@@ -515,27 +322,9 @@
       "3371": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 120,
-    "icon": "",
+    "icon": "inv_potion_71",
     "url": "https://www.wowhead.com/classic/spell=3173",
-    "spellLink": "https://www.wowhead.com/classic/spell=3173",
     "produces": {
       "id": 3385,
       "name": "",
@@ -561,27 +350,9 @@
       "2453": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 1288,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2453,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 120,
-    "icon": "",
+    "icon": "inv_potion_12",
     "url": "https://www.wowhead.com/classic/spell=3174",
-    "spellLink": "https://www.wowhead.com/classic/spell=3174",
     "produces": {
       "id": 3386,
       "name": "",
@@ -608,27 +379,9 @@
       "8845": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8845,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_62",
     "url": "https://www.wowhead.com/classic/spell=3175",
-    "spellLink": "https://www.wowhead.com/classic/spell=3175",
     "produces": {
       "id": 3387,
       "name": "",
@@ -655,27 +408,9 @@
       "2453": 2,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 125,
-    "icon": "",
+    "icon": "inv_potion_78",
     "url": "https://www.wowhead.com/classic/spell=3176",
-    "spellLink": "https://www.wowhead.com/classic/spell=3176",
     "produces": {
       "id": 3388,
       "name": "",
@@ -701,27 +436,9 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 130,
-    "icon": "",
+    "icon": "inv_potion_64",
     "url": "https://www.wowhead.com/classic/spell=3177",
-    "spellLink": "https://www.wowhead.com/classic/spell=3177",
     "produces": {
       "id": 3389,
       "name": "",
@@ -747,27 +464,9 @@
       "3356": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 150,
-    "icon": "",
+    "icon": "inv_potion_57",
     "url": "https://www.wowhead.com/classic/spell=3188",
-    "spellLink": "https://www.wowhead.com/classic/spell=3188",
     "produces": {
       "id": 3391,
       "name": "",
@@ -794,27 +493,9 @@
       "2452": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
-    "icon": "",
+    "icon": "inv_potion_91",
     "url": "https://www.wowhead.com/classic/spell=3230",
-    "spellLink": "https://www.wowhead.com/classic/spell=3230",
     "produces": {
       "id": 2457,
       "name": "",
@@ -841,27 +522,9 @@
       "2453": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 110,
-    "icon": "",
+    "icon": "inv_potion_51",
     "url": "https://www.wowhead.com/classic/spell=3447",
-    "spellLink": "https://www.wowhead.com/classic/spell=3447",
     "produces": {
       "id": 929,
       "name": "",
@@ -887,27 +550,9 @@
       "3372": 1,
       "3818": 1
     },
-    "inputItems": [
-      {
-        "id": 3818,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3355,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
-    "icon": "",
+    "icon": "inv_potion_18",
     "url": "https://www.wowhead.com/classic/spell=3448",
-    "spellLink": "https://www.wowhead.com/classic/spell=3448",
     "produces": {
       "id": 3823,
       "name": "",
@@ -933,27 +578,9 @@
       "3372": 1,
       "3818": 4
     },
-    "inputItems": [
-      {
-        "id": 3818,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 3369,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
-    "icon": "",
+    "icon": "inv_potion_23",
     "url": "https://www.wowhead.com/classic/spell=3449",
-    "spellLink": "https://www.wowhead.com/classic/spell=3449",
     "produces": {
       "id": 3824,
       "name": "",
@@ -980,27 +607,9 @@
       "3357": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2453,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 180,
-    "icon": "",
+    "icon": "inv_potion_79",
     "url": "https://www.wowhead.com/classic/spell=3451",
-    "spellLink": "https://www.wowhead.com/classic/spell=3451",
     "produces": {
       "id": 3826,
       "name": "",
@@ -1027,27 +636,9 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 160,
-    "icon": "",
+    "icon": "inv_potion_72",
     "url": "https://www.wowhead.com/classic/spell=3452",
-    "spellLink": "https://www.wowhead.com/classic/spell=3452",
     "produces": {
       "id": 3827,
       "name": "",
@@ -1073,27 +664,9 @@
       "3372": 1,
       "3818": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3818,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 195,
-    "icon": "",
+    "icon": "inv_potion_01",
     "url": "https://www.wowhead.com/classic/spell=3453",
-    "spellLink": "https://www.wowhead.com/classic/spell=3453",
     "produces": {
       "id": 3828,
       "name": "",
@@ -1120,27 +693,9 @@
       "3372": 1,
       "3819": 2
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 3819,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 200,
-    "icon": "",
+    "icon": "inv_potion_20",
     "url": "https://www.wowhead.com/classic/spell=3454",
-    "spellLink": "https://www.wowhead.com/classic/spell=3454",
     "produces": {
       "id": 3829,
       "name": "",
@@ -1167,27 +722,9 @@
       "3164": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 3164,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2447,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
-    "icon": "",
+    "icon": "inv_potion_35",
     "url": "https://www.wowhead.com/classic/spell=4508",
-    "spellLink": "https://www.wowhead.com/classic/spell=4508",
     "produces": {
       "id": 4596,
       "name": "",
@@ -1214,27 +751,9 @@
       "3821": 1,
       "3858": 1
     },
-    "inputItems": [
-      {
-        "id": 3858,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
-    "icon": "",
+    "icon": "inv_potion_67",
     "url": "https://www.wowhead.com/classic/spell=4942",
-    "spellLink": "https://www.wowhead.com/classic/spell=4942",
     "produces": {
       "id": 4623,
       "name": "",
@@ -1261,27 +780,9 @@
       "3371": 1,
       "5635": 1
     },
-    "inputItems": [
-      {
-        "id": 5635,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 60,
-    "icon": "",
+    "icon": "inv_potion_24",
     "url": "https://www.wowhead.com/classic/spell=6617",
-    "spellLink": "https://www.wowhead.com/classic/spell=6617",
     "produces": {
       "id": 5631,
       "name": "",
@@ -1308,27 +809,9 @@
       "3372": 1,
       "5637": 1
     },
-    "inputItems": [
-      {
-        "id": 5637,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 175,
-    "icon": "",
+    "icon": "inv_potion_21",
     "url": "https://www.wowhead.com/classic/spell=6618",
-    "spellLink": "https://www.wowhead.com/classic/spell=6618",
     "produces": {
       "id": 5633,
       "name": "",
@@ -1355,27 +838,9 @@
       "3820": 1,
       "6370": 2
     },
-    "inputItems": [
-      {
-        "id": 6370,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 150,
-    "icon": "",
+    "icon": "inv_potion_04",
     "url": "https://www.wowhead.com/classic/spell=6624",
-    "spellLink": "https://www.wowhead.com/classic/spell=6624",
     "produces": {
       "id": 5634,
       "name": "",
@@ -1402,27 +867,9 @@
       "3820": 1,
       "6370": 2
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 6370,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
-    "icon": "",
+    "icon": "inv_potion_17",
     "url": "https://www.wowhead.com/classic/spell=7179",
-    "spellLink": "https://www.wowhead.com/classic/spell=7179",
     "produces": {
       "id": 5996,
       "name": "",
@@ -1448,27 +895,9 @@
       "3357": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 155,
-    "icon": "",
+    "icon": "inv_potion_52",
     "url": "https://www.wowhead.com/classic/spell=7181",
-    "spellLink": "https://www.wowhead.com/classic/spell=7181",
     "produces": {
       "id": 1710,
       "name": "",
@@ -1493,22 +922,9 @@
       "765": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 765,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
-    "icon": "",
+    "icon": "inv_potion_63",
     "url": "https://www.wowhead.com/classic/spell=7183",
-    "spellLink": "https://www.wowhead.com/classic/spell=7183",
     "produces": {
       "id": 5997,
       "name": "",
@@ -1533,27 +949,9 @@
       "2453": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2452,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 100,
-    "icon": "",
+    "icon": "inv_potion_09",
     "url": "https://www.wowhead.com/classic/spell=7255",
-    "spellLink": "https://www.wowhead.com/classic/spell=7255",
     "produces": {
       "id": 6051,
       "name": "",
@@ -1580,27 +978,9 @@
       "3369": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3369,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 135,
-    "icon": "",
+    "icon": "inv_potion_44",
     "url": "https://www.wowhead.com/classic/spell=7256",
-    "spellLink": "https://www.wowhead.com/classic/spell=7256",
     "produces": {
       "id": 6048,
       "name": "",
@@ -1627,27 +1007,9 @@
       "4402": 1,
       "6371": 1
     },
-    "inputItems": [
-      {
-        "id": 4402,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 6371,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
-    "icon": "",
+    "icon": "inv_potion_16",
     "url": "https://www.wowhead.com/classic/spell=7257",
-    "spellLink": "https://www.wowhead.com/classic/spell=7257",
     "produces": {
       "id": 6049,
       "name": "",
@@ -1674,27 +1036,9 @@
       "3819": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3819,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
-    "icon": "",
+    "icon": "inv_potion_13",
     "url": "https://www.wowhead.com/classic/spell=7258",
-    "spellLink": "https://www.wowhead.com/classic/spell=7258",
     "produces": {
       "id": 6050,
       "name": "",
@@ -1721,27 +1065,9 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
-    "icon": "",
+    "icon": "inv_potion_06",
     "url": "https://www.wowhead.com/classic/spell=7259",
-    "spellLink": "https://www.wowhead.com/classic/spell=7259",
     "produces": {
       "id": 6052,
       "name": "",
@@ -1767,22 +1093,9 @@
       "3371": 1,
       "6358": 2
     },
-    "inputItems": [
-      {
-        "id": 6358,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 80,
-    "icon": "",
+    "icon": "inv_drink_12",
     "url": "https://www.wowhead.com/classic/spell=7836",
-    "spellLink": "https://www.wowhead.com/classic/spell=7836",
     "produces": {
       "id": 6370,
       "name": "",
@@ -1807,22 +1120,9 @@
       "3371": 1,
       "6359": 2
     },
-    "inputItems": [
-      {
-        "id": 6359,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 130,
-    "icon": "",
+    "icon": "inv_potion_38",
     "url": "https://www.wowhead.com/classic/spell=7837",
-    "spellLink": "https://www.wowhead.com/classic/spell=7837",
     "produces": {
       "id": 6371,
       "name": "",
@@ -1848,27 +1148,9 @@
       "3371": 1,
       "6370": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 6370,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 100,
-    "icon": "",
+    "icon": "inv_potion_13",
     "url": "https://www.wowhead.com/classic/spell=7841",
-    "spellLink": "https://www.wowhead.com/classic/spell=7841",
     "produces": {
       "id": 6372,
       "name": "",
@@ -1894,27 +1176,9 @@
       "3372": 1,
       "6371": 2
     },
-    "inputItems": [
-      {
-        "id": 6371,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3356,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 140,
-    "icon": "",
+    "icon": "inv_potion_33",
     "url": "https://www.wowhead.com/classic/spell=7845",
-    "spellLink": "https://www.wowhead.com/classic/spell=7845",
     "produces": {
       "id": 6373,
       "name": "",
@@ -1940,27 +1204,9 @@
       "3371": 1,
       "6522": 1
     },
-    "inputItems": [
-      {
-        "id": 6522,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 2449,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
-    "icon": "",
+    "icon": "inv_potion_10",
     "url": "https://www.wowhead.com/classic/spell=8240",
-    "spellLink": "https://www.wowhead.com/classic/spell=8240",
     "produces": {
       "id": 6662,
       "name": "",
@@ -1987,27 +1233,9 @@
       "3372": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 205,
-    "icon": "",
+    "icon": "inv_potion_73",
     "url": "https://www.wowhead.com/classic/spell=11448",
-    "spellLink": "https://www.wowhead.com/classic/spell=11448",
     "produces": {
       "id": 6149,
       "name": "",
@@ -2033,27 +1261,9 @@
       "3820": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 185,
-    "icon": "",
+    "icon": "inv_potion_93",
     "url": "https://www.wowhead.com/classic/spell=11449",
-    "spellLink": "https://www.wowhead.com/classic/spell=11449",
     "produces": {
       "id": 8949,
       "name": "",
@@ -2079,27 +1289,9 @@
       "3372": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 195,
-    "icon": "",
+    "icon": "inv_potion_65",
     "url": "https://www.wowhead.com/classic/spell=11450",
-    "spellLink": "https://www.wowhead.com/classic/spell=11450",
     "produces": {
       "id": 8951,
       "name": "",
@@ -2125,27 +1317,9 @@
       "4625": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 4625,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 205,
-    "icon": "",
+    "icon": "inv_potion_11",
     "url": "https://www.wowhead.com/classic/spell=11451",
-    "spellLink": "https://www.wowhead.com/classic/spell=11451",
     "produces": {
       "id": 8956,
       "name": "",
@@ -2171,27 +1345,9 @@
       "7067": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 7067,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
-    "icon": "",
+    "icon": "inv_potion_01",
     "url": "https://www.wowhead.com/classic/spell=11452",
-    "spellLink": "https://www.wowhead.com/classic/spell=11452",
     "produces": {
       "id": 9030,
       "name": "",
@@ -2216,27 +1372,9 @@
       "8831": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 210,
-    "icon": "",
+    "icon": "inv_potion_16",
     "url": "https://www.wowhead.com/classic/spell=11453",
-    "spellLink": "https://www.wowhead.com/classic/spell=11453",
     "produces": {
       "id": 9036,
       "name": "",
@@ -2263,27 +1401,9 @@
       "4625": 1,
       "9260": 1
     },
-    "inputItems": [
-      {
-        "id": 4625,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 9260,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 210,
-    "icon": "",
+    "icon": "inv_cask_02",
     "url": "https://www.wowhead.com/classic/spell=11456",
-    "spellLink": "https://www.wowhead.com/classic/spell=11456",
     "produces": {
       "id": 9061,
       "name": "",
@@ -2310,27 +1430,9 @@
       "8838": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
-    "icon": "",
+    "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/classic/spell=11457",
-    "spellLink": "https://www.wowhead.com/classic/spell=11457",
     "produces": {
       "id": 3928,
       "name": "",
@@ -2356,27 +1458,9 @@
       "8831": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8153,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
-    "icon": "",
+    "icon": "inv_potion_34",
     "url": "https://www.wowhead.com/classic/spell=11458",
-    "spellLink": "https://www.wowhead.com/classic/spell=11458",
     "produces": {
       "id": 9144,
       "name": "",
@@ -2404,32 +1488,9 @@
       "8831": 4,
       "9262": 1
     },
-    "inputItems": [
-      {
-        "id": 3575,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 9262,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 4625,
-        "name": "",
-        "quantity": 4
-      }
-    ],
     "minSkill": 225,
-    "icon": "",
+    "icon": "inv_misc_orb_01",
     "url": "https://www.wowhead.com/classic/spell=11459",
-    "spellLink": "https://www.wowhead.com/classic/spell=11459",
     "produces": {
       "id": 9149,
       "name": "",
@@ -2455,22 +1516,9 @@
       "8836": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8836,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 230,
-    "icon": "",
+    "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/classic/spell=11460",
-    "spellLink": "https://www.wowhead.com/classic/spell=11460",
     "produces": {
       "id": 9154,
       "name": "",
@@ -2496,27 +1544,9 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
-    "icon": "",
+    "icon": "inv_potion_30",
     "url": "https://www.wowhead.com/classic/spell=11461",
-    "spellLink": "https://www.wowhead.com/classic/spell=11461",
     "produces": {
       "id": 9155,
       "name": "",
@@ -2542,27 +1572,9 @@
       "8845": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
-    "icon": "",
+    "icon": "inv_potion_25",
     "url": "https://www.wowhead.com/classic/spell=11464",
-    "spellLink": "https://www.wowhead.com/classic/spell=11464",
     "produces": {
       "id": 9172,
       "name": "",
@@ -2589,27 +1601,9 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
-    "icon": "",
+    "icon": "inv_potion_10",
     "url": "https://www.wowhead.com/classic/spell=11465",
-    "spellLink": "https://www.wowhead.com/classic/spell=11465",
     "produces": {
       "id": 9179,
       "name": "",
@@ -2635,27 +1629,9 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8836,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8839,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
-    "icon": "",
+    "icon": "inv_potion_28",
     "url": "https://www.wowhead.com/classic/spell=11466",
-    "spellLink": "https://www.wowhead.com/classic/spell=11466",
     "produces": {
       "id": 9088,
       "name": "",
@@ -2682,27 +1658,9 @@
       "8838": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
-    "icon": "",
+    "icon": "inv_potion_94",
     "url": "https://www.wowhead.com/classic/spell=11467",
-    "spellLink": "https://www.wowhead.com/classic/spell=11467",
     "produces": {
       "id": 9187,
       "name": "",
@@ -2727,22 +1685,9 @@
       "8831": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
-    "icon": "",
+    "icon": "inv_potion_14",
     "url": "https://www.wowhead.com/classic/spell=11468",
-    "spellLink": "https://www.wowhead.com/classic/spell=11468",
     "produces": {
       "id": 9197,
       "name": "",
@@ -2769,27 +1714,9 @@
       "8846": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 245,
-    "icon": "",
+    "icon": "inv_potion_61",
     "url": "https://www.wowhead.com/classic/spell=11472",
-    "spellLink": "https://www.wowhead.com/classic/spell=11472",
     "produces": {
       "id": 9206,
       "name": "",
@@ -2816,27 +1743,9 @@
       "8845": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 4342,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 245,
-    "icon": "",
+    "icon": "inv_poison_mindnumbing",
     "url": "https://www.wowhead.com/classic/spell=11473",
-    "spellLink": "https://www.wowhead.com/classic/spell=11473",
     "produces": {
       "id": 9210,
       "name": "",
@@ -2862,22 +1771,9 @@
       "8845": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_46",
     "url": "https://www.wowhead.com/classic/spell=11476",
-    "spellLink": "https://www.wowhead.com/classic/spell=11476",
     "produces": {
       "id": 9264,
       "name": "",
@@ -2904,27 +1800,9 @@
       "8846": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8845,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_27",
     "url": "https://www.wowhead.com/classic/spell=11477",
-    "spellLink": "https://www.wowhead.com/classic/spell=11477",
     "produces": {
       "id": 9224,
       "name": "",
@@ -2950,22 +1828,9 @@
       "8846": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/classic/spell=11478",
-    "spellLink": "https://www.wowhead.com/classic/spell=11478",
     "produces": {
       "id": 9233,
       "name": "",
@@ -2989,25 +1854,18 @@
     "materials": {
       "3575": 1
     },
-    "inputItems": [
-      {
-        "id": 3575,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
-    "icon": "",
+    "icon": "inv_ingot_03",
     "url": "https://www.wowhead.com/classic/spell=11479",
-    "spellLink": "https://www.wowhead.com/classic/spell=11479",
     "produces": {
       "id": 3577,
       "name": "",
       "quantity": 0
     },
     "source": {
-      "type": "trainer",
-      "cost": 2500
+      "type": "item",
+      "recipeItemId": 9304,
+      "recipeItemName": "Recipe: Transmute Iron to Gold"
     }
   },
   {
@@ -3023,25 +1881,18 @@
     "materials": {
       "3860": 1
     },
-    "inputItems": [
-      {
-        "id": 3860,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
-    "icon": "",
+    "icon": "inv_ingot_08",
     "url": "https://www.wowhead.com/classic/spell=11480",
-    "spellLink": "https://www.wowhead.com/classic/spell=11480",
     "produces": {
       "id": 6037,
       "name": "",
       "quantity": 0
     },
     "source": {
-      "type": "trainer",
-      "cost": 10000
+      "type": "item",
+      "recipeItemId": 9305,
+      "recipeItemName": "Recipe: Transmute Mithril to Truesilver"
     }
   },
   {
@@ -3059,27 +1910,9 @@
       "3818": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3821,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3818,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 200,
-    "icon": "",
+    "icon": "inv_potion_36",
     "url": "https://www.wowhead.com/classic/spell=12609",
-    "spellLink": "https://www.wowhead.com/classic/spell=12609",
     "produces": {
       "id": 10592,
       "name": "",
@@ -3104,22 +1937,9 @@
       "8831": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 230,
-    "icon": "",
+    "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/classic/spell=15833",
-    "spellLink": "https://www.wowhead.com/classic/spell=15833",
     "produces": {
       "id": 12190,
       "name": "",
@@ -3144,22 +1964,9 @@
       "12359": 1,
       "12363": 1
     },
-    "inputItems": [
-      {
-        "id": 12359,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 12363,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "inv_misc_stonetablet_05",
     "url": "https://www.wowhead.com/classic/spell=17187",
-    "spellLink": "https://www.wowhead.com/classic/spell=17187",
     "produces": {
       "id": 12360,
       "name": "",
@@ -3185,22 +1992,9 @@
       "3372": 1,
       "13422": 1
     },
-    "inputItems": [
-      {
-        "id": 13422,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_68",
     "url": "https://www.wowhead.com/classic/spell=17551",
-    "spellLink": "https://www.wowhead.com/classic/spell=17551",
     "produces": {
       "id": 13423,
       "name": "",
@@ -3226,27 +2020,9 @@
       "8839": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8839,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 260,
-    "icon": "",
+    "icon": "inv_potion_74",
     "url": "https://www.wowhead.com/classic/spell=17553",
-    "spellLink": "https://www.wowhead.com/classic/spell=17553",
     "produces": {
       "id": 13443,
       "name": "",
@@ -3273,27 +2049,9 @@
       "8925": 1,
       "13423": 2
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8838,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 265,
-    "icon": "",
+    "icon": "inv_potion_66",
     "url": "https://www.wowhead.com/classic/spell=17554",
-    "spellLink": "https://www.wowhead.com/classic/spell=17554",
     "produces": {
       "id": 13445,
       "name": "",
@@ -3320,27 +2078,9 @@
       "13463": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 270,
-    "icon": "",
+    "icon": "inv_potion_29",
     "url": "https://www.wowhead.com/classic/spell=17555",
-    "spellLink": "https://www.wowhead.com/classic/spell=17555",
     "produces": {
       "id": 13447,
       "name": "",
@@ -3367,27 +2107,9 @@
       "13464": 2,
       "13465": 1
     },
-    "inputItems": [
-      {
-        "id": 13464,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "inv_potion_54",
     "url": "https://www.wowhead.com/classic/spell=17556",
-    "spellLink": "https://www.wowhead.com/classic/spell=17556",
     "produces": {
       "id": 13446,
       "name": "",
@@ -3414,27 +2136,9 @@
       "8925": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "inv_potion_40",
     "url": "https://www.wowhead.com/classic/spell=17557",
-    "spellLink": "https://www.wowhead.com/classic/spell=17557",
     "produces": {
       "id": 13453,
       "name": "",
@@ -3459,17 +2163,9 @@
     "materials": {
       "7082": 1
     },
-    "inputItems": [
-      {
-        "id": 7082,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_fire_volcano",
     "url": "https://www.wowhead.com/classic/spell=17559",
-    "spellLink": "https://www.wowhead.com/classic/spell=17559",
     "produces": {
       "id": 7078,
       "name": "",
@@ -3494,17 +2190,9 @@
     "materials": {
       "7078": 1
     },
-    "inputItems": [
-      {
-        "id": 7078,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_strengthofearthtotem02",
     "url": "https://www.wowhead.com/classic/spell=17560",
-    "spellLink": "https://www.wowhead.com/classic/spell=17560",
     "produces": {
       "id": 7076,
       "name": "",
@@ -3529,17 +2217,9 @@
     "materials": {
       "7076": 1
     },
-    "inputItems": [
-      {
-        "id": 7076,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_acid_01",
     "url": "https://www.wowhead.com/classic/spell=17561",
-    "spellLink": "https://www.wowhead.com/classic/spell=17561",
     "produces": {
       "id": 7080,
       "name": "",
@@ -3564,17 +2244,9 @@
     "materials": {
       "7080": 1
     },
-    "inputItems": [
-      {
-        "id": 7080,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_earthbind",
     "url": "https://www.wowhead.com/classic/spell=17562",
-    "spellLink": "https://www.wowhead.com/classic/spell=17562",
     "produces": {
       "id": 7082,
       "name": "",
@@ -3599,17 +2271,9 @@
     "materials": {
       "12808": 1
     },
-    "inputItems": [
-      {
-        "id": 12808,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_acid_01",
     "url": "https://www.wowhead.com/classic/spell=17563",
-    "spellLink": "https://www.wowhead.com/classic/spell=17563",
     "produces": {
       "id": 7080,
       "name": "",
@@ -3634,17 +2298,9 @@
     "materials": {
       "7080": 1
     },
-    "inputItems": [
-      {
-        "id": 7080,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_shadow_shadetruesight",
     "url": "https://www.wowhead.com/classic/spell=17564",
-    "spellLink": "https://www.wowhead.com/classic/spell=17564",
     "produces": {
       "id": 12808,
       "name": "",
@@ -3669,17 +2325,9 @@
     "materials": {
       "12803": 1
     },
-    "inputItems": [
-      {
-        "id": 12803,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_strengthofearthtotem02",
     "url": "https://www.wowhead.com/classic/spell=17565",
-    "spellLink": "https://www.wowhead.com/classic/spell=17565",
     "produces": {
       "id": 7076,
       "name": "",
@@ -3704,17 +2352,9 @@
     "materials": {
       "7076": 1
     },
-    "inputItems": [
-      {
-        "id": 7076,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "spell_nature_abolishmagic",
     "url": "https://www.wowhead.com/classic/spell=17566",
-    "spellLink": "https://www.wowhead.com/classic/spell=17566",
     "produces": {
       "id": 12803,
       "name": "",
@@ -3741,27 +2381,9 @@
       "10620": 1,
       "13423": 3
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 10620,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 280,
-    "icon": "",
+    "icon": "inv_potion_69",
     "url": "https://www.wowhead.com/classic/spell=17570",
-    "spellLink": "https://www.wowhead.com/classic/spell=17570",
     "produces": {
       "id": 13455,
       "name": "",
@@ -3788,27 +2410,9 @@
       "13465": 2,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 280,
-    "icon": "",
+    "icon": "inv_potion_32",
     "url": "https://www.wowhead.com/classic/spell=17571",
-    "spellLink": "https://www.wowhead.com/classic/spell=17571",
     "produces": {
       "id": 13452,
       "name": "",
@@ -3835,27 +2439,9 @@
       "13466": 2,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
-    "icon": "",
+    "icon": "inv_potion_31",
     "url": "https://www.wowhead.com/classic/spell=17572",
-    "spellLink": "https://www.wowhead.com/classic/spell=17572",
     "produces": {
       "id": 13462,
       "name": "",
@@ -3882,27 +2468,9 @@
       "13463": 3,
       "13465": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
-    "icon": "",
+    "icon": "inv_potion_25",
     "url": "https://www.wowhead.com/classic/spell=17573",
-    "spellLink": "https://www.wowhead.com/classic/spell=17573",
     "produces": {
       "id": 13454,
       "name": "",
@@ -3929,27 +2497,9 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7068,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_24",
     "url": "https://www.wowhead.com/classic/spell=17574",
-    "spellLink": "https://www.wowhead.com/classic/spell=17574",
     "produces": {
       "id": 13457,
       "name": "",
@@ -3976,27 +2526,9 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7070,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_20",
     "url": "https://www.wowhead.com/classic/spell=17575",
-    "spellLink": "https://www.wowhead.com/classic/spell=17575",
     "produces": {
       "id": 13456,
       "name": "",
@@ -4023,27 +2555,9 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7067,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_22",
     "url": "https://www.wowhead.com/classic/spell=17576",
-    "spellLink": "https://www.wowhead.com/classic/spell=17576",
     "produces": {
       "id": 13458,
       "name": "",
@@ -4070,27 +2584,9 @@
       "11176": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 11176,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/classic/spell=17577",
-    "spellLink": "https://www.wowhead.com/classic/spell=17577",
     "produces": {
       "id": 13461,
       "name": "",
@@ -4117,27 +2613,9 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 3824,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_23",
     "url": "https://www.wowhead.com/classic/spell=17578",
-    "spellLink": "https://www.wowhead.com/classic/spell=17578",
     "produces": {
       "id": 13459,
       "name": "",
@@ -4164,27 +2642,9 @@
       "13463": 3,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 13467,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 295,
-    "icon": "",
+    "icon": "inv_potion_76",
     "url": "https://www.wowhead.com/classic/spell=17580",
-    "spellLink": "https://www.wowhead.com/classic/spell=17580",
     "produces": {
       "id": 13444,
       "name": "",
@@ -4215,47 +2675,9 @@
       "12803": 8,
       "13468": 4
     },
-    "inputItems": [
-      {
-        "id": 7078,
-        "name": "",
-        "quantity": 8
-      },
-      {
-        "id": 7076,
-        "name": "",
-        "quantity": 8
-      },
-      {
-        "id": 7082,
-        "name": "",
-        "quantity": 8
-      },
-      {
-        "id": 7080,
-        "name": "",
-        "quantity": 8
-      },
-      {
-        "id": 12803,
-        "name": "",
-        "quantity": 8
-      },
-      {
-        "id": 9262,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 4
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_misc_orb_02",
     "url": "https://www.wowhead.com/classic/spell=17632",
-    "spellLink": "https://www.wowhead.com/classic/spell=17632",
     "produces": {
       "id": 13503,
       "name": "",
@@ -4283,32 +2705,9 @@
       "13465": 10,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "",
-        "quantity": 30
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 10
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_26",
     "url": "https://www.wowhead.com/classic/spell=17634",
-    "spellLink": "https://www.wowhead.com/classic/spell=17634",
     "produces": {
       "id": 13506,
       "name": "",
@@ -4336,32 +2735,9 @@
       "13423": 10,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 30
-      },
-      {
-        "id": 13423,
-        "name": "",
-        "quantity": 10
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_62",
     "url": "https://www.wowhead.com/classic/spell=17635",
-    "spellLink": "https://www.wowhead.com/classic/spell=17635",
     "produces": {
       "id": 13510,
       "name": "",
@@ -4389,32 +2765,9 @@
       "13467": 10,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 30
-      },
-      {
-        "id": 13467,
-        "name": "",
-        "quantity": 10
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_97",
     "url": "https://www.wowhead.com/classic/spell=17636",
-    "spellLink": "https://www.wowhead.com/classic/spell=17636",
     "produces": {
       "id": 13511,
       "name": "",
@@ -4442,32 +2795,9 @@
       "13465": 10,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 30
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 10
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_41",
     "url": "https://www.wowhead.com/classic/spell=17637",
-    "spellLink": "https://www.wowhead.com/classic/spell=17637",
     "produces": {
       "id": 13512,
       "name": "",
@@ -4495,32 +2825,9 @@
       "13467": 30,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "",
-        "quantity": 30
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 10
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_48",
     "url": "https://www.wowhead.com/classic/spell=17638",
-    "spellLink": "https://www.wowhead.com/classic/spell=17638",
     "produces": {
       "id": 13513,
       "name": "",
@@ -4547,27 +2854,9 @@
       "3372": 1,
       "3819": 2
     },
-    "inputItems": [
-      {
-        "id": 3819,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 3358,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
-    "icon": "",
+    "icon": "inv_potion_03",
     "url": "https://www.wowhead.com/classic/spell=21923",
-    "spellLink": "https://www.wowhead.com/classic/spell=21923",
     "produces": {
       "id": 17708,
       "name": "",
@@ -4595,32 +2884,9 @@
       "13464": 4,
       "18256": 1
     },
-    "inputItems": [
-      {
-        "id": 10286,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13464,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 4
-      },
-      {
-        "id": 18256,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "inv_potion_47",
     "url": "https://www.wowhead.com/classic/spell=22732",
-    "spellLink": "https://www.wowhead.com/classic/spell=22732",
     "produces": {
       "id": 18253,
       "name": "",
@@ -4647,27 +2913,9 @@
       "8831": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 7972,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
-    "icon": "",
+    "icon": "inv_potion_05",
     "url": "https://www.wowhead.com/classic/spell=22808",
-    "spellLink": "https://www.wowhead.com/classic/spell=22808",
     "produces": {
       "id": 18294,
       "name": "",
@@ -4694,32 +2942,9 @@
       "13468": 1,
       "19943": 1
     },
-    "inputItems": [
-      {
-        "id": 12938,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 19943,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 12804,
-        "name": "",
-        "quantity": 6
-      },
-      {
-        "id": 13468,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
-    "icon": "",
+    "icon": "inv_poison_mindnumbing",
     "url": "https://www.wowhead.com/classic/spell=24266",
-    "spellLink": "https://www.wowhead.com/classic/spell=24266",
     "produces": {
       "id": 19931,
       "name": "",
@@ -4744,27 +2969,9 @@
       "13463": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "inv_potion_45",
     "url": "https://www.wowhead.com/classic/spell=24365",
-    "spellLink": "https://www.wowhead.com/classic/spell=24365",
     "produces": {
       "id": 20007,
       "name": "",
@@ -4791,27 +2998,9 @@
       "13463": 2,
       "13464": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13464,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
-    "icon": "",
+    "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/classic/spell=24366",
-    "spellLink": "https://www.wowhead.com/classic/spell=24366",
     "produces": {
       "id": 20002,
       "name": "",
@@ -4839,32 +3028,9 @@
       "13465": 2,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 13465,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 10286,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
-    "icon": "",
+    "icon": "inv_potion_07",
     "url": "https://www.wowhead.com/classic/spell=24367",
-    "spellLink": "https://www.wowhead.com/classic/spell=24367",
     "produces": {
       "id": 20008,
       "name": "",
@@ -4891,27 +3057,9 @@
       "8925": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
-    "icon": "",
+    "icon": "inv_potion_80",
     "url": "https://www.wowhead.com/classic/spell=24368",
-    "spellLink": "https://www.wowhead.com/classic/spell=24368",
     "produces": {
       "id": 20004,
       "name": "",
@@ -4936,17 +3084,9 @@
     "materials": {
       "7077": 1
     },
-    "inputItems": [
-      {
-        "id": 7077,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
-    "icon": "",
+    "icon": "spell_fire_fire",
     "url": "https://www.wowhead.com/classic/spell=25146",
-    "spellLink": "https://www.wowhead.com/classic/spell=25146",
     "produces": {
       "id": 7068,
       "name": "",
@@ -4973,27 +3113,9 @@
       "6371": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 6371,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 4625,
-        "name": "",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
-    "icon": "",
+    "icon": "inv_potion_60",
     "url": "https://www.wowhead.com/classic/spell=26277",
-    "spellLink": "https://www.wowhead.com/classic/spell=26277",
     "produces": {
       "id": 21546,
       "name": "",

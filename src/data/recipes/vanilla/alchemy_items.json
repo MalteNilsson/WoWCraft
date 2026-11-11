@@ -2,356 +2,804 @@
   "2553": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Minor Agility",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "2555": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 20
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Swiftness Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3393": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 80
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Minor Magic Resistance Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3394": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 100
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Poison Resistance",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3395": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Limited Invulnerability Potion",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3396": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 200
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Lesser Agility",
+    "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3831": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 300
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Mighty Troll's Blood Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "3832": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 700
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Detect Lesser Invisibility",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "4597": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 240
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Discolored Healing Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "4624": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 200
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Lesser Stoneshield Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "5640": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 100
+    "buyPrice": 100,
+    "auctionhouse": false,
+    "name": "Recipe: Rage Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "5642": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 1800
+    "buyPrice": 1800,
+    "auctionhouse": false,
+    "name": "Recipe: Free Action Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "5643": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 2000
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Recipe: Great Rage Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6053": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 800
+    "buyPrice": 800,
+    "auctionhouse": false,
+    "name": "Recipe: Holy Protection Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6054": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 900
+    "buyPrice": 900,
+    "auctionhouse": false,
+    "name": "Recipe: Shadow Protection Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6055": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 1500
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Recipe: Fire Protection Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6056": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 2000
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Recipe: Frost Protection Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6057": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 2000
+    "buyPrice": 2000,
+    "auctionhouse": false,
+    "name": "Recipe: Nature Protection Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6068": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 1500
+    "buyPrice": 1500,
+    "auctionhouse": false,
+    "name": "Recipe: Shadow Oil",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6211": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 80
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Ogre's Strength",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "6663": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 80
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Giant Growth",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9293": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 700
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Magic Resistance Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9294": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Wildvine Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9295": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Invisibility Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9296": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Gift of Arthas",
+    "quality": 2,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9297": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Dream Vision",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9298": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1000
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Giants",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9300": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 10000
+    "buyPrice": 10000,
+    "auctionhouse": false,
+    "name": "Recipe: Elixir of Demonslaying",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9301": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 10000
+    "buyPrice": 10000,
+    "auctionhouse": false,
+    "name": "Recipe: Elixir of Shadow Power",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9302": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 2000
+    "buyPrice": 9000,
+    "auctionhouse": false,
+    "name": "Recipe: Ghost Dye",
+    "quality": 1,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
   },
   "9303": {
-    "bop": true,
+    "bop": false,
     "limitedStock": false,
-    "buyPrice": 8000
+    "buyPrice": 8000,
+    "auctionhouse": false,
+    "name": "Recipe: Philosopher's Stone",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "9304": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 8000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Iron to Gold",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "9305": {
+    "bop": false,
+    "limitedStock": true,
+    "buyPrice": 8000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Mithril to Truesilver",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "10644": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Goblin Rocket Fuel",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "12958": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 50000
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Arcanite",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13477": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 12000
+    "buyPrice": 12000,
+    "auctionhouse": false,
+    "name": "Recipe: Superior Mana Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13478": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 13000
+    "buyPrice": 13000,
+    "auctionhouse": false,
+    "name": "Recipe: Elixir of Superior Defense",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13479": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of the Sages",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13480": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 1000
+    "buyPrice": 15000,
+    "auctionhouse": false,
+    "name": "Recipe: Major Healing Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13481": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1000
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Brute Force",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13482": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 15000
+    "buyPrice": 15000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Air to Fire",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13483": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 15000
+    "buyPrice": 15000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Fire to Earth",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13484": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 15000
+    "buyPrice": 15000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Earth to Water",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13485": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 15000
+    "buyPrice": 15000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Water to Air",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13486": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1600
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Transmute Undeath to Water",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13487": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1600
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Transmute Water to Undeath",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13488": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1600
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Transmute Life to Earth",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13489": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1600
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Transmute Earth to Life",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13490": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Stoneshield Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13491": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of the Mongoose",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13492": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Purification Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13493": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Arcane Elixir",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13494": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Fire Protection Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13495": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Frost Protection Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13496": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Nature Protection Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13497": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Arcane Protection Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13499": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Greater Shadow Protection Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13501": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 30000
+    "buyPrice": 30000,
+    "auctionhouse": false,
+    "name": "Recipe: Major Mana Potion",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13517": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 1600
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Recipe: Alchemists' Stone",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13518": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40000
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Recipe: Flask of Petrification",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13519": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40000
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Recipe: Flask of the Titans",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13520": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40000
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Recipe: Flask of Distilled Wisdom",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13521": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40000
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Recipe: Flask of Supreme Power",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "13522": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 40000
+    "buyPrice": 40000,
+    "auctionhouse": false,
+    "name": "Recipe: Flask of Chromatic Resistance",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "14634": {
     "bop": false,
     "limitedStock": true,
-    "buyPrice": 3000
+    "buyPrice": 2500,
+    "auctionhouse": false,
+    "name": "Recipe: Frost Oil",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "17709": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 700
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Frost Power",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "18257": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 400
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Major Rejuvenation Potion",
+    "quality": 3,
+    "icon": "inv_scroll_05",
+    "hasSource": true,
+    "mobDrop": false
   },
   "20011": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 50000
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Recipe: Mageblood Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "20012": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 50000
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Recipe: Greater Dreamless Sleep",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "20013": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 50000
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Recipe: Living Action Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "20014": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": 50000
+    "buyPrice": 50000,
+    "auctionhouse": false,
+    "name": "Recipe: Major Troll's Blood Potion",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "20761": {
     "bop": true,
     "limitedStock": true,
-    "buyPrice": 120000
+    "buyPrice": 120000,
+    "auctionhouse": false,
+    "name": "Recipe: Transmute Elemental Fire",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "21547": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 2500
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Elixir of Greater Firepower",
+    "quality": 2,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   }
 }

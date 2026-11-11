@@ -7,7 +7,8 @@
     "name": "Pattern: Fine Leather Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "2407": {
     "bop": false,
@@ -17,7 +18,8 @@
     "name": "Pattern: White Leather Jerkin",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "2408": {
     "bop": false,
@@ -27,7 +29,8 @@
     "name": "Pattern: Fine Leather Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "2409": {
     "bop": false,
@@ -37,7 +40,8 @@
     "name": "Pattern: Dark Leather Tunic",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4293": {
     "bop": false,
@@ -47,7 +51,8 @@
     "name": "Pattern: Hillman's Leather Vest",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4294": {
     "bop": false,
@@ -57,7 +62,19 @@
     "name": "Pattern: Hillman's Belt",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "4295": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Double-stitched Leather Gloves OLD",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "4296": {
     "bop": false,
@@ -67,7 +84,8 @@
     "name": "Pattern: Dark Leather Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4297": {
     "bop": false,
@@ -77,7 +95,8 @@
     "name": "Pattern: Barbaric Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4298": {
     "bop": false,
@@ -87,7 +106,8 @@
     "name": "Pattern: Guardian Belt",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4299": {
     "bop": false,
@@ -97,7 +117,8 @@
     "name": "Pattern: Guardian Armor",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4300": {
     "bop": false,
@@ -107,7 +128,8 @@
     "name": "Pattern: Guardian Leather Bracers",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4301": {
     "bop": false,
@@ -117,7 +139,8 @@
     "name": "Pattern: Barbaric Belt",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5083": {
     "bop": false,
@@ -128,6 +151,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Horde"
   },
   "5786": {
@@ -138,7 +162,8 @@
     "name": "Pattern: Murloc Scale Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5787": {
     "bop": true,
@@ -148,7 +173,8 @@
     "name": "Pattern: Murloc Scale Breastplate",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5788": {
     "bop": true,
@@ -158,7 +184,8 @@
     "name": "Pattern: Thick Murloc Armor",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5789": {
     "bop": true,
@@ -168,7 +195,8 @@
     "name": "Pattern: Murloc Scale Bracers",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5972": {
     "bop": false,
@@ -178,7 +206,8 @@
     "name": "Pattern: Fine Leather Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5973": {
     "bop": true,
@@ -188,17 +217,8 @@
     "name": "Pattern: Barbaric Leggings",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "5974": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Guardian Cloak",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6474": {
     "bop": false,
@@ -208,7 +228,8 @@
     "name": "Pattern: Deviate Scale Cloak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6475": {
     "bop": false,
@@ -218,7 +239,8 @@
     "name": "Pattern: Deviate Scale Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6476": {
     "bop": false,
@@ -228,7 +250,8 @@
     "name": "Pattern: Deviate Scale Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6710": {
     "bop": false,
@@ -239,6 +262,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "7288": {
@@ -249,7 +273,8 @@
     "name": "Pattern: Rugged Leather Pants",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7289": {
     "bop": false,
@@ -259,7 +284,8 @@
     "name": "Pattern: Black Whelp Cloak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7290": {
     "bop": false,
@@ -269,7 +295,8 @@
     "name": "Pattern: Red Whelp Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7360": {
     "bop": false,
@@ -279,7 +306,8 @@
     "name": "Pattern: Dark Leather Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7361": {
     "bop": false,
@@ -289,7 +317,8 @@
     "name": "Pattern: Herbalist's Gloves",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7362": {
     "bop": true,
@@ -299,7 +328,8 @@
     "name": "Pattern: Earthen Leather Shoulders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7363": {
     "bop": false,
@@ -309,7 +339,8 @@
     "name": "Pattern: Pilferer's Gloves",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7364": {
     "bop": false,
@@ -319,7 +350,8 @@
     "name": "Pattern: Heavy Earthen Gloves",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7449": {
     "bop": false,
@@ -329,7 +361,8 @@
     "name": "Pattern: Dusky Leather Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7450": {
     "bop": false,
@@ -339,7 +372,8 @@
     "name": "Pattern: Green Whelp Armor",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7451": {
     "bop": true,
@@ -349,7 +383,8 @@
     "name": "Pattern: Green Whelp Bracers",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7452": {
     "bop": false,
@@ -359,7 +394,8 @@
     "name": "Pattern: Dusky Boots",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7453": {
     "bop": false,
@@ -369,7 +405,8 @@
     "name": "Pattern: Swift Boots",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7613": {
     "bop": true,
@@ -379,7 +416,8 @@
     "name": "Pattern: Green Leather Armor",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8384": {
     "bop": false,
@@ -389,7 +427,8 @@
     "name": "Pattern: Comfortable Leather Hat",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8385": {
     "bop": true,
@@ -399,7 +438,8 @@
     "name": "Pattern: Turtle Scale Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8386": {
     "bop": false,
@@ -409,7 +449,8 @@
     "name": "Pattern: Big Voodoo Robe",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8387": {
     "bop": false,
@@ -419,7 +460,8 @@
     "name": "Pattern: Big Voodoo Mask",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8389": {
     "bop": false,
@@ -429,7 +471,8 @@
     "name": "Pattern: Big Voodoo Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8390": {
     "bop": false,
@@ -439,7 +482,8 @@
     "name": "Pattern: Big Voodoo Cloak",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8395": {
     "bop": false,
@@ -449,7 +493,8 @@
     "name": "Pattern: Tough Scorpid Breastplate",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8397": {
     "bop": false,
@@ -459,7 +504,8 @@
     "name": "Pattern: Tough Scorpid Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8398": {
     "bop": false,
@@ -469,7 +515,8 @@
     "name": "Pattern: Tough Scorpid Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8399": {
     "bop": false,
@@ -479,7 +526,8 @@
     "name": "Pattern: Tough Scorpid Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8400": {
     "bop": false,
@@ -489,7 +537,8 @@
     "name": "Pattern: Tough Scorpid Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8401": {
     "bop": false,
@@ -499,7 +548,8 @@
     "name": "Pattern: Tough Scorpid Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8402": {
     "bop": false,
@@ -509,7 +559,8 @@
     "name": "Pattern: Tough Scorpid Helm",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "8403": {
     "bop": true,
@@ -585,7 +636,8 @@
     "name": "Pattern: Nightscape Shoulders",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12691": {
     "bop": false,
@@ -595,7 +647,8 @@
     "name": "Pattern: Wildthorn Mail",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12703": {
     "bop": false,
@@ -605,7 +658,8 @@
     "name": "Pattern: Storm Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12716": {
     "bop": false,
@@ -615,7 +669,8 @@
     "name": "Pattern: Helm of the Great Chief",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12728": {
     "bop": false,
@@ -625,7 +680,8 @@
     "name": "Pattern: Invulnerable Mail",
     "quality": 4,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13287": {
     "bop": false,
@@ -635,7 +691,8 @@
     "name": "Pattern: Raptor Hide Harness",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13288": {
     "bop": false,
@@ -645,7 +702,8 @@
     "name": "Pattern: Raptor Hide Belt",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "14635": {
     "bop": false,
@@ -655,17 +713,19 @@
     "name": "Pattern: Gem-studded Leather Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15724": {
     "bop": true,
-    "limitedStock": false,
+    "limitedStock": true,
     "buyPrice": 12000,
     "auctionhouse": false,
     "name": "Pattern: Heavy Scorpid Bracers",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15725": {
     "bop": true,
@@ -675,7 +735,8 @@
     "name": "Pattern: Wicked Leather Gauntlets",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15726": {
     "bop": false,
@@ -685,7 +746,8 @@
     "name": "Pattern: Green Dragonscale Breastplate",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15727": {
     "bop": false,
@@ -695,7 +757,8 @@
     "name": "Pattern: Heavy Scorpid Vest",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15728": {
     "bop": false,
@@ -705,17 +768,19 @@
     "name": "Pattern: Wicked Leather Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15729": {
     "bop": true,
-    "limitedStock": false,
+    "limitedStock": true,
     "buyPrice": 12000,
     "auctionhouse": false,
     "name": "Pattern: Chimeric Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15730": {
     "bop": true,
@@ -736,7 +801,8 @@
     "name": "Pattern: Runic Leather Gauntlets",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15732": {
     "bop": false,
@@ -746,7 +812,8 @@
     "name": "Pattern: Volcanic Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15733": {
     "bop": false,
@@ -756,7 +823,8 @@
     "name": "Pattern: Green Dragonscale Leggings",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15734": {
     "bop": false,
@@ -766,7 +834,8 @@
     "name": "Pattern: Living Shoulders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15735": {
     "bop": false,
@@ -776,7 +845,8 @@
     "name": "Pattern: Ironfeather Shoulders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15737": {
     "bop": false,
@@ -786,7 +856,8 @@
     "name": "Pattern: Chimeric Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15738": {
     "bop": false,
@@ -796,7 +867,8 @@
     "name": "Pattern: Heavy Scorpid Gauntlets",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15739": {
     "bop": false,
@@ -806,7 +878,8 @@
     "name": "Pattern: Runic Leather Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15740": {
     "bop": true,
@@ -816,7 +889,8 @@
     "name": "Pattern: Frostsaber Boots",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15741": {
     "bop": false,
@@ -826,7 +900,8 @@
     "name": "Pattern: Stormshroud Pants",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15742": {
     "bop": false,
@@ -836,7 +911,8 @@
     "name": "Pattern: Warbear Harness",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15743": {
     "bop": false,
@@ -846,7 +922,8 @@
     "name": "Pattern: Heavy Scorpid Belt",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15744": {
     "bop": false,
@@ -856,7 +933,8 @@
     "name": "Pattern: Wicked Leather Headband",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15745": {
     "bop": false,
@@ -866,7 +944,8 @@
     "name": "Pattern: Runic Leather Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15746": {
     "bop": false,
@@ -876,7 +955,8 @@
     "name": "Pattern: Chimeric Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15747": {
     "bop": false,
@@ -886,7 +966,8 @@
     "name": "Pattern: Frostsaber Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15748": {
     "bop": false,
@@ -896,7 +977,8 @@
     "name": "Pattern: Heavy Scorpid Leggings",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15749": {
     "bop": false,
@@ -906,7 +988,8 @@
     "name": "Pattern: Volcanic Breastplate",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15751": {
     "bop": false,
@@ -916,7 +999,8 @@
     "name": "Pattern: Blue Dragonscale Breastplate",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15752": {
     "bop": false,
@@ -926,7 +1010,8 @@
     "name": "Pattern: Living Leggings",
     "quality": 3,
     "icon": "inv_scroll_05",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15753": {
     "bop": false,
@@ -936,7 +1021,8 @@
     "name": "Pattern: Stormshroud Armor",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15755": {
     "bop": false,
@@ -946,7 +1032,8 @@
     "name": "Pattern: Chimeric Vest",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15756": {
     "bop": true,
@@ -956,7 +1043,8 @@
     "name": "Pattern: Runic Leather Headband",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15757": {
     "bop": false,
@@ -966,7 +1054,8 @@
     "name": "Pattern: Wicked Leather Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15758": {
     "bop": false,
@@ -976,7 +1065,8 @@
     "name": "Pattern: Devilsaur Gauntlets",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15759": {
     "bop": false,
@@ -986,7 +1076,8 @@
     "name": "Pattern: Black Dragonscale Breastplate",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15760": {
     "bop": false,
@@ -996,7 +1087,8 @@
     "name": "Pattern: Ironfeather Breastplate",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15761": {
     "bop": false,
@@ -1006,17 +1098,19 @@
     "name": "Pattern: Frostsaber Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15762": {
     "bop": true,
-    "limitedStock": false,
+    "limitedStock": true,
     "buyPrice": 25000,
     "auctionhouse": false,
     "name": "Pattern: Heavy Scorpid Helm",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15763": {
     "bop": false,
@@ -1026,7 +1120,8 @@
     "name": "Pattern: Blue Dragonscale Shoulders",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15764": {
     "bop": false,
@@ -1036,7 +1131,8 @@
     "name": "Pattern: Stormshroud Shoulders",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15765": {
     "bop": false,
@@ -1046,7 +1142,8 @@
     "name": "Pattern: Runic Leather Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15768": {
     "bop": false,
@@ -1056,7 +1153,8 @@
     "name": "Pattern: Wicked Leather Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15770": {
     "bop": false,
@@ -1066,7 +1164,8 @@
     "name": "Pattern: Black Dragonscale Shoulders",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15771": {
     "bop": false,
@@ -1076,7 +1175,8 @@
     "name": "Pattern: Living Breastplate",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15772": {
     "bop": false,
@@ -1086,7 +1186,8 @@
     "name": "Pattern: Devilsaur Leggings",
     "quality": 3,
     "icon": "inv_scroll_05",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15773": {
     "bop": false,
@@ -1096,7 +1197,8 @@
     "name": "Pattern: Wicked Leather Armor",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15774": {
     "bop": false,
@@ -1106,7 +1208,8 @@
     "name": "Pattern: Heavy Scorpid Shoulders",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15775": {
     "bop": false,
@@ -1116,7 +1219,8 @@
     "name": "Pattern: Volcanic Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15776": {
     "bop": false,
@@ -1126,7 +1230,8 @@
     "name": "Pattern: Runic Leather Armor",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15777": {
     "bop": false,
@@ -1136,7 +1241,8 @@
     "name": "Pattern: Runic Leather Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15779": {
     "bop": false,
@@ -1146,7 +1252,8 @@
     "name": "Pattern: Frostsaber Tunic",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "15781": {
     "bop": false,
@@ -1156,7 +1263,8 @@
     "name": "Pattern: Black Dragonscale Leggings",
     "quality": 3,
     "icon": "inv_scroll_05",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17022": {
     "bop": true,
@@ -1166,7 +1274,8 @@
     "name": "Pattern: Corehound Boots",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17023": {
     "bop": true,
@@ -1176,7 +1285,8 @@
     "name": "Pattern: Molten Helm",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17025": {
     "bop": true,
@@ -1186,7 +1296,8 @@
     "name": "Pattern: Black Dragonscale Boots",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17722": {
     "bop": false,
@@ -1196,7 +1307,8 @@
     "name": "Pattern: Gloves of the Greatfather",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18239": {
     "bop": false,
@@ -1206,7 +1318,8 @@
     "name": "Pattern: Shadowskin Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18252": {
     "bop": true,
@@ -1260,7 +1373,8 @@
     "name": "Pattern: Chromatic Cloak",
     "quality": 4,
     "icon": "inv_scroll_04",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18518": {
     "bop": false,
@@ -1270,7 +1384,8 @@
     "name": "Pattern: Hide of the Wild",
     "quality": 4,
     "icon": "inv_scroll_04",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18519": {
     "bop": false,
@@ -1280,7 +1395,8 @@
     "name": "Pattern: Shifting Cloak",
     "quality": 4,
     "icon": "inv_scroll_04",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18731": {
     "bop": false,
@@ -1290,7 +1406,8 @@
     "name": "Pattern: Heavy Leather Ball",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18949": {
     "bop": false,
@@ -1300,7 +1417,8 @@
     "name": "Pattern: Barbaric Bracers",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19202": {
     "bop": true,
@@ -1310,7 +1428,8 @@
     "name": "Pattern: Heavy Timbermaw Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19204": {
     "bop": true,
@@ -1320,7 +1439,8 @@
     "name": "Pattern: Heavy Timbermaw Boots",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19326": {
     "bop": true,
@@ -1330,7 +1450,8 @@
     "name": "Pattern: Might of the Timbermaw",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19327": {
     "bop": true,
@@ -1340,7 +1461,8 @@
     "name": "Pattern: Timbermaw Brawlers",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19328": {
     "bop": true,
@@ -1350,7 +1472,8 @@
     "name": "Pattern: Dawn Treaders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19329": {
     "bop": true,
@@ -1360,7 +1483,8 @@
     "name": "Pattern: Golden Mantle of the Dawn",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19330": {
     "bop": true,
@@ -1370,7 +1494,8 @@
     "name": "Pattern: Lava Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19331": {
     "bop": true,
@@ -1380,7 +1505,8 @@
     "name": "Pattern: Chromatic Gauntlets",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19332": {
     "bop": true,
@@ -1390,7 +1516,8 @@
     "name": "Pattern: Corehound Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19333": {
     "bop": true,
@@ -1400,7 +1527,8 @@
     "name": "Pattern: Molten Belt",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19769": {
     "bop": true,
@@ -1410,7 +1538,8 @@
     "name": "Pattern: Primal Batskin Jerkin",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19770": {
     "bop": true,
@@ -1420,7 +1549,8 @@
     "name": "Pattern: Primal Batskin Gloves",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19771": {
     "bop": true,
@@ -1430,7 +1560,8 @@
     "name": "Pattern: Primal Batskin Bracers",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19772": {
     "bop": true,
@@ -1440,7 +1571,8 @@
     "name": "Pattern: Blood Tiger Breastplate",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19773": {
     "bop": true,
@@ -1450,7 +1582,8 @@
     "name": "Pattern: Blood Tiger Shoulders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20254": {
     "bop": true,
@@ -1460,7 +1593,8 @@
     "name": "Pattern: Warbear Woolies",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20576": {
     "bop": false,
@@ -1470,7 +1604,8 @@
     "name": "Pattern: Black Whelp Tunic",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "21548": {
     "bop": false,
@@ -1480,459 +1615,8 @@
     "name": "Pattern: Stormshroud Gloves",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "215152": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Pattern: Glowing Gneuro-Linked Cowl",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "215367": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 25000,
-    "auctionhouse": false,
-    "name": "Pattern: Faintly Glowing Leather",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "215422": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Pattern: Glowing Hyperconductive Scale Coif",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "215423": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Pattern: Gneuro-Conductive Channeler's Hood",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "215424": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Pattern: Rad-Resistant Scale Hood",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "217260": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Big Voodoo Mask",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
-  },
-  "217262": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Big Voodoo Robe",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
-  },
-  "217264": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Guardian Leather Bracers",
-    "quality": 2,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "217266": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Guardian Belt",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "217271": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 3500,
-    "auctionhouse": false,
-    "name": "Pattern: Turtle Scale Gloves",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227898": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 20000,
-    "auctionhouse": false,
-    "name": "Pattern: Honed Blue Dragonscale Breastplate",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227899": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Honed Blue Dragonscale Shoulders",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227900": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Living Green Dragonscale Leggings",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227902": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 22000,
-    "auctionhouse": false,
-    "name": "Pattern: Hardened Black Dragonscale Breastplate",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227903": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Hardened Black Dragonscale Leggings",
-    "quality": 3,
-    "icon": "inv_scroll_05",
-    "hasSource": true
-  },
-  "227904": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Hardened Black Dragonscale Shoulders",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "227906": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Masterwork Volcanic Breastplate",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
-  },
-  "227907": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Masterwork Volcanic Shoulders",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
-  },
-  "227908": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Masterwork Volcanic Leggings",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true
-  },
-  "227910": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Brilliant Chromatic Cloak",
-    "quality": 4,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "228119": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Devilcore Gauntlets",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "228120": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Devilcore Leggings",
-    "quality": 3,
-    "icon": "inv_scroll_05",
-    "hasSource": true
-  },
-  "228251": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Living Green Dragonscale Gauntlets",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "228276": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Mastercrafted Shifting Cloak",
-    "quality": 4,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "228301": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Pattern: Swift Flight Vambraces",
-    "quality": 3,
-    "icon": "inv_scroll_05",
     "hasSource": true,
     "mobDrop": false
-  },
-  "228309": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 12000,
-    "auctionhouse": false,
-    "name": "Pattern: Living Green Dragonscale Breastplate",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "228319": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Pattern: Girdle of Arcane Insight",
-    "quality": 3,
-    "icon": "inv_scroll_05",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238306": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Bandana",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238307": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Shoulderpads",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238308": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Vest",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238309": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Bracers",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238310": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Gloves",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238311": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Belt",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238312": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Trousers",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238313": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Infiltrator's Shoes",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238314": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Coif",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238315": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Pauldrons",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238316": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Chain",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238317": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Wristguards",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238318": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Handguards",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238319": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Clasp",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238320": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Legguards",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238321": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Huntsman's Boots",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true
-  },
-  "238927": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Pattern: Scarlet Quiver",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
-  },
-  "238928": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Pattern: Scarlet Ammo Pouch",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
   },
   "252761": {
     "bop": false,
@@ -1942,7 +1626,8 @@
     "name": "Pattern: Black Whelp Slippers",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252762": {
     "bop": false,
@@ -1952,7 +1637,8 @@
     "name": "Pattern: Dark Leather Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252763": {
     "bop": false,
@@ -1962,7 +1648,8 @@
     "name": "Pattern: Murloc Scale Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252764": {
     "bop": false,
@@ -1972,7 +1659,8 @@
     "name": "Pattern: Moonglow Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252765": {
     "bop": true,
@@ -1983,6 +1671,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2000,6 +1689,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2017,6 +1707,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2034,6 +1725,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2051,6 +1743,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2068,6 +1761,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2075,6 +1769,72 @@
         "quantity": 30
       }
     ]
+  },
+  "252771": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brawler's Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252772": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Trapper's Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252773": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Defender's Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252774": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Totemic Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252775": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormrider's Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252776": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wisdom's Leather Armor",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "252777": {
     "bop": true,
@@ -2084,7 +1844,15 @@
     "name": "Pattern: Brawler's Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252778": {
     "bop": true,
@@ -2094,7 +1862,15 @@
     "name": "Pattern: Trapper's Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252779": {
     "bop": true,
@@ -2104,7 +1880,15 @@
     "name": "Pattern: Defender's Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252780": {
     "bop": true,
@@ -2114,7 +1898,15 @@
     "name": "Pattern: Totemic Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252781": {
     "bop": true,
@@ -2124,7 +1916,15 @@
     "name": "Pattern: Stormrider's Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252782": {
     "bop": true,
@@ -2134,7 +1934,15 @@
     "name": "Pattern: Wisdom's Leather Gloves",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252783": {
     "bop": false,
@@ -2144,7 +1952,8 @@
     "name": "Pattern: Mystic Medium Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252784": {
     "bop": false,
@@ -2154,7 +1963,8 @@
     "name": "Pattern: Forceful Medium Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252786": {
     "bop": true,
@@ -2165,6 +1975,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2182,6 +1993,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2199,6 +2011,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2216,6 +2029,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2233,6 +2047,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2250,6 +2065,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2257,6 +2073,72 @@
         "quantity": 30
       }
     ]
+  },
+  "252792": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brawler's Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252793": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Trapper's Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252794": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Defender's Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252795": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Totemic Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252796": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormrider's Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252797": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wisdom's Leather Pants",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "252798": {
     "bop": true,
@@ -2266,7 +2148,15 @@
     "name": "Pattern: Brawler's Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252799": {
     "bop": true,
@@ -2276,7 +2166,15 @@
     "name": "Pattern: Trapper's Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252800": {
     "bop": true,
@@ -2286,7 +2184,15 @@
     "name": "Pattern: Defender's Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252801": {
     "bop": true,
@@ -2296,7 +2202,15 @@
     "name": "Pattern: Totemic Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252802": {
     "bop": true,
@@ -2306,7 +2220,15 @@
     "name": "Pattern: Stormrider's Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252803": {
     "bop": true,
@@ -2316,7 +2238,15 @@
     "name": "Pattern: Wisdom's Leather Hood",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252804": {
     "bop": false,
@@ -2326,7 +2256,8 @@
     "name": "Pattern: Hillman's Leather Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252805": {
     "bop": true,
@@ -2337,6 +2268,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2354,6 +2286,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2371,6 +2304,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2388,6 +2322,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2405,6 +2340,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2422,6 +2358,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2438,7 +2375,8 @@
     "name": "Pattern: Mystic Heavy Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252812": {
     "bop": false,
@@ -2448,7 +2386,74 @@
     "name": "Pattern: Forceful Heavy Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252814": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Brawler's Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252815": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Trapper's Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252816": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Defender's Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252817": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Totemic Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252818": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Stormrider's Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "252819": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Pattern: Wisdom's Leather Helm",
+    "quality": 3,
+    "icon": "inv_scroll_06",
+    "hasSource": true,
+    "mobDrop": false
   },
   "252820": {
     "bop": true,
@@ -2458,7 +2463,15 @@
     "name": "Pattern: Brawler's Leather Legguards",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252821": {
     "bop": true,
@@ -2468,7 +2481,15 @@
     "name": "Pattern: Trapper's Leather Legguards",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252822": {
     "bop": true,
@@ -2478,7 +2499,15 @@
     "name": "Pattern: Defender's Leather Kilt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252823": {
     "bop": true,
@@ -2488,7 +2517,15 @@
     "name": "Pattern: Totemic Leather Leggings",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252824": {
     "bop": true,
@@ -2498,7 +2535,15 @@
     "name": "Pattern: Stormrider's Leather Kilt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252825": {
     "bop": true,
@@ -2508,7 +2553,15 @@
     "name": "Pattern: Wisdom's Leather Leggings",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "252826": {
     "bop": false,
@@ -2518,7 +2571,8 @@
     "name": "Pattern: Prowler's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252827": {
     "bop": false,
@@ -2528,7 +2582,8 @@
     "name": "Pattern: Skulker's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252828": {
     "bop": false,
@@ -2538,7 +2593,8 @@
     "name": "Pattern: Stalker's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252829": {
     "bop": false,
@@ -2548,7 +2604,8 @@
     "name": "Pattern: Warden's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252830": {
     "bop": false,
@@ -2558,7 +2615,8 @@
     "name": "Pattern: Skirmisher's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252831": {
     "bop": false,
@@ -2568,7 +2626,8 @@
     "name": "Pattern: Skycaller's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252832": {
     "bop": false,
@@ -2578,7 +2637,8 @@
     "name": "Pattern: Mender's Leather Belt",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252833": {
     "bop": true,
@@ -2588,7 +2648,8 @@
     "name": "Pattern: Mystic Thick Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252834": {
     "bop": true,
@@ -2599,6 +2660,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2616,6 +2678,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2633,6 +2696,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2650,6 +2714,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2667,6 +2732,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2684,6 +2750,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2701,6 +2768,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2718,6 +2786,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2734,7 +2803,8 @@
     "name": "Pattern: Prowler's Leather Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252844": {
     "bop": false,
@@ -2744,7 +2814,8 @@
     "name": "Pattern: Skulker's Leather Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252845": {
     "bop": false,
@@ -2754,7 +2825,8 @@
     "name": "Pattern: Warden's Leather Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252846": {
     "bop": false,
@@ -2764,7 +2836,8 @@
     "name": "Pattern: Skycaller's Leather Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252847": {
     "bop": false,
@@ -2774,7 +2847,8 @@
     "name": "Pattern: Mender's Leather Shoes",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252848": {
     "bop": true,
@@ -2785,6 +2859,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2802,6 +2877,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2819,6 +2895,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2836,6 +2913,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2853,6 +2931,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2870,6 +2949,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2887,6 +2967,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2904,6 +2985,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2921,6 +3003,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2938,6 +3021,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2954,7 +3038,8 @@
     "name": "Pattern: Tooled Leather Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252859": {
     "bop": false,
@@ -2964,7 +3049,8 @@
     "name": "Pattern: Blue Suede Shoes",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252860": {
     "bop": true,
@@ -2975,6 +3061,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -2992,6 +3079,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3009,6 +3097,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3026,6 +3115,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3043,6 +3133,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3059,7 +3150,8 @@
     "name": "Pattern: Tooled Leather Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252866": {
     "bop": false,
@@ -3069,7 +3161,8 @@
     "name": "Pattern: Blue Suede Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252867": {
     "bop": false,
@@ -3079,7 +3172,8 @@
     "name": "Pattern: Prowler's Leather Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252868": {
     "bop": false,
@@ -3089,7 +3183,8 @@
     "name": "Pattern: Skulker's Leather Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252869": {
     "bop": false,
@@ -3099,7 +3194,8 @@
     "name": "Pattern: Warden's Leather Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252870": {
     "bop": false,
@@ -3109,7 +3205,8 @@
     "name": "Pattern: Skycaller's Leather Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252871": {
     "bop": false,
@@ -3119,7 +3216,8 @@
     "name": "Pattern: Mender's Leather Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252872": {
     "bop": true,
@@ -3130,6 +3228,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3147,6 +3246,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3164,6 +3264,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3181,6 +3282,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3198,6 +3300,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3214,7 +3317,8 @@
     "name": "Pattern: Tooled Leather Armor",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252878": {
     "bop": false,
@@ -3224,7 +3328,8 @@
     "name": "Pattern: Blue Suede Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252879": {
     "bop": false,
@@ -3234,7 +3339,8 @@
     "name": "Pattern: Wicked Leather Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252880": {
     "bop": false,
@@ -3244,7 +3350,8 @@
     "name": "Pattern: Tooled Leather Gauntlets",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252881": {
     "bop": false,
@@ -3254,7 +3361,8 @@
     "name": "Pattern: Blue Suede Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252882": {
     "bop": false,
@@ -3264,7 +3372,8 @@
     "name": "Pattern: Tooled Leather Crown",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252883": {
     "bop": true,
@@ -3285,7 +3394,8 @@
     "name": "Pattern: Wicked Leather Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252885": {
     "bop": false,
@@ -3295,7 +3405,8 @@
     "name": "Pattern: Tooled Leather Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252886": {
     "bop": false,
@@ -3305,7 +3416,8 @@
     "name": "Pattern: Blue Suede Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252887": {
     "bop": false,
@@ -3315,7 +3427,8 @@
     "name": "Pattern: Tooled Leather Epaulets",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252888": {
     "bop": false,
@@ -3325,7 +3438,8 @@
     "name": "Pattern: Blue Suede Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252889": {
     "bop": false,
@@ -3335,7 +3449,8 @@
     "name": "Pattern: Tooled Leather Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252890": {
     "bop": false,
@@ -3345,7 +3460,8 @@
     "name": "Pattern: Blue Suede Hat",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252891": {
     "bop": false,
@@ -3355,7 +3471,8 @@
     "name": "Pattern: Living Crown",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252892": {
     "bop": false,
@@ -3365,7 +3482,8 @@
     "name": "Pattern: Dawn Armor",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252893": {
     "bop": false,
@@ -3375,7 +3493,8 @@
     "name": "Pattern: Timbermaw Tunic",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252894": {
     "bop": false,
@@ -3385,7 +3504,8 @@
     "name": "Pattern: Warbear Helm",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252895": {
     "bop": false,
@@ -3395,7 +3515,8 @@
     "name": "Pattern: Ironfeather Leggings",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252896": {
     "bop": false,
@@ -3405,7 +3526,8 @@
     "name": "Pattern: Stalker's Mail Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252897": {
     "bop": false,
@@ -3415,7 +3537,8 @@
     "name": "Pattern: Skycaller's Mail Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252898": {
     "bop": false,
@@ -3425,7 +3548,8 @@
     "name": "Pattern: Skirmisher's Mail Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252899": {
     "bop": false,
@@ -3435,7 +3559,8 @@
     "name": "Pattern: Mender's Mail Boots",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252900": {
     "bop": true,
@@ -3446,6 +3571,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3463,6 +3589,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3480,6 +3607,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3497,6 +3625,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3514,6 +3643,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3531,6 +3661,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3548,6 +3679,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3565,6 +3697,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3581,7 +3714,8 @@
     "name": "Pattern: Supple Scorpid Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252909": {
     "bop": false,
@@ -3591,7 +3725,8 @@
     "name": "Pattern: Charged Scorpid Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252910": {
     "bop": true,
@@ -3602,6 +3737,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3619,6 +3755,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3636,6 +3773,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3653,6 +3791,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3669,7 +3808,8 @@
     "name": "Pattern: Supple Scorpid Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252915": {
     "bop": false,
@@ -3679,7 +3819,8 @@
     "name": "Pattern: Charged Scorpid Helm",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252916": {
     "bop": false,
@@ -3689,7 +3830,8 @@
     "name": "Pattern: Supple Scorpid Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252917": {
     "bop": false,
@@ -3699,7 +3841,8 @@
     "name": "Pattern: Charged Scorpid Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252918": {
     "bop": false,
@@ -3709,7 +3852,8 @@
     "name": "Pattern: Stalker's Mail Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252919": {
     "bop": false,
@@ -3719,7 +3863,8 @@
     "name": "Pattern: Skycaller's Mail Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252920": {
     "bop": false,
@@ -3729,7 +3874,8 @@
     "name": "Pattern: Skirmisher's Mail Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252921": {
     "bop": false,
@@ -3739,7 +3885,8 @@
     "name": "Pattern: Mender's Mail Gauntlets",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252922": {
     "bop": true,
@@ -3750,6 +3897,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3767,6 +3915,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3784,6 +3933,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3801,6 +3951,7 @@
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3817,7 +3968,8 @@
     "name": "Pattern: Supple Scorpid Shoulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252927": {
     "bop": false,
@@ -3827,7 +3979,8 @@
     "name": "Pattern: Charged Scorpid Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252928": {
     "bop": false,
@@ -3837,7 +3990,8 @@
     "name": "Pattern: Heavy Scorpid Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252929": {
     "bop": false,
@@ -3847,7 +4001,8 @@
     "name": "Pattern: Supple Scorpid Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252930": {
     "bop": false,
@@ -3857,7 +4012,8 @@
     "name": "Pattern: Charged Scorpid Gauntlets",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252931": {
     "bop": false,
@@ -3867,7 +4023,8 @@
     "name": "Pattern: Supple Scorpid Helm",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252932": {
     "bop": false,
@@ -3877,7 +4034,8 @@
     "name": "Pattern: Charged Scorpid Vest",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252933": {
     "bop": true,
@@ -3887,7 +4045,8 @@
     "name": "Pattern: Supple Scorpid Vest",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252934": {
     "bop": false,
@@ -3897,7 +4056,8 @@
     "name": "Pattern: Charged Scorpid Leggings",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252935": {
     "bop": false,
@@ -3907,7 +4067,8 @@
     "name": "Pattern: Supple Scorpid Sabatons",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252936": {
     "bop": false,
@@ -3917,7 +4078,8 @@
     "name": "Pattern: Charged Scorpid Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252937": {
     "bop": false,
@@ -3927,7 +4089,8 @@
     "name": "Pattern: Red Dragonscale Leggings",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252938": {
     "bop": false,
@@ -3937,7 +4100,8 @@
     "name": "Pattern: Blue Dragonscale Helm",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252939": {
     "bop": false,
@@ -3947,7 +4111,8 @@
     "name": "Pattern: Black Dragonscale Helm",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252940": {
     "bop": false,
@@ -3957,7 +4122,8 @@
     "name": "Pattern: Pristine Scorpid Leggings",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "252941": {
     "bop": true,
@@ -3968,6 +4134,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -3984,17 +4151,19 @@
     "name": "Pattern: Forceful Rugged Armor Kit",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273096": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Tanning Rack",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273121": {
     "bop": false,
@@ -4004,7 +4173,8 @@
     "name": "Blueprint: Sewing Machine",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273952": {
     "bop": true,
@@ -4366,7 +4536,8 @@
     "name": "Pattern: Bileblister Claws",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275587": {
     "bop": true,
@@ -4376,7 +4547,8 @@
     "name": "Pattern: Bileblister Girdle",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275588": {
     "bop": true,
@@ -4386,7 +4558,8 @@
     "name": "Pattern: Bileblister Boots",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275589": {
     "bop": true,
@@ -4396,7 +4569,8 @@
     "name": "Pattern: Hivethrasher's Claws",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275590": {
     "bop": true,
@@ -4406,7 +4580,8 @@
     "name": "Pattern: Hivethrasher's Girdle",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275591": {
     "bop": true,
@@ -4416,7 +4591,8 @@
     "name": "Pattern: Hivethrasher's Boots",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275592": {
     "bop": true,
@@ -4426,7 +4602,8 @@
     "name": "Pattern: Scalegut Clenchers",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275593": {
     "bop": true,
@@ -4436,7 +4613,8 @@
     "name": "Pattern: Scalegut Belt",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275594": {
     "bop": true,
@@ -4446,7 +4624,8 @@
     "name": "Pattern: Scalegut Treaders",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275595": {
     "bop": true,
@@ -4456,7 +4635,8 @@
     "name": "Pattern: Broodwatcher's Clenchers",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275596": {
     "bop": true,
@@ -4466,7 +4646,8 @@
     "name": "Pattern: Broodwatcher's Belt",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "275597": {
     "bop": true,
@@ -4476,7 +4657,8 @@
     "name": "Pattern: Broodwatcher's Treaders",
     "quality": 3,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "276542": {
     "bop": true,
@@ -4530,7 +4712,8 @@
     "name": "Pattern: Cloudy Gustwoven Harness",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276935": {
     "bop": true,
@@ -4540,7 +4723,8 @@
     "name": "Pattern: Cloudy Gustwoven Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276936": {
     "bop": true,
@@ -4550,7 +4734,8 @@
     "name": "Pattern: Cloudy Gustwoven Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276937": {
     "bop": true,
@@ -4560,7 +4745,8 @@
     "name": "Pattern: Cloudy Gustwoven Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276938": {
     "bop": true,
@@ -4570,7 +4756,8 @@
     "name": "Pattern: Cloudy Gustwoven Trousers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276939": {
     "bop": true,
@@ -4580,7 +4767,8 @@
     "name": "Pattern: Cloudy Gustwoven Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276940": {
     "bop": true,
@@ -4590,7 +4778,8 @@
     "name": "Pattern: Cloudy Windraveled Jerkin",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276941": {
     "bop": true,
@@ -4600,7 +4789,8 @@
     "name": "Pattern: Cloudy Windraveled Armguards",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276942": {
     "bop": true,
@@ -4610,7 +4800,8 @@
     "name": "Pattern: Cloudy Windraveled Mitts",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276943": {
     "bop": true,
@@ -4620,7 +4811,8 @@
     "name": "Pattern: Cloudy Windraveled Strap",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276944": {
     "bop": true,
@@ -4630,7 +4822,8 @@
     "name": "Pattern: Cloudy Windraveled Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276945": {
     "bop": true,
@@ -4640,7 +4833,8 @@
     "name": "Pattern: Cloudy Windraveled Footwraps",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276958": {
     "bop": true,
@@ -4650,7 +4844,8 @@
     "name": "Pattern: Azure Gustwoven Harness",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276959": {
     "bop": true,
@@ -4660,7 +4855,8 @@
     "name": "Pattern: Azure Gustwoven Bracers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276960": {
     "bop": true,
@@ -4670,7 +4866,8 @@
     "name": "Pattern: Azure Gustwoven Gloves",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276961": {
     "bop": true,
@@ -4680,7 +4877,8 @@
     "name": "Pattern: Azure Gustwoven Belt",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276962": {
     "bop": true,
@@ -4690,7 +4888,8 @@
     "name": "Pattern: Azure Gustwoven Trousers",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276963": {
     "bop": true,
@@ -4700,7 +4899,8 @@
     "name": "Pattern: Azure Gustwoven Boots",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276964": {
     "bop": true,
@@ -4710,7 +4910,8 @@
     "name": "Pattern: Azure Windraveled Jerkin",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276965": {
     "bop": true,
@@ -4720,7 +4921,8 @@
     "name": "Pattern: Azure Windraveled Armguards",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276966": {
     "bop": true,
@@ -4730,7 +4932,8 @@
     "name": "Pattern: Azure Windraveled Mitts",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276967": {
     "bop": true,
@@ -4740,7 +4943,8 @@
     "name": "Pattern: Azure Windraveled Strap",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276968": {
     "bop": true,
@@ -4750,7 +4954,8 @@
     "name": "Pattern: Azure Windraveled Pants",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276969": {
     "bop": true,
@@ -4760,7 +4965,8 @@
     "name": "Pattern: Azure Windraveled Footwraps",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276978": {
     "bop": true,
@@ -4770,7 +4976,8 @@
     "name": "Pattern: Cloudy Gustwoven Hood",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276979": {
     "bop": true,
@@ -4780,7 +4987,8 @@
     "name": "Pattern: Cloudy Gustwoven Spaulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276980": {
     "bop": true,
@@ -4790,7 +4998,8 @@
     "name": "Pattern: Cloudy Windraveled Cover",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276981": {
     "bop": true,
@@ -4800,7 +5009,8 @@
     "name": "Pattern: Cloudy Windraveled Drapes",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276986": {
     "bop": true,
@@ -4810,7 +5020,8 @@
     "name": "Pattern: Azure Gustwoven Hood",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276987": {
     "bop": true,
@@ -4820,7 +5031,8 @@
     "name": "Pattern: Azure Gustwoven Spaulders",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276988": {
     "bop": true,
@@ -4830,7 +5042,8 @@
     "name": "Pattern: Azure Windraveled Cover",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "276989": {
     "bop": true,
@@ -4840,7 +5053,8 @@
     "name": "Pattern: Azure Windraveled Drapes",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "277716": {
     "bop": true,
@@ -4850,7 +5064,8 @@
     "name": "Pattern: Light Leather Reagent Bag",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "279301": {
     "bop": true,
@@ -4860,7 +5075,8 @@
     "name": "Pattern: Elderwild Waistcord",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279302": {
     "bop": true,
@@ -4870,7 +5086,8 @@
     "name": "Pattern: Outlaw's Collar",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279303": {
     "bop": true,
@@ -4880,7 +5097,8 @@
     "name": "Pattern: Elderwild Pants",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279304": {
     "bop": true,
@@ -4890,7 +5108,8 @@
     "name": "Pattern: Eternity Pauldrons",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279305": {
     "bop": true,
@@ -4900,7 +5119,8 @@
     "name": "Pattern: Tranquil Wristguards",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279306": {
     "bop": true,
@@ -4910,7 +5130,8 @@
     "name": "Pattern: Mourning Handguards",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279307": {
     "bop": true,
@@ -4920,6 +5141,7 @@
     "name": "Pattern: Wild Leather Armor Kit",
     "quality": 4,
     "icon": "inv_scroll_05",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   }
 }

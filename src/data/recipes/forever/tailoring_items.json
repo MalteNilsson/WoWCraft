@@ -1539,17 +1539,6 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "211247": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 75000,
-    "auctionhouse": false,
-    "name": "Pattern: Phoenix Bindings",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
   "215149": {
     "bop": true,
     "limitedStock": false,
@@ -1572,250 +1561,12 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "215369": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": 700,
-    "auctionhouse": false,
-    "name": "Pattern: Invoker's Cord",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "215370": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": 700,
-    "auctionhouse": false,
-    "name": "Pattern: Invoker's Mantle",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217244": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 5000,
-    "auctionhouse": false,
-    "name": "Pattern: Crimson Silk Robe",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217249": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Earthen Silk Belt",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217251": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Crimson Silk Shoulders",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217254": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Boots of the Enchanter",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217258": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 1000,
-    "auctionhouse": false,
-    "name": "Pattern: Enchanter's Cowl",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228121": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Leather-Reinforced Runecloth Bag",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false,
-    "currencyCost": [
-      {
-        "id": 3469,
-        "name": "Tarnished Undermine Real",
-        "quantity": 50
-      }
-    ]
-  },
-  "228303": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 40000,
-    "auctionhouse": false,
-    "name": "Pattern: Incandescent Mooncloth Robe",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228316": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Incandescent Mooncloth Vest",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228317": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Incandescent Mooncloth Circlet",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228318": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Incandescent Mooncloth Leggings",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228477": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Embroidered Belt of the Archmage",
-    "quality": 4,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228993": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Bottomless Bag",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238298": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Hood",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238299": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Mantle",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
   "238300": {
     "bop": false,
     "limitedStock": false,
     "buyPrice": null,
     "auctionhouse": true,
     "name": "Pattern: Scarlet Augur's Vestments",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238301": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Cuffs",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238302": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Mitts",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238303": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Strap",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238304": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Leggings",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238305": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Pattern: Scarlet Augur's Soles",
     "quality": 3,
     "icon": "inv_scroll_04",
     "hasSource": true,
@@ -3745,8 +3496,8 @@
   "273099": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Spinning Wheel",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",

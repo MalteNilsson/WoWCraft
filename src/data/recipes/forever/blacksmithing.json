@@ -2669,7 +2669,7 @@
     "name": "Truesilver Gauntlets",
     "quality": 3,
     "difficulty": {
-      "orange": 200,
+      "orange": 0,
       "yellow": 220,
       "green": 230,
       "gray": 240
@@ -2682,7 +2682,7 @@
       "7909": 3,
       "7966": 2
     },
-    "minSkill": 200,
+    "minSkill": 0,
     "icon": "inv_gauntlets_29",
     "url": "https://www.wowhead.com/forever/spell=9954",
     "produces": {
@@ -2919,7 +2919,7 @@
     "name": "Truesilver Breastplate",
     "quality": 3,
     "difficulty": {
-      "orange": 220,
+      "orange": 0,
       "yellow": 240,
       "green": 250,
       "gray": 260
@@ -2931,7 +2931,7 @@
       "7966": 2,
       "7971": 4
     },
-    "minSkill": 220,
+    "minSkill": 0,
     "icon": "inv_chest_plate04",
     "url": "https://www.wowhead.com/forever/spell=9974",
     "produces": {
@@ -6753,33 +6753,6 @@
     }
   },
   {
-    "id": 427061,
-    "name": "Mantle of the Second War",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 150,
-      "green": 150,
-      "gray": 160
-    },
-    "materials": {
-      "1206": 2,
-      "1705": 2,
-      "2841": 20,
-      "2842": 4,
-      "5500": 2
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=427061",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 210779,
-      "recipeItemName": "Plans: Mantle of the Second War"
-    }
-  },
-  {
     "id": 429348,
     "name": "Shifting Silver Breastplate",
     "quality": -1,
@@ -6797,32 +6770,6 @@
     "icon": "spell_shadow_sealofkings",
     "url": "https://www.wowhead.com/forever/spell=429348",
     "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 430397,
-    "name": "Blackfathom Sharpening Stone",
-    "quality": 2,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 100,
-      "green": 110,
-      "gray": 120
-    },
-    "materials": {
-      "2863": 1,
-      "10938": 1
-    },
-    "minSkill": 0,
-    "icon": "inv_misc_rune_04",
-    "url": "https://www.wowhead.com/forever/spell=430397",
-    "produces": {
-      "id": 211845,
-      "name": "",
-      "quantity": 1
-    },
     "source": {
       "type": "free"
     }
@@ -6908,190 +6855,6 @@
     }
   },
   {
-    "id": 439120,
-    "name": "Golden Scale Gauntlets",
-    "quality": 2,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 225,
-      "green": 235,
-      "gray": 245
-    },
-    "materials": {
-      "3486": 4,
-      "3577": 4,
-      "3859": 10,
-      "3864": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_gauntlets_29",
-    "url": "https://www.wowhead.com/forever/spell=439120",
-    "produces": {
-      "id": 217273,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 217274,
-      "recipeItemName": "Plans: Golden Scale Gauntlets"
-    }
-  },
-  {
-    "id": 439122,
-    "name": "Golden Scale Boots",
-    "quality": -1,
-    "difficulty": {
-      "orange": 200,
-      "yellow": 225,
-      "green": 237,
-      "gray": 250
-    },
-    "materials": {
-      "3486": 4,
-      "3577": 4,
-      "3859": 10,
-      "3864": 1
-    },
-    "minSkill": 200,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439122",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217276,
-      "recipeItemName": "Plans: Golden Scale Boots"
-    }
-  },
-  {
-    "id": 439124,
-    "name": "Golden Scale Cuirass",
-    "quality": -1,
-    "difficulty": {
-      "orange": 195,
-      "yellow": 220,
-      "green": 232,
-      "gray": 245
-    },
-    "materials": {
-      "1529": 2,
-      "3486": 4,
-      "3577": 2,
-      "3859": 12
-    },
-    "minSkill": 195,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439124",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217278,
-      "recipeItemName": "Plans: Golden Scale Cuirass"
-    }
-  },
-  {
-    "id": 439126,
-    "name": "Golden Scale Coif",
-    "quality": -1,
-    "difficulty": {
-      "orange": 190,
-      "yellow": 215,
-      "green": 227,
-      "gray": 240
-    },
-    "materials": {
-      "3486": 2,
-      "3577": 2,
-      "3859": 8
-    },
-    "minSkill": 190,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439126",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217280,
-      "recipeItemName": "Plans: Golden Scale Coif"
-    }
-  },
-  {
-    "id": 439128,
-    "name": "Moonsteel Broadsword",
-    "quality": -1,
-    "difficulty": {
-      "orange": 180,
-      "yellow": 205,
-      "green": 217,
-      "gray": 230
-    },
-    "materials": {
-      "1705": 3,
-      "3466": 2,
-      "3486": 2,
-      "3859": 8,
-      "4234": 3
-    },
-    "minSkill": 180,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439128",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217282,
-      "recipeItemName": "Plans: Moonsteel Broadsword"
-    }
-  },
-  {
-    "id": 439130,
-    "name": "Golden Scale Shoulders",
-    "quality": -1,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 200,
-      "green": 212,
-      "gray": 225
-    },
-    "materials": {
-      "3486": 1,
-      "3577": 2,
-      "3859": 6
-    },
-    "minSkill": 175,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439130",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217284,
-      "recipeItemName": "Plans: Golden Scale Shoulders"
-    }
-  },
-  {
-    "id": 439132,
-    "name": "Golden Scale Leggings",
-    "quality": -1,
-    "difficulty": {
-      "orange": 170,
-      "yellow": 195,
-      "green": 207,
-      "gray": 220
-    },
-    "materials": {
-      "3486": 1,
-      "3575": 10,
-      "3577": 2
-    },
-    "minSkill": 170,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=439132",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 217286,
-      "recipeItemName": "Plans: Golden Scale Leggings"
-    }
-  },
-  {
     "id": 446179,
     "name": "Shoulderplates of Dread",
     "quality": -1,
@@ -7155,1130 +6918,6 @@
     "produces": null,
     "source": {
       "type": "free"
-    }
-  },
-  {
-    "id": 460460,
-    "name": "Sulfuron Hammer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 325,
-      "green": 337,
-      "gray": 350
-    },
-    "materials": {
-      "7078": 25,
-      "11371": 20,
-      "11382": 10,
-      "12360": 50,
-      "17010": 10,
-      "17011": 10,
-      "17203": 8
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=460460",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 227727,
-      "recipeItemName": "Plans: Sulfuron Hammer"
-    }
-  },
-  {
-    "id": 461647,
-    "name": "Skyrider's Masterwork Stormhammer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 15,
-      "12794": 1,
-      "18262": 10
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461647",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 227905,
-      "recipeItemName": "Plans: Skyrider's Masterwork Stormhammer"
-    }
-  },
-  {
-    "id": 461651,
-    "name": "Fiery Plate Gauntlets of the Hidden Technique",
-    "quality": -1,
-    "difficulty": {
-      "orange": 290,
-      "yellow": 310,
-      "green": 320,
-      "gray": 330
-    },
-    "materials": {
-      "7078": 2,
-      "7910": 4,
-      "12359": 20,
-      "12655": 6
-    },
-    "minSkill": 290,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461651",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 227909,
-      "recipeItemName": "Plans: Fiery Plate Gauntlets of the Hidden Technique"
-    }
-  },
-  {
-    "id": 461667,
-    "name": "Tempered Dark Iron Plate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 285,
-      "yellow": 305,
-      "green": 315,
-      "gray": 325
-    },
-    "materials": {
-      "7077": 8,
-      "11371": 20
-    },
-    "minSkill": 285,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461667",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 227901,
-      "recipeItemName": "Plans: Tempered Dark Iron Plate"
-    }
-  },
-  {
-    "id": 461669,
-    "name": "Refined Arcanite Champion",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12790": 1,
-      "18262": 10
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461669",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228117,
-      "recipeItemName": "Plans: Refined Arcanite Champion"
-    }
-  },
-  {
-    "id": 461671,
-    "name": "Stronger-hold Gauntlets",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7076": 10,
-      "12360": 15,
-      "12361": 4,
-      "12655": 20,
-      "12799": 4
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461671",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228250,
-      "recipeItemName": "Plans: Stronger-hold Gauntlets"
-    }
-  },
-  {
-    "id": 461675,
-    "name": "Refined Arcanite Reaper",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12784": 1,
-      "18262": 10
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461675",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228114,
-      "recipeItemName": "Plans: Refined Arcanite Reaper"
-    }
-  },
-  {
-    "id": 461712,
-    "name": "Refined Hammer of the Titans",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12796": 1,
-      "18262": 10
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461712",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 461714,
-    "name": "Desecration",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 327,
-      "gray": 340
-    },
-    "materials": {
-      "8170": 4,
-      "12359": 40,
-      "12360": 2,
-      "12361": 2,
-      "12644": 2,
-      "12662": 16,
-      "12808": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461714",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 461716,
-    "name": "Deadly Heartseeker",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7910": 6,
-      "12360": 10,
-      "12644": 4,
-      "12655": 10,
-      "12799": 6,
-      "12800": 6,
-      "12810": 2
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461716",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 461718,
-    "name": "Tranquility",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 310,
-      "green": 322,
-      "gray": 335
-    },
-    "materials": {
-      "12360": 2,
-      "12361": 2,
-      "12364": 1,
-      "12655": 6,
-      "12799": 2,
-      "12804": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461718",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 461730,
-    "name": "Hardened Frostguard",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12797": 1,
-      "18262": 10
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461730",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228310,
-      "recipeItemName": "Plans: Hardened Frostguard"
-    }
-  },
-  {
-    "id": 461733,
-    "name": "Finely-Enchanted Battlehammer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 305,
-      "green": 317,
-      "gray": 330
-    },
-    "materials": {
-      "8170": 4,
-      "12359": 20,
-      "12364": 2,
-      "12655": 6,
-      "12804": 4
-    },
-    "minSkill": 280,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461733",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228311,
-      "recipeItemName": "Plans: Finely-Enchanted Battlehammer"
-    }
-  },
-  {
-    "id": 461735,
-    "name": "Invincible Mail",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "12364": 6,
-      "12655": 30,
-      "12800": 6
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461735",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228312,
-      "recipeItemName": "Plans: Invincible Mail"
-    }
-  },
-  {
-    "id": 461737,
-    "name": "Tempest Gauntlets",
-    "quality": -1,
-    "difficulty": {
-      "orange": 295,
-      "yellow": 315,
-      "green": 325,
-      "gray": 335
-    },
-    "materials": {
-      "7080": 4,
-      "12359": 20,
-      "12361": 4,
-      "12655": 4
-    },
-    "minSkill": 295,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461737",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228313,
-      "recipeItemName": "Plans: Tempest Gauntlets"
-    }
-  },
-  {
-    "id": 461739,
-    "name": "Warcrest of the Great Chief",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "8168": 60,
-      "12359": 40,
-      "12364": 2,
-      "12655": 4,
-      "12799": 6
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461739",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228314,
-      "recipeItemName": "Plans: Warcrest of the Great Chief"
-    }
-  },
-  {
-    "id": 461743,
-    "name": "Sageblade of the Archmagus",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 12,
-      "12810": 4,
-      "13512": 2,
-      "20725": 2
-    },
-    "minSkill": 300,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=461743",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228315,
-      "recipeItemName": "Plans: Sageblade of the Archmagus"
-    }
-  },
-  {
-    "id": 1213481,
-    "name": "Razorspike Headcage",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "8146": 10,
-      "12360": 15,
-      "12810": 4,
-      "234003": 3,
-      "234006": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213481",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213484,
-    "name": "Razorspike Shoulderplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "8146": 10,
-      "12360": 15,
-      "12810": 4,
-      "234003": 3,
-      "234006": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213484",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213490,
-    "name": "Razorspike Battleplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "8146": 10,
-      "12360": 20,
-      "12810": 4,
-      "234003": 4,
-      "234006": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213490",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213492,
-    "name": "Obsidian Reaver",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 40,
-      "12810": 8,
-      "20873": 4,
-      "20882": 2,
-      "234003": 10,
-      "234004": 6
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213492",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213498,
-    "name": "Obsidian Champion",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 40,
-      "12810": 8,
-      "20872": 4,
-      "20879": 2,
-      "234003": 10,
-      "234004": 6
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213498",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213500,
-    "name": "Obsidian Destroyer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 40,
-      "20872": 4,
-      "20873": 4,
-      "20875": 2,
-      "234003": 10,
-      "234004": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213500",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213502,
-    "name": "Obsidian Stormhammer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "12810": 5,
-      "20871": 3,
-      "20878": 2,
-      "234003": 8,
-      "234004": 6
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213502",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213504,
-    "name": "Obsidian Sageblade",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "20725": 3,
-      "20871": 3,
-      "20877": 2,
-      "234003": 8,
-      "234004": 3
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213504",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213506,
-    "name": "Obsidian Defender",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "20871": 3,
-      "20872": 3,
-      "20874": 2,
-      "234003": 8,
-      "234004": 6
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213506",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213643,
-    "name": "Obsidian Grinding Stone",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "22202": 5
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213643",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213709,
-    "name": "Ironvine Belt",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12655": 8,
-      "12803": 4,
-      "19726": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213709",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213711,
-    "name": "Ironvine Gloves",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12655": 12,
-      "12803": 2,
-      "19726": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213711",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213715,
-    "name": "Ironvine Breastplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 8,
-      "12655": 14,
-      "12803": 4,
-      "19726": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213715",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213746,
-    "name": "Heavy Obsidian Belt",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7076": 2,
-      "12655": 4,
-      "19726": 4,
-      "22202": 14
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213746",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213748,
-    "name": "Light Obsidian Belt",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 6,
-      "19726": 4,
-      "22202": 14
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1213748",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214137,
-    "name": "Obsidian Heartseeker",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "20867": 3,
-      "20871": 3,
-      "20876": 2,
-      "234003": 8,
-      "234004": 6
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214137",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214257,
-    "name": "Black Grasp of the Destroyer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12810": 8,
-      "13512": 1,
-      "22202": 24,
-      "22203": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214257",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214270,
-    "name": "Jagged Obsidian Shield",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7076": 4,
-      "12655": 8,
-      "22202": 24,
-      "22203": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214270",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214274,
-    "name": "Obsidian Mail Tunic",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12800": 4,
-      "12809": 10,
-      "12810": 12,
-      "22202": 36,
-      "22203": 15
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214274",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214309,
-    "name": "Dreamscale Visor",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "8146": 8,
-      "12360": 20,
-      "12803": 4,
-      "12810": 4,
-      "20381": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214309",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1215507,
-    "name": "Thick Obsidian Breastplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7076": 10,
-      "12364": 4,
-      "12655": 12,
-      "22202": 40,
-      "22203": 18
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1215507",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223787,
-    "name": "Icebane Breastplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7080": 4,
-      "12359": 16,
-      "12360": 2,
-      "236656": 7
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1223787",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223789,
-    "name": "Icebane Gauntlets",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7080": 2,
-      "12359": 12,
-      "12360": 2,
-      "236656": 5
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1223789",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1223791,
-    "name": "Icebane Bracers",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "7080": 2,
-      "12359": 12,
-      "12360": 2,
-      "236656": 4
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1223791",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1224631,
-    "name": "Scarlet Soldier's Helmet",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "12359": 24,
-      "12811": 2,
-      "12938": 1
-    },
-    "minSkill": 280,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224631",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238322,
-      "recipeItemName": "Plans: Scarlet Soldier's Helmet"
-    }
-  },
-  {
-    "id": 1224632,
-    "name": "Scarlet Soldier's Spaulders",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "12359": 20,
-      "12811": 1
-    },
-    "minSkill": 280,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224632",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238323,
-      "recipeItemName": "Plans: Scarlet Soldier's Spaulders"
-    }
-  },
-  {
-    "id": 1224633,
-    "name": "Scarlet Soldier's Chestplate",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "12359": 24,
-      "12811": 1,
-      "12938": 1
-    },
-    "minSkill": 280,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224633",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238324,
-      "recipeItemName": "Plans: Scarlet Soldier's Chestplate"
-    }
-  },
-  {
-    "id": 1224635,
-    "name": "Scarlet Soldier's Protectors",
-    "quality": -1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 260,
-      "green": 282,
-      "gray": 305
-    },
-    "materials": {
-      "12359": 16
-    },
-    "minSkill": 250,
-    "icon": "trade_tailoring",
-    "url": "https://www.wowhead.com/forever/spell=1224635",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 238325,
-      "recipeItemName": "Plans: Scarlet Soldier's Protectors"
     }
   },
   {
@@ -8402,7 +7041,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
+      "cost": 105
     }
   },
   {
@@ -8669,7 +7308,7 @@
     "name": "Veteran's Chain Shirt",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 80,
       "yellow": 85,
       "green": 85,
       "gray": 85
@@ -8679,7 +7318,7 @@
       "3470": 2,
       "5498": 2
     },
-    "minSkill": 0,
+    "minSkill": 80,
     "icon": "inv_chest_chain_07",
     "url": "https://www.wowhead.com/forever/spell=1252237",
     "produces": {
@@ -8688,7 +7327,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251340,
+      "recipeItemName": "Plans: Veteran's Chain Shirt"
     }
   },
   {
@@ -8725,7 +7366,7 @@
     "name": "Protector's Chain Shirt",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 80,
       "yellow": 85,
       "green": 85,
       "gray": 85
@@ -8735,7 +7376,7 @@
       "2841": 4,
       "3470": 2
     },
-    "minSkill": 0,
+    "minSkill": 80,
     "icon": "inv_chest_chain_07",
     "url": "https://www.wowhead.com/forever/spell=1252239",
     "produces": {
@@ -8744,7 +7385,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251342,
+      "recipeItemName": "Plans: Protector's Chain Shirt"
     }
   },
   {
@@ -8752,7 +7395,7 @@
     "name": "Acolyte's Chain Shirt",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 80,
       "yellow": 85,
       "green": 85,
       "gray": 85
@@ -8762,7 +7405,7 @@
       "3470": 2,
       "10940": 2
     },
-    "minSkill": 0,
+    "minSkill": 80,
     "icon": "inv_chest_chain_08",
     "url": "https://www.wowhead.com/forever/spell=1252240",
     "produces": {
@@ -8771,7 +7414,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251343,
+      "recipeItemName": "Plans: Acolyte's Chain Shirt"
     }
   },
   {
@@ -8779,7 +7424,7 @@
     "name": "Crusader's Chain Shirt",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 80,
       "yellow": 85,
       "green": 85,
       "gray": 85
@@ -8789,7 +7434,7 @@
       "3470": 2,
       "10938": 2
     },
-    "minSkill": 0,
+    "minSkill": 80,
     "icon": "inv_chest_chain_09",
     "url": "https://www.wowhead.com/forever/spell=1252241",
     "produces": {
@@ -8798,7 +7443,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251344,
+      "recipeItemName": "Plans: Crusader's Chain Shirt"
     }
   },
   {
@@ -8806,7 +7453,7 @@
     "name": "Veteran's Chain Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 95,
       "yellow": 100,
       "green": 100,
       "gray": 100
@@ -8816,7 +7463,7 @@
       "3478": 2,
       "5498": 4
     },
-    "minSkill": 0,
+    "minSkill": 95,
     "icon": "inv_pants_mail_05",
     "url": "https://www.wowhead.com/forever/spell=1252242",
     "produces": {
@@ -8825,7 +7472,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251345,
+      "recipeItemName": "Plans: Veteran's Chain Leggings"
     }
   },
   {
@@ -8833,7 +7482,7 @@
     "name": "Guard's Chain Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 95,
       "yellow": 100,
       "green": 100,
       "gray": 100
@@ -8843,7 +7492,7 @@
       "2841": 6,
       "3478": 2
     },
-    "minSkill": 0,
+    "minSkill": 95,
     "icon": "inv_pants_mail_16",
     "url": "https://www.wowhead.com/forever/spell=1252243",
     "produces": {
@@ -8852,7 +7501,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251346,
+      "recipeItemName": "Plans: Guard's Chain Leggings"
     }
   },
   {
@@ -8860,7 +7511,7 @@
     "name": "Protector's Chain Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 95,
       "yellow": 100,
       "green": 100,
       "gray": 100
@@ -8870,7 +7521,7 @@
       "2841": 6,
       "3478": 2
     },
-    "minSkill": 0,
+    "minSkill": 95,
     "icon": "inv_pants_mail_05",
     "url": "https://www.wowhead.com/forever/spell=1252244",
     "produces": {
@@ -8879,7 +7530,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251347,
+      "recipeItemName": "Plans: Protector's Chain Leggings"
     }
   },
   {
@@ -8887,7 +7540,7 @@
     "name": "Acolyte's Chain Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 95,
       "yellow": 100,
       "green": 100,
       "gray": 100
@@ -8897,7 +7550,7 @@
       "3478": 2,
       "10940": 4
     },
-    "minSkill": 0,
+    "minSkill": 95,
     "icon": "inv_pants_mail_17",
     "url": "https://www.wowhead.com/forever/spell=1252245",
     "produces": {
@@ -8906,7 +7559,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251348,
+      "recipeItemName": "Plans: Acolyte's Chain Leggings"
     }
   },
   {
@@ -8914,7 +7569,7 @@
     "name": "Crusader's Chain Leggings",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 95,
       "yellow": 100,
       "green": 100,
       "gray": 100
@@ -8924,7 +7579,7 @@
       "3478": 2,
       "10938": 4
     },
-    "minSkill": 0,
+    "minSkill": 95,
     "icon": "inv_pants_mail_13",
     "url": "https://www.wowhead.com/forever/spell=1252246",
     "produces": {
@@ -8933,7 +7588,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251349,
+      "recipeItemName": "Plans: Crusader's Chain Leggings"
     }
   },
   {
@@ -8941,7 +7598,7 @@
     "name": "Veteran's Chain Helm",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 125,
       "yellow": 130,
       "green": 130,
       "gray": 130
@@ -8951,7 +7608,7 @@
       "3478": 2,
       "5498": 6
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_helmet_39",
     "url": "https://www.wowhead.com/forever/spell=1252247",
     "produces": {
@@ -8960,7 +7617,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251350,
+      "recipeItemName": "Plans: Veteran's Chain Helm"
     }
   },
   {
@@ -8968,7 +7627,7 @@
     "name": "Guard's Chain Helm",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 125,
       "yellow": 130,
       "green": 130,
       "gray": 130
@@ -8978,7 +7637,7 @@
       "2841": 8,
       "3478": 2
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_helmet_38",
     "url": "https://www.wowhead.com/forever/spell=1252248",
     "produces": {
@@ -8987,7 +7646,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251351,
+      "recipeItemName": "Plans: Guard's Chain Helm"
     }
   },
   {
@@ -8995,7 +7656,7 @@
     "name": "Protector's Chain Helm",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 125,
       "yellow": 130,
       "green": 130,
       "gray": 130
@@ -9005,7 +7666,7 @@
       "2841": 8,
       "3478": 2
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_helmet_39",
     "url": "https://www.wowhead.com/forever/spell=1252249",
     "produces": {
@@ -9014,7 +7675,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251352,
+      "recipeItemName": "Plans: Protector's Chain Helm"
     }
   },
   {
@@ -9022,7 +7685,7 @@
     "name": "Acolyte's Chain Helm",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 125,
       "yellow": 130,
       "green": 130,
       "gray": 130
@@ -9032,7 +7695,7 @@
       "3478": 2,
       "10940": 6
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_helmet_36",
     "url": "https://www.wowhead.com/forever/spell=1252250",
     "produces": {
@@ -9041,7 +7704,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251353,
+      "recipeItemName": "Plans: Acolyte's Chain Helm"
     }
   },
   {
@@ -9049,7 +7714,7 @@
     "name": "Crusader's Chain Helm",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 125,
       "yellow": 130,
       "green": 130,
       "gray": 130
@@ -9059,7 +7724,7 @@
       "3478": 2,
       "10938": 6
     },
-    "minSkill": 0,
+    "minSkill": 125,
     "icon": "inv_helmet_37",
     "url": "https://www.wowhead.com/forever/spell=1252251",
     "produces": {
@@ -9068,7 +7733,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251354,
+      "recipeItemName": "Plans: Crusader's Chain Helm"
     }
   },
   {
@@ -10285,7 +8952,7 @@
     "name": "Shining Mithril Helm",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 215,
       "yellow": 235,
       "green": 245,
       "gray": 255
@@ -10296,7 +8963,7 @@
       "6037": 9,
       "7075": 1
     },
-    "minSkill": 0,
+    "minSkill": 215,
     "icon": "inv_helmet_35",
     "url": "https://www.wowhead.com/forever/spell=1252292",
     "produces": {
@@ -10305,7 +8972,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 251395,
+      "recipeItemName": "Plans: Shining Mithril Helm"
     }
   },
   {
@@ -11216,7 +9885,7 @@
     "name": "Prefect's Waistguard",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 250,
       "yellow": 270,
       "green": 280,
       "gray": 290
@@ -11228,7 +9897,7 @@
       "249410": 6,
       "249432": 6
     },
-    "minSkill": 0,
+    "minSkill": 250,
     "icon": "inv_belt_08",
     "url": "https://www.wowhead.com/forever/spell=1252323",
     "produces": {

@@ -14,30 +14,12 @@
       "2449": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "Earthroot",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "Silverleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
     "icon": "inv_potion_56",
     "url": "https://www.wowhead.com/tbc/spell=2329",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2329",
     "produces": {
       "id": 2454,
-      "name": "Elixir of Lion's Strength",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -59,30 +41,12 @@
       "2447": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2447,
-        "name": "Peacebloom",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "Silverleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
     "icon": "inv_potion_49",
     "url": "https://www.wowhead.com/tbc/spell=2330",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2330",
     "produces": {
       "id": 118,
-      "name": "Minor Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -104,30 +68,12 @@
       "785": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "Mageroyal",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "Silverleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 25,
     "icon": "inv_potion_70",
     "url": "https://www.wowhead.com/tbc/spell=2331",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2331",
     "produces": {
       "id": 2455,
-      "name": "Minor Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -150,30 +96,12 @@
       "2447": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "Mageroyal",
-        "quantity": 2
-      },
-      {
-        "id": 2447,
-        "name": "Peacebloom",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 40,
     "icon": "inv_potion_02",
     "url": "https://www.wowhead.com/tbc/spell=2332",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2332",
     "produces": {
       "id": 2456,
-      "name": "Minor Rejuvenation Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -196,30 +124,12 @@
       "3355": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 2452,
-        "name": "Swiftthistle",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 140,
     "icon": "inv_potion_92",
     "url": "https://www.wowhead.com/tbc/spell=2333",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2333",
     "produces": {
       "id": 3390,
-      "name": "Elixir of Lesser Agility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -243,30 +153,12 @@
       "2449": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "Earthroot",
-        "quantity": 2
-      },
-      {
-        "id": 2447,
-        "name": "Peacebloom",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
     "icon": "inv_potion_42",
     "url": "https://www.wowhead.com/tbc/spell=2334",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2334",
     "produces": {
       "id": 2458,
-      "name": "Elixir of Minor Fortitude",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -289,30 +181,12 @@
       "2452": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "Swiftthistle",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "Briarthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 60,
     "icon": "inv_potion_95",
     "url": "https://www.wowhead.com/tbc/spell=2335",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2335",
     "produces": {
       "id": 2459,
-      "name": "Swiftness Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -335,25 +209,12 @@
       "118": 1,
       "2450": 1
     },
-    "inputItems": [
-      {
-        "id": 118,
-        "name": "Minor Healing Potion",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "Briarthorn",
-        "quantity": 1
-      }
-    ],
     "minSkill": 55,
     "icon": "inv_potion_50",
     "url": "https://www.wowhead.com/tbc/spell=2337",
-    "spellLink": "https://www.wowhead.com/tbc/spell=2337",
     "produces": {
       "id": 858,
-      "name": "Lesser Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -376,30 +237,12 @@
       "2449": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2447,
-        "name": "Peacebloom",
-        "quantity": 1
-      },
-      {
-        "id": 2449,
-        "name": "Earthroot",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 15,
     "icon": "inv_potion_77",
     "url": "https://www.wowhead.com/tbc/spell=3170",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3170",
     "produces": {
       "id": 3382,
-      "name": "Weak Troll's Blood Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -422,30 +265,12 @@
       "2450": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "Mageroyal",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "Briarthorn",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
     "icon": "inv_potion_06",
     "url": "https://www.wowhead.com/tbc/spell=3171",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3171",
     "produces": {
       "id": 3383,
-      "name": "Elixir of Wisdom",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -468,30 +293,12 @@
       "3355": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "Mageroyal",
-        "quantity": 3
-      },
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 110,
     "icon": "inv_potion_08",
     "url": "https://www.wowhead.com/tbc/spell=3172",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3172",
     "produces": {
       "id": 3384,
-      "name": "Minor Magic Resistance Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -515,30 +322,12 @@
       "3371": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 785,
-        "name": "Mageroyal",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 120,
     "icon": "inv_potion_71",
     "url": "https://www.wowhead.com/tbc/spell=3173",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3173",
     "produces": {
       "id": 3385,
-      "name": "Lesser Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -561,30 +350,12 @@
       "2453": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 1288,
-        "name": "Large Venom Sac",
-        "quantity": 1
-      },
-      {
-        "id": 2453,
-        "name": "Bruiseweed",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 120,
     "icon": "inv_potion_12",
     "url": "https://www.wowhead.com/tbc/spell=3174",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3174",
     "produces": {
       "id": 3386,
-      "name": "Potion of Curing",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -608,30 +379,12 @@
       "8845": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "Blindweed",
-        "quantity": 2
-      },
-      {
-        "id": 8845,
-        "name": "Ghost Mushroom",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_62",
     "url": "https://www.wowhead.com/tbc/spell=3175",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3175",
     "produces": {
       "id": 3387,
-      "name": "Limited Invulnerability Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -655,30 +408,12 @@
       "2453": 2,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "Bruiseweed",
-        "quantity": 2
-      },
-      {
-        "id": 2450,
-        "name": "Briarthorn",
-        "quantity": 2
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 125,
     "icon": "inv_potion_78",
     "url": "https://www.wowhead.com/tbc/spell=3176",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3176",
     "produces": {
       "id": 3388,
-      "name": "Strong Troll's Blood Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -701,30 +436,12 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 130,
     "icon": "inv_potion_64",
     "url": "https://www.wowhead.com/tbc/spell=3177",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3177",
     "produces": {
       "id": 3389,
-      "name": "Elixir of Defense",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -747,30 +464,12 @@
       "3356": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2449,
-        "name": "Earthroot",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 150,
     "icon": "inv_potion_57",
     "url": "https://www.wowhead.com/tbc/spell=3188",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3188",
     "produces": {
       "id": 3391,
-      "name": "Elixir of Ogre's Strength",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -794,30 +493,12 @@
       "2452": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "Swiftthistle",
-        "quantity": 1
-      },
-      {
-        "id": 765,
-        "name": "Silverleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
     "icon": "inv_potion_91",
     "url": "https://www.wowhead.com/tbc/spell=3230",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3230",
     "produces": {
       "id": 2457,
-      "name": "Elixir of Minor Agility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -841,30 +522,12 @@
       "2453": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "Bruiseweed",
-        "quantity": 1
-      },
-      {
-        "id": 2450,
-        "name": "Briarthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 110,
     "icon": "inv_potion_51",
     "url": "https://www.wowhead.com/tbc/spell=3447",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3447",
     "produces": {
       "id": 929,
-      "name": "Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -887,30 +550,12 @@
       "3372": 1,
       "3818": 1
     },
-    "inputItems": [
-      {
-        "id": 3818,
-        "name": "Fadeleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
     "icon": "inv_potion_18",
     "url": "https://www.wowhead.com/tbc/spell=3448",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3448",
     "produces": {
       "id": 3823,
-      "name": "Lesser Invisibility Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -933,30 +578,12 @@
       "3372": 1,
       "3818": 4
     },
-    "inputItems": [
-      {
-        "id": 3818,
-        "name": "Fadeleaf",
-        "quantity": 4
-      },
-      {
-        "id": 3369,
-        "name": "Grave Moss",
-        "quantity": 4
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
     "icon": "inv_potion_23",
     "url": "https://www.wowhead.com/tbc/spell=3449",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3449",
     "produces": {
       "id": 3824,
-      "name": "Shadow Oil",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -980,35 +607,18 @@
       "3372": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 175,
     "icon": "inv_potion_43",
     "url": "https://www.wowhead.com/tbc/spell=3450",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3450",
     "produces": {
       "id": 3825,
-      "name": "Elixir of Fortitude",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 6000
+      "type": "item",
+      "recipeItemId": 3830,
+      "recipeItemName": "Recipe: Elixir of Fortitude"
     }
   },
   {
@@ -1026,30 +636,12 @@
       "3357": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "Liferoot",
-        "quantity": 1
-      },
-      {
-        "id": 2453,
-        "name": "Bruiseweed",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 180,
     "icon": "inv_potion_79",
     "url": "https://www.wowhead.com/tbc/spell=3451",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3451",
     "produces": {
       "id": 3826,
-      "name": "Mighty Troll's Blood Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1073,30 +665,12 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 160,
     "icon": "inv_potion_72",
     "url": "https://www.wowhead.com/tbc/spell=3452",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3452",
     "produces": {
       "id": 3827,
-      "name": "Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1119,30 +693,12 @@
       "3372": 1,
       "3818": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 3818,
-        "name": "Fadeleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 195,
     "icon": "inv_potion_01",
     "url": "https://www.wowhead.com/tbc/spell=3453",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3453",
     "produces": {
       "id": 3828,
-      "name": "Elixir of Detect Lesser Invisibility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1166,30 +722,12 @@
       "3372": 1,
       "3819": 2
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 4
-      },
-      {
-        "id": 3819,
-        "name": "Wintersbite",
-        "quantity": 2
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 200,
     "icon": "inv_potion_20",
     "url": "https://www.wowhead.com/tbc/spell=3454",
-    "spellLink": "https://www.wowhead.com/tbc/spell=3454",
     "produces": {
       "id": 3829,
-      "name": "Frost Oil",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1213,30 +751,12 @@
       "3164": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 3164,
-        "name": "Discolored Worg Heart",
-        "quantity": 1
-      },
-      {
-        "id": 2447,
-        "name": "Peacebloom",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 50,
     "icon": "inv_potion_35",
     "url": "https://www.wowhead.com/tbc/spell=4508",
-    "spellLink": "https://www.wowhead.com/tbc/spell=4508",
     "produces": {
       "id": 4596,
-      "name": "Discolored Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1260,30 +780,12 @@
       "3821": 1,
       "3858": 1
     },
-    "inputItems": [
-      {
-        "id": 3858,
-        "name": "Mithril Ore",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
     "icon": "inv_potion_67",
     "url": "https://www.wowhead.com/tbc/spell=4942",
-    "spellLink": "https://www.wowhead.com/tbc/spell=4942",
     "produces": {
       "id": 4623,
-      "name": "Lesser Stoneshield Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1306,25 +808,12 @@
       "3371": 1,
       "5635": 2
     },
-    "inputItems": [
-      {
-        "id": 5635,
-        "name": "Sharp Claw",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 60,
     "icon": "inv_potion_24",
     "url": "https://www.wowhead.com/tbc/spell=6617",
-    "spellLink": "https://www.wowhead.com/tbc/spell=6617",
     "produces": {
       "id": 5631,
-      "name": "Rage Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1348,30 +837,12 @@
       "3372": 1,
       "5637": 1
     },
-    "inputItems": [
-      {
-        "id": 5637,
-        "name": "Large Fang",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 175,
     "icon": "inv_potion_21",
     "url": "https://www.wowhead.com/tbc/spell=6618",
-    "spellLink": "https://www.wowhead.com/tbc/spell=6618",
     "produces": {
       "id": 5633,
-      "name": "Great Rage Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1395,30 +866,12 @@
       "3820": 1,
       "6370": 2
     },
-    "inputItems": [
-      {
-        "id": 6370,
-        "name": "Blackmouth Oil",
-        "quantity": 2
-      },
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 150,
     "icon": "inv_potion_04",
     "url": "https://www.wowhead.com/tbc/spell=6624",
-    "spellLink": "https://www.wowhead.com/tbc/spell=6624",
     "produces": {
       "id": 5634,
-      "name": "Free Action Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1442,30 +895,12 @@
       "3820": 1,
       "6370": 2
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 6370,
-        "name": "Blackmouth Oil",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
     "icon": "inv_potion_17",
     "url": "https://www.wowhead.com/tbc/spell=7179",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7179",
     "produces": {
       "id": 5996,
-      "name": "Elixir of Water Breathing",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1488,30 +923,12 @@
       "3357": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "Liferoot",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 155,
     "icon": "inv_potion_52",
     "url": "https://www.wowhead.com/tbc/spell=7181",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7181",
     "produces": {
       "id": 1710,
-      "name": "Greater Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1533,25 +950,12 @@
       "765": 2,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 765,
-        "name": "Silverleaf",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 1,
     "icon": "inv_potion_63",
     "url": "https://www.wowhead.com/tbc/spell=7183",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7183",
     "produces": {
       "id": 5997,
-      "name": "Elixir of Minor Defense",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1573,30 +977,12 @@
       "2453": 1,
       "3371": 1
     },
-    "inputItems": [
-      {
-        "id": 2453,
-        "name": "Bruiseweed",
-        "quantity": 1
-      },
-      {
-        "id": 2452,
-        "name": "Swiftthistle",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 100,
     "icon": "inv_potion_09",
     "url": "https://www.wowhead.com/tbc/spell=7255",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7255",
     "produces": {
       "id": 6051,
-      "name": "Holy Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1620,30 +1006,12 @@
       "3369": 1,
       "3372": 1
     },
-    "inputItems": [
-      {
-        "id": 3369,
-        "name": "Grave Moss",
-        "quantity": 1
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 135,
     "icon": "inv_potion_44",
     "url": "https://www.wowhead.com/tbc/spell=7256",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7256",
     "produces": {
       "id": 6048,
-      "name": "Shadow Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1667,30 +1035,12 @@
       "4402": 1,
       "6371": 1
     },
-    "inputItems": [
-      {
-        "id": 4402,
-        "name": "Small Flame Sac",
-        "quantity": 1
-      },
-      {
-        "id": 6371,
-        "name": "Fire Oil",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 165,
     "icon": "inv_potion_16",
     "url": "https://www.wowhead.com/tbc/spell=7257",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7257",
     "produces": {
       "id": 6049,
-      "name": "Fire Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1714,30 +1064,12 @@
       "3819": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3819,
-        "name": "Wintersbite",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
     "icon": "inv_potion_13",
     "url": "https://www.wowhead.com/tbc/spell=7258",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7258",
     "produces": {
       "id": 6050,
-      "name": "Frost Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1761,30 +1093,12 @@
       "3372": 1,
       "3820": 1
     },
-    "inputItems": [
-      {
-        "id": 3357,
-        "name": "Liferoot",
-        "quantity": 1
-      },
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
     "icon": "inv_potion_06",
     "url": "https://www.wowhead.com/tbc/spell=7259",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7259",
     "produces": {
       "id": 6052,
-      "name": "Nature Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1807,25 +1121,12 @@
       "3371": 1,
       "6358": 2
     },
-    "inputItems": [
-      {
-        "id": 6358,
-        "name": "Oily Blackmouth",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 80,
     "icon": "inv_drink_12",
     "url": "https://www.wowhead.com/tbc/spell=7836",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7836",
     "produces": {
       "id": 6370,
-      "name": "Blackmouth Oil",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1847,25 +1148,12 @@
       "3371": 1,
       "6359": 2
     },
-    "inputItems": [
-      {
-        "id": 6359,
-        "name": "Firefin Snapper",
-        "quantity": 2
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 130,
     "icon": "inv_potion_38",
     "url": "https://www.wowhead.com/tbc/spell=7837",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7837",
     "produces": {
       "id": 6371,
-      "name": "Fire Oil",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1888,30 +1176,12 @@
       "3371": 1,
       "6370": 1
     },
-    "inputItems": [
-      {
-        "id": 2452,
-        "name": "Swiftthistle",
-        "quantity": 1
-      },
-      {
-        "id": 6370,
-        "name": "Blackmouth Oil",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 100,
     "icon": "inv_potion_13",
     "url": "https://www.wowhead.com/tbc/spell=7841",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7841",
     "produces": {
       "id": 6372,
-      "name": "Swim Speed Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1934,30 +1204,12 @@
       "3372": 1,
       "6371": 2
     },
-    "inputItems": [
-      {
-        "id": 6371,
-        "name": "Fire Oil",
-        "quantity": 2
-      },
-      {
-        "id": 3356,
-        "name": "Kingsblood",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 140,
     "icon": "inv_potion_33",
     "url": "https://www.wowhead.com/tbc/spell=7845",
-    "spellLink": "https://www.wowhead.com/tbc/spell=7845",
     "produces": {
       "id": 6373,
-      "name": "Elixir of Firepower",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -1980,30 +1232,12 @@
       "3371": 1,
       "6522": 1
     },
-    "inputItems": [
-      {
-        "id": 6522,
-        "name": "Deviate Fish",
-        "quantity": 1
-      },
-      {
-        "id": 2449,
-        "name": "Earthroot",
-        "quantity": 1
-      },
-      {
-        "id": 3371,
-        "name": "Empty Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 90,
     "icon": "inv_potion_10",
     "url": "https://www.wowhead.com/tbc/spell=8240",
-    "spellLink": "https://www.wowhead.com/tbc/spell=8240",
     "produces": {
       "id": 6662,
-      "name": "Elixir of Giant Growth",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2027,30 +1261,12 @@
       "3372": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 205,
     "icon": "inv_potion_73",
     "url": "https://www.wowhead.com/tbc/spell=11448",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11448",
     "produces": {
       "id": 6149,
-      "name": "Greater Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2073,30 +1289,12 @@
       "3820": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3820,
-        "name": "Stranglekelp",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 185,
     "icon": "inv_potion_93",
     "url": "https://www.wowhead.com/tbc/spell=11449",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11449",
     "produces": {
       "id": 8949,
-      "name": "Elixir of Agility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2119,30 +1317,12 @@
       "3372": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3355,
-        "name": "Wild Steelbloom",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 195,
     "icon": "inv_potion_65",
     "url": "https://www.wowhead.com/tbc/spell=11450",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11450",
     "produces": {
       "id": 8951,
-      "name": "Elixir of Greater Defense",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2165,30 +1345,12 @@
       "4625": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 4625,
-        "name": "Firebloom",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 205,
     "icon": "inv_potion_11",
     "url": "https://www.wowhead.com/tbc/spell=11451",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11451",
     "produces": {
       "id": 8956,
-      "name": "Oil of Immolation",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2211,30 +1373,12 @@
       "7067": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 7067,
-        "name": "Elemental Earth",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
     "icon": "inv_potion_01",
     "url": "https://www.wowhead.com/tbc/spell=11452",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11452",
     "produces": {
       "id": 9030,
-      "name": "Restorative Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2256,30 +1400,12 @@
       "8831": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 210,
     "icon": "inv_potion_16",
     "url": "https://www.wowhead.com/tbc/spell=11453",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11453",
     "produces": {
       "id": 9036,
-      "name": "Magic Resistance Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2303,30 +1429,12 @@
       "4625": 1,
       "9260": 1
     },
-    "inputItems": [
-      {
-        "id": 4625,
-        "name": "Firebloom",
-        "quantity": 1
-      },
-      {
-        "id": 9260,
-        "name": "Volatile Rum",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 210,
     "icon": "inv_cask_02",
     "url": "https://www.wowhead.com/tbc/spell=11456",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11456",
     "produces": {
       "id": 9061,
-      "name": "Goblin Rocket Fuel",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2350,30 +1458,12 @@
       "8838": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 1
-      },
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
     "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/tbc/spell=11457",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11457",
     "produces": {
       "id": 3928,
-      "name": "Superior Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2396,30 +1486,12 @@
       "8831": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8153,
-        "name": "Wildvine",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
     "icon": "inv_potion_34",
     "url": "https://www.wowhead.com/tbc/spell=11458",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11458",
     "produces": {
       "id": 9144,
-      "name": "Wildvine Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2444,35 +1516,12 @@
       "8831": 4,
       "9262": 1
     },
-    "inputItems": [
-      {
-        "id": 3575,
-        "name": "Iron Bar",
-        "quantity": 4
-      },
-      {
-        "id": 9262,
-        "name": "Black Vitriol",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 4
-      },
-      {
-        "id": 4625,
-        "name": "Firebloom",
-        "quantity": 4
-      }
-    ],
     "minSkill": 225,
     "icon": "inv_misc_orb_01",
     "url": "https://www.wowhead.com/tbc/spell=11459",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11459",
     "produces": {
       "id": 9149,
-      "name": "Philosopher's Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2495,25 +1544,12 @@
       "8836": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8836,
-        "name": "Arthas' Tears",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 230,
     "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/tbc/spell=11460",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11460",
     "produces": {
       "id": 9154,
-      "name": "Elixir of Detect Undead",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2536,30 +1572,12 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "Blindweed",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
     "icon": "inv_potion_30",
     "url": "https://www.wowhead.com/tbc/spell=11461",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11461",
     "produces": {
       "id": 9155,
-      "name": "Arcane Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2582,30 +1600,12 @@
       "8845": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "Ghost Mushroom",
-        "quantity": 1
-      },
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
     "icon": "inv_potion_25",
     "url": "https://www.wowhead.com/tbc/spell=11464",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11464",
     "produces": {
       "id": 9172,
-      "name": "Invisibility Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2629,30 +1629,12 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8839,
-        "name": "Blindweed",
-        "quantity": 1
-      },
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 235,
     "icon": "inv_potion_10",
     "url": "https://www.wowhead.com/tbc/spell=11465",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11465",
     "produces": {
       "id": 9179,
-      "name": "Elixir of Greater Intellect",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2675,30 +1657,12 @@
       "8839": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8836,
-        "name": "Arthas' Tears",
-        "quantity": 1
-      },
-      {
-        "id": 8839,
-        "name": "Blindweed",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
     "icon": "inv_potion_28",
     "url": "https://www.wowhead.com/tbc/spell=11466",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11466",
     "produces": {
       "id": 9088,
-      "name": "Gift of Arthas",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2722,30 +1686,12 @@
       "8838": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 1
-      },
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
     "icon": "inv_potion_94",
     "url": "https://www.wowhead.com/tbc/spell=11467",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11467",
     "produces": {
       "id": 9187,
-      "name": "Elixir of Greater Agility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2767,25 +1713,12 @@
       "8831": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 240,
     "icon": "inv_potion_14",
     "url": "https://www.wowhead.com/tbc/spell=11468",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11468",
     "produces": {
       "id": 9197,
-      "name": "Elixir of Dream Vision",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2809,30 +1742,12 @@
       "8846": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 1
-      },
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 245,
     "icon": "inv_potion_61",
     "url": "https://www.wowhead.com/tbc/spell=11472",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11472",
     "produces": {
       "id": 9206,
-      "name": "Elixir of Giants",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2856,30 +1771,12 @@
       "8845": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "Ghost Mushroom",
-        "quantity": 2
-      },
-      {
-        "id": 4342,
-        "name": "Purple Dye",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 245,
     "icon": "inv_poison_mindnumbing",
     "url": "https://www.wowhead.com/tbc/spell=11473",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11473",
     "produces": {
       "id": 9210,
-      "name": "Ghost Dye",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2902,25 +1799,12 @@
       "8845": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8845,
-        "name": "Ghost Mushroom",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_46",
     "url": "https://www.wowhead.com/tbc/spell=11476",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11476",
     "produces": {
       "id": 9264,
-      "name": "Elixir of Shadow Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2944,30 +1828,12 @@
       "8846": 1,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 1
-      },
-      {
-        "id": 8845,
-        "name": "Ghost Mushroom",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_27",
     "url": "https://www.wowhead.com/tbc/spell=11477",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11477",
     "produces": {
       "id": 9224,
-      "name": "Elixir of Demonslaying",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -2990,25 +1856,12 @@
       "8846": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_53",
     "url": "https://www.wowhead.com/tbc/spell=11478",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11478",
     "produces": {
       "id": 9233,
-      "name": "Elixir of Detect Demon",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3029,20 +1882,12 @@
     "materials": {
       "3575": 1
     },
-    "inputItems": [
-      {
-        "id": 3575,
-        "name": "Iron Bar",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
     "icon": "inv_ingot_03",
     "url": "https://www.wowhead.com/tbc/spell=11479",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11479",
     "produces": {
       "id": 3577,
-      "name": "Gold Bar",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3064,26 +1909,18 @@
     "materials": {
       "3860": 1
     },
-    "inputItems": [
-      {
-        "id": 3860,
-        "name": "Mithril Bar",
-        "quantity": 1
-      }
-    ],
     "minSkill": 225,
     "icon": "inv_ingot_08",
     "url": "https://www.wowhead.com/tbc/spell=11480",
-    "spellLink": "https://www.wowhead.com/tbc/spell=11480",
     "produces": {
       "id": 6037,
-      "name": "Truesilver Bar",
+      "name": "",
       "quantity": 0
     },
     "source": {
       "type": "item",
-      "recipeItemId": 6,
-      "recipeItemName": ""
+      "recipeItemId": 9305,
+      "recipeItemName": "Recipe: Transmute Mithril to Truesilver"
     }
   },
   {
@@ -3101,30 +1938,12 @@
       "3818": 1,
       "3821": 1
     },
-    "inputItems": [
-      {
-        "id": 3821,
-        "name": "Goldthorn",
-        "quantity": 1
-      },
-      {
-        "id": 3818,
-        "name": "Fadeleaf",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 200,
     "icon": "inv_potion_36",
     "url": "https://www.wowhead.com/tbc/spell=12609",
-    "spellLink": "https://www.wowhead.com/tbc/spell=12609",
     "produces": {
       "id": 10592,
-      "name": "Catseye Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3146,25 +1965,12 @@
       "8831": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 230,
     "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/tbc/spell=15833",
-    "spellLink": "https://www.wowhead.com/tbc/spell=15833",
     "produces": {
       "id": 12190,
-      "name": "Dreamless Sleep Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3186,25 +1992,12 @@
       "12359": 1,
       "12363": 1
     },
-    "inputItems": [
-      {
-        "id": 12359,
-        "name": "Thorium Bar",
-        "quantity": 1
-      },
-      {
-        "id": 12363,
-        "name": "Arcane Crystal",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "inv_misc_stonetablet_05",
     "url": "https://www.wowhead.com/tbc/spell=17187",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17187",
     "produces": {
       "id": 12360,
-      "name": "Arcanite Bar",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3227,25 +2020,12 @@
       "3372": 1,
       "13422": 1
     },
-    "inputItems": [
-      {
-        "id": 13422,
-        "name": "Stonescale Eel",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_68",
     "url": "https://www.wowhead.com/tbc/spell=17551",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17551",
     "produces": {
       "id": 13423,
-      "name": "Stonescale Oil",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3267,30 +2047,18 @@
       "8846": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 255,
     "icon": "inv_potion_41",
     "url": "https://www.wowhead.com/tbc/spell=17552",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17552",
     "produces": {
       "id": 13442,
-      "name": "Mighty Rage Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 15000
+      "type": "item",
+      "recipeItemId": 13476,
+      "recipeItemName": "Recipe: Mighty Rage Potion"
     }
   },
   {
@@ -3308,36 +2076,18 @@
       "8839": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 2
-      },
-      {
-        "id": 8839,
-        "name": "Blindweed",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 260,
     "icon": "inv_potion_74",
     "url": "https://www.wowhead.com/tbc/spell=17553",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17553",
     "produces": {
       "id": 13443,
-      "name": "Superior Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
       "type": "item",
-      "recipeItemId": 6,
-      "recipeItemName": ""
+      "recipeItemId": 13477,
+      "recipeItemName": "Recipe: Superior Mana Potion"
     }
   },
   {
@@ -3355,30 +2105,12 @@
       "8925": 1,
       "13423": 2
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "Stonescale Oil",
-        "quantity": 2
-      },
-      {
-        "id": 8838,
-        "name": "Sungrass",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 265,
     "icon": "inv_potion_66",
     "url": "https://www.wowhead.com/tbc/spell=17554",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17554",
     "produces": {
       "id": 13445,
-      "name": "Elixir of Superior Defense",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3402,35 +2134,18 @@
       "13463": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 270,
     "icon": "inv_potion_29",
     "url": "https://www.wowhead.com/tbc/spell=17555",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17555",
     "produces": {
       "id": 13447,
-      "name": "Elixir of the Sages",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 15000
+      "type": "item",
+      "recipeItemId": 13479,
+      "recipeItemName": "Recipe: Elixir of the Sages"
     }
   },
   {
@@ -3448,36 +2163,18 @@
       "13464": 2,
       "13465": 1
     },
-    "inputItems": [
-      {
-        "id": 13464,
-        "name": "Golden Sansam",
-        "quantity": 2
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "inv_potion_54",
     "url": "https://www.wowhead.com/tbc/spell=17556",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17556",
     "produces": {
       "id": 13446,
-      "name": "Major Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
       "type": "item",
-      "recipeItemId": 6,
-      "recipeItemName": ""
+      "recipeItemId": 13480,
+      "recipeItemName": "Recipe: Major Healing Potion"
     }
   },
   {
@@ -3495,35 +2192,18 @@
       "8925": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "inv_potion_59",
     "url": "https://www.wowhead.com/tbc/spell=17557",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17557",
     "produces": {
       "id": 13453,
-      "name": "Elixir of Brute Force",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 20000
+      "type": "item",
+      "recipeItemId": 13481,
+      "recipeItemName": "Recipe: Elixir of Brute Force"
     }
   },
   {
@@ -3539,20 +2219,12 @@
     "materials": {
       "7082": 1
     },
-    "inputItems": [
-      {
-        "id": 7082,
-        "name": "Essence of Air",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_fire_volcano",
     "url": "https://www.wowhead.com/tbc/spell=17559",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17559",
     "produces": {
       "id": 7078,
-      "name": "Essence of Fire",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3574,20 +2246,12 @@
     "materials": {
       "7078": 1
     },
-    "inputItems": [
-      {
-        "id": 7078,
-        "name": "Essence of Fire",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_strengthofearthtotem02",
     "url": "https://www.wowhead.com/tbc/spell=17560",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17560",
     "produces": {
       "id": 7076,
-      "name": "Essence of Earth",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3609,20 +2273,12 @@
     "materials": {
       "7076": 1
     },
-    "inputItems": [
-      {
-        "id": 7076,
-        "name": "Essence of Earth",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_acid_01",
     "url": "https://www.wowhead.com/tbc/spell=17561",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17561",
     "produces": {
       "id": 7080,
-      "name": "Essence of Water",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3644,20 +2300,12 @@
     "materials": {
       "7080": 1
     },
-    "inputItems": [
-      {
-        "id": 7080,
-        "name": "Essence of Water",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_earthbind",
     "url": "https://www.wowhead.com/tbc/spell=17562",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17562",
     "produces": {
       "id": 7082,
-      "name": "Essence of Air",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3679,20 +2327,12 @@
     "materials": {
       "12808": 1
     },
-    "inputItems": [
-      {
-        "id": 12808,
-        "name": "Essence of Undeath",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_acid_01",
     "url": "https://www.wowhead.com/tbc/spell=17563",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17563",
     "produces": {
       "id": 7080,
-      "name": "Essence of Water",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3714,20 +2354,12 @@
     "materials": {
       "7080": 1
     },
-    "inputItems": [
-      {
-        "id": 7080,
-        "name": "Essence of Water",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_shadow_shadetruesight",
     "url": "https://www.wowhead.com/tbc/spell=17564",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17564",
     "produces": {
       "id": 12808,
-      "name": "Essence of Undeath",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3749,20 +2381,12 @@
     "materials": {
       "12803": 1
     },
-    "inputItems": [
-      {
-        "id": 12803,
-        "name": "Living Essence",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_strengthofearthtotem02",
     "url": "https://www.wowhead.com/tbc/spell=17565",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17565",
     "produces": {
       "id": 7076,
-      "name": "Essence of Earth",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3784,20 +2408,12 @@
     "materials": {
       "7076": 1
     },
-    "inputItems": [
-      {
-        "id": 7076,
-        "name": "Essence of Earth",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "spell_nature_abolishmagic",
     "url": "https://www.wowhead.com/tbc/spell=17566",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17566",
     "produces": {
       "id": 12803,
-      "name": "Living Essence",
+      "name": "",
       "quantity": 0
     },
     "source": {
@@ -3821,30 +2437,12 @@
       "10620": 1,
       "13423": 2
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "Stonescale Oil",
-        "quantity": 2
-      },
-      {
-        "id": 10620,
-        "name": "Thorium Ore",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 280,
     "icon": "inv_potion_69",
     "url": "https://www.wowhead.com/tbc/spell=17570",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17570",
     "produces": {
       "id": 13455,
-      "name": "Greater Stoneshield Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3868,30 +2466,12 @@
       "13465": 2,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 280,
     "icon": "inv_potion_32",
     "url": "https://www.wowhead.com/tbc/spell=17571",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17571",
     "produces": {
       "id": 13452,
-      "name": "Elixir of the Mongoose",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -3915,35 +2495,18 @@
       "13466": 2,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "Icecap",
-        "quantity": 2
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
     "icon": "inv_potion_31",
     "url": "https://www.wowhead.com/tbc/spell=17572",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17572",
     "produces": {
       "id": 13462,
-      "name": "Purification Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 20000
+      "type": "item",
+      "recipeItemId": 13492,
+      "recipeItemName": "Recipe: Purification Potion"
     }
   },
   {
@@ -3961,35 +2524,18 @@
       "13463": 3,
       "13465": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 3
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
     "icon": "inv_potion_25",
     "url": "https://www.wowhead.com/tbc/spell=17573",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17573",
     "produces": {
       "id": 13454,
-      "name": "Greater Arcane Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 20000
+      "type": "item",
+      "recipeItemId": 13493,
+      "recipeItemName": "Recipe: Greater Arcane Elixir"
     }
   },
   {
@@ -4007,30 +2553,12 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7068,
-        "name": "Elemental Fire",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_24",
     "url": "https://www.wowhead.com/tbc/spell=17574",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17574",
     "produces": {
       "id": 13457,
-      "name": "Greater Fire Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4054,30 +2582,12 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7070,
-        "name": "Elemental Water",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_20",
     "url": "https://www.wowhead.com/tbc/spell=17575",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17575",
     "produces": {
       "id": 13456,
-      "name": "Greater Frost Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4101,30 +2611,12 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 7067,
-        "name": "Elemental Earth",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_22",
     "url": "https://www.wowhead.com/tbc/spell=17576",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17576",
     "produces": {
       "id": 13458,
-      "name": "Greater Nature Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4148,30 +2640,12 @@
       "11176": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 11176,
-        "name": "Dream Dust",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/tbc/spell=17577",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17577",
     "produces": {
       "id": 13461,
-      "name": "Greater Arcane Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4195,30 +2669,12 @@
       "8925": 1,
       "13463": 1
     },
-    "inputItems": [
-      {
-        "id": 3824,
-        "name": "Shadow Oil",
-        "quantity": 1
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_23",
     "url": "https://www.wowhead.com/tbc/spell=17578",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17578",
     "produces": {
       "id": 13459,
-      "name": "Greater Shadow Protection Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4242,30 +2698,12 @@
       "13463": 3,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 3
-      },
-      {
-        "id": 13467,
-        "name": "Icecap",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 295,
     "icon": "inv_potion_76",
     "url": "https://www.wowhead.com/tbc/spell=17580",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17580",
     "produces": {
       "id": 13444,
-      "name": "Major Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4291,40 +2729,12 @@
       "25867": 1,
       "25868": 1
     },
-    "inputItems": [
-      {
-        "id": 9149,
-        "name": "Philosopher's Stone",
-        "quantity": 1
-      },
-      {
-        "id": 25867,
-        "name": "Earthstorm Diamond",
-        "quantity": 1
-      },
-      {
-        "id": 25868,
-        "name": "Skyfire Diamond",
-        "quantity": 1
-      },
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 2
-      },
-      {
-        "id": 23571,
-        "name": "Primal Might",
-        "quantity": 5
-      }
-    ],
     "minSkill": 300,
     "icon": "spell_holy_pureofheart",
     "url": "https://www.wowhead.com/tbc/spell=17632",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17632",
     "produces": {
       "id": 13503,
-      "name": "Alchemist's Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4349,35 +2759,12 @@
       "13465": 3,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13423,
-        "name": "Stonescale Oil",
-        "quantity": 7
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 3
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_26",
     "url": "https://www.wowhead.com/tbc/spell=17634",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17634",
     "produces": {
       "id": 13506,
-      "name": "Flask of Petrification",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4402,35 +2789,12 @@
       "13423": 3,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 7
-      },
-      {
-        "id": 13423,
-        "name": "Stonescale Oil",
-        "quantity": 3
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_62",
     "url": "https://www.wowhead.com/tbc/spell=17635",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17635",
     "produces": {
       "id": 13510,
-      "name": "Flask of the Titans",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4455,35 +2819,12 @@
       "13467": 3,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 7
-      },
-      {
-        "id": 13467,
-        "name": "Icecap",
-        "quantity": 3
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_97",
     "url": "https://www.wowhead.com/tbc/spell=17636",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17636",
     "produces": {
       "id": 13511,
-      "name": "Flask of Distilled Wisdom",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4508,35 +2849,12 @@
       "13465": 3,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 7
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 3
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_41",
     "url": "https://www.wowhead.com/tbc/spell=17637",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17637",
     "produces": {
       "id": 13512,
-      "name": "Flask of Supreme Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4561,35 +2879,12 @@
       "13467": 7,
       "13468": 1
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "Icecap",
-        "quantity": 7
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 3
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_48",
     "url": "https://www.wowhead.com/tbc/spell=17638",
-    "spellLink": "https://www.wowhead.com/tbc/spell=17638",
     "produces": {
       "id": 13513,
-      "name": "Flask of Chromatic Resistance",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4613,30 +2908,12 @@
       "3372": 1,
       "3819": 2
     },
-    "inputItems": [
-      {
-        "id": 3819,
-        "name": "Wintersbite",
-        "quantity": 2
-      },
-      {
-        "id": 3358,
-        "name": "Khadgar's Whisker",
-        "quantity": 1
-      },
-      {
-        "id": 3372,
-        "name": "Leaded Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 190,
     "icon": "inv_potion_03",
     "url": "https://www.wowhead.com/tbc/spell=21923",
-    "spellLink": "https://www.wowhead.com/tbc/spell=21923",
     "produces": {
       "id": 17708,
-      "name": "Elixir of Frost Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4661,35 +2938,12 @@
       "13464": 4,
       "18256": 1
     },
-    "inputItems": [
-      {
-        "id": 10286,
-        "name": "Heart of the Wild",
-        "quantity": 1
-      },
-      {
-        "id": 13464,
-        "name": "Golden Sansam",
-        "quantity": 4
-      },
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 4
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_47",
     "url": "https://www.wowhead.com/tbc/spell=22732",
-    "spellLink": "https://www.wowhead.com/tbc/spell=22732",
     "produces": {
       "id": 18253,
-      "name": "Major Rejuvenation Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4713,30 +2967,12 @@
       "8831": 2,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 7972,
-        "name": "Ichor of Undeath",
-        "quantity": 1
-      },
-      {
-        "id": 8831,
-        "name": "Purple Lotus",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 215,
     "icon": "inv_potion_05",
     "url": "https://www.wowhead.com/tbc/spell=22808",
-    "spellLink": "https://www.wowhead.com/tbc/spell=22808",
     "produces": {
       "id": 18294,
-      "name": "Elixir of Greater Water Breathing",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4760,35 +2996,12 @@
       "13468": 1,
       "19943": 1
     },
-    "inputItems": [
-      {
-        "id": 12938,
-        "name": "Blood of Heroes",
-        "quantity": 1
-      },
-      {
-        "id": 19943,
-        "name": "Massive Mojo",
-        "quantity": 1
-      },
-      {
-        "id": 12804,
-        "name": "Powerful Mojo",
-        "quantity": 6
-      },
-      {
-        "id": 13468,
-        "name": "Black Lotus",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_poison_mindnumbing",
     "url": "https://www.wowhead.com/tbc/spell=24266",
-    "spellLink": "https://www.wowhead.com/tbc/spell=24266",
     "produces": {
       "id": 19931,
-      "name": "Gurubashi Mojo Madness",
+      "name": "",
       "quantity": 3
     },
     "source": {
@@ -4810,30 +3023,12 @@
       "13463": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "inv_potion_45",
     "url": "https://www.wowhead.com/tbc/spell=24365",
-    "spellLink": "https://www.wowhead.com/tbc/spell=24365",
     "produces": {
       "id": 20007,
-      "name": "Mageblood Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4857,30 +3052,12 @@
       "13463": 2,
       "13464": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 2
-      },
-      {
-        "id": 13464,
-        "name": "Golden Sansam",
-        "quantity": 1
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 275,
     "icon": "inv_potion_83",
     "url": "https://www.wowhead.com/tbc/spell=24366",
-    "spellLink": "https://www.wowhead.com/tbc/spell=24366",
     "produces": {
       "id": 20002,
-      "name": "Greater Dreamless Sleep Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4905,35 +3082,12 @@
       "13465": 2,
       "13467": 2
     },
-    "inputItems": [
-      {
-        "id": 13467,
-        "name": "Icecap",
-        "quantity": 2
-      },
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 2
-      },
-      {
-        "id": 10286,
-        "name": "Heart of the Wild",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 285,
     "icon": "inv_potion_07",
     "url": "https://www.wowhead.com/tbc/spell=24367",
-    "spellLink": "https://www.wowhead.com/tbc/spell=24367",
     "produces": {
       "id": 20008,
-      "name": "Living Action Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -4957,30 +3111,12 @@
       "8925": 1,
       "13466": 2
     },
-    "inputItems": [
-      {
-        "id": 8846,
-        "name": "Gromsblood",
-        "quantity": 1
-      },
-      {
-        "id": 13466,
-        "name": "Plaguebloom",
-        "quantity": 2
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 290,
     "icon": "inv_potion_80",
     "url": "https://www.wowhead.com/tbc/spell=24368",
-    "spellLink": "https://www.wowhead.com/tbc/spell=24368",
     "produces": {
       "id": 20004,
-      "name": "Major Troll's Blood Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5002,20 +3138,12 @@
     "materials": {
       "7077": 1
     },
-    "inputItems": [
-      {
-        "id": 7077,
-        "name": "Heart of Fire",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "spell_fire_fire",
     "url": "https://www.wowhead.com/tbc/spell=25146",
-    "spellLink": "https://www.wowhead.com/tbc/spell=25146",
     "produces": {
       "id": 7068,
-      "name": "Elemental Fire",
+      "name": "",
       "quantity": 3
     },
     "source": {
@@ -5039,30 +3167,12 @@
       "6371": 3,
       "8925": 1
     },
-    "inputItems": [
-      {
-        "id": 6371,
-        "name": "Fire Oil",
-        "quantity": 3
-      },
-      {
-        "id": 4625,
-        "name": "Firebloom",
-        "quantity": 3
-      },
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 250,
     "icon": "inv_potion_60",
     "url": "https://www.wowhead.com/tbc/spell=26277",
-    "spellLink": "https://www.wowhead.com/tbc/spell=26277",
     "produces": {
       "id": 21546,
-      "name": "Elixir of Greater Firepower",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5086,30 +3196,12 @@
       "22785": 1,
       "22787": 1
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 305,
     "icon": "inv_potion_150",
     "url": "https://www.wowhead.com/tbc/spell=28543",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28543",
     "produces": {
       "id": 22823,
-      "name": "Elixir of Camouflage",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5133,30 +3225,12 @@
       "18256": 1,
       "22785": 1
     },
-    "inputItems": [
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 305,
     "icon": "inv_potion_147",
     "url": "https://www.wowhead.com/tbc/spell=28544",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28544",
     "produces": {
       "id": 22824,
-      "name": "Elixir of Major Strength",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5179,30 +3253,12 @@
       "18256": 1,
       "22786": 1
     },
-    "inputItems": [
-      {
-        "id": 13464,
-        "name": "Golden Sansam",
-        "quantity": 1
-      },
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 310,
     "icon": "inv_potion_142",
     "url": "https://www.wowhead.com/tbc/spell=28545",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28545",
     "produces": {
       "id": 22825,
-      "name": "Elixir of Healing Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5225,30 +3281,12 @@
       "22785": 1,
       "22787": 2
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 315,
     "icon": "inv_potion_110",
     "url": "https://www.wowhead.com/tbc/spell=28546",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28546",
     "produces": {
       "id": 22826,
-      "name": "Sneaking Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5272,30 +3310,12 @@
       "22578": 2,
       "22790": 1
     },
-    "inputItems": [
-      {
-        "id": 22578,
-        "name": "Mote of Water",
-        "quantity": 2
-      },
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 320,
     "icon": "inv_potion_148",
     "url": "https://www.wowhead.com/tbc/spell=28549",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28549",
     "produces": {
       "id": 22827,
-      "name": "Elixir of Major Frost Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5318,25 +3338,12 @@
       "18256": 1,
       "22789": 3
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 320,
     "icon": "inv_potion_109",
     "url": "https://www.wowhead.com/tbc/spell=28550",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28550",
     "produces": {
       "id": 22828,
-      "name": "Insane Strength Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5360,30 +3367,12 @@
       "22785": 1,
       "22791": 2
     },
-    "inputItems": [
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 2
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 325,
     "icon": "inv_potion_131",
     "url": "https://www.wowhead.com/tbc/spell=28551",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28551",
     "produces": {
       "id": 22829,
-      "name": "Super Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5406,30 +3395,12 @@
       "22787": 2,
       "22789": 1
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      },
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 325,
     "icon": "inv_potion_135",
     "url": "https://www.wowhead.com/tbc/spell=28552",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28552",
     "produces": {
       "id": 22830,
-      "name": "Elixir of the Searching Eye",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5453,30 +3424,12 @@
       "22785": 2,
       "22789": 1
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 2
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 330,
     "icon": "inv_potion_127",
     "url": "https://www.wowhead.com/tbc/spell=28553",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28553",
     "produces": {
       "id": 22831,
-      "name": "Elixir of Major Agility",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5500,30 +3453,12 @@
       "22787": 3,
       "22791": 1
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 3
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 335,
     "icon": "inv_potion_144",
     "url": "https://www.wowhead.com/tbc/spell=28554",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28554",
     "produces": {
       "id": 22871,
-      "name": "Shrouding Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5547,30 +3482,12 @@
       "22785": 1,
       "22786": 2
     },
-    "inputItems": [
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 2
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 340,
     "icon": "inv_potion_137",
     "url": "https://www.wowhead.com/tbc/spell=28555",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28555",
     "produces": {
       "id": 22832,
-      "name": "Super Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5594,30 +3511,12 @@
       "22574": 2,
       "22790": 1
     },
-    "inputItems": [
-      {
-        "id": 22574,
-        "name": "Mote of Fire",
-        "quantity": 2
-      },
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 345,
     "icon": "inv_potion_146",
     "url": "https://www.wowhead.com/tbc/spell=28556",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28556",
     "produces": {
       "id": 22833,
-      "name": "Elixir of Major Firepower",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5641,30 +3540,12 @@
       "22789": 1,
       "22790": 3
     },
-    "inputItems": [
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 3
-      },
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 345,
     "icon": "inv_potion_122",
     "url": "https://www.wowhead.com/tbc/spell=28557",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28557",
     "produces": {
       "id": 22834,
-      "name": "Elixir of Major Defense",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5688,30 +3569,12 @@
       "22790": 1,
       "22792": 1
     },
-    "inputItems": [
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_potion_145",
     "url": "https://www.wowhead.com/tbc/spell=28558",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28558",
     "produces": {
       "id": 22835,
-      "name": "Elixir of Major Shadow Power",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5735,30 +3598,12 @@
       "22786": 1,
       "22792": 1
     },
-    "inputItems": [
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 1
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_potion_139",
     "url": "https://www.wowhead.com/tbc/spell=28562",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28562",
     "produces": {
       "id": 22836,
-      "name": "Major Dreamless Sleep Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5782,30 +3627,12 @@
       "22789": 2,
       "22790": 1
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 2
-      },
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_potion_106",
     "url": "https://www.wowhead.com/tbc/spell=28563",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28563",
     "produces": {
       "id": 22837,
-      "name": "Heroic Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5829,30 +3656,12 @@
       "22789": 2,
       "22791": 1
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 2
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_potion_108",
     "url": "https://www.wowhead.com/tbc/spell=28564",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28564",
     "produces": {
       "id": 22838,
-      "name": "Haste Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5876,30 +3685,12 @@
       "22791": 1,
       "22792": 2
     },
-    "inputItems": [
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 2
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_potion_107",
     "url": "https://www.wowhead.com/tbc/spell=28565",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28565",
     "produces": {
       "id": 22839,
-      "name": "Destruction Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5921,20 +3712,12 @@
     "materials": {
       "22451": 1
     },
-    "inputItems": [
-      {
-        "id": 22451,
-        "name": "Primal Air",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_elemental_primal_fire",
     "url": "https://www.wowhead.com/tbc/spell=28566",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28566",
     "produces": {
       "id": 21884,
-      "name": "Primal Fire",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5956,20 +3739,12 @@
     "materials": {
       "22452": 1
     },
-    "inputItems": [
-      {
-        "id": 22452,
-        "name": "Primal Earth",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_elemental_primal_water",
     "url": "https://www.wowhead.com/tbc/spell=28567",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28567",
     "produces": {
       "id": 21885,
-      "name": "Primal Water",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -5991,20 +3766,12 @@
     "materials": {
       "21884": 1
     },
-    "inputItems": [
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_elemental_primal_earth",
     "url": "https://www.wowhead.com/tbc/spell=28568",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28568",
     "produces": {
       "id": 22452,
-      "name": "Primal Earth",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6026,20 +3793,12 @@
     "materials": {
       "21885": 1
     },
-    "inputItems": [
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_elemental_primal_air",
     "url": "https://www.wowhead.com/tbc/spell=28569",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28569",
     "produces": {
       "id": 22451,
-      "name": "Primal Air",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6063,30 +3822,12 @@
       "22790": 1,
       "22791": 1
     },
-    "inputItems": [
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 355,
     "icon": "inv_potion_151",
     "url": "https://www.wowhead.com/tbc/spell=28570",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28570",
     "produces": {
       "id": 22840,
-      "name": "Elixir of Major Mageblood",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6110,30 +3851,12 @@
       "21884": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_124",
     "url": "https://www.wowhead.com/tbc/spell=28571",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28571",
     "produces": {
       "id": 22841,
-      "name": "Major Fire Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6157,30 +3880,12 @@
       "21885": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_126",
     "url": "https://www.wowhead.com/tbc/spell=28572",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28572",
     "produces": {
       "id": 22842,
-      "name": "Major Frost Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6204,30 +3909,12 @@
       "21886": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_127",
     "url": "https://www.wowhead.com/tbc/spell=28573",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28573",
     "produces": {
       "id": 22844,
-      "name": "Major Nature Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6251,30 +3938,12 @@
       "22457": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 22457,
-        "name": "Primal Mana",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_128",
     "url": "https://www.wowhead.com/tbc/spell=28575",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28575",
     "produces": {
       "id": 22845,
-      "name": "Major Arcane Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6298,30 +3967,12 @@
       "22456": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 22456,
-        "name": "Primal Shadow",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_123",
     "url": "https://www.wowhead.com/tbc/spell=28576",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28576",
     "produces": {
       "id": 22846,
-      "name": "Major Shadow Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6345,30 +3996,12 @@
       "21886": 1,
       "22793": 3
     },
-    "inputItems": [
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 5
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_125",
     "url": "https://www.wowhead.com/tbc/spell=28577",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28577",
     "produces": {
       "id": 22847,
-      "name": "Major Holy Protection Potion",
+      "name": "",
       "quantity": 5
     },
     "source": {
@@ -6392,30 +4025,12 @@
       "22791": 1,
       "22793": 1
     },
-    "inputItems": [
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 365,
     "icon": "inv_potion_136",
     "url": "https://www.wowhead.com/tbc/spell=28578",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28578",
     "produces": {
       "id": 22848,
-      "name": "Elixir of Empowerment",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6439,30 +4054,12 @@
       "22573": 3,
       "22790": 2
     },
-    "inputItems": [
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 2
-      },
-      {
-        "id": 22573,
-        "name": "Mote of Earth",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 365,
     "icon": "inv_potion_133",
     "url": "https://www.wowhead.com/tbc/spell=28579",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28579",
     "produces": {
       "id": 22849,
-      "name": "Ironshield Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6484,20 +4081,12 @@
     "materials": {
       "22456": 1
     },
-    "inputItems": [
-      {
-        "id": 22456,
-        "name": "Primal Shadow",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_water",
     "url": "https://www.wowhead.com/tbc/spell=28580",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28580",
     "produces": {
       "id": 21885,
-      "name": "Primal Water",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6517,20 +4106,12 @@
     "materials": {
       "21885": 1
     },
-    "inputItems": [
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_shadow",
     "url": "https://www.wowhead.com/tbc/spell=28581",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28581",
     "produces": {
       "id": 22456,
-      "name": "Primal Shadow",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6550,20 +4131,12 @@
     "materials": {
       "22457": 1
     },
-    "inputItems": [
-      {
-        "id": 22457,
-        "name": "Primal Mana",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_fire",
     "url": "https://www.wowhead.com/tbc/spell=28582",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28582",
     "produces": {
       "id": 21884,
-      "name": "Primal Fire",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6583,20 +4156,12 @@
     "materials": {
       "21884": 1
     },
-    "inputItems": [
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_mana",
     "url": "https://www.wowhead.com/tbc/spell=28583",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28583",
     "produces": {
       "id": 22457,
-      "name": "Primal Mana",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6616,20 +4181,12 @@
     "materials": {
       "21886": 1
     },
-    "inputItems": [
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_earth",
     "url": "https://www.wowhead.com/tbc/spell=28584",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28584",
     "produces": {
       "id": 22452,
-      "name": "Primal Earth",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6649,20 +4206,12 @@
     "materials": {
       "22452": 1
     },
-    "inputItems": [
-      {
-        "id": 22452,
-        "name": "Primal Earth",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_elemental_primal_life",
     "url": "https://www.wowhead.com/tbc/spell=28585",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28585",
     "produces": {
       "id": 21886,
-      "name": "Primal Life",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6685,35 +4234,12 @@
       "22791": 1,
       "22793": 2
     },
-    "inputItems": [
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 2
-      },
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 1
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_134",
     "url": "https://www.wowhead.com/tbc/spell=28586",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28586",
     "produces": {
       "id": 22850,
-      "name": "Super Rejuvenation Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6736,35 +4262,12 @@
       "22793": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 7
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_119",
     "url": "https://www.wowhead.com/tbc/spell=28587",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28587",
     "produces": {
       "id": 22851,
-      "name": "Flask of Fortification",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6787,35 +4290,12 @@
       "22793": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 7
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_118",
     "url": "https://www.wowhead.com/tbc/spell=28588",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28588",
     "produces": {
       "id": 22853,
-      "name": "Flask of Mighty Restoration",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6838,35 +4318,12 @@
       "22793": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 7
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_117",
     "url": "https://www.wowhead.com/tbc/spell=28589",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28589",
     "produces": {
       "id": 22854,
-      "name": "Flask of Relentless Assault",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6889,35 +4346,12 @@
       "22793": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 7
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_116",
     "url": "https://www.wowhead.com/tbc/spell=28590",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28590",
     "produces": {
       "id": 22861,
-      "name": "Flask of Blinding Light",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6940,35 +4374,12 @@
       "22793": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 3
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 7
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_potion_115",
     "url": "https://www.wowhead.com/tbc/spell=28591",
-    "spellLink": "https://www.wowhead.com/tbc/spell=28591",
     "produces": {
       "id": 22866,
-      "name": "Flask of Pure Death",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -6992,40 +4403,12 @@
       "22452": 1,
       "22457": 1
     },
-    "inputItems": [
-      {
-        "id": 22452,
-        "name": "Primal Earth",
-        "quantity": 1
-      },
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 1
-      },
-      {
-        "id": 22451,
-        "name": "Primal Air",
-        "quantity": 1
-      },
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 1
-      },
-      {
-        "id": 22457,
-        "name": "Primal Mana",
-        "quantity": 1
-      }
-    ],
     "minSkill": 350,
     "icon": "spell_nature_lightningoverload",
     "url": "https://www.wowhead.com/tbc/spell=29688",
-    "spellLink": "https://www.wowhead.com/tbc/spell=29688",
     "produces": {
       "id": 23571,
-      "name": "Primal Might",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7051,40 +4434,12 @@
       "23107": 3,
       "23112": 3
     },
-    "inputItems": [
-      {
-        "id": 23079,
-        "name": "Deep Peridot",
-        "quantity": 3
-      },
-      {
-        "id": 23107,
-        "name": "Shadow Draenite",
-        "quantity": 3
-      },
-      {
-        "id": 23112,
-        "name": "Golden Draenite",
-        "quantity": 3
-      },
-      {
-        "id": 22452,
-        "name": "Primal Earth",
-        "quantity": 2
-      },
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 2
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_misc_gem_diamond_04",
     "url": "https://www.wowhead.com/tbc/spell=32765",
-    "spellLink": "https://www.wowhead.com/tbc/spell=32765",
     "produces": {
       "id": 25867,
-      "name": "Earthstorm Diamond",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7110,40 +4465,12 @@
       "23077": 3,
       "23117": 3
     },
-    "inputItems": [
-      {
-        "id": 23077,
-        "name": "Blood Garnet",
-        "quantity": 3
-      },
-      {
-        "id": 21929,
-        "name": "Flame Spessarite",
-        "quantity": 3
-      },
-      {
-        "id": 23117,
-        "name": "Azure Moonstone",
-        "quantity": 3
-      },
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 2
-      },
-      {
-        "id": 22451,
-        "name": "Primal Air",
-        "quantity": 2
-      }
-    ],
     "minSkill": 350,
     "icon": "inv_misc_gem_diamond_05",
     "url": "https://www.wowhead.com/tbc/spell=32766",
-    "spellLink": "https://www.wowhead.com/tbc/spell=32766",
     "produces": {
       "id": 25868,
-      "name": "Skyfire Diamond",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7167,30 +4494,12 @@
       "18256": 1,
       "22785": 1
     },
-    "inputItems": [
-      {
-        "id": 13464,
-        "name": "Golden Sansam",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_40",
     "url": "https://www.wowhead.com/tbc/spell=33732",
-    "spellLink": "https://www.wowhead.com/tbc/spell=33732",
     "produces": {
       "id": 28100,
-      "name": "Volatile Healing Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7213,30 +4522,12 @@
       "22785": 1,
       "22787": 2
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 310,
     "icon": "inv_potion_75",
     "url": "https://www.wowhead.com/tbc/spell=33733",
-    "spellLink": "https://www.wowhead.com/tbc/spell=33733",
     "produces": {
       "id": 28101,
-      "name": "Unstable Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7259,30 +4550,12 @@
       "18256": 1,
       "22785": 1
     },
-    "inputItems": [
-      {
-        "id": 13465,
-        "name": "Mountain Silversage",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_58",
     "url": "https://www.wowhead.com/tbc/spell=33738",
-    "spellLink": "https://www.wowhead.com/tbc/spell=33738",
     "produces": {
       "id": 28102,
-      "name": "Onslaught Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7305,30 +4578,12 @@
       "18256": 1,
       "22785": 1
     },
-    "inputItems": [
-      {
-        "id": 13463,
-        "name": "Dreamfoil",
-        "quantity": 1
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 300,
     "icon": "inv_potion_96",
     "url": "https://www.wowhead.com/tbc/spell=33740",
-    "spellLink": "https://www.wowhead.com/tbc/spell=33740",
     "produces": {
       "id": 28103,
-      "name": "Adept's Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7351,30 +4606,12 @@
       "22785": 1,
       "22789": 3
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 3
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 315,
     "icon": "inv_potion_111",
     "url": "https://www.wowhead.com/tbc/spell=33741",
-    "spellLink": "https://www.wowhead.com/tbc/spell=33741",
     "produces": {
       "id": 28104,
-      "name": "Elixir of Mastery",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7397,30 +4634,12 @@
       "22452": 1,
       "22457": 1
     },
-    "inputItems": [
-      {
-        "id": 22452,
-        "name": "Primal Earth",
-        "quantity": 1
-      },
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 1
-      },
-      {
-        "id": 22457,
-        "name": "Primal Mana",
-        "quantity": 1
-      }
-    ],
     "minSkill": 325,
     "icon": "inv_misc_gem_lionseye_01",
     "url": "https://www.wowhead.com/tbc/spell=38070",
-    "spellLink": "https://www.wowhead.com/tbc/spell=38070",
     "produces": {
       "id": 31080,
-      "name": "Mercurial Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7443,30 +4662,12 @@
       "22789": 1,
       "22792": 2
     },
-    "inputItems": [
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 1
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 2
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 335,
     "icon": "inv_potion_152",
     "url": "https://www.wowhead.com/tbc/spell=38960",
-    "spellLink": "https://www.wowhead.com/tbc/spell=38960",
     "produces": {
       "id": 31679,
-      "name": "Fel Strength Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7490,30 +4691,12 @@
       "22792": 2,
       "22793": 1
     },
-    "inputItems": [
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 1
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 2
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 360,
     "icon": "inv_potion_138",
     "url": "https://www.wowhead.com/tbc/spell=38961",
-    "spellLink": "https://www.wowhead.com/tbc/spell=38961",
     "produces": {
       "id": 31677,
-      "name": "Fel Mana Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7537,30 +4720,12 @@
       "22785": 2,
       "22792": 3
     },
-    "inputItems": [
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 2
-      },
-      {
-        "id": 22792,
-        "name": "Nightmare Vine",
-        "quantity": 3
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 345,
     "icon": "inv_potion_140",
     "url": "https://www.wowhead.com/tbc/spell=38962",
-    "spellLink": "https://www.wowhead.com/tbc/spell=38962",
     "produces": {
       "id": 31676,
-      "name": "Fel Regeneration Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7584,30 +4749,12 @@
       "22785": 1,
       "22787": 2
     },
-    "inputItems": [
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      },
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 310,
     "icon": "inv_potion_158",
     "url": "https://www.wowhead.com/tbc/spell=39636",
-    "spellLink": "https://www.wowhead.com/tbc/spell=39636",
     "produces": {
       "id": 32062,
-      "name": "Elixir of Major Fortitude",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7630,30 +4777,12 @@
       "22786": 1,
       "22787": 2
     },
-    "inputItems": [
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 1
-      },
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 320,
     "icon": "inv_potion_154",
     "url": "https://www.wowhead.com/tbc/spell=39637",
-    "spellLink": "https://www.wowhead.com/tbc/spell=39637",
     "produces": {
       "id": 32063,
-      "name": "Earthen Elixir",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7677,30 +4806,12 @@
       "22785": 1,
       "22789": 1
     },
-    "inputItems": [
-      {
-        "id": 22785,
-        "name": "Felweed",
-        "quantity": 1
-      },
-      {
-        "id": 22789,
-        "name": "Terocone",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 320,
     "icon": "inv_potion_155",
     "url": "https://www.wowhead.com/tbc/spell=39638",
-    "spellLink": "https://www.wowhead.com/tbc/spell=39638",
     "produces": {
       "id": 32067,
-      "name": "Elixir of Draenic Wisdom",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7723,30 +4834,12 @@
       "22787": 1,
       "22790": 1
     },
-    "inputItems": [
-      {
-        "id": 22790,
-        "name": "Ancient Lichen",
-        "quantity": 1
-      },
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 330,
     "icon": "inv_potion_159",
     "url": "https://www.wowhead.com/tbc/spell=39639",
-    "spellLink": "https://www.wowhead.com/tbc/spell=39639",
     "produces": {
       "id": 32068,
-      "name": "Elixir of Ironskin",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7770,30 +4863,12 @@
       "22793": 7,
       "23782": 1
     },
-    "inputItems": [
-      {
-        "id": 22457,
-        "name": "Primal Mana",
-        "quantity": 2
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 7
-      },
-      {
-        "id": 23782,
-        "name": "Fel Iron Casing",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_misc_cauldron_arcane",
     "url": "https://www.wowhead.com/tbc/spell=41458",
-    "spellLink": "https://www.wowhead.com/tbc/spell=41458",
     "produces": {
       "id": 32839,
-      "name": "Cauldron of Major Arcane Protection",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7815,30 +4890,12 @@
       "22793": 7,
       "23782": 1
     },
-    "inputItems": [
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 2
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 7
-      },
-      {
-        "id": 23782,
-        "name": "Fel Iron Casing",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_misc_cauldron_fire",
     "url": "https://www.wowhead.com/tbc/spell=41500",
-    "spellLink": "https://www.wowhead.com/tbc/spell=41500",
     "produces": {
       "id": 32849,
-      "name": "Cauldron of Major Fire Protection",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7860,30 +4917,12 @@
       "22793": 7,
       "23782": 1
     },
-    "inputItems": [
-      {
-        "id": 21885,
-        "name": "Primal Water",
-        "quantity": 2
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 7
-      },
-      {
-        "id": 23782,
-        "name": "Fel Iron Casing",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_misc_cauldron_frost",
     "url": "https://www.wowhead.com/tbc/spell=41501",
-    "spellLink": "https://www.wowhead.com/tbc/spell=41501",
     "produces": {
       "id": 32850,
-      "name": "Cauldron of Major Frost Protection",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7905,30 +4944,12 @@
       "22793": 7,
       "23782": 1
     },
-    "inputItems": [
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 2
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 7
-      },
-      {
-        "id": 23782,
-        "name": "Fel Iron Casing",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_misc_cauldron_nature",
     "url": "https://www.wowhead.com/tbc/spell=41502",
-    "spellLink": "https://www.wowhead.com/tbc/spell=41502",
     "produces": {
       "id": 32851,
-      "name": "Cauldron of Major Nature Protection",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7950,30 +4971,12 @@
       "22793": 7,
       "23782": 1
     },
-    "inputItems": [
-      {
-        "id": 22456,
-        "name": "Primal Shadow",
-        "quantity": 2
-      },
-      {
-        "id": 22793,
-        "name": "Mana Thistle",
-        "quantity": 7
-      },
-      {
-        "id": 23782,
-        "name": "Fel Iron Casing",
-        "quantity": 1
-      }
-    ],
     "minSkill": 0,
     "icon": "inv_misc_cauldron_shadow",
     "url": "https://www.wowhead.com/tbc/spell=41503",
-    "spellLink": "https://www.wowhead.com/tbc/spell=41503",
     "produces": {
       "id": 32852,
-      "name": "Cauldron of Major Shadow Protection",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -7996,35 +4999,12 @@
       "22791": 3,
       "22794": 1
     },
-    "inputItems": [
-      {
-        "id": 22786,
-        "name": "Dreaming Glory",
-        "quantity": 7
-      },
-      {
-        "id": 22791,
-        "name": "Netherbloom",
-        "quantity": 3
-      },
-      {
-        "id": 22794,
-        "name": "Fel Lotus",
-        "quantity": 1
-      },
-      {
-        "id": 18256,
-        "name": "Imbued Vial",
-        "quantity": 1
-      }
-    ],
     "minSkill": 375,
     "icon": "inv_potion_48",
     "url": "https://www.wowhead.com/tbc/spell=42736",
-    "spellLink": "https://www.wowhead.com/tbc/spell=42736",
     "produces": {
       "id": 33208,
-      "name": "Flask of Chromatic Wonder",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -8047,30 +5027,18 @@
       "8925": 1,
       "22787": 2
     },
-    "inputItems": [
-      {
-        "id": 8925,
-        "name": "Crystal Vial",
-        "quantity": 1
-      },
-      {
-        "id": 22787,
-        "name": "Ragveil",
-        "quantity": 2
-      }
-    ],
     "minSkill": 325,
     "icon": "inv_potion_28",
     "url": "https://www.wowhead.com/tbc/spell=45061",
-    "spellLink": "https://www.wowhead.com/tbc/spell=45061",
     "produces": {
       "id": 34440,
-      "name": "Mad Alchemist's Potion",
+      "name": "",
       "quantity": 1
     },
     "source": {
-      "type": "trainer",
-      "cost": 35000
+      "type": "item",
+      "recipeItemId": 34481,
+      "recipeItemName": "Recipe: Mad Alchemist's Potion"
     }
   },
   {
@@ -8088,30 +5056,12 @@
       "22451": 6,
       "30183": 2
     },
-    "inputItems": [
-      {
-        "id": 13503,
-        "name": "Alchemist's Stone",
-        "quantity": 1
-      },
-      {
-        "id": 22451,
-        "name": "Primal Air",
-        "quantity": 6
-      },
-      {
-        "id": 30183,
-        "name": "Nether Vortex",
-        "quantity": 2
-      }
-    ],
     "minSkill": 375,
     "icon": "classic_spell_nature_healingway",
     "url": "https://www.wowhead.com/tbc/spell=47046",
-    "spellLink": "https://www.wowhead.com/tbc/spell=47046",
     "produces": {
       "id": 35748,
-      "name": "Guardian's Alchemist Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -8135,30 +5085,12 @@
       "21884": 6,
       "30183": 2
     },
-    "inputItems": [
-      {
-        "id": 13503,
-        "name": "Alchemist's Stone",
-        "quantity": 1
-      },
-      {
-        "id": 21884,
-        "name": "Primal Fire",
-        "quantity": 6
-      },
-      {
-        "id": 30183,
-        "name": "Nether Vortex",
-        "quantity": 2
-      }
-    ],
     "minSkill": 375,
     "icon": "classic_spell_nature_healingway",
     "url": "https://www.wowhead.com/tbc/spell=47048",
-    "spellLink": "https://www.wowhead.com/tbc/spell=47048",
     "produces": {
       "id": 35749,
-      "name": "Sorcerer's Alchemist Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -8182,30 +5114,12 @@
       "21886": 6,
       "30183": 2
     },
-    "inputItems": [
-      {
-        "id": 13503,
-        "name": "Alchemist's Stone",
-        "quantity": 1
-      },
-      {
-        "id": 21886,
-        "name": "Primal Life",
-        "quantity": 6
-      },
-      {
-        "id": 30183,
-        "name": "Nether Vortex",
-        "quantity": 2
-      }
-    ],
     "minSkill": 375,
     "icon": "classic_spell_nature_healingway",
     "url": "https://www.wowhead.com/tbc/spell=47049",
-    "spellLink": "https://www.wowhead.com/tbc/spell=47049",
     "produces": {
       "id": 35750,
-      "name": "Redeemer's Alchemist Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {
@@ -8229,30 +5143,12 @@
       "22456": 6,
       "30183": 2
     },
-    "inputItems": [
-      {
-        "id": 13503,
-        "name": "Alchemist's Stone",
-        "quantity": 1
-      },
-      {
-        "id": 22456,
-        "name": "Primal Shadow",
-        "quantity": 6
-      },
-      {
-        "id": 30183,
-        "name": "Nether Vortex",
-        "quantity": 2
-      }
-    ],
     "minSkill": 375,
     "icon": "classic_spell_nature_healingway",
     "url": "https://www.wowhead.com/tbc/spell=47050",
-    "spellLink": "https://www.wowhead.com/tbc/spell=47050",
     "produces": {
       "id": 35751,
-      "name": "Assassin's Alchemist Stone",
+      "name": "",
       "quantity": 1
     },
     "source": {

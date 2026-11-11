@@ -8,6 +8,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "2697": {
@@ -19,6 +20,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "2698": {
@@ -29,7 +31,8 @@
     "name": "Recipe: Cooked Crab Claw",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "2699": {
     "bop": false,
@@ -40,6 +43,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "2700": {
@@ -50,7 +54,8 @@
     "name": "Recipe: Succulent Pork Ribs",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "2701": {
     "bop": false,
@@ -61,6 +66,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "2889": {
@@ -72,6 +78,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3678": {
@@ -83,6 +90,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3679": {
@@ -94,6 +102,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3680": {
@@ -105,6 +114,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3681": {
@@ -116,6 +126,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3682": {
@@ -126,7 +137,8 @@
     "name": "Recipe: Curiously Tasty Omelet",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "3683": {
     "bop": false,
@@ -137,6 +149,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3734": {
@@ -147,7 +160,8 @@
     "name": "Recipe: Big Bear Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "3735": {
     "bop": true,
@@ -157,7 +171,8 @@
     "name": "Recipe: Hot Lion Chops",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "3736": {
     "bop": false,
@@ -168,6 +183,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "3737": {
@@ -178,7 +194,8 @@
     "name": "Recipe: Soothing Turtle Bisque",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4609": {
     "bop": true,
@@ -188,7 +205,8 @@
     "name": "Recipe: Barbecued Buzzard Wing",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5482": {
     "bop": false,
@@ -199,6 +217,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Alliance"
   },
   "5483": {
@@ -209,7 +228,8 @@
     "name": "Recipe: Scorpid Surprise",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5484": {
     "bop": false,
@@ -219,7 +239,8 @@
     "name": "Recipe: Roasted Kodo Meat",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5485": {
     "bop": false,
@@ -229,7 +250,8 @@
     "name": "Recipe: Fillet of Frenzy",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5486": {
     "bop": false,
@@ -239,7 +261,8 @@
     "name": "Recipe: Strider Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5487": {
     "bop": false,
@@ -250,6 +273,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "faction": "Horde"
   },
   "5488": {
@@ -260,7 +284,8 @@
     "name": "Recipe: Crispy Lizard Tail",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5489": {
     "bop": true,
@@ -270,7 +295,8 @@
     "name": "Recipe: Lean Venison",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "5528": {
     "bop": false,
@@ -280,7 +306,8 @@
     "name": "Recipe: Clam Chowder",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6039": {
     "bop": false,
@@ -290,7 +317,8 @@
     "name": "Recipe: Giant Clam Scorcho",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6325": {
     "bop": false,
@@ -300,7 +328,8 @@
     "name": "Recipe: Brilliant Smallfish",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6326": {
     "bop": false,
@@ -310,7 +339,8 @@
     "name": "Recipe: Slitherskin Mackerel",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6328": {
     "bop": false,
@@ -320,7 +350,8 @@
     "name": "Recipe: Longjaw Mud Snapper",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6329": {
     "bop": false,
@@ -330,7 +361,8 @@
     "name": "Recipe: Loch Frenzy Delight",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6330": {
     "bop": false,
@@ -340,7 +372,8 @@
     "name": "Recipe: Bristle Whisker Catfish",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6368": {
     "bop": false,
@@ -350,7 +383,8 @@
     "name": "Recipe: Rainbow Fin Albacore",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6369": {
     "bop": false,
@@ -360,7 +394,8 @@
     "name": "Recipe: Rockscale Cod",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6661": {
     "bop": false,
@@ -370,7 +405,8 @@
     "name": "Recipe: Savory Deviate Delight",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6892": {
     "bop": false,
@@ -380,7 +416,19 @@
     "name": "Recipe: Smoked Bear Meat",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "7678": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": true,
+    "name": "Recipe: Thistle Tea",
+    "quality": 1,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": false
   },
   "12226": {
     "bop": false,
@@ -390,7 +438,8 @@
     "name": "Recipe: Crispy Bat Wing",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12227": {
     "bop": true,
@@ -400,7 +449,8 @@
     "name": "Recipe: Lean Wolf Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12228": {
     "bop": true,
@@ -410,7 +460,8 @@
     "name": "Recipe: Roast Raptor",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12229": {
     "bop": true,
@@ -420,7 +471,8 @@
     "name": "Recipe: Hot Wolf Ribs",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12231": {
     "bop": true,
@@ -430,7 +482,8 @@
     "name": "Recipe: Jungle Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12232": {
     "bop": true,
@@ -440,7 +493,8 @@
     "name": "Recipe: Carrion Surprise",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12233": {
     "bop": true,
@@ -450,7 +504,8 @@
     "name": "Recipe: Mystery Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12239": {
     "bop": false,
@@ -460,7 +515,8 @@
     "name": "Recipe: Dragonbreath Chili",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "12240": {
     "bop": true,
@@ -470,7 +526,8 @@
     "name": "Recipe: Heavy Kodo Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13939": {
     "bop": false,
@@ -480,7 +537,8 @@
     "name": "Recipe: Spotted Yellowtail",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13940": {
     "bop": false,
@@ -490,7 +548,8 @@
     "name": "Recipe: Cooked Glossy Mightfish",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13941": {
     "bop": false,
@@ -500,7 +559,8 @@
     "name": "Recipe: Filet of Redgill",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13942": {
     "bop": false,
@@ -510,7 +570,8 @@
     "name": "Recipe: Grilled Squid",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13943": {
     "bop": false,
@@ -520,7 +581,8 @@
     "name": "Recipe: Hot Smoked Bass",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13945": {
     "bop": false,
@@ -530,7 +592,8 @@
     "name": "Recipe: Nightfin Soup",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13946": {
     "bop": false,
@@ -540,7 +603,8 @@
     "name": "Recipe: Poached Sunscale Salmon",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13947": {
     "bop": false,
@@ -550,7 +614,8 @@
     "name": "Recipe: Lobster Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13948": {
     "bop": false,
@@ -560,7 +625,8 @@
     "name": "Recipe: Mightfish Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13949": {
     "bop": false,
@@ -570,7 +636,8 @@
     "name": "Recipe: Baked Salmon",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16110": {
     "bop": false,
@@ -580,7 +647,8 @@
     "name": "Recipe: Monster Omelet",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16111": {
     "bop": false,
@@ -590,7 +658,8 @@
     "name": "Recipe: Spiced Chili Crab",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16767": {
     "bop": true,
@@ -600,7 +669,8 @@
     "name": "Recipe: Undermine Clam Chowder",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17062": {
     "bop": false,
@@ -610,7 +680,8 @@
     "name": "Recipe: Mithril Head Trout",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17200": {
     "bop": false,
@@ -620,7 +691,8 @@
     "name": "Recipe: Gingerbread Cookie",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17201": {
     "bop": false,
@@ -630,7 +702,8 @@
     "name": "Recipe: Egg Nog",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18046": {
     "bop": false,
@@ -640,17 +713,8 @@
     "name": "Recipe: Tender Wolf Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "18160": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 200,
-    "auctionhouse": false,
-    "name": "Recipe: Thistle Tea",
-    "quality": 2,
-    "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18267": {
     "bop": true,
@@ -671,7 +735,8 @@
     "name": "Recipe: Heavy Crocolisk Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "21025": {
     "bop": false,
@@ -681,7 +746,8 @@
     "name": "Recipe: Dirge's Kickin' Chimaerok Chops",
     "quality": 4,
     "icon": "inv_misc_book_02",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "21099": {
     "bop": false,
@@ -691,7 +757,8 @@
     "name": "Recipe: Smoked Sagefish",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "21219": {
     "bop": false,
@@ -701,27 +768,8 @@
     "name": "Recipe: Sagefish Delight",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "232437": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": 20000,
-    "auctionhouse": false,
-    "name": "Recipe: Darkclaw Bisque",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "232443": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": 16000,
-    "auctionhouse": false,
-    "name": "Recipe: Smoked Redgill",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "238645": {
     "bop": true,
@@ -731,7 +779,8 @@
     "name": "Recipe: Prowler Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "238646": {
     "bop": true,
@@ -741,7 +790,8 @@
     "name": "Recipe: Filet o' Flank",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "238647": {
     "bop": true,
@@ -751,7 +801,8 @@
     "name": "Recipe: Sunrise Omelette",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "239021": {
     "bop": true,
@@ -805,7 +856,8 @@
     "name": "Recipe: Triage Tea",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": true
   },
   "249883": {
     "bop": true,
@@ -815,7 +867,8 @@
     "name": "Recipe: Sunny Tea",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": true
   },
   "249884": {
     "bop": true,
@@ -825,7 +878,8 @@
     "name": "Recipe: Sage's Tea",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "249885": {
     "bop": true,
@@ -836,6 +890,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -853,6 +908,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -870,6 +926,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -887,6 +944,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -904,6 +962,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -921,6 +980,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -932,12 +992,13 @@
   "250173": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": null,
+    "buyPrice": 20000,
     "auctionhouse": false,
     "name": "Recipe: Savory Stag Sliders",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250174": {
     "bop": true,
@@ -947,7 +1008,8 @@
     "name": "Recipe: Soaring Pamplona",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250175": {
     "bop": true,
@@ -957,7 +1019,8 @@
     "name": "Recipe: Bat Hachee",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250176": {
     "bop": true,
@@ -967,7 +1030,8 @@
     "name": "Recipe: Savory Turtle Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250177": {
     "bop": true,
@@ -977,7 +1041,8 @@
     "name": "Recipe: Flank au Poivre",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250178": {
     "bop": true,
@@ -987,7 +1052,8 @@
     "name": "Recipe: Bear Bruscitti",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250179": {
     "bop": true,
@@ -997,7 +1063,8 @@
     "name": "Recipe: Steaming Stag Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250180": {
     "bop": true,
@@ -1007,7 +1074,8 @@
     "name": "Recipe: Swiftstrike Steak",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250181": {
     "bop": true,
@@ -1017,7 +1085,8 @@
     "name": "Recipe: Raging Raptor Ribs",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": true
   },
   "250182": {
     "bop": true,
@@ -1038,7 +1107,8 @@
     "name": "Recipe: Prehistoric Pulled Raptor",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "250184": {
     "bop": true,
@@ -1048,7 +1118,8 @@
     "name": "Recipe: Raptor Rouladen",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": true
   },
   "250185": {
     "bop": true,
@@ -1069,7 +1140,8 @@
     "name": "Recipe: Giant Scrambled Eggs",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": true
   },
   "250187": {
     "bop": true,
@@ -1101,7 +1173,8 @@
     "name": "Recipe: Clam Linguine",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "251526": {
     "bop": false,
@@ -1111,7 +1184,8 @@
     "name": "Recipe: Savory Whimsyfin Delight",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "263511": {
     "bop": false,
@@ -1121,7 +1195,8 @@
     "name": "Recipe: Skywall Souffle",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "263513": {
     "bop": false,
@@ -1131,17 +1206,19 @@
     "name": "Recipe: Pincer Bites",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273087": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Journeyman Campfire",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273101": {
     "bop": false,
@@ -1151,17 +1228,19 @@
     "name": "Blueprint: Expert Campfire",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273102": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Cookie's Feast",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273115": {
     "bop": false,
@@ -1171,7 +1250,8 @@
     "name": "Blueprint: Iron Oven",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "274415": {
     "bop": true,
@@ -1181,7 +1261,8 @@
     "name": "Recipe: Sweetpaw Jam",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "274972": {
     "bop": true,
@@ -1191,7 +1272,8 @@
     "name": "Recipe: Briny Seafood Stew",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "274977": {
     "bop": true,
@@ -1201,7 +1283,8 @@
     "name": "Recipe: Plain Ol' Paletusk",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "286153": {
     "bop": true,
@@ -1211,6 +1294,7 @@
     "name": "Recipe: Plated Armorfish",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   }
 }

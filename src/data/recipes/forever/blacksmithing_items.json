@@ -1579,17 +1579,6 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "210779": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 75000,
-    "auctionhouse": false,
-    "name": "Plans: Mantle of the Second War",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
   "215155": {
     "bop": true,
     "limitedStock": false,
@@ -1623,149 +1612,6 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "217274": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Golden Scale Gauntlets",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217276": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Golden Scale Boots",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217278": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Golden Scale Cuirass",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217280": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 4400,
-    "auctionhouse": false,
-    "name": "Plans: Golden Scale Coif",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217282": {
-    "bop": false,
-    "limitedStock": true,
-    "buyPrice": 4400,
-    "auctionhouse": false,
-    "name": "Plans: Moonsteel Broadsword",
-    "quality": 1,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217284": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Golden Scale Shoulders",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "217286": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Golden Scale Leggings",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "227727": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Sulfuron Hammer",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "227901": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Tempered Dark Iron Plate",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "227905": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Skyrider's Masterwork Stormhammer",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "227909": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Plans: Fiery Plate Gauntlets of the Hidden Technique",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228114": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Refined Arcanite Reaper",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228117": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Refined Arcanite Champion",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
   "228118": {
     "bop": false,
     "limitedStock": false,
@@ -1774,127 +1620,6 @@
     "name": "Plans: Stronger-hold Gauntlets",
     "quality": 4,
     "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228250": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Stronger-hold Gauntlets",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228310": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Hardened Frostguard",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228311": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Finely-Enchanted Battlehammer",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228312": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Invincible Mail",
-    "quality": 4,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228313": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": 40000,
-    "auctionhouse": false,
-    "name": "Plans: Tempest Gauntlets",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228314": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Warcrest of the Great Chief",
-    "quality": 3,
-    "icon": "inv_scroll_03",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "228315": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Sageblade of the Archmagus",
-    "quality": 4,
-    "icon": "inv_scroll_05",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238322": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Scarlet Soldier's Helmet",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238323": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Scarlet Soldier's Spaulders",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238324": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Scarlet Soldier's Chestplate",
-    "quality": 3,
-    "icon": "inv_scroll_04",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238325": {
-    "bop": false,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": true,
-    "name": "Plans: Scarlet Soldier's Protectors",
-    "quality": 3,
-    "icon": "inv_scroll_04",
     "hasSource": true,
     "mobDrop": false
   },
@@ -2030,12 +1755,166 @@
     "hasSource": true,
     "mobDrop": true
   },
+  "251340": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Veteran's Chain Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
   "251341": {
     "bop": true,
     "limitedStock": false,
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Plans: Guard's Chain Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251342": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Protector's Chain Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251343": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Acolyte's Chain Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251344": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Crusader's Chain Shirt",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251345": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Veteran's Chain Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251346": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Guard's Chain Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251347": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Protector's Chain Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251348": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Acolyte's Chain Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251349": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Crusader's Chain Leggings",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251350": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Veteran's Chain Helm",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251351": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Guard's Chain Helm",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251352": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Protector's Chain Helm",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251353": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Acolyte's Chain Helm",
+    "quality": 3,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251354": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Crusader's Chain Helm",
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
@@ -2140,7 +2019,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251361": {
     "bop": true,
@@ -2151,7 +2037,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251362": {
     "bop": true,
@@ -2162,7 +2055,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251363": {
     "bop": true,
@@ -2173,7 +2073,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251364": {
     "bop": true,
@@ -2184,7 +2091,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251365": {
     "bop": true,
@@ -2375,7 +2289,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251376": {
     "bop": true,
@@ -2386,7 +2307,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251377": {
     "bop": true,
@@ -2397,7 +2325,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251378": {
     "bop": true,
@@ -2408,7 +2343,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251379": {
     "bop": true,
@@ -2419,7 +2361,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251380": {
     "bop": true,
@@ -2430,7 +2379,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251381": {
     "bop": true,
@@ -2441,7 +2397,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251382": {
     "bop": true,
@@ -2452,7 +2415,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251383": {
     "bop": true,
@@ -2463,7 +2433,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251384": {
     "bop": true,
@@ -2474,7 +2451,14 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "251385": {
     "bop": true,
@@ -2507,7 +2491,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251388": {
     "bop": true,
@@ -2518,7 +2502,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251389": {
     "bop": true,
@@ -2562,7 +2546,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251393": {
     "bop": true,
@@ -2573,7 +2557,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251394": {
     "bop": true,
@@ -2582,6 +2566,17 @@
     "auctionhouse": false,
     "name": "Plans: Shining Mithril Boots",
     "quality": 2,
+    "icon": "inv_scroll_03",
+    "hasSource": true,
+    "mobDrop": true
+  },
+  "251395": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Plans: Shining Mithril Helm",
+    "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
     "mobDrop": true
@@ -2595,7 +2590,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251397": {
     "bop": true,
@@ -2606,7 +2601,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251398": {
     "bop": true,
@@ -2617,7 +2612,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251399": {
     "bop": true,
@@ -2628,7 +2623,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251400": {
     "bop": true,
@@ -2639,7 +2634,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251401": {
     "bop": true,
@@ -2650,7 +2645,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251402": {
     "bop": true,
@@ -2661,7 +2656,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251403": {
     "bop": true,
@@ -2672,7 +2667,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251404": {
     "bop": true,
@@ -2683,7 +2678,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251405": {
     "bop": true,
@@ -2694,7 +2689,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251406": {
     "bop": true,
@@ -2705,7 +2700,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251407": {
     "bop": true,
@@ -2716,7 +2711,7 @@
     "quality": 3,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251408": {
     "bop": true,
@@ -3232,7 +3227,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251439": {
     "bop": true,
@@ -3243,7 +3238,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251440": {
     "bop": true,
@@ -3265,7 +3260,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251442": {
     "bop": true,
@@ -3276,7 +3271,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251443": {
     "bop": true,
@@ -3287,7 +3282,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251444": {
     "bop": true,
@@ -3298,7 +3293,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251445": {
     "bop": true,
@@ -3517,7 +3512,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251463": {
     "bop": true,
@@ -3539,7 +3534,7 @@
     "quality": 2,
     "icon": "inv_scroll_03",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "251465": {
     "bop": true,
@@ -3642,8 +3637,8 @@
   "273086": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Anvil",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
@@ -4153,7 +4148,7 @@
     "name": "Plans: Forest Defender's Axe",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false,
+    "hasSource": true,
     "mobDrop": false
   },
   "279310": {
@@ -4214,34 +4209,55 @@
   "285289": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": null,
+    "buyPrice": 5000,
     "auctionhouse": false,
     "name": "Plans: Cracked Blacksmith Hammer",
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 30
+      }
+    ]
   },
   "285290": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": null,
+    "buyPrice": 5000,
     "auctionhouse": false,
     "name": "Plans: Mithril Blacksmith Hammer",
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 60
+      }
+    ]
   },
   "285291": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": null,
+    "buyPrice": 5000,
     "auctionhouse": false,
     "name": "Plans: Arcanite Blacksmith Hammer",
     "quality": 3,
     "icon": "inv_scroll_06",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 90
+      }
+    ]
   }
 }

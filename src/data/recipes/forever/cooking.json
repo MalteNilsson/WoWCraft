@@ -2267,61 +2267,6 @@
     }
   },
   {
-    "id": 470359,
-    "name": "Darkclaw Bisque",
-    "quality": 1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 325,
-      "green": 345,
-      "gray": 365
-    },
-    "materials": {
-      "13888": 1,
-      "227813": 1
-    },
-    "minSkill": 300,
-    "icon": "inv_misc_food_117_heartysoup",
-    "url": "https://www.wowhead.com/forever/spell=470359",
-    "produces": {
-      "id": 232436,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 232437,
-      "recipeItemName": "Recipe: Darkclaw Bisque"
-    }
-  },
-  {
-    "id": 470370,
-    "name": "Smoked Redgill",
-    "quality": 1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 325,
-      "green": 345,
-      "gray": 365
-    },
-    "materials": {
-      "13758": 1
-    },
-    "minSkill": 300,
-    "icon": "inv_misc_food_110_emperorsalmon",
-    "url": "https://www.wowhead.com/forever/spell=470370",
-    "produces": {
-      "id": 232438,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 232443,
-      "recipeItemName": "Recipe: Smoked Redgill"
-    }
-  },
-  {
     "id": 1225758,
     "name": "Prowler Steak",
     "quality": 1,

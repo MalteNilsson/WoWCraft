@@ -47,7 +47,7 @@
     "name": "Runed Copper Rod",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 5,
       "green": 7,
       "gray": 10
@@ -56,7 +56,7 @@
       "6217": 1,
       "247786": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_staff_goldfeathered_01",
     "url": "https://www.wowhead.com/forever/spell=7421",
     "produces": {
@@ -3657,133 +3657,6 @@
     }
   },
   {
-    "id": 430409,
-    "name": "Blackfathom Mana Oil",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 100,
-      "green": 110,
-      "gray": 120
-    },
-    "materials": {
-      "3372": 1,
-      "10939": 1,
-      "10940": 5
-    },
-    "minSkill": 0,
-    "icon": "spell_holy_greaterheal",
-    "url": "https://www.wowhead.com/forever/spell=430409",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 435481,
-    "name": "Enchant Weapon - Dismantle",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 225,
-      "gray": 235
-    },
-    "materials": {
-      "5637": 2,
-      "11174": 4,
-      "11177": 2
-    },
-    "minSkill": 0,
-    "icon": "inv_misc_note_01",
-    "url": "https://www.wowhead.com/forever/spell=435481",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 215129,
-      "recipeItemName": "Formula: Enchant Weapon - Dismantle"
-    }
-  },
-  {
-    "id": 435903,
-    "name": "Enchant Chest - Retricutioner",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 0,
-      "green": 225,
-      "gray": 240
-    },
-    "materials": {
-      "11176": 2,
-      "11177": 1
-    },
-    "minSkill": 0,
-    "icon": "inv_misc_note_01",
-    "url": "https://www.wowhead.com/forever/spell=435903",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 215138,
-      "recipeItemName": "Formula: Enchant Chest - Retricutioner"
-    }
-  },
-  {
-    "id": 439134,
-    "name": "Greater Mystic Wand",
-    "quality": 2,
-    "difficulty": {
-      "orange": 175,
-      "yellow": 195,
-      "green": 215,
-      "gray": 235
-    },
-    "materials": {
-      "11135": 1,
-      "11137": 1,
-      "11291": 1
-    },
-    "minSkill": 175,
-    "icon": "inv_wand_07",
-    "url": "https://www.wowhead.com/forever/spell=439134",
-    "produces": {
-      "id": 217287,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "trainer",
-      "cost": 2666
-    }
-  },
-  {
-    "id": 439156,
-    "name": "Sigil of Innovation",
-    "quality": 2,
-    "difficulty": {
-      "orange": 225,
-      "yellow": 225,
-      "green": 227,
-      "gray": 230
-    },
-    "materials": {
-      "11137": 5
-    },
-    "minSkill": 225,
-    "icon": "inv_sigil_mimiron",
-    "url": "https://www.wowhead.com/forever/spell=439156",
-    "produces": {
-      "id": 217308,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 215141,
-      "recipeItemName": "Enchanted Sigil: Innovation"
-    }
-  },
-  {
     "id": 446243,
     "name": "Sigil of Living Dreams",
     "quality": -1,
@@ -3830,320 +3703,6 @@
       "type": "item",
       "recipeItemId": 223163,
       "recipeItemName": "Formula: Scroll of Spatial Mending"
-    }
-  },
-  {
-    "id": 463866,
-    "name": "Sigil of Flowing Waters",
-    "quality": 3,
-    "difficulty": {
-      "orange": 290,
-      "yellow": 305,
-      "green": 312,
-      "gray": 320
-    },
-    "materials": {
-      "16204": 1
-    },
-    "minSkill": 290,
-    "icon": "inv_sigil_hodir",
-    "url": "https://www.wowhead.com/forever/spell=463866",
-    "produces": {
-      "id": 228978,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 228979,
-      "recipeItemName": "Enchanted Sigil: Flowing Waters"
-    }
-  },
-  {
-    "id": 463869,
-    "name": "Conductive Shield Coating",
-    "quality": 1,
-    "difficulty": {
-      "orange": 275,
-      "yellow": 285,
-      "green": 295,
-      "gray": 305
-    },
-    "materials": {
-      "4625": 1,
-      "8925": 1,
-      "16204": 2
-    },
-    "minSkill": 275,
-    "icon": "inv_potion_100",
-    "url": "https://www.wowhead.com/forever/spell=463869",
-    "produces": {
-      "id": 228980,
-      "name": "",
-      "quantity": 0
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 228981,
-      "recipeItemName": "Formula: Conductive Shield Coating"
-    }
-  },
-  {
-    "id": 463871,
-    "name": "Enchant Shield - Law of Nature",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "7076": 1,
-      "7078": 4,
-      "7080": 4,
-      "12811": 1,
-      "14344": 4,
-      "16203": 12
-    },
-    "minSkill": 300,
-    "icon": "inv_enchant_formulasuperior_01",
-    "url": "https://www.wowhead.com/forever/spell=463871",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 228982,
-      "recipeItemName": "Formula: Enchant Shield - Law of Nature"
-    }
-  },
-  {
-    "id": 471400,
-    "name": "Magnificent Trollshine",
-    "quality": 1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 310,
-      "green": 320,
-      "gray": 330
-    },
-    "materials": {
-      "8151": 3,
-      "8152": 3,
-      "14344": 2,
-      "18256": 1
-    },
-    "minSkill": 300,
-    "icon": "inv_potion_96",
-    "url": "https://www.wowhead.com/forever/spell=471400",
-    "produces": {
-      "id": 232611,
-      "name": "",
-      "quantity": 0
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 232610,
-      "recipeItemName": "Formula: Magnificent Trollshine"
-    }
-  },
-  {
-    "id": 1213593,
-    "name": "Speedstone",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "2452": 20,
-      "20725": 6,
-      "234004": 6,
-      "234006": 10,
-      "234010": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_pet_scorchedstone",
-    "url": "https://www.wowhead.com/forever/spell=1213593",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213595,
-    "name": "Tear of the Dreamer",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "20725": 4,
-      "234003": 10,
-      "234006": 10,
-      "234010": 10,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_elemental_crystal_life",
-    "url": "https://www.wowhead.com/forever/spell=1213595",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213598,
-    "name": "Lodestone of Retaliation",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "20725": 4,
-      "234003": 10,
-      "234007": 10,
-      "234010": 5,
-      "234011": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_stone_08",
-    "url": "https://www.wowhead.com/forever/spell=1213598",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213600,
-    "name": "Enchanted Stopwatch",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "2459": 3,
-      "14344": 4,
-      "234003": 3,
-      "234005": 6
-    },
-    "minSkill": 0,
-    "icon": "inv_misc_pocketwatch_02",
-    "url": "https://www.wowhead.com/forever/spell=1213600",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213603,
-    "name": "Ruby-Encrusted Broach",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "20725": 6,
-      "234003": 10,
-      "234007": 10,
-      "234010": 5,
-      "234011": 10,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_jewelry_necklace_15",
-    "url": "https://www.wowhead.com/forever/spell=1213603",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213607,
-    "name": "Scroll: Wrath of the Swarm",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "14047": 1,
-      "16203": 1
-    },
-    "minSkill": 300,
-    "icon": "inv_enchant_formulagood_01",
-    "url": "https://www.wowhead.com/forever/spell=1213607",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 234271,
-      "recipeItemName": "Formula: Scroll: Wrath of the Swarm"
-    }
-  },
-  {
-    "id": 1213610,
-    "name": "Enchanted Repellent",
-    "quality": -1,
-    "difficulty": {
-      "orange": 300,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "16204": 2,
-      "234011": 3,
-      "234012": 3
-    },
-    "minSkill": 300,
-    "icon": "inv_enchant_formulagood_01",
-    "url": "https://www.wowhead.com/forever/spell=1213610",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 234272,
-      "recipeItemName": "Formula: Enchanted Repellent"
-    }
-  },
-  {
-    "id": 1213616,
-    "name": "Enchant Chest - Living Stats",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "13458": 10,
-      "16203": 5,
-      "16204": 8,
-      "20725": 2,
-      "234010": 2,
-      "234011": 2
-    },
-    "minSkill": 0,
-    "icon": "spell_holy_greaterheal",
-    "url": "https://www.wowhead.com/forever/spell=1213616",
-    "produces": null,
-    "source": {
-      "type": "free"
     }
   },
   {
@@ -4198,298 +3757,6 @@
     }
   },
   {
-    "id": 1213628,
-    "name": "Enchanted Prayer Tome",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 4,
-      "20725": 3,
-      "234003": 2,
-      "234008": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_libramoftruth",
-    "url": "https://www.wowhead.com/forever/spell=1213628",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213633,
-    "name": "Enchanted Totem",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 3,
-      "234003": 2,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_totemoflife",
-    "url": "https://www.wowhead.com/forever/spell=1213633",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213635,
-    "name": "Enchanted Mushroom",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 2,
-      "234010": 4,
-      "234011": 4,
-      "234012": 20
-    },
-    "minSkill": 0,
-    "icon": "creature_sporemushroom",
-    "url": "https://www.wowhead.com/forever/spell=1213635",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216005,
-    "name": "Libram of Righteousness",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 4,
-      "20725": 3,
-      "234003": 2,
-      "234008": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_libramofhope",
-    "url": "https://www.wowhead.com/forever/spell=1216005",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216007,
-    "name": "Libram of the Exorcist",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 4,
-      "20725": 3,
-      "234003": 2,
-      "234008": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_libramoftruth",
-    "url": "https://www.wowhead.com/forever/spell=1216007",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216010,
-    "name": "Libram of Sanctity",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 4,
-      "20725": 3,
-      "234003": 2,
-      "234008": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_libramofgrace",
-    "url": "https://www.wowhead.com/forever/spell=1216010",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216014,
-    "name": "Totem of Pyroclastic Thunder",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 3,
-      "234003": 2,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_totemofrebirth",
-    "url": "https://www.wowhead.com/forever/spell=1216014",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216016,
-    "name": "Totem of Thunderous Strikes",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 3,
-      "234003": 2,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_totemofrage",
-    "url": "https://www.wowhead.com/forever/spell=1216016",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216018,
-    "name": "Totem of Flowing Magma",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 3,
-      "234003": 2,
-      "234012": 10
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_totemofrage",
-    "url": "https://www.wowhead.com/forever/spell=1216018",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216020,
-    "name": "Idol of Sidereal Wrath",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 2,
-      "234010": 4,
-      "234011": 4,
-      "234012": 20
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_idolofrejuvenation",
-    "url": "https://www.wowhead.com/forever/spell=1216020",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216022,
-    "name": "Idol of Feline Ferocity",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 2,
-      "234010": 4,
-      "234011": 4,
-      "234012": 20
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_idolofferocity",
-    "url": "https://www.wowhead.com/forever/spell=1216022",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1216024,
-    "name": "Idol of Ursin Power",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "12810": 3,
-      "20725": 2,
-      "234010": 4,
-      "234011": 4,
-      "234012": 20
-    },
-    "minSkill": 0,
-    "icon": "inv_relics_idolofferocity",
-    "url": "https://www.wowhead.com/forever/spell=1216024",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
     "id": 1217189,
     "name": "Enchant Bracer - Spell Power",
     "quality": -1,
@@ -4510,30 +3777,6 @@
     "minSkill": 0,
     "icon": "spell_holy_greaterheal",
     "url": "https://www.wowhead.com/forever/spell=1217189",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1217203,
-    "name": "Enchant Bracer - Agility",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 340,
-      "gray": 360
-    },
-    "materials": {
-      "7082": 2,
-      "16203": 2,
-      "16204": 10,
-      "20725": 2
-    },
-    "minSkill": 0,
-    "icon": "spell_holy_greaterheal",
-    "url": "https://www.wowhead.com/forever/spell=1217203",
     "produces": null,
     "source": {
       "type": "free"
@@ -4747,7 +3990,7 @@
     "name": "Enchanted Lute",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 20,
       "yellow": 20,
       "green": 22,
       "gray": 25
@@ -4756,7 +3999,7 @@
       "4470": 1,
       "10940": 1
     },
-    "minSkill": 0,
+    "minSkill": 20,
     "icon": "inv_10_enchanting2_magicswirl_bronze",
     "url": "https://www.wowhead.com/forever/spell=1230643",
     "produces": {
@@ -4766,59 +4009,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
-    }
-  },
-  {
-    "id": 1231128,
-    "name": "Enchant Weapon - Grand Crusader",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 305,
-      "green": 307,
-      "gray": 310
-    },
-    "materials": {
-      "12811": 2,
-      "12938": 1,
-      "14344": 5,
-      "20725": 2
-    },
-    "minSkill": 280,
-    "icon": "inv_enchant_formulasuperior_01",
-    "url": "https://www.wowhead.com/forever/spell=1231128",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 241191,
-      "recipeItemName": "Formula: Enchant Weapon - Grand Crusader"
-    }
-  },
-  {
-    "id": 1231139,
-    "name": "Enchant 2H Weapon - Grand Arcanist",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 305,
-      "green": 307,
-      "gray": 310
-    },
-    "materials": {
-      "12811": 4,
-      "12938": 1,
-      "14344": 10,
-      "20725": 4
-    },
-    "minSkill": 280,
-    "icon": "inv_enchant_formulasuperior_01",
-    "url": "https://www.wowhead.com/forever/spell=1231139",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 241195,
-      "recipeItemName": "Formula: Enchant 2H Weapon - Grand Arcanist"
+      "cost": 105
     }
   },
   {
@@ -4845,32 +4036,6 @@
       "type": "item",
       "recipeItemId": 241201,
       "recipeItemName": "Formula: Enchant Weapon - Grand Sorcerer"
-    }
-  },
-  {
-    "id": 1232172,
-    "name": "Enchant 2H Weapon - Grand Inquisitor",
-    "quality": -1,
-    "difficulty": {
-      "orange": 280,
-      "yellow": 305,
-      "green": 307,
-      "gray": 310
-    },
-    "materials": {
-      "12811": 6,
-      "12938": 1,
-      "14344": 10,
-      "20725": 4
-    },
-    "minSkill": 280,
-    "icon": "inv_enchant_formulasuperior_01",
-    "url": "https://www.wowhead.com/forever/spell=1232172",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 242361,
-      "recipeItemName": "Formula: Enchant 2H Weapon - Grand Inquisitor"
     }
   },
   {
@@ -6170,7 +5335,7 @@
     "name": "Frozen Heart of the Mountain",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 265,
       "yellow": 285,
       "green": 305,
       "gray": 325
@@ -6180,7 +5345,7 @@
       "12808": 1,
       "14343": 3
     },
-    "minSkill": 0,
+    "minSkill": 265,
     "icon": "inv_misc_gem_sapphire_01",
     "url": "https://www.wowhead.com/forever/spell=1249107",
     "produces": {
@@ -6189,7 +5354,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 249519,
+      "recipeItemName": "Formula: Frozen Heart of the Mountain"
     }
   },
   {
@@ -6197,7 +5364,7 @@
     "name": "Molten Heart of the Mountain",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 265,
       "yellow": 285,
       "green": 305,
       "gray": 325
@@ -6207,7 +5374,7 @@
       "11382": 1,
       "14343": 3
     },
-    "minSkill": 0,
+    "minSkill": 265,
     "icon": "inv_misc_gem_ruby_01",
     "url": "https://www.wowhead.com/forever/spell=1249112",
     "produces": {
@@ -6216,7 +5383,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 249520,
+      "recipeItemName": "Formula: Molten Heart of the Mountain"
     }
   },
   {
@@ -6224,7 +5393,7 @@
     "name": "Dormant Heart of the Mountain",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 265,
       "yellow": 285,
       "green": 305,
       "gray": 325
@@ -6234,7 +5403,7 @@
       "11382": 1,
       "14343": 3
     },
-    "minSkill": 0,
+    "minSkill": 265,
     "icon": "inv_misc_gem_diamond_01",
     "url": "https://www.wowhead.com/forever/spell=1249114",
     "produces": {
@@ -6243,7 +5412,9 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "item",
+      "recipeItemId": 249521,
+      "recipeItemName": "Formula: Dormant Heart of the Mountain"
     }
   },
   {
@@ -6606,6 +5777,32 @@
       "type": "item",
       "recipeItemId": 279300,
       "recipeItemName": "Formula: Idol of the Ursine Twins"
+    }
+  },
+  {
+    "id": 1328948,
+    "name": "Enchant Boots - Speed",
+    "quality": -1,
+    "difficulty": {
+      "orange": 280,
+      "yellow": 280,
+      "green": 290,
+      "gray": 300
+    },
+    "materials": {
+      "11175": 2,
+      "11176": 8,
+      "11178": 2,
+      "12361": 1
+    },
+    "minSkill": 280,
+    "icon": "inv_enchant_formulagood_01",
+    "url": "https://www.wowhead.com/forever/spell=1328948",
+    "produces": null,
+    "source": {
+      "type": "item",
+      "recipeItemId": 289560,
+      "recipeItemName": "Formula: Enchant Boots - Speed"
     }
   }
 ]

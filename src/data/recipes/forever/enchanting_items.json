@@ -7,7 +7,8 @@
     "name": "Formula: Enchant Chest - Minor Intellect",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6344": {
     "bop": false,
@@ -17,7 +18,8 @@
     "name": "Formula: Enchant Bracer - Minor Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6345": {
     "bop": false,
@@ -27,7 +29,8 @@
     "name": "Formula: Imbue Cloak - Protection",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6346": {
     "bop": false,
@@ -37,7 +40,8 @@
     "name": "Formula: Enchant Chest - Lesser Intellect",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6347": {
     "bop": false,
@@ -47,7 +51,8 @@
     "name": "Formula: Enchant Bracer - Minor Strength",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6348": {
     "bop": false,
@@ -57,7 +62,8 @@
     "name": "Formula: Enchant Weapon - Minor Beastslayer",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6349": {
     "bop": false,
@@ -67,7 +73,8 @@
     "name": "Formula: Enchant 2H Weapon - Lesser Intellect",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6375": {
     "bop": false,
@@ -77,7 +84,8 @@
     "name": "Formula: Enchant Bracer - Lesser Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6376": {
     "bop": false,
@@ -87,7 +95,8 @@
     "name": "Formula: Enchant Boots - Minor Stamina",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6377": {
     "bop": false,
@@ -97,7 +106,8 @@
     "name": "Formula: Enchant Boots - Minor Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11038": {
     "bop": false,
@@ -107,7 +117,8 @@
     "name": "Formula: Enchant 2H Weapon - Lesser Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11039": {
     "bop": true,
@@ -117,7 +128,8 @@
     "name": "Formula: Enchant Cloak - Minor Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11081": {
     "bop": false,
@@ -127,7 +139,8 @@
     "name": "Formula: Enchant Shield - Lesser Protection",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11098": {
     "bop": false,
@@ -137,7 +150,8 @@
     "name": "Formula: Enchant Cloak - Lesser Shadow Resistance",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11101": {
     "bop": false,
@@ -147,7 +161,8 @@
     "name": "Formula: Enchant Bracer - Lesser Strength",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11150": {
     "bop": false,
@@ -157,7 +172,8 @@
     "name": "Formula: Enchant Gloves - Mining",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11151": {
     "bop": false,
@@ -167,7 +183,8 @@
     "name": "Formula: Enchant Gloves - Herbalism",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11152": {
     "bop": false,
@@ -177,7 +194,8 @@
     "name": "Formula: Enchant Gloves - Fishing",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11163": {
     "bop": true,
@@ -187,7 +205,8 @@
     "name": "Formula: Enchant Bracer - Lesser Deflection",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11164": {
     "bop": false,
@@ -197,7 +216,8 @@
     "name": "Formula: Enchant Weapon - Lesser Beastslayer",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11165": {
     "bop": false,
@@ -207,7 +227,8 @@
     "name": "Formula: Enchant Weapon - Lesser Elemental Slayer",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11166": {
     "bop": false,
@@ -217,7 +238,8 @@
     "name": "Formula: Enchant Gloves - Skinning",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11167": {
     "bop": false,
@@ -227,7 +249,8 @@
     "name": "Formula: Enchant Boots - Lesser Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11168": {
     "bop": false,
@@ -237,7 +260,8 @@
     "name": "Formula: Enchant Shield - Lesser Block",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11202": {
     "bop": false,
@@ -247,7 +271,8 @@
     "name": "Formula: Enchant Shield - Stamina",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11203": {
     "bop": false,
@@ -257,7 +282,8 @@
     "name": "Formula: Enchant Gloves - Advanced Mining",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11204": {
     "bop": false,
@@ -267,7 +293,8 @@
     "name": "Formula: Enchant Bracer - Greater Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11205": {
     "bop": false,
@@ -277,7 +304,8 @@
     "name": "Formula: Enchant Gloves - Advanced Herbalism",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11206": {
     "bop": false,
@@ -287,7 +315,8 @@
     "name": "Formula: Enchant Cloak - Lesser Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11207": {
     "bop": false,
@@ -297,7 +326,8 @@
     "name": "Formula: Enchant Weapon - Fiery Weapon",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11208": {
     "bop": false,
@@ -307,7 +337,8 @@
     "name": "Formula: Enchant Weapon - Demonslaying",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11223": {
     "bop": false,
@@ -317,7 +348,8 @@
     "name": "Formula: Enchant Bracer - Deflection",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11224": {
     "bop": false,
@@ -327,7 +359,8 @@
     "name": "Formula: Enchant Shield - Frost Resistance",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11225": {
     "bop": false,
@@ -337,7 +370,8 @@
     "name": "Formula: Enchant Bracer - Greater Stamina",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11226": {
     "bop": false,
@@ -347,7 +381,8 @@
     "name": "Formula: Enchant Gloves - Riding Skill",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11813": {
     "bop": false,
@@ -357,7 +392,8 @@
     "name": "Formula: Smoking Heart of the Mountain",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16214": {
     "bop": false,
@@ -367,7 +403,8 @@
     "name": "Formula: Enchant Bracer - Greater Intellect",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16215": {
     "bop": false,
@@ -377,7 +414,8 @@
     "name": "Formula: Enchant Boots - Greater Stamina",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16216": {
     "bop": false,
@@ -387,7 +425,8 @@
     "name": "Formula: Enchant Cloak - Greater Resistance",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16217": {
     "bop": true,
@@ -397,7 +436,8 @@
     "name": "Formula: Enchant Shield - Greater Stamina",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16218": {
     "bop": false,
@@ -407,7 +447,8 @@
     "name": "Formula: Enchant Bracer - Superior Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16219": {
     "bop": false,
@@ -417,7 +458,8 @@
     "name": "Formula: Enchant Gloves - Greater Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16220": {
     "bop": false,
@@ -427,7 +469,8 @@
     "name": "Formula: Enchant Boots - Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16221": {
     "bop": false,
@@ -437,7 +480,8 @@
     "name": "Formula: Enchant Chest - Major Stamina",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16222": {
     "bop": false,
@@ -447,7 +491,8 @@
     "name": "Formula: Enchant Shield - Superior Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16223": {
     "bop": false,
@@ -457,7 +502,8 @@
     "name": "Formula: Enchant Weapon - Icy Chill",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16224": {
     "bop": false,
@@ -467,7 +513,8 @@
     "name": "Formula: Enchant Cloak - Superior Defense",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16242": {
     "bop": false,
@@ -477,7 +524,8 @@
     "name": "Formula: Enchant Chest - Major Intellect",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16243": {
     "bop": true,
@@ -487,7 +535,8 @@
     "name": "Formula: Runed Arcanite Rod",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16244": {
     "bop": false,
@@ -497,7 +546,8 @@
     "name": "Formula: Enchant Gloves - Greater Strength",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16245": {
     "bop": false,
@@ -507,7 +557,8 @@
     "name": "Formula: Enchant Boots - Greater Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16246": {
     "bop": false,
@@ -517,7 +568,8 @@
     "name": "Formula: Enchant Bracer - Superior Strength",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16247": {
     "bop": false,
@@ -527,7 +579,8 @@
     "name": "Formula: Enchant 2H Weapon - Superior Impact",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16248": {
     "bop": false,
@@ -537,7 +590,8 @@
     "name": "Formula: Enchant Weapon - Unholy Weapon",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16249": {
     "bop": false,
@@ -547,7 +601,8 @@
     "name": "Formula: Enchant 2H Weapon - Major Intellect",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16250": {
     "bop": false,
@@ -557,7 +612,8 @@
     "name": "Formula: Enchant Weapon - Superior Striking",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16251": {
     "bop": false,
@@ -567,7 +623,8 @@
     "name": "Formula: Enchant Bracer - Superior Stamina",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16252": {
     "bop": false,
@@ -577,7 +634,8 @@
     "name": "Formula: Enchant Weapon - Crusader",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16253": {
     "bop": false,
@@ -587,7 +645,8 @@
     "name": "Formula: Enchant Chest - Greater Stats",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16254": {
     "bop": false,
@@ -597,7 +656,8 @@
     "name": "Formula: Enchant Weapon - Lifestealing",
     "quality": 3,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16255": {
     "bop": false,
@@ -607,7 +667,8 @@
     "name": "Formula: Enchant 2H Weapon - Major Spirit",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17725": {
     "bop": false,
@@ -617,7 +678,8 @@
     "name": "Formula: Enchant Weapon - Winter's Might",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18259": {
     "bop": true,
@@ -649,7 +711,8 @@
     "name": "Formula: Enchant Weapon - Strength",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19445": {
     "bop": true,
@@ -659,7 +722,8 @@
     "name": "Formula: Enchant Weapon - Agility",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19446": {
     "bop": true,
@@ -669,7 +733,8 @@
     "name": "Formula: Enchant Bracer - Mana Regeneration",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19447": {
     "bop": true,
@@ -679,7 +744,8 @@
     "name": "Formula: Enchant Bracer - Healing",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19448": {
     "bop": true,
@@ -689,7 +755,8 @@
     "name": "Formula: Enchant Weapon - Mighty Spirit",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19449": {
     "bop": true,
@@ -699,7 +766,8 @@
     "name": "Formula: Enchant Weapon - Mighty Intellect",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20726": {
     "bop": true,
@@ -775,7 +843,8 @@
     "name": "Formula: Enchant Cloak - Greater Fire Resistance",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20733": {
     "bop": true,
@@ -785,7 +854,8 @@
     "name": "Formula: Enchant Cloak - Greater Nature Resistance",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20734": {
     "bop": true,
@@ -828,7 +898,8 @@
     "name": "Formula: Minor Mana Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20753": {
     "bop": false,
@@ -838,7 +909,8 @@
     "name": "Formula: Lesser Wizard Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20754": {
     "bop": false,
@@ -848,7 +920,8 @@
     "name": "Formula: Lesser Mana Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20755": {
     "bop": false,
@@ -858,7 +931,8 @@
     "name": "Formula: Wizard Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20756": {
     "bop": true,
@@ -868,7 +942,8 @@
     "name": "Formula: Brilliant Wizard Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20757": {
     "bop": true,
@@ -878,7 +953,8 @@
     "name": "Formula: Brilliant Mana Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20758": {
     "bop": false,
@@ -888,7 +964,8 @@
     "name": "Formula: Minor Wizard Oil",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "22392": {
     "bop": true,
@@ -898,37 +975,8 @@
     "name": "Formula: Enchant 2H Weapon - Agility",
     "quality": 1,
     "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "215129": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Formula: Enchant Weapon - Dismantle",
-    "quality": 4,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "215138": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Formula: Enchant Chest - Retricutioner",
-    "quality": 4,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "215141": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Enchanted Sigil: Innovation",
-    "quality": 4,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "223163": {
     "bop": false,
@@ -937,87 +985,6 @@
     "auctionhouse": true,
     "name": "Formula: Scroll of Spatial Mending",
     "quality": 2,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "228979": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 100000,
-    "auctionhouse": false,
-    "name": "Enchanted Sigil: Flowing Waters",
-    "quality": 4,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "228981": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 20000,
-    "auctionhouse": false,
-    "name": "Formula: Conductive Shield Coating",
-    "quality": 1,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "228982": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 100000,
-    "auctionhouse": false,
-    "name": "Formula: Enchant Shield - Law of Nature",
-    "quality": 3,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "232610": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 40000,
-    "auctionhouse": false,
-    "name": "Formula: Magnificent Trollshine",
-    "quality": 1,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "234271": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 100000,
-    "auctionhouse": false,
-    "name": "Formula: Scroll: Wrath of the Swarm",
-    "quality": 2,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "234272": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 50000,
-    "auctionhouse": false,
-    "name": "Formula: Enchanted Repellent",
-    "quality": 2,
-    "icon": "inv_misc_note_01",
-    "hasSource": true
-  },
-  "241191": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Formula: Enchant Weapon - Grand Crusader",
-    "quality": 3,
-    "icon": "inv_misc_note_01",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "241195": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Formula: Enchant 2H Weapon - Grand Arcanist",
-    "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
     "mobDrop": false
@@ -1028,17 +995,6 @@
     "buyPrice": null,
     "auctionhouse": false,
     "name": "Formula: Enchant Weapon - Grand Sorcerer",
-    "quality": 3,
-    "icon": "inv_misc_note_01",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "242361": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Formula: Enchant 2H Weapon - Grand Inquisitor",
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
@@ -1075,6 +1031,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1092,6 +1049,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1109,6 +1067,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1126,6 +1085,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1143,6 +1103,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1160,6 +1121,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1177,6 +1139,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1194,6 +1157,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1211,6 +1175,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1228,6 +1193,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1244,7 +1210,8 @@
     "name": "Formula: Enchant Bracer - Lesser Agility",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "249487": {
     "bop": true,
@@ -1255,7 +1222,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249488": {
     "bop": true,
@@ -1266,7 +1233,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249489": {
     "bop": true,
@@ -1276,7 +1243,8 @@
     "name": "Formula: Enchant Bracer - Lesser Healing Power",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "249493": {
     "bop": true,
@@ -1287,6 +1255,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1304,6 +1273,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1321,6 +1291,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1338,6 +1309,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1355,6 +1327,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1372,6 +1345,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1389,6 +1363,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1406,6 +1381,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1423,6 +1399,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1440,6 +1417,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1457,6 +1435,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1474,6 +1453,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1491,6 +1471,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1508,7 +1489,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249512": {
     "bop": true,
@@ -1530,7 +1511,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249514": {
     "bop": true,
@@ -1541,7 +1522,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249515": {
     "bop": true,
@@ -1552,7 +1533,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
-    "mobDrop": false
+    "mobDrop": true
   },
   "249516": {
     "bop": true,
@@ -1561,6 +1542,39 @@
     "auctionhouse": false,
     "name": "Formula: Enchant Gloves - Advanced Skinning",
     "quality": 2,
+    "icon": "inv_misc_note_01",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "249519": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Formula: Frozen Heart of the Mountain",
+    "quality": 3,
+    "icon": "inv_misc_note_01",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "249520": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Formula: Molten Heart of the Mountain",
+    "quality": 3,
+    "icon": "inv_misc_note_01",
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "249521": {
+    "bop": true,
+    "limitedStock": false,
+    "buyPrice": null,
+    "auctionhouse": false,
+    "name": "Formula: Dormant Heart of the Mountain",
+    "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
     "mobDrop": false
@@ -1607,6 +1621,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1624,6 +1639,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1641,6 +1657,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1658,6 +1675,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1675,6 +1693,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1692,6 +1711,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1709,6 +1729,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1726,6 +1747,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1743,6 +1765,7 @@
     "quality": 3,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1760,6 +1783,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1777,6 +1801,7 @@
     "quality": 2,
     "icon": "inv_misc_note_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1788,12 +1813,13 @@
   "273103": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Arcane Salvager",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273116": {
     "bop": false,
@@ -1803,7 +1829,8 @@
     "name": "Blueprint: Arcane Forge",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "274391": {
     "bop": true,
@@ -1836,6 +1863,7 @@
     "quality": 3,
     "icon": "inv_enchant_formulasuperior_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1853,6 +1881,7 @@
     "quality": 3,
     "icon": "inv_enchant_formulasuperior_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1881,6 +1910,7 @@
     "quality": 3,
     "icon": "inv_enchant_formulasuperior_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1898,6 +1928,7 @@
     "quality": 3,
     "icon": "inv_enchant_formulasuperior_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1926,6 +1957,7 @@
     "quality": 3,
     "icon": "inv_enchant_formulasuperior_01",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1942,7 +1974,8 @@
     "name": "Formula: Enchant Gloves - Lotus Claw",
     "quality": 2,
     "icon": "inv_misc_note_01",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "279295": {
     "bop": true,
@@ -1952,7 +1985,8 @@
     "name": "Formula: Torch of Light",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279296": {
     "bop": true,
@@ -1962,7 +1996,8 @@
     "name": "Formula: Steadfast Libram",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279297": {
     "bop": true,
@@ -1972,7 +2007,8 @@
     "name": "Formula: Libram of Infusion",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279298": {
     "bop": true,
@@ -1982,7 +2018,8 @@
     "name": "Formula: Totem of Urgency",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279299": {
     "bop": true,
@@ -1992,7 +2029,8 @@
     "name": "Formula: Idol of Swiftness",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279300": {
     "bop": true,
@@ -2002,6 +2040,25 @@
     "name": "Formula: Idol of the Ursine Twins",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
+  },
+  "289560": {
+    "bop": false,
+    "limitedStock": false,
+    "buyPrice": 6200,
+    "auctionhouse": false,
+    "name": "Formula: Enchant Boots - Speed",
+    "quality": 2,
+    "icon": "inv_misc_note_01",
+    "hasSource": true,
+    "mobDrop": false,
+    "currencyCost": [
+      {
+        "id": 3402,
+        "name": "Merchant's Favor",
+        "quantity": 180
+      }
+    ]
   }
 }

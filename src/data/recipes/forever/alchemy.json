@@ -24,7 +24,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 50
+      "cost": 52
     }
   },
   {
@@ -1776,7 +1776,7 @@
     "produces": {
       "id": 3577,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -1803,7 +1803,7 @@
     "produces": {
       "id": 6037,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -1886,7 +1886,7 @@
     "produces": {
       "id": 12360,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2084,7 +2084,7 @@
     "produces": {
       "id": 7078,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2111,7 +2111,7 @@
     "produces": {
       "id": 7076,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2138,7 +2138,7 @@
     "produces": {
       "id": 7080,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2165,7 +2165,7 @@
     "produces": {
       "id": 7082,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2192,7 +2192,7 @@
     "produces": {
       "id": 7080,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2219,7 +2219,7 @@
     "produces": {
       "id": 12808,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2246,7 +2246,7 @@
     "produces": {
       "id": 7076,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -2273,7 +2273,7 @@
     "produces": {
       "id": 12803,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",
@@ -3043,36 +3043,6 @@
     }
   },
   {
-    "id": 426607,
-    "name": "Elixir of Coalesced Regret",
-    "quality": 1,
-    "difficulty": {
-      "orange": 90,
-      "yellow": 90,
-      "green": 100,
-      "gray": 110
-    },
-    "materials": {
-      "3369": 5,
-      "3372": 1,
-      "3820": 5,
-      "11083": 1
-    },
-    "minSkill": 90,
-    "icon": "inv_potion_19",
-    "url": "https://www.wowhead.com/forever/spell=426607",
-    "produces": {
-      "id": 210708,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 210709,
-      "recipeItemName": "Recipe: Elixir of Coalesced Regret"
-    }
-  },
-  {
     "id": 435969,
     "name": "Insulating Gniodine",
     "quality": -1,
@@ -3120,35 +3090,6 @@
       "type": "item",
       "recipeItemId": 215163,
       "recipeItemName": "Recipe: Mildly-Irradiated Rejuvenation Potion"
-    }
-  },
-  {
-    "id": 439960,
-    "name": "Lesser Arcane Elixir",
-    "quality": 1,
-    "difficulty": {
-      "orange": 190,
-      "yellow": 210,
-      "green": 212,
-      "gray": 215
-    },
-    "materials": {
-      "3356": 1,
-      "3821": 1,
-      "8925": 1
-    },
-    "minSkill": 190,
-    "icon": "inv_potion_108",
-    "url": "https://www.wowhead.com/forever/spell=439960",
-    "produces": {
-      "id": 217398,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 217399,
-      "recipeItemName": "Recipe: Lesser Arcane Elixir"
     }
   },
   {
@@ -3221,198 +3162,6 @@
     }
   },
   {
-    "id": 1213544,
-    "name": "Flask of Unyielding Sorrow",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13511": 1,
-      "16203": 1,
-      "234012": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213544",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213546,
-    "name": "Flask of Ancient Knowledge",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13512": 1,
-      "16203": 1,
-      "234011": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213546",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213548,
-    "name": "Flask of the Old Gods",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13510": 1,
-      "16203": 1,
-      "234006": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213548",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213552,
-    "name": "Flask of Madness",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13513": 1,
-      "16203": 1,
-      "234010": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213552",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213559,
-    "name": "Elixir of the Honey Badger",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13465": 2,
-      "234011": 1,
-      "234012": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213559",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213563,
-    "name": "Elixir of the Mage-Lord",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13466": 2,
-      "234011": 1,
-      "234012": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213563",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213565,
-    "name": "Elixir of the Ironside",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13467": 2,
-      "234011": 1,
-      "234012": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213565",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213571,
-    "name": "Elixir of Alacrity",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "8925": 1,
-      "13463": 2,
-      "234011": 1,
-      "234012": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213571",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
     "id": 1230564,
     "name": "Mana Well",
     "quality": 1,
@@ -3436,7 +3185,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
+      "cost": 105
     }
   },
   {
@@ -3685,7 +3434,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 150
+      "cost": 157
     }
   },
   {
@@ -3766,7 +3515,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 150
+      "cost": 157
     }
   },
   {
@@ -5433,7 +5182,7 @@
     "produces": {
       "id": 251290,
       "name": "",
-      "quantity": 0
+      "quantity": 1
     },
     "source": {
       "type": "item",

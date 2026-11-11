@@ -4,7 +4,7 @@
     "name": "Rough Blasting Powder",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 20,
       "green": 30,
       "gray": 40
@@ -12,7 +12,7 @@
     "materials": {
       "2835": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_misc_dust_01",
     "url": "https://www.wowhead.com/forever/spell=3918",
     "produces": {
@@ -29,7 +29,7 @@
     "name": "Rough Dynamite",
     "quality": 1,
     "difficulty": {
-      "orange": 1,
+      "orange": 0,
       "yellow": 30,
       "green": 45,
       "gray": 60
@@ -38,7 +38,7 @@
       "2589": 1,
       "4357": 1
     },
-    "minSkill": 1,
+    "minSkill": 0,
     "icon": "inv_misc_bomb_06",
     "url": "https://www.wowhead.com/forever/spell=3919",
     "produces": {
@@ -1577,7 +1577,7 @@
     "name": "Goblin Rocket Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 130,
+      "orange": 225,
       "yellow": 245,
       "green": 255,
       "gray": 265
@@ -1589,7 +1589,7 @@
       "10559": 2,
       "10560": 1
     },
-    "minSkill": 130,
+    "minSkill": 225,
     "icon": "inv_gizmo_rocketboot_01",
     "url": "https://www.wowhead.com/forever/spell=8895",
     "produces": {
@@ -1667,7 +1667,7 @@
     "name": "Goblin Jumper Cables",
     "quality": 1,
     "difficulty": {
-      "orange": 165,
+      "orange": 0,
       "yellow": 165,
       "green": 180,
       "gray": 200
@@ -1680,7 +1680,7 @@
       "4375": 2,
       "7191": 1
     },
-    "minSkill": 165,
+    "minSkill": 0,
     "icon": "inv_misc_enggizmos_10",
     "url": "https://www.wowhead.com/forever/spell=9273",
     "produces": {
@@ -2377,7 +2377,7 @@
     "name": "Goblin Rocket Fuel Recipe",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 205,
       "green": 205,
       "gray": 205
@@ -2386,7 +2386,7 @@
       "10647": 1,
       "10648": 1
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_scroll_03",
     "url": "https://www.wowhead.com/forever/spell=12715",
     "produces": {
@@ -2404,7 +2404,7 @@
     "name": "Goblin Mortar",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 225,
       "green": 235,
       "gray": 245
@@ -2416,7 +2416,7 @@
       "10558": 1,
       "10559": 2
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_musket_01",
     "url": "https://www.wowhead.com/forever/spell=12716",
     "produces": {
@@ -2425,7 +2425,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "free"
+      "type": "trainer",
+      "cost": 1500
     }
   },
   {
@@ -2462,7 +2463,7 @@
     "name": "Goblin Construction Helmet",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 225,
       "green": 235,
       "gray": 245
@@ -2472,7 +2473,7 @@
       "3864": 1,
       "7068": 4
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_helmet_60",
     "url": "https://www.wowhead.com/forever/spell=12718",
     "produces": {
@@ -2490,7 +2491,7 @@
     "name": "The Big One",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 235,
       "yellow": 235,
       "green": 255,
       "gray": 275
@@ -2501,7 +2502,7 @@
       "10560": 1,
       "10561": 1
     },
-    "minSkill": 0,
+    "minSkill": 235,
     "icon": "inv_misc_bomb_04",
     "url": "https://www.wowhead.com/forever/spell=12754",
     "produces": {
@@ -2519,7 +2520,7 @@
     "name": "Goblin Bomb Dispenser",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 230,
       "yellow": 230,
       "green": 250,
       "gray": 270
@@ -2531,7 +2532,7 @@
       "10560": 1,
       "10561": 2
     },
-    "minSkill": 0,
+    "minSkill": 230,
     "icon": "inv_gizmo_06",
     "url": "https://www.wowhead.com/forever/spell=12755",
     "produces": {
@@ -2549,7 +2550,7 @@
     "name": "Goblin Rocket Helmet",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 245,
       "yellow": 265,
       "green": 275,
       "gray": 285
@@ -2560,7 +2561,7 @@
       "10543": 1,
       "10560": 1
     },
-    "minSkill": 0,
+    "minSkill": 245,
     "icon": "inv_helmet_49",
     "url": "https://www.wowhead.com/forever/spell=12758",
     "produces": {
@@ -2578,7 +2579,7 @@
     "name": "Gnomish Death Ray",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 240,
       "yellow": 260,
       "green": 270,
       "gray": 280
@@ -2590,7 +2591,7 @@
       "10560": 1,
       "12808": 1
     },
-    "minSkill": 0,
+    "minSkill": 240,
     "icon": "inv_gizmo_08",
     "url": "https://www.wowhead.com/forever/spell=12759",
     "produces": {
@@ -2608,7 +2609,7 @@
     "name": "Goblin Sapper Charge",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 205,
       "green": 225,
       "gray": 245
@@ -2618,7 +2619,7 @@
       "10505": 3,
       "10560": 1
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "spell_fire_selfdestruct",
     "url": "https://www.wowhead.com/forever/spell=12760",
     "produces": {
@@ -2636,7 +2637,7 @@
     "name": "Inlaid Mithril Cylinder Plans",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 205,
       "green": 205,
       "gray": 205
@@ -2645,7 +2646,7 @@
       "10647": 1,
       "10648": 1
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_scroll_05",
     "url": "https://www.wowhead.com/forever/spell=12895",
     "produces": {
@@ -2663,7 +2664,7 @@
     "name": "Gnomish Goggles",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 210,
       "yellow": 230,
       "green": 240,
       "gray": 250
@@ -2675,7 +2676,7 @@
       "10558": 2,
       "10559": 1
     },
-    "minSkill": 0,
+    "minSkill": 210,
     "icon": "inv_helmet_47",
     "url": "https://www.wowhead.com/forever/spell=12897",
     "produces": {
@@ -2693,7 +2694,7 @@
     "name": "Gnomish Shrink Ray",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 225,
       "green": 235,
       "gray": 245
@@ -2705,7 +2706,7 @@
       "10559": 1,
       "10560": 1
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_gizmo_09",
     "url": "https://www.wowhead.com/forever/spell=12899",
     "produces": {
@@ -2723,7 +2724,7 @@
     "name": "Gnomish Net-o-Matic Projector",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 210,
       "yellow": 230,
       "green": 240,
       "gray": 250
@@ -2735,7 +2736,7 @@
       "10505": 2,
       "10559": 1
     },
-    "minSkill": 0,
+    "minSkill": 210,
     "icon": "inv_misc_net_01",
     "url": "https://www.wowhead.com/forever/spell=12902",
     "produces": {
@@ -2753,7 +2754,7 @@
     "name": "Gnomish Harm Prevention Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 215,
       "yellow": 235,
       "green": 245,
       "gray": 255
@@ -2765,7 +2766,7 @@
       "7909": 2,
       "10560": 1
     },
-    "minSkill": 0,
+    "minSkill": 215,
     "icon": "inv_belt_06",
     "url": "https://www.wowhead.com/forever/spell=12903",
     "produces": {
@@ -2783,7 +2784,7 @@
     "name": "Gnomish Rocket Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 225,
       "yellow": 245,
       "green": 255,
       "gray": 265
@@ -2795,7 +2796,7 @@
       "10505": 8,
       "10559": 2
     },
-    "minSkill": 0,
+    "minSkill": 225,
     "icon": "inv_boots_02",
     "url": "https://www.wowhead.com/forever/spell=12905",
     "produces": {
@@ -2813,7 +2814,7 @@
     "name": "Gnomish Battle Chicken",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 230,
       "yellow": 250,
       "green": 260,
       "gray": 270
@@ -2826,7 +2827,7 @@
       "10558": 1,
       "10561": 1
     },
-    "minSkill": 0,
+    "minSkill": 230,
     "icon": "spell_magic_polymorphchicken",
     "url": "https://www.wowhead.com/forever/spell=12906",
     "produces": {
@@ -2844,7 +2845,7 @@
     "name": "Gnomish Mind Control Cap",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 235,
       "yellow": 255,
       "green": 265,
       "gray": 275
@@ -2856,7 +2857,7 @@
       "7910": 2,
       "10558": 1
     },
-    "minSkill": 0,
+    "minSkill": 235,
     "icon": "inv_helmet_49",
     "url": "https://www.wowhead.com/forever/spell=12907",
     "produces": {
@@ -2874,7 +2875,7 @@
     "name": "Goblin Dragon Gun",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 240,
       "yellow": 260,
       "green": 270,
       "gray": 280
@@ -2886,7 +2887,7 @@
       "10559": 2,
       "10560": 1
     },
-    "minSkill": 0,
+    "minSkill": 240,
     "icon": "spell_fire_flamebolt",
     "url": "https://www.wowhead.com/forever/spell=12908",
     "produces": {
@@ -4246,7 +4247,7 @@
     "name": "Tranquil Mechanical Yeti",
     "quality": 1,
     "difficulty": {
-      "orange": 250,
+      "orange": 0,
       "yellow": 320,
       "green": 330,
       "gray": 340
@@ -4258,7 +4259,7 @@
       "15994": 4,
       "18631": 2
     },
-    "minSkill": 250,
+    "minSkill": 0,
     "icon": "ability_hunter_pet_gorilla",
     "url": "https://www.wowhead.com/forever/spell=26011",
     "produces": {
@@ -4725,35 +4726,6 @@
     }
   },
   {
-    "id": 431362,
-    "name": "Soul Vessel",
-    "quality": 3,
-    "difficulty": {
-      "orange": 205,
-      "yellow": 205,
-      "green": 210,
-      "gray": 215
-    },
-    "materials": {
-      "1210": 4,
-      "9262": 1,
-      "16583": 1
-    },
-    "minSkill": 205,
-    "icon": "inv_jewelcrafting_nightseye_01",
-    "url": "https://www.wowhead.com/forever/spell=431362",
-    "produces": {
-      "id": 211427,
-      "name": "",
-      "quantity": 1
-    },
-    "source": {
-      "type": "item",
-      "recipeItemId": 212230,
-      "recipeItemName": "Schematic: Soul Vessel"
-    }
-  },
-  {
     "id": 435956,
     "name": "Polished Truesilver Gears",
     "quality": 3,
@@ -4969,245 +4941,6 @@
     }
   },
   {
-    "id": 461710,
-    "name": "Fiery Core Sharpshooter Rifle",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 6,
-      "16000": 2,
-      "16006": 2,
-      "17010": 4,
-      "17011": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=461710",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213573,
-    "name": "Arcane Megabomb",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "14047": 1,
-      "16006": 1,
-      "20725": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213573",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213576,
-    "name": "The Fumigator",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "14047": 1,
-      "234005": 2,
-      "234011": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213576",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213578,
-    "name": "Obsidian Bomb",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "12365": 1,
-      "234005": 3,
-      "234007": 1,
-      "234008": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213578",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213586,
-    "name": "G00 DV-1B3 Generator",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "234005": 20,
-      "234007": 8,
-      "234009": 8,
-      "234010": 8,
-      "234011": 8,
-      "234012": 30
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213586",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213588,
-    "name": "Tuned Force Reactive Disk",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "18168": 1,
-      "234003": 8,
-      "234005": 5,
-      "234007": 4
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213588",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1213646,
-    "name": "Obsidian Blasting Powder",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 315,
-      "green": 322,
-      "gray": 330
-    },
-    "materials": {
-      "22202": 2
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1213646",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1214145,
-    "name": "Obsidian Shotgun",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12360": 30,
-      "20725": 3,
-      "20868": 3,
-      "20870": 3,
-      "20881": 2,
-      "234003": 8
-    },
-    "minSkill": 0,
-    "icon": "spell_shadow_sealofkings",
-    "url": "https://www.wowhead.com/forever/spell=1214145",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1217207,
-    "name": "Obsidian Scope",
-    "quality": -1,
-    "difficulty": {
-      "orange": 0,
-      "yellow": 320,
-      "green": 330,
-      "gray": 340
-    },
-    "materials": {
-      "12363": 1,
-      "16000": 1,
-      "234003": 1
-    },
-    "minSkill": 0,
-    "icon": "temp",
-    "url": "https://www.wowhead.com/forever/spell=1217207",
-    "produces": null,
-    "source": {
-      "type": "free"
-    }
-  },
-  {
-    "id": 1221012,
-    "name": "Creepy Censor Sensors",
-    "quality": -1,
-    "difficulty": {
-      "orange": 250,
-      "yellow": 275,
-      "green": 277,
-      "gray": 280
-    },
-    "materials": {
-      "8170": 8,
-      "12800": 2
-    },
-    "minSkill": 250,
-    "icon": "trade_engineering",
-    "url": "https://www.wowhead.com/forever/spell=1221012",
-    "produces": null,
-    "source": {
-      "type": "item",
-      "recipeItemId": 236872,
-      "recipeItemName": "Schematic: Creepy Censor Sensors"
-    }
-  },
-  {
     "id": 1226206,
     "name": "Tinkerbox",
     "quality": 1,
@@ -5230,9 +4963,7 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 238782,
-      "recipeItemName": "Schematic: Tinkerbox"
+      "type": "free"
     }
   },
   {
@@ -5259,9 +4990,7 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 238783,
-      "recipeItemName": "Schematic: Tinkerbox: Teleport"
+      "type": "free"
     }
   },
   {
@@ -5288,9 +5017,7 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 238784,
-      "recipeItemName": "Schematic: Tinkerbox: Nitro Boosts"
+      "type": "free"
     }
   },
   {
@@ -5317,9 +5044,7 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 238785,
-      "recipeItemName": "Schematic: Tinkerbox: Magnetic Displacement"
+      "type": "free"
     }
   },
   {
@@ -5453,7 +5178,7 @@
     "name": "Reagent Bot",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 20,
       "yellow": 20,
       "green": 22,
       "gray": 25
@@ -5462,7 +5187,7 @@
       "4359": 1,
       "4361": 1
     },
-    "minSkill": 0,
+    "minSkill": 20,
     "icon": "inv_misc_enggizmos_13",
     "url": "https://www.wowhead.com/forever/spell=1230656",
     "produces": {
@@ -5472,7 +5197,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 100
+      "cost": 105
     }
   },
   {
@@ -5480,7 +5205,7 @@
     "name": "Sandpaper",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 120,
       "yellow": 130,
       "green": 142,
       "gray": 155
@@ -5489,7 +5214,7 @@
       "2996": 1,
       "249425": 2
     },
-    "minSkill": 0,
+    "minSkill": 120,
     "icon": "inv_inscription_papyrus",
     "url": "https://www.wowhead.com/forever/spell=1249634",
     "produces": {

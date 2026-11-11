@@ -7,7 +7,8 @@
     "name": "Schematic: Mechanical Squirrel",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4409": {
     "bop": false,
@@ -17,7 +18,8 @@
     "name": "Schematic: Small Seaforium Charge",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4410": {
     "bop": false,
@@ -27,7 +29,8 @@
     "name": "Schematic: Shadow Goggles",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4411": {
     "bop": false,
@@ -37,7 +40,8 @@
     "name": "Schematic: Flame Deflector",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4412": {
     "bop": false,
@@ -47,7 +51,8 @@
     "name": "Schematic: Moonsight Rifle",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4413": {
     "bop": false,
@@ -57,7 +62,8 @@
     "name": "Schematic: Discombobulator Ray",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4414": {
     "bop": false,
@@ -67,7 +73,8 @@
     "name": "Schematic: Portable Bronze Mortar",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4415": {
     "bop": false,
@@ -77,7 +84,8 @@
     "name": "Schematic: Craftsman's Monocle",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4416": {
     "bop": false,
@@ -87,7 +95,8 @@
     "name": "Schematic: Goblin Land Mine",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "4417": {
     "bop": false,
@@ -97,7 +106,8 @@
     "name": "Schematic: Large Seaforium Charge",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6672": {
     "bop": false,
@@ -107,7 +117,8 @@
     "name": "Schematic: Flash Bomb",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "6716": {
     "bop": false,
@@ -117,7 +128,8 @@
     "name": "Schematic: EZ-Thro Dynamite",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7192": {
     "bop": false,
@@ -127,7 +139,8 @@
     "name": "Schematic: Goblin Rocket Boots",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7560": {
     "bop": true,
@@ -137,7 +150,8 @@
     "name": "Schematic: Gnomish Universal Remote",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7561": {
     "bop": true,
@@ -147,7 +161,8 @@
     "name": "Schematic: Goblin Jumper Cables",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "7742": {
     "bop": true,
@@ -157,7 +172,8 @@
     "name": "Schematic: Gnomish Cloaking Device",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10601": {
     "bop": false,
@@ -167,7 +183,8 @@
     "name": "Schematic: Bright-Eye Goggles",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10602": {
     "bop": true,
@@ -177,7 +194,8 @@
     "name": "Schematic: Deadly Scope",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10603": {
     "bop": false,
@@ -187,7 +205,8 @@
     "name": "Schematic: Catseye Ultra Goggles",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10604": {
     "bop": false,
@@ -197,7 +216,8 @@
     "name": "Schematic: Mithril Heavy-bore Rifle",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10605": {
     "bop": false,
@@ -207,7 +227,8 @@
     "name": "Schematic: Spellpower Goggles Xtreme",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10606": {
     "bop": false,
@@ -217,7 +238,8 @@
     "name": "Schematic: Parachute Cloak",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10607": {
     "bop": true,
@@ -227,7 +249,8 @@
     "name": "Schematic: Deepdive Helmet",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10608": {
     "bop": false,
@@ -237,7 +260,8 @@
     "name": "Schematic: Sniper Scope",
     "quality": 3,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "10609": {
     "bop": false,
@@ -247,7 +271,8 @@
     "name": "Schematic: Mithril Mechanical Dragonling",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "11827": {
     "bop": true,
@@ -257,7 +282,8 @@
     "name": "Schematic: Lil' Smoky",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "11828": {
     "bop": true,
@@ -267,7 +293,8 @@
     "name": "Schematic: Pet Bombling",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "13308": {
     "bop": true,
@@ -277,7 +304,8 @@
     "name": "Schematic: Ice Deflector",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13309": {
     "bop": true,
@@ -287,7 +315,8 @@
     "name": "Schematic: Lovingly Crafted Boomstick",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13310": {
     "bop": true,
@@ -297,7 +326,8 @@
     "name": "Schematic: Accurate Scope",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "13311": {
     "bop": false,
@@ -307,7 +337,8 @@
     "name": "Schematic: Mechanical Dragonling",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "14639": {
     "bop": false,
@@ -317,7 +348,8 @@
     "name": "Schematic: Minor Recombobulator",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16041": {
     "bop": false,
@@ -327,7 +359,8 @@
     "name": "Schematic: Thorium Grenade",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16042": {
     "bop": false,
@@ -337,7 +370,8 @@
     "name": "Schematic: Thorium Widget",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16043": {
     "bop": false,
@@ -347,7 +381,8 @@
     "name": "Schematic: Thorium Rifle",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16044": {
     "bop": false,
@@ -357,7 +392,8 @@
     "name": "Schematic: Lifelike Mechanical Toad",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16045": {
     "bop": false,
@@ -367,7 +403,8 @@
     "name": "Schematic: Spellpower Goggles Xtreme Plus",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16046": {
     "bop": true,
@@ -377,7 +414,8 @@
     "name": "Schematic: Masterwork Target Dummy",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16047": {
     "bop": true,
@@ -387,7 +425,8 @@
     "name": "Schematic: Thorium Tube",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16048": {
     "bop": false,
@@ -397,7 +436,8 @@
     "name": "Schematic: Dark Iron Rifle",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16049": {
     "bop": false,
@@ -407,7 +447,8 @@
     "name": "Schematic: Dark Iron Bomb",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16050": {
     "bop": true,
@@ -417,7 +458,8 @@
     "name": "Schematic: Delicate Arcanite Converter",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16051": {
     "bop": false,
@@ -427,7 +469,8 @@
     "name": "Schematic: Thorium Shells",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16052": {
     "bop": false,
@@ -437,7 +480,8 @@
     "name": "Schematic: Voice Amplification Modulator",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16053": {
     "bop": false,
@@ -447,7 +491,8 @@
     "name": "Schematic: Master Engineer's Goggles",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16054": {
     "bop": false,
@@ -457,7 +502,8 @@
     "name": "Schematic: Arcanite Dragonling",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16055": {
     "bop": false,
@@ -467,7 +513,8 @@
     "name": "Schematic: Arcane Bomb",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "16056": {
     "bop": false,
@@ -477,7 +524,8 @@
     "name": "Schematic: Flawless Arcanite Rifle",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "17720": {
     "bop": false,
@@ -487,7 +535,8 @@
     "name": "Schematic: Snowmaster 9000",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18235": {
     "bop": false,
@@ -497,7 +546,8 @@
     "name": "Schematic: Field Repair Bot 74A",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18290": {
     "bop": true,
@@ -540,7 +590,8 @@
     "name": "Schematic: Red Firework",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18648": {
     "bop": true,
@@ -550,7 +601,8 @@
     "name": "Schematic: Green Firework",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18649": {
     "bop": false,
@@ -560,7 +612,8 @@
     "name": "Schematic: Blue Firework",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18650": {
     "bop": true,
@@ -570,7 +623,8 @@
     "name": "Schematic: EZ-Thro Dynamite II",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18651": {
     "bop": true,
@@ -580,7 +634,8 @@
     "name": "Schematic: Truesilver Transformer",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18652": {
     "bop": false,
@@ -590,7 +645,8 @@
     "name": "Schematic: Gyrofreeze Ice Reflector",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18653": {
     "bop": false,
@@ -600,7 +656,8 @@
     "name": "Schematic: Goblin Jumper Cables XL",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18654": {
     "bop": false,
@@ -610,7 +667,8 @@
     "name": "Schematic: Gnomish Alarm-O-Bot",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18655": {
     "bop": false,
@@ -620,7 +678,8 @@
     "name": "Schematic: Major Recombobulator",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18656": {
     "bop": false,
@@ -630,7 +689,8 @@
     "name": "Schematic: Powerful Seaforium Charge",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18657": {
     "bop": false,
@@ -640,7 +700,8 @@
     "name": "Schematic: Hyper-Radiant Flame Reflector",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18658": {
     "bop": false,
@@ -650,7 +711,8 @@
     "name": "Schematic: Ultra-Flash Shadow Reflector",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "18661": {
     "bop": false,
@@ -660,7 +722,8 @@
     "name": "Schematic: World Enlarger",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "19027": {
     "bop": true,
@@ -670,7 +733,8 @@
     "name": "Schematic: Snake Burst Firework",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20000": {
     "bop": true,
@@ -680,7 +744,8 @@
     "name": "Schematic: Bloodvine Goggles",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "20001": {
     "bop": true,
@@ -690,7 +755,8 @@
     "name": "Schematic: Bloodvine Lens",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "21724": {
     "bop": true,
@@ -700,7 +766,8 @@
     "name": "Schematic: Small Blue Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21725": {
     "bop": true,
@@ -710,7 +777,8 @@
     "name": "Schematic: Small Green Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21726": {
     "bop": true,
@@ -720,7 +788,8 @@
     "name": "Schematic: Small Red Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21727": {
     "bop": true,
@@ -796,7 +865,8 @@
     "name": "Schematic: Large Blue Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21734": {
     "bop": true,
@@ -806,7 +876,8 @@
     "name": "Schematic: Large Green Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21735": {
     "bop": true,
@@ -816,7 +887,8 @@
     "name": "Schematic: Large Red Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "21737": {
     "bop": true,
@@ -843,7 +915,7 @@
   "22729": {
     "bop": true,
     "limitedStock": false,
-    "buyPrice": null,
+    "buyPrice": 8000,
     "auctionhouse": false,
     "name": "Schematic: Steam Tonk Controller",
     "quality": 1,
@@ -859,17 +931,8 @@
     "name": "Schematic: Shredder Autosalvage Unit",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
-  },
-  "212230": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": 20000,
-    "auctionhouse": false,
-    "name": "Schematic: Soul Vessel",
-    "quality": 3,
-    "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "215153": {
     "bop": true,
@@ -879,7 +942,8 @@
     "name": "Schematic: Whirling Truesilver Gearwall",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "215156": {
     "bop": true,
@@ -889,7 +953,8 @@
     "name": "Schematic: Hyperconductive Goldwrap",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "215429": {
     "bop": true,
@@ -899,7 +964,8 @@
     "name": "Schematic: Polished Truesilver Gears",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "215431": {
     "bop": true,
@@ -909,7 +975,8 @@
     "name": "Schematic: High-Yield Radiation Bomb",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "215432": {
     "bop": true,
@@ -919,7 +986,8 @@
     "name": "Schematic: Ez-Thro Radiation Bomb",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "221336": {
     "bop": true,
@@ -932,57 +1000,6 @@
     "hasSource": true,
     "mobDrop": false
   },
-  "236872": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Schematic: Creepy Censor Sensors",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
-  },
-  "238782": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Schematic: Tinkerbox",
-    "quality": 1,
-    "icon": "inv_scroll_06",
-    "hasSource": true,
-    "mobDrop": false
-  },
-  "238783": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Schematic: Tinkerbox: Teleport",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
-  },
-  "238784": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Schematic: Tinkerbox: Nitro Boosts",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
-  },
-  "238785": {
-    "bop": true,
-    "limitedStock": false,
-    "buyPrice": null,
-    "auctionhouse": false,
-    "name": "Schematic: Tinkerbox: Magnetic Displacement",
-    "quality": 2,
-    "icon": "inv_scroll_06",
-    "hasSource": false
-  },
   "238789": {
     "bop": true,
     "limitedStock": false,
@@ -991,7 +1008,8 @@
     "name": "Schematic: Semisafe Transporter: New Avalon",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "239222": {
     "bop": true,
@@ -1001,7 +1019,8 @@
     "name": "Schematic: Pop-Up Shrub",
     "quality": 3,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "264201": {
     "bop": false,
@@ -1012,6 +1031,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1029,6 +1049,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1046,6 +1067,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1063,6 +1085,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1080,6 +1103,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1097,6 +1121,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1113,7 +1138,8 @@
     "name": "Schematic: SAF-T Bronze Bomb",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264208": {
     "bop": false,
@@ -1123,7 +1149,8 @@
     "name": "Schematic: SAF-T Jumbo Dynamite",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264209": {
     "bop": false,
@@ -1134,6 +1161,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1150,7 +1178,8 @@
     "name": "Schematic: Shafety Sheep",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264211": {
     "bop": false,
@@ -1161,6 +1190,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1177,7 +1207,8 @@
     "name": "Schematic: EZ-Thro Bronze Mortar",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264213": {
     "bop": false,
@@ -1187,7 +1218,8 @@
     "name": "Schematic: EZ-Thro Grenade",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264214": {
     "bop": false,
@@ -1197,7 +1229,8 @@
     "name": "Schematic: SAF-T Casing",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264215": {
     "bop": false,
@@ -1207,7 +1240,8 @@
     "name": "Schematic: SAF-T Bomb",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264216": {
     "bop": true,
@@ -1218,6 +1252,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1235,6 +1270,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1251,7 +1287,8 @@
     "name": "Schematic: EZ-Thro Tru-Trigger",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264219": {
     "bop": false,
@@ -1261,7 +1298,8 @@
     "name": "Schematic: Tru-Trigger Frag Bomb",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264220": {
     "bop": true,
@@ -1272,6 +1310,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1289,6 +1328,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1306,6 +1346,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1322,7 +1363,8 @@
     "name": "Schematic: SAF-T Tube",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264224": {
     "bop": false,
@@ -1332,7 +1374,8 @@
     "name": "Schematic: SAF-T Clever Dynamite",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264225": {
     "bop": false,
@@ -1342,7 +1385,8 @@
     "name": "Schematic: EZ-Thro Shell",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264226": {
     "bop": false,
@@ -1352,7 +1396,8 @@
     "name": "Schematic: EZ-Thro Thorium Grenade",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264227": {
     "bop": false,
@@ -1362,7 +1407,8 @@
     "name": "Schematic: EZ-Thro Dark Bomb",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264228": {
     "bop": false,
@@ -1372,7 +1418,8 @@
     "name": "Schematic: EZ-Thro Mana Bomb",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264229": {
     "bop": false,
@@ -1382,7 +1429,8 @@
     "name": "Schematic: EZ-Thro Field Transporter: Gadgetzan",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264230": {
     "bop": false,
@@ -1392,7 +1440,8 @@
     "name": "Schematic: SAF-T Emergency Ripper: Everlook",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264231": {
     "bop": false,
@@ -1402,7 +1451,8 @@
     "name": "Schematic: EZ and SAF Field Transporter: Mt. Hyjal",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264232": {
     "bop": true,
@@ -1413,6 +1463,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1429,7 +1480,8 @@
     "name": "Schematic: Dimensional Transporter: Mt. Hyjal",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264234": {
     "bop": true,
@@ -1440,6 +1492,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1457,6 +1510,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1473,7 +1527,8 @@
     "name": "Schematic: Gnomish Weather Machine",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "264237": {
     "bop": true,
@@ -1484,6 +1539,7 @@
     "quality": 1,
     "icon": "inv_scroll_03",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1500,7 +1556,8 @@
     "name": "Schematic: SAF-T Nitro Boosts",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264239": {
     "bop": false,
@@ -1510,7 +1567,8 @@
     "name": "Schematic: EZ-Thro Magnetic Displacer",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "264240": {
     "bop": false,
@@ -1520,7 +1578,8 @@
     "name": "Schematic: SAF-T Teleport",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "269901": {
     "bop": true,
@@ -1530,7 +1589,8 @@
     "name": "Schematic: Centaur Banner Deployment Device",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "269903": {
     "bop": true,
@@ -1540,17 +1600,19 @@
     "name": "Schematic: Hoof-Shaped Foot Pedal",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273092": {
     "bop": false,
     "limitedStock": false,
-    "buyPrice": 1500,
-    "auctionhouse": false,
+    "buyPrice": null,
+    "auctionhouse": true,
     "name": "Blueprint: Repair Bot",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "273117": {
     "bop": false,
@@ -1560,7 +1622,8 @@
     "name": "Blueprint: Anarchist's Workbench",
     "quality": 2,
     "icon": "inv_garrison_blueprints3",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "274049": {
     "bop": true,
@@ -1581,7 +1644,8 @@
     "name": "Schematic: Swiftfeather Arrow",
     "quality": 4,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "274390": {
     "bop": true,
@@ -1591,7 +1655,8 @@
     "name": "Schematic: Swiftstrike Shot",
     "quality": 4,
     "icon": "inv_scroll_04",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "277470": {
     "bop": true,
@@ -1612,7 +1677,8 @@
     "name": "Schematic: SAF-T Ultra Precision Scope",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "279322": {
     "bop": true,
@@ -1622,7 +1688,8 @@
     "name": "Schematic: Hyper Deluxe Sniper Rifle Mk XVII",
     "quality": 4,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "280321": {
     "bop": true,
@@ -1633,6 +1700,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1650,6 +1718,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1667,6 +1736,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1683,7 +1753,8 @@
     "name": "Schematic: Serrated Strap",
     "quality": 2,
     "icon": "inv_scroll_06",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "280325": {
     "bop": true,
@@ -1694,6 +1765,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1711,6 +1783,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1728,6 +1801,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1745,6 +1819,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1761,7 +1836,8 @@
     "name": "Schematic: Unsanctified Grenade",
     "quality": 1,
     "icon": "inv_scroll_03",
-    "hasSource": true
+    "hasSource": true,
+    "mobDrop": false
   },
   "285285": {
     "bop": true,
@@ -1772,6 +1848,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1789,6 +1866,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1806,6 +1884,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1823,6 +1902,7 @@
     "quality": 2,
     "icon": "inv_scroll_06",
     "hasSource": true,
+    "mobDrop": false,
     "currencyCost": [
       {
         "id": 3402,
@@ -1839,7 +1919,8 @@
     "name": "Schematic: Small Purple Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "286077": {
     "bop": true,
@@ -1849,7 +1930,8 @@
     "name": "Schematic: Small White Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "286078": {
     "bop": true,
@@ -1859,7 +1941,8 @@
     "name": "Schematic: Small Yellow Rocket",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "286079": {
     "bop": true,
@@ -1935,7 +2018,8 @@
     "name": "Schematic: Large Purple Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "286086": {
     "bop": true,
@@ -1945,7 +2029,8 @@
     "name": "Schematic: Large White Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   },
   "286087": {
     "bop": true,
@@ -1955,6 +2040,7 @@
     "name": "Schematic: Large Yellow Rocket Cluster",
     "quality": 2,
     "icon": "inv_scroll_03",
-    "hasSource": false
+    "hasSource": true,
+    "mobDrop": false
   }
 }
