@@ -2529,6 +2529,7 @@ const renderXTick = selected
         disenchantItem.itemClass,
         disenchantItem.slot,
         outputId,
+        materialInfo,
       );
       if (outcomes.length === 0) {
         if (sellEach <= 0) return undefined;
@@ -4424,7 +4425,7 @@ const renderXTick = selected
                   const quality = selected.quality ?? info?.quality ?? 1;
                   const disenchantItem = resolveDisenchantItem(outputItemId, materialInfo);
                   const isWeapon = disenchantItem.itemClass === '2';
-                  const outcomes = getDisenchantOutcomes(disenchantItem.itemLevel, quality, isWeapon, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
+                  const outcomes = getDisenchantOutcomes(disenchantItem.itemLevel, quality, isWeapon, disenchantItem.itemClass, disenchantItem.slot, outputItemId, materialInfo);
                   const deTotal = getExpectedDisenchantValue(disenchantItem.itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
                   const ahMinBuyout = (prices[outputItemId]?.minBuyout ?? 0) * totalOutput;
                   const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;

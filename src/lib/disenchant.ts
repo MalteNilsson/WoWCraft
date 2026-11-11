@@ -43,7 +43,7 @@ const VANILLA_SHARD = [0, 10978, 10978, 11084, 11138, 11139, 11177, 11178, 14343
 const RARE_SHARD_BY_ILVL: ReadonlyArray<number> = [
   10978, 11084, 11138, 11139, 11177, 11178, 14343, 14344, 22448, 22449,
 ];
-function getRareShardBracket(ilvl: number): number {
+function getRareShardBracket(ilvl: number, tbc: boolean): number {
   if (ilvl <= 25) return 0;   // Small Glimmering
   if (ilvl <= 30) return 1;   // Large Glimmering
   if (ilvl <= 35) return 2;   // Small Glowing
@@ -51,9 +51,16 @@ function getRareShardBracket(ilvl: number): number {
   if (ilvl <= 45) return 4;   // Small Radiant
   if (ilvl <= 50) return 5;   // Large Radiant
   if (ilvl <= 55) return 6;   // Small Brilliant
-  if (ilvl <= 65) return 7;   // Large Brilliant
+  if (!tbc || ilvl <= 65) return 7; // Large Brilliant
   if (ilvl <= 99) return 8;   // Small Prismatic
   return 9;                   // Large Prismatic (ilvl 100+)
+}
+
+/** Arcane Dust exists only in the TBC item list. Forever keeps the classic table. */
+const TBC_ARCANE_DUST = 22445;
+
+function usesTbcDisenchantTable(materialInfo?: Record<number, MaterialInfo>): boolean {
+  return materialInfo?.[TBC_ARCANE_DUST] != null;
 }
 
 function getVanillaGreenBracket(ilvl: number): number {
@@ -125,13 +132,14 @@ export function resolveDisenchantItem(
 }
 
 /**
- * Get expected disenchant materials for TBC items.
+ * Get expected disenchant materials.
  * Based on wowpedia/wow-professions disenchant tables. Returns outcomes with expected value.
  * Quality: 1=common (no DE), 2=uncommon, 3=rare, 4=epic
  * isWeapon: true for weapons, false for armor (different dust/essence split)
  * itemClass: WoW item class (2=weapon, 4=armor) - only these can be disenchanted; ammo (6), etc. cannot
  * slot: optional slot string - used to infer class when itemClass is empty (e.g. armor with class: "")
  * itemId: optional - if in NON_DISENCHANTABLE_ITEM_IDS (keys, etc.), returns [] even when class/slot suggest disenchant
+ * materialInfo: the active version's item list. TBC reagents are used only when that list includes them.
  */
 export function getDisenchantOutcomes(
   itemLevel: number,
@@ -139,7 +147,8 @@ export function getDisenchantOutcomes(
   isWeapon: boolean,
   itemClass?: string | number,
   slot?: string,
-  itemId?: number
+  itemId?: number,
+  materialInfo?: Record<number, MaterialInfo>
 ): DisenchantOutcome[] {
   if (itemId != null && NON_DISENCHANTABLE_ITEM_IDS.has(itemId)) return [];
   if (!isDisenchantableItemClass(itemClass, slot)) return [];
@@ -147,27 +156,28 @@ export function getDisenchantOutcomes(
   const effectiveClass = (itemClass === undefined || itemClass === '' ? inferClassFromSlot(slot) ?? '4' : String(itemClass));
   const effectiveIsWeapon = effectiveClass === '2' ? true : false;
   if (quality < 2) return []; // Common items can't be disenchanted
+  const tbc = usesTbcDisenchantTable(materialInfo);
 
   // Uncommon (green)
   if (quality === 2) {
     const dustChance = effectiveIsWeapon ? 0.2 : 0.75;
     const essenceChance = effectiveIsWeapon ? 0.75 : 0.2;
 
-    // ilvl 1-65: Vanilla materials or early TBC (57-65)
+    // Classic greens, including ilvl 57-65. TBC moved that band onto Arcane Dust.
+    if (!tbc || itemLevel < 57) {
+      const b = getVanillaGreenBracket(itemLevel);
+      const dust = VANILLA_DUST[b];
+      const essence = VANILLA_ESSENCE[b];
+      const shardId = VANILLA_SHARD[b];
+      const outcomes: DisenchantOutcome[] = [
+        { itemId: dust[0], chance: dustChance, minQty: dust[1], maxQty: dust[2] },
+        { itemId: essence[0], chance: essenceChance, minQty: essence[1], maxQty: essence[2] },
+      ];
+      if (shardId > 0) outcomes.push({ itemId: shardId, chance: 0.03, minQty: 1, maxQty: 1 });
+      return outcomes;
+    }
+
     if (itemLevel < 66) {
-      if (itemLevel < 57) {
-        // Vanilla greens
-        const b = getVanillaGreenBracket(itemLevel);
-        const dust = VANILLA_DUST[b];
-        const essence = VANILLA_ESSENCE[b];
-        const shardId = VANILLA_SHARD[b];
-        const outcomes: DisenchantOutcome[] = [
-          { itemId: dust[0], chance: dustChance, minQty: dust[1], maxQty: dust[2] },
-          { itemId: essence[0], chance: essenceChance, minQty: essence[1], maxQty: essence[2] },
-        ];
-        if (shardId > 0) outcomes.push({ itemId: shardId, chance: 0.03, minQty: 1, maxQty: 1 });
-        return outcomes;
-      }
       // ilvl 57-65: TBC materials (Arcane Dust 1-3, Lesser Planar 1-3, Small Prismatic)
       return [
         { itemId: 22445, chance: dustChance, minQty: 1, maxQty: 3 },
@@ -194,16 +204,16 @@ export function getDisenchantOutcomes(
 
   // Rare (blue) - 100% shard, type depends on ilvl (vanilla shards for low ilvl, TBC Prismatic for 66+)
   if (quality === 3) {
-    const bracket = getRareShardBracket(itemLevel);
+    const bracket = getRareShardBracket(itemLevel, tbc);
     const shardId = RARE_SHARD_BY_ILVL[bracket];
     return [
       { itemId: shardId, chance: 1, minQty: 1, maxQty: 1 },
     ];
   }
 
-  // TBC epic (purple) - 100% crystal. ilvl 60-99: Nexus Crystal; ilvl 100+: Void Crystal
+  // Epic (purple) - 100% crystal. Classic: Nexus Crystal. TBC ilvl 100+: Void Crystal
   if (quality === 4) {
-    const crystalId = itemLevel >= 100 ? 22450 : 20725; // Void Crystal : Nexus Crystal
+    const crystalId = tbc && itemLevel >= 100 ? 22450 : 20725;
     return [
       { itemId: crystalId, chance: 1, minQty: 1, maxQty: 1 },
     ];
@@ -224,7 +234,7 @@ export function getExpectedDisenchantValue(
   slot?: string,
   itemId?: number
 ): number {
-  const outcomes = getDisenchantOutcomes(itemLevel, quality, isWeapon, itemClass, slot, itemId);
+  const outcomes = getDisenchantOutcomes(itemLevel, quality, isWeapon, itemClass, slot, itemId, materialInfo);
   let total = 0;
   for (const o of outcomes) {
     const avgQty = (o.minQty + o.maxQty) / 2;
