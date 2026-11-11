@@ -1466,12 +1466,6 @@ const enrichMaterialData = async (browser) => {
         let vendorPrice = null;
         let sellPrice = null;
         const jsonEquipStr = item?.jsonEquip?.[0];
-        if (String(id) === '4390') {
-          const tooltip = String(item?.htmlTooltip?.[0] || '');
-          const sell = tooltip.match(/Sell Price:[\s\S]{0,240}/);
-          console.log(`    Iron Grenade jsonEquip: ${jsonEquipStr}`);
-          console.log(`    Iron Grenade tooltip: ${sell ? sell[0].replace(/\s+/g, ' ') : 'no sell line'}`);
-        }
         if (typeof jsonEquipStr === 'string') {
           try {
             const json = JSON.parse(`{${jsonEquipStr}}`);
