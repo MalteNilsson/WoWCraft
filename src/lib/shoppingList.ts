@@ -84,7 +84,7 @@ export function auctionatorListName(profession: string, skill: number, target: n
   return `WoWCraft ${profession} ${skill}-${target}`.replace(/[\r\n^]/g, ' ').trim();
 }
 
-/** Title shown on the in-game shopping list. Forever markets are PvE or PvP on US or EU. */
+/** Title shown on the in-game shopping list. Forever markets name the ruleset and region. */
 export function shoppingListTitle(profession: string, skill: number, target: number, realm: string, faction: string): string {
   const forever = canonicalForeverRealm(realm);
   const ruleset = forever ? forever.replace('Forever ', '') : realm;

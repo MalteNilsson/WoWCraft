@@ -477,12 +477,20 @@ const ANNIVERSARY_MARKETS = [
 const FOREVER_MARKETS = [
     { realm: 'Forever PvE US', faction: 'Horde', region: 'us', slug: 'normal-horde', file: 'ForeverNormal_horde.json', ageKey: 'Forever PvE US_Horde' },
     { realm: 'Forever PvE US', faction: 'Alliance', region: 'us', slug: 'normal-alliance', file: 'ForeverNormal_alliance.json', ageKey: 'Forever PvE US_Alliance' },
-    { realm: 'Forever PvP US', faction: 'Horde', region: 'us', slug: 'pvp-horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP US_Horde' },
-    { realm: 'Forever PvP US', faction: 'Alliance', region: 'us', slug: 'pvp-alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP US_Alliance' },
+    { realm: 'Forever PvP US', faction: 'Horde', region: 'us', slug: 'pvp-horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP US_Horde', fallbackPvE: true },
+    { realm: 'Forever PvP US', faction: 'Alliance', region: 'us', slug: 'pvp-alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP US_Alliance', fallbackPvE: true },
+    { realm: 'Forever RP US', faction: 'Horde', region: 'us', slug: 'roleplay-horde', file: 'ForeverRP_US_horde.json', ageKey: 'Forever RP US_Horde' },
+    { realm: 'Forever RP US', faction: 'Alliance', region: 'us', slug: 'roleplay-alliance', file: 'ForeverRP_US_alliance.json', ageKey: 'Forever RP US_Alliance' },
+    { realm: 'Forever RP-PvP US', faction: 'Horde', region: 'us', slug: 'roleplay-pvp-horde', file: 'ForeverRPPvP_US_horde.json', ageKey: 'Forever RP-PvP US_Horde' },
+    { realm: 'Forever RP-PvP US', faction: 'Alliance', region: 'us', slug: 'roleplay-pvp-alliance', file: 'ForeverRPPvP_US_alliance.json', ageKey: 'Forever RP-PvP US_Alliance' },
     { realm: 'Forever PvE EU', faction: 'Horde', region: 'eu', slug: 'normal-horde', file: 'ForeverPvE_EU_horde.json', ageKey: 'Forever PvE EU_Horde' },
     { realm: 'Forever PvE EU', faction: 'Alliance', region: 'eu', slug: 'normal-alliance', file: 'ForeverPvE_EU_alliance.json', ageKey: 'Forever PvE EU_Alliance' },
-    { realm: 'Forever PvP EU', faction: 'Horde', region: 'eu', slug: 'pvp-horde', file: 'ForeverPvP_EU_horde.json', ageKey: 'Forever PvP EU_Horde' },
-    { realm: 'Forever PvP EU', faction: 'Alliance', region: 'eu', slug: 'pvp-alliance', file: 'ForeverPvP_EU_alliance.json', ageKey: 'Forever PvP EU_Alliance' },
+    { realm: 'Forever PvP EU', faction: 'Horde', region: 'eu', slug: 'pvp-horde', file: 'ForeverPvP_EU_horde.json', ageKey: 'Forever PvP EU_Horde', fallbackPvE: true },
+    { realm: 'Forever PvP EU', faction: 'Alliance', region: 'eu', slug: 'pvp-alliance', file: 'ForeverPvP_EU_alliance.json', ageKey: 'Forever PvP EU_Alliance', fallbackPvE: true },
+    { realm: 'Forever RP EU', faction: 'Horde', region: 'eu', slug: 'roleplay-horde', file: 'ForeverRP_EU_horde.json', ageKey: 'Forever RP EU_Horde' },
+    { realm: 'Forever RP EU', faction: 'Alliance', region: 'eu', slug: 'roleplay-alliance', file: 'ForeverRP_EU_alliance.json', ageKey: 'Forever RP EU_Alliance' },
+    { realm: 'Forever RP-PvP EU', faction: 'Horde', region: 'eu', slug: 'roleplay-pvp-horde', file: 'ForeverRPPvP_EU_horde.json', ageKey: 'Forever RP-PvP EU_Horde' },
+    { realm: 'Forever RP-PvP EU', faction: 'Alliance', region: 'eu', slug: 'roleplay-pvp-alliance', file: 'ForeverRPPvP_EU_alliance.json', ageKey: 'Forever RP-PvP EU_Alliance' },
 ];
 
 function parseCsv(text) {
@@ -534,8 +542,22 @@ function numberOrNull(value) {
     return Number.isFinite(number) ? number : null;
 }
 
-async function fetchPublicPriceCsv(url) {
+function retryDelayMs(header) {
+    const value = Number(header);
+    if (!Number.isFinite(value) || value <= 0) return 4000;
+    // TSM's Retry-After is a millisecond count around 3500. A value in seconds stays under two minutes.
+    if (value > 120) return Math.min(15000, value);
+    return Math.min(15000, value * 1000);
+}
+
+async function fetchPublicPriceCsv(url, attempt = 0) {
     const response = await fetch(url, { headers: { 'User-Agent': 'wowcraft-price-fetch' } });
+    if ((response.status === 429 || response.status === 503) && attempt < 2) {
+        const waitMs = retryDelayMs(response.headers.get('retry-after'));
+        console.log(`  rate limited, waiting ${Math.ceil(waitMs / 1000)}s`);
+        await new Promise((resolve) => setTimeout(resolve, waitMs));
+        return fetchPublicPriceCsv(url, attempt + 1);
+    }
     if (response.status === 429 || response.status === 503) {
         const retryAfter = response.headers.get('retry-after') ?? 'later';
         throw new Error(`rate limited (${response.status}, retry after ${retryAfter})`);
@@ -689,7 +711,7 @@ async function fetchForeverPublicData() {
                 fs.writeFileSync(filePath, JSON.stringify(rows, null, 2));
                 age[market.ageKey] = scannedAt;
                 console.log(`  ${rows.length} items, scanned ${scannedAt} → ${market.file}`);
-            } else if (market.realm.includes('PvP')) {
+            } else if (market.fallbackPvE) {
                 const source = FOREVER_MARKETS.find((candidate) => candidate.region === market.region && candidate.realm.includes('PvE') && candidate.faction === market.faction);
                 const sourcePath = source ? path.join(outputDir, source.file) : '';
                 if (source && age[source.ageKey] && fs.existsSync(sourcePath)) {
@@ -710,6 +732,7 @@ async function fetchForeverPublicData() {
             failed += 1;
             console.error(`  failed ${market.realm} (${market.faction}): ${error.message}`);
         }
+        await new Promise((resolve) => setTimeout(resolve, 400));
     }
 
     fs.writeFileSync(agePath, `${JSON.stringify(age, null, 2)}\n`);

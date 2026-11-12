@@ -245,6 +245,14 @@ const FOREVER_PRICE_FILES: Record<string, string> = {
   'Forever PvE EU_alliance': 'ForeverPvE_EU_alliance.json',
   'Forever PvP EU_horde': 'ForeverPvP_EU_horde.json',
   'Forever PvP EU_alliance': 'ForeverPvP_EU_alliance.json',
+  'Forever RP US_horde': 'ForeverRP_US_horde.json',
+  'Forever RP US_alliance': 'ForeverRP_US_alliance.json',
+  'Forever RP-PvP US_horde': 'ForeverRPPvP_US_horde.json',
+  'Forever RP-PvP US_alliance': 'ForeverRPPvP_US_alliance.json',
+  'Forever RP EU_horde': 'ForeverRP_EU_horde.json',
+  'Forever RP EU_alliance': 'ForeverRP_EU_alliance.json',
+  'Forever RP-PvP EU_horde': 'ForeverRPPvP_EU_horde.json',
+  'Forever RP-PvP EU_alliance': 'ForeverRPPvP_EU_alliance.json',
 };
 
 async function loadPriceData(realm: string, faction: string): Promise<any[]> {
@@ -2950,7 +2958,7 @@ const renderXTick = selected
                       <span className="font-semibold truncate"><RealmName realm={selectedRealm} /></span>
                       <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
                     </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[9.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] max-h-80 overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {realms.map((realm) => (
                         <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
                           {({ selected }) => (
@@ -3393,7 +3401,7 @@ const renderXTick = selected
                   <span className="text-xs text-neutral-400 mb-1">Current</span>
                   <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                     <button
-                      className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => handleDirectSkillChange(skill - 1)}
                     >−</button>
                     
@@ -3429,7 +3437,7 @@ const renderXTick = selected
                     />
                     
                     <button
-                      className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => handleDirectSkillChange(skill + 1)}
                     >+</button>
                   </div>
@@ -3440,7 +3448,7 @@ const renderXTick = selected
                   <span className="text-xs text-neutral-400 mb-1">Target</span>
                   <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                     <button
-                      className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
                         fitGuideRangeRef.current = null;
                         const newTarget = Math.max(skill + 1, target - 1);
@@ -3492,7 +3500,7 @@ const renderXTick = selected
                     />
                     
                     <button
-                      className="text-lg z-30 text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
                       onClick={() => {
                         fitGuideRangeRef.current = null;
                         const newTarget = Math.min(maxSkill, target + 1);

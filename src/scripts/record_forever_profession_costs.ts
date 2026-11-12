@@ -1,6 +1,6 @@
 /**
- * Records the 1–300 raw-material cost of every Forever profession for PvE and PvP
- * on US and EU, for Alliance and Horde.
+ * Records the 1–300 raw-material cost of every Forever profession for each
+ * ruleset on US and EU, for Alliance and Horde.
  *
  * Run this after auction prices have been written into src/data/prices.
  * Each price snapshot is stored once, keyed by when those prices were observed,
@@ -45,20 +45,28 @@ const PROFESSIONS: { name: string; recipes: Recipe[] }[] = [
   { name: 'Tailoring', recipes: foreverTailoring as unknown as Recipe[] },
 ];
 
-const CONFIGS: { realm: string; realmType: 'PvE' | 'PvP'; faction: 'Alliance' | 'Horde'; file: string; ageKey: string }[] = [
+const CONFIGS: { realm: string; realmType: 'PvE' | 'PvP' | 'RP' | 'RP-PvP'; faction: 'Alliance' | 'Horde'; file: string; ageKey: string }[] = [
   { realm: 'Forever PvE US', realmType: 'PvE', faction: 'Alliance', file: 'ForeverNormal_alliance.json', ageKey: 'Forever PvE US_Alliance' },
   { realm: 'Forever PvE US', realmType: 'PvE', faction: 'Horde', file: 'ForeverNormal_horde.json', ageKey: 'Forever PvE US_Horde' },
   { realm: 'Forever PvP US', realmType: 'PvP', faction: 'Alliance', file: 'ForeverPvP_alliance.json', ageKey: 'Forever PvP US_Alliance' },
   { realm: 'Forever PvP US', realmType: 'PvP', faction: 'Horde', file: 'ForeverPvP_horde.json', ageKey: 'Forever PvP US_Horde' },
+  { realm: 'Forever RP US', realmType: 'RP', faction: 'Alliance', file: 'ForeverRP_US_alliance.json', ageKey: 'Forever RP US_Alliance' },
+  { realm: 'Forever RP US', realmType: 'RP', faction: 'Horde', file: 'ForeverRP_US_horde.json', ageKey: 'Forever RP US_Horde' },
+  { realm: 'Forever RP-PvP US', realmType: 'RP-PvP', faction: 'Alliance', file: 'ForeverRPPvP_US_alliance.json', ageKey: 'Forever RP-PvP US_Alliance' },
+  { realm: 'Forever RP-PvP US', realmType: 'RP-PvP', faction: 'Horde', file: 'ForeverRPPvP_US_horde.json', ageKey: 'Forever RP-PvP US_Horde' },
   { realm: 'Forever PvE EU', realmType: 'PvE', faction: 'Alliance', file: 'ForeverPvE_EU_alliance.json', ageKey: 'Forever PvE EU_Alliance' },
   { realm: 'Forever PvE EU', realmType: 'PvE', faction: 'Horde', file: 'ForeverPvE_EU_horde.json', ageKey: 'Forever PvE EU_Horde' },
   { realm: 'Forever PvP EU', realmType: 'PvP', faction: 'Alliance', file: 'ForeverPvP_EU_alliance.json', ageKey: 'Forever PvP EU_Alliance' },
   { realm: 'Forever PvP EU', realmType: 'PvP', faction: 'Horde', file: 'ForeverPvP_EU_horde.json', ageKey: 'Forever PvP EU_Horde' },
+  { realm: 'Forever RP EU', realmType: 'RP', faction: 'Alliance', file: 'ForeverRP_EU_alliance.json', ageKey: 'Forever RP EU_Alliance' },
+  { realm: 'Forever RP EU', realmType: 'RP', faction: 'Horde', file: 'ForeverRP_EU_horde.json', ageKey: 'Forever RP EU_Horde' },
+  { realm: 'Forever RP-PvP EU', realmType: 'RP-PvP', faction: 'Alliance', file: 'ForeverRPPvP_EU_alliance.json', ageKey: 'Forever RP-PvP EU_Alliance' },
+  { realm: 'Forever RP-PvP EU', realmType: 'RP-PvP', faction: 'Horde', file: 'ForeverRPPvP_EU_horde.json', ageKey: 'Forever RP-PvP EU_Horde' },
 ];
 
 type CostEntry = {
   realm: string;
-  realmType: 'PvE' | 'PvP';
+  realmType: 'PvE' | 'PvP' | 'RP' | 'RP-PvP';
   faction: 'Alliance' | 'Horde';
   profession: string;
   pricesObservedAt: string;

@@ -16,7 +16,7 @@ export default function AboutPage() {
           Hi and welcome to WoWCraft. I&apos;m <strong className="text-white">Malte &quot;StabShot&quot; Nilsson</strong>, and I built this as a free tool for the WoW Classic community. WoWCraft plans profession leveling routes from your current skill to a goal, prices the materials, and builds one shopping list for the stretch.
         </p>
         <p>
-          The planner covers The Burning Crusade through skill 375 and Forever through skill 300. Auction prices for Forever PvE and PvP on US and EU, plus Thunderstrike, Spineshatter, Dreamscythe, and Nightslayer, come from TradeSkillMaster.
+          The planner covers The Burning Crusade through skill 375 and Forever through skill 300. Auction prices for Forever PvE, PvP, RP, and RP-PvP on US and EU, plus Thunderstrike, Spineshatter, Dreamscythe, and Nightslayer, come from TradeSkillMaster.
         </p>
         <p>
           The project is open source on{' '}

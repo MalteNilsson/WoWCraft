@@ -172,7 +172,7 @@ export default async function HomePage({
               </li>
             </ul>
             <p className="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-500">
-              Auction prices come from TradeSkillMaster for Forever PvE and PvP on US and EU. Forever runs to 300. The Burning Crusade runs to 375.
+              Auction prices come from TradeSkillMaster for Forever PvE, PvP, RP, and RP-PvP on US and EU. Forever runs to 300. The Burning Crusade runs to 375.
             </p>
           </section>
         </main>
