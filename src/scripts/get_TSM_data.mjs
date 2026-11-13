@@ -606,19 +606,60 @@ function rowsFromPublicRegionCsv(text) {
     return rows;
 }
 
+// TSM republishes region sale rates about once a day. The hourly price job
+// leaves an existing file alone until this interval has passed.
+const REGION_SALE_RATE_INTERVAL_MS = 24 * 60 * 60 * 1000;
+
+function readJsonObject(filePath) {
+    if (!fs.existsSync(filePath)) return {};
+    try {
+        const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+    } catch {
+        return {};
+    }
+}
+
 async function fetchPublicRegionSaleRates(game) {
+    const agePath = path.join(outputDir, 'region_sale_rate_age.json');
+    const age = readJsonObject(agePath);
+    let changed = false;
+
     for (const region of ['us', 'eu']) {
         const filename = `region_${game}_${region}.json`;
+        const filePath = path.join(outputDir, filename);
+        const fetchedAt = Date.parse(age[filename] ?? '');
+        const hasFile = fs.existsSync(filePath);
+        if (hasFile && Number.isFinite(fetchedAt) && Date.now() - fetchedAt < REGION_SALE_RATE_INTERVAL_MS) {
+            const nextAt = new Date(fetchedAt + REGION_SALE_RATE_INTERVAL_MS).toISOString();
+            console.log(`Skipping ${game} ${region.toUpperCase()} sale rates until ${nextAt}`);
+            continue;
+        }
+        // The hourly runner already has these files. Stamp them and wait a day
+        // instead of downloading them again on the first run after this change.
+        if (hasFile && !Number.isFinite(fetchedAt)) {
+            age[filename] = new Date().toISOString();
+            changed = true;
+            console.log(`Keeping existing ${filename}; next sale-rate fetch is in 24 hours`);
+            continue;
+        }
+
         const url = `${TSM_PUBLIC_DATA}/${game}/${region}/region/items.csv`;
         try {
             console.log(`Fetching ${game} ${region.toUpperCase()} sale rates...`);
             const rows = rowsFromPublicRegionCsv(await fetchPacedCsv(url));
             if (rows.length === 0) throw new Error('no sale-rate rows');
-            fs.writeFileSync(path.join(outputDir, filename), `${JSON.stringify(rows, null, 2)}\n`);
+            fs.writeFileSync(filePath, `${JSON.stringify(rows, null, 2)}\n`);
+            age[filename] = new Date().toISOString();
+            changed = true;
             console.log(`  ${rows.length} items → ${filename}`);
         } catch (error) {
             console.error(`  failed ${game} ${region} sale rates: ${error.message}`);
         }
+    }
+
+    if (changed) {
+        fs.writeFileSync(agePath, `${JSON.stringify(age, null, 2)}\n`);
     }
 }
 
