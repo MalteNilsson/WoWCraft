@@ -542,23 +542,34 @@ function numberOrNull(value) {
     return Number.isFinite(number) ? number : null;
 }
 
-function retryDelayMs(header) {
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// GitHub's shared runner address hits TSM's limit partway through a run when
+// requests go out back to back. Keep a gap after every catalog, and back off
+// hard when TSM asks us to slow down.
+const REQUEST_GAP_MS = 4000;
+
+function retryDelayMs(header, attempt) {
+    const fallback = Math.min(60000, 15000 * (attempt + 1));
     const value = Number(header);
-    if (!Number.isFinite(value) || value <= 0) return 4000;
+    if (!Number.isFinite(value) || value <= 0) return fallback;
     // TSM's Retry-After is a millisecond count around 3500. A value in seconds stays under two minutes.
-    if (value > 120) return Math.min(15000, value);
-    return Math.min(15000, value * 1000);
+    const ms = value > 120 ? value : value * 1000;
+    return Math.min(60000, Math.max(ms, 8000));
 }
 
 async function fetchPublicPriceCsv(url, attempt = 0) {
     const response = await fetch(url, { headers: { 'User-Agent': 'wowcraft-price-fetch' } });
-    if ((response.status === 429 || response.status === 503) && attempt < 2) {
-        const waitMs = retryDelayMs(response.headers.get('retry-after'));
+    if ((response.status === 429 || response.status === 502 || response.status === 503) && attempt < 5) {
+        await response.arrayBuffer().catch(() => {});
+        const waitMs = retryDelayMs(response.headers.get('retry-after'), attempt);
         console.log(`  rate limited, waiting ${Math.ceil(waitMs / 1000)}s`);
-        await new Promise((resolve) => setTimeout(resolve, waitMs));
+        await sleep(waitMs);
         return fetchPublicPriceCsv(url, attempt + 1);
     }
-    if (response.status === 429 || response.status === 503) {
+    if (response.status === 429 || response.status === 502 || response.status === 503) {
         const retryAfter = response.headers.get('retry-after') ?? 'later';
         throw new Error(`rate limited (${response.status}, retry after ${retryAfter})`);
     }
@@ -567,6 +578,14 @@ async function fetchPublicPriceCsv(url, attempt = 0) {
         throw new Error(`HTTP ${response.status}`);
     }
     return text;
+}
+
+async function fetchPacedCsv(url) {
+    try {
+        return await fetchPublicPriceCsv(url);
+    } finally {
+        await sleep(REQUEST_GAP_MS);
+    }
 }
 
 function rowsFromPublicRegionCsv(text) {
@@ -593,7 +612,7 @@ async function fetchPublicRegionSaleRates(game) {
         const url = `${TSM_PUBLIC_DATA}/${game}/${region}/region/items.csv`;
         try {
             console.log(`Fetching ${game} ${region.toUpperCase()} sale rates...`);
-            const rows = rowsFromPublicRegionCsv(await fetchPublicPriceCsv(url));
+            const rows = rowsFromPublicRegionCsv(await fetchPacedCsv(url));
             if (rows.length === 0) throw new Error('no sale-rate rows');
             fs.writeFileSync(path.join(outputDir, filename), `${JSON.stringify(rows, null, 2)}\n`);
             console.log(`  ${rows.length} items → ${filename}`);
@@ -651,7 +670,7 @@ async function fetchAnniversaryPublicData() {
         const url = `${TSM_PUBLIC_DATA}/classic/${market.region}/realm/${slug}/items.csv`;
         try {
             console.log(`Fetching ${market.realm} (${market.faction})...`);
-            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPublicPriceCsv(url));
+            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPacedCsv(url));
             if (rows.length === 0) throw new Error('no priced rows');
 
             const filename = `${market.realm}_${market.faction.toLowerCase()}.json`;
@@ -698,19 +717,22 @@ async function fetchAnniversaryPublicData() {
 async function fetchForeverPublicData() {
     console.log('Fetching Forever prices from TSM public data...\n');
     const agePath = path.join(outputDir, 'forever_price_age.json');
+    const summaryPath = path.join(outputDir, 'fetch_summary_forever.json');
     const age = fs.existsSync(agePath) ? JSON.parse(fs.readFileSync(agePath, 'utf8')) : {};
+    const results = [];
     let failed = 0;
 
     for (const market of FOREVER_MARKETS) {
         const url = `${TSM_PUBLIC_DATA}/forever/${market.region}/realm/${market.slug}/items.csv`;
         try {
             console.log(`Fetching ${market.realm} (${market.faction})...`);
-            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPublicPriceCsv(url));
+            const { rows, scannedAt } = rowsFromPublicItemCsv(await fetchPacedCsv(url));
             const filePath = path.join(outputDir, market.file);
             if (rows.length > 0 && scannedAt) {
                 fs.writeFileSync(filePath, JSON.stringify(rows, null, 2));
                 age[market.ageKey] = scannedAt;
                 console.log(`  ${rows.length} items, scanned ${scannedAt} → ${market.file}`);
+                results.push({ realm: market.realm, faction: market.faction, success: true, items: rows.length, scannedAt });
             } else if (market.fallbackPvE) {
                 const source = FOREVER_MARKETS.find((candidate) => candidate.region === market.region && candidate.realm.includes('PvE') && candidate.faction === market.faction);
                 const sourcePath = source ? path.join(outputDir, source.file) : '';
@@ -718,24 +740,37 @@ async function fetchForeverPublicData() {
                     fs.copyFileSync(sourcePath, filePath);
                     age[market.ageKey] = age[source.ageKey];
                     console.log(`  no PvP listings yet, using ${source.realm} (${source.faction}) → ${market.file}`);
+                    results.push({ realm: market.realm, faction: market.faction, success: true, items: 0, scannedAt: age[source.ageKey], fallback: source.realm });
                 } else {
                     fs.writeFileSync(filePath, '[]\n');
                     delete age[market.ageKey];
                     console.log(`  no listings yet → ${market.file}`);
+                    results.push({ realm: market.realm, faction: market.faction, success: true, items: 0, scannedAt: null });
                 }
             } else {
                 fs.writeFileSync(filePath, '[]\n');
                 delete age[market.ageKey];
                 console.log(`  no listings yet → ${market.file}`);
+                results.push({ realm: market.realm, faction: market.faction, success: true, items: 0, scannedAt: null });
             }
         } catch (error) {
             failed += 1;
             console.error(`  failed ${market.realm} (${market.faction}): ${error.message}`);
+            results.push({ realm: market.realm, faction: market.faction, success: false, error: error.message });
         }
-        await new Promise((resolve) => setTimeout(resolve, 400));
     }
 
     fs.writeFileSync(agePath, `${JSON.stringify(age, null, 2)}\n`);
+    fs.writeFileSync(summaryPath, `${JSON.stringify({
+        source: 'https://public-data.tradeskillmaster.com',
+        timestamp: new Date().toISOString(),
+        totalRequests: results.length,
+        successful: results.length - failed,
+        failed,
+        results,
+    }, null, 2)}\n`);
+    console.log(`\nSuccessful: ${results.length - failed}`);
+    console.log(`Failed: ${failed}`);
     await fetchPublicRegionSaleRates('forever');
     if (failed > 0) process.exitCode = 1;
 }

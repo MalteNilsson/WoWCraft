@@ -66,6 +66,8 @@ jobs:
         run: |
           node src/scripts/get_TSM_data.mjs anniversary
           anniversary_status=$?
+          # The two scripts share one runner address. Give TSM's limit window time to clear.
+          sleep 30
           node src/scripts/get_TSM_data.mjs forever
           forever_status=$?
           if [ "$anniversary_status" -ne 0 ] || [ "$forever_status" -ne 0 ]; then
@@ -94,13 +96,19 @@ jobs:
           git add src/data/profession-costs/forever.json
           git diff --staged --quiet || (git commit -m "chore: record forever profession leveling costs [skip ci]" && git push)
 
-      - name: Queue the next fetch in one hour
+      - name: Queue the next fetch
         if: always() && !cancelled() && steps.gate.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           elapsed=$(( $(date +%s) - START_EPOCH ))
-          remain=$(( 3600 - elapsed ))
+          # A failed fetch should try again in 15 minutes. A clean fetch stays hourly.
+          if [ "${{ steps.tsm.outcome }}" = "failure" ] || [ "${{ steps.costs.outcome }}" = "failure" ]; then
+            target=900
+          else
+            target=3600
+          fi
+          remain=$(( target - elapsed ))
           if [ "$remain" -gt 0 ]; then
             echo "Waiting ${remain}s before the next fetch."
             sleep "$remain"
