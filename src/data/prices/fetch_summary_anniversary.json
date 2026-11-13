@@ -1,7 +1,7 @@
 {
   "realmList": "anniversary",
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-13T02:26:37.898Z",
+  "timestamp": "2026-11-13T03:26:45.554Z",
   "totalRequests": 8,
   "successful": 8,
   "failed": 0,
@@ -34,13 +34,13 @@
       "realm": "Dreamscythe",
       "faction": "Alliance",
       "success": true,
-      "timestamp": "2026-11-12T22:22:44Z"
+      "timestamp": "2026-11-13T01:22:39Z"
     },
     {
       "realm": "Dreamscythe",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-12T21:43:39Z"
+      "timestamp": "2026-11-13T02:03:57Z"
     },
     {
       "realm": "Nightslayer",
@@ -52,7 +52,7 @@
       "realm": "Nightslayer",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-12T22:15:34Z"
+      "timestamp": "2026-11-13T00:22:34Z"
     }
   ]
 }
