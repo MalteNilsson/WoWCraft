@@ -1,7 +1,6 @@
 # Post a Discord message when Malte pushes. Automatic price commits use the
 # Actions token, so they do not start this workflow, and the actor check
 # skips them if that ever changes.
-# Discord rejects message bodies longer than 2000 characters, so the text is clipped.
 name: Discord push notice
 
 on:
@@ -17,26 +16,91 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           ACTOR: ${{ github.actor }}
+          ACTOR_URL: ${{ github.server_url }}/${{ github.actor }}
+          AVATAR: ${{ github.event.sender.avatar_url }}
+          REPO: ${{ github.repository }}
           REF: ${{ github.ref_name }}
           COMPARE: ${{ github.event.compare }}
           COMMITS: ${{ toJson(github.event.commits) }}
+          HEAD: ${{ toJson(github.event.head_commit) }}
         run: |
-          commits="${COMMITS:-[]}"
+          commits="${COMMITS:-null}"
+          head="${HEAD:-null}"
           jq -n \
             --arg actor "$ACTOR" \
+            --arg actor_url "$ACTOR_URL" \
+            --arg avatar "$AVATAR" \
+            --arg repo "$REPO" \
             --arg ref "$REF" \
             --arg compare "$COMPARE" \
             --argjson commits "$commits" \
+            --argjson head "$head" \
             '
-              def clip: if length > 1900 then .[0:1900] + "…" else . end;
-              (($commits // []) | map("- " + (.message | split("\n")[0])) | join("\n")) as $lines
+              def clip($n): if length > $n then .[0:$n] + "…" else . end;
+              def listed: if . == null then [] else . end;
+              def subject: (.message // "" | split("\n")[0] | if . == "" then "(no message)" else . end | clip(180));
+              def body: (.message // "" | split("\n")[1:] | map(select(length > 0)) | join("\n") | clip(1200));
+              def paths($items): ($items // []) | map(select(. != ""));
+              def section($label; $items):
+                if ($items | length) == 0 then ""
+                else "**\($label)**\n" + (($items | if length > 8 then .[0:8] + ["… and \((length) - 8) more"] else . end) | map("• `" + . + "`") | join("\n"))
+                end;
+              def file_sections:
+                [
+                  section("Added"; paths(.added)),
+                  section("Modified"; paths(.modified)),
+                  section("Removed"; paths(.removed))
+                ] | map(select(length > 0)) | join("\n\n");
+              def file_count:
+                (paths(.added) + paths(.modified) + paths(.removed) | length);
+              (($commits | listed) | if length == 0 then (if $head == null then [] else [$head] end) else . end) as $list
+              | ($list | map(file_count) | add // 0) as $files
+              | (if ($list | length) == 1 then
+                  ($list[0]) as $c
+                  | {
+                      title: ($c | subject | clip(250)),
+                      url: ($c.url // $compare),
+                      description: (
+                        ("`" + ($c.id[0:7] // "") + "`")
+                        + (if ($c | body) == "" then "" else "\n\n" + ($c | body) end)
+                        + ( ($c | file_sections) as $files_text | if $files_text == "" then "" else "\n\n" + $files_text end )
+                      )
+                    }
+                else
+                  {
+                    title: "\($list | length) commits to \($ref)",
+                    url: (if $compare == "" then ($list[-1].url // null) else $compare end),
+                    description: (
+                      $list | map(
+                        "- [`\(.id[0:7])`](\(.url)) \(. | subject) — \(file_count) \(if file_count == 1 then "file" else "files" end)"
+                      ) | join("\n")
+                    )
+                  }
+                end) as $card
+              | (
+                  [
+                    { name: "Branch", value: ("`" + $ref + "`"), inline: true },
+                    { name: "Commits", value: ($list | length | tostring), inline: true },
+                    { name: "Files", value: ($files | tostring), inline: true }
+                  ]
+                ) as $fields
               | {
-                  content: (
-                    $actor + " pushed to " + $ref
-                    + (if $lines == "" then "" else "\n" + $lines end)
-                    + (if $compare == "" then "" else "\n" + $compare end)
-                  ) | clip
+                  username: $actor,
+                  avatar_url: (if $avatar == "" then null else $avatar end),
+                  embeds: [{
+                    title: $card.title,
+                    url: $card.url,
+                    description: ($card.description | clip(3900)),
+                    color: 2078199,
+                    fields: $fields,
+                    footer: { text: $repo, icon_url: (if $avatar == "" then null else $avatar end) },
+                    timestamp: ($list[-1].timestamp // null)
+                  }]
                 }
+                | if .avatar_url == null then del(.avatar_url) else . end
+                | if .embeds[0].url == null or .embeds[0].url == "" then del(.embeds[0].url) else . end
+                | if .embeds[0].timestamp == null then del(.embeds[0].timestamp) else . end
+                | if .embeds[0].footer.icon_url == null then del(.embeds[0].footer.icon_url) else . end
             ' > "$RUNNER_TEMP/discord.json"
           curl -fsSL -H "Content-Type: application/json" \
             --data @"$RUNNER_TEMP/discord.json" \
