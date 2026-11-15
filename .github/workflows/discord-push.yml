@@ -1,0 +1,42 @@
+# Post a Discord message when Malte pushes. Automatic price commits use the
+# Actions token, so they do not start this workflow, and the actor check
+# skips them if that ever changes.
+name: Discord push notice
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  discord:
+    if: github.actor == 'MalteNilsson'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post push to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          ACTOR: ${{ github.actor }}
+          REF: ${{ github.ref_name }}
+          COMPARE: ${{ github.event.compare }}
+          COMMITS: ${{ toJson(github.event.commits) }}
+        run: |
+          commits="${COMMITS:-[]}"
+          jq -n \
+            --arg actor "$ACTOR" \
+            --arg ref "$REF" \
+            --arg compare "$COMPARE" \
+            --argjson commits "$commits" \
+            '
+              def clip: if length > 1900 then .[0:1900] + "…" else . end;
+              (($commits // []) | map("- " + (.message | split("\n")[0])) | join("\n")) as $lines
+              | {
+                  content: (
+                    $actor + " pushed to " + $ref
+                    + (if $lines == "" then "" else "\n" + $lines end)
+                    + (if $compare == "" then "" else "\n" + $compare end)
+                  ) | clip
+                }
+            ' > "$RUNNER_TEMP/discord.json"
+          curl -fsSL -H "Content-Type: application/json" \
+            --data @"$RUNNER_TEMP/discord.json" \
+            "$DISCORD_WEBHOOK"
