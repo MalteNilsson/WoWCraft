@@ -1,9 +1,9 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-15T03:38:50.248Z",
+  "timestamp": "2026-11-15T03:51:14.946Z",
   "totalRequests": 16,
-  "successful": 12,
-  "failed": 4,
+  "successful": 16,
+  "failed": 0,
   "results": [
     {
       "realm": "Forever PvE US",
@@ -92,26 +92,30 @@
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
-      "success": false,
-      "error": "rate limited (429, retry after 3560)"
+      "success": true,
+      "items": 3973,
+      "scannedAt": "2026-11-15T00:18:51Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Alliance",
-      "success": false,
-      "error": "rate limited (429, retry after 3516)"
+      "success": true,
+      "items": 5125,
+      "scannedAt": "2026-11-15T00:18:53Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
-      "success": false,
-      "error": "rate limited (429, retry after 3471)"
+      "success": true,
+      "items": 4601,
+      "scannedAt": "2026-11-15T00:18:51Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
-      "success": false,
-      "error": "rate limited (429, retry after 3427)"
+      "success": true,
+      "items": 4804,
+      "scannedAt": "2026-11-15T00:18:51Z"
     }
   ]
 }
