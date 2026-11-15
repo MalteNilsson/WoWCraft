@@ -1,30 +1,30 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-15T01:35:48.549Z",
+  "timestamp": "2026-11-15T03:38:50.248Z",
   "totalRequests": 16,
-  "successful": 16,
-  "failed": 0,
+  "successful": 12,
+  "failed": 4,
   "results": [
     {
       "realm": "Forever PvE US",
       "faction": "Horde",
       "success": true,
-      "items": 6722,
-      "scannedAt": "2026-11-14T22:17:51Z"
+      "items": 6752,
+      "scannedAt": "2026-11-15T01:17:53Z"
     },
     {
       "realm": "Forever PvE US",
       "faction": "Alliance",
       "success": true,
-      "items": 6851,
-      "scannedAt": "2026-11-14T22:17:50Z"
+      "items": 6880,
+      "scannedAt": "2026-11-15T01:17:52Z"
     },
     {
       "realm": "Forever PvP US",
       "faction": "Horde",
       "success": true,
-      "items": 6886,
-      "scannedAt": "2026-11-14T22:17:50Z"
+      "items": 6914,
+      "scannedAt": "2026-11-15T01:17:52Z"
     },
     {
       "realm": "Forever PvP US",
@@ -51,8 +51,8 @@
       "realm": "Forever RP-PvP US",
       "faction": "Horde",
       "success": true,
-      "items": 5408,
-      "scannedAt": "2026-11-14T22:17:42Z"
+      "items": 5437,
+      "scannedAt": "2026-11-15T01:17:43Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -65,8 +65,8 @@
       "realm": "Forever PvE EU",
       "faction": "Horde",
       "success": true,
-      "items": 6872,
-      "scannedAt": "2026-11-14T21:19:17Z"
+      "items": 6903,
+      "scannedAt": "2026-11-15T00:19:11Z"
     },
     {
       "realm": "Forever PvE EU",
@@ -79,43 +79,39 @@
       "realm": "Forever PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 7051,
-      "scannedAt": "2026-11-14T21:19:20Z"
+      "items": 7074,
+      "scannedAt": "2026-11-15T00:19:14Z"
     },
     {
       "realm": "Forever PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7056,
-      "scannedAt": "2026-11-14T21:19:17Z"
+      "items": 7081,
+      "scannedAt": "2026-11-15T00:19:12Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
-      "success": true,
-      "items": 3925,
-      "scannedAt": "2026-11-14T21:18:51Z"
+      "success": false,
+      "error": "rate limited (429, retry after 3560)"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Alliance",
-      "success": true,
-      "items": 5050,
-      "scannedAt": "2026-11-14T21:18:53Z"
+      "success": false,
+      "error": "rate limited (429, retry after 3516)"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
-      "success": true,
-      "items": 4601,
-      "scannedAt": "2026-11-15T00:18:51Z"
+      "success": false,
+      "error": "rate limited (429, retry after 3471)"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
-      "success": true,
-      "items": 4804,
-      "scannedAt": "2026-11-15T00:18:51Z"
+      "success": false,
+      "error": "rate limited (429, retry after 3427)"
     }
   ]
 }
