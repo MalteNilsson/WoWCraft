@@ -33,7 +33,7 @@ import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/typ
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
 import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, type SkillGapReason } from '@/lib/planner';
 import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
-import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
+import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
 import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, recipePurchase } from '@/lib/recipeCalc';
@@ -70,7 +70,18 @@ function parsePlannerVersion(value: string | null): string | null {
 
 const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
 const MIN_SALE_RATE_COOKIE = 'wowcraft-min-sale-rate';
+const HIDE_BOP_RECIPES_COOKIE = 'wowcraft-hide-bop-recipes';
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
+
+function readHideBopRecipes(): boolean {
+  if (typeof document === 'undefined') return false;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${HIDE_BOP_RECIPES_COOKIE}=([^;]*)`));
+  return match?.[1] === '1';
+}
+
+function writeHideBopRecipes(hide: boolean) {
+  document.cookie = `${HIDE_BOP_RECIPES_COOKIE}=${hide ? '1' : '0'}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
 
 function readMinSaleRatePercent(): number {
   if (typeof document === 'undefined') return DEFAULT_MIN_SALE_RATE_PERCENT;
@@ -82,6 +93,39 @@ function readMinSaleRatePercent(): number {
 
 function writeMinSaleRatePercent(percent: number) {
   document.cookie = `${MIN_SALE_RATE_COOKIE}=${percent}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function HideBopRecipeToggle({
+  enabled,
+  onChange,
+  accentOn,
+}: {
+  enabled: boolean;
+  onChange: (enabled: boolean) => void;
+  accentOn: boolean;
+}) {
+  return (
+    <div className="flex items-center justify-between gap-3">
+      <label className="text-xs leading-snug text-neutral-400" title="Skip crafts learned by using a recipe item that binds when picked up">
+        Hide BoP Recipe Items
+      </label>
+      <button
+        type="button"
+        onClick={() => onChange(!enabled)}
+        aria-pressed={enabled}
+        aria-label="Hide BoP Recipe Items"
+        className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${accentOn ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+          enabled ? (accentOn ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
+        }`}
+      >
+        <span
+          className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+            enabled ? 'translate-x-5' : 'translate-x-1'
+          }`}
+        />
+      </button>
+    </div>
+  );
 }
 
 function MinimumSaleRateSlider({
@@ -1182,6 +1226,7 @@ export default function ProfessionPlanner() {
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
   const [includeCurrencyRecipes, setIncludeCurrencyRecipes] = useState(false);
+  const [hideBopRecipeItems, setHideBopRecipeItems] = useState(false);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
@@ -1190,6 +1235,12 @@ export default function ProfessionPlanner() {
 
   useEffect(() => {
     setMinSaleRatePercent(readMinSaleRatePercent());
+    setHideBopRecipeItems(readHideBopRecipes());
+  }, []);
+
+  const updateHideBopRecipes = useCallback((hide: boolean) => {
+    setHideBopRecipeItems(hide);
+    writeHideBopRecipes(hide);
   }, []);
 
   const updateMinSaleRate = useCallback((percent: number) => {
@@ -1720,14 +1771,15 @@ export default function ProfessionPlanner() {
       priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
       includeCurrencyRecipes,
       selectedFaction,
-      minSaleRate
+      minSaleRate,
+      hideBopRecipeItems
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1755,19 +1807,19 @@ export default function ProfessionPlanner() {
   const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
   const sortedAll = useMemo(() => 
     [...recipes]
-      .filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction))
+      .filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
       .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b)), 
-    [recipes, materialInfo, includeCurrencyRecipes, selectedFaction]
+    [recipes, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction]
   );
 
   const filteredRecipes = useMemo(() => {
     if (view === 'all') {
       return searchTerm
-        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction))
+        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
         : sortedAll;
     }
     return [];
-  }, [view, searchTerm, fuse, sortedAll, materialInfo, includeCurrencyRecipes, selectedFaction]);
+  }, [view, searchTerm, fuse, sortedAll, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction]);
   
   // Store previous recipe to show during profession transitions
   // Why useMemo here?
@@ -2096,7 +2148,8 @@ const renderXTick = selected
       priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
       includeCurrencyRecipes,
       selectedFaction,
-      minSaleRate
+      minSaleRate,
+      hideBopRecipeItems
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -2133,7 +2186,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -2368,6 +2421,7 @@ const renderXTick = selected
           isRecipeObtainable(r, materialInfo) &&
           (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) &&
           !isWrongFactionRecipe(r, materialInfo, selectedFaction) &&
+          !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)) &&
           (!skipLimitedStock || !(
             r.source?.type === 'item' &&
             r.source.recipeItemId &&
@@ -2394,7 +2448,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -2489,7 +2543,8 @@ const renderXTick = selected
         priceSourcing === 'auction-house' ? (regionSaleRate ?? undefined) : undefined,
         includeCurrencyRecipes,
         selectedFaction,
-        minSaleRate
+        minSaleRate,
+        hideBopRecipeItems
       );
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
@@ -2516,7 +2571,7 @@ const renderXTick = selected
     return () => {
       cancelled = true;
     };
-  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
 
   // Open a profession at 1 → the furthest skill that still has a priced guide.
   useEffect(() => {
@@ -3153,6 +3208,7 @@ const renderXTick = selected
                               />
                             </button>
                           </div>
+                          <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
                           <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                         </div>
                       </motion.div>
@@ -3240,6 +3296,7 @@ const renderXTick = selected
                                     />
                                     </button>
                                 </div>
+                                <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
                                 <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                               </div>
                             </motion.div>
@@ -3384,6 +3441,8 @@ const renderXTick = selected
                       ? `Skill ${guideLimitTip.skill} through here has no craft at a ${minSaleRatePercent}% sale rate. Everything that raises skill in this stretch sells less often than that.`
                       : guideLimitTip.kind === 'no-recipe'
                       ? `No recipe raises skill through this stretch, starting at ${guideLimitTip.skill}.`
+                      : guideLimitTip.kind === 'bop'
+                      ? `Skill ${guideLimitTip.skill} through here only has crafts learned from Bind on Pickup recipe items.`
                       : guideLimitTip.kind === 'unpriced'
                       ? `No priced craft continues from skill ${guideLimitTip.skill}. The auction data does not cover this stretch.`
                       : selectedVersion === 'Forever'

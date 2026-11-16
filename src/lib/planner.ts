@@ -1,5 +1,5 @@
 import { Recipe, PriceMap } from "./types";
-import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, isRecipeObtainable, isCurrencyRecipe, isWrongFactionRecipe, type PriceSourcing } from "./recipeCalc";
+import { craftCost, expectedSkillUps, costPerSkillUp, expectedCraftsBetween, getRecipeCost, getEffectiveMinSkill, isRecipeObtainable, isCurrencyRecipe, isWrongFactionRecipe, isBopRecipeItem, type PriceSourcing } from "./recipeCalc";
 import type { MaterialInfo } from "./types";
 import type { RegionSaleRateMap } from "./regionDataLoader";
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from "./rodConstants";
@@ -122,7 +122,7 @@ const materialCraftItems = new Set([
 ]);
 
 
-export type SkillGapReason = 'sale-rate' | 'unpriced' | 'no-recipe';
+export type SkillGapReason = 'sale-rate' | 'unpriced' | 'no-recipe' | 'bop';
 
 export type PlanStep =
     | {
@@ -151,6 +151,9 @@ export function gapExplanation(reason: SkillGapReason, start: number, end: numbe
     }
     if (reason === 'unpriced') {
         return `No craft from ${start} to ${end} can be priced. The auction data does not cover a route through this stretch.`;
+    }
+    if (reason === 'bop') {
+        return `Every craft from ${start} to ${end} is learned from a Bind on Pickup recipe item.`;
     }
     return `No recipe raises skill from ${start} to ${end}.`;
 }
@@ -220,7 +223,8 @@ export function makeDynamicPlan(
     regionSaleRate?: RegionSaleRateMap,
     includeCurrencyRecipes: boolean = false,
     faction: string = 'Alliance',
-    minSaleRate: number = MIN_SALE_RATE_AH_MODE
+    minSaleRate: number = MIN_SALE_RATE_AH_MODE,
+    hideBopRecipeItems: boolean = false
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
@@ -370,7 +374,8 @@ export function makeDynamicPlan(
                 isSeasonalRecipe(r) ||
                 !isRecipeObtainable(r, materialInfo) ||
                 (!includeCurrencyRecipes && isCurrencyRecipe(r, materialInfo)) ||
-                isWrongFactionRecipe(r, materialInfo, faction)) {
+                isWrongFactionRecipe(r, materialInfo, faction) ||
+                (hideBopRecipeItems && isBopRecipeItem(r, materialInfo))) {
                 return false;
             }
 
@@ -645,7 +650,8 @@ export function makeDynamicPlan(
                     isSeasonalRecipe(r) ||
                     !isRecipeObtainable(r, materialInfo) ||
                     (!includeCurrencyRecipes && isCurrencyRecipe(r, materialInfo)) ||
-                    isWrongFactionRecipe(r, materialInfo, faction)) {
+                    isWrongFactionRecipe(r, materialInfo, faction) ||
+                    (hideBopRecipeItems && isBopRecipeItem(r, materialInfo))) {
                     return false;
                 }
 
@@ -1188,6 +1194,7 @@ type PlanArgs = {
     includeCurrencyRecipes: boolean;
     faction: string;
     minSaleRate: number;
+    hideBopRecipeItems: boolean;
 };
 
 /** Why no craft can raise this skill, or null when at least one craft can. */
@@ -1195,6 +1202,7 @@ function skillGapAt(skill: number, args: PlanArgs): SkillGapReason | null {
     let inWindow = false;
     let belowSaleRate = false;
     let aboveSaleRate = false;
+    let sawBop = false;
     for (const recipe of args.recipes) {
         if (ENCHANTING_ROD_SPELL_IDS.has(recipe.id) || ENGINEERING_TOOL_SPELL_IDS.has(recipe.id)) continue;
         const chance = expectedSkillUps(recipe, skill);
@@ -1209,6 +1217,10 @@ function skillGapAt(skill: number, args: PlanArgs): SkillGapReason | null {
             continue;
         }
         if (args.priceSourcing !== 'cost' && chance < MIN_SKILL_UP_CHANCE_PROFIT_MODE) continue;
+        if (args.hideBopRecipeItems && isBopRecipeItem(recipe, args.materialInfo)) {
+            sawBop = true;
+            continue;
+        }
         inWindow = true;
         if (args.priceSourcing === 'auction-house' && recipe.produces?.id) {
             const numAuctions = args.prices[recipe.produces.id]?.numAuctions;
@@ -1229,7 +1241,7 @@ function skillGapAt(skill: number, args: PlanArgs): SkillGapReason | null {
         }
         return null;
     }
-    if (!inWindow) return 'no-recipe';
+    if (!inWindow) return sawBop ? 'bop' : 'no-recipe';
     if (belowSaleRate && !aboveSaleRate) return 'sale-rate';
     return 'unpriced';
 }
@@ -1252,12 +1264,13 @@ export function makeSegmentedPlan(
     regionSaleRate?: RegionSaleRateMap,
     includeCurrencyRecipes: boolean = false,
     faction: string = 'Alliance',
-    minSaleRate: number = MIN_SALE_RATE_AH_MODE
+    minSaleRate: number = MIN_SALE_RATE_AH_MODE,
+    hideBopRecipeItems: boolean = false
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     const args: PlanArgs = {
         recipes, prices, materialInfo, profession, includeRecipeCost, skipLimitedStock,
         useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds,
-        priceSourcing, regionSaleRate, includeCurrencyRecipes, faction, minSaleRate,
+        priceSourcing, regionSaleRate, includeCurrencyRecipes, faction, minSaleRate, hideBopRecipeItems,
     };
     const runs: { start: number; end: number; reason: SkillGapReason | null }[] = [];
     let cursor = skill;
@@ -1283,7 +1296,7 @@ export function makeSegmentedPlan(
             run.start, run.end, recipes, prices, materialInfo, profession,
             includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel,
             optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate,
-            includeCurrencyRecipes, faction, minSaleRate
+            includeCurrencyRecipes, faction, minSaleRate, hideBopRecipeItems
         );
         const connected = planned.finalSkill >= run.end && planned.steps.some((step) => 'recipe' in step);
         if (connected) {

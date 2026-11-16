@@ -1,6 +1,7 @@
 # Post a Discord message when Malte pushes. Automatic price commits use the
 # Actions token, so they do not start this workflow, and the actor check
 # skips them if that ever changes.
+# The card includes the subject, message body, and changed paths.
 name: Discord push notice
 
 on:

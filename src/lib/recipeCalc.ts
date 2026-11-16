@@ -16,6 +16,12 @@ export function isBopMobDropRecipe(recipe: Recipe, materialInfo: Record<number, 
   return info?.bop === true && info?.mobDrop === true;
 }
 
+/** The recipe is learned by using an item that binds when picked up. */
+export function isBopRecipeItem(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): boolean {
+  if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return false;
+  return materialInfo[recipe.source.recipeItemId]?.bop === true;
+}
+
 /** Recipe items with no drop, vendor, quest, or container are not obtainable. */
 export function isRecipeObtainable(recipe: Recipe, materialInfo: Record<number, MaterialInfo>): boolean {
   if (recipe.source?.type !== 'item' || !recipe.source.recipeItemId) return true;
