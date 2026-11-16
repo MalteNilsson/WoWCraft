@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-16T16:12:38.564Z",
+  "timestamp": "2026-11-16T16:27:10.297Z",
   "totalRequests": 16,
   "successful": 15,
   "failed": 1,
@@ -43,9 +43,8 @@
     {
       "realm": "Forever RP US",
       "faction": "Alliance",
-      "success": true,
-      "items": 5896,
-      "scannedAt": "2026-11-16T13:17:41Z"
+      "success": false,
+      "error": "fetch failed"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -113,8 +112,9 @@
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
-      "success": false,
-      "error": "rate limited (429, retry after 3560)"
+      "success": true,
+      "items": 5217,
+      "scannedAt": "2026-11-16T12:18:50Z"
     }
   ]
 }
