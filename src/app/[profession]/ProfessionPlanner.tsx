@@ -71,6 +71,7 @@ function parsePlannerVersion(value: string | null): string | null {
 const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
 const MIN_SALE_RATE_COOKIE = 'wowcraft-min-sale-rate';
 const HIDE_BOP_RECIPES_COOKIE = 'wowcraft-hide-bop-recipes';
+const WORKING_OVERTIME_COOKIE = 'wowcraft-working-overtime';
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
 
 function readHideBopRecipes(): boolean {
@@ -83,6 +84,18 @@ function writeHideBopRecipes(hide: boolean) {
   document.cookie = `${HIDE_BOP_RECIPES_COOKIE}=${hide ? '1' : '0'}; Path=/; Max-Age=31536000; SameSite=Lax`;
 }
 
+function readWorkingOvertime(): number {
+  if (typeof document === 'undefined') return 0;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${WORKING_OVERTIME_COOKIE}=([^;]*)`));
+  const value = match ? Number(match[1]) : 0;
+  if (!Number.isInteger(value) || value < 0 || value > 5) return 0;
+  return value;
+}
+
+function writeWorkingOvertime(rank: number) {
+  document.cookie = `${WORKING_OVERTIME_COOKIE}=${rank}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
 function readMinSaleRatePercent(): number {
   if (typeof document === 'undefined') return DEFAULT_MIN_SALE_RATE_PERCENT;
   const match = document.cookie.match(new RegExp(`(?:^|; )${MIN_SALE_RATE_COOKIE}=([^;]*)`));
@@ -93,6 +106,45 @@ function readMinSaleRatePercent(): number {
 
 function writeMinSaleRatePercent(percent: number) {
   document.cookie = `${MIN_SALE_RATE_COOKIE}=${percent}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function WorkingOvertimeSlider({
+  rank,
+  onChange,
+  accent,
+}: {
+  rank: number;
+  onChange: (rank: number) => void;
+  accent: string;
+}) {
+  const bonus = rank * 4;
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between gap-2">
+        <span className="text-xs text-neutral-400">Working Overtime</span>
+        <span className="text-xs tabular-nums text-neutral-200">{rank}/5</span>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={5}
+        step={1}
+        value={rank}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="h-1.5 w-full cursor-pointer"
+        style={{ accentColor: accent }}
+        aria-valuemin={0}
+        aria-valuemax={5}
+        aria-valuenow={rank}
+        aria-label="Working Overtime rank"
+      />
+      <p className="mt-1 text-[10px] leading-snug text-neutral-500">
+        {rank === 0
+          ? 'Off. Each rank multiplies skill-up chance by 4%, up to 20% at rank 5. Chance cannot exceed 100%.'
+          : `Rank ${rank} multiplies skill-up chance by ${bonus}%, up to 100%. A craft still grants at most 1 skill point.`}
+      </p>
+    </div>
+  );
 }
 
 function HideBopRecipeToggle({
@@ -1227,6 +1279,7 @@ export default function ProfessionPlanner() {
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
   const [includeCurrencyRecipes, setIncludeCurrencyRecipes] = useState(false);
   const [hideBopRecipeItems, setHideBopRecipeItems] = useState(false);
+  const [workingOvertime, setWorkingOvertime] = useState(0);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
@@ -1236,11 +1289,18 @@ export default function ProfessionPlanner() {
   useEffect(() => {
     setMinSaleRatePercent(readMinSaleRatePercent());
     setHideBopRecipeItems(readHideBopRecipes());
+    setWorkingOvertime(readWorkingOvertime());
   }, []);
 
   const updateHideBopRecipes = useCallback((hide: boolean) => {
     setHideBopRecipeItems(hide);
     writeHideBopRecipes(hide);
+  }, []);
+
+  const updateWorkingOvertime = useCallback((rank: number) => {
+    const next = Math.min(5, Math.max(0, Math.round(rank)));
+    setWorkingOvertime(next);
+    writeWorkingOvertime(next);
   }, []);
 
   const updateMinSaleRate = useCallback((percent: number) => {
@@ -1772,14 +1832,15 @@ export default function ProfessionPlanner() {
       includeCurrencyRecipes,
       selectedFaction,
       minSaleRate,
-      hideBopRecipeItems
+      hideBopRecipeItems,
+      workingOvertime
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1872,10 +1933,10 @@ export default function ProfessionPlanner() {
     if (!selected || totalLevelUps <= 0) return 0;
     let sum = 0;
     for (let lvl = clampedLow; lvl < clampedHigh; lvl++) {
-      sum += expectedSkillUps(selected, lvl);
+      sum += expectedSkillUps(selected, lvl, workingOvertime);
     }
     return sum / totalLevelUps;
-  }, [selected, clampedLow, clampedHigh, totalLevelUps]);
+  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertime]);
 
   const avgAttempts = avgSuccessRate > 0 ? Math.ceil(1 / avgSuccessRate) : Infinity;
 
@@ -1892,10 +1953,10 @@ export default function ProfessionPlanner() {
     const end   = selected.difficulty.gray ?? start;
     const data  = [];
     for (let skill = start; skill <= end; skill++) {
-      data.push({ skill, chance: expectedSkillUps(selected, skill) });
+      data.push({ skill, chance: expectedSkillUps(selected, skill, workingOvertime) });
     }
     return data;
-  }, [selected]);
+  }, [selected, workingOvertime]);
 
   // drop the very first and last skill so we omit the edges
   const innerSkills  = probData.slice(1, -1).map(d => d.skill);
@@ -1981,8 +2042,8 @@ export default function ProfessionPlanner() {
   const expCrafts = useMemo(() => {
     if (!selected || totalLevelUps <= 0) return 0;
     // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
-    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty);
-  }, [selected, clampedLow, clampedHigh, totalLevelUps]);
+    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertime);
+  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertime]);
 
   useEffect(() => {
     if (!selected) {
@@ -2149,7 +2210,8 @@ const renderXTick = selected
       includeCurrencyRecipes,
       selectedFaction,
       minSaleRate,
-      hideBopRecipeItems
+      hideBopRecipeItems,
+      workingOvertime
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -2186,7 +2248,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -2432,7 +2494,7 @@ const renderXTick = selected
           !(priceSourcing === 'auction-house' && r.produces?.id && regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate))
         )
         .map(r => {
-          const crafts = expectedCraftsBetween(start, end, r.difficulty);
+          const crafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertime);
           const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
           const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
           const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
@@ -2448,7 +2510,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -2468,7 +2530,7 @@ const renderXTick = selected
       if ('recipe' in s) {
         const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
         const end = s.endSkill;
-        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty);
+        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertime);
         
         // Calculate cost for this step based on displayed crafts
         const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -2508,7 +2570,7 @@ const renderXTick = selected
       }),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, workingOvertime]);
 
   const pricesReady = !isLoadingPrices && pricesSettled;
   const [guideSkillLimit, setGuideSkillLimit] = useState<number | null>(null);
@@ -2544,7 +2606,8 @@ const renderXTick = selected
         includeCurrencyRecipes,
         selectedFaction,
         minSaleRate,
-        hideBopRecipeItems
+        hideBopRecipeItems,
+        workingOvertime
       );
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
@@ -2571,7 +2634,7 @@ const renderXTick = selected
     return () => {
       cancelled = true;
     };
-  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
 
   // Open a profession at 1 → the furthest skill that still has a priced guide.
   useEffect(() => {
@@ -2670,7 +2733,7 @@ const renderXTick = selected
       return { kind: 'disenchant', copper: items.reduce((sum, item) => sum + item.copper, 0), items };
     };
     const guideOption = (recipe: Recipe, start: number, end: number) => {
-      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty);
+      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty, workingOvertime);
       const eachCost = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
       const eachSpend = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession);
       const recipeCost = includeRecipeCost && recipe.source
@@ -2746,7 +2809,7 @@ const renderXTick = selected
       });
     }
     return steps;
-  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession]);
+  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession, workingOvertime]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -3208,6 +3271,7 @@ const renderXTick = selected
                               />
                             </button>
                           </div>
+                          <WorkingOvertimeSlider rank={workingOvertime} onChange={updateWorkingOvertime} accent={saleRateAccent} />
                           <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
                           <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                         </div>
@@ -3296,6 +3360,7 @@ const renderXTick = selected
                                     />
                                     </button>
                                 </div>
+                                <WorkingOvertimeSlider rank={workingOvertime} onChange={updateWorkingOvertime} accent={saleRateAccent} />
                                 <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
                                 <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
                               </div>
@@ -3808,7 +3873,7 @@ const renderXTick = selected
                           
                           // Calculate crafts needed for the displayed range (start to end)
                           // This ensures consistency with the Level-up Calculator
-                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty);
+                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty, workingOvertime);
                           
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
                           const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -4218,8 +4283,8 @@ const renderXTick = selected
                           // compute the screen coords
                           const lowX  = xScale(clampedLow);
                           const highX = xScale(clampedHigh);
-                          const lowY  = yScale(expectedSkillUps(selected, clampedLow));
-                          const highY = yScale(expectedSkillUps(selected, clampedHigh));
+                          const lowY  = yScale(expectedSkillUps(selected, clampedLow, workingOvertime));
+                          const highY = yScale(expectedSkillUps(selected, clampedHigh, workingOvertime));
                           const y0    = yScale(0);
 
                           return (

@@ -567,14 +567,24 @@ export function getItemCost(
  * Blizzard's linear formula:
  *
  *   chance = (G − X) / (G − Y)
+ *
+ * Working Overtime ranks 1–5 multiply that chance by 1.04–1.20. The result stays
+ * at most 1, so a craft never grants more than one skill point.
  */
-export function expectedSkillUps(r: Recipe, skill: number): number {
+export const WORKING_OVERTIME_BONUS_PER_RANK = 0.04;
+export const WORKING_OVERTIME_MAX_RANK = 5;
+
+export function applyWorkingOvertime(chance: number, rank = 0): number {
+  if (chance <= 0 || rank <= 0) return chance;
+  const steps = Math.min(WORKING_OVERTIME_MAX_RANK, Math.max(0, Math.round(rank)));
+  return Math.min(1, chance * (1 + WORKING_OVERTIME_BONUS_PER_RANK * steps));
+}
+
+export function expectedSkillUps(r: Recipe, skill: number, workingOvertime = 0): number {
   const Y = r.difficulty.yellow ?? 0;
   const G = r.difficulty.gray ?? Infinity;
-
-  if (skill < Y) return 1;
-  if (skill >= G) return 0;
-  return (G - skill) / (G - Y);
+  const chance = skill < Y ? 1 : skill >= G ? 0 : (G - skill) / (G - Y);
+  return applyWorkingOvertime(chance, workingOvertime);
 }
 
 /**
@@ -585,7 +595,8 @@ export function expectedSkillUps(r: Recipe, skill: number): number {
 export function expectedCraftsBetween(
   low: number,
   high: number,
-  d: Recipe['difficulty']
+  d: Recipe['difficulty'],
+  workingOvertime = 0
 ): number {
   const totalSkillUps = high - low;
   if (totalSkillUps <= 0) return 0;
@@ -596,7 +607,8 @@ export function expectedCraftsBetween(
   for (let lvl = low; lvl < high; lvl++) {
     const Y = d.yellow ?? 0;
     const G = d.gray ?? Infinity;
-    const p = (lvl < Y) ? 1 : (lvl >= G) ? 0 : (G - lvl) / (G - Y);
+    const base = (lvl < Y) ? 1 : (lvl >= G) ? 0 : (G - lvl) / (G - Y);
+    const p = applyWorkingOvertime(base, workingOvertime);
     
     if (p > 0) {
       sumOfReciprocals += 1 / p;
