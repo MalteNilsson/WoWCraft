@@ -1,7 +1,7 @@
 {
   "realmList": "anniversary",
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-18T01:31:48.059Z",
+  "timestamp": "2026-11-18T02:32:02.076Z",
   "totalRequests": 8,
   "successful": 8,
   "failed": 0,
@@ -10,7 +10,7 @@
       "realm": "Thunderstrike",
       "faction": "Alliance",
       "success": true,
-      "timestamp": "2026-11-17T21:52:48Z"
+      "timestamp": "2026-11-18T01:15:23Z"
     },
     {
       "realm": "Thunderstrike",
@@ -52,7 +52,7 @@
       "realm": "Nightslayer",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-17T22:16:53Z"
+      "timestamp": "2026-11-18T01:29:19Z"
     }
   ]
 }
