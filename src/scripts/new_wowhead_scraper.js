@@ -8,6 +8,7 @@ import fsSync from 'fs';
 import path from 'path';
 import { createHash } from 'crypto';
 import fetch from 'node-fetch';
+import { WOWHEAD_USER_AGENT } from './wowheadFetchHeaders.js';
 import { fileURLToPath } from 'url';
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
@@ -193,6 +194,7 @@ const PROFESSIONS = [
   'engineering',
   'jewelcrafting',
   'leatherworking',
+  'mining',
   'tailoring',
 ];
 
@@ -602,6 +604,16 @@ function parseMaterialItemInfo(html, itemId, wowheadPath) {
   // g_pageInfo for name
   const pageInfoMatch = html.match(/g_pageInfo\s*=\s*\{[^}]*"name"\s*:\s*"([^"]+)"/);
   if (pageInfoMatch) result.name = pageInfoMatch[1];
+  if (result.name.startsWith('Item #')) {
+    const ogTitle = html.match(/property="og:title"\s+content="([^"]+)"/);
+    const title = html.match(/<title>([^<]+)<\/title>/);
+    const fromTitle = ogTitle?.[1] || title?.[1]?.split(' - ')[0];
+    if (fromTitle) result.name = fromTitle.replace(/&amp;/g, '&').trim();
+  }
+  if (!result.icon) {
+    const iconSrc = html.match(/\/icons\/large\/([a-z0-9_]+)\.jpg/i);
+    if (iconSrc) result.icon = iconSrc[1];
+  }
 
   // WH.Gatherer.addData(3, 5, {...}) - item data by id
   const addDataIdx = html.indexOf('WH.Gatherer.addData(3, 5, ');
@@ -1010,8 +1022,20 @@ async function main() {
     const producedByRecipe = new Map(); // itemId -> recipe (for createdBy)
     const itemNamesFromRecipes = new Map(); // itemId -> name (fallback when WoWhead parse fails)
     const itemBase = ITEM_BASE_BY_DIR[versionDir];
+    const materialsPath = path.join(materialsDir, versionDir, 'materials.json');
+    let existingMaterials = {};
+    if (requestedProfession) {
+      try {
+        existingMaterials = JSON.parse(fsSync.readFileSync(materialsPath, 'utf-8'));
+      } catch {
+        existingMaterials = {};
+      }
+    }
+    const sourceProfessions = requestedProfession
+      ? [requestedProfession.toLowerCase()]
+      : PROFESSIONS;
 
-    for (const profession of PROFESSIONS) {
+    for (const profession of sourceProfessions) {
       if (!versionDirIncludesProfession(versionDir, profession)) continue;
       let recipes;
       try {
@@ -1037,11 +1061,20 @@ async function main() {
       }
     }
 
-    const materialIds = [...uniqueMaterialIds];
-    if (materialIds.length === 0) continue;
+    let materialIds = [...uniqueMaterialIds];
+    if (requestedProfession) {
+      materialIds = materialIds.filter((itemId) => {
+        const current = existingMaterials[String(itemId)];
+        const iconOk = !!current?.icon && /^[a-z0-9_]+$/i.test(current.icon);
+        if (!current?.name || current.name.startsWith('Item #') || !iconOk) return true;
+        const recipe = producedByRecipe.get(itemId);
+        return !!recipe && !current.createdBy;
+      });
+    }
+    if (uniqueMaterialIds.size === 0) continue;
 
     console.log(`\nFetching ${materialIds.length} material item pages for ${versionDir} (${CONCURRENCY} concurrent)...`);
-    const materials = {};
+    const materials = requestedProfession ? { ...existingMaterials } : {};
     const wowheadPath = WOWHEAD_PATH_BY_DIR[versionDir];
     let materialCount = 0;
 
@@ -1126,7 +1159,22 @@ async function main() {
 
     await runWithConcurrency(materialTasks);
 
-    const materialsPath = path.join(materialsDir, versionDir, 'materials.json');
+    if (requestedProfession) {
+      for (const [itemId, recipe] of producedByRecipe) {
+        const key = String(itemId);
+        const entry = materials[key];
+        if (!entry || entry.createdBy) continue;
+        const qty = recipe.produces?.quantity ?? 1;
+        entry.createdBy = {
+          spellId: recipe.id,
+          spellName: recipe.name || recipe.produces?.name || '',
+          reagents: { ...(recipe.materials || {}) },
+          minCount: qty,
+          maxCount: qty,
+        };
+      }
+    }
+
     await fs.mkdir(path.dirname(materialsPath), { recursive: true });
     await fs.writeFile(materialsPath, JSON.stringify(materials, null, 2));
     console.log(`Saved ${Object.keys(materials).length} materials → ${materialsPath}`);

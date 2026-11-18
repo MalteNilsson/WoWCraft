@@ -1190,16 +1190,60 @@
     "vendorPrice": null,
     "itemLevel": 15
   },
-  "2772": {
-    "name": "Item #2772",
+  "2770": {
+    "name": "Copper Ore",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_copper_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=2770",
+    "vendorPrice": null,
+    "itemLevel": 10
+  },
+  "2771": {
+    "name": "Tin Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=2771",
+    "vendorPrice": null,
+    "itemLevel": 20
+  },
+  "2772": {
+    "name": "Iron Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_iron_01",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=2772",
     "vendorPrice": null,
     "itemLevel": 30
+  },
+  "2775": {
+    "name": "Silver Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_stone_16",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=2775",
+    "vendorPrice": null,
+    "itemLevel": 10
+  },
+  "2776": {
+    "name": "Gold Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_copper_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=2776",
+    "vendorPrice": null,
+    "itemLevel": 25
   },
   "2835": {
     "name": "Item #2835",
@@ -1235,37 +1279,65 @@
     "itemLevel": 25
   },
   "2840": {
-    "name": "Item #2840",
+    "name": "Copper Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_02",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=2840",
     "vendorPrice": null,
-    "itemLevel": 10
+    "itemLevel": 10,
+    "createdBy": {
+      "spellId": 2657,
+      "spellName": "Smelt Copper",
+      "reagents": {
+        "2770": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "2841": {
-    "name": "Item #2841",
+    "name": "Bronze Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_bronze",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=2841",
     "vendorPrice": null,
-    "itemLevel": 20
+    "itemLevel": 20,
+    "createdBy": {
+      "spellId": 2659,
+      "spellName": "Smelt Bronze",
+      "reagents": {
+        "2840": 1,
+        "3576": 1
+      },
+      "minCount": 2,
+      "maxCount": 2
+    }
   },
   "2842": {
-    "name": "Item #2842",
+    "name": "Silver Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_01",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=2842",
     "vendorPrice": null,
-    "itemLevel": 10
+    "itemLevel": 10,
+    "createdBy": {
+      "spellId": 2658,
+      "spellName": "Smelt Silver",
+      "reagents": {
+        "2775": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "2844": {
     "name": "Item #2844",
@@ -2600,34 +2672,63 @@
     }
   },
   "3575": {
-    "name": "Item #3575",
+    "name": "Iron Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_iron",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=3575",
     "vendorPrice": null,
-    "itemLevel": 30
+    "itemLevel": 30,
+    "createdBy": {
+      "spellId": 3307,
+      "spellName": "Smelt Iron",
+      "reagents": {
+        "2772": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "3576": {
+    "name": "Tin Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_05",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=3576",
+    "vendorPrice": null,
+    "itemLevel": 20,
+    "createdBy": {
+      "spellId": 3304,
+      "spellName": "Smelt Tin",
+      "reagents": {
+        "2771": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3577": {
-    "name": "Item #3577",
+    "name": "Gold Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_03",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=3577",
     "vendorPrice": null,
     "itemLevel": 30,
     "createdBy": {
-      "spellId": 11479,
-      "spellName": "Transmute: Iron to Gold",
+      "spellId": 3308,
+      "spellName": "Smelt Gold",
       "reagents": {
-        "3575": 1
+        "2776": 1
       },
-      "minCount": 0,
-      "maxCount": 0
+      "minCount": 1,
+      "maxCount": 1
     }
   },
   "3719": {
@@ -3293,38 +3394,68 @@
       "maxCount": 1
     }
   },
-  "3858": {
-    "name": "Item #3858",
+  "3857": {
+    "name": "Coal",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=3857",
+    "vendorPrice": null,
+    "itemLevel": 30
+  },
+  "3858": {
+    "name": "Mithril Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_mithril_02",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=3858",
     "vendorPrice": null,
     "itemLevel": 40
   },
   "3859": {
-    "name": "Item #3859",
+    "name": "Steel Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_steel",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=3859",
     "vendorPrice": null,
-    "itemLevel": 35
+    "itemLevel": 35,
+    "createdBy": {
+      "spellId": 3569,
+      "spellName": "Smelt Steel",
+      "reagents": {
+        "3575": 1,
+        "3857": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3860": {
-    "name": "Item #3860",
+    "name": "Mithril Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_06",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=3860",
     "vendorPrice": null,
-    "itemLevel": 40
+    "itemLevel": 40,
+    "createdBy": {
+      "spellId": 10097,
+      "spellName": "Smelt Mithril",
+      "reagents": {
+        "3858": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3864": {
     "name": "Item #3864",
@@ -6932,23 +7063,23 @@
     }
   },
   "6037": {
-    "name": "Item #6037",
+    "name": "Truesilver Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_08",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=6037",
     "vendorPrice": null,
     "itemLevel": 50,
     "createdBy": {
-      "spellId": 11480,
-      "spellName": "Transmute: Mithril to Truesilver",
+      "spellId": 10098,
+      "spellName": "Smelt Truesilver",
       "reagents": {
-        "3860": 1
+        "7911": 1
       },
-      "minCount": 0,
-      "maxCount": 0
+      "minCount": 1,
+      "maxCount": 1
     }
   },
   "6040": {
@@ -9397,6 +9528,17 @@
     "link": "https://www.wowhead.com/classic/item=7910",
     "vendorPrice": null,
     "itemLevel": 50
+  },
+  "7911": {
+    "name": "Truesilver Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_truesilver_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=7911",
+    "vendorPrice": null,
+    "itemLevel": 40
   },
   "7912": {
     "name": "Item #7912",
@@ -13795,12 +13937,12 @@
     }
   },
   "10620": {
-    "name": "Item #10620",
+    "name": "Thorium Ore",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_thorium_02",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=10620",
     "vendorPrice": null,
     "itemLevel": 40
@@ -14524,16 +14666,36 @@
     "vendorPrice": null,
     "itemLevel": 30
   },
-  "11371": {
-    "name": "Item #11371",
+  "11370": {
+    "name": "Dark Iron Ore",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
-    "link": "https://www.wowhead.com/classic/item=11371",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_mithril_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=11370",
     "vendorPrice": null,
     "itemLevel": 50
+  },
+  "11371": {
+    "name": "Dark Iron Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_mithril",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=11371",
+    "vendorPrice": null,
+    "itemLevel": 50,
+    "createdBy": {
+      "spellId": 14891,
+      "spellName": "Smelt Dark Iron",
+      "reagents": {
+        "11370": 8
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "11382": {
     "name": "Item #11382",
@@ -14821,36 +14983,35 @@
     }
   },
   "12359": {
-    "name": "Item #12359",
+    "name": "Thorium Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_07",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=12359",
     "vendorPrice": null,
-    "itemLevel": 50
+    "itemLevel": 50,
+    "createdBy": {
+      "spellId": 16153,
+      "spellName": "Smelt Thorium",
+      "reagents": {
+        "10620": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "12360": {
-    "name": "Item #12360",
+    "name": "Arcanite Bar",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_misc_stonetablet_05",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=12360",
     "vendorPrice": null,
-    "itemLevel": 55,
-    "createdBy": {
-      "spellId": 17187,
-      "spellName": "Transmute: Arcanite",
-      "reagents": {
-        "12359": 1,
-        "12363": 1
-      },
-      "minCount": 0,
-      "maxCount": 0
-    }
+    "itemLevel": 55
   },
   "12361": {
     "name": "Item #12361",
@@ -20149,12 +20310,12 @@
     }
   },
   "17010": {
-    "name": "Item #17010",
+    "name": "Fiery Core",
     "quality": 1,
-    "class": "",
-    "subclass": "",
-    "icon": "",
-    "slot": "",
+    "class": "15",
+    "subclass": "1",
+    "icon": "spell_fire_flamebolt",
+    "slot": "0",
     "link": "https://www.wowhead.com/classic/item=17010",
     "vendorPrice": null,
     "itemLevel": 60
@@ -20450,6 +20611,29 @@
         "2605": 4,
         "4291": 1,
         "4305": 5
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "17771": {
+    "name": "Elementium Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_thorium",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=17771",
+    "vendorPrice": null,
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 22967,
+      "spellName": "Smelt Elementium",
+      "reagents": {
+        "12360": 10,
+        "17010": 1,
+        "18562": 1,
+        "18567": 3
       },
       "minCount": 1,
       "maxCount": 1
@@ -20973,6 +21157,28 @@
     "link": "https://www.wowhead.com/classic/item=18512",
     "vendorPrice": null,
     "itemLevel": 55
+  },
+  "18562": {
+    "name": "Elementium Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_stone_sharpeningstone_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=18562",
+    "vendorPrice": null,
+    "itemLevel": 60
+  },
+  "18567": {
+    "name": "Elemental Flux",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "spell_frost_fireresistancetotem",
+    "slot": "0",
+    "link": "https://www.wowhead.com/classic/item=18567",
+    "vendorPrice": null,
+    "itemLevel": 60
   },
   "18587": {
     "name": "Item #18587",

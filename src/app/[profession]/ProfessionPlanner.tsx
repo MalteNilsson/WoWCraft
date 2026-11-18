@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useCallback, type ReactNode } from 'react';
+import { useState, useMemo, useEffect, useLayoutEffect, useRef, useCallback, type ReactNode } from 'react';
 import { AdSlot, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 import { createPortal } from 'react-dom';
 // Vanilla recipes
@@ -31,12 +31,12 @@ import foreverTailoring from '@/data/recipes/forever/tailoring.json';
 import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, type SkillGapReason } from '@/lib/planner';
+import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, skillUpChanceFloor, type SkillGapReason } from '@/lib/planner';
 import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, recipePurchase } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -70,9 +70,13 @@ function parsePlannerVersion(value: string | null): string | null {
 
 const ANNIVERSARY_REALMS = ['Thunderstrike', 'Spineshatter', 'Dreamscythe', 'Nightslayer'];
 const MIN_SALE_RATE_COOKIE = 'wowcraft-min-sale-rate';
+const MIN_SKILL_CHANCE_COOKIE = 'wowcraft-min-skill-chance';
+const CRAFT_REAGENTS_COOKIE = 'wowcraft-craft-reagents';
+const EXTRA_PROFESSIONS_COOKIE = 'wowcraft-extra-professions';
 const HIDE_BOP_RECIPES_COOKIE = 'wowcraft-hide-bop-recipes';
 const WORKING_OVERTIME_COOKIE = 'wowcraft-working-overtime';
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
+const DEFAULT_MIN_SKILL_CHANCE_PERCENT = 10;
 
 function readHideBopRecipes(): boolean {
   if (typeof document === 'undefined') return false;
@@ -108,6 +112,97 @@ function writeMinSaleRatePercent(percent: number) {
   document.cookie = `${MIN_SALE_RATE_COOKIE}=${percent}; Path=/; Max-Age=31536000; SameSite=Lax`;
 }
 
+function readMinSkillChancePercent() {
+  if (typeof document === 'undefined') return DEFAULT_MIN_SKILL_CHANCE_PERCENT;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${MIN_SKILL_CHANCE_COOKIE}=([^;]*)`));
+  if (!match) return DEFAULT_MIN_SKILL_CHANCE_PERCENT;
+  const value = Number(match[1]);
+  if (!Number.isInteger(value) || value < 0 || value > 100) return DEFAULT_MIN_SKILL_CHANCE_PERCENT;
+  return value;
+}
+
+function writeMinSkillChancePercent(percent: number) {
+  document.cookie = `${MIN_SKILL_CHANCE_COOKIE}=${percent}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function readCraftReagents() {
+  if (typeof document === 'undefined') return false;
+  return document.cookie.split('; ').some((part) => part === `${CRAFT_REAGENTS_COOKIE}=1`);
+}
+
+function writeCraftReagents(enabled: boolean) {
+  document.cookie = `${CRAFT_REAGENTS_COOKIE}=${enabled ? '1' : '0'}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function readExtraProfessions() {
+  if (typeof document === 'undefined') return [] as string[];
+  const match = document.cookie.match(new RegExp(`(?:^|; )${EXTRA_PROFESSIONS_COOKIE}=([^;]*)`));
+  if (!match) return [] as string[];
+  const allowed = new Set([...professions, 'Mining']);
+  const names = decodeURIComponent(match[1]).split(',').map((name) => name.trim()).filter((name) => allowed.has(name));
+  return [...new Set(names)];
+}
+
+function writeExtraProfessions(names: string[]) {
+  document.cookie = `${EXTRA_PROFESSIONS_COOKIE}=${encodeURIComponent(names.join(','))}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function SettingsSection({ title, accentClass, children }: { title: string; accentClass: string; children: ReactNode }) {
+  return (
+    <section className="space-y-3 border-t border-white/10 pt-3 first:border-t-0 first:pt-0">
+      <h3 className={`text-[11px] font-semibold uppercase tracking-wider ${accentClass}`}>{title}</h3>
+      <div className="space-y-3">{children}</div>
+    </section>
+  );
+}
+
+function SettingsToggle({
+  label,
+  hint,
+  enabled,
+  onChange,
+  accentOn,
+  featured = false,
+}: {
+  label: string;
+  hint: string;
+  enabled: boolean;
+  onChange: (enabled: boolean) => void;
+  accentOn: boolean;
+  featured?: boolean;
+}) {
+  return (
+    <div className={`flex items-start justify-between gap-3 ${featured ? `rounded-md border px-2.5 py-2 ${accentOn ? 'border-[#1fb5f7]/45 bg-[#1fb5f7]/10' : 'border-yellow-400/45 bg-yellow-400/10'}` : ''}`}>
+      <div className="min-w-0">
+        <div className="flex items-center gap-1.5">
+          {featured && (
+            <svg viewBox="0 0 16 16" aria-hidden="true" className={`h-3.5 w-3.5 shrink-0 ${accentOn ? 'text-[#1fb5f7]' : 'text-yellow-400'}`}>
+              <path fill="currentColor" d="M8 1.15l1.72 3.72 4.05.5-3.02 2.78.82 3.98L8 10.16 4.43 12.13l.82-3.98L2.23 5.37l4.05-.5L8 1.15z" />
+            </svg>
+          )}
+          <div className="text-xs font-medium text-neutral-100">{label}</div>
+        </div>
+        <p className="mt-0.5 text-xs leading-snug text-neutral-300">{hint}</p>
+      </div>
+      <button
+        type="button"
+        onClick={() => onChange(!enabled)}
+        aria-pressed={enabled}
+        aria-label={label}
+        className={`relative mt-0.5 inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${accentOn ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
+          enabled ? (accentOn ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-white/15'
+        }`}
+      >
+        <span
+          className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
+            enabled ? 'translate-x-5' : 'translate-x-1'
+          }`}
+        />
+      </button>
+    </div>
+  );
+}
+
 function WorkingOvertimeSlider({
   rank,
   onChange,
@@ -121,8 +216,8 @@ function WorkingOvertimeSlider({
   return (
     <div>
       <div className="mb-1 flex items-center justify-between gap-2">
-        <span className="text-xs text-neutral-400">Working Overtime</span>
-        <span className="text-xs tabular-nums text-neutral-200">{rank}/5</span>
+        <span className="text-xs font-medium text-neutral-100">Working Overtime</span>
+        <span className="text-xs font-medium tabular-nums" style={{ color: accent }}>{rank}/5</span>
       </div>
       <input
         type="range"
@@ -138,7 +233,7 @@ function WorkingOvertimeSlider({
         aria-valuenow={rank}
         aria-label="Working Overtime rank"
       />
-      <p className="mt-1 text-[10px] leading-snug text-neutral-500">
+      <p className="mt-1 text-xs leading-snug text-neutral-300">
         {rank === 0
           ? 'Off. Each rank multiplies skill-up chance by 4%, up to 20% at rank 5. Chance cannot exceed 100%.'
           : `Rank ${rank} multiplies skill-up chance by ${bonus}%, up to 100%. A craft still grants at most 1 skill point.`}
@@ -147,35 +242,263 @@ function WorkingOvertimeSlider({
   );
 }
 
-function HideBopRecipeToggle({
-  enabled,
+function ExtraProfessionsPicker({
+  options,
+  selected,
   onChange,
-  accentOn,
+  accent,
 }: {
-  enabled: boolean;
-  onChange: (enabled: boolean) => void;
-  accentOn: boolean;
+  options: string[];
+  selected: string[];
+  onChange: (names: string[]) => void;
+  accent: string;
 }) {
+  const chosen = new Set(selected);
   return (
-    <div className="flex items-center justify-between gap-3">
-      <label className="text-xs leading-snug text-neutral-400" title="Skip crafts learned by using a recipe item that binds when picked up">
-        Hide BoP Recipe Items
-      </label>
-      <button
-        type="button"
-        onClick={() => onChange(!enabled)}
-        aria-pressed={enabled}
-        aria-label="Hide BoP Recipe Items"
-        className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${accentOn ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-          enabled ? (accentOn ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-        }`}
-      >
-        <span
-          className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-            enabled ? 'translate-x-5' : 'translate-x-1'
-          }`}
+    <div className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-2">
+      <div className="text-xs font-medium text-neutral-100">Professions you have</div>
+      <p className="mt-0.5 text-xs leading-snug text-neutral-300">
+        Smelting and other crafts from these professions can supply materials.
+      </p>
+      <div className="mt-2 grid grid-cols-2 gap-x-2 gap-y-1.5">
+        {options.map((name) => (
+          <label key={name} className="flex min-w-0 items-center gap-2 text-xs text-neutral-200">
+            <input
+              type="checkbox"
+              checked={chosen.has(name)}
+              onChange={() => {
+                const next = chosen.has(name) ? selected.filter((item) => item !== name) : [...selected, name];
+                onChange(next);
+              }}
+              className="h-3.5 w-3.5 shrink-0"
+              style={{ accentColor: accent }}
+            />
+            <span className="truncate">{name}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function AdvancedSettingsControls({
+  accentOn,
+  accent,
+  includeRecipeCost,
+  onIncludeRecipeCost,
+  useMarketValue,
+  onUseMarketValue,
+  craftReagents,
+  onCraftReagents,
+  extraProfessions,
+  extraProfessionOptions,
+  onExtraProfessions,
+  includeCurrencyRecipes,
+  onIncludeCurrencyRecipes,
+  hideBopRecipeItems,
+  onHideBopRecipeItems,
+  workingOvertime,
+  onWorkingOvertime,
+  minSaleRatePercent,
+  onMinSaleRate,
+  minSkillChancePercent,
+  onMinSkillChance,
+  onWideChange,
+}: {
+  accentOn: boolean;
+  accent: string;
+  includeRecipeCost: boolean;
+  onIncludeRecipeCost: (enabled: boolean) => void;
+  useMarketValue: boolean;
+  onUseMarketValue: (enabled: boolean) => void;
+  craftReagents: boolean;
+  onCraftReagents: (enabled: boolean) => void;
+  extraProfessions: string[];
+  extraProfessionOptions: string[];
+  onExtraProfessions: (names: string[]) => void;
+  includeCurrencyRecipes: boolean;
+  onIncludeCurrencyRecipes: (enabled: boolean) => void;
+  hideBopRecipeItems: boolean;
+  onHideBopRecipeItems: (enabled: boolean) => void;
+  workingOvertime: number;
+  onWorkingOvertime: (rank: number) => void;
+  minSaleRatePercent: number;
+  onMinSaleRate: (percent: number) => void;
+  minSkillChancePercent: number;
+  onMinSkillChance: (percent: number) => void;
+  onWideChange: (wide: boolean) => void;
+}) {
+  const accentClass = accentOn ? 'text-[#1fb5f7]' : 'text-yellow-400';
+  const measureRef = useRef<HTMLDivElement>(null);
+  const [wide, setWide] = useState(false);
+  const [splitAfter, setSplitAfter] = useState(1);
+
+  const renderSections = () => [
+    <div key="craft" className="space-y-3">
+      <SettingsToggle
+        label="Craft Your Reagents"
+        hint="Create materials such as bolts of cloth from sub-materials self-contained in the relevant profession."
+        enabled={craftReagents}
+        onChange={onCraftReagents}
+        accentOn={accentOn}
+        featured
+      />
+      {craftReagents && (
+        <ExtraProfessionsPicker
+          options={extraProfessionOptions}
+          selected={extraProfessions}
+          onChange={onExtraProfessions}
+          accent={accent}
         />
-      </button>
+      )}
+    </div>,
+    <SettingsSection key="costs" title="Costs" accentClass={accentClass}>
+      <SettingsToggle
+        label="Include Recipe Cost"
+        hint="Add the price of learning each recipe to the route."
+        enabled={includeRecipeCost}
+        onChange={onIncludeRecipeCost}
+        accentOn={accentOn}
+      />
+      <SettingsToggle
+        label="Use 14-day Rolling Average"
+        hint="Price items with the 14-day average instead of the cheapest current listing."
+        enabled={useMarketValue}
+        onChange={onUseMarketValue}
+        accentOn={accentOn}
+      />
+    </SettingsSection>,
+    <SettingsSection key="route" title="Route" accentClass={accentClass}>
+      <SettingsToggle
+        label="Include Currency Recipes"
+        hint="Allow recipes that cost a token or other currency."
+        enabled={includeCurrencyRecipes}
+        onChange={onIncludeCurrencyRecipes}
+        accentOn={accentOn}
+      />
+      <SettingsToggle
+        label="Hide BoP Recipe Items"
+        hint="Skip crafts learned from a Bind on Pickup recipe item."
+        enabled={hideBopRecipeItems}
+        onChange={onHideBopRecipeItems}
+        accentOn={accentOn}
+      />
+    </SettingsSection>,
+    <SettingsSection key="skill" title="Skill-ups" accentClass={accentClass}>
+      {accentOn && (
+        <WorkingOvertimeSlider rank={workingOvertime} onChange={onWorkingOvertime} accent={accent} />
+      )}
+      <MinimumSkillChanceSlider
+        percent={minSkillChancePercent}
+        onChange={onMinSkillChance}
+        accent={accent}
+        countsOvertime={accentOn}
+      />
+    </SettingsSection>,
+    <SettingsSection key="auction" title="Auction House" accentClass={accentClass}>
+      <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={onMinSaleRate} accent={accent} />
+    </SettingsSection>,
+  ];
+
+  useLayoutEffect(() => {
+    const root = measureRef.current;
+    if (!root) return;
+    const measure = () => {
+      if (root.getClientRects().length === 0) return;
+      const top = root.getBoundingClientRect().top;
+      const available = window.innerHeight - top - 20;
+      const children = Array.from(root.children) as HTMLElement[];
+      const heights = children.map((child) => {
+        const style = getComputedStyle(child);
+        return child.offsetHeight + parseFloat(style.marginTop || '0') + parseFloat(style.marginBottom || '0');
+      });
+      const total = heights.reduce((sum, height) => sum + height, 0);
+      const columnWidth = root.offsetWidth;
+      const wideWidth = columnWidth * 2 + 16 + 24;
+      const needsWide = total > available && wideWidth <= window.innerWidth - 16 && heights.length > 1;
+      let used = 0;
+      let nextSplit = 1;
+      let bestDiff = Number.POSITIVE_INFINITY;
+      for (let index = 0; index < heights.length - 1; index += 1) {
+        used += heights[index] ?? 0;
+        const diff = Math.abs(used - (total - used));
+        if (diff < bestDiff) {
+          bestDiff = diff;
+          nextSplit = index + 1;
+        }
+      }
+      setWide(needsWide);
+      onWideChange(needsWide);
+      setSplitAfter(nextSplit);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(root);
+    window.addEventListener('resize', measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, [accentOn, craftReagents, extraProfessionOptions, hideBopRecipeItems, minSaleRatePercent, minSkillChancePercent, onWideChange, workingOvertime]);
+
+  const sections = renderSections();
+  const left = wide ? sections.slice(0, splitAfter) : sections;
+  const right = wide ? sections.slice(splitAfter) : [];
+
+  return (
+    <div className="relative">
+      <div ref={measureRef} inert aria-hidden className="invisible pointer-events-none absolute left-0 top-0 -z-10 w-[18.5rem] space-y-3">
+        {renderSections()}
+      </div>
+      <div className={wide ? 'flex items-start' : ''}>
+        <div className="w-[18.5rem] shrink-0 space-y-3">{left}</div>
+        {wide && (
+          <div className="ml-4 w-[18.5rem] shrink-0 space-y-3 border-l border-white/10 pl-4">{right}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function MinimumSkillChanceSlider({
+  percent,
+  onChange,
+  accent,
+  countsOvertime,
+}: {
+  percent: number;
+  onChange: (percent: number) => void;
+  accent: string;
+  countsOvertime: boolean;
+}) {
+  const floorNote = percent > 0 && percent < 10
+    ? ' Vendor, Disenchanting, and Auction House still skip anything under 10%.'
+    : '';
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between gap-2">
+        <span className="text-xs font-medium text-neutral-100">Minimum Skill-up Chance</span>
+        <span className="text-xs font-medium tabular-nums" style={{ color: accent }}>{percent}%</span>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={100}
+        step={1}
+        value={percent}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="h-1.5 w-full cursor-pointer"
+        style={{ accentColor: accent }}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percent}
+        aria-label="Minimum skill-up chance"
+      />
+      <p className="mt-1 text-xs leading-snug text-neutral-300">
+        {percent === 0
+          ? 'Off for material cost. Vendor, Disenchanting, and Auction House still skip crafts under 10%.'
+          : `Skip a craft once its chance of a skill point falls below ${percent}%.${countsOvertime ? ' Working Overtime counts.' : ''}${floorNote}`}
+      </p>
     </div>
   );
 }
@@ -192,8 +515,8 @@ function MinimumSaleRateSlider({
   return (
     <div>
       <div className="mb-1 flex items-center justify-between gap-2">
-        <span className="text-xs text-neutral-400">Minimum Sale Rate</span>
-        <span className="text-xs tabular-nums text-neutral-200">{percent}%</span>
+        <span className="text-xs font-medium text-neutral-100">Minimum Sale Rate</span>
+        <span className="text-xs font-medium tabular-nums" style={{ color: accent }}>{percent}%</span>
       </div>
       <input
         type="range"
@@ -209,7 +532,7 @@ function MinimumSaleRateSlider({
         aria-valuenow={percent}
         aria-label="Minimum sale rate"
       />
-      <p className="mt-1 text-[10px] leading-snug text-neutral-500">Auction House mode skips crafts below this chance of selling.</p>
+      <p className="mt-1 text-xs leading-snug text-neutral-300">Auction House mode skips crafts below this chance of selling.</p>
     </div>
   );
 }
@@ -287,6 +610,22 @@ function versionRingClass(version: string): string {
   if (version === 'The Burning Crusade') return 'shadow-[inset_0_0_0_1px_rgba(16,185,129,0.55)]';
   if (version === 'Forever') return 'shadow-[inset_0_0_0_1px_rgba(31,181,247,0.55)]';
   return '';
+}
+
+function advancedButtonClass(version: string, open: boolean): string {
+  if (version === 'The Burning Crusade') {
+    return open
+      ? 'border-emerald-400 bg-emerald-500/20 text-emerald-200'
+      : 'border-emerald-500/60 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20';
+  }
+  if (version === 'Forever') {
+    return open
+      ? 'border-[#1fb5f7] bg-[#1fb5f7]/20 text-[#d7f3ff]'
+      : 'border-[#1fb5f7]/65 bg-[#1fb5f7]/10 text-[#8ad9fb] hover:bg-[#1fb5f7]/20';
+  }
+  return open
+    ? 'border-yellow-300 bg-yellow-400/20 text-yellow-100'
+    : 'border-yellow-400/60 bg-yellow-400/10 text-yellow-200 hover:bg-yellow-400/20';
 }
 
 const FOREVER_SOD_SPELL_IDS = new Set<number>(foreverSodSpellIds);
@@ -524,14 +863,6 @@ function CostBox({ copper, className = '' }: { copper: number; className?: strin
       <CompactMoney copper={copper} />
     </span>
   );
-}
-
-function skillPointClass(recipe: Recipe, skill: number) {
-  const chance = expectedSkillUps(recipe, skill);
-  if (chance >= 1) return 'text-orange-400';
-  if (chance <= 0) return 'text-neutral-100';
-  if (typeof recipe.difficulty.green === 'number' && skill >= recipe.difficulty.green) return 'text-green-400';
-  return 'text-yellow-300';
 }
 
 function SkillBox({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -1228,14 +1559,14 @@ export default function ProfessionPlanner() {
     if (urlRealm) {
       const normalizedRealm = realmFromUrl(version, urlRealm);
       if (normalizedRealm) return normalizedRealm;
-    }
+      }
     return defaultRealmForVersion(version);
   });
   const [selectedFaction, setSelectedFaction] = useState(() => {
     if (urlFaction) {
       const normalizedFaction = factions.find(f => f.toLowerCase() === urlFaction.toLowerCase());
       if (normalizedFaction) return normalizedFaction;
-    }
+      }
     return (parsePlannerVersion(urlVersion) ?? 'Forever') === 'Forever' ? 'Horde' : 'Alliance';
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
@@ -1244,7 +1575,9 @@ export default function ProfessionPlanner() {
   const drawerDragStartRef = useRef<{ x: number; startOpen: boolean } | null>(null);
   const drawerDragXRef = useRef<number>(0);
   const [useMarketValue, setUseMarketValue] = useState(false);
-  const optimizeSubCrafting = false; // Sub-crafting optimization disabled
+  const [craftReagents, setCraftReagents] = useState(false);
+  const [extraProfessions, setExtraProfessions] = useState<string[]>([]);
+  const optimizeSubCrafting = craftReagents;
   const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
   const [showAuctionHouseDisclaimer, setShowAuctionHouseDisclaimer] = useState(false);
   const [auctionHouseDisclaimerAcked, setAuctionHouseDisclaimerAcked] = useState(false);
@@ -1281,13 +1614,22 @@ export default function ProfessionPlanner() {
   const [hideBopRecipeItems, setHideBopRecipeItems] = useState(false);
   const [workingOvertime, setWorkingOvertime] = useState(0);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
-  const [recalculateForEachLevel, setRecalculateForEachLevel] = useState(false);
   const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
+  const [minSkillChancePercent, setMinSkillChancePercent] = useState(DEFAULT_MIN_SKILL_CHANCE_PERCENT);
   const minSaleRate = minSaleRatePercent / 100;
+  const minSkillUpChance = minSkillChancePercent / 100;
   const saleRateAccent = selectedVersion === 'Forever' ? '#1fb5f7' : '#eab308';
+  const workingOvertimeRank = selectedVersion === 'Forever' ? workingOvertime : 0;
 
   useEffect(() => {
     setMinSaleRatePercent(readMinSaleRatePercent());
+    const savedSkillChance = readMinSkillChancePercent();
+    setMinSkillChancePercent(savedSkillChance);
+    if (!document.cookie.split('; ').some((part) => part.startsWith(`${MIN_SKILL_CHANCE_COOKIE}=`))) {
+      writeMinSkillChancePercent(savedSkillChance);
+    }
+    setCraftReagents(readCraftReagents());
+    setExtraProfessions(readExtraProfessions());
     setHideBopRecipeItems(readHideBopRecipes());
     setWorkingOvertime(readWorkingOvertime());
   }, []);
@@ -1308,6 +1650,27 @@ export default function ProfessionPlanner() {
     setMinSaleRatePercent(next);
     writeMinSaleRatePercent(next);
   }, []);
+
+  const updateCraftReagents = useCallback((enabled: boolean) => {
+    setCraftReagents(enabled);
+    writeCraftReagents(enabled);
+  }, []);
+
+  const updateExtraProfessions = useCallback((names: string[]) => {
+    setExtraProfessions(names);
+    writeExtraProfessions(names);
+  }, []);
+
+  const extraProfessionOptions = useMemo(
+    () => ['Mining', ...availableProfessions.filter((profession) => profession !== selectedProfession)],
+    [availableProfessions, selectedProfession]
+  );
+
+  const updateMinSkillChance = useCallback((percent: number) => {
+    const next = Math.min(100, Math.max(0, Math.round(percent)));
+    setMinSkillChancePercent(next);
+    writeMinSkillChancePercent(next);
+  }, []);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
   const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -1322,6 +1685,7 @@ export default function ProfessionPlanner() {
   const priceLoadRequestIdRef = useRef(0);
   const advancedSettingsAnchorRef = useRef<HTMLDivElement>(null);
   const [advancedSettingsPosition, setAdvancedSettingsPosition] = useState<{ top: number; left: number } | null>(null);
+  const [settingsWide, setSettingsWide] = useState(false);
 
   useEffect(() => {
     if (!isAdvancedSettingsOpen || typeof window === 'undefined') return;
@@ -1329,7 +1693,9 @@ export default function ProfessionPlanner() {
       const el = advancedSettingsAnchorRef.current;
       if (el) {
         const rect = el.getBoundingClientRect();
-        setAdvancedSettingsPosition({ top: rect.top, left: rect.right + 8 });
+        const panelWidth = settingsWide ? 649 : 320;
+        const left = Math.max(12, Math.min(rect.right + 8, window.innerWidth - panelWidth - 12));
+        setAdvancedSettingsPosition({ top: rect.top, left });
       }
     };
     updatePosition();
@@ -1339,7 +1705,7 @@ export default function ProfessionPlanner() {
       window.removeEventListener('resize', updatePosition);
       window.removeEventListener('scroll', updatePosition, true);
     };
-  }, [isAdvancedSettingsOpen]);
+  }, [isAdvancedSettingsOpen, settingsWide]);
   
   const lastSkillChange = useRef<number>(Date.now());
   const lastSkillValue = useRef<number>(skill);
@@ -1689,14 +2055,14 @@ export default function ProfessionPlanner() {
     setCommittedSkill(boundedValue);
     lastSkillValue.current = boundedValue;
     setIsBlurComplete(true);
-
+    
     let nextTarget = targetRef.current;
     if (nextTarget <= boundedValue) {
       nextTarget = Math.min(maxSkillRef.current, boundedValue + 1);
       setTarget(nextTarget);
       setCommittedTarget(nextTarget);
     }
-
+    
     recentUserChangeTimestampRef.current = Date.now();
     updateUrl({ skill: boundedValue, target: nextTarget });
   };
@@ -1753,10 +2119,26 @@ export default function ProfessionPlanner() {
     });
   }, [selectedProfession, selectedVersion, pendingProfessionCounter]);
 
-  // Create a Set of recipe IDs for the current profession (for sub-crafting optimization)
+  // Spell ids this character can craft: the open profession, plus any others they checked.
   const currentProfessionRecipeIds = useMemo(() => {
-    return new Set(recipes.map(r => r.id));
-  }, [recipes]);
+    const ids = new Set(recipes.map(r => r.id));
+    if (!craftReagents) return ids;
+    const versionRecipes = rawDataMap[selectedVersion] ?? {};
+    for (const profession of extraProfessions) {
+      if (profession === selectedProfession) continue;
+      if (profession === 'Mining') {
+        for (const info of Object.values(materialInfo)) {
+          const created = info.createdBy;
+          if (created?.spellId && created.spellName?.startsWith('Smelt')) ids.add(created.spellId);
+        }
+        continue;
+      }
+      for (const recipe of versionRecipes[profession] ?? []) {
+        if (typeof recipe?.id === 'number') ids.add(recipe.id);
+      }
+    }
+    return ids;
+  }, [recipes, craftReagents, extraProfessions, selectedProfession, selectedVersion, materialInfo]);
 
   // Helper to get the correct profession for a recipe's icon
   // Uses preserved profession if recipe is from preserved ref, otherwise uses active profession
@@ -1824,7 +2206,7 @@ export default function ProfessionPlanner() {
         includeRecipeCost,
       skipLimitedStock,
       useMarketValue,
-      recalculateForEachLevel,
+      false,
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
@@ -1833,14 +2215,15 @@ export default function ProfessionPlanner() {
       selectedFaction,
       minSaleRate,
       hideBopRecipeItems,
-      workingOvertime
+      workingOvertimeRank,
+      minSkillUpChance
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance, isLoadingPrices]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -1933,10 +2316,10 @@ export default function ProfessionPlanner() {
     if (!selected || totalLevelUps <= 0) return 0;
     let sum = 0;
     for (let lvl = clampedLow; lvl < clampedHigh; lvl++) {
-      sum += expectedSkillUps(selected, lvl, workingOvertime);
+      sum += expectedSkillUps(selected, lvl, workingOvertimeRank);
     }
     return sum / totalLevelUps;
-  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertime]);
+  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank]);
 
   const avgAttempts = avgSuccessRate > 0 ? Math.ceil(1 / avgSuccessRate) : Infinity;
 
@@ -1953,10 +2336,10 @@ export default function ProfessionPlanner() {
     const end   = selected.difficulty.gray ?? start;
     const data  = [];
     for (let skill = start; skill <= end; skill++) {
-      data.push({ skill, chance: expectedSkillUps(selected, skill, workingOvertime) });
+      data.push({ skill, chance: expectedSkillUps(selected, skill, workingOvertimeRank) });
     }
     return data;
-  }, [selected, workingOvertime]);
+  }, [selected, workingOvertimeRank]);
 
   // drop the very first and last skill so we omit the edges
   const innerSkills  = probData.slice(1, -1).map(d => d.skill);
@@ -2042,8 +2425,8 @@ export default function ProfessionPlanner() {
   const expCrafts = useMemo(() => {
     if (!selected || totalLevelUps <= 0) return 0;
     // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
-    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertime);
-  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertime]);
+    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertimeRank);
+  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank]);
 
   useEffect(() => {
     if (!selected) {
@@ -2202,7 +2585,7 @@ const renderXTick = selected
       includeRecipeCost,
       skipLimitedStock,
       useMarketValue,
-      recalculateForEachLevel,
+      false,
       optimizeSubCrafting,
       currentProfessionRecipeIds,
       priceSourcing,
@@ -2211,7 +2594,8 @@ const renderXTick = selected
       selectedFaction,
       minSaleRate,
       hideBopRecipeItems,
-      workingOvertime
+      workingOvertimeRank,
+      minSkillUpChance
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -2248,7 +2632,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate, minSkillUpChance]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -2491,10 +2875,14 @@ const renderXTick = selected
             materialInfo[r.source.recipeItemId]?.bop
           )) &&
           // In auction-house mode, hide alternatives TSM says rarely sell
-          !(priceSourcing === 'auction-house' && r.produces?.id && regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate))
+          !(priceSourcing === 'auction-house' && r.produces?.id && regionSaleRate && isBelowMinSaleRate(regionSaleRate.get(r.produces.id), minSaleRate)) &&
+          (() => {
+            const chance = expectedSkillUps(r, Math.max(start, end - 1), workingOvertimeRank);
+            return chance > 0 && chance >= skillUpChanceFloor(priceSourcing, minSkillUpChance);
+          })()
         )
         .map(r => {
-          const crafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertime);
+          const crafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertimeRank);
           const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
           const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
           const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
@@ -2510,7 +2898,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate, minSkillUpChance]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -2530,7 +2918,7 @@ const renderXTick = selected
       if ('recipe' in s) {
         const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
         const end = s.endSkill;
-        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertime);
+        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertimeRank);
         
         // Calculate cost for this step based on displayed crafts
         const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -2544,7 +2932,12 @@ const renderXTick = selected
           const numItemId = Number(itemId);
           if ((ENCHANTING_ROD_SPELL_IDS.has(s.recipe.id) && ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(numItemId)) ||
               (ENGINEERING_TOOL_SPELL_IDS.has(s.recipe.id) && ENGINEERING_TOOL_PRODUCT_ITEM_IDS.has(numItemId))) continue;
-          addMaterial(numItemId, quantity * displayedCrafts);
+          if (optimizeSubCrafting) {
+            const tree = buildMaterialTree(numItemId, quantity * displayedCrafts, prices, materialInfo, false, new Set(), useMarketValue, true, currentProfessionRecipeIds);
+            for (const leaf of purchasedLeaves(tree)) addMaterial(leaf.id, leaf.quantity);
+          } else {
+            addMaterial(numItemId, quantity * displayedCrafts);
+          }
         }
         const recipeItemId = s.recipe.source?.type === 'item' ? s.recipe.source.recipeItemId : undefined;
         if (recipeItemId && !purchasedRecipes.has(recipeItemId)) {
@@ -2570,7 +2963,7 @@ const renderXTick = selected
       }),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, workingOvertime]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, workingOvertimeRank]);
 
   const pricesReady = !isLoadingPrices && pricesSettled;
   const [guideSkillLimit, setGuideSkillLimit] = useState<number | null>(null);
@@ -2598,7 +2991,7 @@ const renderXTick = selected
         includeRecipeCost,
         skipLimitedStock,
         useMarketValue,
-        recalculateForEachLevel,
+        false,
         optimizeSubCrafting,
         currentProfessionRecipeIds,
         priceSourcing,
@@ -2607,7 +3000,8 @@ const renderXTick = selected
         selectedFaction,
         minSaleRate,
         hideBopRecipeItems,
-        workingOvertime
+        workingOvertimeRank,
+        minSkillUpChance
       );
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
@@ -2634,7 +3028,7 @@ const renderXTick = selected
     return () => {
       cancelled = true;
     };
-  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertime, selectedFaction, skipLimitedStock, useMarketValue, recalculateForEachLevel, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate]);
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance]);
 
   // Open a profession at 1 → the furthest skill that still has a priced guide.
   useEffect(() => {
@@ -2733,7 +3127,7 @@ const renderXTick = selected
       return { kind: 'disenchant', copper: items.reduce((sum, item) => sum + item.copper, 0), items };
     };
     const guideOption = (recipe: Recipe, start: number, end: number) => {
-      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty, workingOvertime);
+      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty, workingOvertimeRank);
       const eachCost = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
       const eachSpend = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession);
       const recipeCost = includeRecipeCost && recipe.source
@@ -2809,7 +3203,7 @@ const renderXTick = selected
       });
     }
     return steps;
-  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession, workingOvertime]);
+  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession, workingOvertimeRank]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -3167,23 +3561,30 @@ const renderXTick = selected
               </div>
             </div>
             <div className="mb-4">
-              <div className="flex justify-between items-center mb-1">
+              <div className="mb-6 flex items-center justify-between">
                 <label className="text-xs">
                   Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
                 </label>
                 <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
+                    type="button"
                     onClick={() => setIsAdvancedSettingsOpen(!isAdvancedSettingsOpen)}
-                    className="flex items-center gap-2 px-3 py-1.5 text-xs text-neutral-400 hover:text-neutral-200 bg-neutral-800 hover:bg-neutral-700 rounded transition-colors"
+                    aria-expanded={isAdvancedSettingsOpen}
+                    className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors duration-150 ${advancedButtonClass(selectedVersion, isAdvancedSettingsOpen)}`}
                   >
                     <span>Advanced Settings</span>
                     <svg
-                      className={`w-4 h-4 transition-transform ${isAdvancedSettingsOpen ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      className={`h-4 w-4 shrink-0 transition-transform duration-150 ${isAdvancedSettingsOpen ? 'rotate-180' : ''}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </button>
                   
@@ -3196,7 +3597,7 @@ const renderXTick = selected
                           animate={{ opacity: 1, x: 0, scaleX: 1 }}
                           exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="desktop-layout:hidden absolute right-0 top-0 w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[100] origin-left"
+                          className={`desktop-layout:hidden absolute right-0 top-0 w-max max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-xl z-[100] origin-left`}
                         >
                         <div className="p-3 space-y-3">
                           <div className="flex items-center justify-between mb-1 desktop-layout:mb-0 desktop-layout:hidden">
@@ -3211,69 +3612,30 @@ const renderXTick = selected
                               </svg>
                             </button>
                           </div>
-                          <div className="flex items-center justify-between">
-                    <label className="text-xs text-neutral-400">Include Recipe Cost</label>
-                    <button 
-                      onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                        includeRecipeCost ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                          includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                          <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Use Market Value</label>
-                            <button 
-                              onClick={() => setUseMarketValue(!useMarketValue)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                useMarketValue ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  useMarketValue ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
-                            <button 
-                              onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                recalculateForEachLevel ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <label className="text-xs text-neutral-400">Include Currency Recipes</label>
-                            <button
-                              onClick={() => setIncludeCurrencyRecipes(!includeCurrencyRecipes)}
-                              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                includeCurrencyRecipes ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                              }`}
-                            >
-                              <span
-                                className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                  includeCurrencyRecipes ? 'translate-x-5' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                          </div>
-                          <WorkingOvertimeSlider rank={workingOvertime} onChange={updateWorkingOvertime} accent={saleRateAccent} />
-                          <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
-                          <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
+                          <AdvancedSettingsControls
+                            accentOn={selectedVersion === 'Forever'}
+                            accent={saleRateAccent}
+                            includeRecipeCost={includeRecipeCost}
+                            onIncludeRecipeCost={setIncludeRecipeCost}
+                            useMarketValue={useMarketValue}
+                            onUseMarketValue={setUseMarketValue}
+                            craftReagents={craftReagents}
+                            onCraftReagents={updateCraftReagents}
+                            extraProfessions={extraProfessions}
+                            extraProfessionOptions={extraProfessionOptions}
+                            onExtraProfessions={updateExtraProfessions}
+                            includeCurrencyRecipes={includeCurrencyRecipes}
+                            onIncludeCurrencyRecipes={setIncludeCurrencyRecipes}
+                            hideBopRecipeItems={hideBopRecipeItems}
+                            onHideBopRecipeItems={updateHideBopRecipes}
+                            workingOvertime={workingOvertime}
+                            onWorkingOvertime={updateWorkingOvertime}
+                            minSaleRatePercent={minSaleRatePercent}
+                            onMinSaleRate={updateMinSaleRate}
+                            minSkillChancePercent={minSkillChancePercent}
+                            onMinSkillChance={updateMinSkillChance}
+                            onWideChange={setSettingsWide}
+                          />
                         </div>
                       </motion.div>
                         {/* Desktop: portal to body so it's always on top */}
@@ -3284,7 +3646,7 @@ const renderXTick = selected
                               animate={{ opacity: 1, x: 0, scaleX: 1 }}
                               exit={{ opacity: 0, x: -10, scaleX: 0.95 }}
                               transition={{ duration: 0.2 }}
-                              className="hidden desktop-layout:block fixed w-64 bg-neutral-800 rounded shadow-lg border border-neutral-700 z-[9999] origin-left"
+                              className="hidden desktop-layout:block fixed w-max max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-xl z-[9999] origin-left"
                               style={{ top: advancedSettingsPosition.top, left: advancedSettingsPosition.left }}
                             >
                               <div className="p-3 space-y-3">
@@ -3300,69 +3662,30 @@ const renderXTick = selected
                                     </svg>
                                   </button>
                                 </div>
-                                <div className="flex items-center justify-between">
-                                  <label className="text-xs text-neutral-400">Include Recipe Cost</label>
-                                  <button
-                                    onClick={() => setIncludeRecipeCost(!includeRecipeCost)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                      includeRecipeCost ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                                    }`}
-                                  >
-                                    <span
-                                      className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                        includeRecipeCost ? 'translate-x-5' : 'translate-x-1'
-                                      }`}
-                                    />
-                                  </button>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                  <label className="text-xs text-neutral-400">Use Market Value</label>
-                                  <button
-                                    onClick={() => setUseMarketValue(!useMarketValue)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                      useMarketValue ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                                    }`}
-                                  >
-                                    <span
-                                      className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                        useMarketValue ? 'translate-x-5' : 'translate-x-1'
-                                      }`}
-                                    />
-                                  </button>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                  <label className="text-xs text-neutral-400">Recalculate for Each Level</label>
-                                  <button
-                                    onClick={() => setRecalculateForEachLevel(!recalculateForEachLevel)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                      recalculateForEachLevel ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                                    }`}
-                                  >
-                                    <span
-                                      className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                        recalculateForEachLevel ? 'translate-x-5' : 'translate-x-1'
-                                      }`}
-                                    />
-                                  </button>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                  <label className="text-xs text-neutral-400">Include Currency Recipes</label>
-                                  <button
-                                    onClick={() => setIncludeCurrencyRecipes(!includeCurrencyRecipes)}
-                                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 ${selectedVersion === 'Forever' ? 'focus:ring-[#1fb5f7]/50' : 'focus:ring-yellow-400/50'} ${
-                                      includeCurrencyRecipes ? (selectedVersion === 'Forever' ? 'bg-[#1fb5f7]' : 'bg-yellow-400') : 'bg-neutral-700'
-                                    }`}
-                                  >
-                                    <span
-                                      className={`inline-block h-3.5 w-3.5 transform rounded-full bg-white shadow-lg transition-transform duration-200 ease-in-out ${
-                                        includeCurrencyRecipes ? 'translate-x-5' : 'translate-x-1'
-                                      }`}
-                                    />
-                                    </button>
-                                </div>
-                                <WorkingOvertimeSlider rank={workingOvertime} onChange={updateWorkingOvertime} accent={saleRateAccent} />
-                                <HideBopRecipeToggle enabled={hideBopRecipeItems} onChange={updateHideBopRecipes} accentOn={selectedVersion === 'Forever'} />
-                                <MinimumSaleRateSlider percent={minSaleRatePercent} onChange={updateMinSaleRate} accent={saleRateAccent} />
+                                <AdvancedSettingsControls
+                                  accentOn={selectedVersion === 'Forever'}
+                                  accent={saleRateAccent}
+                                  includeRecipeCost={includeRecipeCost}
+                                  onIncludeRecipeCost={setIncludeRecipeCost}
+                                  useMarketValue={useMarketValue}
+                                  onUseMarketValue={setUseMarketValue}
+                            craftReagents={craftReagents}
+                            onCraftReagents={updateCraftReagents}
+                            extraProfessions={extraProfessions}
+                            extraProfessionOptions={extraProfessionOptions}
+                            onExtraProfessions={updateExtraProfessions}
+                                  includeCurrencyRecipes={includeCurrencyRecipes}
+                                  onIncludeCurrencyRecipes={setIncludeCurrencyRecipes}
+                                  hideBopRecipeItems={hideBopRecipeItems}
+                                  onHideBopRecipeItems={updateHideBopRecipes}
+                                  workingOvertime={workingOvertime}
+                                  onWorkingOvertime={updateWorkingOvertime}
+                                  minSaleRatePercent={minSaleRatePercent}
+                                  onMinSaleRate={updateMinSaleRate}
+                                  minSkillChancePercent={minSkillChancePercent}
+                                  onMinSkillChance={updateMinSkillChance}
+                                  onWideChange={setSettingsWide}
+                                />
                               </div>
                             </motion.div>
                           ),
@@ -3460,7 +3783,7 @@ const renderXTick = selected
                   }}
                   renderThumb={({ props, index }) => {
                     const { key, style, ...rest } = props;
-                    const thumbColor = selectedVersion === 'The Burning Crusade'
+                    const thumbColor = selectedVersion === 'The Burning Crusade' 
                       ? '#059669'
                       : selectedVersion === 'Forever'
                         ? (index === 0 ? '#0273ae' : '#1fb5f7')
@@ -3504,6 +3827,8 @@ const renderXTick = selected
                   >
                     {guideLimitTip.kind === 'sale-rate'
                       ? `Skill ${guideLimitTip.skill} through here has no craft at a ${minSaleRatePercent}% sale rate. Everything that raises skill in this stretch sells less often than that.`
+                      : guideLimitTip.kind === 'skill-chance'
+                      ? `Skill ${guideLimitTip.skill} through here has no craft with at least a ${Math.round(skillUpChanceFloor(priceSourcing, minSkillUpChance) * 100)}% chance to skill up.`
                       : guideLimitTip.kind === 'no-recipe'
                       ? `No recipe raises skill through this stretch, starting at ${guideLimitTip.skill}.`
                       : guideLimitTip.kind === 'bop'
@@ -3873,7 +4198,7 @@ const renderXTick = selected
                           
                           // Calculate crafts needed for the displayed range (start to end)
                           // This ensures consistency with the Level-up Calculator
-                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty, workingOvertime);
+                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty, workingOvertimeRank);
                           
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
                           const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -3917,24 +4242,20 @@ const renderXTick = selected
                                   <span className="flex min-w-0 flex-1 items-center gap-1">
                                     <CachedIcon category={getRecipeProfession(best.id, selectedProfession)} id={best.id} className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded-md object-cover ring-1 ring-white/15" />
                                     <span className="flex min-w-0 flex-1 flex-col justify-center">
-                                      <span
+                                    <span
                                         className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
-                                        style={{ color: qualityColors[s.recipe.quality] }}
-                                      >
-                                        {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
-                                      </span>
-                                      <RecipeSourceMark recipe={best} materialInfo={materialInfo} />
+                                      style={{ color: qualityColors[s.recipe.quality] }}
+                                    >
+                                      {best.name.length <= 35 ? best.name : `${best.name.slice(0, 33)}…`}
                                     </span>
+                                      <RecipeSourceMark recipe={best} materialInfo={materialInfo} />
+                                  </span>
                                   </span>
                                   <span className="shrink-0">
                                     <CostBox copper={displayedTotalCost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
                                   </span>
-                                  <SkillBox className="min-w-[4.75rem] desktop-layout:min-w-[5.75rem]">
-                                    <span>
-                                      <span className={skillPointClass(best, committedSkill)}>{start}</span>
-                                      <span className="text-neutral-100"> → </span>
-                                      <span className={skillPointClass(best, committedSkill)}>{end}</span>
-                                    </span>
+                                  <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${versionTextClass(selectedVersion)}`}>
+                                    <span>{start} → {end}</span>
                                   </SkillBox>
                                 </div>
 
@@ -3995,16 +4316,16 @@ const renderXTick = selected
                                             className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                                           />
                                           <span className="flex min-w-0 flex-1 flex-col justify-center">
-                                            <span
+                                          <span
                                               className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
-                                              style={{ color: qualityColors[alt.recipe.quality] }}
-                                            >
-                                              {alt.recipe.name.length <= 35
-                                                ? alt.recipe.name
-                                                : `${alt.recipe.name.slice(0, 33)}…`}
-                                            </span>
-                                            <RecipeSourceMark recipe={alt.recipe} materialInfo={materialInfo} />
+                                            style={{ color: qualityColors[alt.recipe.quality] }}
+                                          >
+                                            {alt.recipe.name.length <= 35
+                                              ? alt.recipe.name
+                                              : `${alt.recipe.name.slice(0, 33)}…`}
                                           </span>
+                                            <RecipeSourceMark recipe={alt.recipe} materialInfo={materialInfo} />
+                                        </span>
                                         </span>
                                         <span className="shrink-0">
                                           <CostBox copper={alt.cost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
@@ -4049,14 +4370,14 @@ const renderXTick = selected
                                 className="w-6 h-6 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover"
                               />
                               <span className="flex min-w-0 flex-1 flex-col justify-center">
-                                <span
+                              <span
                                   className="truncate whitespace-nowrap text-[13px] desktop-layout:text-[16px]"
-                                  style={{ color: qualityColors[r.quality ?? 1] }}
-                                >
-                                  {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
-                                </span>
-                                <RecipeSourceMark recipe={r} materialInfo={materialInfo} />
+                                style={{ color: qualityColors[r.quality ?? 1] }}
+                              >
+                                {r.name.length <= 40 ? r.name : `${r.name.slice(0,37)}…`}
                               </span>
+                                <RecipeSourceMark recipe={r} materialInfo={materialInfo} />
+                            </span>
                             </div>
                             <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'}`}>
                               {getEffectiveMinSkill(r)}
@@ -4203,21 +4524,21 @@ const renderXTick = selected
                   className="mr-3 h-10 w-10 flex-shrink-0 rounded-lg object-cover ring-1 ring-[#e3b056]/40 shadow-lg shadow-black/40 desktop-layout:h-16 desktop-layout:w-16"
                 />
                 <div className="min-w-0">
-                  <a
+                <a
                     href={selected.url || `https://www.wowhead.com/${getWowheadBase(selectedVersion)}/spell=${selected.id}`}
-                    target="_blank"
-                    rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                     className="text-xl desktop-layout:text-[36px] hover:underline font-semibold"
-                    style={{ color: qualityColors[selected.quality ?? 1] }}
-                  >
-                    {selected.name}
-                  </a>
+                  style={{ color: qualityColors[selected.quality ?? 1] }}
+                >
+                  {selected.name}
+                </a>
                   <SelectedCraftSource
                     recipe={selected}
                     materialInfo={materialInfo}
                     wowheadBase={getWowheadBase(selectedVersion)}
                   />
-                </div>
+              </div>
               </div>
             </div>
             <AdSlot
@@ -4283,8 +4604,8 @@ const renderXTick = selected
                           // compute the screen coords
                           const lowX  = xScale(clampedLow);
                           const highX = xScale(clampedHigh);
-                          const lowY  = yScale(expectedSkillUps(selected, clampedLow, workingOvertime));
-                          const highY = yScale(expectedSkillUps(selected, clampedHigh, workingOvertime));
+                          const lowY  = yScale(expectedSkillUps(selected, clampedLow, workingOvertimeRank));
+                          const highY = yScale(expectedSkillUps(selected, clampedHigh, workingOvertimeRank));
                           const y0    = yScale(0);
 
                           return (
@@ -4564,7 +4885,7 @@ const renderXTick = selected
                         </div>
                       );
                     }
-
+                    
                     // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
                     if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
                       return (
@@ -4618,13 +4939,13 @@ const renderXTick = selected
                   <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Average Cost Per Level</span>
                   <CostBox
                     copper={selected ? (() => {
-                      const recipeCost = includeRecipeCost && selected.source ?
-                        calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
+                        const recipeCost = includeRecipeCost && selected.source ?
+                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
                       const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession) * expCrafts;
-                      return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
-                    })() : 0}
+                        return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
+                      })() : 0}
                     className="text-sm desktop-layout:text-lg"
-                  />
+                    />
                 </div>
               </div>
 

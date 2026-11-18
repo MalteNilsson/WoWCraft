@@ -1259,6 +1259,28 @@
     "link": "https://www.wowhead.com/forever/item=2692/hot-spices",
     "vendorPrice": null
   },
+  "2770": {
+    "name": "Copper Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_copper_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=2770",
+    "vendorPrice": null,
+    "itemLevel": 10
+  },
+  "2771": {
+    "name": "Tin Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=2771",
+    "vendorPrice": null,
+    "itemLevel": 20
+  },
   "2772": {
     "name": "Iron Ore",
     "quality": 1,
@@ -1278,6 +1300,17 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2775/silver-ore",
     "vendorPrice": null
+  },
+  "2776": {
+    "name": "Gold Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_gold_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=2776",
+    "vendorPrice": null,
+    "itemLevel": 25
   },
   "2835": {
     "name": "Rough Stone",
@@ -2385,6 +2418,26 @@
       "maxCount": 1
     }
   },
+  "3576": {
+    "name": "Tin Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_05",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=3576",
+    "vendorPrice": null,
+    "itemLevel": 20,
+    "createdBy": {
+      "spellId": 3304,
+      "spellName": "Smelt Tin",
+      "reagents": {
+        "2771": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
   "3577": {
     "name": "Gold Bar",
     "quality": 2,
@@ -2993,6 +3046,17 @@
     "vendorPrice": null,
     "itemLevel": 40,
     "sellPrice": 10386
+  },
+  "3857": {
+    "name": "Coal",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=3857",
+    "vendorPrice": null,
+    "itemLevel": 30
   },
   "3858": {
     "name": "Mithril Ore",
@@ -7656,6 +7720,17 @@
     "link": "https://www.wowhead.com/forever/item=7910/star-ruby",
     "vendorPrice": null
   },
+  "7911": {
+    "name": "Truesilver Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_truesilver_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=7911",
+    "vendorPrice": null,
+    "itemLevel": 40
+  },
   "7912": {
     "name": "Solid Stone",
     "quality": 1,
@@ -11126,6 +11201,17 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11291/star-wood",
     "vendorPrice": 4500
+  },
+  "11370": {
+    "name": "Dark Iron Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_mithril_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=11370",
+    "vendorPrice": null,
+    "itemLevel": 50
   },
   "11371": {
     "name": "Dark Iron Bar",
@@ -15433,6 +15519,29 @@
     "itemLevel": 40,
     "sellPrice": 750
   },
+  "17771": {
+    "name": "Elementium Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_thorium",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=17771",
+    "vendorPrice": null,
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 22967,
+      "spellName": "Smelt Elementium",
+      "reagents": {
+        "12360": 10,
+        "17010": 1,
+        "18562": 1,
+        "18567": 3
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
   "18045": {
     "name": "Tender Wolf Steak",
     "quality": 1,
@@ -15820,6 +15929,17 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=18512/larval-acid",
     "vendorPrice": null
+  },
+  "18562": {
+    "name": "Elementium Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_stone_sharpeningstone_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=18562",
+    "vendorPrice": null,
+    "itemLevel": 60
   },
   "18567": {
     "name": "Elemental Flux",
@@ -18999,6 +19119,17 @@
     "vendorPrice": null,
     "itemLevel": 6,
     "sellPrice": 5
+  },
+  "248815": {
+    "name": "Heavy Thorium Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_oxxein",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=248815",
+    "vendorPrice": null,
+    "itemLevel": 60
   },
   "248819": {
     "name": "Fel Crystal",
@@ -29438,6 +29569,28 @@
     "itemLevel": 60,
     "sellPrice": 0
   },
+  "279948": {
+    "name": "Rock Garden",
+    "quality": 1,
+    "class": "0",
+    "subclass": "8",
+    "icon": "inv_misc_powder_iron",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=279948",
+    "vendorPrice": null,
+    "itemLevel": 28,
+    "createdBy": {
+      "spellId": 1262975,
+      "spellName": "Rock Garden",
+      "reagents": {
+        "2772": 1,
+        "2838": 2,
+        "2842": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
   "279949": {
     "name": "Repair Bot",
     "quality": 1,
@@ -29461,6 +29614,28 @@
     "vendorPrice": null,
     "itemLevel": 4,
     "sellPrice": 0
+  },
+  "279952": {
+    "name": "Molten Foundry",
+    "quality": 1,
+    "class": "0",
+    "subclass": "8",
+    "icon": "inv_blacksmithingalloys_red",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=279952",
+    "vendorPrice": null,
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 1263071,
+      "spellName": "Molten Foundry",
+      "reagents": {
+        "6037": 1,
+        "12359": 5,
+        "12365": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "279955": {
     "name": "Master Forge",
@@ -29509,6 +29684,27 @@
     "vendorPrice": null,
     "itemLevel": 60,
     "sellPrice": 0
+  },
+  "279960": {
+    "name": "Lodestone",
+    "quality": 1,
+    "class": "0",
+    "subclass": "8",
+    "icon": "inv_misc_rune_06",
+    "slot": "0",
+    "link": "https://www.wowhead.com/forever/item=279960",
+    "vendorPrice": null,
+    "itemLevel": 4,
+    "createdBy": {
+      "spellId": 1230161,
+      "spellName": "Lodestone",
+      "reagents": {
+        "2835": 1,
+        "2840": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "279961": {
     "name": "Journeyman Campfire Kit",

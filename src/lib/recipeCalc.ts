@@ -515,13 +515,14 @@ export function getItemCost(
 
   // Don't allow zero unless it's a vendor item
   if (directPrice === Infinity && itemData?.createdBy) {
-    // We will compute craft cost and use that instead below
     directPrice = Infinity;
   }
 
+  const createdSpellId = itemData?.createdBy?.spellId;
+  const allowedSpell = !!createdSpellId && !!currentProfessionRecipeIds?.has(createdSpellId);
+  const shouldBlockCrafting = skipCraftingUnlessTopLevel.has(itemId) && !allowedSpell;
+
   let craftCost = Infinity;
-  const itemIsTedious = skipCraftingUnlessTopLevel.has(itemId);
-  const shouldBlockCrafting = itemIsTedious;
 
   // Prevent cycles early
   memo.set(itemId, Infinity);
@@ -542,8 +543,8 @@ export function getItemCost(
     (itemData?.createdBy?.spellId && currentProfessionRecipeIds.has(itemData.createdBy.spellId));
   
   if (canCraft && isSameProfession && itemData.createdBy) {
-    const { reagents, minCount = 0, maxCount = 0 } = itemData.createdBy;
-    const outputCount = Math.max(1, maxCount + 1);
+    const { reagents, maxCount = 0 } = itemData.createdBy;
+    const outputCount = maxCount > 0 ? maxCount : 1;
 
     const totalReagentCost = Object.entries(reagents).reduce((sum, [idStr, qty]) => {
       const id = parseInt(idStr);
@@ -647,30 +648,15 @@ export function buildMaterialTree(
   const buySource = materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, info);
   const ahCost = isListed ? ahPrice * quantity : null;
   const vendorCost = vendorPrice < Infinity ? vendorPrice * quantity : null;
+  const createdSpellId = info?.createdBy?.spellId;
+  const allowedSpell = !!createdSpellId && !!currentProfessionRecipeIds?.has(createdSpellId);
+  const isTedious = skipCraftingUnlessTopLevel.has(itemId) && !allowedSpell;
 
   let craftCost = Infinity;
   let children: MaterialTreeNode[] = [];
 
-  const isTedious = skipCraftingUnlessTopLevel.has(itemId);
-
   // Prevent infinite loop
   if (visited.has(itemId)) {
-    return {
-      id: itemId,
-      name: info?.name ?? `Item ${itemId}`,
-      quantity,
-      buyCost: buyCost * quantity,
-      craftCost: Infinity,
-      totalCost: buyCost * quantity,
-      children: [],
-      noAhPrice: usedCrafting,
-      buySource,
-      ahCost,
-      vendorCost,
-    };
-  }
-
-  if (forceAhOnlyItems.has(itemId)) {
     return {
       id: itemId,
       name: info?.name ?? `Item ${itemId}`,
@@ -694,8 +680,8 @@ export function buildMaterialTree(
     (info?.createdBy?.spellId && currentProfessionRecipeIds.has(info.createdBy.spellId));
   
   if (canCraft && allowSubCrafting && isSameProfession && info.createdBy) {
-    const { reagents, minCount = 0, maxCount = 0 } = info.createdBy;
-    const outputCount = Math.max(1, maxCount + 1);
+    const { reagents, maxCount = 0 } = info.createdBy;
+    const outputCount = maxCount > 0 ? maxCount : 1;
     const craftsNeeded = quantity / outputCount;
 
     children = Object.entries(reagents).map(([idStr, qty]) => {
@@ -732,4 +718,12 @@ export function buildMaterialTree(
     ahCost,
     vendorCost,
   };
+}
+
+/** Materials to buy. A same-profession reagent is replaced by its materials when crafting it costs less. */
+export function purchasedLeaves(node: MaterialTreeNode): { id: number; quantity: number }[] {
+  if (node.children.length > 0 && Number.isFinite(node.craftCost) && node.craftCost < node.buyCost) {
+    return node.children.flatMap(purchasedLeaves);
+  }
+  return [{ id: node.id, quantity: node.quantity }];
 }

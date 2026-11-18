@@ -25,6 +25,7 @@ const PROFESSIONS = [
   'engineering',
   'jewelcrafting',
   'leatherworking',
+  'mining',
   'tailoring',
 ];
 

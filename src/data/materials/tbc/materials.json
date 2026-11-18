@@ -1475,6 +1475,32 @@
     "link": "https://www.wowhead.com/tbc/item=2692/hot-spices",
     "vendorPrice": null
   },
+  "2770": {
+    "name": "Copper Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_copper_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=2770",
+    "vendorPrice": 20,
+    "sellPrice": 5,
+    "limitedStock": true,
+    "itemLevel": 10
+  },
+  "2771": {
+    "name": "Tin Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=2771",
+    "vendorPrice": 100,
+    "sellPrice": 25,
+    "limitedStock": true,
+    "itemLevel": 20
+  },
   "2772": {
     "name": "Iron Ore",
     "quality": 1,
@@ -1486,6 +1512,31 @@
     "vendorPrice": null,
     "sellPrice": 150,
     "itemLevel": 30
+  },
+  "2775": {
+    "name": "Silver Ore",
+    "quality": 2,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_stone_16",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=2775",
+    "vendorPrice": 300,
+    "sellPrice": 75,
+    "limitedStock": true,
+    "itemLevel": 10
+  },
+  "2776": {
+    "name": "Gold Ore",
+    "quality": 2,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_gold_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=2776",
+    "vendorPrice": null,
+    "sellPrice": 500,
+    "itemLevel": 25
   },
   "2835": {
     "name": "Rough Stone",
@@ -1533,7 +1584,16 @@
     "link": "https://www.wowhead.com/tbc/item=2840",
     "vendorPrice": null,
     "sellPrice": 10,
-    "itemLevel": 10
+    "itemLevel": 10,
+    "createdBy": {
+      "spellId": 2657,
+      "spellName": "Smelt Copper",
+      "reagents": {
+        "2770": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "2841": {
     "name": "Bronze Bar",
@@ -1545,7 +1605,17 @@
     "link": "https://www.wowhead.com/tbc/item=2841",
     "vendorPrice": null,
     "sellPrice": 50,
-    "itemLevel": 20
+    "itemLevel": 20,
+    "createdBy": {
+      "spellId": 2659,
+      "spellName": "Smelt Bronze",
+      "reagents": {
+        "2840": 1,
+        "3576": 1
+      },
+      "minCount": 2,
+      "maxCount": 2
+    }
   },
   "2842": {
     "name": "Silver Bar",
@@ -1557,7 +1627,16 @@
     "link": "https://www.wowhead.com/tbc/item=2842",
     "vendorPrice": null,
     "sellPrice": 100,
-    "itemLevel": 10
+    "itemLevel": 10,
+    "createdBy": {
+      "spellId": 2658,
+      "spellName": "Smelt Silver",
+      "reagents": {
+        "2775": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "2844": {
     "name": "Copper Mace",
@@ -3029,7 +3108,37 @@
     "link": "https://www.wowhead.com/tbc/item=3575",
     "vendorPrice": null,
     "sellPrice": 200,
-    "itemLevel": 30
+    "itemLevel": 30,
+    "createdBy": {
+      "spellId": 3307,
+      "spellName": "Smelt Iron",
+      "reagents": {
+        "2772": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
+  "3576": {
+    "name": "Tin Bar",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_05",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=3576",
+    "vendorPrice": null,
+    "sellPrice": 35,
+    "itemLevel": 20,
+    "createdBy": {
+      "spellId": 3304,
+      "spellName": "Smelt Tin",
+      "reagents": {
+        "2771": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3577": {
     "name": "Gold Bar",
@@ -3825,6 +3934,18 @@
       "maxCount": 1
     }
   },
+  "3857": {
+    "name": "Coal",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_tin_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=3857",
+    "vendorPrice": 500,
+    "sellPrice": 125,
+    "itemLevel": 30
+  },
   "3858": {
     "name": "Mithril Ore",
     "quality": 1,
@@ -3847,7 +3968,17 @@
     "link": "https://www.wowhead.com/tbc/item=3859",
     "vendorPrice": null,
     "sellPrice": 60,
-    "itemLevel": 35
+    "itemLevel": 35,
+    "createdBy": {
+      "spellId": 3569,
+      "spellName": "Smelt Steel",
+      "reagents": {
+        "3575": 1,
+        "3857": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3860": {
     "name": "Mithril Bar",
@@ -3859,7 +3990,16 @@
     "link": "https://www.wowhead.com/tbc/item=3860",
     "vendorPrice": null,
     "sellPrice": 400,
-    "itemLevel": 40
+    "itemLevel": 40,
+    "createdBy": {
+      "spellId": 10097,
+      "spellName": "Smelt Mithril",
+      "reagents": {
+        "3858": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "3864": {
     "name": "Citrine",
@@ -10459,6 +10599,17 @@
     "sellPrice": 5000,
     "itemLevel": 50
   },
+  "7911": {
+    "name": "Truesilver Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_truesilver_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=7911",
+    "vendorPrice": null,
+    "itemLevel": 40
+  },
   "7912": {
     "name": "Solid Stone",
     "quality": 1,
@@ -15849,16 +16000,37 @@
     "sellPrice": 1125,
     "itemLevel": 30
   },
+  "11370": {
+    "name": "Dark Iron Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_mithril_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=11370",
+    "vendorPrice": null,
+    "sellPrice": 500,
+    "itemLevel": 50
+  },
   "11371": {
     "name": "Dark Iron Bar",
     "quality": 1,
     "class": "7",
     "subclass": "7",
-    "icon": "",
+    "icon": "inv_ingot_mithril",
     "slot": "0",
     "link": "https://www.wowhead.com/tbc/item=11371",
     "vendorPrice": null,
-    "itemLevel": 50
+    "itemLevel": 50,
+    "createdBy": {
+      "spellId": 14891,
+      "spellName": "Smelt Dark Iron",
+      "reagents": {
+        "11370": 8
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "11382": {
     "name": "Blood of the Mountain",
@@ -16267,7 +16439,16 @@
     "link": "https://www.wowhead.com/tbc/item=12359",
     "vendorPrice": null,
     "sellPrice": 600,
-    "itemLevel": 50
+    "itemLevel": 50,
+    "createdBy": {
+      "spellId": 16153,
+      "spellName": "Smelt Thorium",
+      "reagents": {
+        "10620": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "12360": {
     "name": "Arcanite Bar",
@@ -22338,6 +22519,30 @@
       "maxCount": 1
     }
   },
+  "17771": {
+    "name": "Elementium Bar",
+    "quality": 5,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ingot_thorium",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=17771",
+    "vendorPrice": null,
+    "sellPrice": 100000,
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 22967,
+      "spellName": "Smelt Elementium",
+      "reagents": {
+        "12360": 10,
+        "17010": 1,
+        "18562": 1,
+        "18567": 3
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
+  },
   "18168": {
     "name": "Force Reactive Disk",
     "quality": 4,
@@ -22950,6 +23155,30 @@
     "vendorPrice": null,
     "sellPrice": 4000,
     "itemLevel": 55
+  },
+  "18562": {
+    "name": "Elementium Ore",
+    "quality": 4,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_stone_sharpeningstone_01",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=18562",
+    "vendorPrice": null,
+    "sellPrice": 100000,
+    "itemLevel": 60
+  },
+  "18567": {
+    "name": "Elemental Flux",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "spell_frost_fireresistancetotem",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=18567",
+    "vendorPrice": 150000,
+    "sellPrice": 37500,
+    "itemLevel": 60
   },
   "18587": {
     "name": "Goblin Jumper Cables XL",
@@ -28667,7 +28896,16 @@
     "vendorPrice": 1600,
     "sellPrice": 400,
     "limitedStock": true,
-    "itemLevel": 65
+    "itemLevel": 65,
+    "createdBy": {
+      "spellId": 35750,
+      "spellName": "Earth Shatter",
+      "reagents": {
+        "22452": 1
+      },
+      "minCount": 10,
+      "maxCount": 10
+    }
   },
   "22574": {
     "name": "Mote of Fire",
@@ -28680,7 +28918,16 @@
     "vendorPrice": 1600,
     "sellPrice": 400,
     "limitedStock": true,
-    "itemLevel": 65
+    "itemLevel": 65,
+    "createdBy": {
+      "spellId": 35751,
+      "spellName": "Fire Sunder",
+      "reagents": {
+        "21884": 1
+      },
+      "minCount": 10,
+      "maxCount": 10
+    }
   },
   "22578": {
     "name": "Mote of Water",
@@ -30758,6 +31005,42 @@
       "maxCount": 1
     }
   },
+  "23424": {
+    "name": "Fel Iron Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_feliron",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=23424",
+    "vendorPrice": null,
+    "sellPrice": 1000,
+    "itemLevel": 60
+  },
+  "23425": {
+    "name": "Adamantite Ore",
+    "quality": 1,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_adamantium",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=23425",
+    "vendorPrice": null,
+    "sellPrice": 1500,
+    "itemLevel": 65
+  },
+  "23426": {
+    "name": "Khorium Ore",
+    "quality": 2,
+    "class": "7",
+    "subclass": "7",
+    "icon": "inv_ore_khorium",
+    "slot": "0",
+    "link": "https://www.wowhead.com/tbc/item=23426",
+    "vendorPrice": null,
+    "sellPrice": 2500,
+    "itemLevel": 70
+  },
   "23427": {
     "name": "Eternium Ore",
     "quality": 2,
@@ -30858,7 +31141,16 @@
     "link": "https://www.wowhead.com/tbc/item=23445",
     "vendorPrice": null,
     "sellPrice": 2000,
-    "itemLevel": 60
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 29356,
+      "spellName": "Smelt Fel Iron",
+      "reagents": {
+        "23424": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23446": {
     "name": "Adamantite Bar",
@@ -30870,7 +31162,16 @@
     "link": "https://www.wowhead.com/tbc/item=23446",
     "vendorPrice": null,
     "sellPrice": 3000,
-    "itemLevel": 65
+    "itemLevel": 65,
+    "createdBy": {
+      "spellId": 29358,
+      "spellName": "Smelt Adamantite",
+      "reagents": {
+        "23425": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23447": {
     "name": "Eternium Bar",
@@ -30882,7 +31183,16 @@
     "link": "https://www.wowhead.com/tbc/item=23447",
     "vendorPrice": null,
     "sellPrice": 2500,
-    "itemLevel": 70
+    "itemLevel": 70,
+    "createdBy": {
+      "spellId": 29359,
+      "spellName": "Smelt Eternium",
+      "reagents": {
+        "23427": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23448": {
     "name": "Felsteel Bar",
@@ -30894,7 +31204,17 @@
     "link": "https://www.wowhead.com/tbc/item=23448",
     "vendorPrice": null,
     "sellPrice": 22500,
-    "itemLevel": 60
+    "itemLevel": 60,
+    "createdBy": {
+      "spellId": 29360,
+      "spellName": "Smelt Felsteel",
+      "reagents": {
+        "23445": 3,
+        "23447": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23449": {
     "name": "Khorium Bar",
@@ -30906,7 +31226,16 @@
     "link": "https://www.wowhead.com/tbc/item=23449",
     "vendorPrice": null,
     "sellPrice": 12500,
-    "itemLevel": 70
+    "itemLevel": 70,
+    "createdBy": {
+      "spellId": 29361,
+      "spellName": "Smelt Khorium",
+      "reagents": {
+        "23426": 2
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23482": {
     "name": "Fel Iron Plate Gloves",
@@ -32376,11 +32705,20 @@
     "quality": 1,
     "class": "7",
     "subclass": "7",
-    "icon": "",
+    "icon": "inv_ingot_adamantite",
     "slot": "0",
     "link": "https://www.wowhead.com/tbc/item=23573",
     "vendorPrice": null,
-    "itemLevel": 65
+    "itemLevel": 65,
+    "createdBy": {
+      "spellId": 29686,
+      "spellName": "Smelt Hardened Adamantite",
+      "reagents": {
+        "23446": 10
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "23575": {
     "name": "Lesser Ward of Shielding",
@@ -44598,7 +44936,17 @@
     "link": "https://www.wowhead.com/tbc/item=35128",
     "vendorPrice": null,
     "sellPrice": 11250,
-    "itemLevel": 70
+    "itemLevel": 70,
+    "createdBy": {
+      "spellId": 46353,
+      "spellName": "Smelt Hardened Khorium",
+      "reagents": {
+        "23449": 3,
+        "23573": 1
+      },
+      "minCount": 1,
+      "maxCount": 1
+    }
   },
   "35181": {
     "name": "Powerheal 9000 Lens",
