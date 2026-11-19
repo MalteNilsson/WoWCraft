@@ -623,6 +623,28 @@ export function expectedCraftsBetween(
   return Math.ceil(sumOfReciprocals);
 }
 
+/** Extra crafts bought as a buffer. The slider only offers these four steps. */
+export const SUCCESS_MARGIN_PERCENTS = [0, 10, 20, 30] as const;
+export type SuccessMarginPercent = (typeof SUCCESS_MARGIN_PERCENTS)[number];
+
+export function normalizeSuccessMargin(percent: number): SuccessMarginPercent {
+  const rounded = Math.round(percent);
+  if (rounded === 10 || rounded === 20 || rounded === 30) return rounded;
+  return 0;
+}
+
+/**
+ * Turn expected crafts into the number to buy for.
+ * The percent is applied to the craft count, then rounded up once.
+ * Reagent totals come from that whole craft count, so each material is not padded on its own.
+ */
+export function applySuccessMargin(crafts: number, percent: number): number {
+  if (!Number.isFinite(crafts)) return crafts;
+  const margin = normalizeSuccessMargin(percent);
+  if (margin <= 0 || crafts <= 0) return crafts;
+  return Math.ceil(crafts * (1 + margin / 100));
+}
+
 export function buildMaterialTree(
   itemId: number,
   quantity: number,

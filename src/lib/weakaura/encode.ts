@@ -1,4 +1,5 @@
 import * as fengariNamespace from 'fengari-web';
+import { normalizeSuccessMargin } from '../recipeCalc';
 import { auctionatorListName, shoppingListTitle, shoppingQuantity, type GuideStep, type ShoppingListItem } from '../shoppingList';
 import { libDeflateSource } from './vendor/LibDeflate.source';
 import { libSerializeSource } from './vendor/LibSerialize.source';
@@ -94,7 +95,7 @@ function iconName(icon: string | undefined): string {
   return (icon || '').toLowerCase().replace(/[^a-z0-9_]/g, '');
 }
 
-function guideSource(profession: string, steps: GuideStep[]): string {
+function guideSource(profession: string, steps: GuideStep[], successMargin = '0.00'): string {
   const stepLines = steps.flatMap((step) => {
     const name = plainText(step.name);
     if (!name) return [];
@@ -159,6 +160,7 @@ function guideSource(profession: string, steps: GuideStep[]): string {
 ${stepLines.join('\n')}
   }
   local guideProfession = ${luaString(plainText(profession) || 'Profession')}
+  local successMargin = ${successMargin}
   local guideMinimum = guideSteps[1] and guideSteps[1].fromSkill or 0
   local guideStamp = ${luaString(String(Date.now()))}
   local function refreshGuide()
@@ -218,7 +220,11 @@ ${stepLines.join('\n')}
         end
         sum = sum + (1 / p)
       end
-      return math.ceil(sum)
+      local crafts = math.ceil(sum)
+      if successMargin > 0 then
+        crafts = math.ceil(crafts * (1 + successMargin))
+      end
+      return crafts
     end
     local function stepCount(step)
       if type(guideSkill) ~= "number" then return step.crafts end
@@ -2114,7 +2120,7 @@ ${stepLines.join('\n')}
  * remembered auction-house buyouts, green is the current bag count.
  * The guide frame is separate and only shows while the professions window is open.
  */
-function customTextSource(title: string, rows: ShoppingRow[], profession: string, steps: GuideStep[]): string {
+function customTextSource(title: string, rows: ShoppingRow[], profession: string, steps: GuideStep[], successMargin = '0.00'): string {
   const itemLines = rows.map((row) => `    { id = ${row.id}, name = ${luaString(row.name)}, need = ${row.need}, source = ${luaString(row.source)}, icon = ${luaString(row.icon)}, quality = ${row.quality}, copper = ${row.copper} },`).join('\n');
   return `function()
   local items = {
@@ -2555,7 +2561,7 @@ ${itemLines}
       end
     end
   end
-${guideSource(profession, steps)}
+${guideSource(profession, steps, successMargin)}
   refreshGuide()
   local shown = {}
   for i = 1, #items do
@@ -3123,7 +3129,7 @@ ${guideSource(profession, steps)}
 end`;
 }
 
-function auraProgram(title: string, profession: string, steps: GuideStep[], items: ShoppingListItem[]): string {
+function auraProgram(title: string, profession: string, steps: GuideStep[], items: ShoppingListItem[], successMargin = '0.00'): string {
   const rows = shoppingRows(items);
   const guide = steps.filter((step) => plainText(step.name));
   if (!rows.length && !guide.length) return '';
@@ -3198,7 +3204,7 @@ if slot and slot.cleanup then slot.cleanup() end`)},
   information = {},
   config = {},
   displayText = "%c",
-  customText = ${luaString(customTextSource(heading, rows, profession, guide))},
+  customText = ${luaString(customTextSource(heading, rows, profession, guide, successMargin))},
   customTextUpdate = "update",
   customTextUpdateThrottle = 0.25,
   font = "Friz Quadrata TT",
@@ -3272,11 +3278,13 @@ export async function weakAuraShoppingList(
   steps: GuideStep[] = [],
   realm = '',
   faction = '',
+  successMarginPercent = 0,
 ): Promise<string> {
   const title = realm || faction
     ? shoppingListTitle(profession, skill, target, realm, faction)
     : auctionatorListName(profession, skill, target);
-  const program = auraProgram(title, profession, steps, items);
+  const margin = (normalizeSuccessMargin(successMarginPercent) / 100).toFixed(2);
+  const program = auraProgram(title, profession, steps, items, margin);
   if (!program) return '';
   const state = await loadVm();
   run(state, program);

@@ -36,7 +36,7 @@ import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, applySuccessMargin, normalizeSuccessMargin, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -75,6 +75,7 @@ const CRAFT_REAGENTS_COOKIE = 'wowcraft-craft-reagents';
 const EXTRA_PROFESSIONS_COOKIE = 'wowcraft-extra-professions';
 const HIDE_BOP_RECIPES_COOKIE = 'wowcraft-hide-bop-recipes';
 const WORKING_OVERTIME_COOKIE = 'wowcraft-working-overtime';
+const SUCCESS_MARGIN_COOKIE = 'wowcraft-success-margin';
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
 const DEFAULT_MIN_SKILL_CHANCE_PERCENT = 10;
 
@@ -98,6 +99,16 @@ function readWorkingOvertime(): number {
 
 function writeWorkingOvertime(rank: number) {
   document.cookie = `${WORKING_OVERTIME_COOKIE}=${rank}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function readSuccessMarginPercent() {
+  if (typeof document === 'undefined') return 0;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${SUCCESS_MARGIN_COOKIE}=([^;]*)`));
+  return normalizeSuccessMargin(Number(match?.[1]));
+}
+
+function writeSuccessMarginPercent(percent: number) {
+  document.cookie = `${SUCCESS_MARGIN_COOKIE}=${normalizeSuccessMargin(percent)}; Path=/; Max-Age=31536000; SameSite=Lax`;
 }
 
 function readMinSaleRatePercent(): number {
@@ -242,6 +253,46 @@ function WorkingOvertimeSlider({
   );
 }
 
+function SuccessMarginSlider({
+  percent,
+  onChange,
+  accent,
+}: {
+  percent: number;
+  onChange: (percent: number) => void;
+  accent: string;
+}) {
+  const step = percent / 10;
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between gap-2">
+        <span className="text-xs font-medium text-neutral-100">Margin of Success</span>
+        <span className="text-xs font-medium tabular-nums" style={{ color: accent }}>{percent}%</span>
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={3}
+        step={1}
+        value={step}
+        onChange={(event) => onChange(Number(event.target.value) * 10)}
+        className="h-1.5 w-full cursor-pointer"
+        style={{ accentColor: accent }}
+        aria-valuemin={0}
+        aria-valuemax={30}
+        aria-valuenow={percent}
+        aria-valuetext={`${percent}%`}
+        aria-label="Margin of success"
+      />
+      <p className="mt-1 text-xs leading-snug text-neutral-300">
+        {percent === 0
+          ? 'Off. A higher step adds extra crafts, rounded up, and the shopping list follows those crafts.'
+          : `Adds ${percent}% more crafts, rounded up. Reagent totals follow that craft count.`}
+      </p>
+    </div>
+  );
+}
+
 function ExtraProfessionsPicker({
   options,
   selected,
@@ -303,6 +354,8 @@ function AdvancedSettingsControls({
   onMinSaleRate,
   minSkillChancePercent,
   onMinSkillChance,
+  successMarginPercent,
+  onSuccessMargin,
   onWideChange,
 }: {
   accentOn: boolean;
@@ -326,6 +379,8 @@ function AdvancedSettingsControls({
   onMinSaleRate: (percent: number) => void;
   minSkillChancePercent: number;
   onMinSkillChance: (percent: number) => void;
+  successMarginPercent: number;
+  onSuccessMargin: (percent: number) => void;
   onWideChange: (wide: boolean) => void;
 }) {
   const accentClass = accentOn ? 'text-[#1fb5f7]' : 'text-yellow-400';
@@ -367,6 +422,7 @@ function AdvancedSettingsControls({
         onChange={onUseMarketValue}
         accentOn={accentOn}
       />
+      <SuccessMarginSlider percent={successMarginPercent} onChange={onSuccessMargin} accent={accent} />
     </SettingsSection>,
     <SettingsSection key="route" title="Route" accentClass={accentClass}>
       <SettingsToggle
@@ -439,7 +495,7 @@ function AdvancedSettingsControls({
       observer.disconnect();
       window.removeEventListener('resize', measure);
     };
-  }, [accentOn, craftReagents, extraProfessionOptions, hideBopRecipeItems, minSaleRatePercent, minSkillChancePercent, onWideChange, workingOvertime]);
+  }, [accentOn, craftReagents, extraProfessionOptions, hideBopRecipeItems, minSaleRatePercent, minSkillChancePercent, onWideChange, successMarginPercent, workingOvertime]);
 
   const sections = renderSections();
   const left = wide ? sections.slice(0, splitAfter) : sections;
@@ -897,6 +953,7 @@ function ShoppingListImport({
   target,
   items,
   steps,
+  successMarginPercent,
   realm,
   faction,
 }: {
@@ -905,6 +962,7 @@ function ShoppingListImport({
   target: number;
   items: ShoppingListItem[];
   steps: GuideStep[];
+  successMarginPercent: number;
   realm: string;
   faction: string;
 }) {
@@ -985,7 +1043,7 @@ function ShoppingListImport({
       let text = '';
       try {
         const { weakAuraShoppingList } = await import('@/lib/weakaura/encode');
-        text = await weakAuraShoppingList(profession, skill, target, items, profession === 'Enchanting' ? [] : steps, realm, faction);
+        text = await weakAuraShoppingList(profession, skill, target, items, profession === 'Enchanting' ? [] : steps, realm, faction, successMarginPercent);
       } catch {
         markCopied('weakaura-failed');
         setEncoding(false);
@@ -1616,6 +1674,7 @@ export default function ProfessionPlanner() {
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
   const [minSkillChancePercent, setMinSkillChancePercent] = useState(DEFAULT_MIN_SKILL_CHANCE_PERCENT);
+  const [successMarginPercent, setSuccessMarginPercent] = useState(0);
   const minSaleRate = minSaleRatePercent / 100;
   const minSkillUpChance = minSkillChancePercent / 100;
   const saleRateAccent = selectedVersion === 'Forever' ? '#1fb5f7' : '#eab308';
@@ -1632,6 +1691,7 @@ export default function ProfessionPlanner() {
     setExtraProfessions(readExtraProfessions());
     setHideBopRecipeItems(readHideBopRecipes());
     setWorkingOvertime(readWorkingOvertime());
+    setSuccessMarginPercent(readSuccessMarginPercent());
   }, []);
 
   const updateHideBopRecipes = useCallback((hide: boolean) => {
@@ -1670,6 +1730,12 @@ export default function ProfessionPlanner() {
     const next = Math.min(100, Math.max(0, Math.round(percent)));
     setMinSkillChancePercent(next);
     writeMinSkillChancePercent(next);
+  }, []);
+
+  const updateSuccessMargin = useCallback((percent: number) => {
+    const next = normalizeSuccessMargin(percent);
+    setSuccessMarginPercent(next);
+    writeSuccessMarginPercent(next);
   }, []);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
@@ -2425,8 +2491,11 @@ export default function ProfessionPlanner() {
   const expCrafts = useMemo(() => {
     if (!selected || totalLevelUps <= 0) return 0;
     // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
-    return expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertimeRank);
-  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank]);
+    return applySuccessMargin(
+      expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertimeRank),
+      successMarginPercent,
+    );
+  }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank, successMarginPercent]);
 
   useEffect(() => {
     if (!selected) {
@@ -2882,15 +2951,16 @@ const renderXTick = selected
           })()
         )
         .map(r => {
-          const crafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertimeRank);
+          const expectedCrafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertimeRank);
+          const crafts = applySuccessMargin(expectedCrafts, successMarginPercent);
           const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
           const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
-          const cost = (baseCost * crafts) + recipeCost;  // Total cost for comparison
+          const cost = (baseCost * crafts) + recipeCost;
           return {
             recipe: r,
             crafts,
             cost,
-            cpu: cost / (end - start),
+            cpu: ((baseCost * expectedCrafts) + recipeCost) / (end - start),
           };
         })
         .sort((a, b) => a.cpu - b.cpu)
@@ -2898,7 +2968,7 @@ const renderXTick = selected
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate, minSkillUpChance]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate, minSkillUpChance, successMarginPercent]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -2918,7 +2988,10 @@ const renderXTick = selected
       if ('recipe' in s) {
         const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
         const end = s.endSkill;
-        const displayedCrafts = expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertimeRank);
+        const displayedCrafts = applySuccessMargin(
+          expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertimeRank),
+          successMarginPercent,
+        );
         
         // Calculate cost for this step based on displayed crafts
         const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -2963,7 +3036,7 @@ const renderXTick = selected
       }),
       displayedTotalCost: totalCost
     };
-  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, workingOvertimeRank]);
+  }, [plan.steps, committedSkill, materialInfo, prices, includeRecipeCost, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, workingOvertimeRank, successMarginPercent]);
 
   const pricesReady = !isLoadingPrices && pricesSettled;
   const [guideSkillLimit, setGuideSkillLimit] = useState<number | null>(null);
@@ -3127,7 +3200,10 @@ const renderXTick = selected
       return { kind: 'disenchant', copper: items.reduce((sum, item) => sum + item.copper, 0), items };
     };
     const guideOption = (recipe: Recipe, start: number, end: number) => {
-      const optionCrafts = expectedCraftsBetween(start, end, recipe.difficulty, workingOvertimeRank);
+      const optionCrafts = applySuccessMargin(
+        expectedCraftsBetween(start, end, recipe.difficulty, workingOvertimeRank),
+        successMarginPercent,
+      );
       const eachCost = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
       const eachSpend = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession);
       const recipeCost = includeRecipeCost && recipe.source
@@ -3203,7 +3279,7 @@ const renderXTick = selected
       });
     }
     return steps;
-  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession, workingOvertimeRank]);
+  }, [plan.steps, committedSkill, materialInfo, stepCandidates, prices, includeRecipeCost, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession, workingOvertimeRank, successMarginPercent]);
 
   const EDGE_DRAWER_FRACTION = 0.15;
   const handleDrawerDragStart = useCallback((clientX: number) => {
@@ -3634,6 +3710,8 @@ const renderXTick = selected
                             onMinSaleRate={updateMinSaleRate}
                             minSkillChancePercent={minSkillChancePercent}
                             onMinSkillChance={updateMinSkillChance}
+                            successMarginPercent={successMarginPercent}
+                            onSuccessMargin={updateSuccessMargin}
                             onWideChange={setSettingsWide}
                           />
                         </div>
@@ -3684,6 +3762,8 @@ const renderXTick = selected
                                   onMinSaleRate={updateMinSaleRate}
                                   minSkillChancePercent={minSkillChancePercent}
                                   onMinSkillChance={updateMinSkillChance}
+                                  successMarginPercent={successMarginPercent}
+                                  onSuccessMargin={updateSuccessMargin}
                                   onWideChange={setSettingsWide}
                                 />
                               </div>
@@ -4198,7 +4278,10 @@ const renderXTick = selected
                           
                           // Calculate crafts needed for the displayed range (start to end)
                           // This ensures consistency with the Level-up Calculator
-                          const displayedCrafts = expectedCraftsBetween(start, end, best.difficulty, workingOvertimeRank);
+                          const displayedCrafts = applySuccessMargin(
+                            expectedCraftsBetween(start, end, best.difficulty, workingOvertimeRank),
+                            successMarginPercent,
+                          );
                           
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
                           const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -4493,6 +4576,7 @@ const renderXTick = selected
                   target={committedTarget}
                   items={displayedMaterialTotals}
                   steps={guideSteps}
+                  successMarginPercent={successMarginPercent}
                   realm={selectedRealm}
                   faction={selectedFaction}
                 />
