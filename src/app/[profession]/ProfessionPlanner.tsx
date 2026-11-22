@@ -52,6 +52,7 @@ import { CachedIcon } from '@/components/CachedIcon';
 import { PriceAgeNotice } from '@/components/PriceAgeNotice';
 import { FactionIcon, factionRingClass, factionTextClass } from '@/components/FactionMark';
 import { FOREVER_REALMS, RealmName, canonicalForeverRealm, foreverRealmKind, realmRingClass } from '@/components/RealmName';
+import { LevelUpCostChart } from '@/components/LevelUpCostChart';
 import { preloadIconZips } from '@/lib/iconStore';
 
 /** Wowhead base path for links (classic, tbc, or forever) */
@@ -1628,6 +1629,7 @@ export default function ProfessionPlanner() {
     return (parsePlannerVersion(urlVersion) ?? 'Forever') === 'Forever' ? 'Horde' : 'Alliance';
   });
   const [isAdvancedSettingsOpen, setIsAdvancedSettingsOpen] = useState(false);
+  const [costChartOpen, setCostChartOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [drawerDragX, setDrawerDragX] = useState<number | null>(null);
   const drawerDragStartRef = useRef<{ x: number; startOpen: boolean } | null>(null);
@@ -3592,8 +3594,8 @@ const renderXTick = selected
                 )}
               </Listbox>
             </div>
-            <div className="w-full mb-3 desktop-layout:mb-5 flex gap-2">
-              <div className="flex-1">
+            <div className="w-full mb-3 desktop-layout:mb-5 flex items-stretch gap-2">
+              <div className="min-w-0 flex-1">
                 <Listbox value={selectedProfession} onChange={handleProfessionChange}>
                   {({ open }) => (
                     <div className="relative w-full">
@@ -3642,7 +3644,35 @@ const renderXTick = selected
                   )}
                 </Listbox>
               </div>
+              <button
+                type="button"
+                onClick={() => setCostChartOpen((open) => !open)}
+                aria-expanded={costChartOpen}
+                aria-label="Level-up cost history"
+                className={`flex size-[46px] shrink-0 items-center justify-center self-center rounded-lg border transition-colors duration-150 desktop-layout:size-[54px] ${
+                  costChartOpen
+                    ? 'border-yellow-300 bg-yellow-400/25 text-yellow-100'
+                    : 'border-yellow-400/50 bg-yellow-400/15 text-yellow-200 hover:border-yellow-300 hover:bg-yellow-400/25'
+                }`}
+              >
+                <svg className="h-6 w-6" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 15.5l4.2-4.6 3 2.4L17 4.5" />
+                  <path strokeLinecap="round" strokeWidth={1.75} d="M3 17h14" />
+                </svg>
+              </button>
             </div>
+            <LevelUpCostChart
+              open={costChartOpen}
+              onClose={() => setCostChartOpen(false)}
+              version={selectedVersion}
+              profession={selectedProfession}
+              professions={availableProfessions}
+              realm={selectedRealm}
+              realms={realms}
+              faction={selectedFaction}
+              factions={factions}
+              stroke={selectedVersion === 'The Burning Crusade' ? '#10b981' : selectedVersion === 'Forever' ? '#1fb5f7' : '#facc15'}
+            />
             <div className="mb-4">
               <div className="mb-6 flex items-center justify-between">
                 <label className="text-xs">
