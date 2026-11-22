@@ -34,6 +34,11 @@ export function isSkillCooldownRecipe(recipe: Recipe): boolean {
   return /\bcampfire\b/i.test(recipe.name);
 }
 
+/** Transmutes share a cooldown, so they cannot be repeated to gain skill. */
+export function isTransmuteRecipe(recipe: Recipe): boolean {
+  return /^transmute\b/i.test(recipe.name);
+}
+
 /**
  * Recipes sold only during a world event.
  * "Winter" alone is not enough: Edge of Winter and Robe of Winter Night are available all year.
@@ -382,6 +387,7 @@ export function makeDynamicPlan(
             if (getEffectiveMinSkill(r) > currentSkill - 1 || 
                 chance <= 0 || 
                 blacklistedSpellIds.has(r.id) ||
+                isTransmuteRecipe(r) ||
                 isSkillCooldownRecipe(r) ||
                 isSeasonalRecipe(r) ||
                 !isRecipeObtainable(r, materialInfo) ||
@@ -657,6 +663,7 @@ export function makeDynamicPlan(
                 if (getEffectiveMinSkill(r) > batchStart || 
                     chance <= 0 || 
                     blacklistedSpellIds.has(r.id) ||
+                    isTransmuteRecipe(r) ||
                     isSkillCooldownRecipe(r) ||
                     isSeasonalRecipe(r) ||
                     !isRecipeObtainable(r, materialInfo) ||
@@ -1223,6 +1230,7 @@ function skillGapAt(skill: number, args: PlanArgs): SkillGapReason | null {
         if (getEffectiveMinSkill(recipe) > skill ||
             chance <= 0 ||
             blacklistedSpellIds.has(recipe.id) ||
+            isTransmuteRecipe(recipe) ||
             isSkillCooldownRecipe(recipe) ||
             isSeasonalRecipe(recipe) ||
             !isRecipeObtainable(recipe, args.materialInfo) ||

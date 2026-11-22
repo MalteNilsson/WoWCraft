@@ -31,7 +31,7 @@ import foreverTailoring from '@/data/recipes/forever/tailoring.json';
 import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, skillUpChanceFloor, type SkillGapReason } from '@/lib/planner';
+import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isTransmuteRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, skillUpChanceFloor, type SkillGapReason } from '@/lib/planner';
 import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
@@ -2319,7 +2319,7 @@ export default function ProfessionPlanner() {
   const startOf = (i: number) => (i === 0 ? committedSkill : plan.steps[i - 1].endSkill);
   const sortedAll = useMemo(() => 
     [...recipes]
-      .filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
+      .filter(r => !blacklistedSpellIds.has(r.id) && !isTransmuteRecipe(r) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
       .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b)), 
     [recipes, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction]
   );
@@ -2327,7 +2327,7 @@ export default function ProfessionPlanner() {
   const filteredRecipes = useMemo(() => {
     if (view === 'all') {
       return searchTerm
-        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
+        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isTransmuteRecipe(r) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
         : sortedAll;
     }
     return [];
@@ -2934,6 +2934,7 @@ const renderXTick = selected
           (r.difficulty.gray ?? Infinity) >= end &&
           r.id !== best.id &&
           !blacklistedSpellIds.has(r.id) &&
+          !isTransmuteRecipe(r) &&
           !isSkillCooldownRecipe(r) &&
           !isSeasonalRecipe(r) &&
           isRecipeObtainable(r, materialInfo) &&
