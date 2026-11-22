@@ -36,7 +36,7 @@ import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, applySuccessMargin, normalizeSuccessMargin, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, normalizeSuccessMargin, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -286,8 +286,8 @@ function SuccessMarginSlider({
       />
       <p className="mt-1 text-xs leading-snug text-neutral-300">
         {percent === 0
-          ? 'Off. A higher step adds extra crafts, rounded up, and the shopping list follows those crafts.'
-          : `Adds ${percent}% more crafts, rounded up. Reagent totals follow that craft count.`}
+          ? 'Off. A higher step adds extra crafts where a skill-up is not guaranteed, rounded up.'
+          : `Adds ${percent}% more crafts where a skill-up is not guaranteed, rounded up. A 100% chance stays at one craft.`}
       </p>
     </div>
   );
@@ -2387,8 +2387,6 @@ export default function ProfessionPlanner() {
     return sum / totalLevelUps;
   }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank]);
 
-  const avgAttempts = avgSuccessRate > 0 ? Math.ceil(1 / avgSuccessRate) : Infinity;
-
   useEffect(() => {
     if (selected && view === 'all') {
       setRngLow(getEffectiveMinSkill(selected));
@@ -2491,8 +2489,11 @@ export default function ProfessionPlanner() {
   const expCrafts = useMemo(() => {
     if (!selected || totalLevelUps <= 0) return 0;
     // Use expectedCraftsBetween to match planner calculations (sum-of-reciprocals method)
-    return applySuccessMargin(
-      expectedCraftsBetween(clampedLow, clampedHigh, selected.difficulty, workingOvertimeRank),
+    return expectedCraftsBetween(
+      clampedLow,
+      clampedHigh,
+      selected.difficulty,
+      workingOvertimeRank,
       successMarginPercent,
     );
   }, [selected, clampedLow, clampedHigh, totalLevelUps, workingOvertimeRank, successMarginPercent]);
@@ -2952,7 +2953,7 @@ const renderXTick = selected
         )
         .map(r => {
           const expectedCrafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertimeRank);
-          const crafts = applySuccessMargin(expectedCrafts, successMarginPercent);
+          const crafts = expectedCraftsBetween(start, end, r.difficulty, workingOvertimeRank, successMarginPercent);
           const baseCost = calculateCraftCost(r, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
           const recipeCost = includeRecipeCost && r.source ? calculateCraftCost(r, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
           const cost = (baseCost * crafts) + recipeCost;
@@ -2988,8 +2989,11 @@ const renderXTick = selected
       if ('recipe' in s) {
         const start = i === 0 ? committedSkill : plan.steps[i - 1].endSkill;
         const end = s.endSkill;
-        const displayedCrafts = applySuccessMargin(
-          expectedCraftsBetween(start, end, s.recipe.difficulty, workingOvertimeRank),
+        const displayedCrafts = expectedCraftsBetween(
+          start,
+          end,
+          s.recipe.difficulty,
+          workingOvertimeRank,
           successMarginPercent,
         );
         
@@ -3200,8 +3204,11 @@ const renderXTick = selected
       return { kind: 'disenchant', copper: items.reduce((sum, item) => sum + item.copper, 0), items };
     };
     const guideOption = (recipe: Recipe, start: number, end: number) => {
-      const optionCrafts = applySuccessMargin(
-        expectedCraftsBetween(start, end, recipe.difficulty, workingOvertimeRank),
+      const optionCrafts = expectedCraftsBetween(
+        start,
+        end,
+        recipe.difficulty,
+        workingOvertimeRank,
         successMarginPercent,
       );
       const eachCost = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
@@ -4278,8 +4285,11 @@ const renderXTick = selected
                           
                           // Calculate crafts needed for the displayed range (start to end)
                           // This ensures consistency with the Level-up Calculator
-                          const displayedCrafts = applySuccessMargin(
-                            expectedCraftsBetween(start, end, best.difficulty, workingOvertimeRank),
+                          const displayedCrafts = expectedCraftsBetween(
+                            start,
+                            end,
+                            best.difficulty,
+                            workingOvertimeRank,
                             successMarginPercent,
                           );
                           

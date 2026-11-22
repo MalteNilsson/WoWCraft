@@ -443,11 +443,13 @@ async function fetchItemXml(itemId, wowheadPath) {
 }
 
 /**
- * Parse Wowhead item XML tooltip. Extracts class, subclass, slot, itemLevel.
- * Returns { class, subclass, slot, itemLevel } with empty strings for missing fields.
+ * Parse Wowhead item XML tooltip. Extracts class, subclass, slot, itemLevel,
+ * and the vendor buy/sell prices from jsonEquip.
+ * The HTML gatherer sellprice can disagree with the tooltip on Forever items.
+ * Returns empty strings for missing text fields.
  */
 function parseItemXml(xml) {
-  const result = { class: '', subclass: '', slot: '', itemLevel: null };
+  const result = { class: '', subclass: '', slot: '', itemLevel: null, sellPrice: null, buyPrice: null };
   const classMatch = xml.match(/<class\s+id="(\d+)"[^>]*>/);
   if (classMatch) result.class = classMatch[1];
   const subclassMatch = xml.match(/<subclass\s+id="(\d+)"[^>]*>/);
@@ -456,6 +458,12 @@ function parseItemXml(xml) {
   if (slotMatch) result.slot = slotMatch[1];
   const levelMatch = xml.match(/<level>(\d+)<\/level>/);
   if (levelMatch) result.itemLevel = parseInt(levelMatch[1], 10);
+  const equipMatch = xml.match(/<jsonEquip><!\[CDATA\[([\s\S]*?)\]\]><\/jsonEquip>/);
+  const equip = equipMatch?.[1] ?? '';
+  const sellMatch = equip.match(/"sellprice":(\d+)/);
+  const buyMatch = equip.match(/"buyprice":(\d+)/);
+  if (sellMatch) result.sellPrice = parseInt(sellMatch[1], 10);
+  if (buyMatch) result.buyPrice = parseInt(buyMatch[1], 10);
   return result;
 }
 
@@ -1083,18 +1091,18 @@ async function main() {
       try {
         const itemHtml = await fetchPageHtml(itemUrl);
         let info = parseMaterialItemInfo(itemHtml, itemId, wowheadPath);
-        // Fallback: fetch XML tooltip for class/subclass/slot when HTML parse misses them
-        if (!info.class || !info.subclass || !info.slot || info.itemLevel == null) {
-          try {
-            const xml = await fetchItemXml(itemId, wowheadPath);
-            const xmlInfo = parseItemXml(xml);
-            if (!info.class && xmlInfo.class) info = { ...info, class: xmlInfo.class };
-            if (!info.subclass && xmlInfo.subclass) info = { ...info, subclass: xmlInfo.subclass };
-            if (!info.slot && xmlInfo.slot) info = { ...info, slot: xmlInfo.slot };
-            if (info.itemLevel == null && xmlInfo.itemLevel != null) info = { ...info, itemLevel: xmlInfo.itemLevel };
-          } catch (xmlErr) {
-            if (xmlErr instanceof WowheadBlockedError) throw xmlErr;
-          }
+        // XML jsonEquip is the tooltip price. Forever HTML gatherer prices can be wrong.
+        try {
+          const xml = await fetchItemXml(itemId, wowheadPath);
+          const xmlInfo = parseItemXml(xml);
+          if (!info.class && xmlInfo.class) info = { ...info, class: xmlInfo.class };
+          if (!info.subclass && xmlInfo.subclass) info = { ...info, subclass: xmlInfo.subclass };
+          if (!info.slot && xmlInfo.slot) info = { ...info, slot: xmlInfo.slot };
+          if (info.itemLevel == null && xmlInfo.itemLevel != null) info = { ...info, itemLevel: xmlInfo.itemLevel };
+          if (xmlInfo.sellPrice != null) info = { ...info, sellPrice: xmlInfo.sellPrice };
+          if (xmlInfo.buyPrice != null) info = { ...info, vendorPrice: xmlInfo.buyPrice };
+        } catch (xmlErr) {
+          if (xmlErr instanceof WowheadBlockedError) throw xmlErr;
         }
         const recipe = producedByRecipe.get(itemId);
         const fallbackName = itemNamesFromRecipes.get(itemId);

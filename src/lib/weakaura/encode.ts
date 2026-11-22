@@ -218,13 +218,17 @@ ${stepLines.join('\n')}
           if fallback and fallback > 0 then return fallback end
           return high - low
         end
-        sum = sum + (1 / p)
+        if p >= 1 then
+          sum = sum + 1
+        else
+          local craftsForLevel = 1 / p
+          if successMargin > 0 then
+            craftsForLevel = craftsForLevel * (1 + successMargin)
+          end
+          sum = sum + craftsForLevel
+        end
       end
-      local crafts = math.ceil(sum)
-      if successMargin > 0 then
-        crafts = math.ceil(crafts * (1 + successMargin))
-      end
-      return crafts
+      return math.ceil(sum)
     end
     local function stepCount(step)
       if type(guideSkill) ~= "number" then return step.crafts end

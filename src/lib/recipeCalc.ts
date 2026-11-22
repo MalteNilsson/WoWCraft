@@ -597,28 +597,30 @@ export function expectedCraftsBetween(
   low: number,
   high: number,
   d: Recipe['difficulty'],
-  workingOvertime = 0
+  workingOvertime = 0,
+  successMargin = 0
 ): number {
   const totalSkillUps = high - low;
   if (totalSkillUps <= 0) return 0;
-  
+
+  const margin = normalizeSuccessMargin(successMargin);
+  const uncertainFactor = margin > 0 ? 1 + margin / 100 : 1;
+
   // Sum up the reciprocals (1/p for each level)
-  // This is the correct way to calculate expected crafts when success rates vary
+  // This is the correct way to calculate expected crafts when success rates vary.
+  // A guaranteed skill-up stays at one craft. Margin only pads levels below 100%.
   let sumOfReciprocals = 0;
   for (let lvl = low; lvl < high; lvl++) {
     const Y = d.yellow ?? 0;
     const G = d.gray ?? Infinity;
     const base = (lvl < Y) ? 1 : (lvl >= G) ? 0 : (G - lvl) / (G - Y);
     const p = applyWorkingOvertime(base, workingOvertime);
-    
-    if (p > 0) {
-      sumOfReciprocals += 1 / p;
-    } else {
-      // If p is 0, we can't progress, return Infinity
-      return Infinity;
-    }
+
+    if (p <= 0) return Infinity;
+    if (p >= 1) sumOfReciprocals += 1;
+    else sumOfReciprocals += (1 / p) * uncertainFactor;
   }
-  
+
   // Round once at the end
   return Math.ceil(sumOfReciprocals);
 }
@@ -634,9 +636,8 @@ export function normalizeSuccessMargin(percent: number): SuccessMarginPercent {
 }
 
 /**
- * Turn expected crafts into the number to buy for.
- * The percent is applied to the craft count, then rounded up once.
- * Reagent totals come from that whole craft count, so each material is not padded on its own.
+ * Extra crafts for a count that is already known to come from uncertain skill-ups.
+ * Guaranteed skill-ups are left alone in expectedCraftsBetween.
  */
 export function applySuccessMargin(crafts: number, percent: number): number {
   if (!Number.isFinite(crafts)) return crafts;

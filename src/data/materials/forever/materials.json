@@ -18,7 +18,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 5
   },
   "159": {
     "name": "Refreshing Spring Water",
@@ -28,7 +29,8 @@
     "icon": "inv_drink_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=159/refreshing-spring-water",
-    "vendorPrice": 25
+    "vendorPrice": 25,
+    "sellPrice": 1
   },
   "723": {
     "name": "Goretusk Liver",
@@ -38,7 +40,8 @@
     "icon": "inv_misc_organ_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=723/goretusk-liver",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "724": {
     "name": "Goretusk Liver Pie",
@@ -60,7 +63,8 @@
     "icon": "inv_misc_food_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=729/stringy-vulture-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 17
   },
   "730": {
     "name": "Murloc Eye",
@@ -70,7 +74,8 @@
     "icon": "inv_misc_eye_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=730/murloc-eye",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 16
   },
   "731": {
     "name": "Goretusk Snout",
@@ -80,7 +85,8 @@
     "icon": "spell_magic_polymorphpig",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=731/goretusk-snout",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 27
   },
   "733": {
     "name": "Westfall Stew",
@@ -102,7 +108,8 @@
     "icon": "inv_misc_herb_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=765/silverleaf",
-    "vendorPrice": null
+    "vendorPrice": 40,
+    "sellPrice": 10
   },
   "769": {
     "name": "Chunk of Boar Meat",
@@ -112,7 +119,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=769/chunk-of-boar-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 3
   },
   "774": {
     "name": "Malachite",
@@ -122,7 +130,8 @@
     "icon": "inv_misc_gem_emerald_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=774/malachite",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "783": {
     "name": "Light Hide",
@@ -132,7 +141,8 @@
     "icon": "inv_misc_pelt_wolf_ruin_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=783/light-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 50
   },
   "785": {
     "name": "Mageroyal",
@@ -142,7 +152,8 @@
     "icon": "inv_jewelry_talisman_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=785/mageroyal",
-    "vendorPrice": null
+    "vendorPrice": 80,
+    "sellPrice": 20
   },
   "787": {
     "name": "Slitherskin Mackerel",
@@ -164,7 +175,8 @@
     "icon": "inv_drink_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=814/flask-of-oil",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "818": {
     "name": "Tigerseye",
@@ -174,7 +186,8 @@
     "icon": "inv_misc_gem_opal_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=818/tigerseye",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "929": {
     "name": "Healing Potion",
@@ -184,7 +197,7 @@
     "icon": "inv_potion_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=929/healing-potion",
-    "vendorPrice": null,
+    "vendorPrice": 300,
     "createdBy": {
       "spellId": 1244433,
       "spellName": "Healing Potion",
@@ -195,7 +208,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 75
   },
   "1015": {
     "name": "Lean Wolf Flank",
@@ -205,7 +219,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1015/lean-wolf-flank",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 24
   },
   "1017": {
     "name": "Seasoned Wolf Kabob",
@@ -227,7 +242,8 @@
     "icon": "inv_misc_food_72",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1080/tough-condor-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 78
   },
   "1081": {
     "name": "Crisp Spider Meat",
@@ -237,7 +253,8 @@
     "icon": "inv_misc_monsterspidercarapace_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1081/crisp-spider-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 50
   },
   "1082": {
     "name": "Redridge Goulash",
@@ -259,7 +276,8 @@
     "icon": "inv_drink_milk_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1179/ice-cold-milk",
-    "vendorPrice": null
+    "vendorPrice": 125,
+    "sellPrice": 6
   },
   "1205": {
     "name": "Melon Juice",
@@ -269,7 +287,8 @@
     "icon": "inv_drink_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1205/melon-juice",
-    "vendorPrice": null
+    "vendorPrice": 500,
+    "sellPrice": 25
   },
   "1206": {
     "name": "Moss Agate",
@@ -279,7 +298,8 @@
     "icon": "inv_misc_gem_emerald_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1206/moss-agate",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "1210": {
     "name": "Shadowgem",
@@ -289,7 +309,8 @@
     "icon": "inv_misc_gem_amethyst_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1210/shadowgem",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "1288": {
     "name": "Large Venom Sac",
@@ -299,7 +320,8 @@
     "icon": "inv_misc_organ_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1288/large-venom-sac",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 185
   },
   "1468": {
     "name": "Murloc Fin",
@@ -309,7 +331,8 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1468/murloc-fin",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 28
   },
   "1475": {
     "name": "Small Venom Sac",
@@ -319,7 +342,8 @@
     "icon": "inv_misc_organ_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1475/small-venom-sac",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 82
   },
   "1529": {
     "name": "Jade",
@@ -329,7 +353,8 @@
     "icon": "inv_misc_gem_stone_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1529/jade",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 700
   },
   "1645": {
     "name": "Moonberry Juice",
@@ -339,7 +364,8 @@
     "icon": "inv_drink_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1645/moonberry-juice",
-    "vendorPrice": null
+    "vendorPrice": 2000,
+    "sellPrice": 100
   },
   "1705": {
     "name": "Lesser Moonstone",
@@ -349,7 +375,8 @@
     "icon": "inv_misc_gem_crystal_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1705/lesser-moonstone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 600
   },
   "1708": {
     "name": "Sweet Nectar",
@@ -359,7 +386,8 @@
     "icon": "inv_drink_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=1708/sweet-nectar",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 50
   },
   "2251": {
     "name": "Gooey Spider Leg",
@@ -369,7 +397,8 @@
     "icon": "inv_misc_monsterspidercarapace_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2251/gooey-spider-leg",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 12
   },
   "2289": {
     "name": "Scroll of Strength II",
@@ -379,7 +408,8 @@
     "icon": "inv_scroll_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2289/scroll-of-strength-ii",
-    "vendorPrice": null
+    "vendorPrice": 350,
+    "sellPrice": 87
   },
   "2300": {
     "name": "Embossed Leather Vest",
@@ -633,7 +663,8 @@
     "icon": "inv_fabric_linen_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2320/coarse-thread",
-    "vendorPrice": 10
+    "vendorPrice": 10,
+    "sellPrice": 2
   },
   "2321": {
     "name": "Fine Thread",
@@ -643,7 +674,8 @@
     "icon": "inv_fabric_wool_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2321/fine-thread",
-    "vendorPrice": 100
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "2324": {
     "name": "Bleach",
@@ -653,7 +685,8 @@
     "icon": "inv_drink_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2324/bleach",
-    "vendorPrice": 25
+    "vendorPrice": 25,
+    "sellPrice": 6
   },
   "2325": {
     "name": "Black Dye",
@@ -663,7 +696,8 @@
     "icon": "inv_potion_63",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2325/black-dye",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "2447": {
     "name": "Peacebloom",
@@ -673,7 +707,8 @@
     "icon": "inv_misc_flower_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2447/peacebloom",
-    "vendorPrice": null
+    "vendorPrice": 40,
+    "sellPrice": 10
   },
   "2449": {
     "name": "Earthroot",
@@ -683,7 +718,8 @@
     "icon": "inv_misc_herb_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2449/earthroot",
-    "vendorPrice": null
+    "vendorPrice": 80,
+    "sellPrice": 20
   },
   "2450": {
     "name": "Briarthorn",
@@ -693,7 +729,8 @@
     "icon": "inv_misc_root_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2450/briarthorn",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "2452": {
     "name": "Swiftthistle",
@@ -703,7 +740,8 @@
     "icon": "inv_misc_herb_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2452/swiftthistle",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "2453": {
     "name": "Bruiseweed",
@@ -713,7 +751,8 @@
     "icon": "inv_misc_herb_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2453/bruiseweed",
-    "vendorPrice": null
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "2454": {
     "name": "Elixir of Minor Strength",
@@ -746,7 +785,7 @@
     "icon": "inv_potion_70",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2455/minor-mana-potion",
-    "vendorPrice": null,
+    "vendorPrice": 40,
     "createdBy": {
       "spellId": 2331,
       "spellName": "Minor Mana Potion",
@@ -1051,7 +1090,8 @@
     "icon": "inv_fabric_linen_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2589/linen-cloth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 13
   },
   "2592": {
     "name": "Wool Cloth",
@@ -1061,7 +1101,8 @@
     "icon": "inv_fabric_wool_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2592/wool-cloth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 33
   },
   "2596": {
     "name": "Skin of Dwarven Stout",
@@ -1071,7 +1112,8 @@
     "icon": "inv_drink_milk_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2596/skin-of-dwarven-stout",
-    "vendorPrice": null
+    "vendorPrice": 120,
+    "sellPrice": 30
   },
   "2604": {
     "name": "Red Dye",
@@ -1081,7 +1123,8 @@
     "icon": "inv_potion_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2604/red-dye",
-    "vendorPrice": null
+    "vendorPrice": 50,
+    "sellPrice": 12
   },
   "2605": {
     "name": "Green Dye",
@@ -1091,7 +1134,8 @@
     "icon": "inv_potion_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2605/green-dye",
-    "vendorPrice": 100
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "2672": {
     "name": "Stringy Wolf Meat",
@@ -1101,7 +1145,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2672/stringy-wolf-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "2673": {
     "name": "Coyote Meat",
@@ -1111,7 +1156,8 @@
     "icon": "inv_misc_food_69",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2673/coyote-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10
   },
   "2674": {
     "name": "Crawler Meat",
@@ -1121,7 +1167,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2674/crawler-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 12
   },
   "2675": {
     "name": "Crawler Claw",
@@ -1131,7 +1178,8 @@
     "icon": "inv_misc_birdbeck_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2675/crawler-claw",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 11
   },
   "2677": {
     "name": "Boar Ribs",
@@ -1141,7 +1189,8 @@
     "icon": "inv_misc_food_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2677/boar-ribs",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "2678": {
     "name": "Mild Spices",
@@ -1151,7 +1200,8 @@
     "icon": "inv_misc_food_wheat_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2678/mild-spices",
-    "vendorPrice": null
+    "vendorPrice": 10,
+    "sellPrice": 1
   },
   "2679": {
     "name": "Charred Wolf Meat",
@@ -1257,7 +1307,8 @@
     "icon": "inv_misc_food_legion_dalapenopepper",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2692/hot-spices",
-    "vendorPrice": null
+    "vendorPrice": 40,
+    "sellPrice": 10
   },
   "2770": {
     "name": "Copper Ore",
@@ -1268,7 +1319,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=2770",
     "vendorPrice": null,
-    "itemLevel": 10
+    "itemLevel": 10,
+    "sellPrice": 5
   },
   "2771": {
     "name": "Tin Ore",
@@ -1279,7 +1331,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=2771",
     "vendorPrice": null,
-    "itemLevel": 20
+    "itemLevel": 20,
+    "sellPrice": 25
   },
   "2772": {
     "name": "Iron Ore",
@@ -1289,7 +1342,8 @@
     "icon": "inv_ore_iron_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2772/iron-ore",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "2775": {
     "name": "Silver Ore",
@@ -1299,7 +1353,8 @@
     "icon": "inv_stone_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2775/silver-ore",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 75
   },
   "2776": {
     "name": "Gold Ore",
@@ -1310,7 +1365,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=2776",
     "vendorPrice": null,
-    "itemLevel": 25
+    "itemLevel": 25,
+    "sellPrice": 500
   },
   "2835": {
     "name": "Rough Stone",
@@ -1320,7 +1376,8 @@
     "icon": "inv_stone_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2835/rough-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2
   },
   "2836": {
     "name": "Coarse Stone",
@@ -1330,7 +1387,8 @@
     "icon": "inv_stone_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2836/coarse-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "2838": {
     "name": "Heavy Stone",
@@ -1340,7 +1398,8 @@
     "icon": "inv_stone_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2838/heavy-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 60
   },
   "2840": {
     "name": "Copper Bar",
@@ -1359,7 +1418,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 10
   },
   "2841": {
     "name": "Bronze Bar",
@@ -1379,7 +1439,8 @@
       },
       "minCount": 2,
       "maxCount": 2
-    }
+    },
+    "sellPrice": 50
   },
   "2842": {
     "name": "Silver Bar",
@@ -1398,7 +1459,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 100
   },
   "2844": {
     "name": "Copper Mace",
@@ -1670,7 +1732,8 @@
     "icon": "inv_misc_ammo_gunpowder_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2880/weak-flux",
-    "vendorPrice": 100
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "2886": {
     "name": "Crag Boar Rib",
@@ -1680,7 +1743,8 @@
     "icon": "inv_misc_food_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2886/crag-boar-rib",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5
   },
   "2888": {
     "name": "Beer Basted Boar Ribs",
@@ -1702,7 +1766,8 @@
     "icon": "inv_drink_13",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2894/rhapsody-malt",
-    "vendorPrice": null
+    "vendorPrice": 50,
+    "sellPrice": 12
   },
   "2924": {
     "name": "Crocolisk Meat",
@@ -1712,7 +1777,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2924/crocolisk-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 16
   },
   "2934": {
     "name": "Ruined Leather Scraps",
@@ -1722,7 +1788,8 @@
     "icon": "inv_misc_pelt_bear_ruin_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=2934/ruined-leather-scraps",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7
   },
   "2996": {
     "name": "Bolt of Linen Cloth",
@@ -1774,7 +1841,8 @@
     "icon": "inv_scroll_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3013/scroll-of-protection",
-    "vendorPrice": null
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "3172": {
     "name": "Boar Intestines",
@@ -1784,7 +1852,8 @@
     "icon": "inv_misc_organ_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3172/boar-intestines",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 18
   },
   "3173": {
     "name": "Bear Meat",
@@ -1794,7 +1863,8 @@
     "icon": "inv_misc_food_71",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3173/bear-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "3174": {
     "name": "Spider Ichor",
@@ -1804,7 +1874,8 @@
     "icon": "inv_misc_slime_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3174/spider-ichor",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 16
   },
   "3182": {
     "name": "Spider's Silk",
@@ -1814,7 +1885,8 @@
     "icon": "spell_nature_web",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3182/spiders-silk",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 387
   },
   "3220": {
     "name": "Blood Sausage",
@@ -1872,7 +1944,8 @@
     "icon": "inv_misc_flower_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3355/wild-steelbloom",
-    "vendorPrice": null
+    "vendorPrice": 200,
+    "sellPrice": 50
   },
   "3356": {
     "name": "Kingsblood",
@@ -1882,7 +1955,8 @@
     "icon": "inv_misc_herb_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3356/kingsblood",
-    "vendorPrice": null
+    "vendorPrice": 120,
+    "sellPrice": 30
   },
   "3357": {
     "name": "Liferoot",
@@ -1892,7 +1966,8 @@
     "icon": "inv_misc_root_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3357/liferoot",
-    "vendorPrice": null
+    "vendorPrice": 300,
+    "sellPrice": 75
   },
   "3358": {
     "name": "Khadgar's Whisker",
@@ -1902,7 +1977,8 @@
     "icon": "inv_misc_herb_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3358/khadgars-whisker",
-    "vendorPrice": null
+    "vendorPrice": 700,
+    "sellPrice": 175
   },
   "3369": {
     "name": "Grave Moss",
@@ -1912,7 +1988,8 @@
     "icon": "inv_misc_dust_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3369/grave-moss",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "3371": {
     "name": "Empty Vial",
@@ -1923,7 +2000,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3371/empty-vial",
     "vendorPrice": 20,
-    "vendorStack": 5
+    "vendorStack": 5,
+    "sellPrice": 1
   },
   "3372": {
     "name": "Leaded Vial",
@@ -1934,7 +2012,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3372/leaded-vial",
     "vendorPrice": 200,
-    "vendorStack": 5
+    "vendorStack": 5,
+    "sellPrice": 10
   },
   "3382": {
     "name": "Minor Troll's Blood Elixir",
@@ -2120,7 +2199,8 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3404/buzzard-wing",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 181
   },
   "3466": {
     "name": "Strong Flux",
@@ -2130,7 +2210,8 @@
     "icon": "inv_misc_ammo_gunpowder_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3466/strong-flux",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "sellPrice": 500
   },
   "3469": {
     "name": "Copper Chain Boots",
@@ -2416,7 +2497,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 200
   },
   "3576": {
     "name": "Tin Bar",
@@ -2436,7 +2518,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 35
   },
   "3577": {
     "name": "Gold Bar",
@@ -2527,7 +2610,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3667/tender-crocolisk-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "3685": {
     "name": "Raptor Egg",
@@ -2537,7 +2621,8 @@
     "icon": "inv_egg_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3685/raptor-egg",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 71
   },
   "3712": {
     "name": "Turtle Meat",
@@ -2547,7 +2632,8 @@
     "icon": "inv_misc_food_70",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3712/turtle-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 87
   },
   "3713": {
     "name": "Soothing Spices",
@@ -2557,7 +2643,8 @@
     "icon": "inv_misc_food_vendor_rice",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3713/soothing-spices",
-    "vendorPrice": null
+    "vendorPrice": 160,
+    "sellPrice": 40
   },
   "3719": {
     "name": "Hillman's Cloak",
@@ -2627,7 +2714,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3730/big-bear-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 45
   },
   "3731": {
     "name": "Lion Meat",
@@ -2637,7 +2725,8 @@
     "icon": "inv_misc_food_71",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3731/lion-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 55
   },
   "3818": {
     "name": "Fadeleaf",
@@ -2647,7 +2736,8 @@
     "icon": "inv_misc_herb_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3818/fadeleaf",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 125
   },
   "3819": {
     "name": "Wintersbite",
@@ -2657,7 +2747,8 @@
     "icon": "inv_misc_flower_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3819/wintersbite",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "3820": {
     "name": "Stranglekelp",
@@ -2667,7 +2758,8 @@
     "icon": "inv_misc_herb_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3820/stranglekelp",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "3821": {
     "name": "Goldthorn",
@@ -2677,7 +2769,8 @@
     "icon": "inv_misc_herb_15",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3821/goldthorn",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "3823": {
     "name": "Lesser Invisibility Potion",
@@ -2757,7 +2850,7 @@
     "icon": "inv_potion_72",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3827/mana-potion",
-    "vendorPrice": null,
+    "vendorPrice": 480,
     "createdBy": {
       "spellId": 3452,
       "spellName": "Mana Potion",
@@ -3055,8 +3148,9 @@
     "icon": "inv_ore_tin_01",
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=3857",
-    "vendorPrice": null,
-    "itemLevel": 30
+    "vendorPrice": 500,
+    "itemLevel": 30,
+    "sellPrice": 125
   },
   "3858": {
     "name": "Mithril Ore",
@@ -3066,7 +3160,8 @@
     "icon": "inv_ore_mithril_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3858/mithril-ore",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "3859": {
     "name": "Steel Bar",
@@ -3086,7 +3181,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 60
   },
   "3860": {
     "name": "Mithril Bar",
@@ -3105,7 +3201,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 400
   },
   "3864": {
     "name": "Citrine",
@@ -3115,7 +3212,8 @@
     "icon": "inv_misc_gem_opal_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=3864/citrine",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 800
   },
   "4096": {
     "name": "Coarse Gorilla Hair",
@@ -3125,7 +3223,8 @@
     "icon": "inv_misc_monstertail_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4096/coarse-gorilla-hair",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 608
   },
   "4231": {
     "name": "Cured Light Hide",
@@ -3157,7 +3256,8 @@
     "icon": "inv_misc_pelt_boar_ruin_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4232/medium-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 125
   },
   "4233": {
     "name": "Cured Medium Hide",
@@ -3211,7 +3311,8 @@
     "icon": "inv_misc_pelt_wolf_ruin_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4235/heavy-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 200
   },
   "4236": {
     "name": "Cured Heavy Hide",
@@ -3654,7 +3755,8 @@
     "icon": "inv_misc_dust_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4289/salt",
-    "vendorPrice": 50
+    "vendorPrice": 50,
+    "sellPrice": 12
   },
   "4291": {
     "name": "Silken Thread",
@@ -3664,7 +3766,8 @@
     "icon": "inv_fabric_silk_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4291/silken-thread",
-    "vendorPrice": 500
+    "vendorPrice": 500,
+    "sellPrice": 125
   },
   "4304": {
     "name": "Thick Leather",
@@ -3717,7 +3820,8 @@
     "icon": "inv_fabric_silk_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4306/silk-cloth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "4307": {
     "name": "Heavy Linen Gloves",
@@ -4099,7 +4203,8 @@
     "icon": "spell_nature_web",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4337/thick-spiders-silk",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 750
   },
   "4338": {
     "name": "Mageweave Cloth",
@@ -4109,7 +4214,8 @@
     "icon": "inv_fabric_mageweave_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4338/mageweave-cloth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "4339": {
     "name": "Bolt of Mageweave",
@@ -4140,7 +4246,8 @@
     "icon": "inv_drink_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4340/gray-dye",
-    "vendorPrice": 350
+    "vendorPrice": 350,
+    "sellPrice": 87
   },
   "4341": {
     "name": "Yellow Dye",
@@ -4150,7 +4257,8 @@
     "icon": "inv_potion_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4341/yellow-dye",
-    "vendorPrice": null
+    "vendorPrice": 500,
+    "sellPrice": 125
   },
   "4342": {
     "name": "Purple Dye",
@@ -4160,7 +4268,8 @@
     "icon": "inv_potion_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4342/purple-dye",
-    "vendorPrice": null
+    "vendorPrice": 2500,
+    "sellPrice": 625
   },
   "4343": {
     "name": "Brown Linen Pants",
@@ -4194,7 +4303,7 @@
     "icon": "inv_misc_dust_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4357/rough-blasting-powder",
-    "vendorPrice": null,
+    "vendorPrice": 16,
     "createdBy": {
       "spellId": 3918,
       "spellName": "Rough Blasting Powder",
@@ -4272,7 +4381,7 @@
     "icon": "inv_gizmo_pipe_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4361/copper-tube",
-    "vendorPrice": null,
+    "vendorPrice": 480,
     "createdBy": {
       "spellId": 3924,
       "spellName": "Copper Tube",
@@ -4306,7 +4415,7 @@
     "icon": "inv_gizmo_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4363/copper-modulator",
-    "vendorPrice": null,
+    "vendorPrice": 200,
     "createdBy": {
       "spellId": 3926,
       "spellName": "Copper Modulator",
@@ -4329,7 +4438,7 @@
     "icon": "inv_misc_dust_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4364/coarse-blasting-powder",
-    "vendorPrice": null,
+    "vendorPrice": 48,
     "createdBy": {
       "spellId": 3929,
       "spellName": "Coarse Blasting Powder",
@@ -4432,7 +4541,7 @@
     "icon": "inv_gizmo_pipe_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4371/bronze-tube",
-    "vendorPrice": null,
+    "vendorPrice": 800,
     "createdBy": {
       "spellId": 3938,
       "spellName": "Bronze Tube",
@@ -4604,7 +4713,7 @@
     "icon": "inv_gizmo_bronzeframework_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4382/bronze-framework",
-    "vendorPrice": null,
+    "vendorPrice": 2400,
     "createdBy": {
       "spellId": 3953,
       "spellName": "Bronze Framework",
@@ -4719,7 +4828,7 @@
     "icon": "inv_misc_pocketwatch_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4389/gyrochronatom",
-    "vendorPrice": null,
+    "vendorPrice": 3000,
     "createdBy": {
       "spellId": 3961,
       "spellName": "Gyrochronatom",
@@ -4873,7 +4982,8 @@
     "icon": "inv_mace_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4399/wooden-stock",
-    "vendorPrice": null
+    "vendorPrice": 200,
+    "sellPrice": 50
   },
   "4400": {
     "name": "Heavy Stock",
@@ -4883,7 +4993,8 @@
     "icon": "inv_mace_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4400/heavy-stock",
-    "vendorPrice": null
+    "vendorPrice": 2000,
+    "sellPrice": 500
   },
   "4401": {
     "name": "Mechanical Squirrel Box",
@@ -4905,7 +5016,8 @@
     "icon": "inv_misc_organ_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4402/small-flame-sac",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "4403": {
     "name": "Portable Bronze Mortar",
@@ -4927,7 +5039,7 @@
     "icon": "inv_ingot_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4404/silver-contact",
-    "vendorPrice": null,
+    "vendorPrice": 100,
     "createdBy": {
       "spellId": 3973,
       "spellName": "Silver Contact",
@@ -5042,7 +5154,8 @@
     "icon": "inv_misc_monsterscales_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4461/raptor-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 208
   },
   "4470": {
     "name": "Simple Wood",
@@ -5052,7 +5165,8 @@
     "icon": "inv_tradeskillitem_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4470/simple-wood",
-    "vendorPrice": 38
+    "vendorPrice": 38,
+    "sellPrice": 9
   },
   "4536": {
     "name": "Shiny Red Apple",
@@ -5062,7 +5176,8 @@
     "icon": "inv_misc_food_19",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4536/shiny-red-apple",
-    "vendorPrice": null
+    "vendorPrice": 25,
+    "sellPrice": 1
   },
   "4589": {
     "name": "Long Elegant Feather",
@@ -5072,7 +5187,8 @@
     "icon": "spell_magic_featherfall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4589/long-elegant-feather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 530
   },
   "4592": {
     "name": "Longjaw Mud Snapper",
@@ -5130,7 +5246,8 @@
     "icon": "inv_misc_fish_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4603/raw-spotted-yellowtail",
-    "vendorPrice": null
+    "vendorPrice": 80,
+    "sellPrice": 4
   },
   "4605": {
     "name": "Red-speckled Mushroom",
@@ -5140,7 +5257,8 @@
     "icon": "inv_mushroom_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4605/red-speckled-mushroom",
-    "vendorPrice": null
+    "vendorPrice": 125,
+    "sellPrice": 6
   },
   "4611": {
     "name": "Blue Pearl",
@@ -5150,7 +5268,8 @@
     "icon": "inv_ore_arcanite_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4611/blue-pearl",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 50
   },
   "4623": {
     "name": "Lesser Stoneshield Potion",
@@ -5172,7 +5291,8 @@
     "icon": "inv_misc_herb_19",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4625/firebloom",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "4655": {
     "name": "Giant Clam Meat",
@@ -5182,7 +5302,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=4655/giant-clam-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 71
   },
   "4852": {
     "name": "Flash Bomb",
@@ -5204,7 +5325,8 @@
     "icon": "inv_misc_pelt_bear_ruin_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5051/dig-rat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "5081": {
     "name": "Kodo Hide Bag",
@@ -5237,7 +5359,8 @@
     "icon": "inv_misc_leatherscrap_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5082/thin-kodo-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "5095": {
     "name": "Rainbow Fin Albacore",
@@ -5259,7 +5382,8 @@
     "icon": "inv_feather_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5116/long-tail-feather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 303
   },
   "5373": {
     "name": "Lucky Charm",
@@ -5269,7 +5393,8 @@
     "icon": "inv_misc_armorkit_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5373/lucky-charm",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 72
   },
   "5465": {
     "name": "Small Spider Leg",
@@ -5279,7 +5404,8 @@
     "icon": "inv_misc_monsterspidercarapace_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5465/small-spider-leg",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 3
   },
   "5466": {
     "name": "Scorpid Stinger",
@@ -5289,7 +5415,8 @@
     "icon": "spell_nature_nullifypoison",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5466/scorpid-stinger",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 8
   },
   "5467": {
     "name": "Kodo Meat",
@@ -5299,7 +5426,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5467/kodo-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7
   },
   "5468": {
     "name": "Soft Frenzy Flesh",
@@ -5309,7 +5437,8 @@
     "icon": "inv_misc_fish_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5468/soft-frenzy-flesh",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 12
   },
   "5469": {
     "name": "Strider Meat",
@@ -5319,7 +5448,8 @@
     "icon": "inv_misc_food_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5469/strider-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 9
   },
   "5470": {
     "name": "Thunder Lizard Tail",
@@ -5329,7 +5459,8 @@
     "icon": "inv_misc_bone_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5470/thunder-lizard-tail",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 28
   },
   "5471": {
     "name": "Stag Meat",
@@ -5339,7 +5470,8 @@
     "icon": "inv_misc_pelt_wolf_ruin_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5471/stag-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 30
   },
   "5472": {
     "name": "Kaldorei Spider Kabob",
@@ -5445,7 +5577,8 @@
     "icon": "inv_misc_gem_pearl_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5498/small-lustrous-pearl",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 200
   },
   "5500": {
     "name": "Iridescent Pearl",
@@ -5455,7 +5588,8 @@
     "icon": "inv_misc_gem_pearl_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5500/iridescent-pearl",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 750
   },
   "5503": {
     "name": "Clam Meat",
@@ -5465,7 +5599,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5503/clam-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 16
   },
   "5504": {
     "name": "Tangy Clam Meat",
@@ -5475,7 +5610,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5504/tangy-clam-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 22
   },
   "5507": {
     "name": "Ornate Spyglass",
@@ -5628,7 +5764,8 @@
     "icon": "inv_misc_monsterclaw_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5635/sharp-claw",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 45
   },
   "5637": {
     "name": "Large Fang",
@@ -5638,7 +5775,8 @@
     "icon": "inv_misc_bone_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5637/large-fang",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 75
   },
   "5739": {
     "name": "Barbaric Harness",
@@ -5780,7 +5918,8 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5784/slimy-murloc-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 75
   },
   "5785": {
     "name": "Thick Murloc Scale",
@@ -5790,7 +5929,8 @@
     "icon": "inv_misc_monsterscales_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=5785/thick-murloc-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "5957": {
     "name": "Handstitched Leather Vest",
@@ -6128,7 +6268,7 @@
     "icon": "inv_misc_flute_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6217/copper-rod",
-    "vendorPrice": null,
+    "vendorPrice": 124,
     "createdBy": {
       "spellId": 1245287,
       "spellName": "Copper Rod",
@@ -6233,7 +6373,8 @@
     "icon": "inv_potion_15",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6260/blue-dye",
-    "vendorPrice": 50
+    "vendorPrice": 50,
+    "sellPrice": 12
   },
   "6261": {
     "name": "Orange Dye",
@@ -6243,7 +6384,8 @@
     "icon": "inv_potion_35",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6261/orange-dye",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "6263": {
     "name": "Blue Overalls",
@@ -6277,7 +6419,8 @@
     "icon": "inv_misc_fish_32",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6289/raw-longjaw-mud-snapper",
-    "vendorPrice": null
+    "vendorPrice": 20,
+    "sellPrice": 1
   },
   "6290": {
     "name": "Brilliant Smallfish",
@@ -6299,7 +6442,8 @@
     "icon": "inv_misc_fish_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6291/raw-brilliant-smallfish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "6303": {
     "name": "Raw Slitherskin Mackerel",
@@ -6309,7 +6453,8 @@
     "icon": "inv_misc_fish_24",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6303/raw-slitherskin-mackerel",
-    "vendorPrice": null
+    "vendorPrice": 20,
+    "sellPrice": 1
   },
   "6308": {
     "name": "Raw Bristle Whisker Catfish",
@@ -6319,7 +6464,8 @@
     "icon": "inv_misc_fish_30",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6308/raw-bristle-whisker-catfish",
-    "vendorPrice": null
+    "vendorPrice": 40,
+    "sellPrice": 2
   },
   "6316": {
     "name": "Loch Frenzy Delight",
@@ -6341,7 +6487,8 @@
     "icon": "inv_misc_fish_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6317/raw-loch-frenzy",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2
   },
   "6338": {
     "name": "Silver Rod",
@@ -6397,7 +6544,8 @@
     "icon": "inv_misc_monsterhead_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6358/oily-blackmouth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "6359": {
     "name": "Firefin Snapper",
@@ -6407,7 +6555,8 @@
     "icon": "inv_misc_monsterhead_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6359/firefin-snapper",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5
   },
   "6361": {
     "name": "Raw Rainbow Fin Albacore",
@@ -6417,7 +6566,8 @@
     "icon": "inv_misc_fish_25",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6361/raw-rainbow-fin-albacore",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2
   },
   "6362": {
     "name": "Raw Rockscale Cod",
@@ -6427,7 +6577,8 @@
     "icon": "inv_misc_fish_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6362/raw-rockscale-cod",
-    "vendorPrice": 80
+    "vendorPrice": 80,
+    "sellPrice": 4
   },
   "6370": {
     "name": "Blackmouth Oil",
@@ -6576,7 +6727,8 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6470/deviate-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 20
   },
   "6471": {
     "name": "Perfect Deviate Scale",
@@ -6586,7 +6738,8 @@
     "icon": "inv_misc_monsterscales_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6471/perfect-deviate-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "6522": {
     "name": "Deviate Fish",
@@ -6596,7 +6749,8 @@
     "icon": "inv_misc_monsterhead_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6522/deviate-fish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "6530": {
     "name": "Nightcrawlers",
@@ -6606,7 +6760,8 @@
     "icon": "inv_misc_monstertail_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6530/nightcrawlers",
-    "vendorPrice": 100
+    "vendorPrice": 100,
+    "sellPrice": 25
   },
   "6533": {
     "name": "Aquadynamic Fish Attractor",
@@ -6783,7 +6938,8 @@
     "icon": "inv_egg_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=6889/small-egg",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "6890": {
     "name": "Smoked Bear Meat",
@@ -7057,7 +7213,8 @@
     "icon": "inv_ore_iron_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7067/elemental-earth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7068": {
     "name": "Elemental Fire",
@@ -7088,7 +7245,8 @@
     "icon": "spell_nature_tranquility",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7069/elemental-air",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7070": {
     "name": "Elemental Water",
@@ -7098,7 +7256,8 @@
     "icon": "inv_potion_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7070/elemental-water",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7071": {
     "name": "Iron Buckle",
@@ -7129,7 +7288,8 @@
     "icon": "inv_misc_monsterscales_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7072/naga-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "7075": {
     "name": "Core of Earth",
@@ -7139,7 +7299,8 @@
     "icon": "inv_stone_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7075/core-of-earth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7076": {
     "name": "Essence of Earth",
@@ -7170,7 +7331,8 @@
     "icon": "spell_fire_lavaspawn",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7077/heart-of-fire",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7078": {
     "name": "Essence of Fire",
@@ -7201,7 +7363,8 @@
     "icon": "inv_misc_orb_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7079/globe-of-water",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7080": {
     "name": "Essence of Water",
@@ -7211,7 +7374,7 @@
     "icon": "spell_nature_acid_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7080/essence-of-water",
-    "vendorPrice": null,
+    "vendorPrice": 1600,
     "createdBy": {
       "spellId": 17561,
       "spellName": "Transmute: Earth to Water",
@@ -7232,7 +7395,8 @@
     "icon": "spell_nature_cyclone",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7081/breath-of-wind",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7082": {
     "name": "Essence of Air",
@@ -7440,7 +7604,8 @@
     "icon": "inv_misc_monsterscales_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7286/black-whelp-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "7287": {
     "name": "Red Whelp Scale",
@@ -7450,7 +7615,8 @@
     "icon": "inv_misc_monsterscales_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7287/red-whelp-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "7348": {
     "name": "Fletcher's Gloves",
@@ -7664,7 +7830,8 @@
     "icon": "inv_misc_monsterscales_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7392/green-whelp-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 200
   },
   "7428": {
     "name": "Shadowcat Hide",
@@ -7674,7 +7841,8 @@
     "icon": "inv_misc_pelt_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7428/shadowcat-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "7506": {
     "name": "Gnomish Universal Remote",
@@ -7708,7 +7876,8 @@
     "icon": "inv_misc_gem_crystal_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7909/aquamarine",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "7910": {
     "name": "Star Ruby",
@@ -7718,7 +7887,8 @@
     "icon": "inv_misc_gem_ruby_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7910/star-ruby",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5000
   },
   "7911": {
     "name": "Truesilver Ore",
@@ -7729,7 +7899,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=7911",
     "vendorPrice": null,
-    "itemLevel": 40
+    "itemLevel": 40,
+    "sellPrice": 500
   },
   "7912": {
     "name": "Solid Stone",
@@ -7739,7 +7910,8 @@
     "icon": "inv_stone_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7912/solid-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "7913": {
     "name": "Barbaric Iron Shoulders",
@@ -8310,7 +8482,8 @@
     "icon": "inv_misc_gem_pearl_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7971/black-pearl",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "7972": {
     "name": "Ichor of Undeath",
@@ -8320,7 +8493,8 @@
     "icon": "inv_misc_slime_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7972/ichor-of-undeath",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "7974": {
     "name": "Zesty Clam Meat",
@@ -8330,7 +8504,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=7974/zesty-clam-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 50
   },
   "8067": {
     "name": "Crafted Light Shot",
@@ -8376,7 +8551,8 @@
     "icon": "inv_misc_monsterclaw_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8146/wicked-claw",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "8150": {
     "name": "Deeprock Salt",
@@ -8386,7 +8562,8 @@
     "icon": "inv_misc_dust_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8150/deeprock-salt",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "8151": {
     "name": "Flask of Mojo",
@@ -8396,7 +8573,8 @@
     "icon": "inv_potion_15",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8151/flask-of-mojo",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "8152": {
     "name": "Flask of Big Mojo",
@@ -8406,7 +8584,8 @@
     "icon": "inv_potion_12",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8152/flask-of-big-mojo",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "8153": {
     "name": "Wildvine",
@@ -8416,7 +8595,8 @@
     "icon": "inv_misc_herb_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8153/wildvine",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5
   },
   "8154": {
     "name": "Scorpid Scale",
@@ -8426,7 +8606,8 @@
     "icon": "inv_misc_monsterscales_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8154/scorpid-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "8165": {
     "name": "Worn Dragonscale",
@@ -8436,7 +8617,8 @@
     "icon": "inv_misc_monsterscales_17",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8165/worn-dragonscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "8167": {
     "name": "Turtle Scale",
@@ -8446,7 +8628,8 @@
     "icon": "inv_misc_monsterscales_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8167/turtle-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "8168": {
     "name": "Jet Black Feather",
@@ -8456,7 +8639,8 @@
     "icon": "inv_feather_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8168/jet-black-feather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "8169": {
     "name": "Thick Hide",
@@ -8466,7 +8650,8 @@
     "icon": "inv_misc_pelt_bear_ruin_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8169/thick-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "8170": {
     "name": "Rugged Leather",
@@ -8498,7 +8683,8 @@
     "icon": "inv_misc_pelt_bear_ruin_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8171/rugged-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "8172": {
     "name": "Cured Thick Hide",
@@ -8922,7 +9108,8 @@
     "icon": "inv_fabric_silk_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8343/heavy-silken-thread",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "sellPrice": 500
   },
   "8345": {
     "name": "Wolfshead Helm",
@@ -9004,7 +9191,8 @@
     "icon": "inv_misc_fish_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8365/raw-mithril-head-trout",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "8367": {
     "name": "Dragonscale Breastplate",
@@ -9026,7 +9214,8 @@
     "icon": "inv_misc_pelt_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8368/thick-wolfhide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "8766": {
     "name": "Morning Glory Dew",
@@ -9036,7 +9225,8 @@
     "icon": "inv_potion_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8766/morning-glory-dew",
-    "vendorPrice": 4000
+    "vendorPrice": 4000,
+    "sellPrice": 200
   },
   "8831": {
     "name": "Purple Lotus",
@@ -9046,7 +9236,8 @@
     "icon": "inv_misc_herb_17",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8831/purple-lotus",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 300
   },
   "8836": {
     "name": "Arthas' Tears",
@@ -9056,7 +9247,8 @@
     "icon": "inv_misc_herb_13",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8836/arthas-tears",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 95
   },
   "8838": {
     "name": "Sungrass",
@@ -9066,7 +9258,8 @@
     "icon": "inv_misc_herb_18",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8838/sungrass",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 60
   },
   "8839": {
     "name": "Blindweed",
@@ -9076,7 +9269,8 @@
     "icon": "inv_misc_herb_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8839/blindweed",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 375
   },
   "8845": {
     "name": "Ghost Mushroom",
@@ -9086,7 +9280,8 @@
     "icon": "inv_mushroom_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8845/ghost-mushroom",
-    "vendorPrice": 1500
+    "vendorPrice": 1500,
+    "sellPrice": 375
   },
   "8846": {
     "name": "Gromsblood",
@@ -9096,7 +9291,8 @@
     "icon": "inv_misc_herb_16",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8846/gromsblood",
-    "vendorPrice": 1000
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "8925": {
     "name": "Crystal Vial",
@@ -9107,7 +9303,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8925/crystal-vial",
     "vendorPrice": 2500,
-    "vendorStack": 5
+    "vendorStack": 5,
+    "sellPrice": 125
   },
   "8949": {
     "name": "Elixir of Agility",
@@ -9187,7 +9384,8 @@
     "icon": "inv_misc_fish_22",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=8959/raw-spinefin-halibut",
-    "vendorPrice": 3200
+    "vendorPrice": 3200,
+    "sellPrice": 160
   },
   "9030": {
     "name": "Restorative Potion",
@@ -9456,7 +9654,8 @@
     "icon": "inv_drink_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=9260/volatile-rum",
-    "vendorPrice": 1600
+    "vendorPrice": 1600,
+    "sellPrice": 400
   },
   "9262": {
     "name": "Black Vitriol",
@@ -9466,7 +9665,8 @@
     "icon": "inv_misc_gem_sapphire_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=9262/black-vitriol",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "9264": {
     "name": "Elixir of Shadow Power",
@@ -10027,7 +10227,8 @@
     "icon": "inv_misc_food_wheat_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10284/simple-flour",
-    "vendorPrice": 200
+    "vendorPrice": 200,
+    "sellPrice": 50
   },
   "10285": {
     "name": "Shadow Silk",
@@ -10037,7 +10238,8 @@
     "icon": "spell_nature_web",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10285/shadow-silk",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "10286": {
     "name": "Heart of the Wild",
@@ -10047,7 +10249,8 @@
     "icon": "inv_misc_herb_08",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10286/heart-of-the-wild",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "10290": {
     "name": "Pink Dye",
@@ -10057,7 +10260,8 @@
     "icon": "inv_potion_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10290/pink-dye",
-    "vendorPrice": 2500
+    "vendorPrice": 2500,
+    "sellPrice": 625
   },
   "10308": {
     "name": "Scroll of Intellect IV",
@@ -10067,7 +10271,8 @@
     "icon": "inv_scroll_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10308/scroll-of-intellect-iv",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 112
   },
   "10421": {
     "name": "Rough Copper Vest",
@@ -10647,7 +10852,8 @@
     "icon": "inv_ore_thorium_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10620/thorium-ore",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "10644": {
     "name": "Recipe: Goblin Rocket Fuel",
@@ -10693,7 +10899,8 @@
     "icon": "inv_potion_65",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10647/engineers-ink",
-    "vendorPrice": 2000
+    "vendorPrice": 2000,
+    "sellPrice": 500
   },
   "10648": {
     "name": "Blank Parchment",
@@ -10703,7 +10910,8 @@
     "icon": "inv_misc_note_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10648/blank-parchment",
-    "vendorPrice": 500
+    "vendorPrice": 500,
+    "sellPrice": 125
   },
   "10713": {
     "name": "Plans: Inlaid Mithril Cylinder",
@@ -10821,7 +11029,8 @@
     "icon": "inv_enchant_essencemagicsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10938/lesser-magic-essence",
-    "vendorPrice": 800
+    "vendorPrice": 800,
+    "sellPrice": 1
   },
   "10939": {
     "name": "Greater Magic Essence",
@@ -10840,7 +11049,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1
   },
   "10940": {
     "name": "Strange Dust",
@@ -10850,7 +11060,8 @@
     "icon": "inv_enchant_duststrange",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10940/strange-dust",
-    "vendorPrice": 800
+    "vendorPrice": 800,
+    "sellPrice": 1
   },
   "10978": {
     "name": "Small Glimmering Shard",
@@ -10860,7 +11071,8 @@
     "icon": "inv_enchant_shardglimmeringsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10978/small-glimmering-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "10998": {
     "name": "Lesser Astral Essence",
@@ -10870,7 +11082,8 @@
     "icon": "inv_enchant_essenceastralsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=10998/lesser-astral-essence",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11040": {
     "name": "Morrowgrain",
@@ -10880,7 +11093,8 @@
     "icon": "inv_misc_herb_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11040/morrowgrain",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11082": {
     "name": "Greater Astral Essence",
@@ -10899,7 +11113,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1
   },
   "11083": {
     "name": "Soul Dust",
@@ -10909,7 +11124,8 @@
     "icon": "inv_enchant_dustsoul",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11083/soul-dust",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11084": {
     "name": "Large Glimmering Shard",
@@ -10919,7 +11135,8 @@
     "icon": "inv_enchant_shardglimmeringlarge",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11084/large-glimmering-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11128": {
     "name": "Golden Rod",
@@ -10963,7 +11180,8 @@
     "icon": "inv_enchant_essencemysticalsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11134/lesser-mystic-essence",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11135": {
     "name": "Greater Mystic Essence",
@@ -10982,7 +11200,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1
   },
   "11137": {
     "name": "Vision Dust",
@@ -10992,7 +11211,8 @@
     "icon": "inv_enchant_dustvision",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11137/vision-dust",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11138": {
     "name": "Small Glowing Shard",
@@ -11002,7 +11222,8 @@
     "icon": "inv_enchant_shardglowingsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11138/small-glowing-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11139": {
     "name": "Large Glowing Shard",
@@ -11012,7 +11233,8 @@
     "icon": "inv_enchant_shardglowinglarge",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11139/large-glowing-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11144": {
     "name": "Truesilver Rod",
@@ -11056,7 +11278,8 @@
     "icon": "inv_enchant_essencenethersmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11174/lesser-nether-essence",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11175": {
     "name": "Greater Nether Essence",
@@ -11075,7 +11298,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1
   },
   "11176": {
     "name": "Dream Dust",
@@ -11085,7 +11309,8 @@
     "icon": "inv_enchant_dustdream",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11176/dream-dust",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11177": {
     "name": "Small Radiant Shard",
@@ -11095,7 +11320,8 @@
     "icon": "inv_enchant_shardradientsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11177/small-radiant-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11178": {
     "name": "Large Radiant Shard",
@@ -11105,7 +11331,8 @@
     "icon": "inv_enchant_shardradientlarge",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11178/large-radiant-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "11184": {
     "name": "Blue Power Crystal",
@@ -11200,7 +11427,8 @@
     "icon": "inv_tradeskillitem_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11291/star-wood",
-    "vendorPrice": 4500
+    "vendorPrice": 4500,
+    "sellPrice": 1125
   },
   "11370": {
     "name": "Dark Iron Ore",
@@ -11211,7 +11439,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=11370",
     "vendorPrice": null,
-    "itemLevel": 50
+    "itemLevel": 50,
+    "sellPrice": 500
   },
   "11371": {
     "name": "Dark Iron Bar",
@@ -11230,7 +11459,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 600
   },
   "11382": {
     "name": "Blood of the Mountain",
@@ -11240,7 +11470,8 @@
     "icon": "inv_misc_gem_bloodstone_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=11382/blood-of-the-mountain",
-    "vendorPrice": null
+    "vendorPrice": 3000,
+    "sellPrice": 750
   },
   "11590": {
     "name": "Mechanical Repair Kit",
@@ -11368,7 +11599,8 @@
     "icon": "inv_misc_food_67",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12037/mystery-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 87
   },
   "12184": {
     "name": "Raptor Flesh",
@@ -11378,7 +11610,8 @@
     "icon": "inv_misc_food_69",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12184/raptor-flesh",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 87
   },
   "12190": {
     "name": "Dreamless Sleep Potion",
@@ -11400,7 +11633,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12202/tiger-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 87
   },
   "12203": {
     "name": "Red Wolf Meat",
@@ -11410,7 +11644,8 @@
     "icon": "inv_misc_food_71",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12203/red-wolf-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 87
   },
   "12204": {
     "name": "Heavy Kodo Meat",
@@ -11420,7 +11655,8 @@
     "icon": "inv_misc_food_70",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12204/heavy-kodo-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 112
   },
   "12205": {
     "name": "White Spider Meat",
@@ -11430,7 +11666,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12205/white-spider-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 112
   },
   "12206": {
     "name": "Tender Crab Meat",
@@ -11440,7 +11677,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12206/tender-crab-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 112
   },
   "12207": {
     "name": "Giant Egg",
@@ -11450,7 +11688,8 @@
     "icon": "inv_egg_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12207/giant-egg",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "12208": {
     "name": "Tender Wolf Meat",
@@ -11460,7 +11699,8 @@
     "icon": "inv_misc_food_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12208/tender-wolf-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "12209": {
     "name": "Lean Wolf Steak",
@@ -11578,7 +11818,8 @@
     "icon": "inv_misc_pelt_bear_ruin_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12223/meaty-bat-wing",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "12224": {
     "name": "Crispy Bat Wing",
@@ -11633,7 +11874,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 600
   },
   "12360": {
     "name": "Arcanite Bar",
@@ -11665,7 +11907,8 @@
     "icon": "inv_misc_gem_sapphire_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12361/blue-sapphire",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7000
   },
   "12363": {
     "name": "Arcane Crystal",
@@ -11675,7 +11918,8 @@
     "icon": "inv_misc_gem_topaz_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12363/arcane-crystal",
-    "vendorPrice": null
+    "vendorPrice": 8000,
+    "sellPrice": 2000
   },
   "12364": {
     "name": "Huge Emerald",
@@ -11685,7 +11929,8 @@
     "icon": "inv_misc_gem_emerald_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12364/huge-emerald",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10000
   },
   "12365": {
     "name": "Dense Stone",
@@ -11695,7 +11940,8 @@
     "icon": "inv_misc_stonetablet_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12365/dense-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "12404": {
     "name": "Dense Sharpening Stone",
@@ -11945,7 +12191,8 @@
     "icon": "inv_misc_monsterscales_17",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12607/brilliant-chromatic-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 8048
   },
   "12610": {
     "name": "Runic Plate Shoulders",
@@ -12238,7 +12485,8 @@
     "icon": "inv_misc_rune_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12662/demonic-rune",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 600
   },
   "12735": {
     "name": "Frayed Abomination Stitching",
@@ -12513,7 +12761,8 @@
     "icon": "inv_misc_gem_opal_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12799/large-opal",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7000
   },
   "12800": {
     "name": "Azerothian Diamond",
@@ -12523,7 +12772,8 @@
     "icon": "inv_misc_gem_diamond_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12800/azerothian-diamond",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10000
   },
   "12803": {
     "name": "Living Essence",
@@ -12554,7 +12804,8 @@
     "icon": "spell_nature_astralrecalgroup",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12804/powerful-mojo",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "12808": {
     "name": "Essence of Undeath",
@@ -12585,7 +12836,8 @@
     "icon": "inv_stone_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12809/guardian-stone",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10000
   },
   "12810": {
     "name": "Enchanted Leather",
@@ -12618,7 +12870,8 @@
     "icon": "inv_misc_gem_pearl_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=12811/righteous-orb",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 20000
   },
   "12938": {
     "name": "Blood of Heroes",
@@ -12648,7 +12901,8 @@
     "icon": "inv_misc_fish_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13422/stonescale-eel",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10
   },
   "13423": {
     "name": "Stonescale Oil",
@@ -12884,7 +13138,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13463/dreamfoil",
     "vendorPrice": 400,
-    "limitedStock": true
+    "limitedStock": true,
+    "sellPrice": 100
   },
   "13464": {
     "name": "Golden Sansam",
@@ -12895,7 +13150,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13464/golden-sansam",
     "vendorPrice": 400,
-    "limitedStock": true
+    "limitedStock": true,
+    "sellPrice": 100
   },
   "13465": {
     "name": "Mountain Silversage",
@@ -12905,7 +13161,8 @@
     "icon": "inv_misc_herb_mountainsilversage",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13465/mountain-silversage",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "13466": {
     "name": "Plaguebloom",
@@ -12915,7 +13172,8 @@
     "icon": "inv_misc_herb_plaguebloom",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13466/plaguebloom",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "13467": {
     "name": "Icecap",
@@ -12925,7 +13183,8 @@
     "icon": "inv_misc_herb_icecap",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13467/icecap",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "13468": {
     "name": "Black Lotus",
@@ -12935,7 +13194,8 @@
     "icon": "inv_misc_herb_blacklotus",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13468/black-lotus",
-    "vendorPrice": null
+    "vendorPrice": 4000,
+    "sellPrice": 1000
   },
   "13503": {
     "name": "Alchemist's Stone",
@@ -13065,7 +13325,8 @@
     "icon": "inv_misc_monsterhead_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13754/raw-glossy-mightfish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 6
   },
   "13755": {
     "name": "Raw Winter Squid",
@@ -13075,7 +13336,8 @@
     "icon": "inv_misc_fish_13",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13755/raw-winter-squid",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7
   },
   "13756": {
     "name": "Raw Summer Bass",
@@ -13085,7 +13347,8 @@
     "icon": "inv_misc_fish_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13756/raw-summer-bass",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 9
   },
   "13758": {
     "name": "Raw Redgill",
@@ -13095,7 +13358,8 @@
     "icon": "inv_misc_fish_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13758/raw-redgill",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "13759": {
     "name": "Raw Nightfin Snapper",
@@ -13105,7 +13369,8 @@
     "icon": "inv_misc_fish_23",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13759/raw-nightfin-snapper",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10
   },
   "13760": {
     "name": "Raw Sunscale Salmon",
@@ -13115,7 +13380,8 @@
     "icon": "inv_misc_fish_19",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13760/raw-sunscale-salmon",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10
   },
   "13851": {
     "name": "Hot Wolf Ribs",
@@ -13293,7 +13559,8 @@
     "icon": "inv_misc_fish_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13888/darkclaw-lobster",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 12
   },
   "13889": {
     "name": "Raw Whitescale Salmon",
@@ -13303,7 +13570,8 @@
     "icon": "inv_misc_fish_20",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13889/raw-whitescale-salmon",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5
   },
   "13890": {
     "name": "Raw Plated Armorfish",
@@ -13313,7 +13581,8 @@
     "icon": "inv_misc_fish_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13890/raw-plated-armorfish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 70
   },
   "13893": {
     "name": "Large Raw Mightfish",
@@ -13323,7 +13592,8 @@
     "icon": "inv_misc_monsterhead_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13893/large-raw-mightfish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "13926": {
     "name": "Golden Pearl",
@@ -13333,7 +13603,8 @@
     "icon": "inv_misc_gem_pearl_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=13926/golden-pearl",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 10000
   },
   "13927": {
     "name": "Cooked Glossy Mightfish",
@@ -13522,7 +13793,8 @@
     "icon": "inv_fabric_purplefire_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14047/runecloth",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 400
   },
   "14048": {
     "name": "Bolt of Runecloth",
@@ -13889,7 +14161,8 @@
     "icon": "spell_nature_web",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14227/ironweb-spider-silk",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2500
   },
   "14256": {
     "name": "Felcloth",
@@ -13900,7 +14173,8 @@
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14256/felcloth",
     "vendorPrice": 8000,
-    "limitedStock": true
+    "limitedStock": true,
+    "sellPrice": 2000
   },
   "14341": {
     "name": "Rune Thread",
@@ -13910,7 +14184,8 @@
     "icon": "spell_shadow_antimagicshell",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14341/rune-thread",
-    "vendorPrice": 5000
+    "vendorPrice": 5000,
+    "sellPrice": 1250
   },
   "14342": {
     "name": "Mooncloth",
@@ -13941,7 +14216,8 @@
     "icon": "inv_enchant_shardbrilliantsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14343/small-brilliant-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "14344": {
     "name": "Large Brilliant Shard",
@@ -13951,7 +14227,8 @@
     "icon": "inv_enchant_shardbrilliantlarge",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=14344/large-brilliant-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "15045": {
     "name": "Green Dragonscale Breastplate",
@@ -14607,7 +14884,8 @@
     "icon": "inv_misc_monsterscales_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15408/heavy-scorpid-scale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15409": {
     "name": "Refined Deeprock Salt",
@@ -14626,7 +14904,8 @@
       },
       "minCount": 0,
       "maxCount": 0
-    }
+    },
+    "sellPrice": 1000
   },
   "15410": {
     "name": "Scale of Onyxia",
@@ -14636,7 +14915,8 @@
     "icon": "inv_misc_monsterscales_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15410/scale-of-onyxia",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5000
   },
   "15412": {
     "name": "Green Dragonscale",
@@ -14646,7 +14926,8 @@
     "icon": "inv_misc_monsterscales_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15412/green-dragonscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15414": {
     "name": "Red Dragonscale",
@@ -14656,7 +14937,8 @@
     "icon": "inv_misc_monsterscales_15",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15414/red-dragonscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1500
   },
   "15415": {
     "name": "Blue Dragonscale",
@@ -14666,7 +14948,8 @@
     "icon": "inv_misc_monsterscales_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15415/blue-dragonscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15416": {
     "name": "Black Dragonscale",
@@ -14676,7 +14959,8 @@
     "icon": "inv_misc_monsterscales_07",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15416/black-dragonscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "15417": {
     "name": "Devilsaur Leather",
@@ -14686,7 +14970,8 @@
     "icon": "inv_misc_pelt_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15417/devilsaur-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15419": {
     "name": "Warbear Leather",
@@ -14696,7 +14981,8 @@
     "icon": "inv_misc_pelt_bear_ruin_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15419/warbear-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 600
   },
   "15420": {
     "name": "Ironfeather",
@@ -14706,7 +14992,8 @@
     "icon": "inv_feather_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15420/ironfeather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100
   },
   "15422": {
     "name": "Frostsaber Leather",
@@ -14716,7 +15003,8 @@
     "icon": "inv_misc_pelt_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15422/frostsaber-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15423": {
     "name": "Chimera Leather",
@@ -14726,7 +15014,8 @@
     "icon": "inv_misc_leatherscrap_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=15423/chimera-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "15564": {
     "name": "Rugged Armor Kit",
@@ -15083,7 +15372,8 @@
     "icon": "inv_enchant_essenceeternalsmall",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=16202/lesser-eternal-essence",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "16203": {
     "name": "Greater Eternal Essence",
@@ -15102,7 +15392,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1
   },
   "16204": {
     "name": "Illusion Dust",
@@ -15112,7 +15403,8 @@
     "icon": "inv_enchant_dustillusion",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=16204/illusion-dust",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "16206": {
     "name": "Arcanite Rod",
@@ -15156,7 +15448,8 @@
     "icon": "inv_misc_orb_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=16583/demonic-figurine",
-    "vendorPrice": 10000
+    "vendorPrice": 10000,
+    "sellPrice": 2500
   },
   "16766": {
     "name": "Undermine Clam Chowder",
@@ -15262,7 +15555,8 @@
     "icon": "spell_fire_flamebolt",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17010/fiery-core",
-    "vendorPrice": null
+    "vendorPrice": 8000,
+    "sellPrice": 2000
   },
   "17011": {
     "name": "Lava Core",
@@ -15272,7 +15566,8 @@
     "icon": "spell_nature_earthquake",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17011/lava-core",
-    "vendorPrice": null
+    "vendorPrice": 8000,
+    "sellPrice": 2000
   },
   "17012": {
     "name": "Core Leather",
@@ -15282,7 +15577,8 @@
     "icon": "inv_ammo_firetar",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17012/core-leather",
-    "vendorPrice": null
+    "vendorPrice": 4000,
+    "sellPrice": 1000
   },
   "17013": {
     "name": "Dark Iron Leggings",
@@ -15340,7 +15636,8 @@
     "icon": "inv_misc_food_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17034/maple-seed",
-    "vendorPrice": 200
+    "vendorPrice": 200,
+    "sellPrice": 50
   },
   "17035": {
     "name": "Stranglethorn Seed",
@@ -15350,7 +15647,8 @@
     "icon": "inv_misc_food_02",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17035/stranglethorn-seed",
-    "vendorPrice": 400
+    "vendorPrice": 400,
+    "sellPrice": 100
   },
   "17056": {
     "name": "Light Feather",
@@ -15360,7 +15658,8 @@
     "icon": "inv_feather_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17056/light-feather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 7
   },
   "17193": {
     "name": "Sulfuron Hammer",
@@ -15392,7 +15691,8 @@
     "icon": "inv_drink_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17196/holiday-spirits",
-    "vendorPrice": 50
+    "vendorPrice": 50,
+    "sellPrice": 12
   },
   "17197": {
     "name": "Gingerbread Cookie",
@@ -15445,7 +15745,8 @@
     "icon": "spell_fire_sealoffire",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=17203/sulfuron-ingot",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 100000
   },
   "17222": {
     "name": "Spider Sausage",
@@ -15540,7 +15841,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 100000
   },
   "18045": {
     "name": "Tender Wolf Steak",
@@ -15667,7 +15969,8 @@
     "icon": "inv_misc_food_55",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=18255/runn-tum-tuber",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "18256": {
     "name": "Imbued Vial",
@@ -15677,8 +15980,9 @@
     "icon": "inv_potion_87",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=18256/imbued-vial",
-    "vendorPrice": 20000,
-    "vendorStack": 5
+    "vendorPrice": 30000,
+    "vendorStack": 5,
+    "sellPrice": 1500
   },
   "18258": {
     "name": "Gordok Ogre Suit",
@@ -15928,7 +16232,8 @@
     "icon": "inv_potion_22",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=18512/larval-acid",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4000
   },
   "18562": {
     "name": "Elementium Ore",
@@ -15939,7 +16244,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=18562",
     "vendorPrice": null,
-    "itemLevel": 60
+    "itemLevel": 60,
+    "sellPrice": 100000
   },
   "18567": {
     "name": "Elemental Flux",
@@ -15949,7 +16255,8 @@
     "icon": "spell_frost_fireresistancetotem",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=18567/elemental-flux",
-    "vendorPrice": 150000
+    "vendorPrice": 150000,
+    "sellPrice": 37500
   },
   "18587": {
     "name": "Goblin Jumper Cables XL",
@@ -16670,7 +16977,8 @@
     "icon": "inv_misc_herb_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=19726/bloodvine",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 500
   },
   "19767": {
     "name": "Primal Bat Leather",
@@ -16680,7 +16988,8 @@
     "icon": "inv_misc_pelt_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=19767/primal-bat-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "19768": {
     "name": "Primal Tiger Leather",
@@ -16690,7 +16999,8 @@
     "icon": "inv_misc_pelt_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=19768/primal-tiger-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "19774": {
     "name": "Souldarite",
@@ -16700,7 +17010,8 @@
     "icon": "inv_misc_gem_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=19774/souldarite",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5000
   },
   "19931": {
     "name": "Gurubashi Mojo Madness",
@@ -16722,7 +17033,8 @@
     "icon": "spell_nature_strength",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=19943/massive-mojo",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "19998": {
     "name": "Bloodvine Lens",
@@ -16864,7 +17176,8 @@
     "icon": "inv_misc_monsterscales_11",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20381/dreamscale",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5000
   },
   "20424": {
     "name": "Sandworm Meat",
@@ -16874,7 +17187,8 @@
     "icon": "inv_misc_food_51",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20424/sandworm-meat",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 175
   },
   "20452": {
     "name": "Smoked Desert Dumplings",
@@ -16968,7 +17282,8 @@
     "icon": "inv_misc_monsterscales_13",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20498/silithid-chitin",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1000
   },
   "20500": {
     "name": "Light Silithid Carapace",
@@ -16978,7 +17293,8 @@
     "icon": "inv_misc_monsterscales_14",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20500/light-silithid-carapace",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "20501": {
     "name": "Heavy Silithid Carapace",
@@ -16988,7 +17304,8 @@
     "icon": "inv_misc_monsterscales_05",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20501/heavy-silithid-carapace",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "20520": {
     "name": "Dark Rune",
@@ -16998,7 +17315,8 @@
     "icon": "spell_shadow_sealofkings",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20520/dark-rune",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2000
   },
   "20537": {
     "name": "Runed Stygian Boots",
@@ -17092,7 +17410,8 @@
     "icon": "inv_enchant_shardnexuslarge",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=20725/nexus-crystal",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1
   },
   "20744": {
     "name": "Minor Wizard Oil",
@@ -17348,7 +17667,8 @@
     "icon": "inv_misc_fish_20",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=21071/raw-sagefish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25
   },
   "21072": {
     "name": "Smoked Sagefish",
@@ -17370,7 +17690,8 @@
     "icon": "inv_misc_fish_21",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=21153/raw-greater-sagefish",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 125
   },
   "21154": {
     "name": "Festival Dress",
@@ -17872,7 +18193,8 @@
     "icon": "inv_misc_stonetablet_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=22202/small-obsidian-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 2500
   },
   "22203": {
     "name": "Large Obsidian Shard",
@@ -17882,7 +18204,8 @@
     "icon": "inv_stone_15",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=22203/large-obsidian-shard",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 5000
   },
   "22246": {
     "name": "Enchanted Mageweave Pouch",
@@ -18156,7 +18479,8 @@
     "icon": "inv_misc_rune_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=22682/frozen-rune",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 20000
   },
   "22728": {
     "name": "Steam Tonk Controller",
@@ -18529,7 +18853,8 @@
     "icon": "inv_misc_powder_feliron",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=215430/gnomeregan-fallout",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 250
   },
   "217270": {
     "name": "Turtle Scale Gloves",
@@ -18781,7 +19106,8 @@
     "icon": "inv_misc_spineleaf-_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=234012/hive-thistle",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 15
   },
   "236656": {
     "name": "",
@@ -18925,7 +19251,8 @@
     "icon": "inv_scroll_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=238786/schematic-tinker-teleport",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1400
   },
   "238787": {
     "name": "Schematic: Tinker: Nitro Boosts",
@@ -18935,7 +19262,8 @@
     "icon": "inv_scroll_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=238787/schematic-tinker-nitro-boosts",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1400
   },
   "238788": {
     "name": "Schematic: Tinker: Magnetic Displacement",
@@ -18945,7 +19273,8 @@
     "icon": "inv_scroll_06",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=238788/schematic-tinker-magnetic-displacement",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 1400
   },
   "239016": {
     "name": "Holy Salts",
@@ -19073,7 +19402,7 @@
     "link": "https://www.wowhead.com/forever/item=247754/minor-arcane-elixir",
     "vendorPrice": null,
     "itemLevel": 5,
-    "sellPrice": 25
+    "sellPrice": 5
   },
   "247755": {
     "name": "Elixir of Minor Force",
@@ -19129,7 +19458,8 @@
     "slot": "0",
     "link": "https://www.wowhead.com/forever/item=248815",
     "vendorPrice": null,
-    "itemLevel": 60
+    "itemLevel": 60,
+    "sellPrice": 375
   },
   "248819": {
     "name": "Fel Crystal",
@@ -19139,7 +19469,8 @@
     "icon": "inv_misc_uncutgemnormal1",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248819/fel-crystal",
-    "vendorPrice": null
+    "vendorPrice": 12000,
+    "sellPrice": 3000
   },
   "248820": {
     "name": "Torbernite",
@@ -19149,7 +19480,8 @@
     "icon": "inv_jewelcrafting_gem_34",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248820/torbernite",
-    "vendorPrice": null
+    "vendorPrice": 60000,
+    "sellPrice": 15000
   },
   "248821": {
     "name": "Demonsage",
@@ -19159,7 +19491,8 @@
     "icon": "inv_misc_herb_heartblossom",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248821/demonsage",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 225
   },
   "248822": {
     "name": "Death Lotus",
@@ -19169,7 +19502,8 @@
     "icon": "inv_nulllotus_void",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248822/death-lotus",
-    "vendorPrice": null
+    "vendorPrice": 6000,
+    "sellPrice": 1500
   },
   "248823": {
     "name": "Marefoil",
@@ -19179,7 +19513,8 @@
     "icon": "item_herbc",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248823/marefoil",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "248824": {
     "name": "Fel Hide",
@@ -19189,7 +19524,8 @@
     "icon": "inv_misc_leatherscrap_13",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248824/fel-hide",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 750
   },
   "248825": {
     "name": "Fel Leather",
@@ -19199,7 +19535,8 @@
     "icon": "inv_misc_leatherscrap_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=248825/fel-leather",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 750
   },
   "249144": {
     "name": "Twisted Nether Wand",
@@ -19257,7 +19594,8 @@
     "icon": "inv_herbalism_70_nightmaredreamleaf",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249274/stranglevine",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "249385": {
     "name": "Brilliant Wand",
@@ -19279,7 +19617,8 @@
     "icon": "inv_ore_pyrite_nugget",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249391/pyrite",
-    "vendorPrice": null
+    "vendorPrice": 400,
+    "sellPrice": 100
   },
   "249392": {
     "name": "Glimmering Staff",
@@ -19373,7 +19712,8 @@
     "icon": "inv_misc_food_109_honeylichen",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249399/frilled-lichen",
-    "vendorPrice": null
+    "vendorPrice": 120,
+    "sellPrice": 30
   },
   "249409": {
     "name": "Cerulean Dye",
@@ -19427,7 +19767,8 @@
     "icon": "inv_misc_herb_talandrasrose",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249424/rosecap",
-    "vendorPrice": null
+    "vendorPrice": 380,
+    "sellPrice": 95
   },
   "249425": {
     "name": "Bauxite",
@@ -19437,7 +19778,8 @@
     "icon": "inv_ore_manticytenugget",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249425/bauxite",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "249426": {
     "name": "Pitchblende",
@@ -19447,7 +19789,8 @@
     "icon": "inv_ore_elethium_nugget",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249426/pitchblende",
-    "vendorPrice": null
+    "vendorPrice": 1500,
+    "sellPrice": 375
   },
   "249427": {
     "name": "Pristine Leather",
@@ -19457,7 +19800,8 @@
     "icon": "item_pristinehide",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249427/pristine-leather",
-    "vendorPrice": null
+    "vendorPrice": 500,
+    "sellPrice": 125
   },
   "249428": {
     "name": "Pristine Hide",
@@ -19467,7 +19811,8 @@
     "icon": "inv_leatherworking_90_leatherhide",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249428/pristine-hide",
-    "vendorPrice": null
+    "vendorPrice": 1000,
+    "sellPrice": 250
   },
   "249429": {
     "name": "Pristine Scale",
@@ -19477,7 +19822,8 @@
     "icon": "inv_misc_monsterscales_09",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249429/pristine-scale",
-    "vendorPrice": null
+    "vendorPrice": 1500,
+    "sellPrice": 375
   },
   "249430": {
     "name": "Magenta Dye",
@@ -19683,7 +20029,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 3000
   },
   "249796": {
     "name": "Hyjal Berries",
@@ -19693,7 +20040,8 @@
     "icon": "inv_misc_food_40",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=249796/hyjal-berries",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 150
   },
   "249865": {
     "name": "Peace Tea",
@@ -20377,7 +20725,7 @@
     "link": "https://www.wowhead.com/forever/item=250482/glowing-copper-boots",
     "vendorPrice": null,
     "itemLevel": 15,
-    "sellPrice": 256
+    "sellPrice": 207
   },
   "250483": {
     "name": "Sterling Silver Boots",
@@ -20437,7 +20785,7 @@
     "link": "https://www.wowhead.com/forever/item=250487/sterling-silver-breastplate",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2823
+    "sellPrice": 485
   },
   "250488": {
     "name": "Veteran's Chain Shirt",
@@ -20449,7 +20797,7 @@
     "link": "https://www.wowhead.com/forever/item=250488/veterans-chain-shirt",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 974
+    "sellPrice": 488
   },
   "250489": {
     "name": "Guard's Chain Shirt",
@@ -20461,7 +20809,7 @@
     "link": "https://www.wowhead.com/forever/item=250489/guards-chain-shirt",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 978
+    "sellPrice": 493
   },
   "250490": {
     "name": "Protector's Chain Shirt",
@@ -20473,7 +20821,7 @@
     "link": "https://www.wowhead.com/forever/item=250490/protectors-chain-shirt",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 488
+    "sellPrice": 503
   },
   "250491": {
     "name": "Acolyte's Chain Shirt",
@@ -20485,7 +20833,7 @@
     "link": "https://www.wowhead.com/forever/item=250491/acolytes-chain-shirt",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 313
+    "sellPrice": 503
   },
   "250492": {
     "name": "Crusader's Chain Shirt",
@@ -20497,7 +20845,7 @@
     "link": "https://www.wowhead.com/forever/item=250492/crusaders-chain-shirt",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 456
+    "sellPrice": 498
   },
   "250493": {
     "name": "Veteran's Chain Leggings",
@@ -20509,7 +20857,7 @@
     "link": "https://www.wowhead.com/forever/item=250493/veterans-chain-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1895
+    "sellPrice": 965
   },
   "250494": {
     "name": "Guard's Chain Leggings",
@@ -20521,7 +20869,7 @@
     "link": "https://www.wowhead.com/forever/item=250494/guards-chain-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1954
+    "sellPrice": 984
   },
   "250495": {
     "name": "Protector's Chain Leggings",
@@ -20533,7 +20881,7 @@
     "link": "https://www.wowhead.com/forever/item=250495/protectors-chain-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 788
+    "sellPrice": 965
   },
   "250496": {
     "name": "Acolyte's Chain Leggings",
@@ -20545,7 +20893,7 @@
     "link": "https://www.wowhead.com/forever/item=250496/acolytes-chain-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 781
+    "sellPrice": 965
   },
   "250497": {
     "name": "Crusader's Chain Leggings",
@@ -20557,7 +20905,7 @@
     "link": "https://www.wowhead.com/forever/item=250497/crusaders-chain-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 801
+    "sellPrice": 1004
   },
   "250498": {
     "name": "Veteran's Chain Helm",
@@ -20569,7 +20917,7 @@
     "link": "https://www.wowhead.com/forever/item=250498/veterans-chain-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2471
+    "sellPrice": 1274
   },
   "250499": {
     "name": "Guard's Chain Helm",
@@ -20581,7 +20929,7 @@
     "link": "https://www.wowhead.com/forever/item=250499/guards-chain-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2480
+    "sellPrice": 1262
   },
   "250500": {
     "name": "Protector's Chain Helm",
@@ -20593,7 +20941,7 @@
     "link": "https://www.wowhead.com/forever/item=250500/protectors-chain-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1101
+    "sellPrice": 1274
   },
   "250501": {
     "name": "Acolyte's Chain Helm",
@@ -20605,7 +20953,7 @@
     "link": "https://www.wowhead.com/forever/item=250501/acolytes-chain-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1088
+    "sellPrice": 1262
   },
   "250502": {
     "name": "Crusader's Chain Helm",
@@ -20617,7 +20965,7 @@
     "link": "https://www.wowhead.com/forever/item=250502/crusaders-chain-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1024
+    "sellPrice": 1274
   },
   "250503": {
     "name": "Veteran's Boots",
@@ -21145,7 +21493,7 @@
     "link": "https://www.wowhead.com/forever/item=250546/officers-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3321
+    "sellPrice": 4966
   },
   "250547": {
     "name": "Sentinel's Boots",
@@ -21157,7 +21505,7 @@
     "link": "https://www.wowhead.com/forever/item=250547/sentinels-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3351
+    "sellPrice": 5016
   },
   "250548": {
     "name": "Warder's Boots",
@@ -21169,7 +21517,7 @@
     "link": "https://www.wowhead.com/forever/item=250548/warders-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3357
+    "sellPrice": 5016
   },
   "250549": {
     "name": "Prefect's Boots",
@@ -21181,7 +21529,7 @@
     "link": "https://www.wowhead.com/forever/item=250549/prefects-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 9994
+    "sellPrice": 5016
   },
   "250550": {
     "name": "Justicar's Boots",
@@ -21193,7 +21541,7 @@
     "link": "https://www.wowhead.com/forever/item=250550/justicars-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3388
+    "sellPrice": 5016
   },
   "250551": {
     "name": "Officer's Gloves",
@@ -21205,7 +21553,7 @@
     "link": "https://www.wowhead.com/forever/item=250551/officers-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 13178
+    "sellPrice": 6687
   },
   "250552": {
     "name": "Sentinel's Gloves",
@@ -21217,7 +21565,7 @@
     "link": "https://www.wowhead.com/forever/item=250552/sentinels-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 13227
+    "sellPrice": 6620
   },
   "250553": {
     "name": "Warder's Gloves",
@@ -21229,7 +21577,7 @@
     "link": "https://www.wowhead.com/forever/item=250553/warders-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 13275
+    "sellPrice": 6620
   },
   "250554": {
     "name": "Prefect's Gloves",
@@ -21241,7 +21589,7 @@
     "link": "https://www.wowhead.com/forever/item=250554/prefects-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 13325
+    "sellPrice": 6620
   },
   "250555": {
     "name": "Justicar's Gloves",
@@ -21253,7 +21601,7 @@
     "link": "https://www.wowhead.com/forever/item=250555/justicars-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 13374
+    "sellPrice": 6754
   },
   "250556": {
     "name": "Officer's Belt",
@@ -21265,7 +21613,7 @@
     "link": "https://www.wowhead.com/forever/item=250556/officers-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2622
+    "sellPrice": 1378
   },
   "250557": {
     "name": "Sentinel's Belt",
@@ -21277,7 +21625,7 @@
     "link": "https://www.wowhead.com/forever/item=250557/sentinels-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2631
+    "sellPrice": 1337
   },
   "250558": {
     "name": "Warder's Belt",
@@ -21289,7 +21637,7 @@
     "link": "https://www.wowhead.com/forever/item=250558/warders-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2710
+    "sellPrice": 1378
   },
   "250559": {
     "name": "Prefect's Belt",
@@ -21301,7 +21649,7 @@
     "link": "https://www.wowhead.com/forever/item=250559/prefects-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2719
+    "sellPrice": 1392
   },
   "250560": {
     "name": "Justicar's Belt",
@@ -21313,7 +21661,7 @@
     "link": "https://www.wowhead.com/forever/item=250560/justicars-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2729
+    "sellPrice": 1365
   },
   "250561": {
     "name": "Officer's Sabatons",
@@ -22033,7 +22381,7 @@
     "link": "https://www.wowhead.com/forever/item=250620/gemmed-copper-boots",
     "vendorPrice": null,
     "itemLevel": 15,
-    "sellPrice": 401
+    "sellPrice": 203
   },
   "250621": {
     "name": "Strange Copper Boots",
@@ -22045,7 +22393,7 @@
     "link": "https://www.wowhead.com/forever/item=250621/strange-copper-boots",
     "vendorPrice": null,
     "itemLevel": 15,
-    "sellPrice": 243
+    "sellPrice": 191
   },
   "250932": {
     "name": "Minor Spellblasting Potion",
@@ -22362,7 +22710,8 @@
       },
       "minCount": 1,
       "maxCount": 1
-    }
+    },
+    "sellPrice": 1500
   },
   "251524": {
     "name": "Whimsyfin",
@@ -22372,7 +22721,8 @@
     "icon": "inv_misc_fish_68",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=251524/whimsyfin",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 4
   },
   "251525": {
     "name": "Savory Whimsyfin Delight",
@@ -22407,7 +22757,7 @@
       "maxCount": 1
     },
     "itemLevel": 15,
-    "sellPrice": 306
+    "sellPrice": 150
   },
   "252425": {
     "name": "Dark Leather Boots",
@@ -22430,7 +22780,7 @@
       "maxCount": 1
     },
     "itemLevel": 15,
-    "sellPrice": 307
+    "sellPrice": 157
   },
   "252426": {
     "name": "Murloc Scale Shoes",
@@ -22442,7 +22792,7 @@
     "link": "https://www.wowhead.com/forever/item=252426/murloc-scale-shoes",
     "vendorPrice": null,
     "itemLevel": 15,
-    "sellPrice": 308
+    "sellPrice": 158
   },
   "252427": {
     "name": "Moonglow Boots",
@@ -22454,7 +22804,7 @@
     "link": "https://www.wowhead.com/forever/item=252427/moonglow-boots",
     "vendorPrice": null,
     "itemLevel": 15,
-    "sellPrice": 309
+    "sellPrice": 158
   },
   "252428": {
     "name": "Brawler's Leather Belt",
@@ -22551,7 +22901,7 @@
     "link": "https://www.wowhead.com/forever/item=252434/defenders-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 850
+    "sellPrice": 430
   },
   "252435": {
     "name": "Totemic Leather Armor",
@@ -22563,7 +22913,7 @@
     "link": "https://www.wowhead.com/forever/item=252435/totemic-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 853
+    "sellPrice": 426
   },
   "252436": {
     "name": "Mystic Medium Armor Kit",
@@ -22684,7 +23034,7 @@
     "link": "https://www.wowhead.com/forever/item=252445/defenders-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1568
+    "sellPrice": 834
   },
   "252446": {
     "name": "Totemic Leather Pants",
@@ -22696,7 +23046,7 @@
     "link": "https://www.wowhead.com/forever/item=252446/totemic-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1574
+    "sellPrice": 843
   },
   "252447": {
     "name": "Defender's Leather Hood",
@@ -22827,7 +23177,7 @@
     "link": "https://www.wowhead.com/forever/item=252455/defenders-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2079
+    "sellPrice": 1038
   },
   "252456": {
     "name": "Totemic Leather Helm",
@@ -22839,7 +23189,7 @@
     "link": "https://www.wowhead.com/forever/item=252456/totemic-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2087
+    "sellPrice": 1049
   },
   "252457": {
     "name": "Defender's Leather Kilt",
@@ -22899,7 +23249,7 @@
       "maxCount": 1
     },
     "itemLevel": 35,
-    "sellPrice": 2276
+    "sellPrice": 1073
   },
   "252460": {
     "name": "Warden's Leather Belt",
@@ -22911,7 +23261,7 @@
     "link": "https://www.wowhead.com/forever/item=252460/wardens-leather-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2284
+    "sellPrice": 1073
   },
   "252461": {
     "name": "Skirmisher's Leather Belt",
@@ -22923,7 +23273,7 @@
     "link": "https://www.wowhead.com/forever/item=252461/skirmishers-leather-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2292
+    "sellPrice": 1073
   },
   "252462": {
     "name": "Mystic Thick Armor Kit",
@@ -22959,7 +23309,7 @@
     "link": "https://www.wowhead.com/forever/item=252465/prowlers-leather-shoes",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 7037
+    "sellPrice": 3759
   },
   "252466": {
     "name": "Warden's Leather Shoes",
@@ -22971,7 +23321,7 @@
     "link": "https://www.wowhead.com/forever/item=252466/wardens-leather-shoes",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 7063
+    "sellPrice": 3684
   },
   "252467": {
     "name": "Blue Suede Shoes",
@@ -23276,7 +23626,7 @@
     "link": "https://www.wowhead.com/forever/item=252490/brawlers-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 860
+    "sellPrice": 426
   },
   "252491": {
     "name": "Trapper's Leather Armor",
@@ -23288,7 +23638,7 @@
     "link": "https://www.wowhead.com/forever/item=252491/trappers-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 863
+    "sellPrice": 426
   },
   "252492": {
     "name": "Stormrider's Leather Armor",
@@ -23300,7 +23650,7 @@
     "link": "https://www.wowhead.com/forever/item=252492/stormriders-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 866
+    "sellPrice": 426
   },
   "252493": {
     "name": "Wisdom's Leather Armor",
@@ -23312,7 +23662,7 @@
     "link": "https://www.wowhead.com/forever/item=252493/wisdoms-leather-armor",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 869
+    "sellPrice": 434
   },
   "252494": {
     "name": "Brawler's Leather Gloves",
@@ -23409,7 +23759,7 @@
     "link": "https://www.wowhead.com/forever/item=252500/brawlers-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1700
+    "sellPrice": 868
   },
   "252501": {
     "name": "Trapper's Leather Pants",
@@ -23421,7 +23771,7 @@
     "link": "https://www.wowhead.com/forever/item=252501/trappers-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1706
+    "sellPrice": 834
   },
   "252502": {
     "name": "Stormrider's Leather Pants",
@@ -23433,7 +23783,7 @@
     "link": "https://www.wowhead.com/forever/item=252502/stormriders-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1549
+    "sellPrice": 834
   },
   "252503": {
     "name": "Wisdom's Leather Pants",
@@ -23445,7 +23795,7 @@
     "link": "https://www.wowhead.com/forever/item=252503/wisdoms-leather-pants",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1598
+    "sellPrice": 868
   },
   "252504": {
     "name": "Brawler's Leather Hood",
@@ -23579,7 +23929,7 @@
     "link": "https://www.wowhead.com/forever/item=252512/brawlers-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2056
+    "sellPrice": 1008
   },
   "252513": {
     "name": "Trapper's Leather Helm",
@@ -23591,7 +23941,7 @@
     "link": "https://www.wowhead.com/forever/item=252513/trappers-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2063
+    "sellPrice": 1008
   },
   "252514": {
     "name": "Stormrider's Leather Helm",
@@ -23603,7 +23953,7 @@
     "link": "https://www.wowhead.com/forever/item=252514/stormriders-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2071
+    "sellPrice": 1018
   },
   "252515": {
     "name": "Wisdom's Leather Helm",
@@ -23615,7 +23965,7 @@
     "link": "https://www.wowhead.com/forever/item=252515/wisdoms-leather-helm",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 2078
+    "sellPrice": 1049
   },
   "252516": {
     "name": "Brawler's Leather Legguards",
@@ -23699,7 +24049,7 @@
       "maxCount": 1
     },
     "itemLevel": 35,
-    "sellPrice": 2122
+    "sellPrice": 1095
   },
   "252521": {
     "name": "Stalker's Leather Belt",
@@ -23722,7 +24072,7 @@
       "maxCount": 1
     },
     "itemLevel": 35,
-    "sellPrice": 2130
+    "sellPrice": 1063
   },
   "252522": {
     "name": "Skycaller's Leather Belt",
@@ -23734,7 +24084,7 @@
     "link": "https://www.wowhead.com/forever/item=252522/skycallers-leather-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2139
+    "sellPrice": 1084
   },
   "252523": {
     "name": "Mender's Leather Belt",
@@ -23746,7 +24096,7 @@
     "link": "https://www.wowhead.com/forever/item=252523/menders-leather-belt",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2146
+    "sellPrice": 1052
   },
   "252524": {
     "name": "Prowler's Leather Gloves",
@@ -23842,7 +24192,7 @@
     "link": "https://www.wowhead.com/forever/item=252531/skulkers-leather-shoes",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 7389
+    "sellPrice": 3721
   },
   "252532": {
     "name": "Skycaller's Leather Shoes",
@@ -23854,7 +24204,7 @@
     "link": "https://www.wowhead.com/forever/item=252532/skycallers-leather-shoes",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 7416
+    "sellPrice": 3684
   },
   "252533": {
     "name": "Mender's Leather Shoes",
@@ -23866,7 +24216,7 @@
     "link": "https://www.wowhead.com/forever/item=252533/menders-leather-shoes",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 7443
+    "sellPrice": 3721
   },
   "252534": {
     "name": "Prowler's Leather Shoulders",
@@ -24034,7 +24384,7 @@
     "link": "https://www.wowhead.com/forever/item=252547/prowlers-leather-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 9507
+    "sellPrice": 5049
   },
   "252548": {
     "name": "Skulker's Leather Gauntlets",
@@ -24046,7 +24396,7 @@
     "link": "https://www.wowhead.com/forever/item=252548/skulkers-leather-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 9542
+    "sellPrice": 4901
   },
   "252549": {
     "name": "Warden's Leather Gauntlets",
@@ -24058,7 +24408,7 @@
     "link": "https://www.wowhead.com/forever/item=252549/wardens-leather-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 9576
+    "sellPrice": 4901
   },
   "252550": {
     "name": "Skycaller's Leather Gauntlets",
@@ -24070,7 +24420,7 @@
     "link": "https://www.wowhead.com/forever/item=252550/skycallers-leather-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 9612
+    "sellPrice": 4851
   },
   "252551": {
     "name": "Mender's Leather Gauntlets",
@@ -24082,7 +24432,7 @@
     "link": "https://www.wowhead.com/forever/item=252551/menders-leather-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 9900
+    "sellPrice": 5000
   },
   "252552": {
     "name": "Tooled Leather Armor",
@@ -24214,7 +24564,7 @@
     "link": "https://www.wowhead.com/forever/item=252562/stalkers-mail-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 8589
+    "sellPrice": 4430
   },
   "252563": {
     "name": "Skycaller's Mail Boots",
@@ -24226,7 +24576,7 @@
     "link": "https://www.wowhead.com/forever/item=252563/skycallers-mail-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 8622
+    "sellPrice": 4387
   },
   "252564": {
     "name": "Skirmisher's Mail Boots",
@@ -24238,7 +24588,7 @@
     "link": "https://www.wowhead.com/forever/item=252564/skirmishers-mail-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 8654
+    "sellPrice": 4256
   },
   "252565": {
     "name": "Mender's Mail Boots",
@@ -24250,7 +24600,7 @@
     "link": "https://www.wowhead.com/forever/item=252565/menders-mail-boots",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 8686
+    "sellPrice": 4300
   },
   "252566": {
     "name": "Stalker's Mail Shoulders",
@@ -24478,7 +24828,7 @@
     "link": "https://www.wowhead.com/forever/item=252584/stalkers-mail-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 11490
+    "sellPrice": 5866
   },
   "252585": {
     "name": "Skycaller's Mail Gauntlets",
@@ -24490,7 +24840,7 @@
     "link": "https://www.wowhead.com/forever/item=252585/skycallers-mail-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 11532
+    "sellPrice": 5866
   },
   "252586": {
     "name": "Skirmisher's Mail Gauntlets",
@@ -24502,7 +24852,7 @@
     "link": "https://www.wowhead.com/forever/item=252586/skirmishers-mail-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 11574
+    "sellPrice": 5866
   },
   "252587": {
     "name": "Mender's Mail Gauntlets",
@@ -24514,7 +24864,7 @@
     "link": "https://www.wowhead.com/forever/item=252587/menders-mail-gauntlets",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 11615
+    "sellPrice": 5808
   },
   "252588": {
     "name": "Stalker's Mail Belt",
@@ -24889,7 +25239,7 @@
     "link": "https://www.wowhead.com/forever/item=253901/filigreed-pristine-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 693
+    "sellPrice": 354
   },
   "253903": {
     "name": "Filigreed Silky Gown",
@@ -24901,7 +25251,7 @@
     "link": "https://www.wowhead.com/forever/item=253903/filigreed-silky-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 698
+    "sellPrice": 342
   },
   "253905": {
     "name": "Filigreed Flame Gown",
@@ -24913,7 +25263,7 @@
     "link": "https://www.wowhead.com/forever/item=253905/filigreed-flame-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 703
+    "sellPrice": 345
   },
   "253907": {
     "name": "Filigreed Shadow Gown",
@@ -24925,7 +25275,7 @@
     "link": "https://www.wowhead.com/forever/item=253907/filigreed-shadow-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 708
+    "sellPrice": 347
   },
   "253909": {
     "name": "Filigreed Pearly Gown",
@@ -24937,7 +25287,7 @@
     "link": "https://www.wowhead.com/forever/item=253909/filigreed-pearly-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 713
+    "sellPrice": 353
   },
   "253911": {
     "name": "Filigreed Shining Gown",
@@ -24949,7 +25299,7 @@
     "link": "https://www.wowhead.com/forever/item=253911/filigreed-shining-gown",
     "vendorPrice": null,
     "itemLevel": 20,
-    "sellPrice": 650
+    "sellPrice": 332
   },
   "253913": {
     "name": "Pristine Gloves",
@@ -25105,7 +25455,7 @@
     "link": "https://www.wowhead.com/forever/item=253937/filigreed-pristine-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1303
+    "sellPrice": 658
   },
   "253939": {
     "name": "Filigreed Silky Leggings",
@@ -25117,7 +25467,7 @@
     "link": "https://www.wowhead.com/forever/item=253939/filigreed-silky-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1312
+    "sellPrice": 650
   },
   "253941": {
     "name": "Filigreed Flame Leggings",
@@ -25129,7 +25479,7 @@
     "link": "https://www.wowhead.com/forever/item=253941/filigreed-flame-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1322
+    "sellPrice": 674
   },
   "253943": {
     "name": "Filigreed Shadow Leggings",
@@ -25141,7 +25491,7 @@
     "link": "https://www.wowhead.com/forever/item=253943/filigreed-shadow-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1332
+    "sellPrice": 659
   },
   "253945": {
     "name": "Filigreed Pearly Leggings",
@@ -25153,7 +25503,7 @@
     "link": "https://www.wowhead.com/forever/item=253945/filigreed-pearly-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1341
+    "sellPrice": 684
   },
   "253947": {
     "name": "Filigreed Shining Leggings",
@@ -25165,7 +25515,7 @@
     "link": "https://www.wowhead.com/forever/item=253947/filigreed-shining-leggings",
     "vendorPrice": null,
     "itemLevel": 25,
-    "sellPrice": 1351
+    "sellPrice": 682
   },
   "253949": {
     "name": "Pristine Circlet",
@@ -25333,7 +25683,7 @@
     "link": "https://www.wowhead.com/forever/item=253975/filigreed-pristine-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1605
+    "sellPrice": 803
   },
   "253977": {
     "name": "Filigreed Silky Circlet",
@@ -25345,7 +25695,7 @@
     "link": "https://www.wowhead.com/forever/item=253977/filigreed-silky-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1616
+    "sellPrice": 792
   },
   "253979": {
     "name": "Filigreed Flame Circlet",
@@ -25357,7 +25707,7 @@
     "link": "https://www.wowhead.com/forever/item=253979/filigreed-flame-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1628
+    "sellPrice": 806
   },
   "253981": {
     "name": "Filigreed Shadow Circlet",
@@ -25369,7 +25719,7 @@
     "link": "https://www.wowhead.com/forever/item=253981/filigreed-shadow-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1640
+    "sellPrice": 837
   },
   "253983": {
     "name": "Filigreed Pearly Circlet",
@@ -25381,7 +25731,7 @@
     "link": "https://www.wowhead.com/forever/item=253983/filigreed-pearly-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1695
+    "sellPrice": 848
   },
   "253985": {
     "name": "Filigreed Shining Circlet",
@@ -25393,7 +25743,7 @@
     "link": "https://www.wowhead.com/forever/item=253985/filigreed-shining-circlet",
     "vendorPrice": null,
     "itemLevel": 30,
-    "sellPrice": 1545
+    "sellPrice": 788
   },
   "253987": {
     "name": "Pristine Leggings",
@@ -25489,7 +25839,7 @@
     "link": "https://www.wowhead.com/forever/item=254001/gilded-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2711
+    "sellPrice": 1356
   },
   "254003": {
     "name": "Frothing Slippers",
@@ -25501,7 +25851,7 @@
     "link": "https://www.wowhead.com/forever/item=254003/frothing-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2730
+    "sellPrice": 1365
   },
   "254005": {
     "name": "Fiery Slippers",
@@ -25513,7 +25863,7 @@
     "link": "https://www.wowhead.com/forever/item=254005/fiery-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2488
+    "sellPrice": 1244
   },
   "254007": {
     "name": "Black Slippers",
@@ -25525,7 +25875,7 @@
     "link": "https://www.wowhead.com/forever/item=254007/black-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2507
+    "sellPrice": 1254
   },
   "254009": {
     "name": "Golden Slippers",
@@ -25537,7 +25887,7 @@
     "link": "https://www.wowhead.com/forever/item=254009/golden-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2526
+    "sellPrice": 1263
   },
   "254011": {
     "name": "Radiant Slippers",
@@ -25549,7 +25899,7 @@
     "link": "https://www.wowhead.com/forever/item=254011/radiant-slippers",
     "vendorPrice": null,
     "itemLevel": 35,
-    "sellPrice": 2545
+    "sellPrice": 1273
   },
   "254013": {
     "name": "Earthen Silk Slippers",
@@ -25705,7 +26055,7 @@
     "link": "https://www.wowhead.com/forever/item=254037/gilded-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3989
+    "sellPrice": 1995
   },
   "254039": {
     "name": "Frothing Cord",
@@ -25717,7 +26067,7 @@
     "link": "https://www.wowhead.com/forever/item=254039/frothing-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 4018
+    "sellPrice": 2009
   },
   "254041": {
     "name": "Fiery Cord",
@@ -25729,7 +26079,7 @@
     "link": "https://www.wowhead.com/forever/item=254041/fiery-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 4046
+    "sellPrice": 2023
   },
   "254043": {
     "name": "Black Cord",
@@ -25741,7 +26091,7 @@
     "link": "https://www.wowhead.com/forever/item=254043/black-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 4075
+    "sellPrice": 2038
   },
   "254045": {
     "name": "Golden Cord",
@@ -25753,7 +26103,7 @@
     "link": "https://www.wowhead.com/forever/item=254045/golden-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3714
+    "sellPrice": 1857
   },
   "254047": {
     "name": "Radiant Cord",
@@ -25765,7 +26115,7 @@
     "link": "https://www.wowhead.com/forever/item=254047/radiant-cord",
     "vendorPrice": null,
     "itemLevel": 45,
-    "sellPrice": 3846
+    "sellPrice": 1923
   },
   "254049": {
     "name": "Nethergeld Shoulders",
@@ -26053,7 +26403,7 @@
     "link": "https://www.wowhead.com/forever/item=254095/gilded-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7915
+    "sellPrice": 3958
   },
   "254097": {
     "name": "Frothing Gloves",
@@ -26065,7 +26415,7 @@
     "link": "https://www.wowhead.com/forever/item=254097/frothing-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7211
+    "sellPrice": 3606
   },
   "254099": {
     "name": "Fiery Gloves",
@@ -26077,7 +26427,7 @@
     "link": "https://www.wowhead.com/forever/item=254099/fiery-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7267
+    "sellPrice": 3634
   },
   "254101": {
     "name": "Black Gloves",
@@ -26089,7 +26439,7 @@
     "link": "https://www.wowhead.com/forever/item=254101/black-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7323
+    "sellPrice": 3662
   },
   "254103": {
     "name": "Golden Gloves",
@@ -26101,7 +26451,7 @@
     "link": "https://www.wowhead.com/forever/item=254103/golden-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7379
+    "sellPrice": 3690
   },
   "254105": {
     "name": "Radiant Gloves",
@@ -26113,7 +26463,7 @@
     "link": "https://www.wowhead.com/forever/item=254105/radiant-gloves",
     "vendorPrice": null,
     "itemLevel": 55,
-    "sellPrice": 7434
+    "sellPrice": 3717
   },
   "254107": {
     "name": "Gilded Sandals",
@@ -26327,7 +26677,8 @@
     "icon": "inv_10_engineering_manufacturedparts_spring_uprez",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=255007/golem-isospring",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 22
   },
   "260784": {
     "name": "SAF-T Tabs",
@@ -26980,7 +27331,8 @@
     "icon": "inv_tradeskillitem_03",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=272941/thick-logs",
-    "vendorPrice": 200000
+    "vendorPrice": 200000,
+    "sellPrice": 50000
   },
   "273125": {
     "name": "Lich's Index Finger",
@@ -26990,7 +27342,8 @@
     "icon": "inv_misc_bone_10",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273125/lichs-index-finger",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273127": {
     "name": "Golem Heart",
@@ -27000,7 +27353,8 @@
     "icon": "inv_ore_blackrock_ore",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273127/golem-heart",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273128": {
     "name": "Maker's Spark",
@@ -27010,7 +27364,8 @@
     "icon": "inv_enchant_essencecosmicgreater",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273128/makers-spark",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273129": {
     "name": "Essence of Anarchy",
@@ -27020,7 +27375,8 @@
     "icon": "inv_misc_bomb_04",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273129/essence-of-anarchy",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273130": {
     "name": "Undeath Engine",
@@ -27030,7 +27386,8 @@
     "icon": "inv_axe_2h_undeadguitar_c_01",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273130/undeath-engine",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273131": {
     "name": "Bottled Screams",
@@ -27040,7 +27397,8 @@
     "icon": "spell_holy_senseundead",
     "slot": "",
     "link": "https://www.wowhead.com/forever/item=273131/bottled-screams",
-    "vendorPrice": null
+    "vendorPrice": null,
+    "sellPrice": 25000
   },
   "273884": {
     "name": "Grovekeeper Trousers",
@@ -27064,7 +27422,7 @@
     "link": "https://www.wowhead.com/forever/item=273885/grovekeeper-grips",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 16817
+    "sellPrice": 16016
   },
   "273886": {
     "name": "Grovekeeper Shoulderpads",
@@ -27100,7 +27458,7 @@
     "link": "https://www.wowhead.com/forever/item=273888/grovekeeper-kilt",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 33750
+    "sellPrice": 32143
   },
   "273889": {
     "name": "Grovekeeper Mitts",
@@ -27124,7 +27482,7 @@
     "link": "https://www.wowhead.com/forever/item=273890/grovekeeper-mantle",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 25574
+    "sellPrice": 24356
   },
   "273891": {
     "name": "Grovekeeper Sandals",
@@ -27136,7 +27494,7 @@
     "link": "https://www.wowhead.com/forever/item=273891/grovekeeper-sandals",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 25668
+    "sellPrice": 24446
   },
   "273892": {
     "name": "Grovekeeper Legguards",
@@ -27148,7 +27506,7 @@
     "link": "https://www.wowhead.com/forever/item=273892/grovekeeper-legguards",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 34262
+    "sellPrice": 32630
   },
   "273893": {
     "name": "Grovekeeper Handguards",
@@ -27172,7 +27530,7 @@
     "link": "https://www.wowhead.com/forever/item=273894/grovekeeper-pauldrons",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 25959
+    "sellPrice": 24722
   },
   "273895": {
     "name": "Grovekeeper Boots",
@@ -27208,7 +27566,7 @@
     "link": "https://www.wowhead.com/forever/item=273897/grovekeeper-gauntlets",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 18056
+    "sellPrice": 17196
   },
   "273898": {
     "name": "Grovekeeper Spaulders",
@@ -27220,7 +27578,7 @@
     "link": "https://www.wowhead.com/forever/item=273898/grovekeeper-spaulders",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 27037
+    "sellPrice": 25750
   },
   "273899": {
     "name": "Grovekeeper Treads",
@@ -27232,7 +27590,7 @@
     "link": "https://www.wowhead.com/forever/item=273899/grovekeeper-treads",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 27132
+    "sellPrice": 25840
   },
   "273900": {
     "name": "Wildstalker's Legguards",
@@ -27244,7 +27602,7 @@
     "link": "https://www.wowhead.com/forever/item=273900/wildstalkers-legguards",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 43450
+    "sellPrice": 41381
   },
   "273901": {
     "name": "Wildstalker's Gauntlets",
@@ -27256,7 +27614,7 @@
     "link": "https://www.wowhead.com/forever/item=273901/wildstalkers-gauntlets",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 21802
+    "sellPrice": 20764
   },
   "273902": {
     "name": "Wildstalker's Spaulders",
@@ -27268,7 +27626,7 @@
     "link": "https://www.wowhead.com/forever/item=273902/wildstalkers-spaulders",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 32962
+    "sellPrice": 31392
   },
   "273903": {
     "name": "Wildstalker's Greaves",
@@ -27280,7 +27638,7 @@
     "link": "https://www.wowhead.com/forever/item=273903/wildstalkers-greaves",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 29928
+    "sellPrice": 28503
   },
   "273904": {
     "name": "Manaflare Pants",
@@ -27292,7 +27650,7 @@
     "link": "https://www.wowhead.com/forever/item=273904/manaflare-pants",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 26588
+    "sellPrice": 25322
   },
   "273905": {
     "name": "Manaflare Gloves",
@@ -27304,7 +27662,7 @@
     "link": "https://www.wowhead.com/forever/item=273905/manaflare-gloves",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 13345
+    "sellPrice": 12710
   },
   "273906": {
     "name": "Manaflare Mantle",
@@ -27316,7 +27674,7 @@
     "link": "https://www.wowhead.com/forever/item=273906/manaflare-mantle",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 20093
+    "sellPrice": 19136
   },
   "273907": {
     "name": "Manaflare Boots",
@@ -27328,7 +27686,7 @@
     "link": "https://www.wowhead.com/forever/item=273907/manaflare-boots",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 20170
+    "sellPrice": 19210
   },
   "273908": {
     "name": "Justice Leggings",
@@ -27388,7 +27746,7 @@
     "link": "https://www.wowhead.com/forever/item=273912/justice-legplates",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 49254
+    "sellPrice": 46908
   },
   "273913": {
     "name": "Justice Gloves",
@@ -27472,7 +27830,7 @@
     "link": "https://www.wowhead.com/forever/item=273919/justice-sabatons",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 37808
+    "sellPrice": 36007
   },
   "273920": {
     "name": "Pants of Conviction",
@@ -27484,7 +27842,7 @@
     "link": "https://www.wowhead.com/forever/item=273920/pants-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 28964
+    "sellPrice": 27585
   },
   "273921": {
     "name": "Gloves of Conviction",
@@ -27496,7 +27854,7 @@
     "link": "https://www.wowhead.com/forever/item=273921/gloves-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 14532
+    "sellPrice": 13840
   },
   "273922": {
     "name": "Mantle of Conviction",
@@ -27508,7 +27866,7 @@
     "link": "https://www.wowhead.com/forever/item=273922/mantle-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 21875
+    "sellPrice": 20834
   },
   "273923": {
     "name": "Treads of Conviction",
@@ -27520,7 +27878,7 @@
     "link": "https://www.wowhead.com/forever/item=273923/treads-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 19861
+    "sellPrice": 18915
   },
   "273924": {
     "name": "Leggings of Conviction",
@@ -27532,7 +27890,7 @@
     "link": "https://www.wowhead.com/forever/item=273924/leggings-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 26585
+    "sellPrice": 25319
   },
   "273925": {
     "name": "Handguards of Conviction",
@@ -27544,7 +27902,7 @@
     "link": "https://www.wowhead.com/forever/item=273925/handguards-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 13342
+    "sellPrice": 12707
   },
   "273926": {
     "name": "Pauldrons of Conviction",
@@ -27556,7 +27914,7 @@
     "link": "https://www.wowhead.com/forever/item=273926/pauldrons-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 20091
+    "sellPrice": 19134
   },
   "273927": {
     "name": "Boots of Conviction",
@@ -27568,7 +27926,7 @@
     "link": "https://www.wowhead.com/forever/item=273927/boots-of-conviction",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 20168
+    "sellPrice": 19208
   },
   "273928": {
     "name": "Grimstitch Pants",
@@ -27580,7 +27938,7 @@
     "link": "https://www.wowhead.com/forever/item=273928/grimstitch-pants",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 34666
+    "sellPrice": 33015
   },
   "273929": {
     "name": "Grimstitch Gloves",
@@ -27592,7 +27950,7 @@
     "link": "https://www.wowhead.com/forever/item=273929/grimstitch-gloves",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 17534
+    "sellPrice": 16700
   },
   "273930": {
     "name": "Grimstitch Spaulders",
@@ -27604,7 +27962,7 @@
     "link": "https://www.wowhead.com/forever/item=273930/grimstitch-spaulders",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 26260
+    "sellPrice": 25009
   },
   "273931": {
     "name": "Grimstitch Boots",
@@ -27616,7 +27974,7 @@
     "link": "https://www.wowhead.com/forever/item=273931/grimstitch-boots",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 26357
+    "sellPrice": 25102
   },
   "273932": {
     "name": "Spiritcaller Leggings",
@@ -27628,7 +27986,7 @@
     "link": "https://www.wowhead.com/forever/item=273932/spiritcaller-leggings",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 42209
+    "sellPrice": 40199
   },
   "273933": {
     "name": "Spiritcaller Grips",
@@ -27640,7 +27998,7 @@
     "link": "https://www.wowhead.com/forever/item=273933/spiritcaller-grips",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 21182
+    "sellPrice": 20173
   },
   "273934": {
     "name": "Spiritcaller Spaulders",
@@ -27664,7 +28022,7 @@
     "link": "https://www.wowhead.com/forever/item=273935/spiritcaller-treads",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 32147
+    "sellPrice": 30616
   },
   "273936": {
     "name": "Spiritcaller Pants",
@@ -27676,7 +28034,7 @@
     "link": "https://www.wowhead.com/forever/item=273936/spiritcaller-pants",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 42823
+    "sellPrice": 40784
   },
   "273937": {
     "name": "Spiritcaller Gauntlets",
@@ -27688,7 +28046,7 @@
     "link": "https://www.wowhead.com/forever/item=273937/spiritcaller-gauntlets",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 21489
+    "sellPrice": 20465
   },
   "273938": {
     "name": "Spiritcaller Epaulets",
@@ -27712,7 +28070,7 @@
     "link": "https://www.wowhead.com/forever/item=273939/spiritcaller-greaves",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 32609
+    "sellPrice": 31057
   },
   "273940": {
     "name": "Demonheart Leggings",
@@ -27724,7 +28082,7 @@
     "link": "https://www.wowhead.com/forever/item=273940/demonheart-leggings",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 28958
+    "sellPrice": 27579
   },
   "273941": {
     "name": "Demonheart Gloves",
@@ -27736,7 +28094,7 @@
     "link": "https://www.wowhead.com/forever/item=273941/demonheart-gloves",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 14530
+    "sellPrice": 13838
   },
   "273942": {
     "name": "Demonheart Spaulders",
@@ -27748,7 +28106,7 @@
     "link": "https://www.wowhead.com/forever/item=273942/demonheart-spaulders",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 21873
+    "sellPrice": 20832
   },
   "273943": {
     "name": "Demonheart Boots",
@@ -27760,7 +28118,7 @@
     "link": "https://www.wowhead.com/forever/item=273943/demonheart-boots",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 19859
+    "sellPrice": 18913
   },
   "273944": {
     "name": "Legplates of Glory",
@@ -27772,7 +28130,7 @@
     "link": "https://www.wowhead.com/forever/item=273944/legplates-of-glory",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 47806
+    "sellPrice": 45530
   },
   "273945": {
     "name": "Gauntlets of Glory",
@@ -27808,7 +28166,7 @@
     "link": "https://www.wowhead.com/forever/item=273947/greaves-of-glory",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 36187
+    "sellPrice": 34464
   },
   "273948": {
     "name": "Legguards of Glory",
@@ -28274,7 +28632,7 @@
     "link": "https://www.wowhead.com/forever/item=276538/spiritcaller-kilt",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 40208
+    "sellPrice": 38293
   },
   "276539": {
     "name": "Spiritcaller Gloves",
@@ -28310,7 +28668,7 @@
     "link": "https://www.wowhead.com/forever/item=276541/spiritcaller-boots",
     "vendorPrice": null,
     "itemLevel": 61,
-    "sellPrice": 30639
+    "sellPrice": 29180
   },
   "276992": {
     "name": "Cloudy Skyforged Chainmail",
