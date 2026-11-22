@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-22T12:05:40.260Z",
+  "timestamp": "2026-11-22T13:05:55.032Z",
   "totalRequests": 16,
   "successful": 16,
   "failed": 0,
@@ -9,8 +9,8 @@
       "realm": "Forever PvE US",
       "faction": "Horde",
       "success": true,
-      "items": 7408,
-      "scannedAt": "2026-11-22T06:25:14Z"
+      "items": 7413,
+      "scannedAt": "2026-11-22T09:25:06Z"
     },
     {
       "realm": "Forever PvE US",
@@ -51,8 +51,8 @@
       "realm": "Forever RP-PvP US",
       "faction": "Horde",
       "success": true,
-      "items": 6635,
-      "scannedAt": "2026-11-22T06:25:00Z"
+      "items": 6646,
+      "scannedAt": "2026-11-22T09:24:57Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -72,8 +72,8 @@
       "realm": "Forever PvE EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7539,
-      "scannedAt": "2026-11-22T06:22:49Z"
+      "items": 7545,
+      "scannedAt": "2026-11-22T09:22:54Z"
     },
     {
       "realm": "Forever PvP EU",
@@ -86,36 +86,36 @@
       "realm": "Forever PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7513,
-      "scannedAt": "2026-11-22T06:22:49Z"
+      "items": 7515,
+      "scannedAt": "2026-11-22T09:22:53Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
       "success": true,
-      "items": 5562,
-      "scannedAt": "2026-11-22T06:22:43Z"
+      "items": 5568,
+      "scannedAt": "2026-11-22T09:22:43Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6488,
-      "scannedAt": "2026-11-22T06:22:44Z"
+      "items": 6496,
+      "scannedAt": "2026-11-22T09:22:45Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 5909,
-      "scannedAt": "2026-11-22T06:22:43Z"
+      "items": 5914,
+      "scannedAt": "2026-11-22T09:22:44Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6263,
-      "scannedAt": "2026-11-22T06:22:43Z"
+      "items": 6273,
+      "scannedAt": "2026-11-22T09:22:44Z"
     }
   ]
 }
