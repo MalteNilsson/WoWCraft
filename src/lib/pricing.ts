@@ -11,7 +11,24 @@ type TsmAuction = {
 /** Convert TSM auction rows → PriceMap keyed by itemId */
 
 export const ignoreVendorPriceIds = new Set<number>([
-  8846,  // Gromsblood
+  765, // Silverleaf
+  785, // Mageroyal
+  2447, // Peacebloom
+  2449, // Earthroot
+  2453, // Bruiseweed
+  3355, // Wild Steelbloom
+  3356, // Kingsblood
+  3357, // Liferoot
+  3358, // Khadgar's Whisker
+  8845, // Ghost Mushroom
+  8846, // Gromsblood
+  13463, // Dreamfoil
+  13464, // Golden Sansam
+  13468, // Black Lotus
+  248822, // Death Lotus
+  249274, // Stranglevine
+  249399, // Frilled Lichen
+  249424, // Rosecap
 ]);
 
 export function toPriceMap(

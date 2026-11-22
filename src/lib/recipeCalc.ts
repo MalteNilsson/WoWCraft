@@ -382,6 +382,24 @@ export const forceVendorItems = new Set<number>([
 ]);
 
 export const forceAhOnlyItems = new Set<number>([
+  765, // Silverleaf
+  785, // Mageroyal
+  2447, // Peacebloom
+  2449, // Earthroot
+  2453, // Bruiseweed
+  3355, // Wild Steelbloom
+  3356, // Kingsblood
+  3357, // Liferoot
+  3358, // Khadgar's Whisker
+  8845, // Ghost Mushroom
+  8846, // Gromsblood
+  13463, // Dreamfoil
+  13464, // Golden Sansam
+  13468, // Black Lotus
+  248822, // Death Lotus
+  249274, // Stranglevine
+  249399, // Frilled Lichen
+  249424, // Rosecap
   12360, // Arcanite Bar
   12808, // Essence of Undeath
   12803, // Living Essence
@@ -661,7 +679,7 @@ export function buildMaterialTree(
   const vendorPrice = unitVendorPrice(info);
   const ahEntry = prices[itemId];
   const isListed = !!(ahEntry && (useMarketValue ? ahEntry.marketValue : ahEntry.minBuyout) && (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) > 0);
-  const isVendorItem = vendorPrice < Infinity && !info?.auctionhouse;
+  const isVendorItem = vendorPrice < Infinity && !info?.auctionhouse && !forceAhOnlyItems.has(itemId);
 
   const ahPrice = isListed ? (useMarketValue ? ahEntry.marketValue! : ahEntry.minBuyout!) : Infinity;
   // Limited stock + no AH: treat as "no AH" so we show craft cost (vendor can't supply enough)
@@ -670,7 +688,7 @@ export function buildMaterialTree(
   const buyCost = cheapestBuyPrice(itemId, ahPrice, vendorPrice, info);
   const buySource = materialBuySourceFromPrices(itemId, ahPrice, vendorPrice, info);
   const ahCost = isListed ? ahPrice * quantity : null;
-  const vendorCost = vendorPrice < Infinity ? vendorPrice * quantity : null;
+  const vendorCost = isVendorItem ? vendorPrice * quantity : null;
   const createdSpellId = info?.createdBy?.spellId;
   const allowedSpell = !!createdSpellId && !!currentProfessionRecipeIds?.has(createdSpellId);
   const isTedious = skipCraftingUnlessTopLevel.has(itemId) && !allowedSpell;
