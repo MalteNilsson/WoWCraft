@@ -4166,7 +4166,7 @@ const renderXTick = selected
                 About Project
               </Link>
               <a
-                href="https://discord.gg/fN7rVpFr6"
+                href="https://discord.com/invite/KE4kEEyTJh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-1 items-center justify-center gap-1.5 rounded border border-[#3d4278] bg-[#2a2d52] px-3 py-2 text-sm font-medium text-[#c9cdf8] transition-colors hover:bg-[#343868] hover:text-white desktop-layout:text-base"
