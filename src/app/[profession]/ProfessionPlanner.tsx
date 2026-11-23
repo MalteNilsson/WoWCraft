@@ -431,6 +431,7 @@ function AdvancedSettingsControls({
   successMarginPercent,
   onSuccessMargin,
   onWideChange,
+  onReset,
 }: {
   accentOn: boolean;
   accent: string;
@@ -456,6 +457,7 @@ function AdvancedSettingsControls({
   successMarginPercent: number;
   onSuccessMargin: (percent: number) => void;
   onWideChange: (wide: boolean) => void;
+  onReset: () => void;
 }) {
   const accentClass = accentOn ? 'text-[#1fb5f7]' : 'text-yellow-400';
   const measureRef = useRef<HTMLDivElement>(null);
@@ -586,6 +588,13 @@ function AdvancedSettingsControls({
           <div className="ml-4 w-[18.5rem] shrink-0 space-y-3 border-l border-white/10 pl-4">{right}</div>
         )}
       </div>
+      <button
+        type="button"
+        onClick={onReset}
+        className="mt-3 w-full rounded-md border border-red-500/70 bg-red-600/25 px-3 py-2 text-sm font-semibold text-red-100 transition-colors hover:border-red-400 hover:bg-red-600/40 hover:text-white"
+      >
+        Reset to defaults
+      </button>
     </div>
   );
 }
@@ -1888,6 +1897,19 @@ export default function ProfessionPlanner() {
     setSuccessMarginPercent(next);
     writeSuccessMarginPercent(next);
   }, []);
+
+  const resetAdvancedSettings = useCallback(() => {
+    setIncludeRecipeCost(true);
+    setUseMarketValue(false);
+    updateCraftReagents(false);
+    updateExtraProfessions([]);
+    setIncludeCurrencyRecipes(false);
+    updateHideBopRecipes(true);
+    updateWorkingOvertime(0);
+    updateMinSkillChance(DEFAULT_MIN_SKILL_CHANCE_PERCENT);
+    updateSuccessMargin(0);
+    updateMinSaleRate(DEFAULT_MIN_SALE_RATE_PERCENT);
+  }, [updateCraftReagents, updateExtraProfessions, updateHideBopRecipes, updateWorkingOvertime, updateMinSkillChance, updateSuccessMargin, updateMinSaleRate]);
   const [shouldBlur, setShouldBlur] = useState(false);
   const [isBlurComplete, setIsBlurComplete] = useState(true);
   const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -3719,6 +3741,7 @@ const renderXTick = selected
                             successMarginPercent={successMarginPercent}
                             onSuccessMargin={updateSuccessMargin}
                             onWideChange={setSettingsWide}
+                            onReset={resetAdvancedSettings}
                           />
                         </div>
                       </motion.div>
@@ -3771,6 +3794,7 @@ const renderXTick = selected
                                   successMarginPercent={successMarginPercent}
                                   onSuccessMargin={updateSuccessMargin}
                                   onWideChange={setSettingsWide}
+                                  onReset={resetAdvancedSettings}
                                 />
                               </div>
                             </motion.div>
