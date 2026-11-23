@@ -53,6 +53,7 @@ import { PriceAgeNotice } from '@/components/PriceAgeNotice';
 import { FactionIcon, factionRingClass, factionTextClass } from '@/components/FactionMark';
 import { FOREVER_REALMS, RealmName, canonicalForeverRealm, foreverRealmKind, realmRingClass } from '@/components/RealmName';
 import { LevelUpCostChart } from '@/components/LevelUpCostChart';
+import { PlannerCommandBar } from '@/components/PlannerCommandBar';
 import { preloadIconZips } from '@/lib/iconStore';
 
 /** Wowhead base path for links (classic, tbc, or forever) */
@@ -1574,6 +1575,8 @@ export default function ProfessionPlanner() {
   const guideSearchGenRef = useRef(0);
   const guideLimitGenRef = useRef(0);
   const [view, setView] = useState<'route'|'all'>('route');
+  // Proof of concept. Classic layout is the previous header; compact is the tighter one.
+  const [compactHeader, setCompactHeader] = useState(true);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
   const [selectedCardKey, setSelectedCardKey] = useState<string|null>(null);
   const [visibleCardKey, setVisibleCardKey] = useState<string | null>(null);
@@ -3418,273 +3421,13 @@ const renderXTick = selected
     },
   }), [handleDrawerDragStart, handleDrawerDragMove, handleDrawerDragEnd]);
 
-  return (
-    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-transparent text-neutral-100">
-
-      {/* Auction House Disclaimer Modal - first-time only */}
-      <AnimatePresence>
-        {showAuctionHouseDisclaimer && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80"
-            onClick={() => setShowAuctionHouseDisclaimer(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="max-w-md w-full bg-neutral-900 rounded-xl shadow-2xl border-2 border-amber-500/50 p-6 desktop-layout:p-8"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">⚠️</span>
-                <h2 className="text-xl desktop-layout:text-2xl font-bold text-amber-400">Important Notice</h2>
-              </div>
-              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-2">
-                <strong className="text-white">Auction House mode</strong> uses listing prices to estimate profit—we do <strong className="text-amber-400">not</strong> know actual sale prices.
-              </p>
-              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-4">
-                Prices can be <strong className="text-amber-400">highly volatile</strong>. Items may not sell at listed prices, or may take longer to sell than expected. Use this mode for rough estimates only.
-              </p>
-              <p className="text-neutral-400 text-xs desktop-layout:text-sm mb-6">
-                Click outside to cancel. By clicking &quot;I Understand&quot;, you acknowledge these limitations.
-              </p>
-              <button
-                onClick={acknowledgeAuctionHouseDisclaimer}
-                className="w-full py-4 px-6 text-lg font-bold rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-900 transition-colors duration-200 shadow-lg hover:shadow-amber-500/50"
-              >
-                I Understand
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Mobile: floating menu button when sidebar is closed */}
-      {!sidebarOpen && (
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="desktop-layout:hidden absolute top-3 left-3 z-[100] p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
-          aria-label="Open planner"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      )}
-
-      {/* Mobile: left-edge drag strip to open drawer when closed */}
-      <div
-        className="desktop-layout:hidden absolute left-0 top-0 bottom-0 touch-none"
-        style={{ zIndex: 45, width: `${EDGE_DRAWER_FRACTION * 100}%` }}
-        {...drawerTouchHandlers}
-        {...drawerPointerHandlers}
-      />
-
-      {/* Panels */}
-      <div className="flex flex-1 min-h-0 relative desktop-layout:pt-0">
-        {/* Mobile backdrop - closes sidebar when tapped */}
-        <AnimatePresence>
-          {sidebarOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="desktop-layout:hidden absolute inset-0 z-40 bg-black/60"
-              onClick={() => setSidebarOpen(false)}
-              aria-hidden
-            />
-          )}
-        </AnimatePresence>
-
-        {/* Aside - full-screen on mobile, sidebar on desktop */}
-        <aside
-          className={`absolute desktop-layout:static inset-0 z-50 desktop-layout:z-auto w-full desktop-layout:w-150 flex flex-col border-r border-white/[0.06] bg-neutral-950/95 text-[16px] shadow-[8px_0_40px_rgba(0,0,0,0.35)] backdrop-blur-sm desktop-layout:transform-none desktop-layout:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
-          style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
-        >
-          {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
-          <div
-            className="desktop-layout:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
-            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
-            {...drawerTouchHandlers}
-            {...drawerPointerHandlers}
-          />
-          {/* Mobile: drag handle on right edge of drawer to close by dragging left (show recipe view) */}
-          <div
-            className="desktop-layout:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
-            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
-            {...drawerRightEdgeTouchHandlers}
-            {...drawerRightEdgePointerHandlers}
-          />
-          {/* Slider + Tabs */}
-          <div className="flex-none border-b border-[#e3b056]/15 bg-neutral-900/80 px-3 pt-4 pb-2 desktop-layout:pt-5">
-            <Link href="/" className="mb-3 flex items-baseline justify-between gap-3">
-              <span className="text-lg font-semibold tracking-tight text-white">
-                <span className="text-[#e3b056]">WoW</span>Craft
-              </span>
-              <span className="truncate text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">{selectedProfession}</span>
-            </Link>
-            <div className="flex flex-row gap-1.5 desktop-layout:gap-2 mb-2 desktop-layout:mb-4">
-              {/* Version Selector */}
-              <Listbox value={selectedVersion} onChange={handleVersionChange}>
-                {({ open }) => (
-                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${versionRingClass(selectedVersion)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
-                      <span className={`font-semibold truncate ${versionTextClass(selectedVersion)}`}>{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
-                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
-                    </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {versions.map((ver) => (
-                        <Listbox.Option key={ver} value={ver} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
-                          {({ selected }) => (
-                            <span className={`block truncate font-semibold ${versionTextClass(ver)} ${selected ? '' : 'opacity-80'}`}>{ver}</span>
-                          )}
-                        </Listbox.Option>
-                      ))}
-                    </Listbox.Options>
-                  </div>
-                )}
-              </Listbox>
-              {/* Realm Selector */}
-              <Listbox value={selectedRealm} onChange={handleRealmChange}>
-                {({ open }) => (
-                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 text-white px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${realmRingClass(selectedRealm)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
-                      <span className="font-semibold truncate"><RealmName realm={selectedRealm} /></span>
-                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
-                    </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] max-h-80 overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {realms.map((realm) => (
-                        <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
-                          {({ selected }) => (
-                            <span className={`block truncate font-semibold ${selected && !foreverRealmKind(realm) ? 'text-white' : ''}`}><RealmName realm={realm} /></span>
-                          )}
-                        </Listbox.Option>
-                      ))}
-                    </Listbox.Options>
-                  </div>
-                )}
-              </Listbox>
-              {/* Faction Selector */}
-              <Listbox value={selectedFaction} onChange={handleFactionChange}>
-                {({ open }) => (
-                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
-                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${factionRingClass(selectedFaction)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
-                      <span className={`flex items-center gap-1 min-w-0 font-semibold ${factionTextClass(selectedFaction)}`}>
-                        <FactionIcon faction={selectedFaction} className="h-5 w-5 shrink-0" />
-                        <span className="truncate">{selectedFaction}</span>
-                      </span>
-                      <svg className={`h-4 w-4 text-neutral-400 shrink-0 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
-                    </Listbox.Button>
-                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[8.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {factions.map((fac) => (
-                        <Listbox.Option key={fac} value={fac} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
-                          {({ selected }) => (
-                            <span className={`flex items-center gap-2 truncate font-semibold ${factionTextClass(fac)} ${selected ? '' : 'opacity-80'}`}>
-                              <FactionIcon faction={fac} className="h-5 w-5 shrink-0" />
-                              {fac}
-                            </span>
-                          )}
-                        </Listbox.Option>
-                      ))}
-                    </Listbox.Options>
-                  </div>
-                )}
-              </Listbox>
-            </div>
-            <div className="w-full mb-3 desktop-layout:mb-5 flex items-stretch gap-2">
-              <div className="min-w-0 flex-1">
-                <Listbox value={selectedProfession} onChange={handleProfessionChange}>
-                  {({ open }) => (
-                    <div className="relative w-full">
-                      <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 text-white px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-base desktop-layout:text-lg flex items-center justify-between transition-colors duration-150 ${open ? 'bg-neutral-700' : 'hover:border-[#e3b056]/35 hover:bg-neutral-700/70'}`}>
-                        <div className="flex items-center gap-2 min-w-0">
-                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="w-8 h-8 desktop-layout:w-10 desktop-layout:h-10 flex-shrink-0" />
-                          <span className="font-semibold truncate">{selectedProfession}</span>
-                        </div>
-                        <svg
-                          className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </Listbox.Button>
-                      <Listbox.Options className="absolute z-40 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
-                        {availableProfessions.map((prof) => (
-                          <Listbox.Option
-                            key={prof}
-                            value={prof}
-                            className={({ active }) =>
-                              `relative cursor-pointer select-none py-2 pl-3 pr-9 ${
-                                active ? 'bg-neutral-700 text-white' : 'text-neutral-300'
-                              }`
-                            }
-                          >
-                            {({ selected }) => (
-                              <div className="flex items-center gap-2">
-                                <img src={`/icons/${prof.toLowerCase()}.webp`} alt="" className="w-10 h-10" />
-                                <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>
-                                  {prof}
-                                </span>
-                              </div>
-                            )}
-                          </Listbox.Option>
-                        ))}
-                      </Listbox.Options>
-                    </div>
-                  )}
-                </Listbox>
-              </div>
-              <button
-                type="button"
-                onClick={() => setCostChartOpen((open) => !open)}
-                aria-expanded={costChartOpen}
-                aria-label="Level-up cost history"
-                className={`flex size-[46px] shrink-0 items-center justify-center self-center rounded-lg border transition-colors duration-150 desktop-layout:size-[54px] ${
-                  costChartOpen
-                    ? 'border-yellow-300 bg-yellow-400/25 text-yellow-100'
-                    : 'border-yellow-400/50 bg-yellow-400/15 text-yellow-200 hover:border-yellow-300 hover:bg-yellow-400/25'
-                }`}
-              >
-                <svg className="h-6 w-6" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 15.5l4.2-4.6 3 2.4L17 4.5" />
-                  <path strokeLinecap="round" strokeWidth={1.75} d="M3 17h14" />
-                </svg>
-              </button>
-            </div>
-            <LevelUpCostChart
-              open={costChartOpen}
-              onClose={() => setCostChartOpen(false)}
-              version={selectedVersion}
-              profession={selectedProfession}
-              professions={availableProfessions}
-              realm={selectedRealm}
-              realms={realms}
-              faction={selectedFaction}
-              factions={factions}
-              stroke={selectedVersion === 'The Burning Crusade' ? '#10b981' : selectedVersion === 'Forever' ? '#1fb5f7' : '#facc15'}
-            />
-            <div className="mb-4">
-              <div className="mb-6 flex items-center justify-between">
-                <label className="text-xs">
-                  Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
-                </label>
+  const settingsMenu = (
                 <div className="relative" ref={advancedSettingsAnchorRef}>
                   <button
                     type="button"
                     onClick={() => setIsAdvancedSettingsOpen(!isAdvancedSettingsOpen)}
                     aria-expanded={isAdvancedSettingsOpen}
-                    className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors duration-150 ${advancedButtonClass(selectedVersion, isAdvancedSettingsOpen)}`}
+                    className={`flex shrink-0 items-center gap-1 whitespace-nowrap rounded-md border font-semibold transition-colors duration-150 ${compactHeader ? 'px-2 py-1 text-[11px]' : 'gap-1.5 rounded-lg px-3 py-1.5 text-xs'} ${advancedButtonClass(selectedVersion, isAdvancedSettingsOpen)}`}
                   >
                     <span>Advanced Settings</span>
                     <svg
@@ -3813,10 +3556,330 @@ const renderXTick = selected
                     )}
                   </AnimatePresence>
                 </div>
+  );
+
+  return (
+    <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden bg-transparent text-neutral-100">
+
+      {/* Auction House Disclaimer Modal - first-time only */}
+      <AnimatePresence>
+        {showAuctionHouseDisclaimer && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80"
+            onClick={() => setShowAuctionHouseDisclaimer(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="max-w-md w-full bg-neutral-900 rounded-xl shadow-2xl border-2 border-amber-500/50 p-6 desktop-layout:p-8"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">⚠️</span>
+                <h2 className="text-xl desktop-layout:text-2xl font-bold text-amber-400">Important Notice</h2>
+              </div>
+              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-2">
+                <strong className="text-white">Auction House mode</strong> uses listing prices to estimate profit—we do <strong className="text-amber-400">not</strong> know actual sale prices.
+              </p>
+              <p className="text-neutral-300 text-sm desktop-layout:text-base leading-relaxed mb-4">
+                Prices can be <strong className="text-amber-400">highly volatile</strong>. Items may not sell at listed prices, or may take longer to sell than expected. Use this mode for rough estimates only.
+              </p>
+              <p className="text-neutral-400 text-xs desktop-layout:text-sm mb-6">
+                Click outside to cancel. By clicking &quot;I Understand&quot;, you acknowledge these limitations.
+              </p>
+              <button
+                onClick={acknowledgeAuctionHouseDisclaimer}
+                className="w-full py-4 px-6 text-lg font-bold rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-900 transition-colors duration-200 shadow-lg hover:shadow-amber-500/50"
+              >
+                I Understand
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile: floating menu button when sidebar is closed */}
+      {!sidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="desktop-layout:hidden absolute top-3 left-3 z-[100] p-2 rounded-lg bg-neutral-800/90 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors shadow-lg border border-neutral-700"
+          aria-label="Open planner"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
+
+      {/* Mobile: left-edge drag strip to open drawer when closed */}
+      <div
+        className="desktop-layout:hidden absolute left-0 top-0 bottom-0 touch-none"
+        style={{ zIndex: 45, width: `${EDGE_DRAWER_FRACTION * 100}%` }}
+        {...drawerTouchHandlers}
+        {...drawerPointerHandlers}
+      />
+
+      {/* Panels */}
+      <div className="flex flex-1 min-h-0 relative desktop-layout:pt-0">
+        {/* Mobile backdrop - closes sidebar when tapped */}
+        <AnimatePresence>
+          {sidebarOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="desktop-layout:hidden absolute inset-0 z-40 bg-black/60"
+              onClick={() => setSidebarOpen(false)}
+              aria-hidden
+            />
+          )}
+        </AnimatePresence>
+
+        {/* Aside - full-screen on mobile, sidebar on desktop */}
+        <aside
+          className={`absolute desktop-layout:static inset-0 z-50 desktop-layout:z-auto w-full desktop-layout:w-150 flex flex-col border-r border-white/[0.06] bg-neutral-950/95 text-[16px] shadow-[8px_0_40px_rgba(0,0,0,0.35)] backdrop-blur-sm desktop-layout:transform-none desktop-layout:translate-x-0 ${drawerDragX !== null ? '' : 'transition-transform duration-300 ease-out'} ${drawerDragX === null ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}
+          style={drawerDragX !== null ? { transform: `translateX(${drawerDragX}px)` } : undefined}
+        >
+          {/* Mobile: drag handle on left edge of drawer to close by dragging left */}
+          <div
+            className="desktop-layout:hidden absolute left-0 top-0 bottom-0 w-6 touch-none z-10"
+            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
+            {...drawerTouchHandlers}
+            {...drawerPointerHandlers}
+          />
+          {/* Mobile: drag handle on right edge of drawer to close by dragging left (show recipe view) */}
+          <div
+            className="desktop-layout:hidden absolute right-0 top-0 bottom-0 w-6 touch-none z-10"
+            style={{ width: `${EDGE_DRAWER_FRACTION * 100}%` }}
+            {...drawerRightEdgeTouchHandlers}
+            {...drawerRightEdgePointerHandlers}
+          />
+          {/* Slider + Tabs */}
+          <div className={`flex-none border-b border-[#e3b056]/15 bg-neutral-900/80 px-3 ${compactHeader ? 'pt-2 pb-1' : 'pt-4 pb-2 desktop-layout:pt-5'}`}>
+            {compactHeader ? (
+              <PlannerCommandBar
+                version={selectedVersion}
+                versions={versions}
+                onVersion={handleVersionChange}
+                realm={selectedRealm}
+                realms={realms}
+                onRealm={handleRealmChange}
+                faction={selectedFaction}
+                factions={factions}
+                onFaction={handleFactionChange}
+                profession={selectedProfession}
+                professions={availableProfessions}
+                onProfession={handleProfessionChange}
+                chartOpen={costChartOpen}
+                onToggleChart={() => setCostChartOpen((open) => !open)}
+                skill={skill}
+                target={target}
+                maxSkill={maxSkill}
+                committedSkill={committedSkill}
+                committedTarget={committedTarget}
+                guideSkillLimit={guideSkillLimit}
+                steps={plan.steps}
+                isDesktop={isDesktop}
+                onSliderStart={handleSliderStart}
+                onRangeChange={(low, high) => { handleSliderChange(low); setTarget(high); }}
+                onRangeCommit={(low, high) => handleSliderEnd(low, high)}
+                onSkillCommit={handleDirectSkillChange}
+                onTargetCommit={(value) => {
+                  fitGuideRangeRef.current = null;
+                  clearTargetDebounce();
+                  const boundedTarget = Math.max(skillRef.current + 1, Math.min(maxSkillRef.current, value));
+                  setTarget(boundedTarget);
+                  setCommittedTarget(boundedTarget);
+                  recentUserChangeTimestampRef.current = Date.now();
+                  updateUrl({ target: boundedTarget });
+                }}
+                priceMode={priceSourcing}
+                onPriceMode={(mode) => {
+                  if (mode === 'auction-house') handleAuctionHouseClick();
+                  else setPriceSourcing(mode);
+                }}
+                minSaleRatePercent={minSaleRatePercent}
+                view={view}
+                onView={setView}
+                settings={settingsMenu}
+                onClassic={() => setCompactHeader(false)}
+                guideTip={guideLimitTip}
+                onGuideTip={setGuideLimitTip}
+                onGuideTipLeave={() => setGuideLimitTip(null)}
+                minSkillUpChance={minSkillUpChance}
+              />
+            ) : (
+            <>
+            <Link href="/" className={`${compactHeader ? 'hidden' : 'mb-3 flex'} items-baseline justify-between gap-3`}>
+              <span className={`${compactHeader ? 'text-sm' : 'text-lg'} font-semibold tracking-tight text-white`}>
+                <span className="text-[#e3b056]">WoW</span>Craft
+              </span>
+              <span className={`truncate text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500 ${compactHeader ? 'hidden' : ''}`}>{selectedProfession}</span>
+            </Link>
+            <div className={compactHeader ? 'mb-2 flex flex-col gap-1.5' : ''}>
+            <div className={`flex flex-row gap-1.5 desktop-layout:gap-2 ${compactHeader ? 'order-2' : 'mb-2 desktop-layout:mb-4'}`}>
+              {/* Version Selector */}
+              <Listbox value={selectedVersion} onChange={handleVersionChange}>
+                {({ open }) => (
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${versionRingClass(selectedVersion)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
+                      <span className={`font-semibold truncate ${versionTextClass(selectedVersion)}`}>{selectedVersion === 'The Burning Crusade' ? 'TBC' : selectedVersion}</span>
+                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    </Listbox.Button>
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                      {versions.map((ver) => (
+                        <Listbox.Option key={ver} value={ver} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
+                          {({ selected }) => (
+                            <span className={`block truncate font-semibold ${versionTextClass(ver)} ${selected ? '' : 'opacity-80'}`}>{ver}</span>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </div>
+                )}
+              </Listbox>
+              {/* Realm Selector */}
+              <Listbox value={selectedRealm} onChange={handleRealmChange}>
+                {({ open }) => (
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 text-white px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${realmRingClass(selectedRealm)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
+                      <span className="font-semibold truncate"><RealmName realm={selectedRealm} /></span>
+                      <svg className={`h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    </Listbox.Button>
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[11.5rem] max-h-80 overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                      {realms.map((realm) => (
+                        <Listbox.Option key={realm} value={realm} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700 text-white' : 'text-neutral-300'}`}>
+                          {({ selected }) => (
+                            <span className={`block truncate font-semibold ${selected && !foreverRealmKind(realm) ? 'text-white' : ''}`}><RealmName realm={realm} /></span>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </div>
+                )}
+              </Listbox>
+              {/* Faction Selector */}
+              <Listbox value={selectedFaction} onChange={handleFactionChange}>
+                {({ open }) => (
+                  <div className="relative flex-1 min-w-0 desktop-layout:w-1/3">
+                    <Listbox.Button className={`w-full rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1.5 desktop-layout:px-3 desktop-layout:py-1.5 text-xs desktop-layout:text-sm flex items-center justify-between gap-1 transition-colors duration-150 min-w-0 ${factionRingClass(selectedFaction)} ${open ? 'bg-neutral-700' : 'hover:bg-neutral-700/70'}`}>
+                      <span className={`flex items-center gap-1 min-w-0 font-semibold ${factionTextClass(selectedFaction)}`}>
+                        <FactionIcon faction={selectedFaction} className="h-5 w-5 shrink-0" />
+                        <span className="truncate">{selectedFaction}</span>
+                      </span>
+                      <svg className={`h-4 w-4 text-neutral-400 shrink-0 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
+                    </Listbox.Button>
+                    <Listbox.Options className="absolute z-30 mt-1 w-full min-w-[8.5rem] overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                      {factions.map((fac) => (
+                        <Listbox.Option key={fac} value={fac} className={({ active }) => `relative cursor-pointer select-none py-2 pl-3 pr-3 ${active ? 'bg-neutral-700' : ''}`}>
+                          {({ selected }) => (
+                            <span className={`flex items-center gap-2 truncate font-semibold ${factionTextClass(fac)} ${selected ? '' : 'opacity-80'}`}>
+                              <FactionIcon faction={fac} className="h-5 w-5 shrink-0" />
+                              {fac}
+                            </span>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </div>
+                )}
+              </Listbox>
+            </div>
+            <div className={`flex w-full items-stretch gap-2 ${compactHeader ? 'order-1' : 'mb-3 desktop-layout:mb-5'}`}>
+              {compactHeader && (
+                <Link href="/" className="flex shrink-0 items-center px-0.5 text-sm font-semibold tracking-tight text-white" aria-label="WoWCraft home">
+                  <span className="text-[#e3b056]">WoW</span>
+                </Link>
+              )}
+              <div className="min-w-0 flex-1">
+                <Listbox value={selectedProfession} onChange={handleProfessionChange}>
+                  {({ open }) => (
+                    <div className="relative w-full">
+                      <Listbox.Button className={`flex w-full items-center justify-between rounded-lg border border-white/10 bg-neutral-800/80 px-2 text-white transition-colors duration-150 ${compactHeader ? 'py-1 text-sm' : 'py-1.5 text-base desktop-layout:px-3 desktop-layout:py-1.5 desktop-layout:text-lg'} ${open ? 'bg-neutral-700' : 'hover:border-[#e3b056]/35 hover:bg-neutral-700/70'}`}>
+                        <div className="flex items-center gap-2 min-w-0">
+                          <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className={`flex-shrink-0 ${compactHeader ? 'h-6 w-6' : 'h-8 w-8 desktop-layout:h-10 desktop-layout:w-10'}`} />
+                          <span className="font-semibold truncate">{selectedProfession}</span>
+                        </div>
+                        <svg
+                          className={`h-4 w-4 text-neutral-400 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </Listbox.Button>
+                      <Listbox.Options className="absolute z-40 mt-1 w-full overflow-auto rounded-md bg-neutral-800 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-lg">
+                        {availableProfessions.map((prof) => (
+                          <Listbox.Option
+                            key={prof}
+                            value={prof}
+                            className={({ active }) =>
+                              `relative cursor-pointer select-none py-2 pl-3 pr-9 ${
+                                active ? 'bg-neutral-700 text-white' : 'text-neutral-300'
+                              }`
+                            }
+                          >
+                            {({ selected }) => (
+                              <div className="flex items-center gap-2">
+                                <img src={`/icons/${prof.toLowerCase()}.webp`} alt="" className="w-10 h-10" />
+                                <span className={`block truncate font-semibold ${selected ? 'text-white' : ''}`}>
+                                  {prof}
+                                </span>
+                              </div>
+                            )}
+                          </Listbox.Option>
+                        ))}
+                      </Listbox.Options>
+                    </div>
+                  )}
+                </Listbox>
+              </div>
+              <button
+                type="button"
+                onClick={() => setCostChartOpen((open) => !open)}
+                aria-expanded={costChartOpen}
+                aria-label="Level-up cost history"
+                className={`flex shrink-0 items-center justify-center self-center rounded-lg border transition-colors duration-150 ${compactHeader ? 'size-9' : 'size-[46px] desktop-layout:size-[54px]'} ${
+                  costChartOpen
+                    ? 'border-yellow-300 bg-yellow-400/25 text-yellow-100'
+                    : 'border-yellow-400/50 bg-yellow-400/15 text-yellow-200 hover:border-yellow-300 hover:bg-yellow-400/25'
+                }`}
+              >
+                <svg className="h-6 w-6" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 15.5l4.2-4.6 3 2.4L17 4.5" />
+                  <path strokeLinecap="round" strokeWidth={1.75} d="M3 17h14" />
+                </svg>
+              </button>
+            </div>
+            </div>
+            <div className={compactHeader ? 'mb-2 grid grid-cols-[6.75rem_minmax(0,1fr)_6.75rem] items-center gap-x-2 gap-y-1.5' : 'mb-4'}>
+              <div className={`${compactHeader ? 'col-span-3 row-start-1 justify-end' : 'mb-6 justify-between'} flex items-center gap-2`}>
+                <label className={`text-xs ${compactHeader ? 'sr-only' : ''}`}>
+                  Skill Range <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{skill}</span> → <span className={`font-semibold ${versionTextClass(selectedVersion)}`}>{target}</span>
+                </label>
+                <button
+                  type="button"
+                  onClick={() => setCompactHeader((on) => !on)}
+                  className="shrink-0 rounded-lg border border-white/10 bg-neutral-800/80 px-2 py-1 text-[11px] font-semibold text-neutral-300 transition-colors hover:bg-neutral-700 hover:text-white"
+                >
+                  {compactHeader ? 'Classic' : 'Compact'}
+                </button>
+                {settingsMenu}
               </div>
               
               {/* Double-sided range slider */}
-              <div className="relative z-20 mb-4 w-full px-3 desktop-layout:px-0">
+              <div className={`relative z-20 w-full desktop-layout:px-0 ${compactHeader ? 'col-start-2 row-start-2 px-1' : 'mb-4 px-3'}`}>
                 <Range
                   values={[skill, target]}
                   step={1}
@@ -3906,7 +3969,7 @@ const renderXTick = selected
                       : selectedVersion === 'Forever'
                         ? (index === 0 ? '#0273ae' : '#1fb5f7')
                         : (index === 0 ? '#eab308' : '#f59e0b');
-                    const thumbSize = isDesktop ? 20 : 44;
+                    const thumbSize = compactHeader ? (isDesktop ? 16 : 28) : (isDesktop ? 20 : 44);
                     return (
                       <div
                         key={key}
@@ -3962,19 +4025,18 @@ const renderXTick = selected
               </div>
 
               {/* Skill inputs */}
-              <div className="flex items-center space-x-2">
+              <div className={compactHeader ? 'contents' : 'flex items-center space-x-2'}>
                 {/* Current skill input */}
-                <div className="flex flex-col items-center bg-neutral-900 flex-1">
-                  <span className="text-xs text-neutral-400 mb-1">Current</span>
+                <div className={`flex flex-col items-center bg-neutral-900 ${compactHeader ? 'col-start-1 row-start-2 min-w-0' : 'flex-1'}`}>
                   <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                     <button
-                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className={`rounded bg-neutral-800 text-white transition hover:bg-neutral-500 ${compactHeader ? 'h-7 w-7 text-sm' : 'h-8 w-8 text-lg'}`}
                       onClick={() => handleDirectSkillChange(skill - 1)}
                     >−</button>
                     
                     <input
                       type="number"
-                      value={skill}
+                      aria-label="Current skill"
                       min={1}
                       max={target - 1}
                       onChange={(e) => {
@@ -3998,24 +4060,21 @@ const renderXTick = selected
                           e.currentTarget.blur();
                         }
                       }}
-                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${versionTextClass(selectedVersion)}
-                                [&::-webkit-inner-spin-button]:appearance-none 
-                                [&::-webkit-outer-spin-button]:appearance-none`}
+                      className={`w-12 appearance-none bg-transparent text-center outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none ${compactHeader ? 'text-sm' : 'text-lg'} ${versionTextClass(selectedVersion)}`}
                     />
                     
                     <button
-                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className={`rounded bg-neutral-800 text-white transition hover:bg-neutral-500 ${compactHeader ? 'h-7 w-7 text-sm' : 'h-8 w-8 text-lg'}`}
                       onClick={() => handleDirectSkillChange(skill + 1)}
                     >+</button>
                   </div>
                 </div>
 
                 {/* Target skill input */}
-                <div className="flex flex-col items-center bg-neutral-900 flex-1">
-                  <span className="text-xs text-neutral-400 mb-1">Target</span>
+                <div className={`flex flex-col items-center bg-neutral-900 ${compactHeader ? 'col-start-3 row-start-2 min-w-0' : 'flex-1'}`}>
                   <div className="flex items-center justify-between w-full bg-neutral-700 rounded">
                     <button
-                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className={`rounded bg-neutral-800 text-white transition hover:bg-neutral-500 ${compactHeader ? 'h-7 w-7 text-sm' : 'h-8 w-8 text-lg'}`}
                       onClick={() => {
                         fitGuideRangeRef.current = null;
                         const newTarget = Math.max(skill + 1, target - 1);
@@ -4028,7 +4087,7 @@ const renderXTick = selected
                     
                     <input
                       type="number"
-                      value={target}
+                      aria-label="Target skill"
                       min={skill + 1}
                       max={maxSkill}
                       onChange={(e) => {
@@ -4061,13 +4120,11 @@ const renderXTick = selected
                           e.currentTarget.blur();
                         }
                       }}
-                      className={`text-lg text-center w-12 bg-transparent outline-none appearance-none ${versionTextClass(selectedVersion)}
-                                [&::-webkit-inner-spin-button]:appearance-none 
-                                [&::-webkit-outer-spin-button]:appearance-none`}
+                      className={`w-12 appearance-none bg-transparent text-center outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none ${compactHeader ? 'text-sm' : 'text-lg'} ${versionTextClass(selectedVersion)}`}
                     />
                     
                     <button
-                      className="text-lg text-white bg-neutral-800 hover:bg-neutral-500 rounded transition w-8 h-8"
+                      className={`rounded bg-neutral-800 text-white transition hover:bg-neutral-500 ${compactHeader ? 'h-7 w-7 text-sm' : 'h-8 w-8 text-lg'}`}
                       onClick={() => {
                         fitGuideRangeRef.current = null;
                         const newTarget = Math.min(maxSkill, target + 1);
@@ -4081,9 +4138,9 @@ const renderXTick = selected
                 </div>
               </div>
             </div>
-            <div className="mb-4">
+            <div className={compactHeader ? 'mb-1.5' : 'mb-4'}>
               {/* Price Sourcing Selector */}
-              <div className="flex items-center justify-between mb-1 desktop-layout:mb-2">
+              <div className={`mb-1 flex items-center justify-between desktop-layout:mb-2 ${compactHeader ? 'hidden' : ''}`}>
                 <label className="text-[10px] desktop-layout:text-xs text-neutral-400 font-medium">Price Sourcing Strategy</label>
               </div>
               <div className="flex gap-0.5 desktop-layout:gap-1 flex-wrap">
@@ -4153,37 +4210,44 @@ const renderXTick = selected
                 </button>
               </div>
             </div>
-            <div className="flex items-center gap-2 py-2 border-b border-neutral-800">
+            <div className={compactHeader ? 'mb-1 flex flex-row-reverse items-center justify-between gap-3 border-b border-white/[0.06]' : 'contents'}>
+            <div className={`flex items-center ${compactHeader ? 'justify-end gap-3 py-1 text-xs' : 'gap-2 border-b border-neutral-800 py-2'}`}>
               <Link
                 href="/faq"
-                className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+                className={compactHeader
+                  ? 'font-medium text-neutral-400 transition-colors hover:text-white'
+                  : 'flex-1 rounded bg-neutral-800 px-3 py-2 text-center text-sm font-medium text-neutral-300 transition-colors hover:bg-neutral-700 hover:text-white desktop-layout:text-base'}
               >
                 FAQ
               </Link>
               <Link
                 href="/promo"
-                className="flex-1 py-2 px-3 text-sm desktop-layout:text-base font-medium rounded bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition-colors text-center"
+                className={compactHeader
+                  ? 'font-medium text-neutral-400 transition-colors hover:text-white'
+                  : 'flex-1 rounded bg-neutral-800 px-3 py-2 text-center text-sm font-medium text-neutral-300 transition-colors hover:bg-neutral-700 hover:text-white desktop-layout:text-base'}
               >
-                About Project
+                About
               </Link>
               <a
                 href="https://discord.com/invite/KE4kEEyTJh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-1.5 rounded border border-[#3d4278] bg-[#2a2d52] px-3 py-2 text-sm font-medium text-[#c9cdf8] transition-colors hover:bg-[#343868] hover:text-white desktop-layout:text-base"
+                className={compactHeader
+                  ? 'inline-flex items-center gap-1 font-medium text-[#c9cdf8] transition-colors hover:text-white'
+                  : 'flex flex-1 items-center justify-center gap-1.5 rounded border border-[#3d4278] bg-[#2a2d52] px-3 py-2 text-sm font-medium text-[#c9cdf8] transition-colors hover:bg-[#343868] hover:text-white desktop-layout:text-base'}
               >
-                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="currentColor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className={`${compactHeader ? 'h-3.5 w-3.5' : 'h-4 w-4'} shrink-0`} fill="currentColor" aria-hidden="true">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
                 </svg>
                 Discord
               </a>
             </div>
-            <div className="hidden desktop-layout:flex relative space-x-8 border-b border-white/[0.06] font-medium tracking-wide text-neutral-400 mb-2 justify-center">
+            <div className={`relative font-medium tracking-wide text-neutral-400 ${compactHeader ? 'flex justify-start gap-4' : 'mb-2 hidden justify-center space-x-8 border-b border-white/[0.06] desktop-layout:flex'}`}>
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setView(tab)}
-                  className={`pb-2 relative ${
+                  className={`relative ${compactHeader ? 'pb-1' : 'pb-2'} ${
                     view === tab ? 'text-white' : 'hover:text-neutral-200'
                   }`}
                 >
@@ -4197,6 +4261,21 @@ const renderXTick = selected
                 </button>
               ))}
             </div>
+            </div>
+            </>
+            )}
+            <LevelUpCostChart
+              open={costChartOpen}
+              onClose={() => setCostChartOpen(false)}
+              version={selectedVersion}
+              profession={selectedProfession}
+              professions={availableProfessions}
+              realm={selectedRealm}
+              realms={realms}
+              faction={selectedFaction}
+              factions={factions}
+              stroke={selectedVersion === 'The Burning Crusade' ? '#10b981' : selectedVersion === 'Forever' ? '#1fb5f7' : '#facc15'}
+            />
             {!(view === 'route' && !routeIsFinite) && <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 border-b border-white/[0.06] font-medium text-[12px] desktop-layout:text-sm">
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
