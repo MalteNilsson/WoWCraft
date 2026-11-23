@@ -1,7 +1,7 @@
 {
   "realmList": "anniversary",
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-23T02:06:17.013Z",
+  "timestamp": "2026-11-23T03:06:18.586Z",
   "totalRequests": 8,
   "successful": 8,
   "failed": 0,
@@ -10,13 +10,13 @@
       "realm": "Thunderstrike",
       "faction": "Alliance",
       "success": true,
-      "timestamp": "2026-11-22T22:46:54Z"
+      "timestamp": "2026-11-23T01:15:54Z"
     },
     {
       "realm": "Thunderstrike",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-22T21:32:41Z"
+      "timestamp": "2026-11-23T00:23:17Z"
     },
     {
       "realm": "Spineshatter",
@@ -28,13 +28,13 @@
       "realm": "Spineshatter",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-22T22:10:06Z"
+      "timestamp": "2026-11-23T00:23:06Z"
     },
     {
       "realm": "Dreamscythe",
       "faction": "Alliance",
       "success": true,
-      "timestamp": "2026-11-22T21:50:50Z"
+      "timestamp": "2026-11-23T00:22:23Z"
     },
     {
       "realm": "Dreamscythe",
@@ -52,7 +52,7 @@
       "realm": "Nightslayer",
       "faction": "Horde",
       "success": true,
-      "timestamp": "2026-11-22T16:14:59Z"
+      "timestamp": "2026-11-23T01:09:27Z"
     }
   ]
 }
