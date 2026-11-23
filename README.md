@@ -8,6 +8,8 @@ WoWCraft helps players optimize profession leveling by finding the most efficien
 
 **Live site:** [wowcraft.io](https://wowcraft.io)
 
+[![Discord](https://img.shields.io/badge/Discord-Join%20the%20server-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/KE4kEEyTJh)
+
 ## Supported Professions
 
 - Alchemy

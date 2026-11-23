@@ -1575,6 +1575,7 @@ export default function ProfessionPlanner() {
   const guideSearchGenRef = useRef(0);
   const guideLimitGenRef = useRef(0);
   const [view, setView] = useState<'route'|'all'>('route');
+  const [recipeSort, setRecipeSort] = useState<{ key: 'name' | 'profit' | 'skill'; dir: 'asc' | 'desc' }>({ key: 'skill', dir: 'asc' });
   // Proof of concept. Classic layout is the previous header; compact is the tighter one.
   const [compactHeader, setCompactHeader] = useState(true);
   const [selectedRecipeId, setSelectedRecipeId] = useState<number|null>(null);
@@ -2327,14 +2328,50 @@ export default function ProfessionPlanner() {
     [recipes, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction]
   );
 
-  const filteredRecipes = useMemo(() => {
-    if (view === 'all') {
-      return searchTerm
-        ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isTransmuteRecipe(r) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
-        : sortedAll;
+  const recipeNetCost = useMemo(() => {
+    const net = new Map<number, number>();
+    if (view !== 'all') return net;
+    for (const recipe of recipes) {
+      net.set(recipe.id, calculateCraftCost(
+        recipe,
+        prices,
+        materialInfo,
+        false,
+        false,
+        useMarketValue,
+        optimizeSubCrafting,
+        currentProfessionRecipeIds,
+        priceSourcing,
+        selectedProfession,
+      ));
     }
-    return [];
-  }, [view, searchTerm, fuse, sortedAll, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction]);
+    return net;
+  }, [view, recipes, prices, materialInfo, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession]);
+
+  const filteredRecipes = useMemo(() => {
+    if (view !== 'all') return [];
+    const list = searchTerm
+      ? fuse.search(searchTerm).map(result => result.item).filter(r => !blacklistedSpellIds.has(r.id) && !isTransmuteRecipe(r) && !isSeasonalRecipe(r) && isRecipeObtainable(r, materialInfo) && (includeCurrencyRecipes || !isCurrencyRecipe(r, materialInfo)) && !isWrongFactionRecipe(r, materialInfo, selectedFaction) && !(hideBopRecipeItems && isBopRecipeItem(r, materialInfo)))
+      : sortedAll;
+    const dir = recipeSort.dir === 'asc' ? 1 : -1;
+    return [...list].sort((a, b) => {
+      if (recipeSort.key === 'name') {
+        return a.name.localeCompare(b.name) * dir || a.id - b.id;
+      }
+      if (recipeSort.key === 'skill') {
+        return (getEffectiveMinSkill(a) - getEffectiveMinSkill(b)) * dir || a.name.localeCompare(b.name);
+      }
+      const aNet = recipeNetCost.get(a.id);
+      const bNet = recipeNetCost.get(b.id);
+      const aBad = aNet == null || !Number.isFinite(aNet);
+      const bBad = bNet == null || !Number.isFinite(bNet);
+      if (aBad || bBad) {
+        if (aBad && bBad) return a.name.localeCompare(b.name);
+        return aBad ? 1 : -1;
+      }
+      return (-aNet - -bNet) * dir || a.name.localeCompare(b.name);
+    });
+  }, [view, searchTerm, fuse, sortedAll, materialInfo, includeCurrencyRecipes, hideBopRecipeItems, selectedFaction, recipeSort, recipeNetCost]);
   
   // Store previous recipe to show during profession transitions
   // Why useMemo here?
@@ -4279,9 +4316,34 @@ const renderXTick = selected
             {!(view === 'route' && !routeIsFinite) && <div className="flex items-center gap-1 px-2 py-0.5 w-full h-6 desktop-layout:h-8 text-neutral-400 border-b border-white/[0.06] font-medium text-[12px] desktop-layout:text-sm">
               <span className="w-5 desktop-layout:w-8 text-center shrink-0">#</span>
               <span className="w-5 desktop-layout:w-7 shrink-0" /> {/* icon space */}
-              <span className="flex-1 min-w-0">Recipe</span>
-              <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0">Cost</span>
-              <span className="w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0">Skill</span>
+              {view === 'all' ? (
+                <>
+                  {([
+                    ['name', 'Recipe', 'flex-1 min-w-0 text-left'],
+                    ['profit', 'Profit', 'w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0'],
+                    ['skill', 'Skill', 'w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0'],
+                  ] as const).map(([key, label, width]) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setRecipeSort((current) => current.key === key
+                        ? { key, dir: current.dir === 'asc' ? 'desc' : 'asc' }
+                        : { key, dir: key === 'profit' ? 'desc' : 'asc' })}
+                      className={`${width} inline-flex items-center gap-1 hover:text-white ${key === 'name' ? 'justify-start' : 'justify-center'} ${recipeSort.key === key ? 'text-white' : ''}`}
+                      aria-sort={recipeSort.key === key ? (recipeSort.dir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                    >
+                      {label}
+                      {recipeSort.key === key && <span aria-hidden="true">{recipeSort.dir === 'asc' ? '↑' : '↓'}</span>}
+                    </button>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <span className="flex-1 min-w-0">Recipe</span>
+                  <span className="w-[6.75rem] desktop-layout:w-[8rem] text-center shrink-0">Cost</span>
+                  <span className="w-[4.75rem] desktop-layout:w-[5.75rem] text-center shrink-0">Skill</span>
+                </>
+              )}
             </div>}
           </div>
 
@@ -4582,6 +4644,9 @@ const renderXTick = selected
                                 <RecipeSourceMark recipe={r} materialInfo={materialInfo} />
                             </span>
                             </div>
+                            <span className="shrink-0">
+                              <CostBox copper={recipeNetCost.get(r.id) ?? Infinity} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
+                            </span>
                             <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${selectedVersion === 'Forever' ? 'text-[#a1ddfc]' : 'text-yellow-200'}`}>
                               {getEffectiveMinSkill(r)}
                             </SkillBox>
