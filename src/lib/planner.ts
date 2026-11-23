@@ -32,6 +32,11 @@ export function isBelowMinSaleRate(saleRate: number | undefined, minimum = MIN_S
 /** A recipe the user chose in place of another. Applied only while both are valid. */
 export type RecipePreference = { prefer: number; over: number };
 
+/** Rods and tools learned at skill 0 are crafted at skill 1, the first level a character can be. */
+function firstCraftSkill(recipe: Recipe): number {
+    return Math.max(1, getEffectiveMinSkill(recipe));
+}
+
 function preferRecipeChoice<T extends { recipe: Recipe }>(
     selected: T,
     options: readonly { recipe: Recipe }[],
@@ -277,8 +282,8 @@ export function makeDynamicPlan(
             .filter(
             r =>
                 ENCHANTING_ROD_SPELL_IDS.has(r.id) &&
-                getEffectiveMinSkill(r) >= startSkill &&
-                getEffectiveMinSkill(r) <= target
+                firstCraftSkill(r) >= startSkill &&
+                firstCraftSkill(r) <= target
             )
             .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b))
         : [];
@@ -288,8 +293,8 @@ export function makeDynamicPlan(
             .filter(
             r =>
                 ENGINEERING_TOOL_SPELL_IDS.has(r.id) &&
-                getEffectiveMinSkill(r) >= startSkill &&
-                getEffectiveMinSkill(r) <= target
+                firstCraftSkill(r) >= startSkill &&
+                firstCraftSkill(r) <= target
             )
             .sort((a, b) => getEffectiveMinSkill(a) - getEffectiveMinSkill(b))
         : [];
@@ -313,13 +318,41 @@ export function makeDynamicPlan(
     // Backward DP: work from target down to startSkill
     if (effectiveRecalculate) {
         // Original behavior: recalculate for each skill level
-    for (let currentSkill = target; currentSkill > startSkill; currentSkill--) {
+    for (let currentSkill = target; currentSkill >= startSkill; currentSkill--) {
         const currentState = dp[currentSkill];
         if (!currentState) continue;
 
         // Handle rods if needed (going backward, so check if rod is needed at currentSkill)
         if (rodRecipes.length) {
-            const rod = rodRecipes.find(r => getEffectiveMinSkill(r) === currentSkill);
+            const rod = rodRecipes.find(r => firstCraftSkill(r) === currentSkill);
+            if (rod && currentSkill === startSkill) {
+                const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
+                const rodRecipeCost = includeRecipeCost ?
+                    craftCost(rod, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession) : 0;
+                const skillUpsFromRod = Math.max(1, Math.floor(expectedSkillUps(rod, startSkill, workingOvertime)));
+                const kept = new Map(currentState.shoppingList);
+                for (const [matId, qty] of Object.entries(rod.materials)) {
+                    const itemId = Number(matId);
+                    if (ENCHANTING_ROD_PRODUCT_ITEM_IDS.has(itemId)) continue;
+                    kept.set(itemId, (kept.get(itemId) || 0) + qty);
+                }
+                const producesId = recipeProduces.get(rod.id);
+                if (producesId) kept.set(producesId, Math.max(0, (kept.get(producesId) || 0) - 1));
+                dp[startSkill] = {
+                    steps: [{
+                        recipe: rod,
+                        crafts: 1,
+                        cost: rodMaterialCost,
+                        recipeCost: rodRecipeCost > 0 ? rodRecipeCost : undefined,
+                        endSkill: startSkill + skillUpsFromRod,
+                        note: "Required enchanting rod"
+                    }, ...currentState.steps],
+                    totalCost: currentState.totalCost + rodMaterialCost + rodRecipeCost,
+                    startSkill,
+                    shoppingList: kept
+                };
+                break;
+            }
             if (rod) {
                 const rodMaterialCost = craftCost(rod, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const rodRecipeCost = includeRecipeCost ? 
@@ -364,7 +397,7 @@ export function makeDynamicPlan(
 
         // Handle engineering tools if needed (going backward)
         if (engineeringToolRecipes.length) {
-            const tool = engineeringToolRecipes.find(r => getEffectiveMinSkill(r) === currentSkill);
+            const tool = engineeringToolRecipes.find(r => firstCraftSkill(r) === currentSkill);
             if (tool) {
                 const toolMaterialCost = craftCost(tool, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
                 const toolRecipeCost = includeRecipeCost ? 
@@ -403,6 +436,9 @@ export function makeDynamicPlan(
                 continue;
             }
         }
+
+        // A rod or tool learned at the starting skill is part of this plan, not a step below it.
+        if (currentSkill === startSkill) break;
 
         // Find all valid recipes for this skill level
         const validRecipes = recipes.filter(r => {
@@ -881,16 +917,15 @@ export function makeDynamicPlan(
             let tool: Recipe | undefined;
             if (rodRecipes.length && profession === "Enchanting") {
                 // Check if rod falls within batch range (inclusive on both ends)
-                rod = rodRecipes.find(r => getEffectiveMinSkill(r) >= batchStart && getEffectiveMinSkill(r) <= batchEnd);
+                rod = rodRecipes.find(r => firstCraftSkill(r) >= batchStart && firstCraftSkill(r) <= batchEnd);
                 
-                // Special case: if batchStart is 1 (first batch), ensure we catch Runed Copper Rod at level 1
-                // This handles edge cases where batchEnd might be less than expected
+                // The first batch starts at 1 even when its breakpoint is 0, so a skill-1 rod still belongs here.
                 if (!rod && batchStart === 1) {
-                    rod = rodRecipes.find(r => getEffectiveMinSkill(r) === 1);
+                    rod = rodRecipes.find(r => firstCraftSkill(r) === 1);
                 }
             }
             if (engineeringToolRecipes.length && profession === "Engineering") {
-                tool = engineeringToolRecipes.find(r => getEffectiveMinSkill(r) >= batchStart && getEffectiveMinSkill(r) <= batchEnd);
+                tool = engineeringToolRecipes.find(r => firstCraftSkill(r) >= batchStart && firstCraftSkill(r) <= batchEnd);
             }
             
             // Calculate crafts needed for the batch, split by rod/tool if present
@@ -901,7 +936,7 @@ export function makeDynamicPlan(
             const requiredRecipe = rod ?? tool;
             let craftsBeforeRod = 0;
             let craftsAfterRod = 0;
-            const rodMinSkill = requiredRecipe ? getEffectiveMinSkill(requiredRecipe) : 0;
+            const rodMinSkill = requiredRecipe ? firstCraftSkill(requiredRecipe) : 0;
             
             if (requiredRecipe) {
                 // Calculate crafts before rod/tool using sum-of-reciprocals
