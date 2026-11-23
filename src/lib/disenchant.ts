@@ -222,6 +222,22 @@ export function getDisenchantOutcomes(
   return [];
 }
 
+/** Classic epics disenchant into this. The result is not available yet, so it adds no value. */
+const NEXUS_CRYSTAL_ITEM_ID = 20725;
+
+/** Copper value of one disenchant material. Nexus Crystals are 0 until they can be disenchanted. */
+export function disenchantMaterialValue(
+  itemId: number,
+  prices: PriceMap,
+  useMarketValue: boolean,
+): number {
+  if (itemId === NEXUS_CRYSTAL_ITEM_ID) return 0;
+  const price = prices[itemId];
+  return useMarketValue
+    ? (price?.marketValue ?? price?.minBuyout ?? 0)
+    : (price?.minBuyout ?? price?.marketValue ?? 0);
+}
+
 /** Expected value from disenchanting one item (copper). Returns 0 if item cannot be disenchanted. */
 export function getExpectedDisenchantValue(
   itemLevel: number,
@@ -238,10 +254,7 @@ export function getExpectedDisenchantValue(
   let total = 0;
   for (const o of outcomes) {
     const avgQty = (o.minQty + o.maxQty) / 2;
-    const price = useMarketValue
-      ? (prices[o.itemId]?.marketValue ?? prices[o.itemId]?.minBuyout ?? 0)
-      : (prices[o.itemId]?.minBuyout ?? prices[o.itemId]?.marketValue ?? 0);
-    total += o.chance * avgQty * (price || 0);
+    total += o.chance * avgQty * disenchantMaterialValue(o.itemId, prices, useMarketValue);
   }
   return total;
 }

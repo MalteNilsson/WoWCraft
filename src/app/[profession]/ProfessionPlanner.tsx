@@ -43,7 +43,7 @@ import Fuse from 'fuse.js';
 import { Listbox } from '@headlessui/react';
 import { materialInfoMap } from '@/lib/materialsLoader';
 import { FormatMoney } from '@/lib/utils';
-import { getDisenchantOutcomes, getExpectedDisenchantValue, resolveDisenchantItem } from '@/lib/disenchant';
+import { disenchantMaterialValue, getDisenchantOutcomes, getExpectedDisenchantValue, resolveDisenchantItem } from '@/lib/disenchant';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDebounce } from 'use-debounce';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
@@ -78,6 +78,11 @@ const EXTRA_PROFESSIONS_COOKIE = 'wowcraft-extra-professions';
 const HIDE_BOP_RECIPES_COOKIE = 'wowcraft-hide-bop-recipes';
 const WORKING_OVERTIME_COOKIE = 'wowcraft-working-overtime';
 const SUCCESS_MARGIN_COOKIE = 'wowcraft-success-margin';
+const REALM_COOKIE = 'wowcraft-realm';
+const FACTION_COOKIE = 'wowcraft-faction';
+const PRICE_SOURCE_COOKIE = 'wowcraft-price-sourcing';
+const PRICE_MODES = ['cost', 'cost-vendor', 'disenchant', 'auction-house'] as const;
+type PriceMode = (typeof PRICE_MODES)[number];
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
 const DEFAULT_MIN_SKILL_CHANCE_PERCENT = 10;
 
@@ -158,6 +163,41 @@ function readExtraProfessions() {
 
 function writeExtraProfessions(names: string[]) {
   document.cookie = `${EXTRA_PROFESSIONS_COOKIE}=${encodeURIComponent(names.join(','))}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function readCookieValue(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  if (!match) return null;
+  try {
+    return decodeURIComponent(match[1]);
+  } catch {
+    return null;
+  }
+}
+
+function writeCookieValue(name: string, value: string) {
+  document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+function readRealmCookie(version: string): string | null {
+  const value = readCookieValue(REALM_COOKIE);
+  return value ? realmFromUrl(version, value) : null;
+}
+
+function readFactionCookie(): 'Alliance' | 'Horde' | null {
+  const value = readCookieValue(FACTION_COOKIE)?.toLowerCase();
+  if (value === 'alliance') return 'Alliance';
+  if (value === 'horde') return 'Horde';
+  return null;
+}
+
+function parsePriceMode(value: string | null): PriceMode | null {
+  return PRICE_MODES.find((mode) => mode === value) ?? null;
+}
+
+function readPriceCookie(): PriceMode | null {
+  return parsePriceMode(readCookieValue(PRICE_SOURCE_COOKIE));
 }
 
 function SettingsSection({ title, accentClass, children }: { title: string; accentClass: string; children: ReactNode }) {
@@ -1552,6 +1592,13 @@ function MaterialTreeFlat({
 
 
 // ── component ──
+function firstRecipeStep(recipe: Recipe): { low: number; high: number } {
+  const start = Math.max(1, getEffectiveMinSkill(recipe));
+  const gray = recipe.difficulty.gray ?? start + 1;
+  const high = Math.min(gray, start + 1);
+  return { low: start, high: high > start ? high : start + 1 };
+}
+
 export default function ProfessionPlanner() {
   const router = useRouter();
   const params = useParams();
@@ -1642,7 +1689,7 @@ export default function ProfessionPlanner() {
   const [craftReagents, setCraftReagents] = useState(false);
   const [extraProfessions, setExtraProfessions] = useState<string[]>([]);
   const optimizeSubCrafting = craftReagents;
-  const [priceSourcing, setPriceSourcing] = useState<'cost' | 'cost-vendor' | 'disenchant' | 'auction-house'>('cost');
+  const [priceSourcing, setPriceSourcing] = useState<PriceMode>(() => parsePriceMode(searchParams.get('price')) ?? 'cost');
   const [showAuctionHouseDisclaimer, setShowAuctionHouseDisclaimer] = useState(false);
   const [auctionHouseDisclaimerAcked, setAuctionHouseDisclaimerAcked] = useState(false);
 
@@ -1654,6 +1701,7 @@ export default function ProfessionPlanner() {
 
   const handleAuctionHouseClick = useCallback(() => {
     if (auctionHouseDisclaimerAcked) {
+      recentUserChangeTimestampRef.current = Date.now();
       setPriceSourcing('auction-house');
     } else {
       setShowAuctionHouseDisclaimer(true);
@@ -1666,6 +1714,7 @@ export default function ProfessionPlanner() {
     }
     setAuctionHouseDisclaimerAcked(true);
     setShowAuctionHouseDisclaimer(false);
+    recentUserChangeTimestampRef.current = Date.now();
     setPriceSourcing('auction-house');
   }, []);
 
@@ -1698,6 +1747,22 @@ export default function ProfessionPlanner() {
     setHideBopRecipeItems(readHideBopRecipes());
     setWorkingOvertime(readWorkingOvertime());
     setSuccessMarginPercent(readSuccessMarginPercent());
+  }, []);
+
+  useEffect(() => {
+    const version = parsePlannerVersion(urlVersion) ?? 'Forever';
+    if (!urlRealm) {
+      const savedRealm = readRealmCookie(version);
+      if (savedRealm) setSelectedRealm(savedRealm);
+    }
+    if (!urlFaction) {
+      const savedFaction = readFactionCookie();
+      if (savedFaction) setSelectedFaction(savedFaction);
+    }
+    if (!searchParams.get('price')) {
+      const savedPrice = readPriceCookie();
+      if (savedPrice) setPriceSourcing(savedPrice);
+    }
   }, []);
 
   const updateHideBopRecipes = useCallback((hide: boolean) => {
@@ -1895,13 +1960,14 @@ export default function ProfessionPlanner() {
     if (urlFaction) {
       const normalizedFaction = factions.find(f => f.toLowerCase() === urlFaction.toLowerCase());
       if (normalizedFaction) {
+        writeCookieValue(FACTION_COOKIE, normalizedFaction);
         setSelectedFaction(normalizedFaction);
       }
     }
   }, [urlFaction]);
 
   // Helper function to build URL with all parameters
-  const buildUrlWithParams = (profession: string, skill: number, target: number, version: string, realm: string, faction: string) => {
+  const buildUrlWithParams = (profession: string, skill: number, target: number, version: string, realm: string, faction: string, price: PriceMode = priceSourcing) => {
     const params = new URLSearchParams();
     if (skill > 1) params.set('skill', skill.toString());
     const maxSkillForVersion = getMaxSkill(version);
@@ -1911,21 +1977,23 @@ export default function ProfessionPlanner() {
     params.set('realm', realm);
     // Always include faction parameter
     params.set('faction', faction);
+    params.set('price', price);
     
     const queryString = params.toString();
     return `/${profession.toLowerCase()}${queryString ? `?${queryString}` : ''}`;
   };
 
   // Update URL when any selector changes
-  const updateUrl = useCallback((overrides?: { realm?: string; faction?: string; version?: string; skill?: number; target?: number }) => {
+  const updateUrl = useCallback((overrides?: { realm?: string; faction?: string; version?: string; skill?: number; target?: number; price?: PriceMode }) => {
     const realm = overrides?.realm ?? selectedRealm;
     const faction = overrides?.faction ?? selectedFaction;
     const version = overrides?.version ?? selectedVersion;
     const skill = overrides?.skill ?? committedSkill;
     const target = overrides?.target ?? committedTarget;
-    const newUrl = buildUrlWithParams(selectedProfession, skill, target, version, realm, faction);
+    const price = overrides?.price ?? priceSourcing;
+    const newUrl = buildUrlWithParams(selectedProfession, skill, target, version, realm, faction, price);
     router.push(newUrl, { scroll: false });
-  }, [selectedProfession, committedSkill, committedTarget, selectedRealm, selectedFaction, selectedVersion, router]);
+  }, [selectedProfession, committedSkill, committedTarget, selectedRealm, selectedFaction, selectedVersion, priceSourcing, router]);
   
   // Track recent user-initiated changes to prevent URL effects from overwriting them
   // We track the timestamp of any recent change, not the specific value
@@ -2035,7 +2103,10 @@ export default function ProfessionPlanner() {
     const nextRealms = realmsForVersion(newVersion);
     const nextRealm = nextRealms.includes(selectedRealm) ? selectedRealm : defaultRealmForVersion(newVersion);
     setSelectedVersion(newVersion);
-    if (nextRealm !== selectedRealm) setSelectedRealm(nextRealm);
+    if (nextRealm !== selectedRealm) {
+      setSelectedRealm(nextRealm);
+      writeCookieValue(REALM_COOKIE, nextRealm);
+    }
   };
 
   // Handle realm change and update URL
@@ -2043,6 +2114,7 @@ export default function ProfessionPlanner() {
     // Track timestamp of user-initiated change
     recentUserChangeTimestampRef.current = Date.now();
     setSelectedRealm(newRealm);
+    writeCookieValue(REALM_COOKIE, newRealm);
     updateUrl({ realm: newRealm });
   };
 
@@ -2051,6 +2123,7 @@ export default function ProfessionPlanner() {
     // Track timestamp of user-initiated change
     recentUserChangeTimestampRef.current = Date.now();
     setSelectedFaction(newFaction);
+    writeCookieValue(FACTION_COOKIE, newFaction);
     updateUrl({ faction: newFaction });
   };
 
@@ -2431,8 +2504,9 @@ export default function ProfessionPlanner() {
 
   useEffect(() => {
     if (selected && view === 'all') {
-      setRngLow(getEffectiveMinSkill(selected));
-      setRngHigh(selected.difficulty.gray!);
+      const step = firstRecipeStep(selected);
+      setRngLow(step.low);
+      setRngHigh(step.high);
     }
   }, [selected, view]);
 
@@ -2786,13 +2860,14 @@ const renderXTick = selected
   useEffect(() => {
     if (urlRealm) {
       const normalizedRealm = realmFromUrl(selectedVersion, urlRealm);
-      if (normalizedRealm && normalizedRealm !== selectedRealm) {
+      if (normalizedRealm) {
         // Only update if there hasn't been a recent user-initiated change
         const timeSinceLastUserChange = Date.now() - recentUserChangeTimestampRef.current;
         const isRecentUserChange = timeSinceLastUserChange < 1000; // 1 second window
         
         if (!isRecentUserChange) {
-          setSelectedRealm(normalizedRealm);
+          writeCookieValue(REALM_COOKIE, normalizedRealm);
+          if (normalizedRealm !== selectedRealm) setSelectedRealm(normalizedRealm);
         }
       }
     }
@@ -2808,11 +2883,36 @@ const renderXTick = selected
         const isRecentUserChange = timeSinceLastUserChange < 1000; // 1 second window
         
         if (!isRecentUserChange) {
+          writeCookieValue(FACTION_COOKIE, normalizedFaction);
           setSelectedFaction(normalizedFaction);
         }
       }
     }
   }, [urlFaction, selectedFaction, factions]);
+
+  const urlPrice = searchParams.get('price');
+  const priceChangeReady = useRef(false);
+  useEffect(() => {
+    const fromUrl = parsePriceMode(urlPrice);
+    if (fromUrl) {
+      const recent = Date.now() - recentUserChangeTimestampRef.current < 1000;
+      if (!recent) {
+        writeCookieValue(PRICE_SOURCE_COOKIE, fromUrl);
+        if (fromUrl !== priceSourcing) setPriceSourcing(fromUrl);
+      }
+    }
+  }, [urlPrice, priceSourcing]);
+
+  useEffect(() => {
+    if (!priceChangeReady.current) {
+      priceChangeReady.current = true;
+      return;
+    }
+    writeCookieValue(PRICE_SOURCE_COOKIE, priceSourcing);
+    if (urlPrice === priceSourcing) return;
+    const recent = Date.now() - recentUserChangeTimestampRef.current < 1000;
+    if (recent) updateUrl({ price: priceSourcing });
+  }, [priceSourcing]);
 
   // Load prices when realm or faction changes
   useEffect(() => {
@@ -3233,7 +3333,7 @@ const renderXTick = selected
       const items = outcomes.flatMap((outcome) => {
         const expected = outcome.chance * ((outcome.minQty + outcome.maxQty) / 2) * outputQty;
         if (!Number.isFinite(expected) || expected <= 0) return [];
-        const unit = outputPrice(outcome.itemId);
+        const unit = disenchantMaterialValue(outcome.itemId, prices, useMarketValue);
         return [{
           id: outcome.itemId,
           name: materialInfo[outcome.itemId]?.name || `Item ${outcome.itemId}`,
@@ -3738,7 +3838,10 @@ const renderXTick = selected
                 priceMode={priceSourcing}
                 onPriceMode={(mode) => {
                   if (mode === 'auction-house') handleAuctionHouseClick();
-                  else setPriceSourcing(mode);
+                  else {
+                    recentUserChangeTimestampRef.current = Date.now();
+                    setPriceSourcing(mode);
+                  }
                 }}
                 minSaleRatePercent={minSaleRatePercent}
                 view={view}
@@ -4182,7 +4285,7 @@ const renderXTick = selected
               </div>
               <div className="flex gap-0.5 desktop-layout:gap-1 flex-wrap">
                 <button
-                  onClick={() => setPriceSourcing('cost')}
+                  onClick={() => { recentUserChangeTimestampRef.current = Date.now(); setPriceSourcing('cost'); }}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost'
                       ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
@@ -4198,7 +4301,7 @@ const renderXTick = selected
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('cost-vendor')}
+                  onClick={() => { recentUserChangeTimestampRef.current = Date.now(); setPriceSourcing('cost-vendor'); }}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'cost-vendor'
                       ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
@@ -4214,7 +4317,7 @@ const renderXTick = selected
                   </div>
                 </button>
                 <button
-                  onClick={() => setPriceSourcing('disenchant')}
+                  onClick={() => { recentUserChangeTimestampRef.current = Date.now(); setPriceSourcing('disenchant'); }}
                   className={`px-1 py-0.5 desktop-layout:px-2 desktop-layout:py-1 text-[10px] desktop-layout:text-xs rounded transition-all duration-200 border relative group flex-1 min-w-0 ${
                     priceSourcing === 'disenchant'
                       ? `${versionSelectedClass(selectedVersion)} text-neutral-900 font-semibold shadow-sm`
@@ -4612,9 +4715,10 @@ const renderXTick = selected
                           <div
                             key={r.id}
                             onClick={() => {
+                              const step = firstRecipeStep(r);
                               setSelectedRecipeId(r.id);
-                              setRngLow(getEffectiveMinSkill(r));
-                              setRngHigh(r.difficulty.gray!);
+                              setRngLow(step.low);
+                              setRngHigh(step.high);
                               setSidebarOpen(false);
                             }}
                             id={`recipe-${r.id}`}
@@ -5280,9 +5384,7 @@ const renderXTick = selected
                             {outcomes.map((o, idx) => {
                               const avgQty = (o.minQty + o.maxQty) / 2;
                               const expectedQty = o.chance * avgQty * totalOutput;
-                              const price = useMarketValue
-                                ? (prices[o.itemId]?.marketValue ?? prices[o.itemId]?.minBuyout ?? 0)
-                                : (prices[o.itemId]?.minBuyout ?? prices[o.itemId]?.marketValue ?? 0);
+                              const price = disenchantMaterialValue(o.itemId, prices, useMarketValue);
                               const value = expectedQty * price;
                               const matName = materialInfo[o.itemId]?.name ?? `Item #${o.itemId}`;
                               const matQuality = materialInfo[o.itemId]?.quality ?? 1;
