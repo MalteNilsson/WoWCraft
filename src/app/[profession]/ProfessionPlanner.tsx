@@ -31,7 +31,7 @@ import foreverTailoring from '@/data/recipes/forever/tailoring.json';
 import foreverSodSpellIds from '@/data/sod/forever-excluded-spell-ids.json';
 import type { Recipe, MaterialInfo, MaterialTreeNode, PriceMap } from '@/lib/types';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceArea, ReferenceLine, Customized  } from "recharts";
-import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isTransmuteRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, skillUpChanceFloor, type SkillGapReason } from '@/lib/planner';
+import { makeDynamicPlan, makeSegmentedPlan, blacklistedSpellIds, isSkillCooldownRecipe, isTransmuteRecipe, isSeasonalRecipe, MaterialRequirement, isBelowMinSaleRate, skillUpChanceFloor, type SkillGapReason, type RecipePreference } from '@/lib/planner';
 import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList, type GuideStep, type ShoppingListItem } from '@/lib/shoppingList';
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
@@ -81,15 +81,18 @@ const SUCCESS_MARGIN_COOKIE = 'wowcraft-success-margin';
 const REALM_COOKIE = 'wowcraft-realm';
 const FACTION_COOKIE = 'wowcraft-faction';
 const PRICE_SOURCE_COOKIE = 'wowcraft-price-sourcing';
+const RECIPE_PREFERENCE_COOKIE = 'wowcraft-recipe-preference';
+const RECIPE_PREFERENCE_MS = 60 * 60 * 1000;
 const PRICE_MODES = ['cost', 'cost-vendor', 'disenchant', 'auction-house'] as const;
 type PriceMode = (typeof PRICE_MODES)[number];
 const DEFAULT_MIN_SALE_RATE_PERCENT = 10;
 const DEFAULT_MIN_SKILL_CHANCE_PERCENT = 10;
 
 function readHideBopRecipes(): boolean {
-  if (typeof document === 'undefined') return false;
+  if (typeof document === 'undefined') return true;
   const match = document.cookie.match(new RegExp(`(?:^|; )${HIDE_BOP_RECIPES_COOKIE}=([^;]*)`));
-  return match?.[1] === '1';
+  if (!match) return true;
+  return match[1] === '1';
 }
 
 function writeHideBopRecipes(hide: boolean) {
@@ -178,6 +181,35 @@ function readCookieValue(name: string): string | null {
 
 function writeCookieValue(name: string, value: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
+type StoredRecipePreference = RecipePreference & { profession: string; version: string };
+
+function readRecipePreferences(): { savedAt: number; pairs: StoredRecipePreference[] } {
+  const empty = { savedAt: 0, pairs: [] as StoredRecipePreference[] };
+  const raw = readCookieValue(RECIPE_PREFERENCE_COOKIE);
+  if (!raw) return empty;
+  try {
+    const parsed = JSON.parse(raw) as { savedAt?: number; pairs?: StoredRecipePreference[] };
+    if (typeof parsed.savedAt !== 'number' || !Array.isArray(parsed.pairs)) return empty;
+    if (Date.now() - parsed.savedAt >= RECIPE_PREFERENCE_MS) return empty;
+    const pairs = parsed.pairs.filter((pair) =>
+      pair &&
+      typeof pair.profession === 'string' &&
+      typeof pair.version === 'string' &&
+      Number.isInteger(pair.prefer) &&
+      Number.isInteger(pair.over) &&
+      pair.prefer !== pair.over
+    );
+    return { savedAt: parsed.savedAt, pairs };
+  } catch {
+    return empty;
+  }
+}
+
+function writeRecipePreferences(savedAt: number, pairs: StoredRecipePreference[]) {
+  const maxAge = Math.max(1, Math.ceil(RECIPE_PREFERENCE_MS / 1000));
+  document.cookie = `${RECIPE_PREFERENCE_COOKIE}=${encodeURIComponent(JSON.stringify({ savedAt, pairs }))}; Path=/; Max-Age=${maxAge}; SameSite=Lax`;
 }
 
 function readRealmCookie(version: string): string | null {
@@ -1637,6 +1669,7 @@ export default function ProfessionPlanner() {
   const guideLimitGenRef = useRef(0);
   const [view, setView] = useState<'route'|'all'>('route');
   const [saleRateTip, setSaleRateTip] = useState<{ top: number; left: number; text: string } | null>(null);
+  const [swapTip, setSwapTip] = useState<{ top: number; left: number; text: string } | null>(null);
   const [recipeSort, setRecipeSort] = useState<{ key: 'name' | 'profit' | 'skill'; dir: 'asc' | 'desc' }>({ key: 'skill', dir: 'asc' });
   // Proof of concept. Classic layout is the previous header; compact is the tighter one.
   const [compactHeader, setCompactHeader] = useState(true);
@@ -1739,7 +1772,9 @@ export default function ProfessionPlanner() {
   const [isDirectChange, setIsDirectChange] = useState(false);
   const [includeRecipeCost, setIncludeRecipeCost] = useState(true);
   const [includeCurrencyRecipes, setIncludeCurrencyRecipes] = useState(false);
-  const [hideBopRecipeItems, setHideBopRecipeItems] = useState(false);
+  const [hideBopRecipeItems, setHideBopRecipeItems] = useState(true);
+  const [recipePreferences, setRecipePreferences] = useState<StoredRecipePreference[]>([]);
+  const preferenceExpiryRef = useRef<number | null>(null);
   const [workingOvertime, setWorkingOvertime] = useState(0);
   const skipLimitedStock = true; // Always skip limited-stock BoP recipes
   const [minSaleRatePercent, setMinSaleRatePercent] = useState(DEFAULT_MIN_SALE_RATE_PERCENT);
@@ -1762,6 +1797,15 @@ export default function ProfessionPlanner() {
     setHideBopRecipeItems(readHideBopRecipes());
     setWorkingOvertime(readWorkingOvertime());
     setSuccessMarginPercent(readSuccessMarginPercent());
+    const storedPreferences = readRecipePreferences();
+    setRecipePreferences(storedPreferences.pairs);
+    if (storedPreferences.pairs.length > 0) {
+      const remaining = storedPreferences.savedAt + RECIPE_PREFERENCE_MS - Date.now();
+      preferenceExpiryRef.current = window.setTimeout(() => setRecipePreferences([]), Math.max(0, remaining));
+    }
+    return () => {
+      if (preferenceExpiryRef.current != null) window.clearTimeout(preferenceExpiryRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -1784,6 +1828,27 @@ export default function ProfessionPlanner() {
     setHideBopRecipeItems(hide);
     writeHideBopRecipes(hide);
   }, []);
+
+  const preferencesFor = useCallback((profession: string) => {
+    return recipePreferences
+      .filter((pair) => pair.profession === profession && pair.version === selectedVersion)
+      .map(({ prefer, over }) => ({ prefer, over }));
+  }, [recipePreferences, selectedVersion]);
+
+  const swapInRecipe = useCallback((prefer: number, over: number) => {
+    if (prefer === over) return;
+    const next = recipePreferences.filter((pair) => !(
+      pair.profession === selectedProfession &&
+      pair.version === selectedVersion &&
+      (pair.over === over || (pair.prefer === over && pair.over === prefer))
+    ));
+    next.push({ profession: selectedProfession, version: selectedVersion, prefer, over });
+    const savedAt = Date.now();
+    writeRecipePreferences(savedAt, next);
+    setRecipePreferences(next);
+    if (preferenceExpiryRef.current != null) window.clearTimeout(preferenceExpiryRef.current);
+    preferenceExpiryRef.current = window.setTimeout(() => setRecipePreferences([]), RECIPE_PREFERENCE_MS);
+  }, [recipePreferences, selectedProfession, selectedVersion]);
 
   const updateWorkingOvertime = useCallback((rank: number) => {
     const next = Math.min(5, Math.max(0, Math.round(rank)));
@@ -2376,14 +2441,15 @@ export default function ProfessionPlanner() {
       minSaleRate,
       hideBopRecipeItems,
       workingOvertimeRank,
-      minSkillUpChance
+      minSkillUpChance,
+      preferencesFor(activeProfession)
     );
     
     // Update preserved plan ref for next transition
     preservedPlanRef.current = newPlan;
     
     return newPlan;
-  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance, isLoadingPrices]);
+  }, [committedSkill, committedTarget, recipes, prices, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance, isLoadingPrices, preferencesFor]);
 
   const fuse = useMemo(
     () => new Fuse(recipes, { keys: ['name'], threshold: 0.3 }),
@@ -2796,7 +2862,8 @@ const renderXTick = selected
       minSaleRate,
       hideBopRecipeItems,
       workingOvertimeRank,
-      minSkillUpChance
+      minSkillUpChance,
+      preferencesFor(pendingProfession)
     );
     
     // Update preserved plan ref with the new plan BEFORE updating state
@@ -2833,7 +2900,7 @@ const renderXTick = selected
     // The plan useMemo will use preservedPlanRef.current (which we just set) when it recalculates
     pendingProfessionRef.current = null;
     setPendingProfessionCounter(0);
-  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate, minSkillUpChance]);
+  }, [isLoadingPrices, prices, committedSkill, committedTarget, selectedVersion, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, minSaleRate, minSkillUpChance, preferencesFor]);
 
   // Update preserved recipe ref when selectedRecipeId changes (for normal operation)
   useEffect(() => {
@@ -3083,7 +3150,7 @@ const renderXTick = selected
       const end = s.endSkill;
       const best = s.recipe;
       
-      const candidates = recipes
+      const ranked = recipes
         .filter(r =>
           getEffectiveMinSkill(r) <= start &&
           (r.difficulty.gray ?? Infinity) >= end &&
@@ -3122,12 +3189,17 @@ const renderXTick = selected
             cpu: ((baseCost * expectedCrafts) + recipeCost) / (end - start),
           };
         })
-        .sort((a, b) => a.cpu - b.cpu)
-        .slice(0, 2);
+        .sort((a, b) => a.cpu - b.cpu);
+      const replacedId = preferencesFor(selectedProfession)
+        .filter((pair) => pair.prefer === best.id)
+        .at(-1)?.over;
+      const replaced = replacedId == null ? undefined : ranked.find((candidate) => candidate.recipe.id === replacedId);
+      const rest = ranked.filter((candidate) => candidate.recipe.id !== replaced?.recipe.id);
+      const candidates = (replaced ? [replaced, ...rest] : rest).slice(0, 2);
       
       return { step: s, candidates, start, end, best };
     });
-  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate, minSkillUpChance, successMarginPercent]);
+  }, [plan.steps, committedSkill, recipes, prices, materialInfo, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, blacklistedSpellIds, useMarketValue, currentProfessionRecipeIds, optimizeSubCrafting, priceSourcing, selectedProfession, regionSaleRate, minSaleRate, minSkillUpChance, successMarginPercent, preferencesFor]);
 
   // Calculate materials and total cost based on displayed craft counts (using start/end ranges)
   // instead of planner's batch-based craft counts
@@ -3236,7 +3308,8 @@ const renderXTick = selected
         minSaleRate,
         hideBopRecipeItems,
         workingOvertimeRank,
-        minSkillUpChance
+        minSkillUpChance,
+        preferencesFor(activeProfession)
       );
       return planned.steps.some((step) => 'recipe' in step) && planned.finalSkill >= target && Number.isFinite(planned.totalCost);
     };
@@ -3263,7 +3336,7 @@ const renderXTick = selected
     return () => {
       cancelled = true;
     };
-  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance]);
+  }, [pricesReady, prices, recipes, materialInfo, committedSkill, maxSkill, selectedProfession, includeRecipeCost, includeCurrencyRecipes, hideBopRecipeItems, workingOvertimeRank, selectedFaction, skipLimitedStock, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate, minSaleRate, minSkillUpChance, preferencesFor]);
 
   // Open a profession at 1 → the furthest skill that still has a priced guide.
   useEffect(() => {
@@ -4469,7 +4542,7 @@ const renderXTick = selected
           <div className="flex-1 flex flex-col min-h-0">
             <section 
               ref={scrollRef}
-              onScroll={() => { if (saleRateTip) setSaleRateTip(null); }}
+              onScroll={() => { if (saleRateTip) setSaleRateTip(null); if (swapTip) setSwapTip(null); }}
               className={`flex-1 overflow-y-scroll ${view === 'route' ? 'pb-[55px]' : 'pb-8'}
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
@@ -4671,8 +4744,32 @@ const renderXTick = selected
                                       }}
                                     >
                                     {candidates.map((alt: { recipe: Recipe; crafts: number; cost: number }, index) => (
+                                      <div key={`alt-${alt.recipe.name}-${end}-${committedSkill}`} className="flex w-full items-stretch">
+                                      <button
+                                        type="button"
+                                        aria-label={`Swap in ${alt.recipe.name}`}
+                                        className="flex w-1/12 shrink-0 items-center justify-center text-neutral-400 transition-colors hover:bg-white/5 hover:text-white"
+                                        onClick={(event) => {
+                                          event.stopPropagation();
+                                          setSwapTip(null);
+                                          swapInRecipe(alt.recipe.id, best.id);
+                                        }}
+                                        onMouseEnter={(event) => {
+                                          const rect = event.currentTarget.getBoundingClientRect();
+                                          setSwapTip({
+                                            text: `Use ${alt.recipe.name} instead of ${best.name}.`,
+                                            top: rect.top + rect.height / 2,
+                                            left: Math.min(rect.right + 8, window.innerWidth - 248),
+                                          });
+                                        }}
+                                        onMouseLeave={() => setSwapTip(null)}
+                                      >
+                                        <svg className="h-5 w-5 desktop-layout:h-6 desktop-layout:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                                          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-2.64-6.36" />
+                                          <path strokeLinecap="round" strokeLinejoin="round" d="M21 3v6h-6" />
+                                        </svg>
+                                      </button>
                                       <motion.div
-                                        key={`alt-${alt.recipe.name}-${end}-${committedSkill}`}
                                         initial={shouldAnimate(best.name, end) ? { opacity: 0, y: -5 } : { opacity: 1, y: 0 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -5 }}
@@ -4681,7 +4778,7 @@ const renderXTick = selected
                                           ease: "easeOut"
                                         }}
                                         onClick={() => handleCardClick(alt.recipe.name, end, start, end, true, alt.recipe.id)}
-                                        className={`relative flex items-center gap-1 rounded-none border-b border-white/[0.04] pl-2 pr-2 py-0.5 w-11/12 ml-auto cursor-pointer min-h-[43px] desktop-layout:min-h-[60px] 
+                                        className={`relative flex min-w-0 flex-1 items-center gap-1 rounded-none border-b border-white/[0.04] pl-2 pr-2 py-0.5 cursor-pointer min-h-[43px] desktop-layout:min-h-[60px] 
                                           transition-colors duration-100 ease-out will-change-transform active:scale-[0.99]
                                           ${isSelected(alt.recipe.name, end)
                                             ? 'bg-neutral-600 hover:bg-neutral-600 active:bg-neutral-500'
@@ -4715,6 +4812,7 @@ const renderXTick = selected
                                           <CostBox copper={alt.cost} className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
                                         </span>
                                       </motion.div>
+                                      </div>
                                     ))}
                                     </motion.div>
                                   </motion.div>
@@ -4724,6 +4822,16 @@ const renderXTick = selected
                             </motion.div>
                           );
                         })}
+                        {swapTip && typeof document !== 'undefined' && createPortal(
+                          <div
+                            role="tooltip"
+                            className="pointer-events-none fixed z-[100] w-60 -translate-y-1/2 rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-left text-xs font-normal leading-relaxed text-neutral-200 shadow-lg"
+                            style={{ top: swapTip.top, left: swapTip.left }}
+                          >
+                            {swapTip.text}
+                          </div>,
+                          document.body
+                        )}
                       </div>
                     ) : (
                       <div className="flex flex-col">

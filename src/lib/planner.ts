@@ -29,6 +29,29 @@ export function isBelowMinSaleRate(saleRate: number | undefined, minimum = MIN_S
   return saleRate !== undefined && saleRate < minimum;
 }
 
+/** A recipe the user chose in place of another. Applied only while both are valid. */
+export type RecipePreference = { prefer: number; over: number };
+
+function preferRecipeChoice<T extends { recipe: Recipe }>(
+    selected: T,
+    options: readonly { recipe: Recipe }[],
+    preferences: RecipePreference[] | undefined,
+): T {
+    if (!preferences?.length) return selected;
+    const byId = new Map(options.map((option) => [option.recipe.id, option]));
+    const seen = new Set<number>();
+    let current: T = selected;
+    while (!seen.has(current.recipe.id)) {
+        seen.add(current.recipe.id);
+        const nextId = preferences.find((preference) => preference.over === current.recipe.id && byId.has(preference.prefer))?.prefer;
+        if (nextId == null) break;
+        const next = byId.get(nextId);
+        if (!next) break;
+        current = next as T;
+    }
+    return current;
+}
+
 /** Campfires share a cooldown, so they cannot be repeated to gain skill. */
 export function isSkillCooldownRecipe(recipe: Recipe): boolean {
   return /\bcampfire\b/i.test(recipe.name);
@@ -241,7 +264,8 @@ export function makeDynamicPlan(
     minSaleRate: number = MIN_SALE_RATE_AH_MODE,
     hideBopRecipeItems: boolean = false,
     workingOvertime: number = 0,
-    minSkillUpChance: number = 0
+    minSkillUpChance: number = 0,
+    preferredRecipes?: RecipePreference[]
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     // Build recipe produces map (static data)
     const recipeProduces = buildRecipeProducesMap(materialInfo);
@@ -505,7 +529,7 @@ export function makeDynamicPlan(
 
         // PHASE 2: Check if we should switch to an alternative based on total cost
         // This happens when the current recipe is ending or better alternatives exist
-        const selectedRecipe = selectedRecipeData.recipe;
+        let selectedRecipe = selectedRecipeData.recipe;
         const selectedGray = selectedRecipe.difficulty.gray ?? Infinity;
         
         // Check if recipe is becoming suboptimal
@@ -563,6 +587,8 @@ export function makeDynamicPlan(
                 selectedRecipeData = cheapestAlternative;
             }
         }
+        selectedRecipeData = preferRecipeChoice(selectedRecipeData, recipeCosts, preferredRecipes);
+        selectedRecipe = selectedRecipeData.recipe;
         const chance = expectedSkillUps(selectedRecipe, currentSkill - 1, workingOvertime);
             const crafts = Math.ceil(1 / chance);
         const materialCostPerCraft = craftCost(selectedRecipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession);
@@ -847,6 +873,8 @@ export function makeDynamicPlan(
                     selectedRecipe = selectedRecipeData.recipe;
                 }
             }
+            selectedRecipeData = preferRecipeChoice(selectedRecipeData, recipeCosts, preferredRecipes);
+            selectedRecipe = selectedRecipeData.recipe;
 
             // Check if a rod or engineering tool falls within this batch (AFTER selecting the optimal recipe)
             let rod: Recipe | undefined;
@@ -1292,7 +1320,8 @@ export function makeSegmentedPlan(
     minSaleRate: number = MIN_SALE_RATE_AH_MODE,
     hideBopRecipeItems: boolean = false,
     workingOvertime: number = 0,
-    minSkillUpChance: number = 0
+    minSkillUpChance: number = 0,
+    preferredRecipes?: RecipePreference[]
 ): { steps: PlanStep[]; totalCost: number; finalSkill: number } {
     const args: PlanArgs = {
         recipes, prices, materialInfo, profession, includeRecipeCost, skipLimitedStock,
@@ -1325,7 +1354,8 @@ export function makeSegmentedPlan(
             run.start, run.end, recipes, prices, materialInfo, profession,
             includeRecipeCost, skipLimitedStock, useMarketValue, recalculateForEachLevel,
             optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, regionSaleRate,
-            includeCurrencyRecipes, faction, minSaleRate, hideBopRecipeItems, workingOvertime, minSkillUpChance
+            includeCurrencyRecipes, faction, minSaleRate, hideBopRecipeItems, workingOvertime, minSkillUpChance,
+            preferredRecipes
         );
         const connected = planned.finalSkill >= run.end && planned.steps.some((step) => 'recipe' in step);
         if (connected) {
