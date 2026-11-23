@@ -1592,6 +1592,20 @@ function MaterialTreeFlat({
 
 
 // ── component ──
+function lowSaleRateLabel(
+  recipe: Recipe,
+  priceSourcing: string,
+  regionSaleRate: Map<number, number> | null,
+  minSaleRate: number,
+  minSaleRatePercent: number,
+): string | null {
+  if (priceSourcing !== 'auction-house' || !regionSaleRate || !recipe.produces?.id) return null;
+  const rate = regionSaleRate.get(recipe.produces.id);
+  if (!isBelowMinSaleRate(rate, minSaleRate)) return null;
+  const shown = Math.round((rate ?? 0) * 100);
+  return `Sale rate ${shown}% is below the ${minSaleRatePercent}% minimum, so Auction House mode skips this recipe.`;
+}
+
 function firstRecipeStep(recipe: Recipe): { low: number; high: number } {
   const start = Math.max(1, getEffectiveMinSkill(recipe));
   const gray = recipe.difficulty.gray ?? start + 1;
@@ -1622,6 +1636,7 @@ export default function ProfessionPlanner() {
   const guideSearchGenRef = useRef(0);
   const guideLimitGenRef = useRef(0);
   const [view, setView] = useState<'route'|'all'>('route');
+  const [saleRateTip, setSaleRateTip] = useState<{ top: number; left: number; text: string } | null>(null);
   const [recipeSort, setRecipeSort] = useState<{ key: 'name' | 'profit' | 'skill'; dir: 'asc' | 'desc' }>({ key: 'skill', dir: 'asc' });
   // Proof of concept. Classic layout is the previous header; compact is the tighter one.
   const [compactHeader, setCompactHeader] = useState(true);
@@ -4454,6 +4469,7 @@ const renderXTick = selected
           <div className="flex-1 flex flex-col min-h-0">
             <section 
               ref={scrollRef}
+              onScroll={() => { if (saleRateTip) setSaleRateTip(null); }}
               className={`flex-1 overflow-y-scroll ${view === 'route' ? 'pb-[55px]' : 'pb-8'}
                 [&::-webkit-scrollbar]:w-2
                 [&::-webkit-scrollbar-track]:bg-transparent
@@ -4711,7 +4727,9 @@ const renderXTick = selected
                       </div>
                     ) : (
                       <div className="flex flex-col">
-                        {filteredRecipes.map((r) => (
+                        {filteredRecipes.map((r) => {
+                          const saleRateReason = lowSaleRateLabel(r, priceSourcing, regionSaleRate, minSaleRate, minSaleRatePercent);
+                          return (
                           <div
                             key={r.id}
                             onClick={() => {
@@ -4721,8 +4739,20 @@ const renderXTick = selected
                               setRngHigh(step.high);
                               setSidebarOpen(false);
                             }}
+                            onMouseEnter={(event) => {
+                              if (!saleRateReason) return;
+                              const rect = event.currentTarget.getBoundingClientRect();
+                              const width = 240;
+                              setSaleRateTip({
+                                text: saleRateReason,
+                                top: rect.top + rect.height / 2,
+                                left: Math.min(rect.right + 8, window.innerWidth - width - 8),
+                              });
+                            }}
+                            onMouseLeave={() => setSaleRateTip(null)}
                             id={`recipe-${r.id}`}
                             className={`relative flex items-center gap-1 border-b border-white/[0.04] px-2 py-1 cursor-pointer transition-colors duration-100 ease-in-out active:scale-[0.99] min-h-[43px] desktop-layout:min-h-[60px]
+                              ${saleRateReason ? 'opacity-40 saturate-0' : ''}
                               ${selectedRecipeId === r.id
                                 ? 'bg-neutral-600 hover:bg-neutral-600 active:bg-neutral-500'
                                 : 'bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600'}`}
@@ -4755,7 +4785,18 @@ const renderXTick = selected
                               {getEffectiveMinSkill(r)}
                             </SkillBox>
                           </div>
-                        ))}
+                          );
+                        })}
+                        {saleRateTip && typeof document !== 'undefined' && createPortal(
+                          <div
+                            role="tooltip"
+                            className="pointer-events-none fixed z-[100] w-60 -translate-y-1/2 rounded-lg border border-white/10 bg-neutral-900 px-3 py-2 text-left text-xs font-normal leading-relaxed text-neutral-200 shadow-lg"
+                            style={{ top: saleRateTip.top, left: saleRateTip.left }}
+                          >
+                            {saleRateTip.text}
+                          </div>,
+                          document.body
+                        )}
                       </div>
                     )}
                   </div>
