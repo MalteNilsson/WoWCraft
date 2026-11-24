@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-24T22:15:47.590Z",
+  "timestamp": "2026-11-24T23:15:55.416Z",
   "totalRequests": 16,
   "successful": 16,
   "failed": 0,
@@ -17,7 +17,7 @@
       "faction": "Alliance",
       "success": true,
       "items": 7540,
-      "scannedAt": "2026-11-24T18:26:13Z"
+      "scannedAt": "2026-11-24T21:26:16Z"
     },
     {
       "realm": "Forever PvP US",
@@ -44,8 +44,8 @@
       "realm": "Forever RP US",
       "faction": "Alliance",
       "success": true,
-      "items": 6898,
-      "scannedAt": "2026-11-24T18:26:07Z"
+      "items": 6905,
+      "scannedAt": "2026-11-24T21:26:09Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -79,43 +79,43 @@
       "realm": "Forever PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 7562,
-      "scannedAt": "2026-11-24T18:23:23Z"
+      "items": 7565,
+      "scannedAt": "2026-11-24T21:24:04Z"
     },
     {
       "realm": "Forever PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7581,
-      "scannedAt": "2026-11-24T18:23:21Z"
+      "items": 7584,
+      "scannedAt": "2026-11-24T21:23:57Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
       "success": true,
-      "items": 5883,
-      "scannedAt": "2026-11-24T18:22:46Z"
+      "items": 5897,
+      "scannedAt": "2026-11-24T21:22:52Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6681,
-      "scannedAt": "2026-11-24T18:22:50Z"
+      "items": 6691,
+      "scannedAt": "2026-11-24T21:22:58Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 6182,
-      "scannedAt": "2026-11-24T18:22:48Z"
+      "items": 6205,
+      "scannedAt": "2026-11-24T21:22:55Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6489,
-      "scannedAt": "2026-11-24T18:22:48Z"
+      "items": 6508,
+      "scannedAt": "2026-11-24T21:22:54Z"
     }
   ]
 }
