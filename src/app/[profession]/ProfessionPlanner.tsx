@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useLayoutEffect, useRef, useCallback, type ReactNode } from 'react';
+import { Fragment, useState, useMemo, useEffect, useLayoutEffect, useRef, useCallback, type ReactNode } from 'react';
 import { AdSlot, AD_SLOT_SKYSCRAPER } from '@/components/AdSlot';
 import { createPortal } from 'react-dom';
 // Vanilla recipes
@@ -36,7 +36,7 @@ import { auctionatorListName, auctionatorShoppingList, copyText, tsmShoppingList
 import { getEffectiveMinSkill, isRecipeObtainable, isBopMobDropRecipe, isBopRecipeItem, isCurrencyRecipe, isWrongFactionRecipe, currencyCostLabel } from '@/lib/recipeCalc';
 import { getRegionIdForRealm, buildRegionSaleRateMap } from '@/lib/regionDataLoader';
 import { ENCHANTING_ROD_SPELL_IDS, ENCHANTING_ROD_PRODUCT_ITEM_IDS, ENGINEERING_TOOL_SPELL_IDS, ENGINEERING_TOOL_PRODUCT_ITEM_IDS } from '@/lib/rodConstants';
-import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, normalizeSuccessMargin, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase } from '@/lib/recipeCalc';
+import { expectedSkillUps, craftCost as calculateCraftCost, getItemCost, buildMaterialTree, expectedCraftsBetween, normalizeSuccessMargin, getRecipeCost, materialBuySource, materialUnitCost, purchasedLeaves, recipePurchase, type PriceSourcing } from '@/lib/recipeCalc';
 import { toPriceMap }      from '@/lib/pricing';
 import { Range, getTrackBackground } from 'react-range';
 import Fuse from 'fuse.js';
@@ -963,24 +963,33 @@ function MobDropCostHint() {
   );
 }
 
-function CompactMoney({ copper }: { copper: number }) {
+function chanceColor(chance: number): string {
+  const clamped = Math.min(1, Math.max(0, chance));
+  return `hsl(${Math.round(clamped * 120)} 72% 58%)`;
+}
+
+function CompactMoney({ copper, trim = false }: { copper: number; trim?: boolean }) {
+  void trim;
   const rounded = Math.round(Math.abs(copper));
   const gold = Math.floor(rounded / 10000);
   const silver = Math.floor((rounded % 10000) / 100);
   const copperCoins = rounded % 100;
-  if (gold === 0 && silver === 0) {
+  const showGold = gold > 0;
+  const showSilver = showGold || silver > 0;
+  const showCopper = true;
+  if (!showGold && !showSilver) {
     return <span className="text-orange-400">{copperCoins}c</span>;
   }
   return (
     <span className="inline-flex items-baseline gap-0.5">
-      {gold > 0 && <span className="text-yellow-400">{gold}g</span>}
-      <span className="text-gray-300">{gold > 0 ? String(silver).padStart(2, '0') : silver}s</span>
-      <span className="text-orange-400">{String(copperCoins).padStart(2, '0')}c</span>
+      {showGold && <span className="text-yellow-400">{gold}g</span>}
+      {showSilver && <span className="text-gray-300">{showGold ? String(silver).padStart(2, '0') : silver}s</span>}
+      {showCopper && <span className="text-orange-400">{showGold || showSilver ? String(copperCoins).padStart(2, '0') : copperCoins}c</span>}
     </span>
   );
 }
 
-function CostBox({ copper, className = '' }: { copper: number; className?: string }) {
+function CostBox({ copper, className = '', trim = false }: { copper: number; className?: string; trim?: boolean }) {
   if (!Number.isFinite(copper)) {
     return (
       <span className={`inline-flex items-center justify-center whitespace-nowrap rounded border border-red-400/25 bg-red-400/5 px-1.5 py-0.5 font-semibold text-red-300/80 ${className}`}>
@@ -999,8 +1008,257 @@ function CostBox({ copper, className = '' }: { copper: number; className?: strin
     <span className={`inline-flex items-center justify-center gap-1 whitespace-nowrap rounded border px-1.5 py-1 font-semibold leading-none ${tone} ${className}`}>
       {gain && <span className="text-emerald-300/70">+</span>}
       {spend && <span className="text-red-300/70">−</span>}
-      <CompactMoney copper={copper} />
+      <CompactMoney copper={copper} trim={trim} />
     </span>
+  );
+}
+
+function RecipePrice({
+  recipe,
+  prices,
+  materialInfo,
+  useMarketValue,
+  trim = false,
+}: {
+  recipe: Recipe;
+  prices: PriceMap;
+  materialInfo: Record<number, MaterialInfo>;
+  useMarketValue: boolean;
+  trim?: boolean;
+}) {
+  if (!recipe.source || recipe.source.type === 'free') return <CostBox copper={0} trim={trim} className="text-xs desktop-layout:text-sm" />;
+  if (recipe.source.type === 'trainer') return <CostBox copper={recipe.source.cost ?? 0} trim={trim} className="text-xs desktop-layout:text-sm" />;
+  if (recipe.source.type !== 'item' || !recipe.source.recipeItemId) return <CostBox copper={0} trim={trim} className="text-xs desktop-layout:text-sm" />;
+
+  const recipeInfo = materialInfo[recipe.source.recipeItemId];
+  const recipeCostData = getRecipeCost(recipe, prices, materialInfo, useMarketValue);
+  const currencyLabel = currencyCostLabel(recipe, materialInfo);
+  if (currencyLabel) return <span className="text-xs font-semibold desktop-layout:text-sm">{currencyLabel}</span>;
+  if (recipeInfo?.mobDrop && recipeInfo?.bop) return <MobDropCostHint />;
+  if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
+    return <span className="text-xs font-semibold text-red-400">Not available</span>;
+  }
+  if (recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
+    return <span className="text-xs font-semibold text-red-400">No price</span>;
+  }
+
+  const showVendor = recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice >= 0;
+  const showAuction = recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0;
+  return (
+    <span className="inline-flex flex-col items-end gap-1">
+      {showVendor && (
+        <span className="inline-flex items-center gap-1.5">
+          {showAuction && <span className="text-[10px] font-medium uppercase tracking-wide text-neutral-500">Vendor</span>}
+          {recipeInfo?.limitedStock && <span className="text-[10px] font-semibold text-yellow-400">Limited</span>}
+          <CostBox copper={recipeCostData.vendorPrice ?? 0} trim={trim} className="text-xs desktop-layout:text-sm" />
+        </span>
+      )}
+      {showAuction && (
+        <span className="inline-flex items-center gap-1.5">
+          {showVendor && <span className="text-[10px] font-medium uppercase tracking-wide text-neutral-500">Auction</span>}
+          <CostBox copper={recipeCostData.ahPrice ?? 0} trim={trim} className="text-xs desktop-layout:text-sm" />
+        </span>
+      )}
+    </span>
+  );
+}
+
+function CraftValuePanel({
+  recipe,
+  prices,
+  materialInfo,
+  useMarketValue,
+  optimizeSubCrafting,
+  currentProfessionRecipeIds,
+  priceSourcing,
+  profession,
+  includeRecipeCost,
+  expCrafts,
+  version,
+}: {
+  recipe: Recipe;
+  prices: PriceMap;
+  materialInfo: Record<number, MaterialInfo>;
+  useMarketValue: boolean;
+  optimizeSubCrafting: boolean;
+  currentProfessionRecipeIds?: Set<number>;
+  priceSourcing: PriceSourcing;
+  profession: string;
+  includeRecipeCost: boolean;
+  expCrafts: number;
+  version: string;
+}) {
+  const materialPerCraft = calculateCraftCost(recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', profession);
+  const materialRange = materialPerCraft * expCrafts;
+  const recipeCost = includeRecipeCost && recipe.source
+    ? calculateCraftCost(recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, profession)
+    : 0;
+  const rangeSpend = materialRange + (Number.isFinite(recipeCost) ? recipeCost : 0);
+
+  const output = recipe.produces;
+  const outputQty = output?.quantity ?? 1;
+  const outputInfo = output ? materialInfo[output.id] : undefined;
+  const sellPerItem = outputInfo?.sellPrice ?? 0;
+  const vendorPerCraft = output ? sellPerItem * outputQty : 0;
+  const auctionPrice = output
+    ? (useMarketValue
+      ? (prices[output.id]?.marketValue ?? prices[output.id]?.minBuyout ?? 0)
+      : (prices[output.id]?.minBuyout ?? prices[output.id]?.marketValue ?? 0))
+    : 0;
+  const auctionPerCraft = auctionPrice * outputQty;
+
+  let disenchantPerCraft = 0;
+  let disenchantOutcomes: ReturnType<typeof getDisenchantOutcomes> = [];
+  if (output) {
+    const disenchantItem = resolveDisenchantItem(output.id, materialInfo);
+    const quality = recipe.quality ?? outputInfo?.quality ?? 1;
+    const isWeapon = disenchantItem.itemClass === '2';
+    disenchantOutcomes = getDisenchantOutcomes(
+      disenchantItem.itemLevel,
+      quality,
+      isWeapon,
+      disenchantItem.itemClass,
+      disenchantItem.slot,
+      output.id,
+      materialInfo,
+    );
+    const perItem = getExpectedDisenchantValue(
+      disenchantItem.itemLevel,
+      quality,
+      isWeapon,
+      prices,
+      materialInfo,
+      useMarketValue,
+      disenchantItem.itemClass,
+      disenchantItem.slot,
+      output.id,
+    );
+    disenchantPerCraft = perItem * outputQty;
+  }
+
+  const money = (copper: number) => <CostBox copper={copper} trim className="text-xs desktop-layout:text-sm" />;
+  const ranked = output ? [
+    { key: 'vendor', label: 'Vendor', perCraft: vendorPerCraft },
+    { key: 'listing', label: useMarketValue ? '14-day average' : 'Auction listing', perCraft: auctionPerCraft },
+    ...(disenchantOutcomes.length > 0 ? [{ key: 'disenchant', label: 'Disenchant', perCraft: disenchantPerCraft }] : []),
+  ].sort((a, b) => b.perCraft - a.perCraft) : [];
+  const bestKey = ranked[0]?.key;
+
+  return (
+    <>
+      <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-4 py-4 desktop-layout:px-6 desktop-layout:py-5">
+        <h3 className="text-sm font-medium leading-6 tracking-tight text-white desktop-layout:text-lg">Cost and returns</h3>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[34rem] border-collapse text-xs desktop-layout:text-sm">
+          <thead>
+            <tr className="text-[10px] uppercase tracking-[0.14em] text-[#e3b056]">
+              <th className="px-4 py-2 text-left font-medium desktop-layout:px-6" />
+              <th className="px-3 py-2 text-right font-medium">One craft</th>
+              <th className="px-3 py-2 text-right font-medium">This range</th>
+              <th className="px-4 py-2 text-right font-medium desktop-layout:px-6">After costs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colSpan={4} className="bg-white/[0.03] px-4 py-1.5 text-left text-[10px] font-semibold uppercase tracking-[0.16em] text-[#e3b056] desktop-layout:px-6">Spent</th>
+            </tr>
+            <tr className="border-t border-white/[0.06]">
+              <th className="px-4 py-2.5 text-left font-medium text-neutral-200 desktop-layout:px-6">Materials</th>
+              <td className="px-3 py-2.5 text-right">{money(materialPerCraft)}</td>
+              <td className="px-3 py-2.5 text-right">{money(materialRange)}</td>
+              <td className="px-4 py-2.5 desktop-layout:px-6" />
+            </tr>
+            <tr className="border-t border-white/[0.06]">
+              <th className="px-4 py-2.5 text-left font-medium text-neutral-200 desktop-layout:px-6">
+                Recipe
+                <span className="mt-0.5 block text-[10px] font-normal normal-case tracking-normal text-neutral-500">Paid once</span>
+              </th>
+              <td className="px-3 py-2.5 text-right"><RecipePrice recipe={recipe} prices={prices} materialInfo={materialInfo} useMarketValue={useMarketValue} trim /></td>
+              <td className="px-3 py-2.5 text-right"><RecipePrice recipe={recipe} prices={prices} materialInfo={materialInfo} useMarketValue={useMarketValue} trim /></td>
+              <td className="px-4 py-2.5 desktop-layout:px-6" />
+            </tr>
+            <tr>
+              <th colSpan={4} className="bg-white/[0.03] px-4 py-1.5 text-left text-[10px] font-semibold uppercase tracking-[0.16em] text-[#e3b056] desktop-layout:px-6">Returned</th>
+            </tr>
+            {output ? ranked.map((outlet) => (
+              <Fragment key={outlet.key}>
+                <tr className="border-t border-white/[0.06]">
+                  <th className="px-4 py-2.5 text-left font-medium text-neutral-200 desktop-layout:px-6">
+                    {outlet.label}
+                    {outlet.key === bestKey && <span className="ml-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-emerald-300">Best</span>}
+                  </th>
+                  <td className="px-3 py-2.5 text-right">{money(-outlet.perCraft)}</td>
+                  <td className="px-3 py-2.5 text-right">{money(-outlet.perCraft * expCrafts)}</td>
+                  <td className="px-4 py-2.5 text-right desktop-layout:px-6">{money(rangeSpend - outlet.perCraft * expCrafts)}</td>
+                </tr>
+                {outlet.key === 'disenchant' && (
+                  <tr>
+                    <td colSpan={4} className="px-4 pb-3 desktop-layout:px-6">
+                      <div className="overflow-hidden rounded-md border border-white/[0.06]">
+                      <table className="w-full border-collapse text-xs desktop-layout:text-sm">
+                        <thead>
+                          <tr className="bg-white/[0.03] text-[10px] font-semibold uppercase tracking-[0.14em] text-[#e3b056]">
+                            <th className="px-3 py-1.5 text-left font-semibold">This range</th>
+                            <th className="whitespace-nowrap px-3 py-1.5 text-right font-semibold">Chance</th>
+                            <th className="whitespace-nowrap px-3 py-1.5 text-right font-semibold">Amount</th>
+                            <th className="whitespace-nowrap px-3 py-1.5 text-right font-semibold">Expected</th>
+                            <th className="whitespace-nowrap px-3 py-1.5 text-right font-semibold">Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {disenchantOutcomes.map((outcome, index) => {
+                            const averageQty = (outcome.minQty + outcome.maxQty) / 2;
+                            const expectedQty = outcome.chance * averageQty * outputQty * expCrafts;
+                            const price = disenchantMaterialValue(outcome.itemId, prices, useMarketValue);
+                            const matName = materialInfo[outcome.itemId]?.name ?? `Item ${outcome.itemId}`;
+                            const matQuality = materialInfo[outcome.itemId]?.quality ?? 1;
+                            const qtyRange = outcome.minQty === outcome.maxQty ? `${outcome.minQty}` : `${outcome.minQty}–${outcome.maxQty}`;
+                            return (
+                              <tr key={`${outcome.itemId}-${index}`} className="border-t border-white/[0.06]">
+                                <td className="px-3 py-2">
+                                  <a
+                                    href={`https://www.wowhead.com/${getWowheadBase(version)}/item=${outcome.itemId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex min-w-0 items-center gap-2 hover:underline"
+                                  >
+                                    <CachedIcon category="materials" id={outcome.itemId} className="h-5 w-5 shrink-0 rounded border border-neutral-600 object-cover desktop-layout:h-6 desktop-layout:w-6" />
+                                    <span className="min-w-0">
+                                      <span className="block truncate font-medium" style={{ color: qualityColors[matQuality] }}>{matName}</span>
+                                      <span className="text-[11px] text-[#e3b056]"><CompactMoney copper={price} trim /> each</span>
+                                    </span>
+                                  </a>
+                                </td>
+                                <td className="whitespace-nowrap px-3 py-2 text-right align-middle font-semibold" style={{ color: chanceColor(outcome.chance) }}>{Math.round(outcome.chance * 100)}%</td>
+                                <td className="whitespace-nowrap px-3 py-2 text-right align-middle text-neutral-100">{qtyRange}</td>
+                                <td className="whitespace-nowrap px-3 py-2 text-right align-middle text-neutral-100">{expectedQty.toFixed(2)}</td>
+                                <td className="whitespace-nowrap px-3 py-2 text-right align-middle font-semibold text-neutral-100"><CompactMoney copper={expectedQty * price} trim /></td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                      </div>
+                    </td>
+                  </tr>
+                )}
+              </Fragment>
+            )) : (
+              <tr className="border-t border-white/[0.06]">
+                <td colSpan={4} className="px-4 py-3 text-neutral-400 desktop-layout:px-6">This craft does not create an item to sell or disenchant.</td>
+              </tr>
+            )}
+            {output && disenchantOutcomes.length === 0 && (
+              <tr className="border-t border-white/[0.06]">
+                <th className="px-4 py-2.5 text-left font-medium text-neutral-200 desktop-layout:px-6">Disenchant</th>
+                <td colSpan={3} className="px-4 py-2.5 text-right text-neutral-500 desktop-layout:px-6">Cannot be disenchanted</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
@@ -1516,6 +1774,8 @@ function MaterialCard({
 
   // Calculate per-craft quantity by dividing total quantity by number of crafts
   const perCraftQuantity = node.quantity / expCrafts;
+  const usedCost = Number.isFinite(node.totalCost) ? node.totalCost : node.buyCost;
+  const eachCost = node.quantity > 0 && Number.isFinite(usedCost) ? usedCost / node.quantity : null;
 
   return (
     <div style={{ marginLeft: `${indent}px` }}>
@@ -1548,6 +1808,12 @@ function MaterialCard({
               </span>
               <span className="text-xs desktop-layout:text-sm text-neutral-400">
                 Per Craft: {perCraftQuantity}
+                {eachCost != null && (
+                  <>
+                    <span className="mx-1.5 text-neutral-600">·</span>
+                    Each <CompactMoney copper={eachCost} trim />
+                  </>
+                )}
               </span>
             </div>
           </a>
@@ -2758,6 +3024,44 @@ export default function ProfessionPlanner() {
     return out;
   }, [selected, expCrafts, prices, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds]);
 
+  const priceSourceName = priceSourcing === 'cost-vendor'
+    ? 'Vendor value'
+    : priceSourcing === 'disenchant'
+      ? 'Disenchant value'
+      : priceSourcing === 'auction-house'
+        ? 'Auction House'
+        : 'Raw material cost';
+
+  const costAfterSource = useMemo(() => {
+    if (!selected) return 0;
+    const materialPerCraft = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession);
+    const recipeCost = includeRecipeCost && selected.source
+      ? calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession)
+      : 0;
+    const output = selected.produces;
+    const outputQty = output?.quantity ?? 1;
+    let perCraftReturn = 0;
+    if (output && priceSourcing === 'cost-vendor') {
+      perCraftReturn = (materialInfo[output.id]?.sellPrice ?? 0) * outputQty;
+    } else if (output && priceSourcing === 'auction-house') {
+      const entry = prices[output.id];
+      const each = useMarketValue
+        ? (entry?.marketValue ?? entry?.minBuyout ?? 0)
+        : (entry?.minBuyout ?? entry?.marketValue ?? 0);
+      perCraftReturn = each * outputQty;
+    } else if (output && priceSourcing === 'disenchant') {
+      const item = resolveDisenchantItem(output.id, materialInfo);
+      const quality = selected.quality ?? materialInfo[output.id]?.quality ?? 1;
+      const isWeapon = item.itemClass === '2';
+      const outcomes = getDisenchantOutcomes(item.itemLevel, quality, isWeapon, item.itemClass, item.slot, output.id, materialInfo);
+      if (outcomes.length > 0) {
+        perCraftReturn = getExpectedDisenchantValue(item.itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, item.itemClass, item.slot, output.id) * outputQty;
+      }
+    }
+    const spend = materialPerCraft * expCrafts + (Number.isFinite(recipeCost) ? recipeCost : 0);
+    return spend - perCraftReturn * expCrafts;
+  }, [selected, prices, materialInfo, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, includeRecipeCost, priceSourcing, selectedProfession, expCrafts]);
+
   const materialTrees = Object.entries(materialTotals).map(([id, { qty }]) => {
     return buildMaterialTree(parseInt(id), qty, prices, materialInfo, true, new Set(), useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds);
   });
@@ -3252,10 +3556,11 @@ const renderXTick = selected
         // Calculate cost for this step based on displayed crafts
         const materialCostPerCraft = calculateCraftCost(s.recipe, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
         const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
-        const displayedRecipeCost = includeRecipeCost && s.recipe.source ?
+        const recipeSeenEarlier = plan.steps.slice(0, i).some(prev => 'recipe' in prev && prev.recipe.id === s.recipe.id);
+        const displayedRecipeCost = includeRecipeCost && s.recipe.source && !recipeSeenEarlier ?
           calculateCraftCost(s.recipe, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
         totalCost += displayedMaterialCost + displayedRecipeCost;
-        
+
         // Calculate materials needed (exclude rod products for rod recipes - made in previous step)
         for (const [itemId, quantity] of Object.entries(s.recipe.materials)) {
           const numItemId = Number(itemId);
@@ -3274,6 +3579,8 @@ const renderXTick = selected
           const purchase = recipePurchase(s.recipe);
           if (purchase) addMaterial(purchase.itemId, purchase.quantity);
         }
+      } else if ('upgradeName' in s) {
+        totalCost += s.cost;
       }
     }
     
@@ -4650,19 +4957,24 @@ const renderXTick = selected
                           }
                           if ('upgradeName' in s) {
                             return (
-                              <motion.div
-                                key={`upgrade-${s.upgradeName}-${s.endSkill}-${committedSkill}`}
-                                initial={{ opacity: 0, y: -5 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 5 }}
-                                transition={{ 
-                                  duration: 0.3,
-                                  ease: "easeOut"
-                                }}
-                                className={`relative flex items-center justify-center gap-1 bg-neutral-900 rounded-none px-2 py-1 w-full h-[43px] desktop-layout:h-[60px] font-bold ${selectedVersion === 'Forever' ? 'text-[#1fb5f7]' : 'text-yellow-400'} text-sm desktop-layout:text-base will-change-transform`}
+                              <div
+                                key={`upgrade-${s.upgradeName}-${s.skill}-${committedSkill}`}
+                                className="relative flex items-center gap-1 border-b border-white/[0.04] bg-[#e3b056]/10 px-2 py-2 w-full min-h-[43px] desktop-layout:min-h-[60px]"
                               >
-                                ⚔️ {s.note ?? `Upgrade to ${s.upgradeName}`}
-                              </motion.div>
+                                <span className="absolute left-0 top-0 bottom-0 w-1 bg-[#e3b056]" />
+                                <span aria-hidden="true" className="flex w-6 shrink-0 items-center justify-center text-[18px] leading-none text-[#e3b056] desktop-layout:w-8 desktop-layout:text-[22px]">★</span>
+                                <span className="flex min-w-0 flex-1 items-center gap-1">
+                                  <img src={`/icons/${selectedProfession.toLowerCase()}.webp`} alt="" className="h-6 w-6 shrink-0 rounded-md object-cover ring-1 ring-white/15 desktop-layout:h-7 desktop-layout:w-7" />
+                                  <span className="truncate text-[13px] font-medium desktop-layout:text-[16px]">
+                                    <span className="text-neutral-100">Train </span>
+                                    <span className="text-[#e3b056]">{s.upgradeName}</span>
+                                  </span>
+                                </span>
+                                <span className="shrink-0">
+                                  <CostBox copper={s.cost} trim className="min-w-[6.75rem] desktop-layout:min-w-[8rem] text-[12px] desktop-layout:text-[15px]" />
+                                </span>
+                                <SkillBox className={`min-w-[4.75rem] desktop-layout:min-w-[5.75rem] ${versionTextClass(selectedVersion)}`}>{s.skill}</SkillBox>
+                              </div>
                             );
                           }
 
@@ -4684,7 +4996,8 @@ const renderXTick = selected
                           // Recalculate cost based on displayed crafts instead of planner's s.crafts
                           const materialCostPerCraft = calculateCraftCost(best, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession);
                           const displayedMaterialCost = materialCostPerCraft * displayedCrafts;
-                          const displayedRecipeCost = includeRecipeCost && best.source ?
+                          const recipeSeenEarlier = plan.steps.slice(0, i).some(prev => 'recipe' in prev && prev.recipe.id === best.id);
+                          const displayedRecipeCost = includeRecipeCost && best.source && !recipeSeenEarlier ?
                             calculateCraftCost(best, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
                           const displayedTotalCost = displayedMaterialCost + displayedRecipeCost;
                           
@@ -5379,120 +5692,29 @@ const renderXTick = selected
                     </div>
                   </div>
                 </div>
-                  <div className="mt-4 space-y-3 border-t border-white/[0.06] pt-4 text-sm text-neutral-300 desktop-layout:text-base">
-                    <div className="flex justify-between items-center">
-                      <span>Total Level-ups</span>
-                      <span className="font-semibold">{totalLevelUps}</span>
+                  <div className="mt-4 divide-y divide-white/[0.06] border-t border-white/[0.06]">
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">Total level-ups</span>
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">{totalLevelUps}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span>Avg Success Rate</span>
-                      <span className="font-semibold">{(avgSuccessRate * 100).toFixed(2)}%</span>
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">Average success rate</span>
+                      <span className="text-sm font-semibold desktop-layout:text-base" style={{ color: chanceColor(avgSuccessRate) }}>{(avgSuccessRate * 100).toFixed(2)}%</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span>Avg Attempts Required</span>
-                      <span className="text-white rounded px-2 font-semibold">{expCrafts}</span>
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">Average attempts required</span>
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">{expCrafts}</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span>Total materials cost:</span>
-                      <CostBox copper={Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0)} className="text-sm desktop-layout:text-base" />
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <span className="text-sm font-semibold text-white desktop-layout:text-base">Total materials cost</span>
+                      <CostBox copper={Object.values(materialTotals).reduce((s, m) => s + m.craftCost, 0)} trim className="text-sm desktop-layout:text-base" />
+                    </div>
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <span className="whitespace-nowrap text-sm font-semibold text-white desktop-layout:text-base">Cost after {priceSourceName}</span>
+                      <CostBox copper={costAfterSource} trim className="text-sm desktop-layout:text-base" />
                     </div>
                   </div>
                 </aside>
-              </div>
-
-              <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-4 py-4 desktop-layout:py-5 sm:px-6">
-                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Cost Calculations</h3>
-              </div>
-              <div className="flex min-w-0 items-stretch justify-between divide-x divide-white/10 overflow-hidden text-[10px] text-neutral-100 desktop-layout:text-[16px]">
-                <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                  <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Base Cost Per Attempt</span>
-                  <CostBox copper={calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession)} className="text-sm desktop-layout:text-lg" />
-                </div>
-                {selected && selected.source?.type === 'item' && selected.source.recipeItemId ? (
-                  (() => {
-                    const recipeInfo = materialInfo[selected.source.recipeItemId];
-                    const recipeCostData = getRecipeCost(selected, prices, materialInfo, useMarketValue);
-                    const currencyLabel = currencyCostLabel(selected, materialInfo);
-
-                    if (currencyLabel) {
-                      return (
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
-                          <span className="text-xs desktop-layout:text-base font-semibold text-center leading-tight">{currencyLabel}</span>
-                        </div>
-                      );
-                    }
-
-                    if (recipeInfo?.mobDrop && recipeInfo?.bop) {
-                      return (
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
-                          <MobDropCostHint />
-                        </div>
-                      );
-                    }
-                    
-                    // BoP with no price at all = truly unavailable; BoP with vendorPrice 0 = free (from drops)
-                    if (recipeInfo?.bop && recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null) {
-                      return (
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
-                          <span className="text-red-400 text-[10px] desktop-layout:text-base">Not Available (BoP)</span>
-                        </div>
-                      );
-                    }
-
-                    // Show vendor/AH cost, or "Free" when vendorPrice is 0 (BoP from drops)
-                    return (
-                      <>
-                        {(recipeCostData.vendorPrice !== null && recipeCostData.vendorPrice >= 0) && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">
-                              {recipeCostData.vendorPrice === 0 ? 'Recipe Cost' : 'Vendor Recipe Cost'}
-                            </span>
-                            <div className="flex flex-col items-center gap-0.5 desktop-layout:gap-1">
-                              {recipeInfo?.limitedStock && (
-                                <div className="text-[10px] desktop-layout:text-base text-yellow-400 flex items-center gap-1">
-                                  <span>⚠️ Limited Stock</span>
-                                </div>
-                              )}
-                              <CostBox copper={recipeCostData.vendorPrice} className="text-sm desktop-layout:text-lg" />
-                            </div>
-                          </div>
-                        )}
-                        {recipeCostData.ahPrice !== null && recipeCostData.ahPrice > 0 && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">AH Recipe Cost</span>
-                            <CostBox copper={recipeCostData.ahPrice} className="text-sm desktop-layout:text-lg" />
-                          </div>
-                        )}
-                        {recipeCostData.vendorPrice === null && recipeCostData.ahPrice === null && (
-                          <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                            <span className="text-neutral-400 mb-0.5 desktop-layout:mb-2 text-[9px] desktop-layout:text-base">Recipe Cost</span>
-                            <span className="text-red-400 text-[10px] desktop-layout:text-base">No price available</span>
-                          </div>
-                        )}
-                      </>
-                    );
-                  })()
-                ) : (
-                  <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
-                    <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Recipe Cost</span>
-                    <CostBox copper={selected?.source?.type === 'trainer' ? (selected.source.cost ?? 0) : 0} className="text-sm desktop-layout:text-lg" />
-                  </div>
-                )}
-                <div className="flex-1 flex flex-col items-center justify-center p-2 desktop-layout:p-4 min-w-0">
-                  <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-base">Average Cost Per Level</span>
-                  <CostBox
-                    copper={selected ? (() => {
-                        const recipeCost = includeRecipeCost && selected.source ?
-                          calculateCraftCost(selected, prices, materialInfo, true, true, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, priceSourcing, selectedProfession) : 0;
-                      const materialCostForCrafts = calculateCraftCost(selected, prices, materialInfo, false, false, useMarketValue, optimizeSubCrafting, currentProfessionRecipeIds, 'cost', selectedProfession) * expCrafts;
-                        return totalLevelUps > 0 ? (materialCostForCrafts + recipeCost) / totalLevelUps : 0;
-                      })() : 0}
-                    className="text-sm desktop-layout:text-lg"
-                    />
-                </div>
               </div>
 
               <RecipeDetailsSection
@@ -5510,105 +5732,20 @@ const renderXTick = selected
                 <MaterialTreeFlat rootNodes={materialTrees} materialInfo={materialInfo} expCrafts={expCrafts} wowheadBase={getWowheadBase(selectedVersion)} />
               </div>
 
-              <div className="flex items-center justify-between border-y border-[#e3b056]/20 bg-gradient-to-r from-[#e3b056]/12 to-transparent px-2 py-3 desktop-layout:px-6 desktop-layout:py-5">
-                <h3 className="text-sm desktop-layout:text-lg font-medium leading-6 tracking-tight text-white">Auction House Profit Calculation</h3>
-              </div>
-              <div className="flex flex-col divide-y divide-white/10">
-                {selected?.produces ? (() => {
-                  const outputItemId = selected.produces.id;
-                  const outputQty = selected.produces.quantity ?? 1;
-                  const totalOutput = outputQty * expCrafts;
-                  const info = materialInfo[outputItemId];
-                  const sellPrice = info?.sellPrice ?? 0;
-                  const vendorReturn = sellPrice * totalOutput;
-                  const quality = selected.quality ?? info?.quality ?? 1;
-                  const disenchantItem = resolveDisenchantItem(outputItemId, materialInfo);
-                  const isWeapon = disenchantItem.itemClass === '2';
-                  const outcomes = getDisenchantOutcomes(disenchantItem.itemLevel, quality, isWeapon, disenchantItem.itemClass, disenchantItem.slot, outputItemId, materialInfo);
-                  const deTotal = getExpectedDisenchantValue(disenchantItem.itemLevel, quality, isWeapon, prices, materialInfo, useMarketValue, disenchantItem.itemClass, disenchantItem.slot, outputItemId);
-                  const ahMinBuyout = (prices[outputItemId]?.minBuyout ?? 0) * totalOutput;
-                  const ahMarketValue = (prices[outputItemId]?.marketValue ?? 0) * totalOutput;
-                  return (
-                    <>
-                      <div className="flex min-h-[3rem] items-stretch justify-between divide-x divide-white/10 overflow-hidden text-[10px] text-neutral-100 desktop-layout:min-h-[4rem] desktop-layout:text-[16px]">
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">Vendor Price Return</span>
-                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                            <FormatMoney copper={vendorReturn} />
-                          </span>
-                        </div>
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">AH Returns (min buyout)</span>
-                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                            <FormatMoney copper={ahMinBuyout} />
-                          </span>
-                        </div>
-                        <div className="flex-1 flex flex-col items-center justify-center px-1.5 py-2 desktop-layout:p-4 min-w-0">
-                          <span className="text-neutral-400 mb-0.5 desktop-layout:mb-1 text-[9px] desktop-layout:text-sm">AH Returns (market avg)</span>
-                          <span className="text-xs desktop-layout:text-lg font-semibold overflow-hidden text-ellipsis max-w-full text-center">
-                            <FormatMoney copper={ahMarketValue} />
-                          </span>
-                        </div>
-                      </div>
-                      {outcomes.length > 0 && (
-                        <div className="flex flex-col items-stretch border-t border-white/10 p-3 desktop-layout:p-4">
-                          <span className="text-neutral-400 mb-1 desktop-layout:mb-2 text-[10px] desktop-layout:text-sm font-medium">Expected Disenchant Materials</span>
-                          <ul className="space-y-1.5 desktop-layout:space-y-2 text-xs desktop-layout:text-sm">
-                            {outcomes.map((o, idx) => {
-                              const avgQty = (o.minQty + o.maxQty) / 2;
-                              const expectedQty = o.chance * avgQty * totalOutput;
-                              const price = disenchantMaterialValue(o.itemId, prices, useMarketValue);
-                              const value = expectedQty * price;
-                              const matName = materialInfo[o.itemId]?.name ?? `Item #${o.itemId}`;
-                              const matQuality = materialInfo[o.itemId]?.quality ?? 1;
-                              const qtyRange = o.minQty === o.maxQty ? `${o.minQty}` : `${o.minQty}–${o.maxQty}`;
-                              const pct = (o.chance * 100).toFixed(0);
-                              return (
-                                <li key={`${o.itemId}-${idx}`} className="text-neutral-200 flex items-center gap-2 desktop-layout:gap-3">
-                                  <a
-                                    href={`https://www.wowhead.com/${getWowheadBase(selectedVersion)}/item=${o.itemId}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 desktop-layout:gap-3 flex-1 min-w-0 hover:underline"
-                                  >
-                                    <CachedIcon
-                                      category="materials"
-                                      id={o.itemId}
-                                      className="w-5 h-5 desktop-layout:w-7 desktop-layout:h-7 rounded object-cover border border-neutral-600 flex-shrink-0"
-                                    />
-                                    <div className="flex-1 min-w-0">
-                                      <span className="font-medium truncate" style={{ color: qualityColors[matQuality] }}>{matName}</span>
-                                      <span className="text-neutral-400 ml-1 desktop-layout:ml-1.5 text-[10px] desktop-layout:text-sm">
-                                        {pct}% ({qtyRange})
-                                      </span>
-                                    </div>
-                                  </a>
-                                  <div className="text-right flex-shrink-0 text-[10px] desktop-layout:text-sm pt-[10px] desktop-layout:pt-0">
-                                    <span className="text-neutral-400">
-                                      ~{expectedQty.toFixed(1)} × <FormatMoney copper={price} />
-                                    </span>
-                                    <span className="text-white font-medium ml-1 desktop-layout:ml-2">
-                                      = <FormatMoney copper={value} />
-                                    </span>
-                                  </div>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                          <div className="mt-1.5 desktop-layout:mt-2 pt-1.5 desktop-layout:pt-2 border-t border-neutral-600 flex justify-between items-center text-[10px] desktop-layout:text-sm">
-                            <span className="text-neutral-400">Total expected value</span>
-                            <span className="text-white font-semibold"><FormatMoney copper={deTotal * totalOutput} /></span>
-                          </div>
-                        </div>
-                      )}
-                    </>
-                  );
-                })() : (
-                  <div className="flex items-center justify-center p-4 desktop-layout:p-8 text-neutral-500 text-xs desktop-layout:text-sm">
-                    Select a recipe to see profit calculations
-                  </div>
-                )}
-              </div>
+              <CraftValuePanel
+                recipe={selected}
+                prices={prices}
+                materialInfo={materialInfo}
+                useMarketValue={useMarketValue}
+                optimizeSubCrafting={optimizeSubCrafting}
+                currentProfessionRecipeIds={currentProfessionRecipeIds}
+                priceSourcing={priceSourcing}
+                profession={selectedProfession}
+                includeRecipeCost={includeRecipeCost}
+                expCrafts={expCrafts}
+                version={selectedVersion}
+              />
+
             </div>
             <AdSlot
               slot={AD_SLOT_SKYSCRAPER}

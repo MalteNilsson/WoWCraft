@@ -175,8 +175,12 @@ export type PlanStep =
     }
     | {
         upgradeName: string;
+        /** Skill the following step still starts from. This does not move the route. */
         endSkill:   number;
-
+        /** Profession rank to train before crafting past this skill. */
+        skill: number;
+        /** Trainer cost in copper. */
+        cost: number;
         note?:      string;
     }
     | {
@@ -1401,7 +1405,52 @@ export function makeSegmentedPlan(
         }
     }
 
-    return { steps, totalCost, finalSkill: target };
+    return { steps: withProfessionRanks(steps, skill, profession), totalCost, finalSkill: target };
+}
+
+const PROFESSION_RANKS = [
+    { skill: 75, name: 'Journeyman', cost: 500 },
+    { skill: 150, name: 'Expert', cost: 5000 },
+    { skill: 225, name: 'Artisan', cost: 50000 },
+] as const;
+
+/** Puts each trainer rank at its skill, splitting a craft or gap that runs through it. */
+function withProfessionRanks(steps: PlanStep[], startSkill: number, profession: string): PlanStep[] {
+    const result: PlanStep[] = [];
+    let cursor = startSkill;
+    for (const step of steps) {
+        if (step.endSkill <= cursor) {
+            result.push(step);
+            continue;
+        }
+        let pieceStart = cursor;
+        let keptRecipeCost = true;
+        for (const rank of PROFESSION_RANKS) {
+            if (rank.skill < pieceStart || rank.skill >= step.endSkill) continue;
+            if (rank.skill > pieceStart) {
+                const piece = { ...step, endSkill: rank.skill };
+                if (!keptRecipeCost && 'recipeCost' in piece) piece.recipeCost = undefined;
+                result.push(piece);
+                keptRecipeCost = false;
+            }
+            result.push({
+                upgradeName: `${rank.name} ${profession}`,
+                endSkill: rank.skill,
+                skill: rank.skill,
+                cost: rank.cost,
+            });
+            pieceStart = rank.skill;
+        }
+        if (pieceStart === cursor) {
+            result.push(step);
+        } else {
+            const remainder = { ...step };
+            if ('recipeCost' in remainder) remainder.recipeCost = undefined;
+            result.push(remainder);
+        }
+        cursor = step.endSkill;
+    }
+    return result;
 }
 
 export type MaterialRequirement = {
