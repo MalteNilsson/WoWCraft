@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-26T10:39:08.594Z",
+  "timestamp": "2026-11-26T11:39:15.308Z",
   "totalRequests": 16,
   "successful": 16,
   "failed": 0,
@@ -16,15 +16,15 @@
       "realm": "Forever PvE US",
       "faction": "Alliance",
       "success": true,
-      "items": 7558,
-      "scannedAt": "2026-11-26T06:26:27Z"
+      "items": 7560,
+      "scannedAt": "2026-11-26T09:26:16Z"
     },
     {
       "realm": "Forever PvP US",
       "faction": "Horde",
       "success": true,
-      "items": 7518,
-      "scannedAt": "2026-11-26T06:26:27Z"
+      "items": 7517,
+      "scannedAt": "2026-11-26T09:26:16Z"
     },
     {
       "realm": "Forever PvP US",
@@ -44,8 +44,8 @@
       "realm": "Forever RP US",
       "faction": "Alliance",
       "success": true,
-      "items": 7015,
-      "scannedAt": "2026-11-26T06:26:11Z"
+      "items": 7020,
+      "scannedAt": "2026-11-26T09:26:07Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -79,8 +79,8 @@
       "realm": "Forever PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 7576,
-      "scannedAt": "2026-11-26T06:21:50Z"
+      "items": 7585,
+      "scannedAt": "2026-11-26T09:21:53Z"
     },
     {
       "realm": "Forever PvP EU",
@@ -100,8 +100,8 @@
       "realm": "Forever RP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6777,
-      "scannedAt": "2026-11-26T06:21:45Z"
+      "items": 6782,
+      "scannedAt": "2026-11-26T09:21:45Z"
     },
     {
       "realm": "Forever RP-PvP EU",
