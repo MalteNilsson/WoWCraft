@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-26T21:41:05.987Z",
+  "timestamp": "2026-11-26T22:41:15.124Z",
   "totalRequests": 16,
   "successful": 16,
   "failed": 0,
@@ -30,8 +30,8 @@
       "realm": "Forever PvP US",
       "faction": "Alliance",
       "success": true,
-      "items": 7550,
-      "scannedAt": "2026-11-26T18:26:15Z"
+      "items": 7554,
+      "scannedAt": "2026-11-26T21:26:16Z"
     },
     {
       "realm": "Forever RP US",
@@ -44,8 +44,8 @@
       "realm": "Forever RP US",
       "faction": "Alliance",
       "success": true,
-      "items": 7033,
-      "scannedAt": "2026-11-26T18:26:08Z"
+      "items": 7037,
+      "scannedAt": "2026-11-26T21:26:08Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -72,8 +72,8 @@
       "realm": "Forever PvE EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7627,
-      "scannedAt": "2026-11-26T18:22:28Z"
+      "items": 7631,
+      "scannedAt": "2026-11-26T21:23:05Z"
     },
     {
       "realm": "Forever PvP EU",
@@ -86,15 +86,15 @@
       "realm": "Forever PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7604,
-      "scannedAt": "2026-11-26T18:22:27Z"
+      "items": 7609,
+      "scannedAt": "2026-11-26T21:23:02Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
       "success": true,
-      "items": 6102,
-      "scannedAt": "2026-11-26T18:21:48Z"
+      "items": 6111,
+      "scannedAt": "2026-11-26T21:21:51Z"
     },
     {
       "realm": "Forever RP EU",
@@ -107,15 +107,15 @@
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 6343,
-      "scannedAt": "2026-11-26T18:21:50Z"
+      "items": 6358,
+      "scannedAt": "2026-11-26T21:21:54Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6616,
-      "scannedAt": "2026-11-26T18:21:50Z"
+      "items": 6630,
+      "scannedAt": "2026-11-26T21:21:54Z"
     }
   ]
 }
