@@ -162,7 +162,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 25
+      "cost": 26
     }
   },
   {
@@ -534,7 +534,7 @@
     "materials": {
       "2321": 1,
       "2605": 1,
-      "2997": 4
+      "2997": 5
     },
     "minSkill": 75,
     "icon": "inv_misc_bag_10_green",
@@ -1611,7 +1611,7 @@
     "materials": {
       "2321": 1,
       "2604": 1,
-      "2997": 4
+      "2997": 5
     },
     "minSkill": 90,
     "icon": "inv_misc_bag_10_red",
@@ -1698,7 +1698,7 @@
       "2321": 3,
       "2605": 1,
       "4234": 3,
-      "4305": 4
+      "4305": 5
     },
     "minSkill": 140,
     "icon": "inv_misc_bag_07_green",
@@ -1727,7 +1727,7 @@
     "materials": {
       "2321": 4,
       "2325": 1,
-      "4305": 5
+      "4305": 6
     },
     "minSkill": 150,
     "icon": "inv_misc_bag_07_black",
@@ -2085,7 +2085,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 450
+      "cost": 500
     }
   },
   {
@@ -2224,7 +2224,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 810
+      "cost": 900
     }
   },
   {
@@ -2341,7 +2341,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 900
+      "cost": 1000
     }
   },
   {
@@ -2725,7 +2725,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 4500
+      "cost": 5000
     }
   },
   {
@@ -2916,7 +2916,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 3600
+      "cost": 4000
     }
   },
   {
@@ -2924,7 +2924,7 @@
     "name": "Shadoweave Pants",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 175,
       "yellow": 190,
       "green": 205,
       "gray": 220
@@ -2934,7 +2934,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 0,
+    "minSkill": 175,
     "icon": "inv_pants_11",
     "url": "https://www.wowhead.com/forever/spell=12052",
     "produces": {
@@ -2979,7 +2979,7 @@
     "name": "Shadoweave Robe",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 180,
       "yellow": 195,
       "green": 210,
       "gray": 225
@@ -2989,7 +2989,7 @@
       "8343": 1,
       "10285": 2
     },
-    "minSkill": 0,
+    "minSkill": 180,
     "icon": "inv_chest_cloth_38",
     "url": "https://www.wowhead.com/forever/spell=12055",
     "produces": {
@@ -3256,7 +3256,7 @@
     },
     "source": {
       "type": "trainer",
-      "cost": 4500
+      "cost": 5000
     }
   },
   {
@@ -3293,7 +3293,7 @@
     "name": "Shadoweave Gloves",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 190,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3303,7 +3303,7 @@
       "8343": 2,
       "10285": 5
     },
-    "minSkill": 0,
+    "minSkill": 190,
     "icon": "inv_gauntlets_09",
     "url": "https://www.wowhead.com/forever/spell=12071",
     "produces": {
@@ -3321,7 +3321,7 @@
     "name": "Black Mageweave Headband",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 190,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3330,7 +3330,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 0,
+    "minSkill": 190,
     "icon": "inv_misc_bandana_01",
     "url": "https://www.wowhead.com/forever/spell=12072",
     "produces": {
@@ -3348,7 +3348,7 @@
     "name": "Black Mageweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 190,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3358,7 +3358,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 0,
+    "minSkill": 190,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12073",
     "produces": {
@@ -3376,7 +3376,7 @@
     "name": "Black Mageweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 190,
       "yellow": 205,
       "green": 220,
       "gray": 235
@@ -3385,7 +3385,7 @@
       "4339": 3,
       "8343": 2
     },
-    "minSkill": 0,
+    "minSkill": 190,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12074",
     "produces": {
@@ -3432,7 +3432,7 @@
     "name": "Shadoweave Shoulders",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 195,
       "yellow": 210,
       "green": 225,
       "gray": 240
@@ -3442,7 +3442,7 @@
       "8343": 2,
       "10285": 4
     },
-    "minSkill": 0,
+    "minSkill": 195,
     "icon": "inv_shoulder_25",
     "url": "https://www.wowhead.com/forever/spell=12076",
     "produces": {
@@ -3460,7 +3460,7 @@
     "name": "Simple Black Dress",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 195,
       "yellow": 200,
       "green": 205,
       "gray": 210
@@ -3471,7 +3471,7 @@
       "4339": 3,
       "8343": 1
     },
-    "minSkill": 0,
+    "minSkill": 195,
     "icon": "inv_chest_cloth_21",
     "url": "https://www.wowhead.com/forever/spell=12077",
     "produces": {
@@ -3518,17 +3518,17 @@
     "name": "Red Mageweave Bag",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 195,
       "yellow": 210,
       "green": 225,
       "gray": 240
     },
     "materials": {
       "2604": 2,
-      "4339": 4,
+      "4339": 5,
       "8343": 2
     },
-    "minSkill": 0,
+    "minSkill": 195,
     "icon": "inv_misc_bag_10_red",
     "url": "https://www.wowhead.com/forever/spell=12079",
     "produces": {
@@ -3604,7 +3604,7 @@
     "name": "Shadoweave Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 200,
       "yellow": 215,
       "green": 230,
       "gray": 245
@@ -3615,7 +3615,7 @@
       "8343": 3,
       "10285": 6
     },
-    "minSkill": 0,
+    "minSkill": 200,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12082",
     "produces": {
@@ -3719,7 +3719,7 @@
     "name": "Cindercloth Boots",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 200,
       "yellow": 215,
       "green": 230,
       "gray": 245
@@ -3730,7 +3730,7 @@
       "7077": 1,
       "8343": 3
     },
-    "minSkill": 0,
+    "minSkill": 200,
     "icon": "inv_boots_05",
     "url": "https://www.wowhead.com/forever/spell=12088",
     "produces": {
@@ -3805,7 +3805,7 @@
     "name": "Dreamweave Circlet",
     "quality": 3,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 220,
       "green": 235,
       "gray": 250
@@ -3818,7 +3818,7 @@
       "8343": 3,
       "10286": 2
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_crown_01",
     "url": "https://www.wowhead.com/forever/spell=12092",
     "produces": {
@@ -3864,7 +3864,7 @@
     "name": "Bolt of Runecloth",
     "quality": 1,
     "difficulty": {
-      "orange": 0,
+      "orange": 205,
       "yellow": 210,
       "green": 212,
       "gray": 215
@@ -3872,7 +3872,7 @@
     "materials": {
       "14047": 5
     },
-    "minSkill": 0,
+    "minSkill": 205,
     "icon": "inv_fabric_purplefire_02",
     "url": "https://www.wowhead.com/forever/spell=18401",
     "produces": {
@@ -3890,7 +3890,7 @@
     "name": "Runecloth Belt",
     "quality": 2,
     "difficulty": {
-      "orange": 0,
+      "orange": 210,
       "yellow": 225,
       "green": 240,
       "gray": 255
@@ -3899,7 +3899,7 @@
       "14048": 3,
       "14341": 1
     },
-    "minSkill": 0,
+    "minSkill": 210,
     "icon": "inv_belt_15",
     "url": "https://www.wowhead.com/forever/spell=18402",
     "produces": {
@@ -6827,8 +6827,8 @@
     "difficulty": {
       "orange": 20,
       "yellow": 20,
-      "green": 22,
-      "gray": 25
+      "green": 20,
+      "gray": 20
     },
     "materials": {
       "2320": 1,
@@ -6928,9 +6928,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 253886,
-      "recipeItemName": "Pattern: Novice Arcanist's Sash"
+      "type": "trainer",
+      "cost": 526
     }
   },
   {
@@ -6957,9 +6956,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 253888,
-      "recipeItemName": "Pattern: Novice Ardent's Sash"
+      "type": "trainer",
+      "cost": 526
     }
   },
   {
@@ -8703,9 +8701,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254002,
-      "recipeItemName": "Pattern: Gilded Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -8734,9 +8731,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254004,
-      "recipeItemName": "Pattern: Frothing Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -8765,9 +8761,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254006,
-      "recipeItemName": "Pattern: Fiery Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -8796,9 +8791,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254008,
-      "recipeItemName": "Pattern: Black Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -8827,9 +8821,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254010,
-      "recipeItemName": "Pattern: Golden Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -8858,9 +8851,8 @@
       "quantity": 1
     },
     "source": {
-      "type": "item",
-      "recipeItemId": 254012,
-      "recipeItemName": "Pattern: Radiant Slippers"
+      "type": "trainer",
+      "cost": 1450
     }
   },
   {
@@ -10844,8 +10836,8 @@
     "difficulty": {
       "orange": 140,
       "yellow": 140,
-      "green": 142,
-      "gray": 145
+      "green": 140,
+      "gray": 140
     },
     "materials": {
       "2321": 3,
@@ -10902,8 +10894,8 @@
     "difficulty": {
       "orange": 20,
       "yellow": 20,
-      "green": 22,
-      "gray": 25
+      "green": 20,
+      "gray": 20
     },
     "materials": {
       "2320": 1,
