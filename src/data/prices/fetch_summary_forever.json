@@ -1,6 +1,6 @@
 {
   "source": "https://public-data.tradeskillmaster.com",
-  "timestamp": "2026-11-28T09:47:11.053Z",
+  "timestamp": "2026-11-28T10:47:03.676Z",
   "totalRequests": 16,
   "successful": 16,
   "failed": 0,
@@ -31,7 +31,7 @@
       "faction": "Alliance",
       "success": true,
       "items": 7573,
-      "scannedAt": "2026-11-28T06:26:33Z"
+      "scannedAt": "2026-11-28T09:26:15Z"
     },
     {
       "realm": "Forever RP US",
@@ -44,15 +44,15 @@
       "realm": "Forever RP US",
       "faction": "Alliance",
       "success": true,
-      "items": 7091,
-      "scannedAt": "2026-11-28T06:26:14Z"
+      "items": 7092,
+      "scannedAt": "2026-11-28T09:26:08Z"
     },
     {
       "realm": "Forever RP-PvP US",
       "faction": "Horde",
       "success": true,
-      "items": 6957,
-      "scannedAt": "2026-11-28T06:26:14Z"
+      "items": 6960,
+      "scannedAt": "2026-11-28T09:26:08Z"
     },
     {
       "realm": "Forever RP-PvP US",
@@ -72,8 +72,8 @@
       "realm": "Forever PvE EU",
       "faction": "Alliance",
       "success": true,
-      "items": 7653,
-      "scannedAt": "2026-11-28T06:21:52Z"
+      "items": 7654,
+      "scannedAt": "2026-11-28T09:21:56Z"
     },
     {
       "realm": "Forever PvP EU",
@@ -87,14 +87,14 @@
       "faction": "Alliance",
       "success": true,
       "items": 7628,
-      "scannedAt": "2026-11-28T06:21:51Z"
+      "scannedAt": "2026-11-28T09:21:55Z"
     },
     {
       "realm": "Forever RP EU",
       "faction": "Horde",
       "success": true,
-      "items": 6196,
-      "scannedAt": "2026-11-28T06:21:44Z"
+      "items": 6199,
+      "scannedAt": "2026-11-28T09:21:45Z"
     },
     {
       "realm": "Forever RP EU",
@@ -107,15 +107,15 @@
       "realm": "Forever RP-PvP EU",
       "faction": "Horde",
       "success": true,
-      "items": 6427,
-      "scannedAt": "2026-11-28T06:21:44Z"
+      "items": 6431,
+      "scannedAt": "2026-11-28T09:21:45Z"
     },
     {
       "realm": "Forever RP-PvP EU",
       "faction": "Alliance",
       "success": true,
-      "items": 6683,
-      "scannedAt": "2026-11-28T06:21:44Z"
+      "items": 6684,
+      "scannedAt": "2026-11-28T09:21:45Z"
     }
   ]
 }
